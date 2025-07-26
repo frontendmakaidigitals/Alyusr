@@ -1,0 +1,14 @@
+autocad.png
+autodesk.webp
+etabs.png
+etap.png
+files.txt
+Gsuite-logo.png
+hap.avif
+lumion.png
+msOffice.webp
+p6Oracle.png
+revit.jpg
+Teams.png
+Tekla.png
+v-ray.png
