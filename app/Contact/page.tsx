@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Globe } from "lucide-react";
+
 import {
   Select,
   SelectContent,
@@ -204,7 +204,7 @@ const Contact = () => {
           <p className="mt-8">
             We&apos;re here to answer your questions, explore opportunities, and
             support your projects, every step of the way.
-            <br /> Whether you're looking for engineering consultancy, design
+            <br /> Whether you&apos;re looking for engineering consultancy, design
             expertise, or project management services, our team is ready to
             assist you. <br />
             For project consultations, RFPs, or business partnerships, please
