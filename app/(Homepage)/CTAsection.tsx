@@ -3,6 +3,7 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { Download } from "lucide-react";
 import Link from "next/link";
 
+
 const Marquee = () => {
   const partners = [
     { title: "Agriserv", img: "agriserv logo.webp" },

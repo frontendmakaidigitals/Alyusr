@@ -78,7 +78,7 @@ const Herosection = () => {
                       {slides[activeIndex].desc}
                     </p>
                     <button className="bg-gradient-to-br mt-4 px-4 py-[.45rem] text-sm rounded-lg text-slate-50 flex items-center gap-2 from-[#387EF0] to-[#2651C2]">
-                      Explore Our Projects <ArrowUpRight />
+                      Explore Our Services <ArrowUpRight />
                     </button>
                   </div>
                 </div>

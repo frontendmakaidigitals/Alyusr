@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Globe } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -18,6 +19,27 @@ import {
 } from "@/components/ui/select";
 import Image from "next/image";
 const Contact = () => {
+  const internationalOffices = [
+    {
+      country: "United Kingdom",
+      city: "London Office",
+      email: "uk@alyusr.com.sa",
+      flag: "/contact-flags/uk-flag.png",
+    },
+    {
+      country: "Sri Lanka",
+      city: "Colombo Office",
+      email: "srilanka@alyusr.com.sa",
+      flag: "/contact-flags/sri-lanka.png",
+    },
+    {
+      country: "Egypt",
+      city: "Cairo Office",
+      email: "egypt@alyusr.com.sa",
+      flag: "/contact-flags/egypt-flag.png",
+    },
+  ];
+
   const [sectionTop, setSectionTop] = useState(0);
 
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -75,7 +97,7 @@ const Contact = () => {
         {/* Enquiry Form */}
         <div>
           {" "}
-          <form className="bg-white/10 backdrop-blur-md border border-white/20 p-10 rounded-2xl shadow-xl space-y-6">
+          <form className="bg-slate-50/40 backdrop-blur-md border border-slate-200/50 p-10 rounded-2xl  space-y-6">
             <h2 className="text-3xl font-semibold text-slate-700">
               Enquiry Form
             </h2>
@@ -83,14 +105,18 @@ const Contact = () => {
               {" "}
               <div className="">
                 <Label>First Name</Label>
-                <Input type="text" placeholder="John" className="mt-2 h-11" />
+                <Input
+                  type="text"
+                  placeholder="John"
+                  className="mt-2 h-11 bg-white"
+                />
               </div>
               <div className="">
                 <Label>Last Name</Label>
                 <Input
                   type="text"
                   placeholder="Andrews"
-                  className="mt-2 h-11"
+                  className="mt-2 h-11 bg-white"
                 />
               </div>
             </div>
@@ -101,7 +127,7 @@ const Contact = () => {
                 <Input
                   type="email"
                   placeholder="example@email.com"
-                  className="mt-2 h-11"
+                  className="mt-2 h-11 bg-white"
                 />
               </div>
               <div className="">
@@ -109,7 +135,7 @@ const Contact = () => {
                 <Input
                   type="number"
                   placeholder="+971 234 5678"
-                  className="mt-2 h-11"
+                  className="mt-2 h-11 bg-white"
                 />
               </div>
             </div>
@@ -121,13 +147,13 @@ const Contact = () => {
                 <Input
                   type="text"
                   placeholder="Your Company"
-                  className="mt-2 h-11"
+                  className="mt-2 h-11 bg-white"
                 />
               </div>
               <div className="">
                 <Label>Interest</Label>
                 <Select>
-                  <SelectTrigger className="w-full mt-2 !h-11">
+                  <SelectTrigger className="w-full mt-2 !h-11 bg-white">
                     <SelectValue placeholder="Select your Interest" />
                   </SelectTrigger>
                   <SelectContent>
@@ -147,7 +173,7 @@ const Contact = () => {
             <div>
               <Label>Global Region</Label>
               <Select>
-                <SelectTrigger className="w-full mt-2 !h-11 ">
+                <SelectTrigger className="w-full mt-2 !h-11 bg-white">
                   <SelectValue placeholder="Select your Region" />
                 </SelectTrigger>
                 <SelectContent>
@@ -164,10 +190,14 @@ const Contact = () => {
             </div>
             <div>
               <Label>Message</Label>
-              <Textarea rows={10} className="resize-none mt-2 h-32" />
+              <Textarea rows={10} className="resize-none mt-2 h-32 bg-white" />
             </div>
 
-            <Button type="submit" variant="outline">
+            <Button
+              type="submit"
+              variant="outline"
+              className="bg-gradient-to-tr from-[#387EF0] to-[#2651C2] text-slate-50"
+            >
               Send Enquiry
             </Button>
           </form>
@@ -211,63 +241,42 @@ const Contact = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-5">
-              🌍 International Offices
+            <h3 className="text-2xl font-semibold flex items-center gap-2 mb-5">
+              <img
+                src={"https://cdn-icons-png.flaticon.com/512/44/44386.png"}
+                alt={""}
+                className="size-6"
+              />
+              International Offices
             </h3>
-            <ul className="space-y-6 text-slate-900/80">
-              <li className="flex items-start gap-4">
-                <Image
-                  src="/contact-flags/uk-flag.png"
-                  alt="UK Flag"
-                  width={40}
-                  height={30}
-                  className="rounded !w-16 shadow-sm"
-                />
-                <div>
-                  <strong className="text-slate-900">United Kingdom</strong>
-                  <br />
-                  London Office
-                  <br />
-                  <Mail className="inline-block w-4 h-4 mr-1 text-blue-400" />
-                  uk@alyusr.com.sa
-                </div>
-              </li>
+            <ul className="space-y-6 text-slate-900/90">
+              {internationalOffices.map((office, index) => (
+                <li
+                  key={index}
+                  className="flex items-center gap-5 bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition-all"
+                >
+                  <div className="h-[70px] flex items-stretch ">
+                    <Image
+                      src={office.flag}
+                      alt={`${office.country} Flag`}
+                      width={64}
+                      height={48}
+                      className="rounded-lg  h-full w-28 object-cover shadow"
+                    />
+                  </div>
 
-              <li className="flex items-start gap-4">
-                <Image
-                  src="/contact-flags/sri-lanka.png"
-                  alt="Sri Lanka Flag"
-                  width={40}
-                  height={30}
-                  className="rounded !w-16 shadow-sm"
-                />
-                <div>
-                  <strong className="text-slate-900">Sri Lanka</strong>
-                  <br />
-                  Colombo Office
-                  <br />
-                  <Mail className="inline-block w-4 h-4 mr-1 text-blue-400" />
-                  srilanka@alyusr.com.sa
-                </div>
-              </li>
-
-              <li className="flex items-start gap-4">
-                <Image
-                  src="/contact-flags/egypt-flag.png"
-                  alt="Egypt Flag"
-                  width={40}
-                  height={30}
-                  className="rounded !w-16 shadow-sm"
-                />
-                <div>
-                  <strong className="text-slate-900">Egypt</strong>
-                  <br />
-                  Cairo Office
-                  <br />
-                  <Mail className="inline-block w-4 h-4 mr-1 text-blue-400" />
-                  egypt@alyusr.com.sa
-                </div>
-              </li>
+                  <div>
+                    <h4 className="text-lg font-semibold text-slate-900">
+                      {office.country}
+                    </h4>
+                    <p className="text-sm text-slate-600">{office.city}</p>
+                    <div className="mt-1 flex items-center text-blue-500 text-sm">
+                      <Mail className="w-4 h-4 mr-1" />
+                      {office.email}
+                    </div>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
