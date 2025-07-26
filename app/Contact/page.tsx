@@ -78,16 +78,26 @@ const Contact = () => {
         transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
       >
-        <div className="relative z-30 container mx-auto py-10">
-          <h1 className="text-5xl font-[500] text-slate-50">Contact us</h1>
+        <div className="relative z-30 container mx-auto py-10 flex flex-col justify-center items-center h-full max-w-3xl">
+          <h1 className="text-6xl font-[500] text-slate-50 text-center">
+            Contact us
+          </h1>
+          <p className="mt-3 text-slate-50 text-center">
+            We&apos;re here to answer your questions, explore opportunities, and
+            support your projects, every step of the way. Whether you&apos;re
+            looking for engineering consultancy, design expertise, or project
+            management services, our team is ready to assist you. For project
+            consultations, RFPs, or business partnerships, please reach out via
+            email or use the enquiry form below.
+          </p>
         </div>
         <BgLayer color="bg-black/50 z-20" />
 
         {/* Parallax image */}
         <motion.img
           style={{ y: yTransform }}
-          className="absolute scale-[1.3] inset-0 w-full h-full object-cover"
-          src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg"
+          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-top"
+          src="https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg"
           alt=""
         />
       </motion.div>
@@ -201,15 +211,6 @@ const Contact = () => {
               Send Enquiry
             </Button>
           </form>
-          <p className="mt-8">
-            We&apos;re here to answer your questions, explore opportunities, and
-            support your projects, every step of the way.
-            <br /> Whether you&apos;re looking for engineering consultancy, design
-            expertise, or project management services, our team is ready to
-            assist you. <br />
-            For project consultations, RFPs, or business partnerships, please
-            reach out via email or use the enquiry form below.
-          </p>
         </div>
 
         {/* Contact Info */}
