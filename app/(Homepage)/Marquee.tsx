@@ -26,7 +26,12 @@ const Marquee = () => {
 
       <div className="mt-7">
         {" "}
-        <InfiniteMovingCards items={Icons} direction="right" speed="slow" />
+        <InfiniteMovingCards
+          dir={"Icon"}
+          items={Icons}
+          direction="right"
+          speed="slow"
+        />
       </div>
     </section>
   );

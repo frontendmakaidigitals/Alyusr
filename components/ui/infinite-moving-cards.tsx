@@ -9,12 +9,18 @@ export const InfiniteMovingCards = ({
   speed = "fast",
   pauseOnHover = true,
   className,
+  dir,
+  iconSize,
+  gap,
 }: {
   items: { title: string; img: string }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
+  dir: string;
+  iconSize?: string;
+  gap?: string;
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -78,13 +84,14 @@ export const InfiniteMovingCards = ({
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-20 py-4",
           start && "animate-scroll",
-          pauseOnHover && "hover:[animation-play-state:paused]"
+          pauseOnHover && "hover:[animation-play-state:paused]",
+          gap
         )}
       >
         {items.map((item, idx) => (
-          <li className="relative size-24" key={idx}>
+          <li className={cn(`relative size-24`, iconSize)} key={idx}>
             <img
-              src={`/Icon/${item.img}`}
+              src={`/${dir}/${item.img}`}
               alt={item.title}
               className="w-full h-full object-contain"
             />
