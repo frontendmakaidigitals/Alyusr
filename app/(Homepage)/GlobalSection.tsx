@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowUpRight } from "lucide-react";
 const GlobalSection = () => {
   return (
-    <div className="py-20">
+    <div className="py-20  bg-gradient-to-br from-[#ebf3ff] to-[#e2ecff]">
       <div className="grid grid-cols-1 place-items-center lg:grid-cols-2 gap-12 container mx-auto">
         <div className="">
           <h1 className="text-6xl font-[500]">
