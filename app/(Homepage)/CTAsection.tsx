@@ -1,9 +1,8 @@
 import React from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { Download } from "lucide-react";
-import Link from "next/link";
 
-
+import Image from "next/image";
+import BgLayer from "../app_chunks/BgLayer";
 const Marquee = () => {
   const partners = [
     { title: "Agriserv", img: "agriserv logo.webp" },
@@ -22,7 +21,7 @@ const Marquee = () => {
   ];
 
   return (
-    <section className="py-20 text-center bg-white">
+    <section className="pt-20 text-center bg-white">
       {/* Heading */}
       <h1 className="text-4xl md:text-5xl font-semibold max-w-3xl mx-auto">
         Our Trusted <span className="text-blue-600">Partners</span>
@@ -41,13 +40,33 @@ const Marquee = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="mt-12">
-        <Link href="/Alyusr-Company-Profile.pdf" target="_blank">
-          <button className="inline-flex items-center gap-2 px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 transition rounded-full text-lg font-medium shadow-md hover:shadow-lg">
-            <Download className="w-5 h-5" />
-            Download Our Profile
+      <div className="relative container mx-auto max-w-5xl h-[270px] w-full rounded-2xl overflow-hidden shadow-xl mt-10">
+        {/* Background image */}
+        <Image
+          src={
+            "https://images.pexels.com/photos/139207/pexels-photo-139207.jpeg"
+          }
+          alt="Dubai Property"
+          objectFit="cover"
+          className="absolute !w-full !h-full object-cover inset-0"
+          width={1200}
+          height={120}
+        />
+        <BgLayer color="bg-black/50" />
+
+        <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6 text-white">
+          <h2 className="text-2xl md:text-3xl max-w-2xl font-bold mb-2">
+            EXPLORE PROPERTIES IN DUBAI WITH Al-Yusr
+          </h2>
+          <p className="text-sm md:text-base max-w-3xl">
+            From iconic high-rises to boutique apartments, Milestone Homes Real
+            Estate has access to the best listings in all over Dubai. Browse our
+            properties or speak to our experienced consultants today.
+          </p>
+          <button className="mt-5 px-6 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-all">
+            VIEW NOW
           </button>
-        </Link>
+        </div>
       </div>
     </section>
   );
