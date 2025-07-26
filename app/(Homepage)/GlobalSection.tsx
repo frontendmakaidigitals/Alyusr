@@ -3,9 +3,8 @@ import { ArrowUpRight } from "lucide-react";
 const GlobalSection = () => {
   return (
     <div className="py-20">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 container mx-auto">
+      <div className="grid grid-cols-1 place-items-center lg:grid-cols-2 gap-12 container mx-auto">
         <div className="">
-          {" "}
           <h1 className="text-6xl font-[500]">
             A Worldwide Footprint,{" "}
             <span className="text-blue-500">Globally Present</span>
@@ -26,7 +25,10 @@ const GlobalSection = () => {
           </button>
         </div>
 
-        <img className="w-full object-cover h-[450px]" src={"/Global.png"} />
+        <img
+          className="w-full object-contain h-[330px] xl:h-[520px] 2xl:h-[550px]"
+          src={"/Global.png"}
+        />
       </div>
     </div>
   );
