@@ -16,32 +16,116 @@ export const siteConfig = {
             { label: "Safety Commitments", link: "/safety-commitments" },
           ],
         },
+      ],
+      tagLine: "Al Yusr is making global impact with saudi - vision 2030",
+      wideCard: [
         {
-          label: "Vision 2030 Highlights",
-          submenu: [
-            { label: "Leadership & Vision", link: "/leadership-vision" },
-            {
-              label: "Transforming Saudi Future",
-              link: "/transforming-saudi-future",
-            },
+          label: "Leadership & Vision",
+          desc: "Why Al Yusr is the trusted global Infrastructure leader.Why Al Yusr is the trusted global Infrastructure leader.",
+          img: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Saudi_Vision_2030_logo.svg/1200px-Saudi_Vision_2030_logo.svg.png",
+        },
+        {
+          label: "Transforming Saudi Future",
+          desc: "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader.",
+          img: "https://images.pexels.com/photos/4614473/pexels-photo-4614473.jpeg",
+        },
+      ],
+      imgCard: [
+        { button: "Donwload Now", img: "https://images.pexels.com/photos/8217368/pexels-photo-8217368.jpeg" },
+        { button: "Get Expert Advise", img: "https://images.pexels.com/photos/5439438/pexels-photo-5439438.jpeg" },
+      ],
+    },
+    {
+      label: "What We Do",
+      tagLine: "Services We Provide",
+      services: [
+        {
+          label: "Design Solutions",
+          items: [
+            "Architecture and Design",
+            "Structural & MEP Engineering",
+            "Landscape Architecture",
+            "Masterplanning",
+            "Interior Architecture",
           ],
         },
         {
-          label: "Brochure & CTA",
-          submenu: [
-            { label: "Download Brochure", link: "/brochure" },
-            { label: "Get Expert Advice", link: "/expert-advice" },
+          label: "Project Advisory",
+          items: [
+            "Construction Management",
+            "BIM Solutions",
+            "Cost Management",
+            "Simulation Models",
+            "Partnership Advisory",
           ],
+        },
+        {
+          label: "Sustainability Services",
+          items: [
+            "Social Impact Assessment",
+            "Climate Adaptation",
+            "Air Quality Consulting",
+            "EHS Management",
+            "Sustainability Advisory",
+          ],
+        },
+      ],
+      tagLine2: "In These Locations",
+      locationsData: [
+        {
+          country: "Saudi Arabia",
+          cities: ["Jeddah", "Riyyad", "Abha", "Hail", "Najran", "Tabuk"],
+        },
+        {
+          country: "Egypt",
+          cities: [""],
+        },
+        {
+          country: "United Kingdom",
+          cities: [""],
+        },
+        {
+          country: "Sri Lanka",
+          cities: [""],
         },
       ],
     },
     {
       label: "Why Al Yusr",
-      href: "/why-alyusr",
-    },
-    {
-      label: "What We Do",
-      href: "/what-we-do",
+      tagLine: "Lorem Ipsum Dolor ",
+      imgCard: "",
+      contactNum: "",
+      services: [
+        {
+          label: "Trusted by Govt & Private Sectors",
+          description:
+            "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader",
+          img: "https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg", // Replace with actual image path
+        },
+        {
+          label: "Globally Certified Standards",
+          description:
+            "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader",
+          img: "https://images.pexels.com/photos/6474498/pexels-photo-6474498.jpeg",
+        },
+        {
+          label: "In-House Capabilities",
+          description:
+            "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader",
+          img: "https://images.pexels.com/photos/33266/work-chinese-industrial-professional.jpg",
+        },
+        {
+          label: "CEO Led - Specialized Departments",
+          description:
+            "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader",
+          img: "https://images.pexels.com/photos/4342352/pexels-photo-4342352.jpeg",
+        },
+      ],
+      tabs: [
+        { label: "Architecture and Design", link: "/" },
+        { label: "Environmental Contracting", link: "/" },
+        { label: "Digital Infrastructure Services", link: "/" },
+      ],
     },
     {
       label: "Resources",
@@ -53,7 +137,7 @@ export const siteConfig = {
     },
     {
       label: "Contact Us",
-      href: "/contact",
+      href: "/Contact",
     },
   ],
   links: {
@@ -63,4 +147,69 @@ export const siteConfig = {
     discord: "https://discord.gg/9b6yyZKmH4",
     sponsor: "https://patreon.com/jrgarciadev",
   },
+};
+
+export type SiteConfig = {
+  name: string;
+  description: string;
+  navItems: NavItem[];
+  links: {
+    github: string;
+    twitter: string;
+    docs: string;
+    discord: string;
+    sponsor: string;
+  };
+};
+
+type NavItem = WhoWeAreNav | WhyAlYusrNav | WhatWeDoNav | SimpleLink;
+
+type WhoWeAreNav = {
+  label: "Who We Are";
+  services: {
+    label: string;
+    submenu: { label: string; link: string }[];
+  }[];
+  tagLine: string;
+  wideCard: { label: string; desc: string; img: string }[];
+  imgCard: { button: string; img: string }[];
+};
+
+type  WhatWeDoNav = {
+  label: "What We Do";
+  tagLine: string;
+  tagLine2: string;
+  services: {
+    label: string;
+    items: string[];
+  }[];
+  locationsData: {
+    country: string;
+    cities: string[];
+  }[];
+  imgCard: {
+    label: string;
+    img: string;
+  };
+};
+
+type WhyAlYusrNav = {
+  label: "Why Al Yusr";
+  tagLine: string;
+  contactNum: string;
+  imgCard: string;
+  services: {
+    label: string;
+    description: string;
+    img: string;
+  }[];
+  tabs: {
+    label: string;
+    link: string;
+  }[];
+};
+
+type SimpleLink = {
+  label: string;
+  href?: string;
 };

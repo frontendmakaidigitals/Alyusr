@@ -56,12 +56,13 @@ const Marquee = () => {
 
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6 text-white">
           <h2 className="text-2xl md:text-3xl max-w-2xl font-bold mb-2">
-            EXPLORE PROPERTIES IN DUBAI WITH Al-Yusr
+            Your Trusted Partner in Nation-Building with Al Yusr
           </h2>
           <p className="text-sm md:text-base max-w-3xl">
-            From iconic high-rises to boutique apartments, Milestone Homes Real
-            Estate has access to the best listings in all over Dubai. Browse our
-            properties or speak to our experienced consultants today.
+            Backed by in-house expertise and global certifications, we deliver
+            solutions for government and private sector projects aligned with
+            Vision 2030. properties or speak to our experienced consultants
+            today.
           </p>
           <button className="mt-5 px-6 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-all">
             VIEW NOW
