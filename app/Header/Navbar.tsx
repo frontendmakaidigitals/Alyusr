@@ -55,7 +55,7 @@ const Navbar = () => {
                     animate={{ height: "auto" }}
                     exit={{ height: 0 }}
                     transition={{ ease: [0.19, 1, 0.22, 1], duration: 0.7 }}
-                    className="w-screen absolute top-full z-10 left-0  bg-[#144273]"
+                    className="w-full absolute top-full z-10 left-0  bg-[#144273]"
                   >
                     <motion.div
                       initial={{

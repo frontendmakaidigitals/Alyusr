@@ -48,10 +48,10 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
                 />
               </div>
               <div>
-                <h2 className="text-lg 2xl:text-xl text-yellow-100 font-[500]">
+                <h2 className="text-xl text-yellow-100 font-[500]">
                   {card.label}
                 </h2>
-                <p className="text-xs 2xl:text-lg max-w-xs 2xl:max-w-lg">
+                <p className="text-sm 2xl:text-lg max-w-xs 2xl:max-w-lg">
                   {card.desc}
                 </p>
               </div>
