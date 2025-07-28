@@ -18,7 +18,7 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
       <ul className="space-y-4 border-r pr-6 border-slate-100/50 min-w-[240px]">
         {data.map((site, idx) => (
           <li key={idx}>
-            <ul className="space-y-2 text-sm text-white/80">
+            <ul className="space-y-2 text-sm 2xl:text-lg text-white/80">
               {site.submenu.map((subItem, subIdx) => (
                 <li key={subIdx}>
                   <Link
@@ -39,15 +39,21 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
         </p>
         <ul className="space-y-4 mt-5">
           {wideCard.map((card, idx) => (
-            <li key={idx} className="flex items-center gap-1 ">
-              <div className="w-[150px] bg-gray-800 h-[100px] overflow-hidden">
-                <img src={card.img} alt={""} className="w-full h-full object-cover object-contain" />
+            <li key={idx} className="flex items-center gap-1 2xl:gap-3">
+              <div className="w-[150px] 2xl:w-[200px] 2xl:h-[130px] bg-gray-800 h-[100px] overflow-hidden">
+                <img
+                  src={card.img}
+                  alt={""}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
-                <h2 className="text-lg text-yellow-100 font-[500]">
+                <h2 className="text-lg 2xl:text-xl text-yellow-100 font-[500]">
                   {card.label}
                 </h2>
-                <p className="text-xs max-w-xs">{card.desc}</p>
+                <p className="text-xs 2xl:text-lg max-w-xs 2xl:max-w-lg">
+                  {card.desc}
+                </p>
               </div>
             </li>
           ))}
