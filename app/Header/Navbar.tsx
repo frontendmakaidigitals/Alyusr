@@ -55,7 +55,7 @@ const Navbar = () => {
                     animate={{ height: "auto" }}
                     exit={{ height: 0 }}
                     transition={{ ease: [0.19, 1, 0.22, 1], duration: 0.7 }}
-                    className="w-full absolute top-full z-10 left-0  bg-[#144273]"
+                    className="w-full  absolute top-full z-30 left-0  bg-[#144273]"
                   >
                     <motion.div
                       initial={{
@@ -63,7 +63,7 @@ const Navbar = () => {
                       }}
                       animate={{ opacity: 1, transition: { delay: 0.3 } }}
                       exit={{ opacity: 0 }}
-                      className="container mx-auto py-6"
+                      className="container mx-auto py-10"
                     >
                       {menu[idx].label === "Who We Are" &&
                       "services" in menu[idx] ? (

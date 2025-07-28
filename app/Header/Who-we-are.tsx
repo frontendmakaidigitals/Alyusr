@@ -14,11 +14,11 @@ interface dataProps {
 
 const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
   return (
-    <div className="flex items-start justify-between w-full">
-      <ul className="space-y-4 border-r pr-6 border-slate-100/50 min-w-[240px]">
+    <div className="flex items-center justify-between w-full">
+      <ul className="space-y-4 pr-6  min-w-[240px]">
         {data.map((site, idx) => (
           <li key={idx}>
-            <ul className="space-y-2 text-sm 2xl:text-lg text-white/80">
+            <ul className="space-y-2 text-md 2xl:text-lg text-white/80">
               {site.submenu.map((subItem, subIdx) => (
                 <li key={subIdx}>
                   <Link
@@ -33,7 +33,7 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
           </li>
         ))}
       </ul>
-      <div className="w-full px-6">
+      <div className="w-full px-6 border-l border-slate-100/50">
         <p className="text-sm font-[500] italic text-white uppercase">
           Al Yusr is making global impact with saudi - vision 2030
         </p>

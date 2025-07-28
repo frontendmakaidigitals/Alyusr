@@ -14,6 +14,7 @@ export const siteConfig = {
             { label: "Class A Certificate", link: "/class-a-certificate" },
             { label: "Sustainability", link: "/sustainability" },
             { label: "Safety Commitments", link: "/safety-commitments" },
+               { label: "Company Overview", link: "/company-overview" },
           ],
         },
       ],
@@ -23,6 +24,11 @@ export const siteConfig = {
           label: "Leadership & Vision",
           desc: "Al Yusr’s leadership drives innovation, excellence, and a clear vision for the Kingdom’s future. ",
           img: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Saudi_Vision_2030_logo.svg/1200px-Saudi_Vision_2030_logo.svg.png",
+        },
+        {
+          label: "Transforming Saudi Future",
+          desc: "Al Yusr is proudly shaping Saudi Arabia’s future through visionary engineering.",
+          img: "https://images.pexels.com/photos/4614473/pexels-photo-4614473.jpeg",
         },
         {
           label: "Transforming Saudi Future",
