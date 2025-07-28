@@ -18,7 +18,7 @@ const Industry = () => {
       desc: "We ensure the transition fromold and faulty system to modern and more reliable BIM programs.",
     },
     {
-      img: "https://images.pexels.com/photos/8469990/pexels-photo-8469990.jpeg", // Add a valid image path
+      img: "https://images.pexels.com/photos/6196229/pexels-photo-6196229.jpeg", // Add a valid image path
       title: "Contractors",
       icon: Hammer,
       desc: "With BIMLEAD, contractors can optimize their construction processes, improve collabration with other.",
