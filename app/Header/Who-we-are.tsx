@@ -23,7 +23,7 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
                 <li key={subIdx}>
                   <Link
                     href={subItem.link}
-                    className="block border text-slate-200 border-lime-200 rounded-full px-3 py-[.6rem] hover:underline"
+                    className="block border text-slate-200 border-lime-200 hover:bg-amber-300 hover:text-black rounded-full px-3 py-[.6rem] hover:underline"
                   >
                     {subItem.label}
                   </Link>
@@ -39,7 +39,7 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
         </p>
         <ul className="space-y-4 mt-5">
           {wideCard.map((card, idx) => (
-            <li key={idx} className="flex items-center gap-1 2xl:gap-3">
+            <li key={idx} className="flex items-center gap-2 2xl:gap-3">
               <div className="w-[150px] 2xl:w-[200px] 2xl:h-[130px] bg-gray-800 h-[100px] overflow-hidden">
                 <img
                   src={card.img}

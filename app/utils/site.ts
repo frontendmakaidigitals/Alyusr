@@ -21,18 +21,24 @@ export const siteConfig = {
       wideCard: [
         {
           label: "Leadership & Vision",
-          desc: "Why Al Yusr is the trusted global Infrastructure leader.Why Al Yusr is the trusted global Infrastructure leader.",
+          desc: "Al Yusr’s leadership drives innovation, excellence, and a clear vision for the Kingdom’s future. ",
           img: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Saudi_Vision_2030_logo.svg/1200px-Saudi_Vision_2030_logo.svg.png",
         },
         {
           label: "Transforming Saudi Future",
-          desc: "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader.",
+          desc: "Al Yusr is proudly shaping Saudi Arabia’s future through visionary engineering.",
           img: "https://images.pexels.com/photos/4614473/pexels-photo-4614473.jpeg",
         },
       ],
       imgCard: [
-        { button: "Donwload Now", img: "https://images.pexels.com/photos/8217368/pexels-photo-8217368.jpeg" },
-        { button: "Get Expert Advise", img: "https://images.pexels.com/photos/5439438/pexels-photo-5439438.jpeg" },
+        {
+          button: "Donwload Now",
+          img: "https://images.pexels.com/photos/8217368/pexels-photo-8217368.jpeg",
+        },
+        {
+          button: "Get Expert Advise",
+          img: "https://images.pexels.com/photos/5439438/pexels-photo-5439438.jpeg",
+        },
       ],
     },
     {
@@ -175,7 +181,7 @@ type WhoWeAreNav = {
   imgCard: { button: string; img: string }[];
 };
 
-type  WhatWeDoNav = {
+type WhatWeDoNav = {
   label: "What We Do";
   tagLine: string;
   tagLine2: string;
