@@ -24,13 +24,18 @@ const About = () => {
               committed to excellence
             </h1>
             <p className="text-lg text-gray-700">
-              ALYUSR Engineering Consulting is a Saudi engineering consultancy
-              providing innovative and sustainable solutions aligned with Vision
-              2030. They emphasize smart infrastructure, urban development, and
-              high-quality services across KSA and globally.
-              <br /> Rooted in Vision 2030, we help shape smart cities,
-              high-tech infrastructure, and livable communities through
-              future-ready design and delivery.
+              At ALYUSR, our company culture is based on teamwork, openness, and
+              inclusion. For every project, we build a team that matches the
+              specific needs of the client, bringing together the right mix of
+              creative, technical, and leadership skills. This helps us deliver
+              high-quality solutions that truly make a difference. We support
+              our team with exciting projects, opportunities to grow, and a
+              positive work environment. <br />
+              From training programs to fun social events, we encourage learning
+              and connection at every level. We’re proud of our team’s
+              dedication and the trust we’ve built with our clients. At ALYUSR,
+              we’re more than engineers; we’re partners in building a better
+              future.
             </p>
 
             <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
