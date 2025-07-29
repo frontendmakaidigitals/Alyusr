@@ -21,7 +21,18 @@ const Navbar = () => {
       : currIdx > prevIdx
       ? "right"
       : "left";
-  console.log(direction, prevIdx);
+  const hoverAnimation = {
+    initial: { scaleY: 0, opacity: 0, originY: 1 },
+    hover: {
+      scaleY: 1,
+      opacity: 1,
+      originY: 1,
+      transition: {
+        duration: 0.45,
+        ease: [0.19, 1, 0.22, 1] as [number, number, number, number],
+      },
+    },
+  };
   return (
     <header className=" bg-[#000000] relative">
       <div className="flex py-3 lg:py-0 justify-between items-center container mx-auto">
@@ -46,15 +57,28 @@ const Navbar = () => {
               }}
               key={idx}
               className={cn(
-                ` flex px-6  py-5 items-center gap-2`,
-                idx === currIdx ? "bg-[#144273] text-white" : "text-white"
+                ` `,
+                idx === currIdx ? " text-white" : "text-white"
               )}
             >
-              {site.label}
-              {"services" in site && site.services ? (
-                <ChevronDown className="size-3" />
-              ) : null}
+              <motion.button
+                className="relative px-6 py-5 flex group items-center gap-2 overflow-hidden"
+                initial="initial"
+                whileHover="hover"
+                animate={"initial"}
+              >
+                <motion.span
+                  variants={hoverAnimation}
+                  className="absolute inset-0 w-full bg-gradient-to-tr from-blue-700 to-sky-600 z-[0]"
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                />
 
+                <span className="relative z-10 text-white">{site.label}</span>
+
+                {"services" in site && site.services ? (
+                  <ChevronDown className="size-3 relative z-10 text-white" />
+                ) : null}
+              </motion.button>
               <AnimatePresence mode="wait">
                 {isMenuShowing ? (
                   <motion.div

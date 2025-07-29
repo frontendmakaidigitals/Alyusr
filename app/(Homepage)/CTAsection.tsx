@@ -36,6 +36,7 @@ const Marquee = () => {
           speed="slow"
           iconSize={"size-40"}
           gap={"gap-8"}
+          cards={true}
         />
       </div>
 

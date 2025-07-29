@@ -12,6 +12,7 @@ export const InfiniteMovingCards = ({
   dir,
   iconSize,
   gap,
+  cards = false,
 }: {
   items: { title: string; img: string }[];
   direction?: "left" | "right";
@@ -21,6 +22,7 @@ export const InfiniteMovingCards = ({
   dir: string;
   iconSize?: string;
   gap?: string;
+  cards?: boolean;
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -89,7 +91,14 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <li className={cn(`relative size-24`, iconSize)} key={idx}>
+          <li
+            className={cn(
+              `relative size-24`,
+              iconSize,
+              cards ? "bg-slate-100 p-2 rounded-lg " : ""
+            )}
+            key={idx}
+          >
             <img
               src={`/${dir}/${item.img}`}
               alt={item.title}
