@@ -14,7 +14,6 @@ export const siteConfig = {
             { label: "Class A Certificate", link: "/class-a-certificate" },
             { label: "Sustainability", link: "/sustainability" },
             { label: "Safety Commitments", link: "/safety-commitments" },
-            { label: "Company Overview", link: "/company-overview" },
           ],
         },
       ],
