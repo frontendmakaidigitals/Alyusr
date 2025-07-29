@@ -63,15 +63,21 @@ const Herosection = () => {
     },
   ];
   return (
-    <section className="relative max-h-[58vh]">
-      <Carousel className="w-full" setApi={setApi}>
+    <section className="relative h-[50vh] lg:max-h-[58vh]">
+      <Carousel
+        opts={{
+          watchDrag: false, // Disable drag functionality
+        }}
+        className="w-full"
+        setApi={setApi}
+      >
         <CarouselContent>
           {titles.map((_, index) => (
             <CarouselItem key={index}>
-              <div className="max-h-[58vh] relative overflow-hidden">
+              <div className="h-[50vh] lg:max-h-[58vh] relative overflow-hidden">
                 <div className="absolute  z-10 w-full top-1/2 -translate-y-1/2">
                   <div className="w-full mx-auto container">
-                    <h1 className="text-6xl !text-slate-50 font-[600] max-w-2xl">
+                    <h1 className="text-4xl lg:text-6xl !text-slate-50 font-[600] max-w-2xl">
                       {slides[activeIndex].title}
                     </h1>
                     <p className="text-slate-50 mt-3 max-w-2xl">
@@ -95,7 +101,7 @@ const Herosection = () => {
       </Carousel>
 
       {/* Overlay Info */}
-      <div className="absolute bottom-0 left-0 w-full bg-black/10 backdrop-blur-md z-10 border-slate-200">
+      <div className="absolute hidden lg:block bottom-0 left-0 w-full bg-black/10 backdrop-blur-md z-10 border-slate-200">
         <ul className="max-w-6xl mx-auto grid grid-cols-5">
           {titles.slice(0, 5).map((title, idx) => (
             <li

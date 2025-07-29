@@ -131,3 +131,8 @@
     }
   }
 }
+@utility container {
+  padding-inline: 2rem;
+  margin-inline: auto;
+  max-width: 1360px;
+}

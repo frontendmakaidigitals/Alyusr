@@ -41,7 +41,12 @@ const Industry = () => {
           {Industries.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <li key={idx} className="relative w-full h-[400px]   rounded-xl">
+              <li
+                key={idx}
+                className={`relative w-full h-[400px] ${
+                  idx < 3 ? "mb-[120px]" : ""
+                } rounded-xl`}
+              >
                 <img
                   src={item.img}
                   alt={item.title}

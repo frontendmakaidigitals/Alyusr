@@ -24,12 +24,12 @@ const Navbar = () => {
   console.log(direction, prevIdx);
   return (
     <header className=" bg-[#000000] relative">
-      <div className="flex  justify-between items-center container mx-auto">
+      <div className="flex py-3 lg:py-0 justify-between items-center container mx-auto">
         <Logo />
 
         {/* Menu Starts from here */}
 
-        <ul className="flex  justify-between items-center">
+        <ul className="lg:flex hidden justify-between items-center">
           {menu.map((site, idx) => (
             <li
               onMouseEnter={() => {
@@ -86,7 +86,7 @@ const Navbar = () => {
                           transition: {
                             duration: 0.4,
                             ease: [0.19, 1, 0.22, 1],
-                            delay:.25
+                            delay: 0.25,
                           },
                         }}
                         exit={{ opacity: 0 }}

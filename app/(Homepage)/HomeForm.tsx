@@ -8,7 +8,7 @@ const HomeForm = () => {
           Get in <span className="text-blue-500">Touch with Us</span>
         </h1>
         <div className="grid grid-cols-1 place-items-center lg:grid-cols-2 gap-7 mt-12">
-          <div className="w-full h-[630px]">
+          <div className="w-full h-[350px] lg:h-[630px]">
             <img
               className="w-full h-full object-cover"
               src={"/contactImage.png"}

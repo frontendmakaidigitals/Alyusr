@@ -19,7 +19,7 @@ const About = () => {
       <div className="relative z-10 h-full flex items-center">
         <div className="container mx-auto px-4 ">
           <div className="max-w-2xl">
-            <h1 className="text-5xl font-semibold leading-tight mb-4">
+            <h1 className="text-5xl font-semibold leading-tighter  mb-4">
               Engineering <span className="text-blue-500">Consultancy</span>{" "}
               committed to excellence
             </h1>

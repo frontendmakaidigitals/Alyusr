@@ -25,29 +25,33 @@ const Process = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=3000", // 👈 Increased scroll distance
+          end: "+=3000", // Adjust based on number of cards
           scrub: true,
           pin: true,
+          pinSpacing: true, // ✅ Ensures space is reserved
+          pinType: "transform", // ✅ Ensures mobile compatibility
         },
       });
 
       cardsRef.current.forEach((card, i) => {
-        tl.fromTo(
-          card,
-          {
-            opacity: 0,
-            y: 100,
-            scale: 0.95,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 1,
-            ease: "power3.out",
-          },
-          i // step-by-step
-        );
+        if (card) {
+          tl.fromTo(
+            card,
+            {
+              opacity: 0,
+              y: 100,
+              scale: 0.95,
+            },
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 1,
+              ease: "power3.out",
+            },
+            i * 1 // stagger with step-by-step scroll
+          );
+        }
       });
     }, sectionRef);
 
@@ -55,10 +59,10 @@ const Process = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-white">
-      <div className="h-screen flex flex-col justify-center sticky top-0">
-        <div className="container mx-auto">
-          <h1 className="text-5xl font-[600] text-center mb-12">
+    <section ref={sectionRef} className="relative bg-white z-10">
+      <div className="flex flex-col justify-center py-32 min-h-screen">
+        <div className="container mx-auto px-4">
+          <h1 className="text-5xl font-semibold text-center mb-12">
             The Process <span className="text-blue-500">We Follow</span>
           </h1>
 
