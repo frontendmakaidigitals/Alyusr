@@ -22,7 +22,7 @@ const GlobalSection = () => {
             offices in Egypt, the United Kingdom, and Sri Lanka. This global
             presence enables ALYUSR to serve a diverse client base, adapt to
             international standards, and seamlessly manage projects across
-            borders, while maintaining a deep understanding of localDDDDDDD
+            borders, while maintaining a deep understanding of local
             regulations, culture, and market dynamics.
           </p>
           <button className="mt-6 bg-gradient-to-br px-4 py-[.45rem] text-sm rounded-lg text-slate-50 flex items-center gap-2 from-[#387EF0] to-[#2651C2]">
