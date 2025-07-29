@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import BgLayer from "../app_chunks/BgLayer";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
+import { motion } from "motion/react";
 const services = [
   {
     title: "Air Quality Consulting and Engineering",
@@ -334,7 +335,14 @@ const Page = () => {
             .slice(0, visibleChunks)
             .flat()
             .map((service, idx) => (
-              <li key={idx} className="aspect-square w-full relative">
+              <motion.li
+                whileInView={{ scale: 1 }}
+                initial={{ scale: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, type:'spring' }}
+                key={idx}
+                className="aspect-square w-full relative"
+              >
                 <h2 className="absolute z-10 bottom-3 left-3 text-xl font-medium text-slate-50">
                   {service.title}
                 </h2>
@@ -346,7 +354,7 @@ const Page = () => {
                   alt={service.title}
                   className="w-full h-full object-cover"
                 />
-              </li>
+              </motion.li>
             ))}
           {loading &&
             Array.from({ length: 12 }).map((_, idx) => (
