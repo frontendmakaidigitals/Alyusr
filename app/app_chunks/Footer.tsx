@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Logo from "../app_chunks/Logo";
-
+import { Printer } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-black overflow-hidden relative">
@@ -146,11 +146,19 @@ const Footer = () => {
               <div className="space-y-4">
                 <div className="flex items-start gap-2">
                   <MapPin className="w-5 h-5 mt-1" />
-                  <p className="max-w-[250px]">Marina Town, Dubai, UAE</p>
+                  <p className="max-w-[250px]">
+                    {" "}
+                    Al Rawdah District, King Abdullah Road Riyadh 13313 – 8119,
+                    Saudi Arabia
+                  </p>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  <span>+966 537007028</span>
+                  <span>+966 11 494 4444</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Printer className="w-5 h-5" />
+                  <span>+966 11 494 4440</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-5 h-5" />
@@ -169,7 +177,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
-
+export default Footer;
