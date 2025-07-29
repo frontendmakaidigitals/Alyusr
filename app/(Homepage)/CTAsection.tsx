@@ -40,7 +40,7 @@ const Marquee = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="relative container mx-auto max-w-5xl h-[270px] w-full rounded-2xl overflow-hidden shadow-xl mt-10">
+      <div className="relative container mx-auto lg:max-w-5xl h-[270px] w-full lg:rounded-2xl overflow-hidden shadow-xl mt-10">
         {/* Background image */}
         <Image
           src={
@@ -54,8 +54,8 @@ const Marquee = () => {
         />
         <BgLayer color="bg-black/50" />
 
-        <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6 text-white">
-          <h2 className="text-2xl md:text-3xl max-w-2xl font-bold mb-2">
+        <div className="relative  z-10 h-full flex flex-col justify-center items-center text-center lg:px-6 text-white">
+          <h2 className="text-xl md:text-3xl max-w-2xl font-bold mb-2">
             Your Trusted Partner in Nation-Building with Al Yusr
           </h2>
           <p className="text-sm md:text-base max-w-3xl">
