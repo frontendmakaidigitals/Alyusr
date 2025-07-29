@@ -63,7 +63,7 @@ const Herosection = () => {
     },
   ];
   return (
-    <section className="relative h-[50vh] lg:max-h-[58vh]">
+    <section className="relative min-h-[500px] h-[50vh] lg:h-[58vh]">
       <Carousel
         opts={{
           watchDrag: false, // Disable drag functionality
@@ -74,7 +74,7 @@ const Herosection = () => {
         <CarouselContent>
           {titles.map((_, index) => (
             <CarouselItem key={index}>
-              <div className="h-[50vh] lg:max-h-[58vh] relative overflow-hidden">
+              <div className="h-[50vh] min-h-[500px] lg:h-[58vh] relative overflow-hidden">
                 <div className="absolute  z-10 w-full top-1/2 -translate-y-1/2">
                   <div className="w-full mx-auto container">
                     <h1 className="text-4xl lg:text-6xl !text-slate-50 font-[600] max-w-2xl">
