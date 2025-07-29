@@ -18,7 +18,7 @@ const services = [
   },
   {
     title: "Architecture",
-    img: "architecture.webp",
+    img: "Architecture.webp",
   },
   {
     title: "Asset Advisory",
@@ -62,7 +62,7 @@ const services = [
   },
   {
     title: "Economics",
-    img: "economics.webp",
+    img: "Economics.webp",
   },
   {
     title: "EHS Management Consulting and Compliance 2",
@@ -78,7 +78,7 @@ const services = [
   },
   {
     title: "Engineering",
-    img: "engineering.webp",
+    img: "Engineering.webp",
   },
   {
     title: "Environmental and Social Impact Assessment and Permitting",
@@ -102,7 +102,7 @@ const services = [
   },
   {
     title: "Finance",
-    img: "finance.webp",
+    img: "Finance.webp",
   },
   {
     title: "Foundations Contracting",
@@ -178,7 +178,7 @@ const services = [
   },
   {
     title: "Planning",
-    img: "planning.webp",
+    img: "Planning.webp",
   },
   {
     title: "Process Development & Implementation",
