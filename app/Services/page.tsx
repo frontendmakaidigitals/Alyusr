@@ -6,139 +6,254 @@ import { Skeleton } from "@/components/ui/skeleton";
 const services = [
   {
     title: "Air Quality Consulting and Engineering",
-    img: "Air Quality Consulting and Engineering.webp",
+    img: "air-quality-consulting-and-engineering.webp",
   },
   {
     title: "Alternative Delivery Models",
-    img: "Alternative Delivery Models.webp",
+    img: "alternative-delivery-models.webp",
   },
-  { title: "Architecture and Design", img: "Architecture and Design.webp" },
-  { title: "Architecture", img: "Architecture.webp" },
-  { title: "Asset Advisory", img: "Asset Advisory.webp" },
-  { title: "Cities Solutions", img: "Cities Solutions.webp" },
-  { title: "Climate Adaptation", img: "Climate Adaptation.webp" },
-  { title: "Community Engagement", img: "Community Engagement.webp" },
-  { title: "Construction Management", img: "Construction Management.webp" },
-  { title: "Converged Resilience", img: "Converged Resilience.webp" },
-  { title: "Cost Management", img: "Cost Management.webp" },
+  {
+    title: "Architecture and Design",
+    img: "architecture-and-design.webp",
+  },
+  {
+    title: "Architecture",
+    img: "architecture.webp",
+  },
+  {
+    title: "Asset Advisory",
+    img: "asset-advisory.webp",
+  },
+  {
+    title: "Cities Solutions",
+    img: "cities-solutions.webp",
+  },
+  {
+    title: "Climate Adaptation",
+    img: "climate-adaptation.webp",
+  },
+  {
+    title: "Community Engagement",
+    img: "community-engagement.webp",
+  },
+  {
+    title: "Construction Management",
+    img: "construction-management.webp",
+  },
+  {
+    title: "Converged Resilience",
+    img: "converged-resilience.webp",
+  },
+  {
+    title: "Cost Management",
+    img: "cost-management.webp",
+  },
   {
     title: "Critical Infrastructure Protection",
-    img: "Critical Infrastructure Protection.webp",
+    img: "critical-infrastructure protection.webp",
   },
-  { title: "Digital EHSESG Solutions", img: "Digital EHSESG Solutions.webp" },
+  {
+    title: "Digital EHSESG Solutions",
+    img: "digital-ehsesg-solutions.webp",
+  },
   {
     title: "Digital Infrastructure Services",
-    img: "Digital Infrastructure Services.webp",
+    img: "digital-infrastructure-services.webp",
   },
-  { title: "Economics", img: "Economics.webp" },
+  {
+    title: "Economics",
+    img: "economics.webp",
+  },
   {
     title: "EHS Management Consulting and Compliance 2",
-    img: "EHS Management Consulting and Compliance 2.webp",
+    img: "ehs-management-consulting-and-compliance-2.webp",
   },
   {
     title: "EHS Management Consulting and Compliance",
-    img: "EHS Management Consulting and Compliance.webp",
+    img: "ehs-management-consulting-and-compliance.webp",
   },
-  { title: "Electrical Contracting", img: "Electrical Contracting.webp" },
-  { title: "Engineering", img: "Engineering.webp" },
+  {
+    title: "Electrical Contracting",
+    img: "electrical-contracting.webp",
+  },
+  {
+    title: "Engineering",
+    img: "engineering.webp",
+  },
   {
     title: "Environmental and Social Impact Assessment and Permitting",
-    img: "Environmental and Social Impact Assessment and Permitting.webp",
+    img: "environmental-and-social-impact-assessment-and-permitting.webp",
   },
   {
     title: "Environmental Contracting 2",
-    img: "Environmental Contracting 2.webp",
+    img: "environmental-contracting-2.webp",
   },
   {
     title: "Environmental Contracting",
-    img: "Environmental Contracting.webp",
+    img: "environmental-contracting.webp",
   },
-  { title: "Environmental Services 1", img: "Environmental Services 1.webp" },
-  { title: "Environmental Services 2", img: "Environmental Services 2.webp" },
-  { title: "Finance", img: "Finance.webp" },
-  { title: "Foundations Contracting", img: "Foundations Contracting.webp" },
-  { title: "Geospatial Services", img: "Geospatial Services.webp" },
-  { title: "Ground Engineering 1", img: "Ground Engineering 1.webp" },
-  { title: "Ground Engineering 2", img: "Ground Engineering 2.webp" },
+  {
+    title: "Environmental Services 1",
+    img: "environmental-services-1.webp",
+  },
+  {
+    title: "Environmental Services 2",
+    img: "environmental-services-2.webp",
+  },
+  {
+    title: "Finance",
+    img: "finance.webp",
+  },
+  {
+    title: "Foundations Contracting",
+    img: "foundations-contracting.webp",
+  },
+  {
+    title: "Geospatial Services",
+    img: "geospatial-services.webp",
+  },
+  {
+    title: "Ground Engineering 1",
+    img: "ground-engineering-1.webp",
+  },
+  {
+    title: "Ground Engineering 2",
+    img: "ground-engineering-2.webp",
+  },
   {
     title: "Industrial and Commercial Operations and Maintenance 2",
-    img: "Industrial and Commercial Operations and Maintenance 2.webp",
+    img: "industrial-and-commercial-operations-and-maintenance-2.webp",
   },
   {
     title: "Industrial and Commercial Operations and Maintenance",
-    img: "Industrial and Commercial Operations and Maintenance.webp",
+    img: "industrial-and-commercial-operations-and-maintenance.webp",
   },
-  { title: "Interior Architecture", img: "Interior Architecture.webp" },
-  { title: "IT and Cybersecurity", img: "IT and Cybersecurity.webp" },
-  { title: "Landscape Architecture", img: "Landscape Architecture.webp" },
-  { title: "Legacy Foundations", img: "Legacy Foundations.webp" },
+  {
+    title: "Interior Architecture",
+    img: "interior-architecture.webp",
+  },
+  {
+    title: "IT and Cybersecurity",
+    img: "it-and-cybersecurity.webp",
+  },
+  {
+    title: "Landscape Architecture",
+    img: "landscape-architecture.webp",
+  },
+  {
+    title: "Legacy Foundations",
+    img: "legacy-foundations.webp",
+  },
   {
     title: "Multinational Investment and Development 1",
-    img: "Multinational Investment and Development 1.webp",
+    img: "multinational-investment-and-development-1.webp",
   },
   {
     title: "Multinational Investment and Development 2",
-    img: "Multinational Investment and Development 2.webp",
+    img: "multinational-investment-and-development-2.webp",
   },
   {
     title: "Pedestrian Modelling (North America)",
-    img: "Pedestrian Modelling (North America).webp",
+    img: "pedestrian-modelling-(north-america).webp",
   },
   {
     title: "Pedestrian Modelling in Action",
-    img: "Pedestrian Modelling in Action.webp",
+    img: "pedestrian-modelling-in-action.webp",
   },
-  { title: "Pedestrian Modelling", img: "Pedestrian Modelling.webp" },
-  { title: "People + Place Advisory", img: "People + Place Advisory.webp" },
-  { title: "Planning 2", img: "Planning 2.webp" },
-  { title: "Planning and Consulting", img: "Planning and Consulting.webp" },
-  { title: "Planning", img: "Planning.webp" },
+  {
+    title: "Pedestrian Modelling",
+    img: "pedestrian-modelling.webp",
+  },
+  {
+    title: "People + Place Advisory",
+    img: "people-+-place-advisory.webp",
+  },
+  {
+    title: "Planning 2",
+    img: "planning-2.webp",
+  },
+  {
+    title: "Planning and Consulting",
+    img: "planning-and-consulting.webp",
+  },
+  {
+    title: "Planning",
+    img: "planning.webp",
+  },
   {
     title: "Process Development & Implementation",
-    img: "Process Development & Implementation.webp",
+    img: "process-development-&-implementation.webp",
   },
-  { title: "Program Management 2", img: "Program Management 2.webp" },
-  { title: "Program Management", img: "Program Management.webp" },
   {
-    title: "Public-Private Partnerships",
-    img: "Public-Private Partnerships.webp",
+    title: "Program Management 2",
+    img: "program-management-2.webp",
   },
-  { title: "Rail Simulations", img: "Rail Simulations.webp" },
+  {
+    title: "Program Management",
+    img: "program-management.webp",
+  },
+  {
+    title: "Public Private Partnerships",
+    img: "public-private-partnerships.webp",
+  },
+  {
+    title: "Rail Simulations",
+    img: "rail-simulations.webp",
+  },
   {
     title: "Remediation, Restoration and Redevelopment",
-    img: "Remediation, Restoration and Redevelopment.webp",
+    img: "remediation,-restoration-and-redevelopment.webp",
   },
   {
     title: "Risk Management & Resilience",
-    img: "Risk Management & Resilience.webp",
+    img: "risk-management-&-resilience.webp",
   },
-  { title: "SCCI Electric", img: "SCCI Electric.webp" },
-  { title: "Simulation Models", img: "Simulation Models.webp" },
-  { title: "Strategic consulting", img: "Strategic consulting.webp" },
+  {
+    title: "SCCI Electric",
+    img: "scci-electric.webp",
+  },
+  {
+    title: "Simulation Models",
+    img: "simulation-models.webp",
+  },
+  {
+    title: "Strategic Consulting",
+    img: "strategic-consulting.webp",
+  },
   {
     title: "Tunnels, Trenchless Technology and Underground Infrastructure",
-    img: "Tunnels, Trenchless Technology and Underground Infrastructure.webp",
+    img: "tunnels,-trenchless-technology-and-underground-infrastructure.webp",
   },
-  { title: "Urban Analytics", img: "Urban Analytics.webp" },
-  { title: "Urban Design", img: "Urban Design.webp" },
-  { title: "Urbanism + Planning", img: "Urbanism + Planning.webp" },
+  {
+    title: "Urban Analytics",
+    img: "urban-analytics.webp",
+  },
+  {
+    title: "Urban Design",
+    img: "urban-design.webp",
+  },
+  {
+    title: "Urbanism + Planning",
+    img: "urbanism-+-planning.webp",
+  },
   {
     title: "Vertical Transportation Services (North America) 2",
-    img: "Vertical Transportation Services (North America) 2.webp",
+    img: "vertical-transportation-services-(north-america)-2.webp",
   },
   {
     title: "Vertical Transportation Services (North America) 3",
-    img: "Vertical Transportation Services (North America) 3.webp",
+    img: "vertical-transportation-services-(north-america)-3.webp",
   },
   {
     title: "Vertical Transportation Services (North America)",
-    img: "Vertical Transportation Services (North America).webp",
+    img: "vertical-transportation-services-(north-america).webp",
   },
   {
     title: "Visualization and Virtual Reality",
-    img: "Visualization and Virtual Reality.webp",
+    img: "visualization-and-virtual-reality.webp",
   },
 ];
+
 const Page = () => {
   const chunkArray = (
     arr: { title: string; img: string }[],
