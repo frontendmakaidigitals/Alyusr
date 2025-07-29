@@ -8,12 +8,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Process = () => {
   const processes = [
-    "Process1.png",
-    "Process2.png",
-    "Process3.png",
-    "Process4.png",
-    "Process5.png",
-    "Process6.png",
+    "process1.png",
+    "process2.png",
+    "process3.png",
+    "process4.png",
+    "process5.png",
+    "process6.png",
   ];
 
   const sectionRef = useRef(null);
