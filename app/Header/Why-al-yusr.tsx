@@ -44,7 +44,7 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
       </div>
       <div className="ml-5 flex flex-col items-end  justify-between w-full h-[340px]">
         <div>
-          <p className="mb-2">Lorem ipsum Lorem ipsum Lorem ipsum</p>
+          <p className="mb-2">Al Yusr is Proven and Certified to Shape the Kingdom</p>
           <ul className="w-full grid grid-cols-2 gap-4">
             {data.map((service, idx) => (
               <li key={idx} className="flex items-center gap-2 ">
