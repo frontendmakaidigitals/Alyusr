@@ -31,7 +31,7 @@ const Herosection = () => {
     "Vision 2030",
     "Smart Cities",
     "Engineering",
-    "Masterplan",
+    "Architecture & Infrastructure",
     "Foundation",
   ];
 
@@ -101,7 +101,7 @@ const Herosection = () => {
             <li
               key={idx}
               className={`relative py-4 px-4 text-center border-slate-300 ${
-                idx < 3 ? "border-r" : ""
+                idx < 4 ? "border-r" : ""
               }`}
             >
               <span className="relative z-10 text-slate-50 block text-sm font-medium whitespace-nowrap overflow-hidden text-ellipsis">
@@ -109,13 +109,11 @@ const Herosection = () => {
               </span>
               {idx === activeIndex % 4 && (
                 <span
-                  key={activeIndex} // force re-render animation
-                  className="absolute bottom-0 left-0 h-1 z-0"
+                  key={activeIndex}
+                  className="absolute bottom-0 left-0 h-1 z-0 w-full bg-gradient-to-r from-[#1A2980] via-[#2464da] to-[#1A2980]"
                   style={{
-                    backgroundColor: "#323232",
                     animation:
                       "fillBar 8s cubic-bezier(0.19, 1, 0.22, 1) forwards",
-                    width: "100%",
                     height: "100%",
                   }}
                 />

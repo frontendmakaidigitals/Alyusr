@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 interface dataProps {
   data: {
     label: string;
@@ -35,7 +36,9 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
         <button className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-amber-100 text-black px-3 py-[.4rem] rounded-full text-xs border border-black">
           View All Services
         </button>
-        <img
+        <Image
+          width={300}
+          height={300}
           src={
             "https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg"
           }
@@ -52,8 +55,15 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
               key={idx}
               className="relative w-fit"
             >
-              <p className={`font-semibold flex items-center gap-2 ${currIndex == idx ? 'text-amber-100' : ''}`}>
-                {location.country} {currIndex === idx ? <ChevronRight className="size-[14px]" /> : null}
+              <p
+                className={`font-semibold flex items-center gap-2 ${
+                  currIndex == idx ? "text-amber-100" : ""
+                }`}
+              >
+                {location.country}{" "}
+                {currIndex === idx ? (
+                  <ChevronRight className="size-[14px]" />
+                ) : null}
               </p>
 
               {/* Show cities only on hover */}

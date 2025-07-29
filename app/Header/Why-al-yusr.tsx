@@ -1,5 +1,6 @@
 import React from "react";
 import { Instagram, Linkedin } from "lucide-react";
+import Image from "next/image";
 interface dataProps {
   data: {
     label: string;
@@ -48,10 +49,10 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
             {data.map((service, idx) => (
               <li key={idx} className="flex items-center gap-2 ">
                 <div className="w-[230px] h-[70px] overflow-hidden">
-                  <img
-                    src={
-                     service.img
-                    }
+                  <Image
+                    width={300}
+                    height={300}
+                    src={service.img}
                     alt={""}
                     className="w-full h-full object-cover"
                   />

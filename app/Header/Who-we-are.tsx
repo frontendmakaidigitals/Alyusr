@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 interface dataProps {
   data: {
     label: string;
@@ -41,7 +42,9 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
           {wideCard.map((card, idx) => (
             <li key={idx} className="flex items-center gap-2 2xl:gap-3">
               <div className="w-[150px] 2xl:w-[200px] 2xl:h-[130px] bg-gray-800 h-[100px] overflow-hidden">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={card.img}
                   alt={""}
                   className="w-full h-full object-cover"
@@ -65,7 +68,9 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
             <button className="absolute bottom-3 whitespace-nowrap left-1/2 -translate-x-1/2 text-xs rounded-full py-[.4rem] bg-amber-100 text-black border- border-slate-900  px-4">
               {img.button}
             </button>
-            <img
+            <Image
+              width={700}
+              height={600}
               src={img.img}
               alt={""}
               className="w-full h-full object-cover "
