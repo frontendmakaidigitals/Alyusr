@@ -55,7 +55,7 @@ const Marquee = () => {
         <BgLayer color="bg-black/50" />
 
         <div className="relative  z-10 h-full flex flex-col justify-center items-center text-center lg:px-6 text-white">
-          <h2 className="text-xl md:text-3xl max-w-2xl font-bold mb-2">
+          <h2 className="text-xl md:text-4xl max-w-2xl font-bold mb-2">
             Your Trusted Partner in Nation-Building with Al Yusr
           </h2>
           <p className="text-sm md:text-base max-w-3xl">
