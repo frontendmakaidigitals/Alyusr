@@ -16,8 +16,8 @@ const About = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-slate-50/95 via-slate-50/80 to-transparent" />
 
       {/* Container with text */}
-      <div className="relative z-10 h-full flex items-center">
-        <div className="container mx-auto px-4 ">
+      <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+        <div className="container mx-auto px-4  ">
           <div className="max-w-2xl">
             <h1 className="text-5xl font-semibold leading-tighter  mb-4">
               Engineering <span className="text-blue-500">Consultancy</span>{" "}
