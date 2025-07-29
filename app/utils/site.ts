@@ -30,11 +30,6 @@ export const siteConfig = {
           desc: "Al Yusr is proudly shaping Saudi Arabia’s future through visionary engineering.",
           img: "https://images.pexels.com/photos/4614473/pexels-photo-4614473.jpeg",
         },
-        {
-          label: "Transforming Saudi Future",
-          desc: "Al Yusr is proudly shaping Saudi Arabia’s future through visionary engineering.",
-          img: "https://images.pexels.com/photos/4614473/pexels-photo-4614473.jpeg",
-        },
       ],
       imgCard: [
         {
