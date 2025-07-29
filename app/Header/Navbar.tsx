@@ -66,7 +66,7 @@ const Navbar = () => {
                       duration: 0.3,
                       delay: 0.25,
                     }}
-                    className="w-full  absolute top-full z-30 left-0  bg-[#1A1A1A]"
+                    className="w-full  absolute top-full z-[50] left-0  bg-[#1A1A1A]"
                   >
                     {currIdx === idx ? (
                       <motion.div
