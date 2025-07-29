@@ -39,7 +39,7 @@ export const siteConfig = {
       imgCard: [
         {
           button: "Donwload Now",
-          img: "https://images.pexels.com/photos/8217368/pexels-photo-8217368.jpeg",
+          img: "/cover-page.jpg",
         },
         {
           button: "Get Expert Advise",
