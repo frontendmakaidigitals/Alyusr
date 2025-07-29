@@ -130,7 +130,7 @@ const Process = () => {
                 className="w-full opacity-0 transform"
               >
                 <img
-                  src={`/process/${Process}`}
+                  src={`/process/${process}`}
                   alt={`Process ${idx + 1}`}
                   className="w-full object-contain"
                 />
