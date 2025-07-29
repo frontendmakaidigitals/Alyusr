@@ -15,6 +15,14 @@ const Process = () => {
     "process5.png",
     "process6.png",
   ];
+  const mobileProcess = [
+    "Process1.svg",
+    "Process2.svg",
+    "Process3.svg",
+    "Process4.svg",
+    "Process5.svg",
+    "Process6.svg",
+  ];
 
   const sectionRef = useRef(null);
   const desktopCardsRef = useRef<(HTMLLIElement | null)[]>([]);
@@ -140,7 +148,7 @@ const Process = () => {
 
           {/* ✅ Mobile Stacked */}
           <ul className="lg:hidden relative w-full h-[60dvh]">
-            {processes.map((process, idx) => (
+            {mobileProcess.map((process, idx) => (
               <div
                 key={idx}
                 ref={(el) => {
@@ -149,7 +157,7 @@ const Process = () => {
                 className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300"
               >
                 <img
-                  src={`/process/${Process}`}
+                  src={`/process/${process}`}
                   alt={`Process ${idx + 1}`}
                   className="w-auto max-h-full object-contain"
                 />
