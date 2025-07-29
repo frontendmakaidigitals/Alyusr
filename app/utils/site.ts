@@ -14,7 +14,7 @@ export const siteConfig = {
             { label: "Class A Certificate", link: "/class-a-certificate" },
             { label: "Sustainability", link: "/sustainability" },
             { label: "Safety Commitments", link: "/safety-commitments" },
-               { label: "Company Overview", link: "/company-overview" },
+            { label: "Company Overview", link: "/company-overview" },
           ],
         },
       ],
@@ -106,7 +106,7 @@ export const siteConfig = {
         {
           label: "Trusted by Govt & Private Sectors",
           description:
-            "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader",
+            "Al Yusr operates with internationally recognized certifications, ensuring quality, safety, and sustainability",
           img: "https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg", // Replace with actual image path
         },
         {
@@ -118,13 +118,13 @@ export const siteConfig = {
         {
           label: "In-House Capabilities",
           description:
-            "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader",
+            "Al Yusr delivers all major services in-house, ensuring full control, quality, and efficiency at every stage",
           img: "https://images.pexels.com/photos/33266/work-chinese-industrial-professional.jpg",
         },
         {
           label: "CEO Led - Specialized Departments",
           description:
-            "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader",
+            "At Al Yusr, every department is guided by executive leadership to ensure expert oversight and exceptional delivery",
           img: "https://images.pexels.com/photos/4342352/pexels-photo-4342352.jpeg",
         },
       ],
