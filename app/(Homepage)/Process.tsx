@@ -90,29 +90,31 @@ const Process = () => {
       mobileCardsRef.current.forEach((card, i) => {
         if (!card) return;
 
-        tl.fromTo(
-          card,
-          {
-            opacity: 0,
-            zIndex: 0,
-          },
-          {
-            opacity: 1,
-            zIndex: 1,
-            duration: 0.3,
-            ease: "power2.inOut",
-          },
-          i
-        ).to(
-          card,
-          {
-            opacity: 0,
-            zIndex: 0,
-            duration: 0.3,
-            ease: "power2.inOut",
-          },
-          i + 0.7
-        );
+        // Fade in every card
+        if (i === 0) {
+          gsap.set(card, { opacity: 1, zIndex: 1 });
+        } else {
+          tl.fromTo(
+            card,
+            { opacity: 0, zIndex: 0 },
+            { opacity: 1, zIndex: 1, duration: 0.3, ease: "power2.inOut" },
+            i
+          );
+        }
+
+        // Fade out only if not the last card
+        if (i !== total - 1) {
+          tl.to(
+            card,
+            {
+              opacity: 0,
+              zIndex: 0,
+              duration: 0.3,
+              ease: "power2.inOut",
+            },
+            i + 0.7
+          );
+        }
       });
     }, sectionRef);
 
@@ -157,7 +159,7 @@ const Process = () => {
                 className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300"
               >
                 <img
-                  src={`/process/${process}`}
+                  src={`/process/process-mobile/${process}`}
                   alt={`Process ${idx + 1}`}
                   className="w-auto max-h-full object-contain"
                 />
