@@ -3,10 +3,10 @@ import React from "react";
 const page = () => {
   return (
     <main>
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div>
-          <h1 className="text-4xl font-[500]">Services¯</h1>
-          <h2 className="text-2xl font-[400]">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 container py-20 place-items-center">
+        <div className="">
+          <h1 className="text-4xl font-[500]">Services</h1>
+          <h2 className="text-2xl font-[400] mt-6">
             AECOM partners with clients to take on their most complex challenges
             and pioneer innovative solutions that make a positive, lasting
             impact.

@@ -130,7 +130,7 @@ const Process = () => {
                 className="w-full opacity-0 transform"
               >
                 <img
-                  src={`/process/${process}`}
+                  src={`/process/${Process}`}
                   alt={`Process ${idx + 1}`}
                   className="w-full object-contain"
                 />
@@ -149,7 +149,7 @@ const Process = () => {
                 className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300"
               >
                 <img
-                  src={`/process/${process}`}
+                  src={`/process/${Process}`}
                   alt={`Process ${idx + 1}`}
                   className="w-auto max-h-full object-contain"
                 />
