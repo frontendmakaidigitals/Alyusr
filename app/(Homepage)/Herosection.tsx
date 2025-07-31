@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { ArrowUpRight } from "lucide-react";
 import BgLayer from "../app_chunks/BgLayer";
+import { motion } from "motion/react";
 
 const Herosection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -77,15 +78,45 @@ const Herosection = () => {
               <div className="h-[50vh] min-h-[500px] lg:h-[58vh] relative overflow-hidden">
                 <div className="absolute  z-10 w-full top-1/2 -translate-y-1/2">
                   <div className="w-full mx-auto container">
-                    <h1 className="text-4xl lg:text-6xl !text-slate-50 font-[600] max-w-2xl">
+                    <motion.h1
+                      key={slides[activeIndex].title}
+                      initial={{ x: 200 }}
+                      animate={{ x: 0 }}
+                      transition={{
+                        delay: 0.2,
+                        duration: 1.4,
+                        ease: [0.19, 1, 0.22, 1],
+                      }}
+                      className="text-4xl lg:text-6xl !text-slate-50 font-[600] max-w-2xl"
+                    >
                       {slides[activeIndex].title}
-                    </h1>
-                    <p className="text-slate-50 mt-3 max-w-2xl">
+                    </motion.h1>
+                    <motion.p
+                      key={slides[activeIndex].desc}
+                      initial={{ x: 200 }}
+                      animate={{ x: 0 }}
+                      transition={{
+                        delay: 0.3,
+                        duration: 1.4,
+                        ease: [0.19, 1, 0.22, 1],
+                      }}
+                      className="text-slate-50 mt-3 max-w-2xl"
+                    >
                       {slides[activeIndex].desc}
-                    </p>
-                    <button className="bg-gradient-to-br mt-4 px-4 py-[.45rem] text-sm rounded-lg text-slate-50 flex items-center gap-2 from-[#387EF0] to-[#2651C2]">
+                    </motion.p>
+                    <motion.button
+                      key={slides[activeIndex].img}
+                      initial={{ x: 200 }}
+                      animate={{ x: 0 }}
+                      transition={{
+                        delay: 0.4,
+                        duration: 1.4,
+                        ease: [0.19, 1, 0.22, 1],
+                      }}
+                      className="bg-gradient-to-br mt-4 px-4 py-[.45rem] text-sm rounded-lg text-slate-50 flex items-center gap-2 from-[#387EF0] to-[#2651C2]"
+                    >
                       Explore Our Services <ArrowUpRight />
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
                 <BgLayer />
@@ -114,15 +145,19 @@ const Herosection = () => {
                 {title}
               </span>
               {idx === activeIndex % 4 && (
-                <span
-                  key={activeIndex}
-                  className="absolute bottom-0 left-0 h-1 z-0 w-full bg-gradient-to-r from-[#1A2980] via-[#2464da] to-[#1A2980]"
-                  style={{
-                    animation:
-                      "fillBar 8s cubic-bezier(0.19, 1, 0.22, 1) forwards",
-                    height: "100%",
-                  }}
-                />
+                <>
+                  <span
+                    className="absolute bottom-0  left-0 h-1 z-0 w-full"
+                    style={{
+                      animation:
+                        "fillBar 8s cubic-bezier(0.19, 1, 0.22, 1) forwards",
+                      height: "100%",
+                    }}
+                    key={activeIndex}
+                  >
+                    <span className="absolute inset-0 w-full h-full  bg-gradient-to-r from-[#1A2980] via-[#2464da] to-[#1A2980]" />
+                  </span>
+                </>
               )}
             </li>
           ))}

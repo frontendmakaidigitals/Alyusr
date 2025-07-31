@@ -8,20 +8,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Process = () => {
   const processes = [
-    "process1.png",
-    "process2.png",
-    "process3.png",
-    "process4.png",
-    "process5.png",
-    "process6.png",
-  ];
-  const mobileProcess = [
-    "Process1.svg",
-    "Process2.svg",
-    "Process3.svg",
-    "Process4.svg",
-    "Process5.svg",
-    "Process6.svg",
+    "process1.svg",
+    "process2.svg",
+    "process3.svg",
+    "process4.svg",
+    "process5.svg",
+    "process6.svg",
   ];
 
   const sectionRef = useRef(null);
@@ -150,7 +142,7 @@ const Process = () => {
 
           {/* ✅ Mobile Stacked */}
           <ul className="lg:hidden relative w-full h-[60dvh]">
-            {mobileProcess.map((process, idx) => (
+            {processes.map((process, idx) => (
               <div
                 key={idx}
                 ref={(el) => {

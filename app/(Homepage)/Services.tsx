@@ -96,6 +96,7 @@ const Services = () => {
 
               <motion.div
                 layout
+                animate={{ opacity: animationFinished ? 1 : 0 }}
                 transition={{ duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
                 className={`w-full  text-slate-50 rounded-md relative   !p-3  ${
                   animationFinished

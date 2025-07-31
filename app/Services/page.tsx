@@ -5,256 +5,116 @@ import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
 import { motion } from "motion/react";
 const services = [
+  { title: "Construction Management", img: "construction-management.webp" },
+  { title: "Engineering Services", img: "engineering-services.webp" },
+  { title: "Environmental Services", img: "environmental-services.webp" },
+  { title: "IT and Cybersecurity", img: "it-and-cybersecurity.webp" },
   {
-    title: "Air Quality Consulting and Engineering",
-    img: "air-quality-consulting-and-engineering.webp",
+    title: "Planning & Advisory Solutions",
+    img: "planning-and-advisory-solutions.webp",
+  },
+  {
+    title: "Process Development & Implementation",
+    img: "process-development-and-implementation.webp",
+  },
+  { title: "Project Planning", img: "project-planning.webp" },
+  { title: "Community Engagement", img: "community-engagement.webp" },
+  { title: "Program Management", img: "program-management.webp" },
+  { title: "Architecture Design", img: "architecture-design.webp" },
+  { title: "Process Simulation Models", img: "process-simulation-models.webp" },
+  { title: "City Analytics", img: "city-analytics.webp" },
+  { title: "Community Planning", img: "community-planning.webp" },
+  { title: "EHS Management Consulting", img: "ehs-management-consulting.webp" },
+  {
+    title: "Structural Legacy Consulting",
+    img: "structural-legacy-consulting.webp",
+  },
+  { title: "Landscape Architecture", img: "landscape-architecture.webp" },
+  {
+    title: "Visualization and Virtual Reality",
+    img: "visualization-and-virtual-reality.webp",
+  },
+  {
+    title: "SCCI Electrical Engineering",
+    img: "scci-electrical-engineering.webp",
+  },
+  {
+    title: "Vertical Transportation Services",
+    img: "vertical-transportation-services.webp",
+  },
+  { title: "Pedestrian Flow Analysis", img: "pedestrian-flow-analysis.webp" },
+  {
+    title: "Commercial Operations and Maintenance",
+    img: "commercial-operations-and-maintenance.webp",
+  },
+  {
+    title: "Risk Management & Resilience",
+    img: "risk-management-and-resilience.webp",
+  },
+  {
+    title: "Pedestrian Movement Modeling",
+    img: "pedestrian-movement-modeling.webp",
   },
   {
     title: "Alternative Delivery Models",
     img: "alternative-delivery-models.webp",
   },
+  { title: "City Planning", img: "city-planning.webp" },
+  { title: "Interior Architecture", img: "interior-architecture.webp" },
+  { title: "Infrastructure Protection", img: "infrastructure-protection.webp" },
   {
-    title: "Architecture and Design",
-    img: "architecture-and-design.webp",
-  },
-  {
-    title: "Architecture",
-    img: "Architecture.webp",
-  },
-  {
-    title: "Asset Advisory",
-    img: "asset-advisory.webp",
-  },
-  {
-    title: "Cities Solutions",
-    img: "cities-solutions.webp",
-  },
-  {
-    title: "Climate Adaptation",
-    img: "climate-adaptation.webp",
-  },
-  {
-    title: "Community Engagement",
-    img: "community-engagement.webp",
-  },
-  {
-    title: "Construction Management",
-    img: "construction-management.webp",
-  },
-  {
-    title: "Converged Resilience",
-    img: "converged-resilience.webp",
-  },
-  {
-    title: "Cost Management",
-    img: "cost-management.webp",
-  },
-  {
-    title: "Critical Infrastructure Protection",
-    img: "critical-infrastructure protection.webp",
-  },
-  {
-    title: "Digital EHSESG Solutions",
-    img: "digital-ehsesg-solutions.webp",
-  },
-  {
-    title: "Digital Infrastructure Services",
-    img: "digital-infrastructure-services.webp",
-  },
-  {
-    title: "Economics",
-    img: "Economics.webp",
-  },
-  {
-    title: "EHS Management Consulting and Compliance 2",
-    img: "ehs-management-consulting-and-compliance-2.webp",
-  },
-  {
-    title: "EHS Management Consulting and Compliance",
-    img: "ehs-management-consulting-and-compliance.webp",
-  },
-  {
-    title: "Electrical Contracting",
-    img: "electrical-contracting.webp",
-  },
-  {
-    title: "Engineering",
-    img: "Engineering.webp",
-  },
-  {
-    title: "Environmental and Social Impact Assessment and Permitting",
-    img: "environmental-and-social-impact-assessment-and-permitting.webp",
-  },
-  {
-    title: "Environmental Contracting 2",
-    img: "environmental-contracting-2.webp",
-  },
-  {
-    title: "Environmental Contracting",
-    img: "environmental-contracting.webp",
-  },
-  {
-    title: "Environmental Services 1",
-    img: "environmental-services-1.webp",
-  },
-  {
-    title: "Environmental Services 2",
-    img: "environmental-services-2.webp",
-  },
-  {
-    title: "Finance",
-    img: "Finance.webp",
-  },
-  {
-    title: "Foundations Contracting",
-    img: "foundations-contracting.webp",
-  },
-  {
-    title: "Geospatial Services",
-    img: "geospatial-services.webp",
-  },
-  {
-    title: "Ground Engineering 1",
-    img: "ground-engineering-1.webp",
-  },
-  {
-    title: "Ground Engineering 2",
-    img: "ground-engineering-2.webp",
-  },
-  {
-    title: "Industrial and Commercial Operations and Maintenance 2",
-    img: "industrial-and-commercial-operations-and-maintenance-2.webp",
-  },
-  {
-    title: "Industrial and Commercial Operations and Maintenance",
-    img: "industrial-and-commercial-operations-and-maintenance.webp",
-  },
-  {
-    title: "Interior Architecture",
-    img: "interior-architecture.webp",
-  },
-  {
-    title: "IT and Cybersecurity",
-    img: "it-and-cybersecurity.webp",
-  },
-  {
-    title: "Landscape Architecture",
-    img: "landscape-architecture.webp",
-  },
-  {
-    title: "Legacy Foundations",
-    img: "legacy-foundations.webp",
-  },
-  {
-    title: "Multinational Investment and Development 1",
-    img: "multinational-investment-and-development-1.webp",
-  },
-  {
-    title: "Multinational Investment and Development 2",
-    img: "multinational-investment-and-development-2.webp",
-  },
-  {
-    title: "Pedestrian Modelling (North America)",
-    img: "pedestrian-modelling-(north-america).webp",
-  },
-  {
-    title: "Pedestrian Modelling in Action",
-    img: "pedestrian-modelling-in-action.webp",
-  },
-  {
-    title: "Pedestrian Modelling",
-    img: "pedestrian-modelling.webp",
-  },
-  {
-    title: "People + Place Advisory",
-    img: "people-+-place-advisory.webp",
-  },
-  {
-    title: "Planning 2",
-    img: "planning-2.webp",
-  },
-  {
-    title: "Planning and Consulting",
-    img: "planning-and-consulting.webp",
-  },
-  {
-    title: "Planning",
-    img: "Planning.webp",
-  },
-  {
-    title: "Process Development & Implementation",
-    img: "process-development-&-implementation.webp",
-  },
-  {
-    title: "Program Management 2",
-    img: "program-management-2.webp",
-  },
-  {
-    title: "Program Management",
-    img: "program-management.webp",
-  },
-  {
-    title: "Public Private Partnerships",
+    title: "Public-Private Partnerships",
     img: "public-private-partnerships.webp",
   },
+  { title: "Engineering Economics", img: "engineering-economics.webp" },
+  { title: "Urban Design", img: "urban-design.webp" },
+  { title: "Ground Engineering", img: "ground-engineering.webp" },
   {
-    title: "Rail Simulations",
-    img: "rail-simulations.webp",
+    title: "Tunnels and Underground Infrastructure",
+    img: "tunnels-and-underground-infrastructure.webp",
+  },
+  { title: "Asset Advisory", img: "asset-advisory.webp" },
+  { title: "Strategic Consulting", img: "strategic-consulting.webp" },
+  {
+    title: "Urban Policy & Development",
+    img: "urban-policy-and-development.webp",
+  },
+  { title: "Climate Response", img: "climate-response.webp" },
+  { title: "Rail Network Modeling", img: "rail-network-modeling.webp" },
+  { title: "Air Quality Assessment", img: "air-quality-assessment.webp" },
+  {
+    title: "Land Recovery & Redevelopment",
+    img: "land-recovery-and-redevelopment.webp",
   },
   {
-    title: "Remediation, Restoration and Redevelopment",
-    img: "remediation,-restoration-and-redevelopment.webp",
+    title: "Geo-Intelligence Analytics",
+    img: "geo-intelligence-analytics.webp",
   },
   {
-    title: "Risk Management & Resilience",
-    img: "risk-management-&-resilience.webp",
+    title: "Foundation Engineering Solutions",
+    img: "foundation-engineering-solutions.webp",
   },
   {
-    title: "SCCI Electric",
-    img: "scci-electric.webp",
+    title: "Smart Infrastructure & Digital Systems",
+    img: "smart-infrastructure-and-digital-systems.webp",
   },
   {
-    title: "Simulation Models",
-    img: "simulation-models.webp",
+    title: "Environmental Assessment and Permitting",
+    img: "environmental-assessment-and-permitting.webp",
   },
+  { title: "Unified Resilience", img: "unified-resilience.webp" },
+  { title: "Climate Adaptation", img: "climate-adaptation.webp" },
+  { title: "Cost Management", img: "cost-management.webp" },
+  { title: "Urban Mobility", img: "urban-mobility.webp" },
+  { title: "Environmental Contracting", img: "environmental-contracting.webp" },
   {
-    title: "Strategic Consulting",
-    img: "strategic-consulting.webp",
+    title: "Digital EHS & ESG Solutions",
+    img: "digital-ehs-and-esg-solutions.webp",
   },
-  {
-    title: "Tunnels, Trenchless Technology and Underground Infrastructure",
-    img: "tunnels,-trenchless-technology-and-underground-infrastructure.webp",
-  },
-  {
-    title: "Urban Analytics",
-    img: "urban-analytics.webp",
-  },
-  {
-    title: "Urban Design",
-    img: "urban-design.webp",
-  },
-  {
-    title: "Urbanism + Planning",
-    img: "urbanism-+-planning.webp",
-  },
-  {
-    title: "Vertical Transportation Services (North America) 2",
-    img: "vertical-transportation-services-(north-america)-2.webp",
-  },
-  {
-    title: "Vertical Transportation Services (North America) 3",
-    img: "vertical-transportation-services-(north-america)-3.webp",
-  },
-  {
-    title: "Vertical Transportation Services (North America)",
-    img: "vertical-transportation-services-(north-america).webp",
-  },
-  {
-    title: "Visualization and Virtual Reality",
-    img: "visualization-and-virtual-reality.webp",
-  },
+  { title: "Electrical Contracting", img: "electrical-contracting.webp" },
+  { title: "Multinational Investment", img: "multinational-investment.webp" },
 ];
-
+console.log(services);
 const Page = () => {
   const chunkArray = (
     arr: { title: string; img: string }[],
@@ -339,7 +199,7 @@ const Page = () => {
                 whileInView={{ scale: 1 }}
                 initial={{ scale: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, type:'spring' }}
+                transition={{ duration: 0.7, type: "spring" }}
                 key={idx}
                 className="aspect-square w-full relative"
               >
