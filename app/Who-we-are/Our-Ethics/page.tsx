@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import {
   ShieldCheck,
   FileText,
@@ -9,6 +9,7 @@ import {
   AlertTriangle,
   Lock,
   Handshake,
+  ArrowUpRight,
 } from "lucide-react";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
@@ -51,16 +52,74 @@ export default function OurEthics() {
   }, []);
   return (
     <main className="bg-gray-50 text-gray-800">
-      <section className="py-20 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Our Ethics</h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            At ALYUSR Engineering Consulting, ethical behavior is the foundation
-            of our success. We are committed to integrity, transparency, and
-            compliance in everything we do.
+      <motion.div
+        ref={sectionRef}
+        initial={{ height: "120vh" }}
+        animate={{ height: "60vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
+        className="w-full relative overflow-hidden"
+      >
+        <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
+          <h1 className="text-5xl font-bold text-slate-50">
+            Our Ethics
+            <br className="hidden sm:block" />
+          </h1>
+          <p className="mt-3 text-slate-200 max-w-2xl">
+            Expertise You Can Trust. Delivery You Can Count On.
           </p>
         </div>
+        <BgLayer color="bg-black/60 z-20" />
+        <motion.img
+          style={{ y: yTransform }}
+          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
+          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          alt="ALYUSR Engineering Hero Background"
+        />
+      </motion.div>
+      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
+        {/* Background image */}
 
+        {/* Left gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
+
+        {/* Container with text */}
+        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+          <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+                Heading
+              </h1>
+              <p className="text-lg text-gray-700">
+                At ALYUSR Engineering Consulting, we believe that ethical
+                behavior is the foundation of long-term success. We are fully
+                committed to upholding the highest standards of integrity,
+                transparency, and compliance in everything we do, from how we
+                deliver projects to how we engage with clients, employees,
+                partners, and communities.
+                <br /> Our reputation as a trusted engineering consultancy is
+                built not only on the quality of our work, but also on the
+                values that guide us. We hold ourselves accountable to both
+                Saudi regulations and international standards, ensuring that our
+                business practices are lawful, ethical, and respectful across
+                all markets we operate in.
+              </p>
+
+              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+                Discover Our Story <ArrowUpRight />
+              </button>
+            </div>
+            <div className="h-[450px]">
+              <img
+                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                alt="About Background"
+                className=" w-full h-full object-cover"
+              />
+              <BgLayer />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-20 px-6 max-w-7xl mx-auto">
         {/* Ethical Culture Section */}
         <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
           <div>
