@@ -92,8 +92,8 @@ export default function Page() {
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
           style={{ y: yTransform }}
-          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-top"
-          src="https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg"
+          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
+          src="https://images.pexels.com/photos/4489794/pexels-photo-4489794.jpeg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -116,7 +116,7 @@ export default function Page() {
                 budgets, and quality at every stage of the project lifecycle.
                 Our multidisciplinary teams work side by side, sharing
                 resources, tools, and knowledge under one roof to offer clients
-                a seamless and efficient experience. Whether it's feasibility
+                a seamless and efficient experience. Whether it&apos;s feasibility
                 studies, architectural design, engineering, or project
                 supervision, we don’t outsource the core. We own it.
               </p>
@@ -313,7 +313,7 @@ export default function Page() {
                   />
                 </div>
                 <div className="p-5">
-                  <p className="text-center text-gray-50 text-lg font-semibold group-hover:text-sky-700 transition-colors duration-300">
+                  <p className="text-center text-gray-50 text-sm font-semibold group-hover:text-sky-100 transition-colors duration-300">
                     {item.title}
                   </p>
                 </div>

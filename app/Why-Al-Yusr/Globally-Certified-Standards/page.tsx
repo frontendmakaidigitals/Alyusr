@@ -42,7 +42,7 @@ export default function CertificationsPage() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-top"
-          src="https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg"
+          src="https://www.poynter.org/wp-content/uploads/2019/03/shutterstock_285251927.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -255,7 +255,7 @@ export default function CertificationsPage() {
                   />
                 </div>
                 <div className="p-5">
-                  <p className="text-center text-gray-50 text-lg font-semibold group-hover:text-sky-50 transition-colors duration-300">
+                  <p className="text-center text-gray-50 text-sm font-semibold group-hover:text-sky-50 transition-colors duration-300">
                     {item.title}
                   </p>
                 </div>
@@ -271,8 +271,8 @@ export default function CertificationsPage() {
           Certified to Deliver. Committed to Excellence.
         </h3>
         <p className="max-w-3xl mx-auto mb-8">
-          At ALYUSR, we don’t just follow global standards; we embed them into
-          everything we do. These certifications are not just badges; they're
+          At ALYUSR, we don&apos;t just follow global standards; we embed them into
+          everything we do. These certifications are not just badges; they&apos;re
           our promise to clients, partners, and the communities we serve.
         </p>
         <button className="bg-white text-sky-900 font-semibold px-6 py-3 rounded-xl shadow hover:bg-gray-100 transition">
