@@ -1,3 +1,4 @@
+"use client";
 import {
   BadgeCheck,
   Building2,
@@ -5,29 +6,91 @@ import {
   Leaf,
   ShieldCheck,
   Layers,
+  ArrowUpRight,
   CheckCircle,
 } from "lucide-react";
 import Image from "next/image";
-
+import BgLayer from "../../app_chunks/BgLayer";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 export default function Page() {
+  const [sectionTop, setSectionTop] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  const yTransform = useTransform(
+    scrollY,
+    [sectionTop, sectionTop + 400],
+    [0, 100]
+  );
+
+  useEffect(() => {
+    const top = sectionRef.current?.offsetTop || 0;
+    setSectionTop(top);
+  }, []);
+
   return (
     <div className="bg-slate-50 text-gray-800">
-      <section className="py-24 px-6">
-        <div className="container mx-auto max-w-5xl text-center">
-          <h1 className="text-4xl font-bold mb-6">
+      <motion.div
+        ref={sectionRef}
+        initial={{ height: "120vh" }}
+        animate={{ height: "60vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
+        className="w-full relative overflow-hidden"
+      >
+        <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
+          <h1 className="text-5xl font-bold text-slate-50">
             Certifications & Accreditations
+            <br className="hidden sm:block" />
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            At ALYUSR Engineering Consulting, certifications are more than just
-            credentials; they reflect our ongoing commitment to delivering
-            high-quality, safe, and sustainable engineering solutions. We
-            proudly meet both national and international standards, ensuring
-            that every project we take on is executed with precision,
-            compliance, and care.
+          <p className="mt-3 text-slate-200 max-w-2xl">
+            Expertise You Can Trust. Delivery You Can Count On.
           </p>
         </div>
-      </section>
+        <BgLayer color="bg-black/60 z-20" />
+        <motion.img
+          style={{ y: yTransform }}
+          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
+          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          alt="ALYUSR Engineering Hero Background"
+        />
+      </motion.div>
+      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
+        {/* Background image */}
 
+        {/* Left gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
+
+        {/* Container with text */}
+        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+          <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+                Heading
+              </h1>
+              <p className="text-lg text-gray-700">
+                At ALYUSR Engineering Consulting, certifications are more than
+                just credentials; they reflect our ongoing commitment to
+                delivering high-quality, safe, and sustainable engineering
+                solutions. We proudly meet both national and international
+                standards, ensuring that every project we take on is executed
+                with precision, compliance, and care.
+              </p>
+
+              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+                Discover Our Story <ArrowUpRight />
+              </button>
+            </div>
+            <div className="h-[450px]">
+              <img
+                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                alt="About Background"
+                className=" w-full h-full object-cover"
+              />
+              <BgLayer />
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -59,12 +122,12 @@ export default function Page() {
               ))}
             </ul>
           </div>
-          <div className="relative w-full h-72 rounded-xl overflow-hidden shadow-lg">
+          <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/certifications/class-a.jpg"
+              src="https://images.pexels.com/photos/3387892/pexels-photo-3387892.jpeg"
               alt="Class A Certification"
               fill
-              className="object-cover object-center"
+              className="object-cover w-full h-full object-center"
             />
           </div>
         </div>
@@ -80,38 +143,38 @@ export default function Page() {
               {
                 label: "ISO 9001:2015",
                 desc: "Quality Management",
-                img: "/certifications/iso-9001.jpg",
+                img: "https://images.pexels.com/photos/7564203/pexels-photo-7564203.jpeg",
               },
               {
                 label: "ISO 14001:2015",
                 desc: "Environmental Management",
-                img: "/certifications/iso-14001.jpg",
+                img: "https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg",
               },
               {
                 label: "ISO 45001:2018",
                 desc: "Occupational Health & Safety",
-                img: "/certifications/iso-45001.jpg",
+                img: "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg",
               },
               {
                 label: "ISO 31000:2018",
                 desc: "Risk Management",
-                img: "/certifications/iso-31000.jpg",
+                img: "https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg",
               },
               {
                 label: "ISO 21500:2021",
                 desc: "Project Management Framework",
-                img: "/certifications/iso-21500.jpg",
+                img: "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg",
               },
             ].map((iso, i) => (
               <div
                 key={i}
                 className="bg-white border border-gray-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
               >
-                <div className="h-32 w-full bg-gray-100">
+                <div className="h-[250px] w-full bg-gray-100">
                   <img
                     src={iso.img}
                     alt={iso.label}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-5">
@@ -134,22 +197,22 @@ export default function Page() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <Leaf className="w-6 h-6 text-green-600" />,
+                icon: <Leaf className="w-12 h-12 text-green-600" />,
                 title: "USGBC – LEED Member",
                 desc: "Supporting sustainable building and green design practices",
               },
               {
-                icon: <Globe className="w-6 h-6 text-blue-600" />,
+                icon: <Globe className="w-12 h-12 text-blue-600" />,
                 title: "ISOCARP Member",
                 desc: "Active in global urban planning dialogue and innovation",
               },
               {
-                icon: <BadgeCheck className="w-6 h-6 text-sky-600" />,
+                icon: <BadgeCheck className="w-12 h-12 text-sky-600" />,
                 title: "D-U-N-S Registered™",
                 desc: "Trusted identity verified by Dun & Bradstreet",
               },
               {
-                icon: <ShieldCheck className="w-6 h-6 text-rose-600" />,
+                icon: <ShieldCheck className="w-12 h-12 text-rose-600" />,
                 title: "Facilitiesline – Gold Member",
                 desc: "Certified readiness for large-scale project delivery",
               },
@@ -158,12 +221,12 @@ export default function Page() {
                 key={i}
                 className="bg-sky-50 border border-sky-100 p-6 rounded-xl shadow-sm hover:shadow-md transition"
               >
-                <div className="flex items-center gap-3 mb-3">
+                <div className="  mb-6">
                   {item.icon}
+                </div>
                   <h3 className="text-lg font-semibold text-gray-800">
                     {item.title}
                   </h3>
-                </div>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   {item.desc}
                 </p>
