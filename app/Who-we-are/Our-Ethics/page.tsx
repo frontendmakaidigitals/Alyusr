@@ -1,3 +1,4 @@
+'use client'
 import {
   ShieldCheck,
   FileText,
@@ -9,7 +10,9 @@ import {
   Lock,
   Handshake,
 } from "lucide-react";
-
+import BgLayer from "../../app_chunks/BgLayer";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 export default function OurEthics() {
   const items = [
     {
@@ -33,6 +36,19 @@ export default function OurEthics() {
       text: "Respect in the workplace",
     },
   ];
+  const [sectionTop, setSectionTop] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  const yTransform = useTransform(
+    scrollY,
+    [sectionTop, sectionTop + 400],
+    [0, 100]
+  );
+
+  useEffect(() => {
+    const top = sectionRef.current?.offsetTop || 0;
+    setSectionTop(top);
+  }, []);
   return (
     <main className="bg-gray-50 text-gray-800">
       <section className="py-20 px-6 max-w-7xl mx-auto">
@@ -148,7 +164,7 @@ export default function OurEthics() {
           </div>
           <div className="hidden md:block">
             <img
-              src="/images/ethics-training.jpg"
+              src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
               alt="Ethics Training Illustration"
               className="rounded-xl shadow-md w-full h-auto object-cover"
             />
