@@ -49,7 +49,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          src="/company overview/banner.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -81,7 +81,7 @@ export default function Page() {
           </div>
           <div>
             <img
-              src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg"
+               src="/company overview/company overview.jpg"
               alt="Company Overview"
               className="rounded-xl shadow-lg w-full h-full object-cover"
             />
@@ -95,7 +95,7 @@ export default function Page() {
           {" "}
           <div>
             <img
-              src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg"
+              src="/company overview/our history.jpg"
               alt="Company Overview"
               className="rounded-xl shadow-lg w-full h-full object-cover"
             />
