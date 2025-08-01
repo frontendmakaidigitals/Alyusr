@@ -9,21 +9,50 @@ import {
   TreeDeciduous,
   Network,
 } from "lucide-react";
-
+import BgLayer from "../../app_chunks/BgLayer";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 export default function Page() {
+  const [sectionTop, setSectionTop] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  const yTransform = useTransform(
+    scrollY,
+    [sectionTop, sectionTop + 400],
+    [0, 100]
+  );
+
+  useEffect(() => {
+    const top = sectionRef.current?.offsetTop || 0;
+    setSectionTop(top);
+  }, []);
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-sky-100 via-white to-sky-50 py-20 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+      <motion.div
+        ref={sectionRef}
+        initial={{ height: "120vh" }}
+        animate={{ height: "60vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
+        className="w-full relative overflow-hidden"
+      >
+        <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
+          <h1 className="text-5xl font-bold text-slate-50">
             Leadership & Vision
+            <br className="hidden sm:block" />
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 text-slate-200 max-w-2xl">
             Guiding Innovation. Engineering the Future.
           </p>
         </div>
-      </section>
+        <BgLayer color="bg-black/60 z-20" />
+        <motion.img
+          style={{ y: yTransform }}
+          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
+          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          alt="ALYUSR Engineering Hero Background"
+        />
+      </motion.div>
 
       {/* Leadership Section */}
       <section className="py-20 px-6 bg-white">
@@ -60,6 +89,13 @@ export default function Page() {
       <section className="bg-sky-50 py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
+            <div className="rounded-xl overflow-hidden">
+              <img
+                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+                alt="Leadership at ALYUSR"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-3">
               Our Vision
             </h3>
@@ -71,6 +107,13 @@ export default function Page() {
             </p>
           </div>
           <div>
+            <div className="rounded-xl overflow-hidden">
+              <img
+                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+                alt="Leadership at ALYUSR"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-3">
               Our Mission
             </h3>
@@ -114,7 +157,7 @@ export default function Page() {
           {/* RIGHT IMAGE BLOCK */}
           <div className="relative h-[400px] w-full rounded-xl overflow-hidden shadow-xl">
             <img
-              src="https://images.unsplash.com/photo-1627479986186-0457e69107ae?auto=format&fit=crop&w=1400&q=80"
+              src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
               alt="Vision 2030 Project"
               className="w-full h-full object-cover object-center"
             />
