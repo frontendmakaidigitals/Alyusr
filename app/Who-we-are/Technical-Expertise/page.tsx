@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { CheckCircle, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import BgLayer from "../../app_chunks/BgLayer";
@@ -44,6 +44,47 @@ export default function TechnicalExpertisePage() {
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
+      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
+        {/* Background image */}
+
+        {/* Left gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
+
+        {/* Container with text */}
+        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+          <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+                Heading
+              </h1>
+              <p className="text-lg text-gray-700">
+                At ALYUSR, technical excellence is at the core of everything we
+                do. Our strength lies in our ability to combine deep domain
+                knowledge with cutting-edge tools and a results-driven approach.
+                From concept to completion, our engineers, architects, planners,
+                and project managers apply international standards and local
+                insight to deliver high-impact, future-ready solutions. With
+                experience across residential, commercial, industrial, and
+                infrastructure sectors, we bring specialized expertise to every
+                phase of the project lifecycle, ensuring accuracy, efficiency,
+                and sustainability at every step.
+              </p>
+
+              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+                Discover Our Story <ArrowUpRight />
+              </button>
+            </div>
+            <div className="h-[450px]">
+              <img
+                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                alt="About Background"
+                className=" w-full h-full object-cover"
+              />
+              <BgLayer />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 px-6 bg-sky-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
