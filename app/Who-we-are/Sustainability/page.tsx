@@ -165,32 +165,63 @@ export default function Page() {
       </section>
 
       {/* Strategy Pillars */}
-      <section className="container py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">
-            Key <span className="text-green-600">Safety</span> Programs &
-            Practices
+      <section className="container place-items-center grid grid-cols-1 lg:grid-cols-2 py-20 gap-10">
+        <div className="">
+          <h2 className="text-4xl font-semibold mb-6">
+            Our Approach: Practical Roadmaps for Sustainable Success
           </h2>
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
-            {safetyPractices.map((item, index) => (
-              <div
-                key={index}
-                className="group bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="bg-sky-100 p-3 rounded-full transition-transform duration-300 group-hover:scale-110">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {item.desc}
-                </p>
+          <p>
+            Sustainability is not just a goal; it’s a journey. We provide
+            actionable strategies for your organization’s needs, ensuring
+            ambitions translate into measurable outcomes. Our Sustainable Legacy
+            strategy focuses on:
+          </p>
+
+          <ul className="space-y-4 text-gray-700 mt-3">
+            <li className="flex items-start gap-3">
+              <div>
+                {" "}
+                <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
               </div>
-            ))}
-          </div>
+              <span>
+                Integrating Sustainable Development across all projects to build
+                resilience and long-term value
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div>
+                {" "}
+                <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
+              </div>
+              <span>
+                Enhancing Social Outcomes that improve community well-being and
+                equity
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div>
+                {" "}
+                <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
+              </div>
+              <span>
+                Achieving Net Zero Emissions through innovative design and
+                energy solutions
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div>
+                {" "}
+                <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
+              </div>
+              <span>
+                Strengthening Governance to uphold ethical standards and
+                transparency
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div className="w-full h-[500px] bg-red-300 rounded-xl">
+          <img />
         </div>
       </section>
 
@@ -229,7 +260,8 @@ export default function Page() {
             sustainable designs, tools, and solutions that meet today’s needs
             without compromising tomorrow.
           </p>
-          <ul className="space-y-4 text-gray-700 mt-5">
+          <h2 className="font-[500] text-xl mt-3">Featured Initiatives:</h2>
+          <ul className="space-y-4 text-gray-700 mt-3">
             <li className="flex items-start gap-3">
               <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
               <span>
