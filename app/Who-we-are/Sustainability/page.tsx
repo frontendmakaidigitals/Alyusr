@@ -1,3 +1,4 @@
+"use client";
 import { Leaf, Globe, BarChart3, CheckCircle2, Users } from "lucide-react";
 import {
   ShieldCheck,
@@ -8,6 +9,9 @@ import {
   HeartPulse,
   Star,
 } from "lucide-react";
+import BgLayer from "../../app_chunks/BgLayer";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 export default function Page() {
   const safetyPractices = [
     {
@@ -51,21 +55,46 @@ export default function Page() {
       desc: "Outstanding safety behavior is rewarded through internal awards and milestones to promote a culture of excellence.",
     },
   ];
+  const [sectionTop, setSectionTop] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  const yTransform = useTransform(
+    scrollY,
+    [sectionTop, sectionTop + 400],
+    [0, 100]
+  );
 
+  useEffect(() => {
+    const top = sectionRef.current?.offsetTop || 0;
+    setSectionTop(top);
+  }, []);
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="bg-green-50 py-20 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-4">
-            Sustainability at Al Yusr Engineering Consultancy
+      <motion.div
+        ref={sectionRef}
+        initial={{ height: "120vh" }}
+        animate={{ height: "60vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
+        className="w-full relative overflow-hidden"
+      >
+        <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
+          <h1 className="text-5xl font-bold text-slate-50">
+            Safety Commitments
+            <br className="hidden sm:block" />
           </h1>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            <strong>Our Commitment:</strong> Building a Sustainable Future
-            Together
+          <p className="mt-3 text-slate-200 max-w-2xl">
+            Expertise You Can Trust. Delivery You Can Count On.
           </p>
         </div>
-      </section>
+        <BgLayer color="bg-black/60 z-20" />
+        <motion.img
+          style={{ y: yTransform }}
+          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
+          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          alt="ALYUSR Engineering Hero Background"
+        />
+      </motion.div>
 
       {/* Why Sustainability Matters */}
       <section className="py-20 px-6">
@@ -95,29 +124,31 @@ export default function Page() {
       </section>
 
       {/* Strategy Pillars */}
-     <section className="bg-sky-50 py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-          Key Safety Programs & Practices
-        </h2>
-        <div className="grid md:grid-cols-2 gap-10">
-          {safetyPractices.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white border border-sky-100 p-6 rounded-xl shadow-sm hover:shadow-md transition"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="bg-sky-100 p-2 rounded-full">{item.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-800">
-                  {item.title}
-                </h3>
+      <section className="bg-sky-50 py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+            Key Safety Programs & Practices
+          </h2>
+          <div className="grid md:grid-cols-2 gap-10">
+            {safetyPractices.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white border border-sky-100 p-6 rounded-xl shadow-sm hover:shadow-md transition"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-sky-100 p-2 rounded-full">{item.icon}</div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
-              <p className="text-sm text-gray-700 leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Innovation & Initiatives */}
       <section className="py-20 px-6">

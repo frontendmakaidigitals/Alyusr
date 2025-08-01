@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   ShieldCheck,
@@ -8,8 +9,12 @@ import {
   ClipboardCheck,
   CheckCircle,
   HeartPulse,
+  ArrowUpRight,
 } from "lucide-react";
-
+import Image from "next/image";
+import BgLayer from "../../app_chunks/BgLayer";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 const safetyPrograms = [
   {
     icon: <ShieldCheck className="w-6 h-6 text-emerald-600" />,
@@ -54,9 +59,126 @@ const safetyPrograms = [
 ];
 
 export default function SafetyCommitmentsPage() {
+  const [sectionTop, setSectionTop] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  const yTransform = useTransform(
+    scrollY,
+    [sectionTop, sectionTop + 400],
+    [0, 100]
+  );
+
+  useEffect(() => {
+    const top = sectionRef.current?.offsetTop || 0;
+    setSectionTop(top);
+  }, []);
+
   return (
     <section className="bg-gray-50 py-20 px-6">
-      <div className="container mx-auto max-w-6xl">
+      <motion.div
+        ref={sectionRef}
+        initial={{ height: "120vh" }}
+        animate={{ height: "60vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
+        className="w-full relative overflow-hidden"
+      >
+        <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
+          <h1 className="text-5xl font-bold text-slate-50">
+            Safety Commitments
+            <br className="hidden sm:block" />
+          </h1>
+          <p className="mt-3 text-slate-200 max-w-2xl">
+            Expertise You Can Trust. Delivery You Can Count On.
+          </p>
+        </div>
+        <BgLayer color="bg-black/60 z-20" />
+        <motion.img
+          style={{ y: yTransform }}
+          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
+          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          alt="ALYUSR Engineering Hero Background"
+        />
+      </motion.div>
+      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
+        {/* Background image */}
+
+        {/* Left gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
+
+        {/* Container with text */}
+        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+          <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+                Heading
+              </h1>
+              <p className="text-lg text-gray-700">
+                At ALYUSR Engineering Consulting, safety is more than a policy;
+                it is a core value embedded into our culture, our people, and
+                our projects. We are committed to ensuring the physical, mental,
+                and environmental well-being of every team member, client, and
+                community we work with.
+                <br /> From project planning to execution, we apply proactive
+                risk management strategies to identify, reduce, and eliminate
+                hazards. Our approach is guided by international safety
+                standards, including ISO 45001, and reinforced by strong
+                leadership, clear procedures, and empowered teams.
+              </p>
+
+              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+                Discover Our Story <ArrowUpRight />
+              </button>
+            </div>
+            <div className="h-[450px]">
+              <img
+                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                alt="About Background"
+                className=" w-full h-full object-cover"
+              />
+              <BgLayer />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
+        {/* Background image */}
+
+        {/* Left gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
+
+        {/* Container with text */}
+        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+          <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+                Our Culture of Safety
+              </h1>
+              <p className="text-lg text-gray-700">
+                Our internal safety culture is built on three pillars:
+                Commitment. Accountability. Participation. We train and
+                encourage every employee to play an active role in maintaining a
+                safe and healthy workplace, from the office to the job site. Our
+                safety programs are designed to prevent incidents, improve
+                performance, and promote continuous learning across all
+                departments.
+              </p>
+
+              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+                Discover Our Story <ArrowUpRight />
+              </button>
+            </div>
+            <div className="h-[450px]">
+              <img
+                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                alt="About Background"
+                className=" w-full h-full object-cover"
+              />
+              <BgLayer />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="container mx-auto max-w-6xl mt-10">
         <div className="text-center mb-14">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Safety Commitments
