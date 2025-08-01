@@ -127,9 +127,10 @@ export default function TechnicalExpertisePage() {
 
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 ">
             Multidisciplinary Capabilities
           </h2>
+          <p className="mb-16 mt-3 text-center ">We offer a wide range of technical services across:</p>
 
           <div className="grid md:grid-cols-3 gap-10">
             {capabilities.map((item, index) => (
@@ -189,20 +190,6 @@ export default function TechnicalExpertisePage() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <section className="py-20 px-6 bg-sky-100">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            Trusted by Public & Private Sectors
-          </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto">
-            Our technical expertise has earned the trust of government agencies,
-            developers, contractors, and industrial clients. From large-scale
-            urban master plans to specialized facilities, we deliver tailored
-            solutions aligned with national goals and international standards.
-          </p>
         </div>
       </section>
     </main>
