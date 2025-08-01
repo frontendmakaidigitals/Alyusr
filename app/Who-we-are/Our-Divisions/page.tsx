@@ -1,43 +1,41 @@
 "use client";
-import {
-  Building2,
-  Ruler,
-  Construction,
-  TreePine,
-  Cpu,
-  Compass,
-  ArrowUpRight,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 const divisions = [
   {
-    icon: <Building2 className="w-6 h-6 text-sky-600" />,
     title: "Engineering & Design Division",
-    points: [
+    description:
+      "This division leads all technical planning and engineering design activities, ensuring safety, performance, and innovation across:",
+    services: [
       "Structural Engineering",
       "MEP Design (Mechanical, Electrical, Plumbing)",
       "Infrastructure & Utility Networks",
       "Roads, Drainage & Hydrology",
       "Telecom & Low-Current Systems",
     ],
+    image: "/images/engineering.jpg", // Replace with your local or remote image
   },
   {
-    icon: <Ruler className="w-6 h-6 text-rose-600" />,
     title: "Architecture & Urban Planning Division",
-    points: [
+    description:
+      "This team delivers creative, functional, and people-centric design solutions that enhance communities and align with future development goals.",
+    services: [
       "Architectural & Interior Design",
       "Landscape Architecture",
       "Urban & Regional Planning",
       "Masterplanning & Land Use Studies",
       "Design Optimization & Value Engineering",
     ],
+    image: "/images/architecture.jpg",
   },
   {
-    icon: <Construction className="w-6 h-6 text-yellow-600" />,
     title: "Construction & Project Management Division",
-    points: [
+    description:
+      "Responsible for turning ideas into reality, this division oversees projects from start to finish, ensuring cost control, time efficiency, and construction quality.",
+    services: [
       "Project & Program Management",
       "Contract Administration",
       "Construction Supervision",
@@ -45,39 +43,46 @@ const divisions = [
       "Fire & Safety Engineering",
       "Site Investigations & Surveying",
     ],
+    image: "/images/construction.jpg",
   },
   {
-    icon: <TreePine className="w-6 h-6 text-green-600" />,
     title: "Sustainability & Smart Solutions Division",
-    points: [
+    description:
+      "Focused on environmental impact and digital transformation, this division integrates smart systems and sustainable strategies into every project.",
+    services: [
       "Environmental & Sustainability Planning",
       "Green Building & LEED Advisory",
       "Smart Cities Integration",
       "Energy Efficiency & Resource Management",
       "Digital Twin & Performance Monitoring",
     ],
+    image: "/images/sustainability.jpg",
   },
   {
-    icon: <Cpu className="w-6 h-6 text-indigo-600" />,
     title: "Digital Engineering & BIM Division",
-    points: [
+    description:
+      "This division leads our digital transformation journey, enhancing project delivery through smart technologies and real-time coordination.",
+    services: [
       "Building Information Modeling (BIM)",
       "GIS & Geospatial Services",
       "3D Modeling & Simulation",
       "Data Analytics for Project Optimization",
       "Digital Design Reviews",
     ],
+    image: "/images/digital.jpg",
   },
   {
-    icon: <Compass className="w-6 h-6 text-purple-600" />,
     title: "Strategy & Advisory Division",
-    points: [
+    description:
+      "Our consultants offer forward-looking insights, feasibility assessments, and project strategies that align with Saudi Vision 2030 and client goals.",
+    services: [
       "Feasibility Studies",
       "Policy & Strategic Planning",
       "Vision 2030 Alignment",
       "Risk & Cost Analysis",
       "Market Research & Opportunity Mapping",
     ],
+    image: "/images/strategy.jpg",
   },
 ];
 
@@ -105,11 +110,11 @@ export default function Page() {
         className="w-full relative overflow-hidden"
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
-          <h1 className="text-5xl font-bold text-slate-50">
+          <h1 className="text-2xl  text-slate-50">
             Company Overview
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 max-w-2xl">
+          <p className="mt-3 text-slate-200 text-6xl font-semibold">
             Trusted Engineering Experts Supporting Saudi Vision 2030
           </p>
         </div>
@@ -135,15 +140,15 @@ export default function Page() {
                 Heading
               </h1>
               <p className="text-lg text-gray-700">
-                At ALYUSR Engineering Consulting, our strength lies in our
-                structure. We operate through dedicated, expert-led divisions
-                that work together to deliver smart, sustainable, and fully
-                integrated engineering solutions. Each division is equipped with
-                the tools, talent, and technical knowledge needed to serve
-                clients across sectors, whether it&apos;s infrastructure,
-                architecture, urban planning, or digital transformation.
-                Together, we bring precision, quality, and agility to every
-                stage of the project lifecycle.
+                At <span className="text-blue-600">ALYUSR</span> Engineering
+                Consulting, our strength lies in our structure. We operate
+                through dedicated, expert-led divisions that work together to
+                deliver smart, sustainable, and fully integrated engineering
+                solutions. Each division is equipped with the tools, talent, and
+                technical knowledge needed to serve clients across sectors,
+                whether it&apos;s infrastructure, architecture, urban planning,
+                or digital transformation. Together, we bring precision,
+                quality, and agility to every stage of the project lifecycle.
               </p>
 
               <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
@@ -161,30 +166,48 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <div className=" container my-20">
-        <div className="grid md:grid-cols-2 gap-8">
-          {divisions.map((division, idx) => (
-            <div
-              key={idx}
-              className="bg-white border border-gray-100 rounded-2xl p-6 shadow hover:shadow-md transition"
+      <section className="bg-white py-16 px-4 sm:px-8 lg:px-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+          Our Core Divisions
+        </h2>
+        <div className="grid lg:grid-cols-2 gap-10">
+          {divisions.map((division, index) => (
+            <motion.div
+              key={division.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-blue-50 border border-gray-200 rounded-2xl overflow-hidden shadow hover:shadow-md transition"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-gray-100 p-3 rounded-full">
-                  {division.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800">
+              <div className="relative h-[300px] w-full">
+                <Image
+                  src={
+                    "https://images.pexels.com/photos/439416/pexels-photo-439416.jpeg"
+                  }
+                  alt={division.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-t-2xl"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-3xl text-blue-500 font-semibold  mb-2">
                   {division.title}
                 </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  {division.description}
+                </p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+                  {division.services.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </div>
-              <ul className="list-disc pl-6 text-gray-700 text-sm space-y-1">
-                {division.points.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }
