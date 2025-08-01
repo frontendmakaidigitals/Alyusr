@@ -17,6 +17,13 @@ import {
   GaugeCircle,
   Handshake,
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
@@ -71,8 +78,8 @@ export default function Page() {
         <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-                Heading
+              <h1 className="text-5xl font-semibold text-sky-800 leading-tighter  mb-4">
+               Departments Built for Precision
               </h1>
               <p className="text-lg text-gray-700">
                 At ALYUSR Engineering Consulting, excellence starts at the top.
@@ -183,7 +190,7 @@ export default function Page() {
       </section>
 
       {/* TOOLS & CERTIFICATIONS */}
-      <section className="relative bg-white py-24 px-6 sm:px-10">
+      <section className="relative bg-white py-24 container">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             CEO Involvement in Every Major Milestone
@@ -246,54 +253,62 @@ export default function Page() {
       </section>
 
       {/* WHY IT MATTERS */}
-      <section className="bg-sky-100 py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl text-center font-semibold text-gray-800 mb-8">
-            Why It Matters to Our Clients
+      <section className="bg-sky-100 py-20 ">
+        <div className="container ">
+          <h2 className="text-5xl text-center font-semibold text-gray-800 mb-8">
+            Why It Matters to <span className="text-blue-500">Our Clients</span>
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 text-base text-gray-700 list-disc pl-5">
-            {[
-              {
-                title: "Strategic Alignment",
 
-                img: "https://images.pexels.com/photos/1181615/pexels-photo-1181615.jpeg",
-              },
-              {
-                title: "Streamlined Oversight",
-
-                img: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
-              },
-              {
-                title: "Consistent Quality",
-
-                img: "https://images.pexels.com/photos/7564203/pexels-photo-7564203.jpeg",
-              },
-              {
-                title: "Client Trust",
-
-                img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
-              },
-            ].map((point, i) => (
-              <div
-                key={i}
-                className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300"
-              >
-                <div className="relative h-[300px] w-full bg-sky-100">
-                  <Image
-                    src={point.img}
-                    alt={point.title}
-                    fill
-                    className="object-cover  group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-5">
-                  <p className="text-center text-gray-50 text-sm font-semibold group-hover:text-sky-50 transition-colors duration-300">
-                    {point.title}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            className="w-full px-4" // Add horizontal padding to avoid edge cuts
+          >
+            <CarouselContent className="gap-4 px-10">
+              {" "}
+              {/* optional spacing between cards */}
+              {[
+                {
+                  title: "Strategic Alignment",
+                  img: "https://images.pexels.com/photos/1181615/pexels-photo-1181615.jpeg",
+                },
+                {
+                  title: "Streamlined Oversight",
+                  img: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+                },
+                {
+                  title: "Consistent Quality",
+                  img: "https://images.pexels.com/photos/7564203/pexels-photo-7564203.jpeg",
+                },
+                {
+                  title: "Client Trust",
+                  img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+                },
+              ].map((point, i) => (
+                <CarouselItem
+                  key={i}
+                  className="group md:basis-1/2 !p-0 lg:basis-1/3 bg-slate-300 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
+                >
+                  <div className="relative h-[300px] w-full">
+                    <Image
+                      src={point.img}
+                      alt={point.title}
+                      fill
+                      className="object-cover  w-full h-full"
+                    />
+                  </div>
+                  <div className="p-5 bg-blue-500">
+                    <p className="text-center text-white text-lg font-semibold group-hover:text-sky-100 transition-colors duration-300">
+                      {point.title}
+                    </p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 

@@ -5,6 +5,13 @@ import { useState, useEffect, useRef } from "react";
 import BgLayer from "@/app/app_chunks/BgLayer";
 import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 export default function CertificationsPage() {
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -57,8 +64,8 @@ export default function CertificationsPage() {
         <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-                Heading
+              <h1 className="text-5xl font-semibold text-sky-800 leading-tighter  mb-4">
+                Certified for Global Excellence
               </h1>
               <p className="text-lg text-gray-700">
                 At ALYUSR Engineering Consulting, our work meets and exceeds the
@@ -215,53 +222,62 @@ export default function CertificationsPage() {
       <section>
         <div className="my-24 container">
           <h3 className="text-4xl font-bold text-center text-gray-800 mb-16">
-            Why It Matters to Our Clients
+            Why It Matters to{" "}
+            <span className="text-blue-500"> Our Clients</span>
           </h3>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Confidence in internationally approved systems",
-                img: "https://images.pexels.com/photos/8566636/pexels-photo-8566636.jpeg",
-              },
-              {
-                title: "Consistency in quality, safety, and sustainability",
-                img: "https://images.pexels.com/photos/1267324/pexels-photo-1267324.jpeg",
-              },
-              {
-                title: "Reduced risks through clear governance and compliance",
-                img: "https://images.pexels.com/photos/7172774/pexels-photo-7172774.jpeg",
-              },
-              {
-                title:
-                  "Improved outcomes through standardization and oversight",
-                img: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg",
-              },
-              {
-                title: "Competitive edge in global and government tenders",
-                img: "https://images.pexels.com/photos/38906/federal-chancellery-federal-government-government-chancellor-38906.jpeg",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300"
-              >
-                <div className="relative h-[300px] w-full bg-sky-100">
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    fill
-                    className="object-cover  group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-5">
-                  <p className="text-center text-gray-50 text-sm font-semibold group-hover:text-sky-50 transition-colors duration-300">
-                    {item.title}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            className="w-full px-4" // Add horizontal padding to avoid edge cuts
+          >
+            <CarouselContent className="gap-4 px-10">
+              {" "}
+              {/* optional spacing between cards */}
+              {[
+                {
+                  title: "Strategic Alignment",
+                  img: "https://images.pexels.com/photos/1181615/pexels-photo-1181615.jpeg",
+                },
+                {
+                  title: "Streamlined Oversight",
+                  img: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+                },
+                {
+                  title: "Consistent Quality",
+                  img: "https://images.pexels.com/photos/7564203/pexels-photo-7564203.jpeg",
+                },
+                {
+                  title: "Client Trust",
+                  img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+                },
+              ].map((point, i) => (
+                <CarouselItem
+                  key={i}
+                  className="group md:basis-1/2 !p-0 lg:basis-1/3 bg-slate-300 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
+                >
+                  <div className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div className="relative h-[300px] w-full bg-sky-100">
+                      <Image
+                        src={point.img}
+                        alt={point.title}
+                        fill
+                        className="object-cover  group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <p className="text-center text-gray-50 text-sm font-semibold group-hover:text-sky-50 transition-colors duration-300">
+                        {point.title}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
@@ -271,9 +287,10 @@ export default function CertificationsPage() {
           Certified to Deliver. Committed to Excellence.
         </h3>
         <p className="max-w-3xl mx-auto mb-8">
-          At ALYUSR, we don&apos;t just follow global standards; we embed them into
-          everything we do. These certifications are not just badges; they&apos;re
-          our promise to clients, partners, and the communities we serve.
+          At ALYUSR, we don&apos;t just follow global standards; we embed them
+          into everything we do. These certifications are not just badges;
+          they&apos;re our promise to clients, partners, and the communities we
+          serve.
         </p>
         <button className="bg-white text-sky-900 font-semibold px-6 py-3 rounded-xl shadow hover:bg-gray-100 transition">
           Explore Our Services

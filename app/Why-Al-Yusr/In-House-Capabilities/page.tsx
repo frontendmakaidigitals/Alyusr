@@ -15,6 +15,13 @@ import {
   BadgeCheck,
   ArrowUpRight,
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import Image from "next/image";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
@@ -107,8 +114,8 @@ export default function Page() {
         <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-                Heading
+              <h1 className="text-5xl font-semibold text-sky-800 leading-tighter  mb-4">
+                Expertise Under One Roof
               </h1>
               <p className="text-lg text-gray-700">
                 At ALYUSR Engineering Consulting, we proudly deliver all major
@@ -116,9 +123,9 @@ export default function Page() {
                 budgets, and quality at every stage of the project lifecycle.
                 Our multidisciplinary teams work side by side, sharing
                 resources, tools, and knowledge under one roof to offer clients
-                a seamless and efficient experience. Whether it&apos;s feasibility
-                studies, architectural design, engineering, or project
-                supervision, we don’t outsource the core. We own it.
+                a seamless and efficient experience. Whether it&apos;s
+                feasibility studies, architectural design, engineering, or
+                project supervision, we don’t outsource the core. We own it.
               </p>
 
               <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
@@ -273,53 +280,61 @@ export default function Page() {
       </section>
       <section>
         <div className="my-24 container">
-          <h3 className="text-4xl font-bold text-center text-gray-800 mb-16">
-            Why It Matters to Our Clients
+          <h3 className="text-5xl font-bold text-center text-gray-800 mb-16">
+            Why It Matters to <span className="text-blue-500">Our Clients</span>
           </h3>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Faster response times",
-                img: "https://images.pexels.com/photos/39396/hourglass-time-hours-sand-39396.jpeg",
-              },
-              {
-                title: "Better coordination and design accuracy",
-                img: "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg",
-              },
-              {
-                title: "Lower project risk and reduced cost",
-                img: "https://images.pexels.com/photos/6801639/pexels-photo-6801639.jpeg",
-              },
-              {
-                title: "Higher accountability and transparency",
-                img: "https://images.pexels.com/photos/7567487/pexels-photo-7567487.jpeg",
-              },
-              {
-                title: "Quick, end-to-end service",
-                img: "https://images.pexels.com/photos/8762590/pexels-photo-8762590.jpeg",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300"
-              >
-                <div className="relative h-[300px] w-full bg-sky-100">
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    fill
-                    className="object-cover  group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-5">
-                  <p className="text-center text-gray-50 text-sm font-semibold group-hover:text-sky-100 transition-colors duration-300">
-                    {item.title}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            className="w-full px-4" // Add horizontal padding to avoid edge cuts
+          >
+            <CarouselContent className="gap-4 px-10">
+              {" "}
+              {/* optional spacing between cards */}
+              {[
+                {
+                  title: "Strategic Alignment",
+                  img: "https://images.pexels.com/photos/1181615/pexels-photo-1181615.jpeg",
+                },
+                {
+                  title: "Streamlined Oversight",
+                  img: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+                },
+                {
+                  title: "Consistent Quality",
+                  img: "https://images.pexels.com/photos/7564203/pexels-photo-7564203.jpeg",
+                },
+                {
+                  title: "Client Trust",
+                  img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+                },
+              ].map((point, i) => (
+                <CarouselItem
+                  key={i}
+                  className="group md:basis-1/2 !p-0 lg:basis-1/3 bg-slate-300 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
+                >
+                  <div className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div className="relative h-[300px] w-full bg-sky-100">
+                      <Image
+                        src={point.img}
+                        alt={point.title}
+                        fill
+                        className="object-cover  group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <p className="text-center text-gray-50 text-sm font-semibold group-hover:text-sky-100 transition-colors duration-300">
+                        {point.title}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
     </div>

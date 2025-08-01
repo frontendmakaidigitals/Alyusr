@@ -15,6 +15,13 @@ import {
   Cpu,
   Repeat,
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import Image from "next/image";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
@@ -62,8 +69,8 @@ export default function Page() {
       <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
         <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
           <div className="max-w-2xl">
-            <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-              Heading
+            <h1 className="text-5xl font-semibold text-sky-800 leading-tighter  mb-4">
+              Government and Private Sector Approved
             </h1>
             <p className="text-lg text-gray-700">
               For over a decade, ALYUSR Engineering Consulting has been a
@@ -180,55 +187,64 @@ export default function Page() {
 
           {/* WHY CLIENTS CHOOSE ALYUSR */}
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-semibold text-gray-800 mb-4">
-              Why Public & Private Clients Choose ALYUSR
+            <h3 className="text-5xl font-semibold text-gray-800 mb-4">
+              Why Public & Private{" "}
+              <span className="text-blue-500">Clients Choose ALYUSR</span>
             </h3>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
-            {[
-              {
-                img: "https://images.pexels.com/photos/7430341/pexels-photo-7430341.jpeg",
-                text: "Class A License Holder — recognized for handling large-scale, complex projects",
-              },
-              {
-                img: "https://images.pexels.com/photos/12324202/pexels-photo-12324202.jpeg",
-                text: "ISO-Certified Processes — quality, environmental, and safety management",
-              },
-              {
-                img: "https://images.pexels.com/photos/8482822/pexels-photo-8482822.jpeg",
-                text: "In-House Multidisciplinary Teams — no third-party reliance",
-              },
-              {
-                img: "https://images.pexels.com/photos/93400/pexels-photo-93400.jpeg",
-                text: "Proven Portfolio — with successful projects across Saudi Arabia, UAE, Egypt, and the UK",
-              },
-              {
-                img: "https://images.pexels.com/photos/45072/pexels-photo-45072.jpeg",
-                text: "Culturally Aware & Vision-Aligned — engineering that reflects both heritage and future goals",
-              },
-            ].map((item, i) => {
-              return (
-                <div
+
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            className="w-full px-4" // Add horizontal padding to avoid edge cuts
+          >
+            <CarouselContent className="gap-4 px-10">
+              {" "}
+              {/* optional spacing between cards */}
+              {[
+                {
+                  title: "Strategic Alignment",
+                  img: "https://images.pexels.com/photos/1181615/pexels-photo-1181615.jpeg",
+                },
+                {
+                  title: "Streamlined Oversight",
+                  img: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+                },
+                {
+                  title: "Consistent Quality",
+                  img: "https://images.pexels.com/photos/7564203/pexels-photo-7564203.jpeg",
+                },
+                {
+                  title: "Client Trust",
+                  img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+                },
+              ].map((point, i) => (
+                <CarouselItem
                   key={i}
-                  className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300"
+                  className="group md:basis-1/2 !p-0 lg:basis-1/3 bg-slate-300 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
                 >
-                  <div className="relative h-[300px] w-full bg-sky-100">
-                    <Image
-                      src={item.img}
-                      alt={item.text}
-                      fill
-                      className="object-cover  group-hover:scale-105 transition-transform duration-300"
-                    />
+                  <div className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div className="relative h-[300px] w-full bg-sky-100">
+                      <Image
+                        src={point.img}
+                        alt={point.title}
+                        fill
+                        className="object-cover  group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <p className="text-center  text-gray-50 text-sm font-semibold group-hover:text-sky-50 transition-colors duration-300">
+                        {point.title}
+                      </p>
+                    </div>
                   </div>
-                  <div className="p-5">
-                    <p className="text-center  text-gray-50 text-sm font-semibold group-hover:text-sky-50 transition-colors duration-300">
-                      {item.text}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
     </div>
