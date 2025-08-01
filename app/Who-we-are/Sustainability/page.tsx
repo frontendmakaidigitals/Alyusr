@@ -1,5 +1,5 @@
 "use client";
-import { Leaf, Globe, BarChart3, CheckCircle2, Users } from "lucide-react";
+import { Users } from "lucide-react";
 import {
   ShieldCheck,
   GraduationCap,
@@ -8,6 +8,7 @@ import {
   AlertCircle,
   HeartPulse,
   Star,
+  ArrowUpRight,
 } from "lucide-react";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
@@ -80,11 +81,11 @@ export default function Page() {
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-5xl font-bold text-slate-50">
-            Safety Commitments
+            Sustainability at Al Yusr Engineering Consultancy
             <br className="hidden sm:block" />
           </h1>
           <p className="mt-3 text-slate-200 max-w-2xl">
-            Expertise You Can Trust. Delivery You Can Count On.
+            Our Commitment: Building a Sustainable Future Together
           </p>
         </div>
         <BgLayer color="bg-black/60 z-20" />
@@ -95,6 +96,44 @@ export default function Page() {
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
+
+      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
+        {/* Background image */}
+
+        {/* Left gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
+
+        {/* Container with text */}
+        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+          <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+                Heading
+              </h1>
+              <p className="text-lg text-gray-700">
+                At Al Yusr Engineering Consultancy, we believe that true
+                progress means leaving a positive, lasting impact on people and
+                the planet. Our commitment to sustainability drives everything
+                we do, helping clients and partners embed responsible practices
+                that nurture communities, protect the environment, and create
+                resilient infrastructure for generations to come.
+              </p>
+
+              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+                Discover Our Story <ArrowUpRight />
+              </button>
+            </div>
+            <div className="h-[450px]">
+              <img
+                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                alt="About Background"
+                className=" w-full h-full object-cover"
+              />
+              <BgLayer />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Why Sustainability Matters */}
       <section className="py-20 px-6">
