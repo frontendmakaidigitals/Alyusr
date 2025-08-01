@@ -1,11 +1,9 @@
 "use client";
 import {
   BadgeCheck,
-  Building2,
   Globe,
   Leaf,
   ShieldCheck,
-  Layers,
   ArrowUpRight,
   CheckCircle,
 } from "lucide-react";
@@ -221,12 +219,10 @@ export default function Page() {
                 key={i}
                 className="bg-sky-50 border border-sky-100 p-6 rounded-xl shadow-sm hover:shadow-md transition"
               >
-                <div className="  mb-6">
-                  {item.icon}
-                </div>
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {item.title}
-                  </h3>
+                <div className="  mb-6">{item.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {item.title}
+                </h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   {item.desc}
                 </p>
