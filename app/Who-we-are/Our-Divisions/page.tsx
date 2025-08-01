@@ -140,7 +140,7 @@ export default function Page() {
                 that work together to deliver smart, sustainable, and fully
                 integrated engineering solutions. Each division is equipped with
                 the tools, talent, and technical knowledge needed to serve
-                clients across sectors, whether it's infrastructure,
+                clients across sectors, whether it&apos;s infrastructure,
                 architecture, urban planning, or digital transformation.
                 Together, we bring precision, quality, and agility to every
                 stage of the project lifecycle.
