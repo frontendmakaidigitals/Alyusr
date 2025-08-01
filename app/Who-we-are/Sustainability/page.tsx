@@ -116,7 +116,7 @@ export default function Page() {
             </p>
           </div>
           <img
-            src="/sustainability.jpg"
+            src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
             alt="Sustainable city"
             className="rounded-xl shadow-md"
           />
@@ -174,8 +174,8 @@ export default function Page() {
       </section>
 
       {/* Global Commitment */}
-      <section className="bg-green-50 py-20 px-6">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="bg-green-50 grid grid-cols-1 lg:grid-cols-2 py-20 px-6">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-semibold mb-4">Our Global Commitment</h2>
           <p className="text-gray-700 max-w-3xl mx-auto">
             Al Yusr supports international frameworks such as the Global
@@ -185,6 +185,11 @@ export default function Page() {
             stewardship.
           </p>
         </div>
+        <img
+          src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
+          alt="Sustainable city"
+          className="rounded-xl shadow-md"
+        />
       </section>
 
       {/* Insights */}
