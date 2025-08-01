@@ -9,6 +9,7 @@ import {
   HeartPulse,
   Star,
   ArrowUpRight,
+  BadgeCheck,
 } from "lucide-react";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
@@ -80,11 +81,11 @@ export default function Page() {
         className="w-full relative overflow-hidden"
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
-          <h1 className="text-5xl font-bold text-slate-50">
+          <h1 className="text-2xl  text-slate-50">
             Sustainability at Al Yusr Engineering Consultancy
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 max-w-2xl">
+          <p className="mt-3 text-slate-200 text-6xl font-semibold">
             Our Commitment: Building a Sustainable Future Together
           </p>
         </div>
@@ -136,11 +137,17 @@ export default function Page() {
       </section>
 
       {/* Why Sustainability Matters */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-20 ">
+        <div className="container  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <img
+            src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
+            alt="Sustainable city"
+            className="rounded-xl shadow-md"
+          />
           <div>
-            <h2 className="text-2xl font-semibold mb-4">
-              Why Sustainability Matters to Us
+            <h2 className="text-5xl font-semibold mb-4">
+              Why <span className="text-blue-500">Sustainability</span> Matters
+              to Us
             </h2>
             <p className="text-gray-700 mb-4">
               The world is changing, and so must the way we do business. From
@@ -154,33 +161,31 @@ export default function Page() {
               global environmental and social priorities.
             </p>
           </div>
-          <img
-            src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
-            alt="Sustainable city"
-            className="rounded-xl shadow-md"
-          />
         </div>
       </section>
 
       {/* Strategy Pillars */}
-      <section className="bg-sky-50 py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Key Safety Programs & Practices
+      <section className="container py-24">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">
+            Key <span className="text-green-600">Safety</span> Programs &
+            Practices
           </h2>
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
             {safetyPractices.map((item, index) => (
               <div
                 key={index}
-                className="bg-white border border-sky-100 p-6 rounded-xl shadow-sm hover:shadow-md transition"
+                className="group bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out"
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-sky-100 p-2 rounded-full">{item.icon}</div>
-                  <h3 className="text-lg font-semibold text-gray-800">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="bg-sky-100 p-3 rounded-full transition-transform duration-300 group-hover:scale-110">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-sm text-gray-700 leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -189,34 +194,12 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Innovation & Initiatives */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-6 text-center">
-            Leading with Innovation and Expertise
+      <section className="bg-blue-50 place-items-center grid grid-cols-1 lg:grid-cols-2 py-20 px-6">
+        <div className="max-w-5xl mx-auto container">
+          <h2 className="text-5xl font-semibold mb-4">
+            Our <span className="text-blue-500">Global</span> Commitment
           </h2>
-          <ul className="space-y-5 text-gray-700 list-disc list-inside">
-            <li>
-              Developing low-carbon infrastructure tailored for the Middle
-              East’s unique climate and environmental conditions
-            </li>
-            <li>
-              Partnering with public and private sectors to embed energy
-              resilience and reduce carbon footprints
-            </li>
-            <li>
-              Implementing digital tools that measure and minimize environmental
-              impact throughout project lifecycles
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Global Commitment */}
-      <section className="bg-green-50 grid grid-cols-1 lg:grid-cols-2 py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-4">Our Global Commitment</h2>
-          <p className="text-gray-700 max-w-3xl mx-auto">
+          <p className="text-gray-700 text-lg">
             Al Yusr supports international frameworks such as the Global
             Biodiversity Framework, pledging to help reverse nature loss by
             2030. Our projects and practices align with these commitments,
@@ -230,20 +213,49 @@ export default function Page() {
           className="rounded-xl shadow-md"
         />
       </section>
-
-      {/* Insights */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold mb-4">
-            Stay Informed with Our Insights
+      {/* Innovation & Initiatives */}
+      <section className="container place-items-center grid grid-cols-1 lg:grid-cols-2 py-20 gap-10">
+        <div className="w-full h-[500px] bg-red-300 rounded-xl">
+          <img />
+        </div>
+        <div className="">
+          <h2 className="text-4xl font-semibold mb-6">
+            Leading with Innovation and Expertise
           </h2>
-          <p className="text-gray-700">
-            Discover how Al Yusr is helping clients transition to
-            nature-positive practices, navigate carbon markets, and embrace
-            climate-resilient infrastructure.
+          <p>
+            From low-carbon infrastructure to resilient energy solutions, Al
+            Yusr embraces cutting-edge technology and innovative thinking. Our
+            experts collaborate globally to solve complex challenges, delivering
+            sustainable designs, tools, and solutions that meet today’s needs
+            without compromising tomorrow.
           </p>
+          <ul className="space-y-4 text-gray-700 mt-5">
+            <li className="flex items-start gap-3">
+              <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
+              <span>
+                Developing low-carbon infrastructure tailored for the Middle
+                East’s unique climate and environmental conditions
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
+              <span>
+                Partnering with public and private sectors to embed energy
+                resilience and reduce carbon footprints
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
+              <span>
+                Implementing digital tools that measure and minimize
+                environmental impact throughout project lifecycles
+              </span>
+            </li>
+          </ul>
         </div>
       </section>
+
+      {/* Global Commitment */}
     </div>
   );
 }
