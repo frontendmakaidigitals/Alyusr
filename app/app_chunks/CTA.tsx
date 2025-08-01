@@ -1,21 +1,17 @@
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import BgLayer from "./BgLayer";
 
 export default function EngineeringCTA({
   title,
   desc,
-  btn,
+  btn="Get Started Now",
 }: {
   title?: string;
   desc?: string;
   btn?: string;
 }) {
   return (
-<section className="relative rounded-xl overflow-hidden bg-gradient-to-b from-[#06b6d4] via-[#2563eb] to-[#6366f1] my-24 container max-w-6xl mx-auto">
-
-
-
+    <section className="relative rounded-xl overflow-hidden bg-gradient-to-b from-[#06b6d4] via-[#2563eb] to-[#6366f1] my-24 container max-w-6xl mx-auto">
       <div className="absolute -top-10 -left-12 w-48 h-48 border-4 border-white border-dashed rounded-full opacity-10 pointer-events-none z-0" />
       <div className="absolute -bottom-20 -right-20 w-64 h-64 border-8 border-white border-dotted rounded-full opacity-10 pointer-events-none z-0" />
       {/* Background Decorative Layer */}

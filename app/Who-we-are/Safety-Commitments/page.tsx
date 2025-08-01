@@ -14,6 +14,7 @@ import {
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import EngineeringCTA from "@/app/app_chunks/CTA";
 const safetyPrograms = [
   {
     icon: <ShieldCheck className="w-6 h-6 text-emerald-600" />,
@@ -187,39 +188,40 @@ export default function SafetyCommitmentsPage() {
         </div>
 
         {/* Safety Cards Grid */}
-       {/* Safety Cards Grid */}
-<div className="grid md:grid-cols-2 gap-8 mb-20">
-  {safetyPrograms.map((item, i) => (
-    <div
-      key={i}
-      className="group bg-white border border-gray-100 p-6 rounded-3xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out"
-    >
-      <div className="flex items-start gap-5 mb-4">
-        {/* Icon container */}
-        <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 shadow-inner">
-          {item.icon}
+        {/* Safety Cards Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
+          {safetyPrograms.map((item, i) => (
+            <div
+              key={i}
+              className="group bg-white border border-gray-100 p-6 rounded-3xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out"
+            >
+              <div className="flex items-start gap-5 mb-4">
+                {/* Icon container */}
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 shadow-inner">
+                  {item.icon}
+                </div>
+
+                {/* Title with underline effect on hover */}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-1 group-hover:text-blue-700 transition">
+                    {item.title}
+                  </h3>
+                  <div className="h-0.5 w-8 bg-blue-200 group-hover:w-16 transition-all duration-300" />
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="text-gray-600 text-sm leading-relaxed tracking-tight">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
-
-        {/* Title with underline effect on hover */}
-        <div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-1 group-hover:text-blue-700 transition">
-            {item.title}
-          </h3>
-          <div className="h-0.5 w-8 bg-blue-200 group-hover:w-16 transition-all duration-300" />
-        </div>
-      </div>
-
-      {/* Description */}
-      <p className="text-gray-600 text-sm leading-relaxed tracking-tight">
-        {item.desc}
-      </p>
-    </div>
-  ))}
-</div>
-
-
-       
       </section>
+      <EngineeringCTA
+        title="Certifications & Compliance"
+        desc="ALYUSR is fully certified under ISO 45001:2018 – Occupational Health & Safety Management. All of our safety practices are aligned with local laws and international benchmarks to ensure consistent, high-standard outcomes."
+      />
     </section>
   );
 }
