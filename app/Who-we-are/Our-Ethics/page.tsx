@@ -1,16 +1,14 @@
 "use client";
 import {
   ShieldCheck,
-  FileText,
-  AlertCircle,
-  Scale,
-  UserCheck,
   BookOpen,
   AlertTriangle,
   Lock,
   Handshake,
   ArrowUpRight,
+  BadgeCheck,
 } from "lucide-react";
+import Image from "next/image";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
@@ -50,6 +48,36 @@ export default function OurEthics() {
     const top = sectionRef.current?.offsetTop || 0;
     setSectionTop(top);
   }, []);
+  const ethicsTraining = [
+    {
+      img: "/images/code-of-conduct.jpg", // Replace with your own image path or Pexels/Unsplash CDN
+      title: "Understanding the Code of Conduct",
+    },
+    {
+      img: "/images/conflict-of-interest.jpg",
+      title: "Recognizing Conflicts of Interest",
+    },
+    {
+      img: "/images/anti-bribery.jpg",
+      title: "Anti-Bribery & Anti-Corruption",
+    },
+    {
+      img: "/images/data-protection.jpg",
+      title: "Data Protection & Client Confidentiality",
+    },
+    {
+      img: "/images/respect.jpg",
+      title: "Respect in the Workplace",
+    },
+  ];
+
+  const ethicsConduct = [
+    "Compliance with local & international laws",
+    "Fair treatment & anti-corruption principles",
+    "Workplace safety & environmental responsibilities",
+    "Client confidentiality & data protection",
+    "Ethical decision-making across operations",
+  ];
   return (
     <main className="bg-gray-50 text-gray-800">
       <motion.div
@@ -60,11 +88,11 @@ export default function OurEthics() {
         className="w-full relative overflow-hidden"
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
-          <h1 className="text-5xl font-bold text-slate-50">
+          <h1 className="text-2xl  text-slate-50">
             Our Ethics
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 max-w-2xl">
+          <p className="mt-3 text-slate-200 text-6xl font-semibold">
             Expertise You Can Trust. Delivery You Can Count On.
           </p>
         </div>
@@ -119,116 +147,92 @@ export default function OurEthics() {
           </div>
         </div>
       </section>
-      <section className="py-20 px-6 max-w-7xl mx-auto">
-        {/* Ethical Culture Section */}
-        <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">Our Ethical Culture</h2>
-            <p className="text-gray-700 mb-4">
-              Our business culture is grounded in fairness, professionalism, and
-              respect. We encourage ethical decision-making and hold a
-              zero-tolerance approach to bribery, corruption, and
-              discrimination.
-            </p>
-            <p className="text-gray-700">
-              Speaking up is encouraged, and doing the right thing is
-              expected—always.
-            </p>
-          </div>
-          <div className="bg-white rounded-xl shadow p-6 border border-gray-100">
-            <ShieldCheck className="text-sky-600 w-10 h-10 mb-4" />
-            <h3 className="font-semibold text-xl mb-2">
-              Integrity is Non-Negotiable
-            </h3>
-            <p className="text-gray-700 text-sm">
-              We act with honesty, uphold compliance, and hold ourselves
-              accountable at all levels.
-            </p>
-          </div>
-        </div>
-
-        {/* Code of Ethics Cards */}
-        <div className="mb-20">
-          <h2 className="text-2xl font-semibold mb-10 text-center">
-            Code of Ethics & Conduct
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <FileText className="w-6 h-6 text-sky-600" />,
-                title: "Legal Compliance",
-                desc: "Following all applicable Saudi and international laws across all operations.",
-              },
-              {
-                icon: <Scale className="w-6 h-6 text-sky-600" />,
-                title: "Anti-Corruption & Bribery",
-                desc: "Strict zero-tolerance for any form of bribery, fraud, or unfair advantage.",
-              },
-              {
-                icon: <UserCheck className="w-6 h-6 text-sky-600" />,
-                title: "Fair Treatment",
-                desc: "Respecting diversity, equality, and inclusion across teams and projects.",
-              },
-              {
-                icon: <AlertCircle className="w-6 h-6 text-sky-600" />,
-                title: "Health, Safety & Environment",
-                desc: "Committed to protecting people and the planet through ethical practices.",
-              },
-              {
-                icon: <ShieldCheck className="w-6 h-6 text-sky-600" />,
-                title: "Client Confidentiality",
-                desc: "Safeguarding sensitive information and respecting privacy.",
-              },
-              {
-                icon: <Scale className="w-6 h-6 text-sky-600" />,
-                title: "Fair Competition",
-                desc: "Upholding professional standards and transparent bidding.",
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white border border-gray-100 rounded-xl p-6 shadow hover:shadow-md transition"
+      <section className="">
+        <div className="container">
+          {/* Section Header */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-24">
+            {" "}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-14"
+            >
+              <h2 className="text-5xl text-start font-bold text-gray-900">
+                Our Ethical Culture
+              </h2>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto mt-4 text-start">
+                Our business culture is grounded in fairness, professionalism,
+                and respect. Ethical decision-making is encouraged at every
+                level of our organization, from executive leadership to field
+                operations.
+                <br /> We lead by example, taking a zero-tolerance approach to
+                bribery, corruption, discrimination, and non-compliance. We
+                actively promote a culture of accountability, where speaking up
+                is encouraged, and doing the right thing is expected, always.
+                <br /> All employees receive mandatory ethics and compliance
+                training to help them identify, report, and avoid unethical
+                behavior. Training includes:
+              </p>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.6 }}
+                viewport={{ once: true }}
+                className=""
               >
-                <div className="mb-3">{item.icon}</div>
-                <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+                <div className="text-start mt-4 space-y-4">
+                  {ethicsTraining.map((item, idx) => (
+                    <motion.div
+                      key={idx}
+                      whileHover={{ scale: 1.03 }}
+                      className="flex items-start gap-2"
+                    >
+                      <div>
+                        <BadgeCheck className="fill-green-500 stroke-white size-7" />
+                      </div>
+                      <p className="text-gray-800 font-medium">{item.title}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </motion.div>
+            <div className="w-full bg-red-300 h-[500px]">
+              <img />
+            </div>
           </div>
         </div>
-
-        {/* Training and Governance */}
       </section>
-      <section className="py-16 px-6 bg-sky-50 rounded-2xl shadow-inner">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Training & Awareness
-            </h2>
-            <p className="text-gray-700 text-base mb-6">
-              All employees receive mandatory ethics and compliance training to
-              help them identify, report, and avoid unethical behavior. Key
-              areas include:
-            </p>
-            <ul className="space-y-4">
-              {items.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span>{item.icon}</span>
-                  <span className="text-gray-700 text-sm">{item.text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="hidden md:block">
-            <img
-              src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
-              alt="Ethics Training Illustration"
-              className="rounded-xl shadow-md w-full h-auto object-cover"
-            />
-          </div>
+      <section className="container grid grid-cols-1 lg:grid-cols-2 mt-14 gap-10 mb-20">
+        <div className="w-full h-[500px] bg-green-500">
+          <img />
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-12"
+        >
+          <h3 className="text-5xl font-semibold mb-6 text-gray-800 max-w-lg">
+            Code of Ethics & Business Conduct
+          </h3>
+          <ul className="space-y-4  text-gray-700 pl-2">
+            {ethicsConduct.map((item, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <div className="">
+                  <BadgeCheck className="fill-green-500 stroke-white size-7" />
+                </div>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-gray-600 text-sm">
+            This code is shared with employees, consultants, and subcontractors
+            to uphold a unified ethical standard across every project.
+          </p>
+        </motion.div>
       </section>
     </main>
   );
