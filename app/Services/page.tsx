@@ -114,7 +114,6 @@ const services = [
   { title: "Electrical Contracting", img: "electrical-contracting.webp" },
   { title: "Multinational Investment", img: "multinational-investment.webp" },
 ];
-console.log(services);
 const Page = () => {
   const chunkArray = (
     arr: { title: string; img: string }[],

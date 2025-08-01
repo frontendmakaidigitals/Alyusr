@@ -9,21 +9,21 @@ interface dataProps {
       link: string;
     }[];
   }[];
-  wideCard: { label: string; desc: string; img: string }[];
+  wideCard: { label: string; desc: string; img: string; link: string }[];
   imgCard: { button: string; img: string }[];
 }
 
 const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
   return (
     <div className="flex items-center justify-between w-full">
-      <ul className="space-y-4 pr-6  min-w-[240px]">
+      <ul className="space-y-4 pr-6  min-w-[280px]">
         {data.map((site, idx) => (
           <li key={idx}>
             <ul className="space-y-2 text-md 2xl:text-lg text-white/80">
               {site.submenu.map((subItem, subIdx) => (
                 <li key={subIdx}>
                   <Link
-                    href={subItem.link}
+                    href={`/Who-we-are/${subItem.link}`}
                     className="block border text-slate-200 border-lime-200 hover:bg-amber-300 hover:text-black rounded-full px-3 py-[.6rem] hover:underline"
                   >
                     {subItem.label}
@@ -40,24 +40,29 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
         </p>
         <ul className="space-y-4 mt-5">
           {wideCard.map((card, idx) => (
-            <li key={idx} className="flex items-center gap-2 2xl:gap-3">
-              <div className="w-[150px] 2xl:w-[200px] 2xl:h-[130px] bg-gray-800 h-[100px] overflow-hidden">
-                <Image
-                  width={100}
-                  height={100}
-                  src={card.img}
-                  alt={""}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <h2 className="text-xl text-yellow-100 font-[500]">
-                  {card.label}
-                </h2>
-                <p className="text-sm 2xl:text-lg max-w-xs 2xl:max-w-lg">
-                  {card.desc}
-                </p>
-              </div>
+            <li key={idx}>
+              <Link
+                href={`/Who-we-are/${card.link}`}
+                className="flex items-center gap-2 2xl:gap-3"
+              >
+                <div className="w-[150px] 2xl:w-[200px] 2xl:h-[130px] bg-gray-800 h-[100px] overflow-hidden">
+                  <Image
+                    width={100}
+                    height={100}
+                    src={card.img}
+                    alt={""}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-xl text-yellow-100 font-[500]">
+                    {card.label}
+                  </h2>
+                  <p className="text-sm 2xl:text-lg max-w-xs 2xl:max-w-lg">
+                    {card.desc}
+                  </p>
+                </div>
+              </Link>
             </li>
           ))}
         </ul>

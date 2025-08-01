@@ -8,23 +8,29 @@ export const siteConfig = {
         {
           label: "Overview",
           submenu: [
-            { label: "Company Overview", link: "/company-overview" },
-            { label: "KSA Vision 2030", link: "/ksa-vision-2030" },
-            { label: "Our Divisions", link: "/our-divisions" },
-            { label: "Class A Certificate", link: "/class-a-certificate" },
-            { label: "Sustainability", link: "/sustainability" },
-            { label: "Safety Commitments", link: "/safety-commitments" },
+            {
+              label: "Certifications & Accreditations",
+              link: "Certifications-and-Accreditations",
+            },
+            { label: "Company Overview", link: "Company-Overview" },
+            { label: "Our Divisions", link: "Our-Divisions" },
+            { label: "Our Ethics", link: "Our-Ethics" },
+            { label: "Safety Commitments", link: "Safety-Commitments" },
+            { label: "Sustainability", link: "Sustainability" },
+            { label: "Technical Expertise", link: "Technical-Expertise" },
           ],
         },
       ],
       tagLine: "Al Yusr is making global impact with saudi - vision 2030",
       wideCard: [
         {
+          link: "Leadership-and-Vision",
           label: "Leadership & Vision",
           desc: "Al Yusr’s leadership drives innovation, excellence, and a clear vision for the Kingdom’s future. ",
           img: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Saudi_Vision_2030_logo.svg/1200px-Saudi_Vision_2030_logo.svg.png",
         },
         {
+          link: "Transforming-Saudi-Future",
           label: "Transforming Saudi Future",
           desc: "Al Yusr is proudly shaping Saudi Arabia’s future through visionary engineering.",
           img: "https://images.pexels.com/photos/4614473/pexels-photo-4614473.jpeg",
@@ -103,24 +109,28 @@ export const siteConfig = {
       contactNum: "",
       services: [
         {
+          link: "Trusted-by-Government-and-Private-Sectors",
           label: "Trusted by Govt & Private Sectors",
           description:
             "Al Yusr operates with internationally recognized certifications, ensuring quality, safety, and sustainability",
           img: "https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg", // Replace with actual image path
         },
         {
+          link: "Globally-Certified-Standards",
           label: "Globally Certified Standards",
           description:
             "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader",
           img: "https://images.pexels.com/photos/6474498/pexels-photo-6474498.jpeg",
         },
         {
+          link: "In-House-Capabilities",
           label: "In-House Capabilities",
           description:
             "Al Yusr delivers all major services in-house, ensuring full control, quality, and efficiency at every stage",
           img: "https://images.pexels.com/photos/33266/work-chinese-industrial-professional.jpg",
         },
         {
+          link: "CEO-Led-Specialized-Departments",
           label: "CEO Led - Specialized Departments",
           description:
             "At Al Yusr, every department is guided by executive leadership to ensure expert oversight and exceptional delivery",
@@ -177,7 +187,7 @@ type WhoWeAreNav = {
     submenu: { label: string; link: string }[];
   }[];
   tagLine: string;
-  wideCard: { label: string; desc: string; img: string }[];
+  wideCard: { label: string; desc: string; img: string; link: string }[];
   imgCard: { button: string; img: string }[];
 };
 
@@ -208,6 +218,7 @@ type WhyAlYusrNav = {
     label: string;
     description: string;
     img: string;
+    link: string;
   }[];
   tabs: {
     label: string;

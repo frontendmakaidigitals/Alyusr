@@ -80,8 +80,8 @@ const Herosection = () => {
                   <div className="w-full mx-auto container">
                     <motion.h1
                       key={slides[activeIndex].title}
-                      initial={{ x: 200 }}
-                      animate={{ x: 0 }}
+                      initial={{ x: 200, opacity:0 }}
+                      animate={{ x: 0, opacity:1 }}
                       transition={{
                         delay: 0.2,
                         duration: 1.4,
@@ -93,8 +93,8 @@ const Herosection = () => {
                     </motion.h1>
                     <motion.p
                       key={slides[activeIndex].desc}
-                      initial={{ x: 200 }}
-                      animate={{ x: 0 }}
+                      initial={{ x: 200, opacity:0 }}
+                      animate={{ x: 0, opacity:1 }}
                       transition={{
                         delay: 0.3,
                         duration: 1.4,
@@ -106,8 +106,8 @@ const Herosection = () => {
                     </motion.p>
                     <motion.button
                       key={slides[activeIndex].img}
-                      initial={{ x: 200 }}
-                      animate={{ x: 0 }}
+                      initial={{ x: 200, opacity:0 }}
+                      animate={{ x: 0, opacity:1 }}
                       transition={{
                         delay: 0.4,
                         duration: 1.4,

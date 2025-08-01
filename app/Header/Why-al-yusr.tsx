@@ -1,11 +1,13 @@
 import React from "react";
 import { Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 interface dataProps {
   data: {
     label: string;
     description: string;
     img: string;
+    link: string;
   }[];
   tabs: { label: string; link: string }[];
 }
@@ -44,25 +46,32 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
       </div>
       <div className="ml-5 flex flex-col items-end  justify-between w-full h-[340px]">
         <div>
-          <p className="mb-2">Al Yusr is Proven and Certified to Shape the Kingdom</p>
+          <p className="mb-2">
+            Al Yusr is Proven and Certified to Shape the Kingdom
+          </p>
           <ul className="w-full grid grid-cols-2 gap-4">
             {data.map((service, idx) => (
-              <li key={idx} className="flex items-center gap-2 ">
-                <div className="w-[230px] h-[70px] overflow-hidden">
-                  <Image
-                    width={300}
-                    height={300}
-                    src={service.img}
-                    alt={""}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h2 className="text-lg text-yellow-100 font-[500]">
-                    {service.label}
-                  </h2>
-                  <p className="text-xs">{service.description}</p>
-                </div>
+              <li key={idx}>
+                <Link
+                  href={`/Why-Al-Yusr/${service.link}`}
+                  className="flex items-center gap-2 "
+                >
+                  <div className="w-[230px] h-[70px] overflow-hidden">
+                    <Image
+                      width={300}
+                      height={300}
+                      src={service.img}
+                      alt={""}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h2 className="text-lg text-yellow-100 font-[500]">
+                      {service.label}
+                    </h2>
+                    <p className="text-xs">{service.description}</p>
+                  </div>
+                </Link>
               </li>
             ))}
           </ul>
