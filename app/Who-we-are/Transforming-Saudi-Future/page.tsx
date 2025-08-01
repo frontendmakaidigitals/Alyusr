@@ -1,34 +1,91 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
-
+import BgLayer from "../../app_chunks/BgLayer";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { ArrowUpRight } from "lucide-react";
 export default function Page() {
+  const [sectionTop, setSectionTop] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  const yTransform = useTransform(
+    scrollY,
+    [sectionTop, sectionTop + 400],
+    [0, 100]
+  );
+
+  useEffect(() => {
+    const top = sectionRef.current?.offsetTop || 0;
+    setSectionTop(top);
+  }, []);
   return (
     <div className="text-gray-900">
       {/* Hero Section */}
-      <section className="bg-white py-20 px-6 lg:px-24 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-5xl mx-auto"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <motion.div
+        ref={sectionRef}
+        initial={{ height: "120vh" }}
+        animate={{ height: "60vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
+        className="w-full relative overflow-hidden"
+      >
+        <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
+          <h1 className="text-5xl font-bold text-slate-50">
             Transforming Saudi’s Future
+            <br className="hidden sm:block" />
           </h1>
-          <p className="text-xl text-gray-700 mb-4">
+          <p className="mt-3 text-slate-200 max-w-2xl">
             Engineering Progress. Empowering Vision 2030.
           </p>
-          <p className="text-lg text-gray-600">
-            At ALYUSR Engineering Consulting, we are proud to shape the
-            Kingdom’s bold transformation under Vision 2030. Our work is rooted
-            in national priorities—driving sustainable development, urban
-            expansion, and infrastructure excellence.
-          </p>
-        </motion.div>
-      </section>
+        </div>
+        <BgLayer color="bg-black/60 z-20" />
+        <motion.img
+          style={{ y: yTransform }}
+          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
+          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          alt="ALYUSR Engineering Hero Background"
+        />
+      </motion.div>
+      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
+        {/* Background image */}
 
+        {/* Left gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
+
+        {/* Container with text */}
+        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+          <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+                Heading
+              </h1>
+              <p className="text-lg text-gray-700">
+                At ALYUSR Engineering Consulting, we are proud to play a vital
+                role in shaping the Kingdom’s bold transformation under Saudi
+                Vision 2030. Our work is rooted in national priorities,
+                sustainable development, urban expansion, infrastructure
+                excellence, and economic diversification. <br /> As a Class A
+                certified firm, we are trusted partners on projects that define
+                the future of Saudi Arabia, from smart cities and transportation
+                networks to eco-friendly buildings and strategic advisory
+                services that support long-term growth.
+              </p>
+
+              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+                Discover Our Story <ArrowUpRight />
+              </button>
+            </div>
+            <div className="h-[450px]">
+              <img
+                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                alt="About Background"
+                className=" w-full h-full object-cover"
+              />
+              <BgLayer />
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Building the Kingdom */}
       <section className="bg-gray-50 py-20 px-6 lg:px-24">
         <div className="max-w-6xl mx-auto text-center">
@@ -136,9 +193,9 @@ export default function Page() {
       </section>
 
       {/* Local Roots */}
-      <section className="bg-gray-50 py-20 px-6 lg:px-24">
+      <section className="bg-gray-50 gap-5 grid grid-cols-1 lg:grid-cols-2 py-20 px-6 lg:px-24">
         <motion.div
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -154,6 +211,13 @@ export default function Page() {
             is dedicated to engineering a sustainable, smart, and strong nation.
           </p>
         </motion.div>
+        <img
+          src={
+            "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
+          }
+          alt={""}
+          className=""
+        />
       </section>
 
       {/* CTA */}
