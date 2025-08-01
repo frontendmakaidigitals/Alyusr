@@ -8,7 +8,6 @@ import {
   ArrowUpRight,
   BadgeCheck,
 } from "lucide-react";
-import Image from "next/image";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";

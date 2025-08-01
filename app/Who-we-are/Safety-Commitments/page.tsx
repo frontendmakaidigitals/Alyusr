@@ -11,7 +11,6 @@ import {
   HeartPulse,
   ArrowUpRight,
 } from "lucide-react";
-import Image from "next/image";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
@@ -74,7 +73,7 @@ export default function SafetyCommitmentsPage() {
   }, []);
 
   return (
-    <section className="bg-gray-50 py-20 px-6">
+    <section className="bg-gray-50">
       <motion.div
         ref={sectionRef}
         initial={{ height: "120vh" }}
@@ -83,11 +82,11 @@ export default function SafetyCommitmentsPage() {
         className="w-full relative overflow-hidden"
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
-          <h1 className="text-5xl font-bold text-slate-50">
+          <h1 className="text-2xl  text-slate-50">
             Safety Commitments
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 max-w-2xl">
+          <p className="mt-3 text-slate-200 text-6xl font-semibold">
             Expertise You Can Trust. Delivery You Can Count On.
           </p>
         </div>
@@ -99,18 +98,17 @@ export default function SafetyCommitmentsPage() {
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
-      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
-        {/* Background image */}
+      <section className="relative overflow-hidden">
+        {/* Gradient background fixed here */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent pointer-events-none" />
 
-        {/* Left gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
-
-        {/* Container with text */}
-        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
-          <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
+        {/* SECTION 1: Image Right */}
+        <div className="relative z-10 py-20">
+          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
+            {/* Text */}
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-                Heading
+              <h1 className="text-5xl font-semibold leading-tighter mb-4">
+                Our Commitment to Safety
               </h1>
               <p className="text-lg text-gray-700">
                 At ALYUSR Engineering Consulting, safety is more than a policy;
@@ -118,108 +116,110 @@ export default function SafetyCommitmentsPage() {
                 our projects. We are committed to ensuring the physical, mental,
                 and environmental well-being of every team member, client, and
                 community we work with.
-                <br /> From project planning to execution, we apply proactive
-                risk management strategies to identify, reduce, and eliminate
+                <br />
+                From project planning to execution, we apply proactive risk
+                management strategies to identify, reduce, and eliminate
                 hazards. Our approach is guided by international safety
                 standards, including ISO 45001, and reinforced by strong
                 leadership, clear procedures, and empowered teams.
               </p>
-
               <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
                 Discover Our Story <ArrowUpRight />
               </button>
             </div>
-            <div className="h-[450px]">
+            {/* Image */}
+            <div className="h-[450px] w-full">
               <img
                 src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
-                alt="About Background"
-                className=" w-full h-full object-cover"
+                alt="Safety Image"
+                className="w-full h-full object-cover rounded-lg"
               />
               <BgLayer />
             </div>
           </div>
         </div>
-      </section>
-      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
-        {/* Background image */}
 
-        {/* Left gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
-
-        {/* Container with text */}
-        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
-          <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
+        {/* SECTION 2: Image Left */}
+        <div className="relative z-10 py-20">
+          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
+            {/* Image */}
+            <div className="h-[450px] w-full order-last lg:order-first">
+              <img
+                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                alt="Safety Culture"
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <BgLayer />
+            </div>
+            {/* Text */}
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+              <h1 className="text-5xl font-semibold leading-tighter mb-4">
                 Our Culture of Safety
               </h1>
               <p className="text-lg text-gray-700">
-                Our internal safety culture is built on three pillars:
-                Commitment. Accountability. Participation. We train and
-                encourage every employee to play an active role in maintaining a
-                safe and healthy workplace, from the office to the job site. Our
-                safety programs are designed to prevent incidents, improve
-                performance, and promote continuous learning across all
-                departments.
+                Our internal safety culture is built on three pillars:{" "}
+                <strong>Commitment</strong>, <strong>Accountability</strong>,
+                and <strong>Participation</strong>. We train and encourage every
+                employee to play an active role in maintaining a safe and
+                healthy workplace, from the office to the job site. Our safety
+                programs are designed to prevent incidents, improve performance,
+                and promote continuous learning across all departments.
               </p>
-
               <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
                 Discover Our Story <ArrowUpRight />
               </button>
             </div>
-            <div className="h-[450px]">
-              <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
-                alt="About Background"
-                className=" w-full h-full object-cover"
-              />
-              <BgLayer />
-            </div>
           </div>
         </div>
       </section>
-      <div className="container mx-auto max-w-6xl mt-10">
-        <div className="text-center mb-14">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+
+      <section className="container mx-auto max-w-6xl py-20 px-4">
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4 tracking-tight">
             Safety Commitments
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             At ALYUSR Engineering Consulting, safety is a core value. We embed
             it in our culture, people, and projects — from planning to execution
             — following international standards like ISO 45001.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {safetyPrograms.map((item, i) => (
-            <div
-              key={i}
-              className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                {item.icon}
-                <h3 className="text-xl font-semibold text-gray-800">
-                  {item.title}
-                </h3>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-          ))}
+        {/* Safety Cards Grid */}
+       {/* Safety Cards Grid */}
+<div className="grid md:grid-cols-2 gap-8 mb-20">
+  {safetyPrograms.map((item, i) => (
+    <div
+      key={i}
+      className="group bg-white border border-gray-100 p-6 rounded-3xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out"
+    >
+      <div className="flex items-start gap-5 mb-4">
+        {/* Icon container */}
+        <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 shadow-inner">
+          {item.icon}
         </div>
 
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-emerald-700 mb-2">
-            Certified for Safety
-          </h2>
-          <p className="text-gray-700 max-w-xl mx-auto">
-            ALYUSR is fully certified under ISO 45001:2018 – Occupational Health
-            & Safety Management. All practices align with Saudi regulations and
-            international benchmarks.
-          </p>
+        {/* Title with underline effect on hover */}
+        <div>
+          <h3 className="text-xl font-semibold text-gray-800 mb-1 group-hover:text-blue-700 transition">
+            {item.title}
+          </h3>
+          <div className="h-0.5 w-8 bg-blue-200 group-hover:w-16 transition-all duration-300" />
         </div>
       </div>
+
+      {/* Description */}
+      <p className="text-gray-600 text-sm leading-relaxed tracking-tight">
+        {item.desc}
+      </p>
+    </div>
+  ))}
+</div>
+
+
+       
+      </section>
     </section>
   );
 }
