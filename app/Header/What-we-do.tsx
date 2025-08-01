@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 interface dataProps {
   data: {
     label: string;
@@ -33,9 +34,12 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
         </div>
       </div>
       <div className="w-[300px] h-[320px] relative">
-        <button className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-amber-100 text-black px-3 py-[.4rem] rounded-full text-xs border border-black">
+        <Link
+          href={"/Services"}
+          className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-amber-100 text-black px-3 py-[.4rem] rounded-full text-xs border border-black"
+        >
           View All Services
-        </button>
+        </Link>
         <Image
           width={300}
           height={300}

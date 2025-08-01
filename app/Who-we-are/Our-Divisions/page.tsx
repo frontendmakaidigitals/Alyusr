@@ -122,7 +122,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          src="/our divison/banner.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -157,7 +157,7 @@ export default function Page() {
             </div>
             <div className="h-[450px]">
               <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                src="/our divison/Construction & Project Management.jpg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -182,9 +182,7 @@ export default function Page() {
             >
               <div className="relative h-[300px] w-full">
                 <Image
-                  src={
-                    "https://images.pexels.com/photos/439416/pexels-photo-439416.jpeg"
-                  }
+                  src="/our divison/Engineering & Design Division.jpg"
                   alt={division.title}
                   layout="fill"
                   objectFit="cover"
