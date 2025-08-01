@@ -36,11 +36,11 @@ export default function Page() {
         className="w-full relative overflow-hidden"
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
-          <h1 className="text-5xl font-bold text-slate-50">
+          <h1 className="text-2xl  text-slate-50">
             Certifications & Accreditations
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 max-w-2xl">
+          <p className="mt-3 text-slate-200 text-6xl font-semibold">
             Expertise You Can Trust. Delivery You Can Count On.
           </p>
         </div>
@@ -90,9 +90,9 @@ export default function Page() {
         </div>
       </section>
       <section className="py-20 px-6 bg-white">
-        <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
+        <div className="container mx-auto  grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-sky-800 mb-4">
+            <h2 className="text-5xl font-bold text-sky-800 mb-4">
               Class A Certificate: Engineering Excellence Recognized Nationally
             </h2>
             <p className="text-gray-700 mb-4">
@@ -114,7 +114,7 @@ export default function Page() {
                 "Full compliance with national engineering codes and regulations",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-sky-600 mt-1" />
+                  <BadgeCheck className="w-5 h-5 text-sky-600 mt-1" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -133,8 +133,8 @@ export default function Page() {
 
       <section className="py-20 px-6 bg-sky-50">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            International ISO Certifications
+          <h2 className="text-5xl font-bold text-center text-gray-800 mb-12">
+            International <span className="text-blue-600">ISO</span> Certifications
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -176,10 +176,10 @@ export default function Page() {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-semibold text-sky-700 mb-1">
+                  <h3 className="text-xl font-bold text-sky-700 mb-1">
                     {iso.label}
                   </h3>
-                  <p className="text-gray-600 text-sm">{iso.desc}</p>
+                  <p className="text-gray-600 ">{iso.desc}</p>
                 </div>
               </div>
             ))}
@@ -189,8 +189,8 @@ export default function Page() {
 
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Global Memberships & Registrations
+          <h2 className="text-5xl font-bold text-center text-gray-800 mb-12">
+            <span className="text-blue-500">Global</span> Memberships & Registrations
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
