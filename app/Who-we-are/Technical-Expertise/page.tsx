@@ -1,5 +1,5 @@
 "use client";
-import { CheckCircle, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
@@ -13,6 +13,44 @@ export default function TechnicalExpertisePage() {
     [sectionTop, sectionTop + 400],
     [0, 100]
   );
+  const capabilities = [
+    {
+      title: "Structural Engineering",
+      desc: "Design of safe, efficient, and code-compliant structures for buildings and infrastructure.",
+
+      img: "/images/structural.jpg", // Add a relevant image
+    },
+    {
+      title: "Mechanical, Electrical & Plumbing (MEP)",
+      desc: "Integrated building systems that ensure functionality, energy efficiency, and comfort.",
+
+      img: "/images/mep.jpg",
+    },
+    {
+      title: "Infrastructure Design",
+      desc: "Roads, utilities, drainage, and networks are designed for high performance and resilience.",
+
+      img: "/images/infrastructure.jpg",
+    },
+    {
+      title: "Water, Drainage & Hydrology",
+      desc: "Smart water management solutions, including stormwater systems and hydraulic modeling.",
+
+      img: "/images/water.jpg",
+    },
+    {
+      title: "Telecommunication & Low Current Systems",
+      desc: "Reliable, secure systems for modern connectivity and building automation.",
+
+      img: "/images/telecom.jpg",
+    },
+    {
+      title: "Urban & Regional Planning",
+      desc: "Large-scale planning with a focus on smart growth, land optimization, and community livability.",
+
+      img: "/images/urban.jpg",
+    },
+  ];
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
@@ -28,11 +66,11 @@ export default function TechnicalExpertisePage() {
         className="w-full relative overflow-hidden"
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
-          <h1 className="text-5xl font-bold text-slate-50">
-            Certifications & Accreditations
+          <h1 className="text-2xl  text-slate-50">
+            Technical Expertise
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 max-w-2xl">
+          <p className="mt-3 text-slate-200 text-6xl font-semibold">
             Expertise You Can Trust. Delivery You Can Count On.
           </p>
         </div>
@@ -63,8 +101,9 @@ export default function TechnicalExpertisePage() {
                 knowledge with cutting-edge tools and a results-driven approach.
                 From concept to completion, our engineers, architects, planners,
                 and project managers apply international standards and local
-                insight to deliver high-impact, future-ready solutions. With
-                experience across residential, commercial, industrial, and
+                insight to deliver high-impact, future-ready solutions. <br />{" "}
+                <br />
+                With experience across residential, commercial, industrial, and
                 infrastructure sectors, we bring specialized expertise to every
                 phase of the project lifecycle, ensuring accuracy, efficiency,
                 and sustainability at every step.
@@ -86,45 +125,48 @@ export default function TechnicalExpertisePage() {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-sky-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-2xl font-semibold text-sky-800 mb-4">
-              Multidisciplinary Capabilities
-            </h2>
-            <ul className="space-y-4 text-gray-700">
-              {[
-                "Structural Engineering — Safe, efficient, and code-compliant structures",
-                "Mechanical, Electrical & Plumbing (MEP) — Integrated, energy-efficient systems",
-                "Infrastructure Design — Roads, utilities, and drainage with resilience",
-                "Water, Drainage & Hydrology — Smart stormwater and hydraulic modeling",
-                "Telecom & Low Current Systems — Secure connectivity and automation",
-                "Urban & Regional Planning — Smart growth and community livability",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-sky-600 mt-1" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">
+            Multidisciplinary Capabilities
+          </h2>
 
-          <div className="rounded-xl overflow-hidden shadow-md">
-            <img
-              src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
-              alt="Technical Experts Working"
-              className="w-full h-full object-cover"
-            />
+          <div className="grid md:grid-cols-3 gap-10">
+            {capabilities.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all overflow-hidden"
+              >
+                <div className="relative h-56 w-full">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <h3 className="text-xl font-semibold text-gray-800">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            Advanced Tools & Technologies
+      <section className="py-16 container ">
+        <div className=" text-center">
+          <h2 className="text-5xl font-semibold text-gray-800 mb-4">
+            Advanced <span className="text-blue-500">Tools & Technologies</span>
           </h2>
-          <p className="text-gray-700 mb-8">
+          <p className="text-gray-700 mb-6">
             To deliver precision and speed, we rely on globally recognized tools
             such as:
           </p>
