@@ -137,7 +137,7 @@ export default function OurEthics() {
             </div>
             <div className="h-[450px]">
               <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                src="/ethics/pexels-ekaterina-bolovtsova-6077797.jpg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -197,15 +197,23 @@ export default function OurEthics() {
                 </div>
               </motion.div>
             </motion.div>
-            <div className="w-full bg-red-300 h-[500px]">
-              <img />
+            <div className="w-full  h-[500px]">
+              <img
+                className="w-full h-full object-cover"
+                alt={""}
+                src={"ethics/cytonn-photography-n95VMLxqM2I-unsplash.jpg"}
+              />
             </div>
           </div>
         </div>
       </section>
       <section className="container grid grid-cols-1 lg:grid-cols-2 mt-14 gap-10 mb-20">
-        <div className="w-full h-[500px] bg-green-500">
-          <img />
+        <div className="w-full h-[500px] ">
+          <img
+            alt={""}
+            src={"/ethics/tra-nguyen-TVSRWmnW8Us-unsplash.jpg"}
+            className="w-full h-full object-cover"
+          />
         </div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
