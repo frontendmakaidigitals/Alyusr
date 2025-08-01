@@ -80,7 +80,7 @@ export default function Page() {
             </div>
             <div className="h-[450px]">
               <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                src="/certificate page/Class A certificate.png"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -134,34 +134,35 @@ export default function Page() {
       <section className="py-20 px-6 bg-sky-50">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-5xl font-bold text-center text-gray-800 mb-12">
-            International <span className="text-blue-600">ISO</span> Certifications
+            International <span className="text-blue-600">ISO</span>{" "}
+            Certifications
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 label: "ISO 9001:2015",
                 desc: "Quality Management",
-                img: "https://images.pexels.com/photos/7564203/pexels-photo-7564203.jpeg",
+                img: "/certificate page/ISO 9001.png",
               },
               {
                 label: "ISO 14001:2015",
                 desc: "Environmental Management",
-                img: "https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg",
+                img: "/certificate page/ISO 14001.png",
               },
               {
                 label: "ISO 45001:2018",
                 desc: "Occupational Health & Safety",
-                img: "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg",
+                img: "/certificate page/ISO 45001.png",
               },
               {
                 label: "ISO 31000:2018",
                 desc: "Risk Management",
-                img: "https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg",
+                img: "/certificate page/ISO 31000.png",
               },
               {
                 label: "ISO 21500:2021",
                 desc: "Project Management Framework",
-                img: "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg",
+                img: "/certificate page/ISO 21500.png",
               },
             ].map((iso, i) => (
               <div
@@ -190,7 +191,8 @@ export default function Page() {
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-5xl font-bold text-center text-gray-800 mb-12">
-            <span className="text-blue-500">Global</span> Memberships & Registrations
+            <span className="text-blue-500">Global</span> Memberships &
+            Registrations
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
