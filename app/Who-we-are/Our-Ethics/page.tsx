@@ -159,7 +159,7 @@ export default function OurEthics() {
               className="text-center mb-14"
             >
               <h2 className="text-5xl text-start font-bold text-gray-900">
-                Our Ethical Culture
+                Our <span className="text-amber-500">Ethical</span> Culture
               </h2>
               <p className="text-gray-600 text-lg max-w-3xl mx-auto mt-4 text-start">
                 Our business culture is grounded in fairness, professionalism,
@@ -197,18 +197,18 @@ export default function OurEthics() {
                 </div>
               </motion.div>
             </motion.div>
-            <div className="w-full  h-[500px]">
+            <div className="w-full  h-[550px] rounded-xl overflow-hidden">
               <img
                 className="w-full h-full object-cover"
                 alt={""}
-                src={"ethics/cytonn-photography-n95VMLxqM2I-unsplash.jpg"}
+                src={"/ethics/cytonn-photography-n95VMLxqM2I-unsplash.jpg"}
               />
             </div>
           </div>
         </div>
       </section>
       <section className="container grid grid-cols-1 lg:grid-cols-2 mt-14 gap-10 mb-20">
-        <div className="w-full h-[500px] ">
+        <div className="w-full h-[500px] rounded-xl overflow-hidden">
           <img
             alt={""}
             src={"/ethics/tra-nguyen-TVSRWmnW8Us-unsplash.jpg"}
@@ -223,7 +223,8 @@ export default function OurEthics() {
           className="mt-12"
         >
           <h3 className="text-5xl font-semibold mb-6 text-gray-800 max-w-lg">
-            Code of Ethics & Business Conduct
+            Code of <span className="text-blue-500">Ethics & Business</span>{" "}
+            Conduct
           </h3>
           <ul className="space-y-4  text-gray-700 pl-2">
             {ethicsConduct.map((item, index) => (

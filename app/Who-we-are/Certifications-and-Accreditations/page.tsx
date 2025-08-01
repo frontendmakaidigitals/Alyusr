@@ -5,9 +5,9 @@ import {
   Leaf,
   ShieldCheck,
   ArrowUpRight,
-  CheckCircle,
 } from "lucide-react";
 import Image from "next/image";
+import EngineeringCTA from "@/app/app_chunks/CTA";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
@@ -27,7 +27,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="bg-slate-50 text-gray-800">
+    <div className=" text-gray-800">
       <motion.div
         ref={sectionRef}
         initial={{ height: "120vh" }}
@@ -233,6 +233,14 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <EngineeringCTA
+        title="Certified to Deliver with Excellence"
+        desc={
+          "Our Class A license and international ISO certifications are more than just symbols—they’re proof of our commitment to quality, safety, and innovation in every project we undertake."
+        }
+        btn="Explore Our Certifications"
+
+      />
     </div>
   );
 }

@@ -122,7 +122,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="/our divison/banner.jpg"
+          src="/our division/banner.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -157,7 +157,7 @@ export default function Page() {
             </div>
             <div className="h-[450px]">
               <img
-                src="/our divison/Construction & Project Management.jpg"
+                src="/our division/Construction & Project Management.jpg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -182,7 +182,7 @@ export default function Page() {
             >
               <div className="relative h-[300px] w-full">
                 <Image
-                  src="/our divison/Engineering & Design Division.jpg"
+                  src="/our division/Engineering & Design Division.jpg"
                   alt={division.title}
                   layout="fill"
                   objectFit="cover"
