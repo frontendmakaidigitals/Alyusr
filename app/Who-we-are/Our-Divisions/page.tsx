@@ -1,5 +1,5 @@
 "use client";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, BadgeCheck } from "lucide-react";
 import Image from "next/image";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
@@ -167,8 +167,8 @@ export default function Page() {
         </div>
       </section>
       <section className="bg-white py-16 px-4 sm:px-8 lg:px-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-          Our Core Divisions
+        <h2 className="text-5xl font-bold text-center mb-12 text-gray-800">
+          Our <span className="text-blue-500">Core</span> Divisions
         </h2>
         <div className="grid lg:grid-cols-2 gap-10">
           {divisions.map((division, index) => (
@@ -178,7 +178,7 @@ export default function Page() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-blue-50 border border-gray-200 rounded-2xl overflow-hidden shadow hover:shadow-md transition"
+              className="bg-blue-50 border border-gray-200 rounded-xl overflow-hidden shadow hover:shadow-md transition"
             >
               <div className="relative h-[300px] w-full">
                 <Image
@@ -188,19 +188,25 @@ export default function Page() {
                   alt={division.title}
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-t-2xl"
+                  className="rounded-t-xl"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-3xl text-blue-500 font-semibold  mb-2">
+                <h3 className="text-3xl text-sky-800 font-semibold  mb-2">
                   {division.title}
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">
                   {division.description}
                 </p>
-                <ul className="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+                <ul className=" text-gray-700 space-y-1">
                   {division.services.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-gray-700"
+                    >
+                      <BadgeCheck className="w-5 h-5 fill-green-600 stroke-slate-50 mt-0.6 shrink-0" />
+                      <span>{item}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
