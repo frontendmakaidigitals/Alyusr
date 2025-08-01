@@ -11,6 +11,7 @@ import {
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import EngineeringCTA from "@/app/app_chunks/CTA";
 export default function OurEthics() {
   const items = [
     {
@@ -78,7 +79,7 @@ export default function OurEthics() {
     "Ethical decision-making across operations",
   ];
   return (
-    <main className="bg-gray-50 text-gray-800">
+    <main className=" text-gray-800">
       <motion.div
         ref={sectionRef}
         initial={{ height: "120vh" }}
@@ -242,6 +243,10 @@ export default function OurEthics() {
           </p>
         </motion.div>
       </section>
+      <EngineeringCTA
+        title=" Governance & Oversight"
+        desc="Our internal Ethics & Compliance Committee, led by senior management, ensures regular review of our ethics policies, incident reports, and internal audits. This committee works closely with department heads and legal advisors to implement improvements and ensure company-wide accountability."
+      />
     </main>
   );
 }

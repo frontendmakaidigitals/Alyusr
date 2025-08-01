@@ -4,6 +4,7 @@ import Image from "next/image";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import EngineeringCTA from "@/app/app_chunks/CTA";
 const divisions = [
   {
     title: "Engineering & Design Division",
@@ -212,6 +213,10 @@ export default function Page() {
           ))}
         </div>
       </section>
+      <EngineeringCTA
+        title="Working Together to Build the Future"
+        desc="Each division operates with full autonomy and cross-functional coordination. This structure allows ALYUSR to stay agile, reduce delays, and deliver high-quality, end-to-end solutions for complex, multidisciplinary projects."
+      />
     </div>
   );
 }

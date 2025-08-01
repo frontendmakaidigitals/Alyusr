@@ -4,7 +4,7 @@ import BgLayer from "./BgLayer";
 export default function EngineeringCTA({
   title,
   desc,
-  btn="Get Started Now",
+  btn = "Get Started Now",
 }: {
   title?: string;
   desc?: string;
@@ -39,6 +39,7 @@ export default function EngineeringCTA({
 
         {/* Decorative Circles */}
       </div>
+     
     </section>
   );
 }
