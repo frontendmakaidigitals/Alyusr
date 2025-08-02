@@ -93,8 +93,8 @@ export default function Page() {
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
           style={{ y: yTransform }}
-          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-bottom"
+          src="/sustainability 2/banner.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -127,7 +127,7 @@ export default function Page() {
             </div>
             <div className="h-[450px]">
               <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                src="/sustainability 2/heading.jpg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -141,7 +141,7 @@ export default function Page() {
       <section className="py-20 ">
         <div className="container  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <img
-            src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
+            src="/sustainability 2/why.jpg"
             alt="Sustainable city"
             className="rounded-xl shadow-md"
           />
@@ -221,70 +221,87 @@ export default function Page() {
             </li>
           </ul>
         </div>
-        <div className="w-full h-[500px] bg-red-300 rounded-xl">
-          <img />
+        <div className="w-full h-[450px]  rounded-xl">
+          <img
+            src="/sustainability 2/approach.jpg"
+            alt="Sustainable city"
+            className="rounded-xl shadow-md w-full h-full object-cover"
+          />
         </div>
       </section>
 
-      <section className="bg-blue-50 place-items-center grid grid-cols-1 lg:grid-cols-2 py-20 px-6">
-        <div className="max-w-5xl mx-auto container">
-          <h2 className="text-5xl font-semibold mb-4">
-            Our <span className="text-blue-500">Global</span> Commitment
-          </h2>
-          <p className="text-gray-700 text-lg">
-            Al Yusr supports international frameworks such as the Global
-            Biodiversity Framework, pledging to help reverse nature loss by
-            2030. Our projects and practices align with these commitments,
-            ensuring our consultancy leads by example in environmental
-            stewardship.
-          </p>
+      <section className="bg-blue-50  py-20">
+        <div className="place-items-center grid grid-cols-1 lg:grid-cols-2 container">
+          {" "}
+          <div className="w-full h-[450px]  rounded-xl">
+            {" "}
+            <img
+              src="/sustainability 2/commitment.jpg"
+              alt="Sustainable city"
+              className="rounded-xl shadow-md w-full h-full object-cover"
+            />
+          </div>
+          <div className="max-w-5xl mx-auto container">
+            <h2 className="text-5xl font-semibold mb-4">
+              Our <span className="text-blue-500">Global</span> Commitment
+            </h2>
+            <p className="text-gray-700 text-lg">
+              Al Yusr supports international frameworks such as the Global
+              Biodiversity Framework, pledging to help reverse nature loss by
+              2030. Our projects and practices align with these commitments,
+              ensuring our consultancy leads by example in environmental
+              stewardship.
+            </p>
+          </div>
         </div>
-        <img
-          src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
-          alt="Sustainable city"
-          className="rounded-xl shadow-md"
-        />
       </section>
       {/* Innovation & Initiatives */}
-      <section className="container place-items-center grid grid-cols-1 lg:grid-cols-2 py-20 gap-10">
-        <div className="w-full h-[500px] bg-red-300 rounded-xl">
-          <img />
-        </div>
-        <div className="">
-          <h2 className="text-4xl font-semibold mb-6">
-            Leading with Innovation and Expertise
-          </h2>
-          <p>
-            From low-carbon infrastructure to resilient energy solutions, Al
-            Yusr embraces cutting-edge technology and innovative thinking. Our
-            experts collaborate globally to solve complex challenges, delivering
-            sustainable designs, tools, and solutions that meet today’s needs
-            without compromising tomorrow.
-          </p>
-          <h2 className="font-[500] text-xl mt-3">Featured Initiatives:</h2>
-          <ul className="space-y-4 text-gray-700 mt-3">
-            <li className="flex items-start gap-3">
-              <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
-              <span>
-                Developing low-carbon infrastructure tailored for the Middle
-                East’s unique climate and environmental conditions
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
-              <span>
-                Partnering with public and private sectors to embed energy
-                resilience and reduce carbon footprints
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
-              <span>
-                Implementing digital tools that measure and minimize
-                environmental impact throughout project lifecycles
-              </span>
-            </li>
-          </ul>
+      <section className=" py-20 ">
+        <div className="container place-items-center gap-10 grid grid-cols-1 lg:grid-cols-2">
+          {" "}
+          <div className="">
+            <h2 className="text-4xl font-semibold mb-6">
+              Leading with Innovation and Expertise
+            </h2>
+            <p>
+              From low-carbon infrastructure to resilient energy solutions, Al
+              Yusr embraces cutting-edge technology and innovative thinking. Our
+              experts collaborate globally to solve complex challenges,
+              delivering sustainable designs, tools, and solutions that meet
+              today’s needs without compromising tomorrow.
+            </p>
+            <h2 className="font-[500] text-xl mt-3">Featured Initiatives:</h2>
+            <ul className="space-y-4 text-gray-700 mt-3">
+              <li className="flex items-start gap-3">
+                <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
+                <span>
+                  Developing low-carbon infrastructure tailored for the Middle
+                  East’s unique climate and environmental conditions
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
+                <span>
+                  Partnering with public and private sectors to embed energy
+                  resilience and reduce carbon footprints
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <BadgeCheck className=" text-slate-50 fill-green-600 w-8 h-8" />
+                <span>
+                  Implementing digital tools that measure and minimize
+                  environmental impact throughout project lifecycles
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div className="w-full h-[450px] overflow-hidden rounded-xl">
+            <img
+              src="/sustainability 2/innovation.jpg"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
