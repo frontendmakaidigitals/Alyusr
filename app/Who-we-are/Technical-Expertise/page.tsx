@@ -19,37 +19,37 @@ export default function TechnicalExpertisePage() {
       title: "Structural Engineering",
       desc: "Design of safe, efficient, and code-compliant structures for buildings and infrastructure.",
 
-      img: "/images/structural.jpg", // Add a relevant image
+      img: '/technical expertise 2/structural engineering.jpg'
     },
     {
       title: "Mechanical, Electrical & Plumbing (MEP)",
       desc: "Integrated building systems that ensure functionality, energy efficiency, and comfort.",
 
-      img: "/images/mep.jpg",
+      img: '/technical expertise 2/mep.jpg'
     },
     {
       title: "Infrastructure Design",
       desc: "Roads, utilities, drainage, and networks are designed for high performance and resilience.",
 
-      img: "/images/infrastructure.jpg",
+      img: '/technical expertise 2/Infrastructure Design.jpg'
     },
     {
       title: "Water, Drainage & Hydrology",
       desc: "Smart water management solutions, including stormwater systems and hydraulic modeling.",
 
-      img: "/images/water.jpg",
+      img: '/technical expertise 2/Water, Drainage & Hydrology.jpg'
     },
     {
       title: "Telecommunication & Low Current Systems",
       desc: "Reliable, secure systems for modern connectivity and building automation.",
 
-      img: "/images/telecom.jpg",
+      img: '/technical expertise 2/Telecommunication & Low Current Systems.jpg'
     },
     {
       title: "Urban & Regional Planning",
       desc: "Large-scale planning with a focus on smart growth, land optimization, and community livability.",
 
-      img: "/images/urban.jpg",
+      img: '/technical expertise 2/Urban & Regional Planning.jpg'
     },
   ];
 
@@ -79,7 +79,7 @@ export default function TechnicalExpertisePage() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          src="/technical expertise 2/banner.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -116,7 +116,7 @@ export default function TechnicalExpertisePage() {
             </div>
             <div className="h-[450px]">
               <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                src="/technical expertise 2/heading.jpg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -126,44 +126,49 @@ export default function TechnicalExpertisePage() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 ">
-            Multidisciplinary Capabilities
-          </h2>
-          <p className="mb-16 mt-3 text-center ">
-            We offer a wide range of technical services across:
-          </p>
+     <section className="py-24 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-4">
+    <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800">
+      <span className="text-blue-500">Multidisciplinary</span> Capabilities
+    </h2>
+    <p className="mb-16 mt-3 text-center text-gray-600">
+      We offer a wide range of technical services across:
+    </p>
 
-          <div className="grid md:grid-cols-3 gap-10">
-            {capabilities.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all overflow-hidden"
-              >
-                <div className="relative h-56 w-full">
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <h3 className="text-xl font-semibold text-gray-800">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+    <div className="grid md:grid-cols-3 gap-10">
+      {capabilities.map((item, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-lg border border-blue-100 hover:border-blue-300 shadow-sm hover:shadow-md transition-all overflow-hidden group"
+        >
+          {/* Top Blue Accent Bar */}
+          <div className="h-1 bg-blue-500" />
+
+          {/* Image */}
+          <div className="relative h-56 w-full">
+            <Image
+              src={item.img}
+              alt={item.title}
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="p-6">
+            <h3 className="text-xl font-semibold text-gray-800 group-hover:text-blue-500 transition-colors">
+              {item.title}
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed mt-2">
+              {item.desc}
+            </p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       <section className="py-16 container ">
         <div className=" text-center">
