@@ -1,10 +1,10 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, CheckCircle } from "lucide-react";
 import EngineeringCTA from "@/app/app_chunks/CTA";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
@@ -31,11 +31,11 @@ export default function Page() {
         className="w-full relative overflow-hidden"
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
-          <h1 className="text-5xl font-bold text-slate-50">
+          <h1 className="text-2xl  text-slate-50">
             Transforming Saudi’s Future
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 max-w-2xl">
+          <p className="mt-3 text-slate-200 text-6xl font-semibold">
             Engineering Progress. Empowering Vision 2030.
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          src="/saudi-vision/banner.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -78,7 +78,7 @@ export default function Page() {
             </div>
             <div className="h-[450px]">
               <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                src="/saudi-vision/heading.jpg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -108,25 +108,42 @@ export default function Page() {
               {
                 title: "A Thriving Economy",
                 desc: "Empowering local talent, fostering entrepreneurship, and building infrastructure for tourism, trade, and investment.",
+                img: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
               },
               {
                 title: "An Ambitious Nation",
                 desc: "Partnering with government and private entities to elevate standards in delivery, safety, and sustainability.",
+                img: "https://images.pexels.com/photos/3184635/pexels-photo-3184635.jpeg",
               },
               {
                 title: "A Vibrant Society",
                 desc: "Designing inclusive spaces that enhance quality of life, preserve culture, and promote well-being.",
+                img: "https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg",
               },
-            ].map(({ title, desc }, index) => (
+            ].map(({ title, desc, img }, index) => (
               <motion.div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.2 }}
+                className="bg-white rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition overflow-hidden"
               >
-                <h3 className="text-xl font-bold mb-2">{title}</h3>
-                <p className="text-gray-600">{desc}</p>
+                {/* Top blue accent bar */}
+                <div className="h-1 w-full bg-blue-500" />
+
+                {/* Image */}
+                <div className="relative w-full h-[240px] mb-4">
+                  <Image src={img} alt={title} fill className="object-cover" />
+                </div>
+
+                {/* Content */}
+                <div className="px-6 pb-6">
+                  <h3 className="text-xl font-bold mb-2 text-gray-800">
+                    {title}
+                  </h3>
+                  <p className="text-gray-600">{desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -134,16 +151,17 @@ export default function Page() {
       </section>
 
       {/* Contribution Section */}
-      <section className="relative bg-white py-24 px-6 lg:px-24">
+      <section className="relative bg-gradient-to-br from-white via-blue-50 to-white py-24 px-6 lg:px-24">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-extrabold mb-10 text-gray-900"
+            className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-14"
           >
-            Our Contribution to Vision 2030
+            Our <span className="text-blue-500">Contribution</span> to{" "}
+            <span>Vision 2030</span>
           </motion.h2>
 
           <motion.div
@@ -151,50 +169,40 @@ export default function Page() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid md:grid-cols-2 gap-10 text-left text-gray-700 text-base md:text-lg leading-relaxed"
+            className="grid md:grid-cols-2 gap-10 text-left text-gray-700 text-lg leading-relaxed"
           >
-            <ul className="space-y-6">
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                <span>
-                  Urban and regional planning for residential and commercial
-                  communities
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                <span>
-                  Infrastructure engineering for roads, drainage, and utilities
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                <span>Smart city integration and digital engineering</span>
-              </li>
-            </ul>
-
-            <ul className="space-y-6">
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                <span>Green building design and environmental compliance</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                <span>
-                  Project and construction management for giga/mega projects
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                <span>Strategic consulting for Vision-aligned goals</span>
-              </li>
-            </ul>
+            {[
+              [
+                "Urban and regional planning for residential and commercial communities",
+                "Infrastructure engineering for roads, drainage, and utilities",
+                "Smart city integration and digital engineering",
+              ],
+              [
+                "Green building design and environmental compliance",
+                "Project and construction management for giga/mega projects",
+                "Strategic consulting for Vision-aligned goals",
+              ],
+            ].map((group, i) => (
+              <ul key={i} className="space-y-6">
+                {group.map((text, j) => (
+                  <motion.li
+                    key={j}
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm hover:shadow-md"
+                  >
+                    <CheckCircle className="text-blue-600 mt-1" size={22} />
+                    <span>{text}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            ))}
           </motion.div>
         </div>
       </section>
 
       {/* Local Roots */}
-      <section className="bg-gray-50 gap-5 grid grid-cols-1 lg:grid-cols-2 py-20 px-6 lg:px-24">
+      <section className="bg-gray-50 place-items-center gap-5 grid grid-cols-1 lg:grid-cols-2 py-20 px-6 lg:px-24">
         <motion.div
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
@@ -212,39 +220,17 @@ export default function Page() {
             is dedicated to engineering a sustainable, smart, and strong nation.
           </p>
         </motion.div>
-        <img
-          src={
-            "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
-          }
-          alt={""}
-          className=""
-        />
+        <div className="w-full h-[400px]">
+          <img
+            src="/saudi-vision/team.jpg"
+            alt={""}
+            className="w-full h-full object-cover"
+          />
+        </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-primary text-white py-16 px-6 lg:px-24 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Partner With Us
-          </h2>
-          <p className="text-lg max-w-3xl mx-auto mb-8">
-            Join us in building a future that reflects the ambition, innovation,
-            and heritage of the Kingdom. Let’s engineer the next chapter of
-            Saudi Arabia, together.
-          </p>
-          <Link
-            href="/services"
-            className="inline-block bg-white text-primary font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition"
-          >
-            Explore Our Services
-          </Link>
-        </motion.div>
-      </section>
+     
       <EngineeringCTA
         title="Partner With Us"
         desc="Join us in building a future that reflects the ambition, innovation, and heritage of the Kingdom. Let’s engineer the next chapter of Saudi Arabia, together."

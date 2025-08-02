@@ -38,11 +38,11 @@ export default function Page() {
         className="w-full relative overflow-hidden"
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
-          <h1 className="text-5xl font-bold text-slate-50">
+            <h1 className="text-2xl  text-slate-50">
             Leadership & Vision
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 max-w-2xl">
+         <p className="mt-3 text-slate-200 text-6xl font-semibold">
             Guiding Innovation. Engineering the Future.
           </p>
         </div>
