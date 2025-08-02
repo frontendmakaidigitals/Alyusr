@@ -138,7 +138,7 @@ export default function Page() {
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-                Heading
+                Expertise Across Every <span className="text-blue-500">Sector</span>
               </h1>
               <p className="text-lg text-gray-700">
                 At <span className="text-blue-600">ALYUSR</span> Engineering

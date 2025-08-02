@@ -94,7 +94,8 @@ export default function TechnicalExpertisePage() {
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-                Heading
+                <span className="text-blue-500">Expertise</span> You Can Rely On
+
               </h1>
               <p className="text-lg text-gray-700">
                 At ALYUSR, technical excellence is at the core of everything we

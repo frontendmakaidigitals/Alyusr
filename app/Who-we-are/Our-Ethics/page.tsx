@@ -115,7 +115,8 @@ export default function OurEthics() {
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-                Heading
+                <span className="text-blue-500">Ethical Excellence</span> in Everything We Do
+
               </h1>
               <p className="text-lg text-gray-700">
                 At ALYUSR Engineering Consulting, we believe that ethical

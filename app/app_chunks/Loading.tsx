@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Loading = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <Loader />
     </Suspense>
   );

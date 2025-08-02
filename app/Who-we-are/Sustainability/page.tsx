@@ -110,7 +110,7 @@ export default function Page() {
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-                Heading
+                Leading with Purpose on <span className="text-bllue-500">Sustainability</span>
               </h1>
               <p className="text-lg text-gray-700">
                 At Al Yusr Engineering Consultancy, we believe that true
