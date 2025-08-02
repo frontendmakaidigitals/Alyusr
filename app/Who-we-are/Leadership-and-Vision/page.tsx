@@ -50,14 +50,14 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          src="/Leadership & Vision 2/banner.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
 
       {/* Leadership Section */}
       <section className="py-20 px-6 bg-white">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="container grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl font-semibold text-gray-800 mb-4">
               Leadership That Builds with Purpose
@@ -76,9 +76,9 @@ export default function Page() {
               <li>✓ High ethical and professional standards</li>
             </ul>
           </div>
-          <div className="rounded-xl overflow-hidden">
+          <div className="rounded-xl h-[450px] overflow-hidden">
             <img
-              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+              src="/Leadership & Vision 2/leadership.jpg"
               alt="Leadership at ALYUSR"
               className="w-full h-full object-cover"
             />
@@ -90,9 +90,9 @@ export default function Page() {
       <section className="bg-sky-50 py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
-            <div className="rounded-xl overflow-hidden">
+            <div className="rounded-xl mb-4 h-[350px] overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+                src="/Leadership & Vision 2/leadership.jpg"
                 alt="Leadership at ALYUSR"
                 className="w-full h-full object-cover"
               />
@@ -108,9 +108,9 @@ export default function Page() {
             </p>
           </div>
           <div>
-            <div className="rounded-xl overflow-hidden">
+            <div className="rounded-xl h-[350px] mb-4 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+                src="/Leadership & Vision 2/mission.jpg"
                 alt="Leadership at ALYUSR"
                 className="w-full h-full object-cover"
               />
@@ -158,7 +158,7 @@ export default function Page() {
           {/* RIGHT IMAGE BLOCK */}
           <div className="relative h-[400px] w-full rounded-xl overflow-hidden shadow-xl">
             <img
-              src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
+              src="/Leadership & Vision 2/vision 2030.jpg"
               alt="Vision 2030 Project"
               className="w-full h-full object-cover object-center"
             />
