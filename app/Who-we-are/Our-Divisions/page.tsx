@@ -17,7 +17,7 @@ const divisions = [
       "Roads, Drainage & Hydrology",
       "Telecom & Low-Current Systems",
     ],
-    image: "/images/engineering.jpg", // Replace with your local or remote image
+    image: "/our division 2/Engineering & Design Division.jpg", // Replace with your local or remote image
   },
   {
     title: "Architecture & Urban Planning Division",
@@ -30,7 +30,7 @@ const divisions = [
       "Masterplanning & Land Use Studies",
       "Design Optimization & Value Engineering",
     ],
-    image: "/images/architecture.jpg",
+    image: "/our division 2/Architecture & Urban Planning.jpg",
   },
   {
     title: "Construction & Project Management Division",
@@ -44,7 +44,7 @@ const divisions = [
       "Fire & Safety Engineering",
       "Site Investigations & Surveying",
     ],
-    image: "/images/construction.jpg",
+    image: "/our division 2/Construction & Project Management.jpg",
   },
   {
     title: "Sustainability & Smart Solutions Division",
@@ -57,7 +57,7 @@ const divisions = [
       "Energy Efficiency & Resource Management",
       "Digital Twin & Performance Monitoring",
     ],
-    image: "/images/sustainability.jpg",
+    image: "/our division 2/smart solutions.jpg",
   },
   {
     title: "Digital Engineering & BIM Division",
@@ -70,7 +70,7 @@ const divisions = [
       "Data Analytics for Project Optimization",
       "Digital Design Reviews",
     ],
-    image: "/images/digital.jpg",
+    image: "/our division 2/Digital Engineering & BIM Division.jpg",
   },
   {
     title: "Strategy & Advisory Division",
@@ -83,7 +83,7 @@ const divisions = [
       "Risk & Cost Analysis",
       "Market Research & Opportunity Mapping",
     ],
-    image: "/images/strategy.jpg",
+    image: "/our division 2/Strategy & Advisory.jpg",
   },
 ];
 
@@ -123,7 +123,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="/our division/banner.jpg"
+          src="/our division 2/banner.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -156,9 +156,9 @@ export default function Page() {
                 Discover Our Story <ArrowUpRight />
               </button>
             </div>
-            <div className="h-[450px]">
+            <div className="h-[450px] w-full">
               <img
-                src="/our division/Construction & Project Management.jpg"
+                src="/our division 2/heading.jpg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -183,7 +183,7 @@ export default function Page() {
             >
               <div className="relative h-[300px] w-full">
                 <Image
-                  src="/our division/Engineering & Design Division.jpg"
+                  src={division.image}
                   alt={division.title}
                   layout="fill"
                   objectFit="cover"

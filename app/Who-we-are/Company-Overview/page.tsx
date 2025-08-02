@@ -8,10 +8,11 @@ import {
   LayoutDashboard,
   Milestone,
 } from "lucide-react";
-import Image from "next/image";
+
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import EngineeringCTA from "@/app/app_chunks/CTA";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -81,7 +82,7 @@ export default function Page() {
           </div>
           <div>
             <img
-               src="/company overview/company overview.jpg"
+              src="/company overview/company overview.jpg"
               alt="Company Overview"
               className="rounded-xl shadow-lg w-full h-full object-cover"
             />
@@ -159,7 +160,7 @@ export default function Page() {
               <div
                 key={idx}
                 className="bg-sky-50 border border-sky-100 rounded-xl p-6  shadow hover:shadow-md transition"
-                >
+              >
                 {item.icon}
                 <p className="text-gray-700 text-lg font-medium leading-snug mt-4">
                   {item.text}
@@ -169,6 +170,13 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <EngineeringCTA
+        title="Engineering the Future of Saudi Arabia and Beyond"
+        desc="  From Riyadh to the world, ALYUSR delivers visionary engineering and design solutions that
+    support national transformation and global standards. Backed by ISO certifications and a
+    proven project track record, we are your trusted partner in building sustainable, smart,
+    and impactful environments."
+      />
     </div>
   );
 }

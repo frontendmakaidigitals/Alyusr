@@ -23,11 +23,11 @@ export default function EngineeringCTA({
       <div className="relative z-10 text-white overflow-hidden py-8 ">
         {/* CTA Content */}
         <div className="relative z-20 max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl text-blue-50 sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+          <h2 className="text-3xl text-blue-50 md:text-4xl font-bold leading-tight mb-4">
             {title}
           </h2>
 
-          <p className="text-lg md:text-lg text-white text-opacity-90 max-w-3xl mx-auto mb-8">
+          <p className=" text-white text-opacity-90 max-w-3xl mx-auto mb-8">
             {desc}
           </p>
 
