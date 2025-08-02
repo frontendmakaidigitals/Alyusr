@@ -5,6 +5,7 @@ import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
+import EngineeringCTA from "@/app/app_chunks/CTA";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -244,6 +245,11 @@ export default function Page() {
           </Link>
         </motion.div>
       </section>
+      <EngineeringCTA
+        title="Partner With Us"
+        desc="Join us in building a future that reflects the ambition, innovation, and heritage of the Kingdom. Let’s engineer the next chapter of Saudi Arabia, together."
+        btn="Explore Our Services"
+      />
     </div>
   );
 }

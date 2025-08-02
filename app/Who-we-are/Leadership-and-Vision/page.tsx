@@ -12,6 +12,7 @@ import {
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import EngineeringCTA from "@/app/app_chunks/CTA";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -222,6 +223,11 @@ export default function Page() {
           ))}
         </div>
       </section>
+
+      <EngineeringCTA
+        title="Nationwide Impact"
+        desc="From Riyadh to NEOM, and from the Eastern Province to Tabuk, ALYUSR is helping reshape the Kingdom’s landscape, one project at a time. We partner with both public and private sector entities to deliver value, reduce environmental impact, and create long-lasting infrastructure for generations to come."
+      />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import EngineeringCTA from "@/app/app_chunks/CTA";
 export default function TechnicalExpertisePage() {
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -57,7 +58,7 @@ export default function TechnicalExpertisePage() {
     setSectionTop(top);
   }, []);
   return (
-    <main className="bg-gray-50 text-gray-800">
+    <main className=" text-gray-800">
       <motion.div
         ref={sectionRef}
         initial={{ height: "120vh" }}
@@ -130,7 +131,9 @@ export default function TechnicalExpertisePage() {
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 ">
             Multidisciplinary Capabilities
           </h2>
-          <p className="mb-16 mt-3 text-center ">We offer a wide range of technical services across:</p>
+          <p className="mb-16 mt-3 text-center ">
+            We offer a wide range of technical services across:
+          </p>
 
           <div className="grid md:grid-cols-3 gap-10">
             {capabilities.map((item, index) => (
@@ -192,6 +195,10 @@ export default function TechnicalExpertisePage() {
           </ul>
         </div>
       </section>
+      <EngineeringCTA
+        title="Trusted by Public & Private Sectors"
+        desc="Our technical expertise has earned the trust of government agencies, real estate developers, infrastructure contractors, and industrial clients. From large-scale urban master plans to specialized facility designs, we provide tailored solutions that meet both regulatory and operational goals."
+      />
     </main>
   );
 }

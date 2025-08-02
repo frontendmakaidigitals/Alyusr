@@ -14,6 +14,7 @@ import {
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import EngineeringCTA from "@/app/app_chunks/CTA";
 export default function Page() {
   const safetyPractices = [
     {
@@ -287,7 +288,10 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Global Commitment */}
+      <EngineeringCTA
+        title="Stay Informed with Our Insights"
+        desc="We regularly share knowledge and case studies on sustainability trends, challenges, and solutions. Discover how Al Yusr is helping clients transition to nature-positive practices, navigate carbon markets, and embrace climate-resilient infrastructure."
+      />
     </div>
   );
 }

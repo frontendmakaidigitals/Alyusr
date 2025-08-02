@@ -80,7 +80,7 @@ export default function Page() {
             </div>
             <div className="h-[450px]">
               <img
-                src="/certificate page/Class A certificate.png"
+                src="/certificate page/certification.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -120,9 +120,9 @@ export default function Page() {
               ))}
             </ul>
           </div>
-          <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow-lg">
+          <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="https://images.pexels.com/photos/3387892/pexels-photo-3387892.jpeg"
+              src="/certificate page/Class A certificate.png"
               alt="Class A Certification"
               fill
               className="object-cover w-full h-full object-center"
