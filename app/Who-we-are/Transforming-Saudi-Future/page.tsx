@@ -95,9 +95,9 @@ export default function Page() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-semibold mb-6"
+            className="text-3xl md:text-5xl font-semibold mb-6"
           >
-            Building the Kingdom of Tomorrow
+            Building the <span className="text-blue-500">Kingdom</span> of Tomorrow
           </motion.h2>
           <p className="text-gray-600 mb-12">
             Our teams work across sectors to help transform Saudi Arabia into a
