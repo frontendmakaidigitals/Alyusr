@@ -100,7 +100,7 @@ export default function OurEthics() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
+          src="/ethics/banner.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
