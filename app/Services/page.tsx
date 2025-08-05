@@ -7,12 +7,12 @@ import { motion } from "motion/react";
 import { useInView } from "../hooks/useInView";
 const services = [
   { title: "Construction Management", img: "construction-management.webp" },
-  { title: "Engineering Services", img: "engineering.webp" },
+  { title: "Engineering Services", img: "Engineering.webp" },
   { title: "Environmental Services", img: "environmental-contracting-2.webp" },
   { title: "IT and Cybersecurity", img: "it-and-cybersecurity.webp" },
   {
     title: "Planning & Advisory Solutions",
-    img: "planning.webp",
+    img: "Planning.webp",
   },
   {
     title: "Process Development & Implementation",
@@ -24,7 +24,7 @@ const services = [
   { title: "Architecture Design", img: "architecture.webp" },
   { title: "Process Simulation Models", img: "simulation-models.webp" },
   { title: "City Analytics", img: "cities-solutions.webp" },
-  { title: "Community Planning", img: "planning.webp" },
+  { title: "Community Planning", img: "Planning.webp" },
   {
     title: "EHS Management Consulting",
     img: "ehs-management-consulting-and-compliance-2.webp",
@@ -76,7 +76,7 @@ const services = [
     title: "Public-Private Partnerships",
     img: "Public-Private Partnerships.webp",
   },
-  { title: "Engineering Economics", img: "economics.webp" },
+  { title: "Engineering Economics", img: "Economics.webp" },
   { title: "Urban Design", img: "urban-design.webp" },
   { title: "Ground Engineering", img: "ground-engineering-1.webp" },
   {
