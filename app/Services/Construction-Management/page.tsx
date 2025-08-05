@@ -22,6 +22,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import Image from "next/image";
+import EngineeringCTA from "@/app/app_chunks/CTA";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -290,8 +291,8 @@ export default function ConstructionManagementPage() {
           With a Class A license in Saudi Arabia, ISO certifications, and a team
           of in-house engineers, architects, and planners, Al Yusr delivers
           smart solutions that adapt to complex construction challenges. Whether
-          it&apos;s a high-rise, industrial plant, or civic infrastructure project,
-          our approach ensures client satisfaction at every milestone.
+          it&apos;s a high-rise, industrial plant, or civic infrastructure
+          project, our approach ensures client satisfaction at every milestone.
         </motion.p>
 
         <motion.h3
@@ -379,6 +380,11 @@ export default function ConstructionManagementPage() {
           ))}
         </div>
       </section>
+      <EngineeringCTA
+        title=" Need Reliable Project Oversight?"
+        desc="Al Yusr Engineering Consulting is here to take your project from concept to completion with confidence, clarity, and control. Let our seasoned team manage the process so you can focus on the bigger picture."
+        btn="Contact Us Today"
+      />
     </main>
   );
 }
