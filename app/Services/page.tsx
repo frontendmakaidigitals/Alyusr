@@ -4,6 +4,7 @@ import BgLayer from "../app_chunks/BgLayer";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
 import { motion } from "motion/react";
+import { useInView } from "../hooks/useInView";
 const services = [
   { title: "Construction Management", img: "construction-management.webp" },
   { title: "Engineering Services", img: "engineering.webp" },
@@ -143,12 +144,11 @@ const Page = () => {
     }
     return result;
   };
-  console.log(services.length);
   const [visibleChunks, setVisibleChunks] = useState(1);
   const [loading, setLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const chunks = chunkArray(services, Math.ceil(services.length / 5));
-
+  const { inView, ref } = useInView();
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -188,8 +188,6 @@ const Page = () => {
               boundaries of innovation and precision.
             </h2>
           </div>
-
-          {/* Right Card Block */}
           <div className="lg:col-span-6">
             <div className="bg-blue-50/30 p-8 rounded-xl border border-blue-200/20 shadow-xs">
               <p className="text-lg text-slate-800 leading-relaxed">
@@ -199,7 +197,7 @@ const Page = () => {
                 Vision 2030 and global development goals, engineering
                 residential communities, modern road networks, advanced drainage
                 systems, LEED-certified facilities, and digital design models
-                that define the next generation of infrastructure.
+                that define the nxt generation of infrastructure.
               </p>
             </div>
           </div>
@@ -213,10 +211,14 @@ const Page = () => {
             .flat()
             .map((service, idx) => (
               <motion.li
-                whileInView={{ scale: 1 }}
-                initial={{ scale: 0 }}
+                animate={{ scale: inView ? 1 : 0, opacity: inView ? 1 : 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, type: "spring" }}
+                ref={ref}
+                transition={{
+                  duration: 0.4,
+                  type: "spring",
+                  delay: 0.1 * idx,
+                }}
                 key={idx}
                 className="aspect-square w-full relative"
               >
