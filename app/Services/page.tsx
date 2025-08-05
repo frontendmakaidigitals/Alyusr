@@ -70,7 +70,7 @@ const services = [
   { title: "Interior Architecture", img: "interior-architecture.webp" },
   {
     title: "Infrastructure Protection",
-    img: "Critical Infrastructure Protection.webp",
+    img: "critical-infrastructure-protection.webp",
   },
   {
     title: "Public-Private Partnerships",
