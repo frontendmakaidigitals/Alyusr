@@ -68,9 +68,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/2138126/pexels-photo-2138126.jpeg"
-          }
+          src={"/engineering/banner.jpg"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={500}
