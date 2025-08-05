@@ -274,7 +274,7 @@ export default function ConstructionManagementPage() {
           </Carousel>
         </div>
       </section>
-      <section className="py-16 px-6 max-w-5xl mx-auto">
+      <section className="py-16 container">
         <motion.h2
           className="text-5xl font-semibold text-center mb-6"
           initial="hidden"
@@ -290,7 +290,7 @@ export default function ConstructionManagementPage() {
           With a Class A license in Saudi Arabia, ISO certifications, and a team
           of in-house engineers, architects, and planners, Al Yusr delivers
           smart solutions that adapt to complex construction challenges. Whether
-          it's a high-rise, industrial plant, or civic infrastructure project,
+          it&apos;s a high-rise, industrial plant, or civic infrastructure project,
           our approach ensures client satisfaction at every milestone.
         </motion.p>
 
