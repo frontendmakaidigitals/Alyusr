@@ -21,7 +21,7 @@ const services = [
   { title: "Project Planning", img: "planning-2.webp" },
   { title: "Community Engagement", img: "community-engagement.webp" },
   { title: "Program Management", img: "program-management.webp" },
-  { title: "Architecture Design", img: "architecture.webp" },
+  { title: "Architecture Design", img: "Architecture.webp" },
   { title: "Process Simulation Models", img: "simulation-models.webp" },
   { title: "City Analytics", img: "cities-solutions.webp" },
   { title: "Community Planning", img: "Planning.webp" },
@@ -52,7 +52,7 @@ const services = [
   },
   {
     title: "Commercial Operations and Maintenance",
-    img: "Industrial and Commercial Operations and Maintenance 2.webp",
+    img: "industrial-and-commercial-operations-and-maintenance-2.webp",
   },
   {
     title: "Risk Management & Resilience",
@@ -64,33 +64,33 @@ const services = [
   },
   {
     title: "Alternative Delivery Models",
-    img: "Alternative Delivery Models.webp",
+    img: "alternative-delivery-models.webp",
   },
   { title: "City Planning", img: "program-management.webp" },
   { title: "Interior Architecture", img: "interior-architecture.webp" },
   {
     title: "Infrastructure Protection",
-    img: "critical-infrastructure protection.webp",
+    img: "critical-infrastructure protection.webp",
   },
   {
     title: "Public-Private Partnerships",
-    img: "Public-Private Partnerships.webp",
+    img: "public-private-partnerships.webp",
   },
   { title: "Engineering Economics", img: "Economics.webp" },
   { title: "Urban Design", img: "urban-design.webp" },
   { title: "Ground Engineering", img: "ground-engineering-1.webp" },
   {
     title: "Tunnels and Underground Infrastructure",
-    img: "Tunnels, Trenchless Technology and Underground Infrastructure.webp",
+    img: "tunnels,-trenchless-technology-and-underground-infrastructure.webp",
   },
   { title: "Asset Advisory", img: "asset-advisory.webp" },
-  { title: "Strategic Consulting", img: "Strategic consulting.webp" },
+  { title: "Strategic Consulting", img: "strategic-consulting.webp" },
   {
     title: "Urban Policy & Development",
     img: "urban-design.webp",
   },
   { title: "Climate Response", img: "climate-adaptation.webp" },
-  { title: "Rail Network Modeling", img: "Rail Simulations.webp" },
+  { title: "Rail Network Modeling", img: "rail-simulations.webp" },
   {
     title: "Air Quality Assessment",
     img: "air-quality-consulting-and-engineering.webp",
@@ -101,7 +101,7 @@ const services = [
   },
   {
     title: "Geo-Intelligence Analytics",
-    img: "Geospatial Services.webp",
+    img: "geospatial-services.webp",
   },
   {
     title: "Foundation Engineering Solutions",
