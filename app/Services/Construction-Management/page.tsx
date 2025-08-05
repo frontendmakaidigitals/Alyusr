@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Carousel,
@@ -7,6 +7,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 import {
@@ -20,6 +21,8 @@ import {
   Hammer,
   ShieldCheck,
   BadgeCheck,
+  ArrowRight,
+  ArrowLeft,
 } from "lucide-react";
 import Image from "next/image";
 import EngineeringCTA from "@/app/app_chunks/CTA";
@@ -156,6 +159,26 @@ const lifecyclePhases = [
 ];
 
 export default function ConstructionManagementPage() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const update = () => {
+      setCanScrollPrev(api.canScrollPrev());
+      setCanScrollNext(api.canScrollNext());
+    };
+
+    update();
+    api.on("select", update);
+
+    return () => {
+      api.off?.("select", update);
+    };
+  }, [api]);
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -239,40 +262,62 @@ export default function ConstructionManagementPage() {
               execution and long-term success.
             </motion.p>
           </div>
-          <Carousel
-            opts={{
-              align: "start",
-            }}
-            className="w-full min-w-4xl"
-          >
-            <CarouselContent className="-ml-4">
-              {lifecyclePhases.map((phase, i) => (
-                <CarouselItem
-                  key={i}
-                  className="md:basis-1/2 lg:basis-1/3 2xl:basis-1/4 pl-4" // <-- spacing added
-                >
-                  <div className="bg-blue-50 h-full relative shadow-sm">
-                    <div className="w-full h-[400px] overflow-hidden rounded-lg">
-                      <Image
-                        src={
-                          "https://images.pexels.com/photos/5922204/pexels-photo-5922204.jpeg"
-                        }
-                        className="w-full h-full object-cover"
-                        width={400}
-                        height={400}
-                        alt={""}
-                      />
+
+          <div>
+            <div className="my-6 flex justify-end gap-2">
+              <button
+                disabled={!canScrollPrev}
+                onClick={() => api?.scrollPrev()}
+                className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
+              >
+                <ArrowLeft />
+              </button>
+              <button
+                disabled={!canScrollNext}
+                onClick={() => api?.scrollNext()}
+                className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
+              >
+                <ArrowRight />
+              </button>
+            </div>
+            <Carousel
+              opts={{
+                align: "start",
+              }}
+              setApi={setApi}
+              className="w-full min-w-4xl "
+            >
+              <CarouselContent className="-ml-4 ">
+                {lifecyclePhases.map((phase, i) => (
+                  <CarouselItem
+                    key={i}
+                    className="md:basis-1/2 pt-5 relative lg:basis-1/3 2xl:basis-1/4 pl-4" // <-- spacing added
+                  >
+                    <motion.h2 className="text-6xl z-10 left-8 text-white/80 font-bold absolute top-0 -translate-y-2 drop-shadow-[1px_1px_2px_rgba(0,0,0,0.4)]">
+                      {i + 1}
+                    </motion.h2>
+
+                    <div className="bg-blue-50 h-full relative shadow-sm">
+                      <div className="w-full h-[400px] overflow-hidden rounded-lg">
+                        <Image
+                          src={
+                            "https://images.pexels.com/photos/5922204/pexels-photo-5922204.jpeg"
+                          }
+                          className="w-full h-full object-cover"
+                          width={400}
+                          height={400}
+                          alt={""}
+                        />
+                      </div>
+                      <h3 className="font-semibold absolute text-xl max-w-[90%] text-slate-50 p-4 bottom-0  left-0">
+                        {phase.title}
+                      </h3>
                     </div>
-                    <h3 className="font-semibold absolute text-xl max-w-[90%] text-slate-50 p-4 bottom-0  left-0">
-                      {phase.title}
-                    </h3>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>{" "}
+          </div>
         </div>
       </section>
       <section className="py-16 container">
