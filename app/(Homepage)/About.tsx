@@ -20,22 +20,25 @@ const About = () => {
         <div className="container mx-auto px-4  ">
           <div className="max-w-2xl">
             <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-              Engineering <span className="text-blue-500">Consultancy</span>{" "}
-              committed to excellence
+              More Than<span className="text-blue-500">Engineering</span>, It’s
+              a Commitment to{" "}
+              <span className="text-blue-500">Our Partners</span>
             </h1>
             <p className="text-lg text-gray-700">
-              At ALYUSR, our company culture is based on teamwork, openness, and
-              inclusion. For every project, we build a team that matches the
-              specific needs of the client, bringing together the right mix of
-              creative, technical, and leadership skills. This helps us deliver
-              high-quality solutions that truly make a difference. We support
-              our team with exciting projects, opportunities to grow, and a
-              positive work environment. <br />
-              From training programs to fun social events, we encourage learning
-              and connection at every level. We’re proud of our team’s
-              dedication and the trust we’ve built with our clients. At ALYUSR,
-              we’re more than engineers; we’re partners in building a better
-              future.
+              At ALYUSR, we believe engineering is not just about structures and
+              systems, it&apos;s about people. Every design we create, every plan we
+              draw, and every solution we deliver is rooted in human connection.
+              Our story is shaped by a shared purpose: to build not just better
+              spaces, but better futures. We bring together minds from different
+              backgrounds, each contributing creativity, precision, and care.
+              From the early brainstorming sessions to project handovers, we
+              work as one; listening deeply, learning constantly, and growing
+              together. <br />
+              Our workplace is filled with conversations, laughter, mentorship,
+              and moments of quiet focus. This is what makes ALYUSR more than a
+              consultancy. We&apos;re a community of thinkers and doers, united by
+              values of trust and excellence. And we’re proud to walk this
+              journey with our clients, one story at a time.
             </p>
 
             <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">

@@ -79,7 +79,7 @@ export default function Page() {
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-semibold text-sky-800 leading-tighter  mb-4">
-               Departments Built for Precision
+                Departments Built for Precision
               </h1>
               <p className="text-lg text-gray-700">
                 At ALYUSR Engineering Consulting, excellence starts at the top.
@@ -193,7 +193,7 @@ export default function Page() {
       <section className="relative bg-white py-24 container">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            CEO Involvement in Every Major Milestone
+            We Are Driven by Process & Backed by Expertise
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             At ALYUSR, executive leadership is hands-on — present at every
