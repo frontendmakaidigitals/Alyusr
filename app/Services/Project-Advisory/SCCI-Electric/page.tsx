@@ -4,12 +4,12 @@ import Image from "next/image";
 import EngineeringCTA from "@/app/app_chunks/CTA";
 import { motion } from "framer-motion";
 import {
-  CheckCircle,
   ShieldCheck,
   Users,
   Wrench,
   Handshake,
   Star,
+  BadgeCheck,
 } from "lucide-react";
 
 export default function ConstructionManagementPage() {
@@ -26,7 +26,6 @@ export default function ConstructionManagementPage() {
         "Signal and Communications Systems",
         "Positive Train Control (PTC)",
       ],
-      bg: "bg-blue-700",
     },
     {
       image: "/images/highway.jpg",
@@ -40,7 +39,6 @@ export default function ConstructionManagementPage() {
         "Traffic Signal Installation and Upgrades",
         "Bridge Electrical Systems",
       ],
-      bg: "bg-yellow-600",
     },
     {
       image: "/images/water.jpg",
@@ -53,7 +51,6 @@ export default function ConstructionManagementPage() {
         "Motor Control Centers (MCCs)",
         "Integration of SCADA Systems",
       ],
-      bg: "bg-teal-600",
     },
   ];
 
@@ -109,14 +106,14 @@ export default function ConstructionManagementPage() {
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
-        <p className="mt-3 w-full text-lg">
+        <p className="mt-3 text-center w-full text-lg">
           SCCI Electric is a fully licensed electrical contracting firm
           specializing in complex, large-scale infrastructure projects. With
           decades of proven experience, we serve as both a self-performing
           electrical contractor on AECOM-led initiatives and as a trusted
           subcontractor or general contractor on standalone assignments.
         </p>{" "}
-        <p className="mt-2 text-lg">
+        <p className="mt-2 text-lg text-center">
           Our expert team brings deep technical knowledge, safety-first
           execution, and seamless integration to every project. From
           high-voltage traction power systems in rail to intelligent
@@ -155,16 +152,16 @@ export default function ConstructionManagementPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-bold mb-4"
+            className="text-5xl font-bold mb-4"
           >
-            Markets We Serve
+            <span className="text-blue-500">Markets</span> We Serve
           </motion.h2>
           <p className="text-gray-600">
             Empowering infrastructure across transportation and utility sectors.
           </p>
         </div>
 
-        <div className="space-y-16 max-w-6xl mx-auto">
+        <div className="space-y-16 container">
           {markets.map((item, index) => {
             const isEven = index % 2 === 0;
             return (
@@ -173,25 +170,26 @@ export default function ConstructionManagementPage() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className={`flex flex-col ${
-                  isEven ? "md:flex-row" : "md:flex-row-reverse"
-                } items-center gap-8 ${
-                  item.bg
-                } rounded-2xl p-6 shadow-lg text-white`}
+                className={`grid grid-cols-1 lg:grid-cols-2 ${
+                  isEven ? "order-2 lg:order-1" : "order-1 lg:order-2"
+                } items-center gap-8 rounded-2xl  text-black`}
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full md:w-1/2 h-64 object-cover rounded-xl"
-                />
-
+                <div className="h-[340px] w-full bg-green-400">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full object-cover rounded-xl"
+                  />
+                </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-white/90 mb-4 text-sm">{item.desc}</p>
-                  <ul className="space-y-2 text-sm">
+                  <h3 className="text-3xl text-sky-800 font-semibold mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-black/90 mb-4 ">{item.desc}</p>
+                  <ul className="space-y-2 ">
                     {item.points.map((point, i) => (
                       <li key={i} className="flex gap-2 items-start">
-                        <CheckCircle className="w-4 h-4 text-white mt-1" />
+                        <BadgeCheck className="w-5 h-5 text-green-500 " />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -231,8 +229,8 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title=" Need Reliable Project Oversight?"
-        desc="Al Yusr Engineering Consulting is here to take your project from concept to completion with confidence, clarity, and control. Let our seasoned team manage the process so you can focus on the bigger picture."
+        title="Built to Power Progress"
+        desc="Whether we're energizing a new transit corridor, upgrading bridge control systems, or supporting water utility modernization, SCCI Electric is committed to powering progress through safe, smart, and sustainable electrical solutions."
         btn="Contact Us Today"
       />
     </main>
