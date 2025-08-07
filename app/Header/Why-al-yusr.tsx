@@ -66,7 +66,7 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
                     />
                   </div>
                   <div>
-                    <h2 className="text-lg text-yellow-100 font-[500]">
+                    <h2 className="text-lg text-blue-300 font-[500]">
                       {service.label}
                     </h2>
                     <p className="text-xs">{service.description}</p>
@@ -79,7 +79,7 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
         <ul className="flex items-start gap-5 w-full justify-between  mt-10">
           {tabs.map((tab, idx) => (
             <p
-              className="border border-amber-200/60 rounded-full px-4 py-[.4rem]"
+              className="border text-blue-300 border-blue-200/60 rounded-full px-4 py-[.4rem]"
               key={idx}
             >
               {tab.label}

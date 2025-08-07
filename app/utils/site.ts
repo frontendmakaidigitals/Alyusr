@@ -8,10 +8,7 @@ export const siteConfig = {
         {
           label: "Overview",
           submenu: [
-            {
-              label: "Certifications & Accreditations",
-              link: "Certifications-and-Accreditations",
-            },
+            
             { label: "Company Overview", link: "Company-Overview" },
             { label: "Our Divisions", link: "Our-Divisions" },
             { label: "Our Ethics", link: "Our-Ethics" },

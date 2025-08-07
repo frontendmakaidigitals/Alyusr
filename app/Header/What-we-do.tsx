@@ -21,7 +21,7 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
         <div className="flex items-start gap-8">
           {data.map((service, idx) => (
             <ul key={idx} className="space-y-2 mt-2">
-              <h3 className="font-[500] text-amber-100 whitespace-nowrap">
+              <h3 className="font-[500] text-blue-300 whitespace-nowrap">
                 {service.label}
               </h3>
               {service.items.map((item, id) => (
@@ -36,7 +36,7 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
       <div className="w-[300px] h-[320px] relative">
         <Link
           href={"/Services"}
-          className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-amber-100 text-black px-3 py-[.4rem] rounded-full text-xs border border-black"
+          className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-3 py-[.4rem] rounded-full text-xs border border-black"
         >
           View All Services
         </Link>
@@ -61,7 +61,7 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
             >
               <p
                 className={`font-semibold flex items-center gap-2 ${
-                  currIndex == idx ? "text-amber-100" : ""
+                  currIndex == idx ? "text-blue-300" : ""
                 }`}
               >
                 {location.country}{" "}
