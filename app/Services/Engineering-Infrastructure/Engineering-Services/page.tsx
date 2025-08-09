@@ -94,13 +94,13 @@ export default function ConstructionManagementPage() {
       </section>
       {/* Features */}
       <section className="my-20">
-        <div className="container place-items-center grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="container place-items-center grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div>
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-5xl font-[600] max-w-xl">
               Our <span className="text-blue-500">Capabilities</span> at a
               Glance
             </h1>
-            <p className="mt-3">
+            <p className="mt-5">
               We provide specialized engineering solutions for commercial,
               residential, mixed-use, industrial, hospitality, and
               government-led projects. Our Class A license and ISO
@@ -133,7 +133,7 @@ export default function ConstructionManagementPage() {
       <section className="bg-white py-20 px-6 text-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-5xl font-bold">
               Our <span className="text-blue-500">Core Services</span>
             </h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -147,21 +147,20 @@ export default function ConstructionManagementPage() {
             {services.map((service, idx) => (
               <div
                 key={idx}
-                className="bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-md transition duration-300"
+                className="bg-white border p-2 border-slate-500/10 rounded-xl transition-all duration-300 hover:shadow-lg overflow-hidden"
               >
-                <div className="h-[260px] w-full relative">
-                  <Image
+                <div className="h-[280px] rounded-lg border border-slate-900/40 overflow-hidden w-full relative">
+                  <img
                     src={service.pexelsUrl}
                     alt={service.title}
-                    fill
                     className="object-cover w-full h-full"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-2 text-blue-800">
+                <div className="p-4">
+                  <h3 className="text-xl text-blue-900 font-semibold mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-700 text-sm">{service.desc}</p>
+                  <p className="text-blue-950">{service.desc}</p>
                 </div>
               </div>
             ))}
@@ -170,7 +169,7 @@ export default function ConstructionManagementPage() {
       </section>
 
       <section className="bg-gray-50 py-20 px-6 text-gray-900">
-        <div className="max-w-6xl mx-auto">
+        <div className="container max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold">
               Specialized <span className="text-blue-500">Expertise</span>
@@ -182,19 +181,21 @@ export default function ConstructionManagementPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {specializedExpertise.map((item, i) => (
               <div
                 key={i}
                 className="bg-white rounded-xl p-6 shadow hover:shadow-md transition"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <item.icon className="text-blue-500 w-8 h-8 shrink-0" />
-                  <h3 className="text-xl font-semibold text-gray-800">
+                  <span className="bg-blue-500 p-2 rounded-lg">
+                    <item.icon className="text-blue-50 w-8 h-8 shrink-0" />
+                  </span>
+                  <h3 className="text-xl text-blue-900 font-semibold mt-[.15rem]">
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-gray-700 text-sm">{item.desc}</p>
+                <p className="text-gray-700 ">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -234,9 +235,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <section className="bg-white py-20 px-6 text-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">
+        <div className="container">
+          <div className="text-center mb-12 max-w-4xl mx-auto">
+            <h2 className="text-5xl font-bold">
               Why Choose <span className="text-blue-500">Al Yusr</span> for
               Engineering Services?
             </h2>
@@ -246,14 +247,16 @@ export default function ConstructionManagementPage() {
             </p>
           </div>
 
-          <ul className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <ul className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {reasonsToChoose.map((reason, i) => (
               <li
                 key={i}
                 className="flex items-start bg-blue-50 rounded-lg p-4 shadow-sm"
               >
-                <BadgeCheck className="text-blue-600 mt-1 mr-3 w-5 h-5 shrink-0" />
-                <span className="text-gray-800 text-sm">{reason}</span>
+                <BadgeCheck className="text-white fill-green-500 mt-1 mr-3 w-6 h-6 shrink-0" />
+                <span className="text-gray-800 text-lg font-[500]">
+                  {reason}
+                </span>
               </li>
             ))}
           </ul>

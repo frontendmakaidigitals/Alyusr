@@ -217,22 +217,16 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-gray-800">
-            Industries We Serve
+        <div className="container px-4">
+          <h2 className="text-5xl text-center font-bold mb-12 text-gray-800">
+            <span className="text-blue-500">Industries</span> We Serve
           </h2>
 
-          <div className="space-y-16 grid grid-cols-1 lg:grid-cols-4 gap-4">
+          <div className=" max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-5">
             {industries.map((industry, index) => {
-              const isEven = index % 2 === 1;
               return (
-                <div key={industry.title} className={``}>
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className=" w-full bg-red-300 h-[240px] rounded-xl overflow-hidden"
-                  >
+                <div key={index} className={``}>
+                  <motion.div className=" w-full bg-red-300 h-[220px] rounded-t-xl overflow-hidden">
                     <Image
                       src={industry.image}
                       alt={industry.title}
@@ -242,8 +236,8 @@ export default function ConstructionManagementPage() {
                     />
                   </motion.div>
 
-                  <motion.div className=" w-full border mt-1 bg-blue-400 text-slate-50 rounded-xl p-2 ">
-                    <h3 className="text-lg  font-semibold ">
+                  <motion.div className=" w-full border bg-blue-50 text-slate-950 rounded-b-xl p-2 ">
+                    <h3 className="text-lg text-blue-900 font-semibold ">
                       {industry.title}
                     </h3>
                   </motion.div>
@@ -274,7 +268,7 @@ export default function ConstructionManagementPage() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="flex items-start gap-4 text-blue-950"
                 >
-                  <BadgeCheck className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                  <BadgeCheck className="w-6 h-6 text-white fill-green-500  mt-1 flex-shrink-0" />
                   <p className="text-lg font-medium">{reason}</p>
                 </motion.li>
               ))}
