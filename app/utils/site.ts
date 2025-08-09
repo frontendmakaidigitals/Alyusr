@@ -93,27 +93,27 @@ export const siteConfig = {
           items: [
             {
               label: "City Planning",
-              link: "Construction-Management",
+              link: "city-planning",
             },
             {
               label: "Urban Design",
-              link: "BIM Solutions",
+              link: "urban-design",
             },
             {
               label: "Community Planning",
-              link: "Cost Management",
+              link: "Community-Planning",
             },
             {
               label: "Landscape Architecture",
-              link: "Simulation Models",
+              link: "Landscape-Architecture",
             },
             {
               label: "Architecture Design",
-              link: "Partnership Advisory",
+              link: "Architecture-Design",
             },
             {
               label: "Interior Architecture",
-              link: "Partnership Advisory",
+              link: "Interior-Architecture",
             },
           ],
         },
