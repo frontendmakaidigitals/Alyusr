@@ -8,7 +8,6 @@ export const siteConfig = {
         {
           label: "Overview",
           submenu: [
-            
             { label: "Company Overview", link: "Company-Overview" },
             { label: "Our Divisions", link: "Our-Divisions" },
             { label: "Our Ethics", link: "Our-Ethics" },
@@ -49,33 +48,98 @@ export const siteConfig = {
       tagLine: "Services We Provide",
       services: [
         {
-          label: "Design Solutions",
+          label: "Engineering & Infrastructure",
           items: [
-            "Architecture and Design",
-            "Structural & MEP Engineering",
-            "Landscape Architecture",
-            "Masterplanning",
-            "Interior Architecture",
+            {
+              label: "Construction Management",
+              link: "Construction-Management",
+            },
+            {
+              label: "Engineering Services",
+              link: "Engineering-Services",
+            },
+            {
+              label: "Structural Legacy Consulting",
+              link: "Structural-Legacy-Consulting",
+            },
+            {
+              label: "SCCI Electrical Engineering",
+              link: "SCCI-Electric",
+            },
+            {
+              label: "Vertical Transportation Services",
+              link: "Vertical-Transportation-Services",
+            },
+            {
+              label: "Foundation Engineering Solutions",
+              link: "Foundation-Engineering-Solutions",
+            },
+            {
+              label: "Tunnels and Underground Infrastructure",
+              link: "Tunnels&Underground-Infrastructure",
+            },
+            {
+              label: "Ground Engineering",
+              link: "Ground-Engineering",
+            },
+            {
+              label: "Alternative Delivery Models",
+              link: "Alternative-Delivery-Models",
+            },
           ],
         },
         {
-          label: "Project Advisory",
+          label: "Urban Planning",
           items: [
-            "Construction Management",
-            "BIM Solutions",
-            "Cost Management",
-            "Simulation Models",
-            "Partnership Advisory",
+            {
+              label: "City Planning",
+              link: "Construction-Management",
+            },
+            {
+              label: "Urban Design",
+              link: "BIM Solutions",
+            },
+            {
+              label: "Community Planning",
+              link: "Cost Management",
+            },
+            {
+              label: "Landscape Architecture",
+              link: "Simulation Models",
+            },
+            {
+              label: "Architecture Design",
+              link: "Partnership Advisory",
+            },
+            {
+              label: "Interior Architecture",
+              link: "Partnership Advisory",
+            },
           ],
         },
         {
           label: "Sustainability Services",
           items: [
-            "Social Impact Assessment",
-            "Climate Adaptation",
-            "Air Quality Consulting",
-            "EHS Management",
-            "Sustainability Advisory",
+            {
+              link: "Social Impact Assessment",
+              label: "Social Impact Assessment",
+            },
+            {
+              link: "Climate Adaptation",
+              label: "Climate Adaptation",
+            },
+            {
+              link: "Air Quality Consulting",
+              label: "Air Quality Consulting",
+            },
+            {
+              link: "EHS Management",
+              label: "EHS Management",
+            },
+            {
+              link: "Sustainability Advisory",
+              label: "Sustainability Advisory",
+            },
           ],
         },
       ],
@@ -194,7 +258,7 @@ type WhatWeDoNav = {
   tagLine2: string;
   services: {
     label: string;
-    items: string[];
+    items: { label: string; link: string }[];
   }[];
   locationsData: {
     country: string;

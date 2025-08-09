@@ -198,14 +198,14 @@ export default function ConstructionManagementPage() {
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
-        <p className="mt-3 w-full text-lg">
+        <p className="mt-3 text-center w-full text-lg">
           At <strong>Al Yusr</strong> Engineering Consulting, we provide
           construction and project management services for the engineering and
           architectural sectors. Backed by decades of experience and a
           commitment to best practices, our expert team ensures every project is
           managed with precision, from initial planning to final handover.
         </p>{" "}
-        <p className="mt-2 text-lg">
+        <p className="mt-2 text-center text-lg">
           Our structured approach follows globally recognized standards. We make
           sure projects are completed on schedule, within budget, and to the
           highest quality and safety standards.
@@ -216,7 +216,7 @@ export default function ConstructionManagementPage() {
         <motion.h2 className="text-5xl font-semibold text-center mb-12">
           Our Key <span className="text-blue-500">Responsibilities</span>
         </motion.h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {keyResponsibilities.map((item, i) => {
             const Icon = item.icon; // Extract the icon component
             return (
@@ -227,9 +227,11 @@ export default function ConstructionManagementPage() {
                 whileInView="visible"
                 custom={i}
               >
-                <div className="p-6 flex flex-col items-start gap-4">
-                  <Icon className="w-12 h-12 text-blue-500" />
-                  <h3 className="font-semibold">{item.title}</h3>
+                <div className="p-6 flex items-start gap-4">
+                  <span>
+                    <Icon className="w-10 h-10 text-blue-500" />
+                  </span>
+                  <h3 className="font-semibold mt-2">{item.title}</h3>
                 </div>
               </motion.div>
             );
@@ -347,17 +349,19 @@ export default function ConstructionManagementPage() {
         >
           Special Capabilities
         </motion.h3>
-        <ul className="grid md:grid-cols-2 gap-6">
+        <ul className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           {specialCapabilities.map((cap, i) => (
             <motion.li
               key={i}
-              className="flex items-start gap-3 bg-blue-50 p-4 rounded-lg"
+              className=" bg-blue-50 p-4 rounded-lg"
               initial="hidden"
               whileInView="visible"
               custom={i}
             >
-              <BadgeCheck className="text-blue-600 mt-1" />
-              <span>{cap}</span>
+              <span className="">
+                <BadgeCheck className="text-green-50 w-8 h-8 fill-green-400 mb-3" />
+              </span>
+              <span className="font-[500]">{cap}</span>
             </motion.li>
           ))}
         </ul>
@@ -397,29 +401,20 @@ export default function ConstructionManagementPage() {
           {differentiators.map((item, i) => (
             <motion.div
               key={i}
-              initial="hidden"
-              whileInView="visible"
-              custom={i}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { delay: i * 0.1, duration: 0.6 },
-                },
-              }}
-              className="bg-white border rounded-xl overflow-hidden shadow hover:shadow-lg transition"
+              className="bg-white border p-2 border-slate-500/10 rounded-xl transition-all duration-300 hover:shadow-lg overflow-hidden"
             >
-              <div className="h-[250px] w-full relative">
+              <div className="h-[280px] rounded-lg border border-slate-900/40 overflow-hidden w-full relative">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
+              <div className="p-4">
+                <h3 className="text-xl text-blue-900 font-semibold mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-blue-950">{item.desc}</p>
               </div>
             </motion.div>
           ))}

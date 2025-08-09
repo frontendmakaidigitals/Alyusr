@@ -6,7 +6,7 @@ import Link from "next/link";
 interface dataProps {
   data: {
     label: string;
-    items: string[];
+    items: { label: string; link: string }[];
   }[];
   locationsData: { country: string; cities: string[] }[];
 }
@@ -24,11 +24,24 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
               <h3 className="font-[500] text-blue-300 whitespace-nowrap">
                 {service.label}
               </h3>
-              {service.items.map((item, id) => (
-                <li className="text-sm whitespace-nowrap" key={id}>
-                  {item}
-                </li>
-              ))}
+              <div className="space-y-3">
+                {service.items.map((item, id) => (
+                  <li className="text-sm whitespace-nowrap" key={id}>
+                    <Link
+                      href={`/Services/${
+                        service.label === "Engineering & Infrastructure"
+                          ? "Engineering-Infrastructure"
+                          : service.label === "Urban Planning"
+                          ? "Urban-Planning"
+                          : null
+                      }/${item.link}`}
+                    >
+                      {" "}
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </div>
             </ul>
           ))}
         </div>
