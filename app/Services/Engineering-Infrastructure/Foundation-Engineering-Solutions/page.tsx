@@ -118,9 +118,9 @@ export default function ConstructionManagementPage() {
 
       {/* Features */}
       <section className="bg-sky-50 mt-10 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-sky-900 mb-16">
-            What We Offer
+        <div className="container">
+          <h2 className="text-5xl font-bold text-center  mb-16">
+            What We <span className="text-blue-500">Offer</span>
           </h2>
 
           <div className="space-y-16 container">
@@ -153,7 +153,7 @@ export default function ConstructionManagementPage() {
                       isEven ? "lg:order-2" : "lg:order-1"
                     } order-2`}
                   >
-                    <h3 className="text-3xl text-sky-800 font-semibold mb-2">
+                    <h3 className="text-4xl text-sky-800 font-semibold mb-2">
                       {item.title}
                     </h3>
                     <p className="text-black/90 mb-4">{item.desc}</p>

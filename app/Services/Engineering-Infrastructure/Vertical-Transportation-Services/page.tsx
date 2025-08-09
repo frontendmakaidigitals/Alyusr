@@ -131,7 +131,7 @@ export default function ConstructionManagementPage() {
             <h1 className="text-5xl font-semibold">
               Our <span className="text-blue-500">Approach</span>
             </h1>
-            <p className="mt-3">
+            <p className="mt-3 text-lg">
               We work closely with building owners, developers, architects,
               engineers, and facility managers to provide comprehensive support
               throughout every stage of the vertical transportation lifecycle.
@@ -152,11 +152,11 @@ export default function ConstructionManagementPage() {
       </section>
       {/* Features */}
       <section className="bg-blue-50 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl md:text-4xl font-bold text-center text-blue-900 mb-12">
-            Our Services
+        <div className="container">
+          <h2 className="text-5xl font-bold text-center  mb-12">
+            Our <span className="text-blue-500">Services</span>
           </h2>
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="grid gap-10 grid-cols-1 lg:grid-cols-2">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -164,14 +164,14 @@ export default function ConstructionManagementPage() {
                 transition={{ type: "spring", stiffness: 100 }}
                 className="bg-white rounded-2xl p-6 shadow-md border border-blue-100"
               >
-                <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                <h3 className="text-3xl font-semibold text-sky-800 mb-4">
                   {service.title}
                 </h3>
                 <ul className=" space-y-2 text-gray-700">
                   {service.points.map((point, idx) => (
                     <li key={idx} className="flex gap-2 items-start">
                       <span className="mt-[.17rem]">
-                        <BadgeCheck className="w-5 h-5 text-green-500" />
+                        <BadgeCheck className="w-5 h-5 fill-green-500 text-slate-50" />
                       </span>
                       {point}.
                     </li>
@@ -183,9 +183,10 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <section className=" py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
-            Why Choose Al Yusr for Vertical Transportation?
+        <div className="container">
+          <h2 className="text-5xl max-w-5xl mx-auto font-bold text-center text-black mb-12">
+            Why Choose Al Yusr for{" "}
+            <span className="text-blue-500">Vertical Transportation?</span>
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((item, index) => {

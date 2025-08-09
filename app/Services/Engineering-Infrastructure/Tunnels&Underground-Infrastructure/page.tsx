@@ -9,6 +9,7 @@ import {
   Globe,
   ShieldCheck,
   MountainSnow,
+  BadgeCheck,
 } from "lucide-react";
 export default function ConstructionManagementPage() {
   const reasons = [
@@ -154,7 +155,9 @@ export default function ConstructionManagementPage() {
       {/* Features */}
       <section className="py-24 container space-y-20">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-blue-900 mb-4">What We Do</h2>
+          <h2 className="text-5xl font-bold mb-4">
+            What We <span className="text-blue-500">Do</span>
+          </h2>
           <p className="text-gray-700 text-lg">
             We offer services across the tunnel lifecycle, from early-stage
             feasibility studies to detailed design, construction supervision,
@@ -176,7 +179,7 @@ export default function ConstructionManagementPage() {
               <div
                 className={`${
                   isEven ? "order-1" : "order-1 lg:order-2"
-                } w-full h-[300px] bg-slate-500 md:h-[380px] overflow-hidden rounded-2xl`}
+                } w-full h-[300px] bg-green-500 md:h-[380px] overflow-hidden rounded-2xl`}
               >
                 <img
                   src={item.image}
@@ -187,13 +190,18 @@ export default function ConstructionManagementPage() {
 
               {/* Content */}
               <div className={`${isEven ? "order-2" : "order-2 lg:order-1"}`}>
-                <h3 className="text-2xl font-semibold text-sky-800 mb-4">
+                <h3 className="text-4xl font-semibold text-sky-800 mb-4">
                   {item.title}
                 </h3>
                 <p className="text-gray-800 mb-4">{item.desc}</p>
-                <ul className="space-y-2 list-disc list-inside text-gray-700">
+                <ul className="space-y-2  text-gray-700">
                   {item.points.map((point, i) => (
-                    <li key={i}>{point}</li>
+                    <li key={i} className="flex items-start gap-3">
+                      <span>
+                        <BadgeCheck className="fill-green-500 text-white" />
+                      </span>
+                      {point}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -204,7 +212,7 @@ export default function ConstructionManagementPage() {
 
       <section className="bg-blue-50 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+          <h2 className="text-5xl font-bold text-center text-blue-900 mb-12">
             Why Choose Al Yusr?
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

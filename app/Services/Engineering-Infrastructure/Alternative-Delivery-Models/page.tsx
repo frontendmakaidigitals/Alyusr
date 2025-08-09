@@ -115,9 +115,9 @@ export default function ConstructionManagementPage() {
         </p>
       </section>
       <section className="bg-sky-50 mt-10 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols2 gap-10 container">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-sky-900 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-10 container">
+          <div className="">
+            <h2 className="text-5xl font-bold text-sky-900 mb-5">
               What Are Alternative Delivery Models?
             </h2>
             <p>
@@ -129,33 +129,34 @@ export default function ConstructionManagementPage() {
               fragmentation, and encourage team alignment from day one.
             </p>
           </div>
-          <div>
+          <div className="w-full h-[370px] bg-green-500">
             <img src={""} alt={""} className="" />
           </div>
         </div>
       </section>
       <section className="bg-white text-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Our Core Delivery Models
+          <h2 className="text-5xl font-bold text-center mb-12">
+            Our <span className="text-blue-500">Core Delivery</span> Models
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {models.map((model, idx) => (
               <div
                 key={idx}
-                className="bg-gray-50 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+                className="bg-white border p-2 border-slate-500/10 rounded-xl transition-all duration-300 hover:shadow-lg overflow-hidden"
               >
-                <div className="relative w-full h-52">
-                  <Image
+                <div className="h-[280px] rounded-lg border border-slate-900/40 bg-slate-100 overflow-hidden w-full relative">
+                  <img
                     src={model.image}
                     alt={model.title}
-                    layout="fill"
-                    objectFit="cover"
+                    className="object-cover w-full h-full"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">{model.title}</h3>
-                  <p className="text-sm text-gray-700">{model.desc}</p>
+                <div className="p-4">
+                  <h3 className="text-xl text-blue-900 font-semibold mb-2">
+                    {model.title}
+                  </h3>
+                  <p className="text-blue-950">{model.desc}</p>
                 </div>
               </div>
             ))}
@@ -164,12 +165,12 @@ export default function ConstructionManagementPage() {
       </section>
 
       <section className="bg-sky-50 mt-10 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 container">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-10 container">
+          <div className="w-full h-[400px] bg-orange-400">
             <img src={""} alt={""} className="" />
           </div>
           <div className="">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-sky-900 mb-16">
+            <h2 className="text-5xl font-bold text-sky-900 mb-16">
               What Are Alternative Delivery Models?
             </h2>
             <p>
@@ -184,11 +185,12 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <section className="bg-gray-100 text-gray-900 py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-10">
-            When Should You Consider Alternative Delivery?
+        <div className="container">
+          <h2 className="text-5xl max-w-4xl mx-auto font-bold text-center mb-10">
+            When Should You Consider{" "}
+            <span className="text-blue-500">Alternative Delivery?</span>
           </h2>
-          <ul className="grid grid-cols-1 lg:grid-cols-2 gap-7">
+          <ul className="grid grid-cols-1 lg:grid-cols-3 gap-7 mx-auto max-w-5xl">
             {considerations.map((item, idx) => (
               <li
                 key={idx}
@@ -203,9 +205,9 @@ export default function ConstructionManagementPage() {
       </section>
 
       <section className="bg-sky-50 mt-10 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 container">
+        <div className="grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10 container">
           <div className="">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-sky-900 mb-16">
+            <h2 className="text-5xl font-bold text-sky-900 mb-5">
               Our Value Proposition
             </h2>
             <p>
@@ -226,19 +228,21 @@ export default function ConstructionManagementPage() {
               lifecycle.
             </p>
           </div>
-          <div>
+          <div className="w-full h-[400px] bg-green-500">
             <img src={""} alt={""} className="" />
           </div>
         </div>
       </section>
       <section className="py-20 bg-white text-gray-900">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-14">
-            Advantages of Alternative Delivery Models with Al Yusr
+        <div className="container">
+          <h2 className="text-5xl max-w-5xl mx-auto font-bold text-center mb-14">
+            <span className="text-green-600">Advantages</span> of{" "}
+            <span className="text-blue-500">Alternative Delivery</span> Models
+            with Al Yusr
           </h2>
           <div className="grid gap-10 grid-cols-1 lg:grid-cols-3">
             {advantages.map(({ title, description, icon: Icon }, idx) => (
-              <div key={idx} className="flex items-start gap-5">
+              <div key={idx} className="flex bg-slate-100 rounded-xl p-5 items-start gap-5">
                 <div className="p-3 bg-blue-100 rounded-full">
                   <Icon className="w-6 h-6 text-blue-600" />
                 </div>

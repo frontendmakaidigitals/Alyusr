@@ -156,8 +156,8 @@ export default function ConstructionManagementPage() {
       {/* Features */}
       <section className="bg-sky-50 mt-10 py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-sky-900 mb-16">
-            What We Offer
+          <h2 className="text-5xl font-bold text-center  mb-16">
+            What We <span className="text-blue-500">Offer</span>
           </h2>
 
           <div className="space-y-16 container">
@@ -169,11 +169,11 @@ export default function ConstructionManagementPage() {
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 rounded-2xl text-black"
+                  className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 rounded-2xl text-black"
                 >
                   {/* Image Block */}
                   <div
-                    className={`h-[340px] bg-green-500 w-full ${
+                    className={`h-[360px] bg-green-500 w-full ${
                       isEven ? "lg:order-1" : "lg:order-2"
                     } order-1`}
                   >
@@ -190,14 +190,16 @@ export default function ConstructionManagementPage() {
                       isEven ? "lg:order-2" : "lg:order-1"
                     } order-2`}
                   >
-                    <h3 className="text-3xl text-sky-800 font-semibold mb-2">
+                    <h3 className="text-4xl text-sky-800 font-semibold mb-2">
                       {item.title}
                     </h3>
                     <p className="text-black/90 mb-4">{item.description}</p>
                     <ul className="space-y-2">
                       {item.points.map((point, i) => (
                         <li key={i} className="flex gap-2 items-start">
-                          <BadgeCheck className="w-5 h-5 text-green-500" />
+                          <span>
+                            <BadgeCheck className="w-5 h-5 text-white fill-green-500" />
+                          </span>
                           <span>{point}</span>
                         </li>
                       ))}
@@ -211,7 +213,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="bg-blue-50 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+          <h2 className="text-5xl font-bold text-center text-blue-900 mb-12">
             Why Choose Al Yusr?
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

@@ -128,7 +128,7 @@ export default function ConstructionManagementPage() {
             <h1 className="text-5xl font-semibold">
               What We <span className="text-blue-500">Do</span>
             </h1>
-            <p className="mt-3">
+            <p className="mt-3 text-lg">
               We offer complete electrical contracting services, including
               design support, installation, commissioning, and long-term
               maintenance. Our team is equipped to deliver complex,
@@ -146,8 +146,8 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       {/* Features */}
-      <section className="bg-gray-100 py-20 px-4 md:px-10">
-        <div className="text-center max-w-4xl mx-auto mb-16">
+      <section className="bg-gray-100 py-20">
+        <div className="text-center container mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -163,33 +163,40 @@ export default function ConstructionManagementPage() {
 
         <div className="space-y-16 container">
           {markets.map((item, index) => {
-            const isEven = index % 2 === 0;
+            const isEven = index % 2 === 0; // 0-based index
             return (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className={`grid grid-cols-1 lg:grid-cols-2 ${
-                  isEven ? "order-2 lg:order-1" : "order-1 lg:order-2"
-                } items-center gap-8 rounded-2xl  text-black`}
+                className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 rounded-2xl text-black"
               >
-                <div className="h-[340px] w-full bg-green-400">
+                {/* Image column */}
+                <div
+                  className={`h-[340px] bg-green-500 w-full ${
+                    isEven ? "lg:order-2" : "lg:order-1"
+                  }`}
+                >
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full object-cover rounded-xl"
+                    className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
-                <div className="flex-1">
+
+                {/* Text column */}
+                <div className={`${isEven ? "lg:order-1" : "lg:order-2"}`}>
                   <h3 className="text-3xl text-sky-800 font-semibold mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-black/90 mb-4 ">{item.desc}</p>
-                  <ul className="space-y-2 ">
+                  <p className="text-black/90 mb-4">{item.desc}</p>
+                  <ul className="space-y-2">
                     {item.points.map((point, i) => (
                       <li key={i} className="flex gap-2 items-start">
-                        <BadgeCheck className="w-5 h-5 text-green-500 " />
+                        <span>
+                          <BadgeCheck className="w-5 h-5 fill-green-500 text-white" />
+                        </span>
                         <span>{point}</span>
                       </li>
                     ))}
@@ -200,12 +207,13 @@ export default function ConstructionManagementPage() {
           })}
         </div>
       </section>
+
       <section className="bg-blue-50 py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+        <div className="container px-6">
+          <h2 className="text-5xl font-bold text-center text-blue-900 mb-12">
             Why Choose SCCI Electric?
           </h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 grid-cols-1 lg:grid-cols-4">
             {features.map((item, index) => {
               const Icon = item.icon;
               return (
