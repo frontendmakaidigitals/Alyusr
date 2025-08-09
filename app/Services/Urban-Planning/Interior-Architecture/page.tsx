@@ -116,9 +116,9 @@ export default function Page() {
       </section>
 
       <section className="bg-gray-50 ">
-        <div className="container py-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="container py-12 grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-5xl text-sky-700 font-bold ">
               Creative, Contextual, Client-Focused
             </h2>
             <p className="text-lg text-gray-700 mt-4">
@@ -140,8 +140,8 @@ export default function Page() {
         </div>
       </section>
       <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+        <div className="container max-w-7xl">
+          <h2 className="text-5xl font-bold text-center text-gray-800 mb-12">
             Our <span className="text-blue-600">Interior Architecture</span>{" "}
             Services
           </h2>
@@ -172,10 +172,12 @@ export default function Page() {
 
       <section className="max-w-7xl mx-auto px-4 py-20 space-y-16">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4">Our Areas of Expertise</h2>
+          <h2 className="text-5xl font-bold mb-4">
+            Our <span className="text-blue-500">Areas of Expertise</span>
+          </h2>
           <p className="text-lg text-muted-foreground">
-            Interior architecture tailored to every sector&apso;s unique demands —
-            from healthcare to hospitality and everything in between.
+            Interior architecture tailored to every sector&apso;s unique demands
+            — from healthcare to hospitality and everything in between.
           </p>
         </div>
 
@@ -201,29 +203,20 @@ export default function Page() {
                 />
               </div>
               <div className="w-full md:w-1/2">
-                <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
+                <h3 className="text-4xl text-sky-700 font-semibold mb-3">
+                  {item.title}
+                </h3>
                 <p className="text-muted-foreground text-lg">{item.desc}</p>
               </div>
             </motion.div>
           ))}
         </div>
-
-        <div className="max-w-4xl mx-auto text-center pt-12">
-          <h3 className="text-2xl font-semibold mb-3">
-            An Integrated Team From Day One
-          </h3>
-          <p className="text-muted-foreground text-lg">
-            Designers, project managers, and specialists collaborate from
-            project start to finish. This ensures vision integrity, quality
-            execution, and on-time delivery—every time.
-          </p>
-        </div>
       </section>
 
       <section className="bg-gray-50 ">
-        <div className="container py-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="container py-12 place-items-center grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-5xl font-[700] text-sky-700">
               An Integrated Team From Day One
             </h2>
             <p className="text-lg text-gray-700 mt-4">
@@ -239,15 +232,15 @@ export default function Page() {
               project.
             </p>
           </div>
-          <div className="w-full h-[400px] bg-red-300">
+          <div className="w-full h-[450px] bg-red-300">
             <img src={""} alt={""} className="" />
           </div>
         </div>
       </section>
 
       <section className="bg-gradient-to-b from-blue-50/50 to-white py-20 px-4">
-        <div className="max-w-5xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">
+        <div className="max-w-3xl container text-center mb-12">
+          <h2 className="text-5xl font-bold mb-4">
             Why Choose Al Yusr for Interior Architecture?
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -268,7 +261,7 @@ export default function Page() {
               className="flex items-start gap-4 bg-slate-100 p-3 rounded-xl"
             >
               <span>
-                <BadgeCheck className="text-blue-600 w-6 h-6 mt-1 shrink-0" />
+                <BadgeCheck className="text-white fill-green-500 w-6 h-6 mt-1 shrink-0" />
               </span>
               <p className="text-lg leading-relaxed">{point}</p>
             </motion.div>

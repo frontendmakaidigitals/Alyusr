@@ -133,8 +133,8 @@ export default function ConstructionManagementPage() {
       <section className="py-20 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold text-gray-900 mb-3">
-              Our Urban Services
+            <h2 className="text-5xl font-bold text-gray-900 mb-3">
+              Our <span className="text-blue-500">Urban Services</span>
             </h2>
             <p className="text-gray-600 text-lg">
               Building vibrant, inclusive, and forward-looking cities
@@ -166,8 +166,8 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="bg-white py-20">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">
-            Specialized Capabilities
+          <h2 className="text-5xl font-bold mb-10">
+            <span className="text-blue-500">Specialized</span> Capabilities
           </h2>
           <div className="grid gap-10 grid-cols-1 lg:grid-cols-4">
             {capabilities.map((item, index) => (
@@ -186,9 +186,10 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <section className="bg-white py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold">
-            Why Choose Al Yusr for Urban Design
+        <div className=" container text-center mb-12">
+          <h2 className="text-5xl font-bold">
+            Why <span className="text-blue-500">Choose</span> Al Yusr for{" "}
+            <span className="text-green-500">Urban Design</span>
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
             Combining Saudi values with modern innovation to deliver sustainable
@@ -210,7 +211,7 @@ export default function ConstructionManagementPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-5 text-left">
+              <div className="px-5 py-3 text-left">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>

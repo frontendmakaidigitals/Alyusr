@@ -119,9 +119,9 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-6"
+            className="text-5xl font-bold text-gray-800 mb-6"
           >
-            Our Design Philosophy
+            Our <span className="text-blue-500">Design Philosophy</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -145,9 +145,9 @@ export default function ConstructionManagementPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.5 }}
                 viewport={{ once: true }}
-                className={`rounded-2xl shadow-lg text-black`}
+                className={`rounded-xl bg-blue-50 shadow-lg text-black`}
               >
-                <div className=" w-full h-[230px] bg-red-300">
+                <div className=" w-full h-[230px] rounded-xl overflow-hidden bg-red-300">
                   <Image
                     src={""}
                     className="w-full h-full object-cover"
@@ -155,7 +155,7 @@ export default function ConstructionManagementPage() {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-xl font-semibold text-blue-500 mb-2">
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2">
                     {item.title}
                   </h3>
                   <p className="text-sm">{item.description}</p>
@@ -173,9 +173,9 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-6"
+            className="text-5xl font-bold text-gray-800 text-center mb-6"
           >
-            Services We Offer
+            <span className="text-blue-500">Services</span> We Offer
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -210,7 +210,7 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <section className="py-20 px-6 md:px-10 bg-blue-50">
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-10 container max-w-6xl ">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-10 container  ">
           <div className="bg-white p-6 rounded-xl grid grid-cols-1 place-items-center lg:grid-cols-2 gap-5">
             <div className=" bg-blue-100 text-blue-800 h-[320px] rounded-xl w-full mb-5">
               <Image src={""} alt={""} className="" />

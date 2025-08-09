@@ -166,8 +166,9 @@ export default function Page() {
       <section className="bg-gray-50 ">
         <div className="container py-12">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Our Capabilities at a Glance
+            <h2 className="text-5xl font-bold text-gray-900">
+              <span className="text-blue-500">Our Capabilities</span> at a
+              Glance
             </h2>
             <p className="text-lg text-gray-700 mt-4">
               With a multidisciplinary in-house team and access to global best
@@ -213,14 +214,14 @@ export default function Page() {
 
               {/* Content */}
               <div className="w-full lg:w-1/2 space-y-6">
-                <h3 className="text-3xl font-bold text-gray-900">
+                <h3 className="text-4xl max-w-md font-bold text-sky-700">
                   {section.title}
                 </h3>
                 <p className="text-lg text-gray-700">{section.description}</p>
                 <ul className="space-y-3">
                   {section.bullets.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <BadgeCheck className="w-5 h-5 text-blue-600 mt-1" />
+                      <BadgeCheck className="w-5 h-5 text-white fill-green-500 mt-1" />
                       <span className="text-gray-800">{item}</span>
                     </li>
                   ))}
@@ -232,11 +233,11 @@ export default function Page() {
       </section>
 
       <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            Where We Work
+        <div className="container max-w-6xl">
+          <h2 className="text-5xl font-bold text-center text-gray-800 mb-4">
+            Where <span className="text-blue-500">We Work</span>
           </h2>
-          <p className="text-gray-600 mb-10 max-w-2xl">
+          <p className="text-gray-600  text-center mb-10">
             Our architectural portfolio spans a wide range of sectors,
             including:
           </p>
@@ -260,21 +261,24 @@ export default function Page() {
         </div>
       </section>
       <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">
+        <div className="max-w-3xl container text-center">
+          <h2 className="text-5xl font-bold text-gray-800 mb-6">
             Why Choose <span className="text-blue-600">Al Yusr</span> for
             Architecture?
           </h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2 text-left">
-            {points.map((point, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <span>
-                  <BadgeCheck className="w-6 h-6 text-green-600 mt-1" />
-                </span>
-                <p className="text-gray-700 font-medium">{point}</p>
-              </div>
-            ))}
-          </div>
+        </div>
+        <div className="mt-8 grid gap-6 container max-w-6xl md:grid-cols-2 text-left">
+          {points.map((point, index) => (
+            <div
+              key={index}
+              className="flex items-start gap-4 bg-slate-100 p-3 rounded-lg"
+            >
+              <span>
+                <BadgeCheck className="w-6 h-6 text-white fill-green-500 mt-1" />
+              </span>
+              <p className="text-gray-700 font-medium">{point}</p>
+            </div>
+          ))}
         </div>
       </section>
       <EngineeringCTA

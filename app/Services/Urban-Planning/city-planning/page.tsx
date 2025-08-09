@@ -2,7 +2,14 @@
 
 import Image from "next/image";
 import EngineeringCTA from "@/app/app_chunks/CTA";
-import { Building2, Star, Wrench, Globe2, Handshake } from "lucide-react";
+import {
+  Building2,
+  Star,
+  Wrench,
+  Globe2,
+  Handshake,
+  BadgeCheck,
+} from "lucide-react";
 
 import { Map, Leaf, Network, TreePine } from "lucide-react";
 export default function ConstructionManagementPage() {
@@ -142,8 +149,9 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="bg-gray-50 py-20 px-4 md:px-8">
         <div className="container mb-16 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Urban Planning & Sustainable Design
+          <h2 className="text-5xl font-bold text-gray-900 mb-4">
+            Urban <span className="text-blue-500">Planning</span> &{" "}
+            <span className="text-green-500">Sustainable</span> Design
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Comprehensive services that balance functionality, growth, and
@@ -151,36 +159,38 @@ export default function ConstructionManagementPage() {
           </p>
         </div>
 
-        <div className="grid container md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid container grid-cols-1 lg:grid-cols-3 gap-10">
           {planningData.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition"
-              >
+              <div key={index} className="bg-white rounded-lg  overflow-hidden">
                 {/* Top image */}
-                <div className="relative h-52 w-full">
+                <div className="relative h-[300px] bg-slate-100 w-full">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
                     className="object-cover"
                   />
+                  <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full absolute bottom-0 translate-y-1/2 left-6">
+                    <Icon className="text-blue-600 w-6 h-6" />
+                  </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-4">
-                  <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full">
-                    <Icon className="text-blue-600 w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+                <div className="p-6 mt-3 space-y-4">
+                  <h3 className="text-xl font-semibold text-sky-700">
                     {item.title}
                   </h3>
                   <p className="text-gray-600">{item.desc}</p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-1">
+                  <ul className=" text-gray-700 space-y-1">
                     {item.points.map((point, i) => (
-                      <li key={i}>{point}</li>
+                      <li key={i} className="flex items-start gap-1">
+                        <span className="">
+                          <BadgeCheck className="text-white fill-green-500" />
+                        </span>
+                        <span>{point}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -192,8 +202,8 @@ export default function ConstructionManagementPage() {
 
       <section className="bg-gray-50 py-20 px-4 md:px-8">
         <div className="container text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Supporting Services
+          <h2 className="text-5xl font-bold text-gray-900 mb-4">
+            <span className="text-blue-500">Supporting</span> Services
           </h2>
         </div>
 
@@ -203,7 +213,7 @@ export default function ConstructionManagementPage() {
               key={index}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
             >
-              <div className="relative w-full h-56">
+              <div className="relative bg-slate-100 w-full h-56">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -211,7 +221,7 @@ export default function ConstructionManagementPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6 space-y-3">
+              <div className="p-5 space-y-3">
                 <h3 className="text-xl font-semibold text-gray-900">
                   {item.title}
                 </h3>
@@ -222,9 +232,9 @@ export default function ConstructionManagementPage() {
       </section>
 
       <section className="bg-gray-50 py-20 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            What Sets Us Apart?
+        <div className="container text-center mb-16">
+          <h2 className="text-5xl  font-bold text-gray-900 mb-4">
+            What <span className="text-blue-500">Sets Us</span> Apart?
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Delivering more than plans — we build purpose-driven, resilient
@@ -232,7 +242,7 @@ export default function ConstructionManagementPage() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid container grid-cols-1 lg:grid-cols-4 gap-8">
           {points.map((item, index) => {
             const Icon = item.icon;
 

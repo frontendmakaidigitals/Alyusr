@@ -118,9 +118,9 @@ export default function ConstructionManagementPage() {
         </p>{" "}
       </section>
       <section className="bg-gray-100 py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900">
-            Our Planning Framework
+        <div className="container text-center mb-16">
+          <h2 className="text-5xl font-bold text-gray-900">
+            Our <span className="text-blue-500">Planning</span> Framework
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
             We structure our community planning process into clear, phased
@@ -154,8 +154,8 @@ export default function ConstructionManagementPage() {
 
       <section className="py-20 bg-sky-50">
         <div className="container ">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
-            What We Offer
+          <h2 className="text-5xl font-bold mb-10 text-center">
+            What We <span className="text-blue-500">Offer</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {offerings.map((item, i) => (
@@ -165,16 +165,18 @@ export default function ConstructionManagementPage() {
                 transition={{ duration: 0.3 }}
                 className="relative rounded-2xl overflow-hidden shadow-lg group"
               >
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  width={600}
-                  height={400}
-                  className="w-full h-[300px] object-cover"
-                />
+                <div className="h-[330px] w-full">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 group-hover:from-black/80 transition duration-300" />
                 <div className="absolute bottom-0 p-6 text-white z-10">
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
                   <p className="text-sm">{item.desc}</p>
                 </div>
               </motion.div>
@@ -190,7 +192,7 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-semibold text-gray-800 mb-6"
+            className="text-5xl font-[700] mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
           >
             Community Engagement & Stakeholder Collaboration
           </motion.h2>
@@ -200,7 +202,7 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto"
+            className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto"
           >
             We recognize that successful planning begins with listening. Al Yusr
             facilitates structured stakeholder consultations, public workshops,
@@ -222,7 +224,7 @@ export default function ConstructionManagementPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-green-800">
+              <h2 className="text-4xl font-bold mb-6 text-sky-800">
                 Sustainable & Resilient Communities
               </h2>
               <p className="mb-6 text-gray-700">
@@ -232,8 +234,8 @@ export default function ConstructionManagementPage() {
               <ul className="space-y-3 text-gray-800">
                 {sustainablePoints.map((point, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">
-                      <BadgeCheck />
+                    <span className=" mt-1">
+                      <BadgeCheck className="text-white fill-green-500" />
                     </span>
                     <span>{point}</span>
                   </li>
@@ -246,7 +248,7 @@ export default function ConstructionManagementPage() {
             </motion.div>
 
             <motion.div
-              className="rounded-2xl overflow-hidden shadow-lg"
+              className="rounded-2xl bg-slate-100 overflow-hidden shadow-lg"
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -287,7 +289,7 @@ export default function ConstructionManagementPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-900">
+              <h2 className="text-4xl font-bold mb-6 text-blue-900">
                 Our Experience
               </h2>
               <p className="mb-6 text-gray-700">
@@ -297,10 +299,10 @@ export default function ConstructionManagementPage() {
               <ul className="space-y-3 text-gray-800">
                 {experienceAreas.map((area, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-1">
-                      <BadgeCheck />
+                    <span className=" mt-1">
+                      <BadgeCheck className="text-white fill-green-500" />
                     </span>
-                    <span>{area}</span>
+                    <span className="">{area}</span>
                   </li>
                 ))}
               </ul>
@@ -316,12 +318,12 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-10"
+            className="text-5xl font-bold text-gray-800 mb-10"
           >
-            Why Al Yusr?
+            Why <span className="text-blue-500">Al Yusr?</span>
           </motion.h2>
 
-          <div className="grid gap-6 md:grid-cols-2 text-left max-w-4xl mx-auto">
+          <div className="grid gap-6 md:grid-cols-2 text-left max-w-5xl mx-auto">
             {points.map((point, index) => (
               <motion.div
                 key={index}
@@ -331,7 +333,7 @@ export default function ConstructionManagementPage() {
                 viewport={{ once: true }}
                 className="flex items-start gap-3 bg-blue-100 p-3 rounded-lg"
               >
-                <BadgeCheck className="text-green-600 mt-1 shrink-0" />
+                <BadgeCheck className="text-white fill-green-500 mt-1 shrink-0" />
                 <span className="text-gray-700 text-lg">{point}</span>
               </motion.div>
             ))}
