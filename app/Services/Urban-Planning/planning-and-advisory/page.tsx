@@ -134,7 +134,7 @@ Our approach ensures that strategies are not just designed from the top down, bu
           resilient.
         </p>
         <p className="mt-3 text-center w-full text-lg">
-          Whether you're planning a large-scale infrastructure project,
+          Whether you&apos;re planning a large-scale infrastructure project,
           designing a new city district, or reimagining an urban space, our
           advisory team delivers strategies that align with global best
           practices and national visions like Saudi Vision 2030. We combine

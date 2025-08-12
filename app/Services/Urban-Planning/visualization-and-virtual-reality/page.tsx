@@ -116,8 +116,8 @@ export default function ConstructionManagementPage() {
               <span className="text-blue-500">Empowering</span> Places
             </h1>
             <p className="mt-4">
-              We approach engagement as more than just information sharing; it's
-              about listening, learning, and co-creating. Whether we're
+              We approach engagement as more than just information sharing; it&apos;s
+              about listening, learning, and co-creating. Whether we&apos;re
               designing public realm improvements, infrastructure upgrades, or
               master plans, we ensure that every voice has a place in shaping
               the future.
