@@ -112,7 +112,11 @@ export const siteConfig = {
               link: "planning-and-advisory",
             },
             {
-              label: "Interior Architecture",
+              label: "Community Engagement",
+              link: "community-engagement",
+            },
+            {
+              label: "visualization-and-virtual-reality",
               link: "Interior-Architecture",
             },
           ],
