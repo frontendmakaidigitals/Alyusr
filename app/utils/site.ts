@@ -108,8 +108,8 @@ export const siteConfig = {
               link: "urban-policy",
             },
             {
-              label: "Architecture Design",
-              link: "Architecture-Design",
+              label: "Planning and Advisory Solutions",
+              link: "planning-and-advisory",
             },
             {
               label: "Interior Architecture",
