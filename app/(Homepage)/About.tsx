@@ -20,7 +20,7 @@ const About = () => {
         <div className="container mx-auto px-4  ">
           <div className="max-w-2xl">
             <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-              More Than<span className="text-blue-500">Engineering</span>, It’s
+              More Than{' '}<span className="text-blue-500">Engineering</span>, It’s
               a Commitment to{" "}
               <span className="text-blue-500">Our Partners</span>
             </h1>
