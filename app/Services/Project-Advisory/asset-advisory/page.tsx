@@ -119,7 +119,7 @@ export default function Page() {
           sustainability.
         </p>
         <p className="mt-3 text-center w-full text-lg">
-          Whether you're a government authority managing public assets, a
+          Whether you&apos;re a government authority managing public assets, a
           developer looking to maximize ROI, or a city preparing for future
           demands, we turn data into direction and infrastructure into impact.
         </p>

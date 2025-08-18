@@ -117,7 +117,7 @@ export default function Page() {
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
             Investing in resilience today can save millions tomorrow. With
             increasing threats from climate change, cyber risks, natural
-            hazards, and geopolitical uncertainty, it's critical to:
+            hazards, and geopolitical uncertainty, it&apos;s critical to:
           </p>
           <div className="grid gap-6 sm:grid-cols-2">
             {points.map((point, idx) => (

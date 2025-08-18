@@ -119,7 +119,7 @@ export default function Page() {
           At Al Yusr, we help clients make smart financial decisions throughout
           their project journey. Our cost management services are designed to
           provide accurate cost control, financial transparency, and strategic
-          guidance, from project planning to completion. Whether it's a
+          guidance, from project planning to completion. Whether it&apos;s a
           commercial tower, residential development, infrastructure project, or
           urban regeneration, we make sure your budget works harder and your
           investment delivers real value.
