@@ -122,27 +122,47 @@ export const siteConfig = {
           ],
         },
         {
-          label: "Sustainability Services",
+          label: "Project Advisory",
           items: [
             {
-              link: "Social Impact Assessment",
-              label: "Social Impact Assessment",
+              link: "Program Management",
+              label: "program-management",
             },
             {
-              link: "Climate Adaptation",
-              label: "Climate Adaptation",
+              link: "Project Planning",
+              label: "project-planning",
             },
             {
-              link: "Air Quality Consulting",
-              label: "Air Quality Consulting",
+              link: "Cost Management",
+              label: "cost-management",
             },
             {
-              link: "EHS Management",
-              label: "EHS Management",
+              link: "Strategic Consulting",
+              label: "strategic-consulting",
             },
             {
-              link: "Sustainability Advisory",
-              label: "Sustainability Advisory",
+              link: "Asset Advisory",
+              label: "asset-advisory",
+            },
+            {
+              link: "Risk Management & Resilience",
+              label: "risk-management-and-resilience",
+            },
+            {
+              link: "Process Development & Implementation",
+              label: "process-development-and-implementation",
+            },
+            {
+              link: "Process Simulation Models",
+              label: "process-simulation-models",
+            },
+            {
+              link: "Engineering Economics",
+              label: "engineering-economics",
+            },
+            {
+              link: "Commercial Operations and Maintenance",
+              label: "commercial-operations-and-maintenance",
             },
           ],
         },

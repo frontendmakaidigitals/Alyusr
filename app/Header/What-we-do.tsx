@@ -13,7 +13,7 @@ interface dataProps {
 const WhatWeDo = ({ data, locationsData }: dataProps) => {
   const [currIndex, setCurrIndex] = useState(0);
   return (
-    <div className="flex items-start justify-between gap-9 w-full">
+    <div className="flex items-start justify-between gap-7 w-full">
       <div>
         <div>
           <h3 className="text-lg font-[500]">Service We Provide</h3>
@@ -46,7 +46,7 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
           ))}
         </div>
       </div>
-      <div className="w-[300px] h-[320px] relative">
+      <div className="w-[280px] h-[420px] relative">
         <Link
           href={"/Services"}
           className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-3 py-[.4rem] rounded-full text-xs border border-black"
@@ -63,7 +63,7 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="w-md">
+      <div className="w-auto">
         <h3 className="text-lg font-[500] text-white">In These Locations</h3>
         <div className="mt-2 space-y-2 text-white">
           {locationsData.map((location, idx) => (
