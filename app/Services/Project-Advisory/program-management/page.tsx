@@ -60,7 +60,7 @@ export default function Page() {
         <p className="mt-3 text-center w-full text-lg">
           At Al Yusr Engineering Consulting, we understand that managing today’s
           infrastructure programs is about more than just delivering on time and
-          on budget. It's about aligning complex, multi-phase projects with
+          on budget. It&apos;s about aligning complex, multi-phase projects with
           broader strategic goals, environmental, economic, and social. Our
           Program Management services are designed to guide public and private
           sector clients through every step of their development journey,
