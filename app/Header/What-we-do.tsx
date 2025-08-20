@@ -33,6 +33,9 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
                           ? "Engineering-Infrastructure"
                           : service.label === "Urban Planning"
                           ? "Urban-Planning"
+                          : service.label ===
+                            "Transportation & Smart Mobility"
+                          ? "Transportation-and-Smart-Mobility"
                           : null
                       }/${item.link}`}
                     >
@@ -46,7 +49,8 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
           ))}
         </div>
       </div>
-      <div className="w-[280px] h-[420px] relative">
+      {/*
+       <div className="w-[280px] h-[420px] relative">
         <Link
           href={"/Services"}
           className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-3 py-[.4rem] rounded-full text-xs border border-black"
@@ -63,42 +67,8 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="w-auto">
-        <h3 className="text-lg font-[500] text-white">In These Locations</h3>
-        <div className="mt-2 space-y-2 text-white">
-          {locationsData.map((location, idx) => (
-            <div
-              onMouseEnter={() => setCurrIndex(idx)}
-              key={idx}
-              className="relative w-fit"
-            >
-              <p
-                className={`font-semibold flex items-center gap-2 ${
-                  currIndex == idx ? "text-blue-300" : ""
-                }`}
-              >
-                {location.country}{" "}
-                {currIndex === idx ? (
-                  <ChevronRight className="size-[14px]" />
-                ) : null}
-              </p>
-
-              {/* Show cities only on hover */}
-              {currIndex === idx &&
-                location.cities.length > 0 &&
-                location.cities[0] !== "" && (
-                  <div className="absolute space-y-1 left-[120%] top-0 ml-4  text-white  rounded shadow-md">
-                    {location.cities.map((city, cityIdx) => (
-                      <p key={cityIdx} className="">
-                        {city}
-                      </p>
-                    ))}
-                  </div>
-                )}
-            </div>
-          ))}
-        </div>
-      </div>
+     
+     */}
     </div>
   );
 };

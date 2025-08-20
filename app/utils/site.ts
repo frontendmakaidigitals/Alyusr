@@ -166,6 +166,51 @@ export const siteConfig = {
             },
           ],
         },
+        {
+          label: "Transportation & Smart Mobility",
+          items: [
+            {
+              label: "Urban Mobility",
+              link: "urban-mobility",
+            },
+            {
+              label: "Rail Network Modeling",
+              link: "rail-network-modeling",
+            },
+            {
+              label: "Pedestrian Flow Analysis",
+              link: "pedestrian-flow-analysis",
+            },
+            {
+              label: "Pedestrian Movement Modeling",
+              link: "pedestrian-movement-modeling",
+            },
+            {
+              label: "City Analytics",
+              link: "city-analytics",
+            },
+            {
+              label: "Smart Infrastructure & Digital Systems",
+              link: "smart-infrastructure-and-digitals-systems",
+            },
+            {
+              label: "Geo-Intelligence Analytics:",
+              link: "geo-intelligence-analytics",
+            },
+            {
+              label: "IT and Cybersecurity-",
+              link: "it-and-cybersecurity",
+            },
+            {
+              label: "Vertical Transportation Services",
+              link: "vertical-transportation-services",
+            },
+            {
+              label: "Public-Private Partnerships",
+              link: "public-private-partnerships",
+            },
+          ],
+        },
       ],
       tagLine2: "In These Locations",
       locationsData: [
