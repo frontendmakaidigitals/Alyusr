@@ -33,9 +33,10 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
                           ? "Engineering-Infrastructure"
                           : service.label === "Urban Planning"
                           ? "Urban-Planning"
-                          : service.label ===
-                            "Transportation & Smart Mobility"
+                          : service.label === "Transportation & Smart Mobility"
                           ? "Transportation-and-Smart-Mobility"
+                          : service.label === "Project Advisory"
+                          ? "Project-Advisory"
                           : null
                       }/${item.link}`}
                     >

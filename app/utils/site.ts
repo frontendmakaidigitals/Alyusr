@@ -211,6 +211,31 @@ export const siteConfig = {
             },
           ],
         },
+        {
+          label: "Environment, Sustainability & Resilience",
+          items: [
+            {
+              label: "Environmental Services",
+              link: "environmental-services",
+            },
+            {
+              label: "Climate Response",
+              link: "climate-response",
+            },
+            {
+              label: "Climate Adaptation",
+              link: "climate-adaptation",
+            },
+            {
+              label: "Air Quality Assessment",
+              link: "air-quality-assessment",
+            },
+            {
+              label: "Environmental Assessment",
+              link: "environmental-assessment",
+            },
+          ],
+        },
       ],
       tagLine2: "In These Locations",
       locationsData: [
