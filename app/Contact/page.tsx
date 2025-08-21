@@ -276,7 +276,7 @@ const Contact = () => {
                   className="flex items-center gap-5 border border-transparent rounded-2xl shadow-md p-3 hover:shadow-lg transition-transform transform hover:-translate-y-1"
                 >
                   {/* Flag image */}
-                  <div className="h-[80px] flex items-stretch">
+                  <div className="h-[85px] flex items-stretch">
                     <Image
                       src={office.flag}
                       alt={`${office.country} Flag`}
@@ -289,7 +289,7 @@ const Contact = () => {
                   {/* Text section */}
                   <div className="">
                     <h4
-                      className="text-lg font-medium tracking-wide"
+                      className="text-xl font-[600] tracking-wide"
                       style={{ color: office.text }}
                     >
                       {office.country}

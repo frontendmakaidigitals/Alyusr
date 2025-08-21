@@ -246,6 +246,26 @@ export const siteConfig = {
               label: "Environmental Assessment",
               link: "environmental-assessment",
             },
+            {
+              label: "Environmental Contracting",
+              link: "environmental-contracting",
+            },
+            {
+              label: "EHS Management Consulting",
+              link: "ehs-management-consulting",
+            },
+            {
+              label: "Digital EHS & ESG Solutions",
+              link: "ehs-and-esg-solutions",
+            },
+            {
+              label: "Unified Resilience",
+              link: "unified-resilience",
+            },
+            {
+              label: "Land Recovery & Redevelopment",
+              link: "land-recovery-and-redevelopment",
+            },
           ],
         },
       ],
