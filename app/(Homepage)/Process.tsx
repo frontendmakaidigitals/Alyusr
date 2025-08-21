@@ -33,7 +33,7 @@ const Process = () => {
           trigger: sectionRef.current,
           start: "top top",
           end: "+=3000",
-          scrub: true,
+          scrub: 1.1,
           pin: true,
           onUpdate: (self) => {
             if (circleRef.current) {

@@ -119,6 +119,18 @@ export const siteConfig = {
               label: "visualization-and-virtual-reality",
               link: "Interior-Architecture",
             },
+            {
+              label: "Landscape Architecture",
+              link: "Landscape-Architecture",
+            },
+            {
+              label: "Interior Architecture",
+              link: "Interior-Architecture",
+            },
+            {
+              label: "Architecture Design",
+              link: "Architecture-Design",
+            },
           ],
         },
         {
