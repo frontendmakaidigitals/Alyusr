@@ -1,13 +1,12 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MapPinned, Earth } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import BgLayer from "../app_chunks/BgLayer";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-
 import {
   Select,
   SelectContent,
@@ -18,30 +17,36 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Image from "next/image";
+
 const Contact = () => {
   const internationalOffices = [
     {
       country: "United Kingdom",
       city: "London Office",
       email: "uk@alyusr.com.sa",
-      flag: "/contact-flags/uk-flag.png",
+      flag: "/contact-flags/uk.jpg",
+      bg: "#E8EAF6", // indigo 50
+      text: "#1A237E", // indigo 900
     },
     {
       country: "Sri Lanka",
       city: "Colombo Office",
       email: "srilanka@alyusr.com.sa",
-      flag: "/contact-flags/sri-lanka.png",
+      flag: "/contact-flags/srilanka.png",
+      bg: "#FFF8E1", // amber 50
+      text: "#FF6F00", // amber 900
     },
     {
       country: "Egypt",
       city: "Cairo Office",
       email: "egypt@alyusr.com.sa",
-      flag: "/contact-flags/egypt-flag.png",
+      flag: "/contact-flags/egypt.png",
+      bg: "#FFEBEE", // red 50
+      text: "#B71C1C", // red 900
     },
   ];
 
   const [sectionTop, setSectionTop] = useState(0);
-
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   const yTransform = useTransform(
@@ -49,10 +54,12 @@ const Contact = () => {
     [sectionTop, sectionTop + 400],
     [0, 100]
   );
+
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
     setSectionTop(top);
   }, []);
+
   const Interests = [
     "Business Inquiries",
     "Careers",
@@ -69,8 +76,10 @@ const Contact = () => {
     "Southeast Asia",
     "Not region-specific or relevant",
   ];
+
   return (
     <section>
+      {/* Hero Section */}
       <motion.div
         ref={sectionRef}
         initial={{ height: "120vh" }}
@@ -78,92 +87,99 @@ const Contact = () => {
         transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
       >
-        <div className="relative z-30 container mx-auto py-10 flex flex-col justify-center items-center h-full max-w-3xl">
-          <h1 className="text-6xl font-[500] text-slate-50 text-center">
-            Contact us
-          </h1>
-          <p className="mt-3 text-slate-50 text-center">
+        <div className="relative z-30 container mx-auto py-16 flex flex-col justify-center items-center h-full max-w-4xl">
+          <motion.h1
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="text-6xl font-extrabold text-white text-center drop-shadow-md bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+          >
+            Contact Us
+          </motion.h1>
+          <motion.p
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="mt-5 text-lg text-slate-100/90 text-center leading-relaxed"
+          >
             We&apos;re here to answer your questions, explore opportunities, and
-            support your projects, every step of the way. Whether you&apos;re
+            support your projects every step of the way. Whether you&apos;re
             looking for engineering consultancy, design expertise, or project
-            management services, our team is ready to assist you. For project
-            consultations, RFPs, or business partnerships, please reach out via
-            email or use the enquiry form below.
-          </p>
+            management services, our team is ready to assist you.
+          </motion.p>
         </div>
-        <BgLayer color="bg-black/50 z-20" />
+        <BgLayer color="bg-black/60 z-20" />
 
-        {/* Parallax image */}
+        {/* Parallax Background */}
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-top"
           src="https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg"
-          alt=""
+          alt="Contact Background"
         />
       </motion.div>
 
       {/* Contact Info + Form */}
-      <div className="container mx-auto my-24 grid md:grid-cols-[1.2fr_0.8fr] gap-20 px-4">
+      <div className="container mx-auto my-24 grid md:grid-cols-[1.2fr_0.8fr] gap-16 px-6">
         {/* Enquiry Form */}
-        <div>
-          {" "}
-          <form className="bg-slate-50/40 backdrop-blur-md border border-slate-200/50 p-10 rounded-2xl  space-y-6">
-            <h2 className="text-3xl font-semibold text-slate-700">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <form className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-xl p-10 rounded-2xl space-y-6">
+            <h2 className="text-3xl font-bold text-slate-800 mb-4 border-l-4 border-blue-500 pl-3">
               Enquiry Form
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              {" "}
-              <div className="">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div>
                 <Label>First Name</Label>
                 <Input
                   type="text"
                   placeholder="John"
-                  className="mt-2 h-11 bg-white"
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
-              <div className="">
+              <div>
                 <Label>Last Name</Label>
                 <Input
                   type="text"
                   placeholder="Andrews"
-                  className="mt-2 h-11 bg-white"
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              {" "}
-              <div className="">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div>
                 <Label>Email</Label>
                 <Input
                   type="email"
                   placeholder="example@email.com"
-                  className="mt-2 h-11 bg-white"
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
-              <div className="">
+              <div>
                 <Label>Contact</Label>
                 <Input
                   type="number"
                   placeholder="+971 234 5678"
-                  className="mt-2 h-11 bg-white"
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              {" "}
-              <div className="">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div>
                 <Label>Company</Label>
                 <Input
                   type="text"
                   placeholder="Your Company"
-                  className="mt-2 h-11 bg-white"
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
-              <div className="">
+              <div>
                 <Label>Interest</Label>
                 <Select>
-                  <SelectTrigger className="w-full mt-2 !h-11 bg-white">
+                  <SelectTrigger className="w-full mt-2 !h-12 bg-slate-50">
                     <SelectValue placeholder="Select your Interest" />
                   </SelectTrigger>
                   <SelectContent>
@@ -179,16 +195,14 @@ const Contact = () => {
                 </Select>
               </div>
             </div>
-
             <div>
               <Label>Global Region</Label>
               <Select>
-                <SelectTrigger className="w-full mt-2 !h-11 bg-white">
+                <SelectTrigger className="w-full mt-2 !h-12 bg-slate-50">
                   <SelectValue placeholder="Select your Region" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Fruits</SelectLabel>
                     {locations.map((location, idx) => (
                       <SelectItem value={location} key={idx}>
                         {location}
@@ -200,26 +214,34 @@ const Contact = () => {
             </div>
             <div>
               <Label>Message</Label>
-              <Textarea rows={10} className="resize-none mt-2 h-32 bg-white" />
+              <Textarea
+                rows={6}
+                className="resize-none mt-2 bg-slate-50 h-32 focus:ring-2 focus:ring-blue-500"
+              />
             </div>
-
             <Button
               type="submit"
-              variant="outline"
-              className="bg-gradient-to-tr from-[#387EF0] to-[#2651C2] text-slate-50"
+              variant="default"
+              size={"lg"}
+              className="w-full bg-gradient-to-br from-blue-500 to-blue-700 text-white font-semibold  rounded-xl shadow-lg hover:scale-[1.02] transition"
             >
               Send Enquiry
             </Button>
           </form>
-        </div>
+        </motion.div>
 
         {/* Contact Info */}
-        <div className="space-y-14 text-slate-900">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="space-y-14 text-slate-900"
+        >
           <div>
-            <h3 className="text-2xl font-semibold mb-3">
-              📍 Head Office – Saudi Arabia
+            <h3 className="text-2xl flex items-center gap-2 font-semibold mb-3 text-sky-800">
+              <MapPinned className="text-sky-800" /> Head Office – Saudi Arabia
             </h3>
-            <p className="text-slate-900/80 leading-relaxed">
+            <p className="text-slate-700 leading-relaxed">
               <span className="font-semibold block">
                 ALYUSR Engineering Consulting
               </span>
@@ -227,52 +249,62 @@ const Contact = () => {
               <br />
               Riyadh 13313 – 8119, Saudi Arabia
             </p>
-            <div className="mt-4 space-y-2 text-slate-900/90">
+            <div className="mt-4 space-y-2 text-slate-800">
               <p className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-blue-400" /> +966 11 494 4444
+                <Phone className="w-4 h-4 text-blue-500" /> +966 11 494 4444
               </p>
               <p className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-blue-400" /> Fax: +966 11 494
+                <MapPin className="w-4 h-4 text-blue-500" /> Fax: +966 11 494
                 4440
               </p>
               <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-blue-400" /> info@alyusr.com.sa
+                <Mail className="w-4 h-4 text-blue-500" /> info@alyusr.com.sa
               </p>
             </div>
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold flex items-center gap-2 mb-5">
-              <img
-                src={"https://cdn-icons-png.flaticon.com/512/44/44386.png"}
-                alt={""}
-                className="size-6"
-              />
+            <h3 className="text-2xl font-semibold flex items-center gap-2 mb-5 text-sky-800">
+              <Earth />
               International Offices
             </h3>
-            <ul className="space-y-6 text-slate-900/90">
+            <ul className="space-y-6">
               {internationalOffices.map((office, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-5 bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition-all"
+                  style={{ backgroundColor: office.bg }}
+                  className="flex items-center gap-5 border border-transparent rounded-2xl shadow-md p-3 hover:shadow-lg transition-transform transform hover:-translate-y-1"
                 >
-                  <div className="h-[70px] flex items-stretch ">
+                  {/* Flag image */}
+                  <div className="h-[80px] flex items-stretch">
                     <Image
                       src={office.flag}
                       alt={`${office.country} Flag`}
-                      width={64}
-                      height={48}
-                      className="rounded-lg  h-full w-28 object-cover shadow"
+                      width={300}
+                      height={300}
+                      className="rounded-lg h-full w-32 object-cover shadow-sm"
                     />
                   </div>
 
-                  <div>
-                    <h4 className="text-lg font-semibold text-slate-900">
+                  {/* Text section */}
+                  <div className="">
+                    <h4
+                      className="text-lg font-medium tracking-wide"
+                      style={{ color: office.text }}
+                    >
                       {office.country}
                     </h4>
-                    <p className="text-sm text-slate-600">{office.city}</p>
-                    <div className="mt-1 flex items-center text-blue-500 text-sm">
-                      <Mail className="w-4 h-4 mr-1" />
+                    <p
+                      className="text-sm font-normal"
+                      style={{ color: office.text, opacity: 0.85 }}
+                    >
+                      {office.city}
+                    </p>
+                    <div
+                      className="mt-2 flex items-center text-sm font-medium"
+                      style={{ color: office.text }}
+                    >
+                      <Mail className="w-4 h-4 mr-1 opacity-90" />
                       {office.email}
                     </div>
                   </div>
@@ -280,7 +312,7 @@ const Contact = () => {
               ))}
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
