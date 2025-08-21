@@ -2,7 +2,7 @@
 import Image from "next/image";
 import EngineeringCTA from "@/app/app_chunks/CTA";
 import { Lightbulb, BarChart3, Wrench } from "lucide-react";
-import { motion } from "motion/react";
+
 import { Building2, Bus, Hotel, Landmark, Zap, Scale } from "lucide-react";
 
 export default function Page() {

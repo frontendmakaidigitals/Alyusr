@@ -19,7 +19,9 @@ const Process = () => {
   const sectionRef = useRef(null);
   const desktopCardsRef = useRef<(HTMLLIElement | null)[]>([]);
   const mobileCardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
+  const circleRef = useRef<SVGCircleElement | null>(null);
+  const [isComplete, setIsComplete] = React.useState(false);
+  console.log(isComplete);
   // ✅ Desktop animation
   useEffect(() => {
     const isDesktop = window.innerWidth >= 1024;
@@ -33,6 +35,19 @@ const Process = () => {
           end: "+=3000",
           scrub: true,
           pin: true,
+          onUpdate: (self) => {
+            if (circleRef.current) {
+              const circumference = circleRef.current.getTotalLength();
+              circleRef.current.style.strokeDasharray = `${circumference}`;
+              circleRef.current.style.strokeDashoffset = `${
+                circumference - self.progress * circumference
+              }`;
+            }
+            if (self.progress >= 1) {
+              setIsComplete(true);
+            }
+          },
+          onEnterBack: () => setIsComplete(false),
         },
       });
 
@@ -76,6 +91,15 @@ const Process = () => {
           scrub: true,
           pin: true,
           pinSpacing: true,
+          onUpdate: (self) => {
+            if (circleRef.current) {
+              const circumference = circleRef.current.getTotalLength();
+              circleRef.current.style.strokeDasharray = `${circumference}`;
+              circleRef.current.style.strokeDashoffset = `${
+                circumference - self.progress * circumference
+              }`;
+            }
+          },
         },
       });
 
@@ -115,6 +139,111 @@ const Process = () => {
 
   return (
     <section ref={sectionRef} className="relative bg-white z-10">
+      {/* ✅ Circular Loader */}
+      <div
+        className="fixed bottom-6 right-6 w-12 h-12 z-50"
+        ref={(el) => {
+          if (!el) return;
+
+          let scrollTimeout: NodeJS.Timeout | null = null;
+          let rippleTween: gsap.core.Tween | null = null;
+          const rippleCircle =
+            el.querySelector<SVGCircleElement>("#rippleCircle");
+
+          const startRipple = () => {
+            if (!rippleCircle || isComplete) return;
+
+            // reset before starting
+            gsap.set(rippleCircle, { scale: 1, opacity: 0.5 });
+
+            // kill old tween if exists
+            if (rippleTween) rippleTween.kill();
+
+            rippleTween = gsap.fromTo(
+              rippleCircle,
+              { scale: 1, opacity: 0.5 },
+              {
+                scale: 2.2,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out",
+                repeat: -1,
+                repeatDelay: 0.6,
+                transformOrigin: "center center",
+              }
+            );
+          };
+
+          const stopRipple = () => {
+            if (rippleTween) {
+              rippleTween.kill();
+              rippleTween = null;
+              console.log("ripple stopped");
+            }
+            if (rippleCircle) {
+              gsap.set(rippleCircle, { scale: 1, opacity: 0 });
+              console.log("ripple reset");
+            }
+          };
+
+          const handleScroll = () => {
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+
+            if (isComplete) {
+              stopRipple(); // ensure it’s killed
+              return; // 🚫 don’t schedule restart
+            }
+
+            stopRipple(); // stop immediately while scrolling
+
+            // only schedule restart if not complete
+            scrollTimeout = setTimeout(() => {
+              if (!isComplete) startRipple();
+            }, 800);
+          };
+
+          window.addEventListener("scroll", handleScroll);
+
+          // cleanup
+          return () => {
+            window.removeEventListener("scroll", handleScroll);
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+            stopRipple();
+          };
+        }}
+      >
+        <div
+          id="rippleCircle"
+          className="absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-12 h-12 bg-blue-500"
+        />
+        <svg className="w-full h-full -rotate-90 rounded-full bg-white">
+          {/* Background track (default color) */}
+          <circle
+            cx="50%"
+            cy="50%"
+            r="22"
+            stroke="#e5e7eb"
+            strokeWidth="3"
+            fill="transparent"
+          />
+          {/* Ripple circle (color effect) */}
+
+          {/* Progress circle (animated) */}
+          <circle
+            ref={circleRef}
+            cx="50%"
+            cy="50%"
+            r="22"
+            stroke="#3b82f6"
+            strokeWidth="3"
+            fill="transparent"
+            strokeDasharray="0"
+            strokeDashoffset="0"
+            strokeLinecap="round"
+          />
+        </svg>
+      </div>
+
       <div className="h-screen flex flex-col justify-center sticky top-0">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-semibold text-center mb-12">
@@ -132,7 +261,7 @@ const Process = () => {
                 className="w-full opacity-0 transform"
               >
                 <img
-                  src={`/process/${process}`} 
+                  src={`/process/${process}`}
                   alt={`Process ${idx + 1}`}
                   className="w-full object-contain"
                 />
@@ -151,7 +280,7 @@ const Process = () => {
                 className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300"
               >
                 <img
-                  src={`/process/${process}`} 
+                  src={`/process/${process}`}
                   alt={`Process ${idx + 1}`}
                   className="w-auto max-h-full object-contain"
                 />
