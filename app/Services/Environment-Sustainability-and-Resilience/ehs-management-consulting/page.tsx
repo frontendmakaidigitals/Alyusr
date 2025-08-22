@@ -127,7 +127,7 @@ export default function Page() {
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               We offer practical, and cost-effective EHS solutions across
-              corporate, regional, and facility levels. Whether you're building
+              corporate, regional, and facility levels. Whether you&apos;re building
               a new plant, improving existing systems, or navigating regulatory
               complexity, our experts partner with your team to assess, design,
               implement, and monitor EHS strategies that align with your
