@@ -8,15 +8,14 @@ function readDb() {
   return JSON.parse(file);
 }
 
-export async function PUT(req: Request) {
+export async function PUT(req: NextRequest) {
   try {
     const formData = await req.formData();
     const id = formData.get("id");
 
-    // ✅ read fresh db every time
     const db = readDb();
-
     const blog = db.blogs.find((b: any) => b.id === id);
+
     if (!blog) {
       return NextResponse.json(
         { success: false, error: "Blog not found" },
@@ -44,7 +43,6 @@ export async function PUT(req: Request) {
       blog.image = `/uploads/${file.name}`;
     }
 
-    // ✅ write back
     const dbPath = path.join(process.cwd(), "data/db.json");
     fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
 
@@ -58,27 +56,19 @@ export async function PUT(req: Request) {
   }
 }
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function GET(req: NextRequest, { params }: any) {
   try {
+    const { id } = params;
     const db = readDb();
-    const blog = db.blogs.find((b: any) => b.id === params.id);
+    const blog = db.blogs.find((b: any) => b.id === id);
 
     if (!blog) {
-      return NextResponse.json(
-        { success: false, error: "Blog not found" },
-        { status: 404 }
-      );
+      return NextResponse.json({ success: false, error: "Blog not found" }, { status: 404 });
     }
 
     return NextResponse.json({ success: true, blog });
   } catch (err) {
     console.error("Fetch failed:", err);
-    return NextResponse.json(
-      { success: false, error: "Failed to fetch blog" },
-      { status: 500 }
-    );
+    return NextResponse.json({ success: false, error: "Failed to fetch blog" }, { status: 500 });
   }
 }
