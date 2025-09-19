@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import fs from "fs";
 import path from "path";
 
@@ -59,7 +59,7 @@ export async function PUT(req: Request) {
 }
 
 export async function GET(
-  req: Request,
+  req: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
