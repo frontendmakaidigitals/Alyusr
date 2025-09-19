@@ -1,15 +1,7 @@
 "use client";
 import Image from "next/image";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-import {
-  Calculator,
-  Building2,
-  FileBarChart2,
-  Gem,
-  Handshake,
-  BadgeCheck,
-} from "lucide-react";
-import { motion } from "motion/react";
+import { BadgeCheck } from "lucide-react";
 export default function Page() {
   const services = [
     {
@@ -22,7 +14,7 @@ export default function Page() {
         "KPI frameworks and success metrics",
         "Visioning and value proposition development",
       ],
-      img: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg", // business meeting
+      img: "/project-advisory/strategic-consulting/business-transformation.jpg", // business meeting
     },
     {
       title: "Organizational Dynamics & Change Management",
@@ -34,7 +26,7 @@ export default function Page() {
         "Leadership alignment and communication strategies",
         "Implementation support and feedback loops",
       ],
-      img: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg", // teamwork
+      img: "/project-advisory/strategic-consulting/Business-mangement.webp", // teamwork
     },
     {
       title: "Place Strategies & Built Environment Alignment",
@@ -46,49 +38,10 @@ export default function Page() {
         "Spatial planning aligned with business operations",
         "Infrastructure planning for future growth",
       ],
-      img: "https://images.pexels.com/photos/313705/pexels-photo-313705.jpeg", // city planning
+      img: "/project-advisory/strategic-consulting/environment-friendly.webp", // city planning
     },
   ];
-  const features = [
-    {
-      title: "Cost Intelligence",
-      desc: "We leverage real project data and international benchmarks to provide realistic cost guidance.",
-      icon: <Calculator className="h-8 w-8 text-blue-600" />,
-    },
-    {
-      title: "Sector-Specific Expertise",
-      desc: "From infrastructure to high-rise buildings, we understand your industry and its financial pressures.",
-      icon: <Building2 className="h-8 w-8 text-blue-600" />,
-    },
-    {
-      title: "Transparent Reporting",
-      desc: "Our detailed, real-time cost tracking and reporting keep you in control at all times.",
-      icon: <FileBarChart2 className="h-8 w-8 text-blue-600" />,
-    },
-    {
-      title: "Value-Driven Design",
-      desc: "We help you maximize ROI through efficient designs that don’t compromise on quality.",
-      icon: <Gem className="h-8 w-8 text-blue-600" />,
-    },
-    {
-      title: "End-to-End Support",
-      desc: "From initial planning to project handover, we’re with you every step of the way.",
-      icon: <Handshake className="h-8 w-8 text-blue-600" />,
-    },
-  ];
-  const capabilities = [
-    "Cost Planning and Modeling",
-    "Feasibility Cost Estimates",
-    "Quantity Take-Off and Bill of Quantities (BOQ)",
-    "Whole-Life Costing and Lifecycle Analysis",
-    "Risk and Value Management",
-    "Procurement Advice and Tender Evaluation",
-    "Construction Cost Control",
-    "Contract Management and Dispute Resolution",
-    "Final Account Preparation",
-    "Repair and Maintenance Budgeting",
-    "Asset Valuation and Capital Planning",
-  ];
+
   const team = [
     "Urban planners & architects",
     "Business and innovation strategists",
@@ -105,13 +58,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/project-advisory/strategic-consulting/design-led.jpeg"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -130,10 +81,9 @@ export default function Page() {
       </section>
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center bg-white rounded-2xl shadow-lg overflow-hidden">
-          {/* Left Image */}
           <div className="h-full w-full">
             <img
-              src="/images/our-approach.jpg" // 🔹 Replace with your actual image
+              src="/project-advisory/strategic-consulting/design-led.png" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
             />

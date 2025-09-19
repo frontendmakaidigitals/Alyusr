@@ -20,10 +20,20 @@ const BlogListPage = () => {
 
   const [blogs, setBlogs] = useState<Blog[]>([]);
 
-  useEffect(() => {
-    // directly set imported data
-    setBlogs(blogsData.blogs);
-  }, []);
+ useEffect(() => {
+     const fetchBlogs = async () => {
+       try {
+         const res = await fetch("/api/blogs");
+         if (!res.ok) throw new Error("Failed to fetch blogs");
+         const data: Blog[] = await res.json();
+         setBlogs(data);
+       } catch (error) {
+         console.error("Error fetching blogs:", error);
+       }
+     };
+ 
+     fetchBlogs();
+   }, []);
 
   const handleDeleteBlog = (id: string) => {
     const confirmDelete = window.confirm(

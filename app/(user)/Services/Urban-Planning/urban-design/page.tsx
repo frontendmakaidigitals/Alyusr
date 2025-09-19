@@ -68,24 +68,25 @@ export default function ConstructionManagementPage() {
     {
       title: "Integrated Expertise",
       desc: "We bring together architects, engineers, urban planners, and environmental consultants to deliver complete, cross-functional solutions.",
-      img: "https://images.pexels.com/photos/8474027/pexels-photo-8474027.jpeg", // Replace with your image
+      img: "/urban-planning/urban-design/Integrated.jpeg",
     },
     {
       title: "Culturally Relevant",
       desc: "Our designs respect Saudi heritage while embracing innovation and global urban trends.",
-      img: "https://images.pexels.com/photos/8774355/pexels-photo-8774355.jpeg",
+      img: "/urban-planning/urban-design/Culturally.jpeg",
     },
     {
       title: "Sustainability-Driven",
       desc: "We plan for long-term social, economic, and environmental health.",
-      img: "https://images.pexels.com/photos/3184638/pexels-photo-3184638.jpeg",
+      img: "/urban-planning/urban-design/Sustainability-Driven.jpeg",
     },
     {
       title: "Community-Focused",
       desc: "Every design centers on the needs of the people who live and work there.",
-      img: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+      img: "/urban-planning/urban-design/Community-Focused.jpeg",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -95,40 +96,46 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/urban-planning/urban-design/hero.jpg"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={900}
         />
       </section>
-      <section className="px-4 max-w-5xl mt-10 mx-auto">
-        <p className="mt-3 text-center w-full text-lg">
-          At Al Yusr, we believe that great urban design shapes how people live,
-          work, and interact. As cities grow and evolve, so must the spaces that
-          support them. Our Urban Design team works at the crossroads of
-          architecture, infrastructure, and community to create places that are
-          not only functional and beautiful but also deeply connected to their
-          surroundings.
-        </p>{" "}
-        <p className="mt-2 text-lg text-center">
-          We design cities that are walkable, green, inclusive, and
-          future-ready. Our work transforms underused areas into vibrant
-          districts, improves the quality of public spaces, and helps
-          governments and developers build better, more liveable communities.
-          From large-scale masterplans to neighborhood upgrades, we focus on
-          creating environments that promote wellbeing, sustainability, and
-          cultural identity.
-        </p>
-        <p className="mt-2 text-lg text-center">
-          With expertise in both local Saudi landscapes and international
-          planning standards, Al Yusr brings a thoughtful, holistic approach to
-          every urban design project. Whether you are planning a new urban
-          district or revitalizing an old neighborhood, we ensure every space is
-          designed with people in mind.
-        </p>
+      <section className="mt-10">
+        <div className="grid container place-items-center grid-cols-1 lg:grid-cols-2 gap-9">
+          <div>
+            <h1 className="text-5xl font-[600]">
+              Designing Walkable, Green, and Future-Ready Cities
+            </h1>
+            <p className="mt-4 text-lg">
+              We design cities that are walkable, green, inclusive, and
+              future-ready. Our work transforms underused areas into vibrant
+              districts, improves the quality of public spaces, and helps
+              governments and developers build better, more liveable
+              communities. From large-scale masterplans to neighborhood
+              upgrades, we focus on creating environments that promote
+              wellbeing, sustainability, and cultural identity.
+            </p>
+            <p className="mt-2 text-lg">
+              With expertise in both local Saudi landscapes and international
+              planning standards, Al Yusr brings a thoughtful, holistic approach
+              to every urban design project. Whether you are planning a new
+              urban district or revitalizing an old neighborhood, we ensure
+              every space is designed with people in mind.
+            </p>
+          </div>
+          <div className="w-full h-[450px] rounded-lg">
+            <Image
+              width={500}
+              height={500}
+              src={"/urban-planning/urban-design/about.avif"}
+              className="w-full h-full object-cover"
+              alt={""}
+            />
+          </div>
+        </div>
       </section>
       <section className="py-20 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -201,14 +208,15 @@ export default function ConstructionManagementPage() {
           {reasons.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+              className="bg-white rounded-xl shadow overflow-hidden hover:shadow-md transition duration-300"
             >
-              <div className="w-full h-48 relative">
+              <div className="w-full h-52 relative">
                 <Image
                   src={item.img}
                   alt={item.title}
-                  fill
-                  className="object-cover"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="px-5 py-3 text-left">

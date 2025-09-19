@@ -9,27 +9,27 @@ export default function ConstructionManagementPage() {
     {
       title: "Site Assessments & Investigations",
       desc: "Identify pollutants and understand environmental risks.",
-      img: "/images/site-assessment.jpg",
+      img: "/urban-planning/urban-policy/Site-Investigation.jpg",
     },
     {
       title: "Remediation & Cleanup Design",
       desc: "Plan safe, cost-effective, and sustainable cleanup strategies.",
-      img: "/images/remediation.jpg",
+      img: "/urban-planning/urban-policy/cleanup-design.jpg",
     },
     {
       title: "Regulatory Guidance",
       desc: "Navigate complex environmental laws and secure approvals.",
-      img: "/images/regulatory.jpg",
+      img: "/urban-planning/urban-policy/Regulatory.jpg",
     },
     {
       title: "Restoration & Reuse Planning",
       desc: "Integrate site cleanup with future development goals.",
-      img: "/images/restoration.jpg",
+      img: "/urban-planning/urban-policy/Reuse Planning.jpeg",
     },
     {
       title: "Community Engagement",
       desc: "Build trust through transparent communication and stakeholder involvement.",
-      img: "/images/community.jpg",
+      img: "/urban-planning/urban-policy/Community Engagement.jpg",
     },
   ];
   const points = [
@@ -68,13 +68,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/urban-planning/urban-policy/hero.jpg"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -187,7 +185,7 @@ export default function ConstructionManagementPage() {
             className="relative w-full h-[430px] bg-slate-200 rounded-xl overflow-hidden shadow-md"
           >
             <Image
-              src="/images/regenerative-redevelopment.jpg" // Replace with your image path
+              src={"/urban-planning/urban-policy/about.png"} // Replace with your image path
               alt="Regenerative Redevelopment"
               fill
               className="object-cover"

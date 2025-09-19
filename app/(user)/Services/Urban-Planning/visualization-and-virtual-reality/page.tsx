@@ -15,27 +15,27 @@ export default function ConstructionManagementPage() {
     {
       title: "3D Visualization & Rendering",
       desc: "High-quality, photorealistic images that communicate design intent with precision, perfect for marketing, stakeholder approvals, and public presentations.",
-      img: "/images/3d-visualization.jpg",
+      img: "/urban-planning/visualization/Visualization.avif",
     },
     {
       title: "Virtual Reality (VR) Experiences",
       desc: "Immersive, interactive environments that allow users to virtually 'walk through' a space, providing an unparalleled understanding of scale, flow, and spatial relationships.",
-      img: "/images/vr-experience.jpg",
+      img: "/urban-planning/visualization/Virtual Reality.jpg",
     },
     {
       title: "Augmented Reality (AR) Integration",
       desc: "Overlay digital models on physical environments for real-time design reviews, public engagement, and field-based decision-making.",
-      img: "/images/ar-integration.jpg",
+      img: "/urban-planning/visualization/augumented.jpg",
     },
     {
       title: "Fly-Through Animations & Walkthroughs",
       desc: "Dynamic video sequences that simulate movement through a space, enhancing storytelling and enabling better visualization of architectural features and infrastructure.",
-      img: "/images/flythrough.jpg",
+      img: "/urban-planning/visualization/animations.jpg",
     },
     {
       title: "Photomontages & Contextual Imagery",
       desc: "Blending proposed developments into real-world photographs to evaluate visual impact and ensure contextual alignment with surrounding environments.",
-      img: "/images/photomontage.jpg",
+      img: "/urban-planning/visualization/Photomontages.avif",
     },
   ];
   const points = [
@@ -75,19 +75,17 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl  md:text-5xl font-bold mb-4 text-sky-800">
           Visualization and Virtual Reality
         </h1>
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
-          className="w-full h-full object-cover object-bottom"
-          alt={""}
-          width={500}
-          height={200}
+          src={"/urban-planning/visualization/hero.jpg"}
+          className="w-full h-full object-cover"
+          alt={"hero"}
+          width={1200}
+          height={700}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -110,7 +108,6 @@ export default function ConstructionManagementPage() {
       <section className="py-20">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 place-items-center">
           <div>
-            {" "}
             <h1 className="text-5xl font-[700]">
               <span className="text-blue-500">Engaging</span> People,{" "}
               <span className="text-blue-500">Empowering</span> Places
@@ -132,7 +129,13 @@ export default function ConstructionManagementPage() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-red-300">
-            <Image src={""} alt={""} className="" />
+            <Image
+              src={"/urban-planning/visualization/about1.jpg"}
+              alt={""}
+              width={500}
+              height={500}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -145,9 +148,7 @@ export default function ConstructionManagementPage() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -6 }}
-                transition={{ type: "spring", stiffness: 100 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col"
+                className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 flex flex-col"
               >
                 <div className="relative w-full h-48">
                   <Image
@@ -158,7 +159,7 @@ export default function ConstructionManagementPage() {
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 text-sm">{service.desc}</p>
@@ -210,13 +211,13 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative w-full h-80 md:h-full rounded-2xl overflow-hidden shadow-lg"
+            className="relative w-full h-[230px] lg:h-[420px]  rounded-lg overflow-hidden shadow-lg"
           >
             <Image
-              src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg"
+              src={"/urban-planning/visualization/about2.jpg"}
               alt="Visualization Communication"
               fill
-              className="object-cover"
+              className="object-cover w-full h-full"
             />
           </motion.div>
         </div>

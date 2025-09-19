@@ -7,7 +7,7 @@ export default function Page() {
     {
       title: "Facility Management",
       desc: "Comprehensive support to maintain daily operations and enhance long-term facility value.",
-      img: "/images/facility.jpg",
+      img: "/project-advisory/commercial-operations/Facility Management.avif",
       items: [
         "Routine & Preventive Maintenance",
         "Facility Engineering & Design Support",
@@ -19,7 +19,7 @@ export default function Page() {
     {
       title: "Hard Services",
       desc: "Hands-on maintenance and repairs handled by skilled, certified technicians.",
-      img: "/images/hard-services.jpg",
+      img: "/project-advisory/commercial-operations/hard-services.avif",
       items: [
         "HVAC, Electrical & Mechanical Systems",
         "Robotics, Cranes & Hoists Maintenance",
@@ -31,7 +31,7 @@ export default function Page() {
     {
       title: "Soft Services",
       desc: "Integrated non-technical support functions that improve workplace experience.",
-      img: "/images/soft-services.jpg",
+      img: "/project-advisory/commercial-operations/pest-control.avif",
       items: [
         "Janitorial & Cleaning",
         "Landscaping & Pest Control",
@@ -43,7 +43,7 @@ export default function Page() {
     {
       title: "Production Maintenance",
       desc: "Optimizing factory output by ensuring reliable operation of production assets.",
-      img: "/images/production.jpg",
+      img: "/project-advisory/commercial-operations/product-maintainence.avif",
       items: [
         "Full-Line & Plant Maintenance",
         "Reactive, Preventive & Predictive Maintenance (PdM)",
@@ -54,7 +54,7 @@ export default function Page() {
     {
       title: "Workplace & Space Solutions",
       desc: "Enhancing functionality, comfort, and efficiency of office environments.",
-      img: "/images/workplace.jpg",
+      img: "/project-advisory/commercial-operations/Space Solutions.avif",
       items: [
         "Space Planning & Capital Improvements",
         "Project & Furniture Management",
@@ -64,7 +64,7 @@ export default function Page() {
     {
       title: "Logistics & Supply Chain Services",
       desc: "Complete logistical support to streamline operations and reduce downtime.",
-      img: "/images/logistics.jpg",
+      img: "/project-advisory/commercial-operations/Logistics.avif",
       items: [
         "Global Logistics & Warehousing",
         "Customs Management & Material Preservation",
@@ -76,7 +76,7 @@ export default function Page() {
     {
       title: "Field Support",
       desc: "Deployment of skilled personnel across disciplines to meet urgent or complex needs.",
-      img: "/images/field-support.jpg",
+      img: "/project-advisory/commercial-operations/Field Support.avif",
       items: [
         "Construction & Plant Operations",
         "Process Safety Management & Quality Control",
@@ -87,7 +87,7 @@ export default function Page() {
     {
       title: "Integrated Management Support",
       desc: "Ensuring seamless, efficient operations through centralized process oversight.",
-      img: "/images/integrated.jpg",
+      img: "/project-advisory/commercial-operations/Support.avif",
       items: [
         "Finance & Accounting Integration",
         "Risk & SH&E (Safety, Health & Environment) Programs",
@@ -133,13 +133,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
-          className="w-full h-full object-cover object-bottom"
+          src={"/project-advisory/commercial-operations/hero.avif"}
+          className="w-full h-full object-cover object-top"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -159,7 +157,7 @@ export default function Page() {
       </section>
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-14">
+          <h2 className="text-3xl md:text-5xl font-bold text-center text-blue-900 mb-14">
             What We Deliver
           </h2>
 

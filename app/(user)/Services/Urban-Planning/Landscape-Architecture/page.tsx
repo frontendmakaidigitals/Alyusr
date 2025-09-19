@@ -19,19 +19,22 @@ export default function ConstructionManagementPage() {
       title: "Cultural Relevance",
       description:
         "We respect the local context, drawing from regional heritage, community values, and site-specific narratives to craft spaces that reflect the people they serve.",
-      gradient: "from-[#1e3a8a] to-[#3b82f6]", // blue gradient
+      gradient: "from-[#1e3a8a] to-[#3b82f6]",
+      img: "/urban-planning/landscape/Cultural.jpg",
     },
     {
       title: "Ecological Performance",
       description:
         "Our landscapes are designed to adapt and endure. We apply measurable sustainability metrics to ensure long-term environmental viability.",
-      gradient: "from-[#065f46] to-[#10b981]", // green gradient
+      gradient: "from-[#065f46] to-[#10b981]",
+      img: "/urban-planning/landscape/Ecological.jpg",
     },
     {
       title: "People-Centered Design",
       description:
         "We prioritize accessibility, safety, and inclusivity, creating spaces where people gather, move, relax, and thrive.",
-      gradient: "from-[#9d174d] to-[#ec4899]", // pink gradient
+      gradient: "from-[#9d174d] to-[#ec4899]",
+      img: "/urban-planning/landscape/People-Centered.jpg",
     },
   ];
   const services = [
@@ -87,13 +90,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/urban-planning/landscape/hero.jpg"}
           className="w-full h-full object-cover object-bottom"
-          alt={""}
-          width={500}
-          height={200}
+          alt={"hero"}
+          width={1200}
+          height={700}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -112,7 +113,7 @@ export default function ConstructionManagementPage() {
           value for our clients and communities.
         </p>
       </section>
-      <section className="bg-gray-50 py-20 px-4 md:px-10">
+      <section className="bg-gray-50 py-20 mt-16 px-4 md:px-10">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -149,13 +150,15 @@ export default function ConstructionManagementPage() {
               >
                 <div className=" w-full h-[230px] rounded-xl overflow-hidden bg-red-300">
                   <Image
-                    src={""}
+                    src={item.img}
+                    width={400}
+                    height={400}
                     className="w-full h-full object-cover"
                     alt={""}
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-xl font-semibold text-blue-700 mb-2">
+                  <h3 className="text-xl font-[700] text-blue-700 mb-2">
                     {item.title}
                   </h3>
                   <p className="text-sm">{item.description}</p>
@@ -212,11 +215,17 @@ export default function ConstructionManagementPage() {
       <section className="py-20 px-6 md:px-10 bg-blue-50">
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-10 container  ">
           <div className="bg-white p-6 rounded-xl grid grid-cols-1 place-items-center lg:grid-cols-2 gap-5">
-            <div className=" bg-blue-100 text-blue-800 h-[320px] rounded-xl w-full mb-5">
-              <Image src={""} alt={""} className="" />
+            <div className=" bg-blue-100 text-blue-800 h-[400px] rounded-xl w-full mb-5">
+              <Image
+                src={"/urban-planning/landscape/Landscape Performance.webp"}
+                alt={""}
+                width={800}
+                height={800}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
-              <h2 className="text-3xl font-semibold text-blue-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-[700] text-blue-900 mb-4">
                 Landscape Performance & Sustainability
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed">
@@ -232,7 +241,7 @@ export default function ConstructionManagementPage() {
 
           <div className="bg-white p-6 rounded-xl place-items-center grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-              <h2 className="text-3xl font-semibold text-blue-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-[700] text-blue-900 mb-4">
                 Global Vision, Local Impact
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed">
@@ -243,8 +252,14 @@ export default function ConstructionManagementPage() {
                 bring integrated and innovative solutions to life.
               </p>
             </div>
-            <div className=" bg-blue-100 text-blue-800 h-[320px] rounded-xl w-full mb-5">
-              <Image src={""} alt={""} className="" />
+            <div className=" bg-blue-100 text-blue-800 h-[400px] rounded-xl w-full mb-5">
+              <Image
+                src={"/urban-planning/landscape/global-vision.png"}
+                alt={""}
+                width={800}
+                height={800}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

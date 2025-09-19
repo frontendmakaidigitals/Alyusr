@@ -47,13 +47,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
-          className="w-full h-full object-cover object-bottom"
-          alt={""}
-          width={500}
-          height={200}
+          src={"/project-advisory/project-management/hero.avif"}
+          className="w-full h-full object-cover"
+          alt={"Program Management Hero"}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -94,15 +92,20 @@ export default function Page() {
               moves you closer to meaningful impact.
             </p>
           </div>
-          <div className="h-[450px] w-full bg-red-500">
-            <Image src={""} alt={""} className="" />
+          <div className="h-[450px] w-full bg-slate-100">
+            <Image
+              src={"/project-advisory/project-management/Leadership.avif"}
+              alt={"Outcome Driven Leadership"}
+              width={500}
+              height={500}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
 
       <section className="py-20 bg-gradient-to-br from-blue-50/20 to-blue-400/10">
         <div className="container max-w-7xl">
-          {/* Heading */}
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold text-gray-900">
               Our <span className="text-blue-500">Capabilities</span> at a
@@ -140,10 +143,11 @@ export default function Page() {
             {/* Image */}
             <div className="relative w-full h-80 lg:h-[400px] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
+                src={"/project-advisory/project-management/graph.avif"}
                 alt="Built for Scale"
-                fill
-                className="object-cover"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover"
               />
             </div>
             {/* Text */}
@@ -182,10 +186,11 @@ export default function Page() {
             {/* Image */}
             <div className="relative w-full h-80 lg:h-[400px] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="https://images.pexels.com/photos/3862383/pexels-photo-3862383.jpeg"
+                src="/project-advisory/project-management/digital.avif"
                 alt="Digital Delivery"
-                fill
-                className="object-cover"
+                className="object-cover w-full h-full"
+                width={500}
+                height={500}
               />
             </div>
           </div>

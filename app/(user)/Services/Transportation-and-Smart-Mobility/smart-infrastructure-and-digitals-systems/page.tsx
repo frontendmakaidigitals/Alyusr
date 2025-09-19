@@ -12,7 +12,7 @@ export default function Page() {
         "Funding & Policy Support: Strategy development, grant consulting, and compliance",
         "ICT Infrastructure: Voice, data, and video cabling; WAN, LAN, and PON systems",
       ],
-      image: "/images/connectivity.jpg",
+      image: "/Transportation-mobility/smart-infrastructure/global-connectivity.jpg",
     },
     {
       title: "Wireless & Satellite Communication",
@@ -22,7 +22,7 @@ export default function Page() {
         "Public Safety Communications: P25, VHF/UHF radio systems for emergency response",
         "LEO Satellite Systems for remote and maritime connectivity",
       ],
-      image: "/images/wireless.jpg",
+      image: "/Transportation-mobility/smart-infrastructure/multi-network.jpg",
     },
     {
       title: "Healthcare Technology Solutions",
@@ -31,7 +31,7 @@ export default function Page() {
         "Safety & Security: Infant protection, RTLS, automated dispensing cabinets (ADC)",
         "Medical IoT: Device connectivity for better patient care and operational efficiency",
       ],
-      image: "/images/healthcare.jpg",
+      image: "/Transportation-mobility/smart-infrastructure/healthcare.jpg",
     },
     {
       title: "Security & Cyber Resilience",
@@ -40,7 +40,7 @@ export default function Page() {
         "Cybersecurity: OT security, ICS protection, compliance with global cybersecurity frameworks",
         "Risk Management: Threat modeling, penetration testing, disaster recovery planning",
       ],
-      image: "/images/security.jpg",
+      image: "/Transportation-mobility/smart-infrastructure/security.webp",
     },
     {
       title: "Smart Buildings & IoT",
@@ -50,7 +50,7 @@ export default function Page() {
         "Digital Twins: Real-time simulation of building performance for predictive maintenance",
         "IoT Integration: Connecting devices and systems for intelligent, automated environments",
       ],
-      image: "/images/smart-buildings.jpg",
+      image: "/Transportation-mobility/smart-infrastructure/smart-buildings.jpeg",
     },
     {
       title: "Mission-Critical Technologies",
@@ -59,7 +59,7 @@ export default function Page() {
         "Audiovisual & Integrated Experiences: Smart conference rooms, immersive multimedia, and public engagement systems",
         "Smart Systems Control: Unified platforms for infrastructure management",
       ],
-      image: "/images/mission.jpg",
+      image: "/Transportation-mobility/smart-infrastructure/Mission-Critical.webp",
     },
   ];
   const reasons = [
@@ -123,7 +123,7 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Transportation-mobility/smart-infrastructure/hero.jpg"} className="w-full h-full object-cover" alt={""} />
           </div>
         </div>
       </section>

@@ -43,32 +43,32 @@ export default function Page() {
     {
       title: "Low-Carbon, High-Performance Developments",
       desc: "Tools and metrics to reduce carbon emissions, optimize energy use, and improve operational performance in urban environments.",
-      img: "/images/low-carbon.jpg",
+      img: "/Transportation-mobility/city-analytics/low-carbon.jpg",
     },
     {
       title: "Strategic Energy & Emissions Planning",
       desc: "Integrated modeling of energy demand, renewable potential, and emissions forecasting to support sustainable urban transitions.",
-      img: "/images/energy-planning.jpg",
+      img: "/Transportation-mobility/city-analytics/Emissions Planning.jpg",
     },
     {
       title: "Sustainable Infrastructure",
       desc: "Assessing infrastructure needs using lifecycle, cost-benefit, and environmental impact data for smarter investments.",
-      img: "/images/sustainable-infra.jpg",
+      img: "/Transportation-mobility/city-analytics/sustainable-infra.jpg",
     },
     {
       title: "Climate Resilience & Risk Modeling",
       desc: "Identifying and mitigating climate-related risks (heat, flooding, water stress) through spatial and temporal data analysis.",
-      img: "/images/climate-risk.jpg",
+      img: "/Transportation-mobility/city-analytics/Climate Resilience.jpg",
     },
     {
       title: "Smart City Systems & Integration",
       desc: "Building digital frameworks for connected services, mobility, utilities, waste, and governance, to improve citizen experience.",
-      img: "/images/smart-city.jpg",
+      img: "/Transportation-mobility/city-analytics/smart-city.jpg",
     },
     {
       title: "Interactive Online Planning Tools",
       desc: "Custom dashboards and GIS platforms for engaging stakeholders and visualizing the impact of planning scenarios in real time.",
-      img: "/images/planning-tools.jpg",
+      img: "/Transportation-mobility/city-analytics/technology.jpeg",
     },
   ];
 
@@ -102,7 +102,7 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Transportation-mobility/city-analytics/hero.webp"} className="w-full h-full object-cover" alt={""} />
           </div>
         </div>
       </section>
@@ -110,7 +110,7 @@ export default function Page() {
         <div className="container grid grid-cols-1 lg:grid-cols-2 place-items-center gap-12">
           {/* Image Left */}
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Transportation-mobility/city-analytics/visualizing.jpg"} className="w-full h-full object-cover" alt={""} />
           </div>
 
           {/* Content Right */}

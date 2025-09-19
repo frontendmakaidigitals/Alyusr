@@ -36,32 +36,32 @@ export default function ConstructionManagementPage() {
     {
       title: "Strategic Master Planning",
       desc: "Integrated land use plans that define the future shape, purpose, and scale of development.",
-      img: "/images/master-planning.jpg",
+      img: "/urban-planning/community-planning/Strategic Master.jpeg",
     },
     {
       title: "Community-Centered Design",
       desc: "Plans that prioritize walkability, accessibility, cultural integration, and social well-being.",
-      img: "/images/community-design.jpg",
+      img: "/urban-planning/community-planning/Community-Centered.jpeg",
     },
     {
       title: "Regulatory Planning & Zoning Support",
       desc: "Analysis and recommendations to align your development with local laws, environmental constraints, and growth policies.",
-      img: "/images/regulatory.jpg",
+      img: "/urban-planning/community-planning/Regulatory Planning.jpeg",
     },
     {
       title: "Green Infrastructure & Public Realm",
       desc: "Nature-based solutions and inclusive spaces that enhance the quality of life and urban resilience.",
-      img: "/images/green-infra.jpg",
+      img: "/urban-planning/community-planning/Green Infrastructure.jpeg",
     },
     {
       title: "Mobility & Connectivity Frameworks",
       desc: "Planning for inclusive transportation options, roads, public transit, pedestrian, and cycling networks.",
-      img: "/images/mobility.jpg",
+      img: "/urban-planning/community-planning/Mobility.jpeg",
     },
     {
       title: "Economic & Social Sustainability",
       desc: "Creating communities that are economically viable and socially balanced across demographics.",
-      img: "/images/sustainability.jpg",
+      img: "/urban-planning/community-planning/Social Sustainability.jpeg",
     },
   ];
 
@@ -97,13 +97,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/urban-planning/community-planning/hero.jpg"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1100}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -255,10 +253,10 @@ export default function ConstructionManagementPage() {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/sustainability.jpg"
+                src={"/urban-planning/community-planning/Resilient Communities.jpg"}
                 alt="Sustainable Community"
-                width={800}
-                height={600}
+                width={900}
+                height={900}
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -274,10 +272,10 @@ export default function ConstructionManagementPage() {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/experience.jpg"
+                src={"/urban-planning/community-planning/private-sector.avif"}
                 alt="Urban Development Experience"
-                width={800}
-                height={600}
+                width={1200}
+                height={900}
                 className="w-full h-full object-cover"
               />
             </motion.div>

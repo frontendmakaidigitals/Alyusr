@@ -167,7 +167,11 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img
+              src={"/Transportation-mobility/pedestrian-flow-analysis/hero.jpg"}
+              className="w-full h-full object-cover"
+              alt={""}
+            />
           </div>
         </div>
       </section>
@@ -209,8 +213,14 @@ export default function Page() {
             </div>
 
             {/* Image / Illustration */}
-            <div className="w-full h-80 bg-gray-200 rounded-2xl shadow-md flex items-center justify-center text-gray-500">
-              Image/Illustration Placeholder
+            <div className="w-full h-[400px] bg-slate-100 rounded-lg">
+              <img
+                src={
+                  "/Transportation-mobility/pedestrian-flow-analysis/Pedestrian Flow Analysis.jpg"
+                }
+                className="w-full h-full object-cover"
+                alt={""}
+              />
             </div>
           </div>
 
@@ -293,7 +303,7 @@ export default function Page() {
           {/* Image */}
           <div>
             <img
-              src="https://images.pexels.com/photos/301930/pexels-photo-301930.jpeg"
+              src="/Transportation-mobility/pedestrian-flow-analysis/why-choose.jpg"
               alt="Why Choose Al Yusr"
               className="rounded-2xl shadow-lg w-full h-[450px] object-cover"
             />

@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <header className=" bg-[#000000] relative z-50">
       <div className="flex py-3 lg:py-0 justify-between items-center container mx-auto">
-        <Logo />
+        <Logo  />
 
         {/* Menu Starts from here */}
 

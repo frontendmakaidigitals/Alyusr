@@ -13,7 +13,7 @@ export default function Page() {
         "Tracking growth in cycling, walking, and micro-mobility adoption.",
         "Identifying patterns in urban freight delivery to reduce congestion.",
       ],
-      image: "/images/scope/travel.jpg",
+      image: "/Transportation-mobility/urban-mobility/travel-pattern.jpg",
     },
     {
       title: "Technology Integration",
@@ -23,7 +23,7 @@ export default function Page() {
         "Integrate smart traffic signals for smoother flow.",
         "Develop infrastructure that can support driverless public transport.",
       ],
-      image: "/images/scope/technology.jpg",
+      image: "/Transportation-mobility/urban-mobility/tech-integeration.webp",
     },
     {
       title: "Shared Mobility Solutions",
@@ -33,7 +33,7 @@ export default function Page() {
         "Car-sharing programs to reduce private car dependency.",
         "E-scooter and micro-mobility hubs in high-demand zones.",
       ],
-      image: "/images/scope/shared.jpg",
+      image: "/Transportation-mobility/urban-mobility/shared-mobility.jpg",
     },
     {
       title: "Freight & Logistics Planning",
@@ -43,7 +43,7 @@ export default function Page() {
         "Develop time-restricted delivery schedules for efficiency.",
         "Incorporate low-emission freight vehicles into urban supply chains.",
       ],
-      image: "/images/scope/freight.jpg",
+      image: "/Transportation-mobility/urban-mobility/freight-planning.jpg",
     },
     {
       title: "Sustainable Transport Planning",
@@ -54,7 +54,7 @@ export default function Page() {
         "Cycling infrastructure that is safe and connected.",
         "Initiatives to reduce single-occupancy vehicle trips.",
       ],
-      image: "/images/scope/sustainable.jpg",
+      image: "/Transportation-mobility/urban-mobility/Sustainable-planning.jpg",
     },
     {
       title: "Mobilitics™ Scenario Planning",
@@ -64,7 +64,7 @@ export default function Page() {
         "Assess infrastructure resilience against future challenges.",
         "Test different investment strategies before committing resources.",
       ],
-      image: "/images/scope/mobilitics.jpg",
+      image: "/Transportation-mobility/urban-mobility/Scenario Planning.jpg",
     },
   ];
   const reasons = [
@@ -114,12 +114,12 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Transportation-mobility/urban-mobility/hero.png"} className="w-full h-full object-cover" alt={""} />
           </div>
         </div>
       </section>
       <section className="py-16 px-6 lg:px-20 bg-gray-50">
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-5xl font-bold text-center mb-12">
           Our <span className="text-blue-600">Scope of Work</span>
         </h2>
         <div className="space-y-20">
@@ -132,7 +132,7 @@ export default function Page() {
             >
               {/* Text */}
               <div className="lg:w-1/2">
-                <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+                <h3 className="text-3xl font-semibold mb-4">{item.title}</h3>
                 <p className="text-gray-600 mb-4">{item.desc}</p>
                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
                   {item.points.map((point, idx) => (

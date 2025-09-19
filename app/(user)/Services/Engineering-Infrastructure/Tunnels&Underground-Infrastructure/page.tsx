@@ -56,7 +56,7 @@ export default function ConstructionManagementPage() {
         "Project scheduling & risk management",
         "Program and construction oversight",
       ],
-      image: "/images/services/planning.jpg",
+      img:"/Engineering-Infrastructure/underground/Planning.avif"
     },
     {
       title: "Geotechnical & Geological Engineering",
@@ -67,7 +67,7 @@ export default function ConstructionManagementPage() {
         "Geotechnical risk assessment",
         "Settlement prediction and monitoring",
       ],
-      image: "/images/services/geotechnical.jpg",
+      img:"/Engineering-Infrastructure/underground/Geological.avif"
     },
     {
       title: "Tunnel Design & Engineering",
@@ -78,7 +78,7 @@ export default function ConstructionManagementPage() {
         "NATM/SEM: For complex geological conditions",
         "Cut-and-Cover & Trenchless Systems",
       ],
-      image: "/images/services/tunnel-design.jpg",
+      img:"/Engineering-Infrastructure/underground/tunnel-design.avif"
     },
     {
       title: "Trenchless Technology Solutions",
@@ -89,7 +89,7 @@ export default function ConstructionManagementPage() {
         "Pipe jacking",
         "Auger boring",
       ],
-      image: "/images/services/trenchless.jpg",
+      img:"/Engineering-Infrastructure/underground/trenchless.jpg"
     },
     {
       title: "Tunnel Inspection, Rehab & Asset Management",
@@ -101,7 +101,7 @@ export default function ConstructionManagementPage() {
         "Structural rehabilitation",
         "Asset tracking and lifecycle management",
       ],
-      image: "/images/services/inspection.jpg",
+      img:"/Engineering-Infrastructure/underground/tunnel-inspection.jpeg"
     },
     {
       title: "Resident Engineering & Construction Support",
@@ -113,7 +113,7 @@ export default function ConstructionManagementPage() {
         "Safety audits and progress reporting",
         "Change management and claim analysis",
       ],
-      image: "/images/services/construction.jpg",
+      img:"/Engineering-Infrastructure/underground/resident-engineer.webp"
     },
   ];
 
@@ -127,12 +127,12 @@ export default function ConstructionManagementPage() {
       <section className=" w-full h-[500px] text-center ">
         <Image
           src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
+            "/Engineering-Infrastructure/underground/hero.jpg"
           }
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -182,7 +182,7 @@ export default function ConstructionManagementPage() {
                 } w-full h-[300px] bg-green-500 md:h-[380px] overflow-hidden rounded-2xl`}
               >
                 <img
-                  src={item.image}
+                  src={item.img}
                   alt={item.title}
                   className="w-full h-full object-cover rounded-2xl"
                 />

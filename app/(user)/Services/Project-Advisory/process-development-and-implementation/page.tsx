@@ -1,15 +1,7 @@
 "use client";
 import Image from "next/image";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-import {
-  Landmark,
-  Building2,
-  Hospital,
-  Train,
-  Factory,
-  BadgeCheck,
-} from "lucide-react";
-import { motion } from "motion/react";
+import { Building2, BadgeCheck } from "lucide-react";
 import {
   Wrench,
   LineChart,
@@ -40,54 +32,54 @@ export default function Page() {
     {
       title: "Air Pollution Control",
       desc: "We design and implement systems for dust, gas, and particulate removal to meet environmental air quality standards.",
-      img: "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg", // smokestack/air pollution
+      img: "/project-advisory/process-development/air-pollution.jpeg", // smokestack/air pollution
     },
     {
       title: "Alternative Fuels & Clean Energy",
       desc: "Our engineers develop fuel conversion processes and support clients in transitioning to hydrogen, biomass, and other sustainable energy sources.",
-      img: "https://images.pexels.com/photos/885350/pexels-photo-885350.jpeg", // clean energy
+      img: "/project-advisory/process-development/clean-energy.webp", // clean energy
     },
     {
       title: "Carbon Capture & Sequestration (CCS)",
       desc: "We provide end-to-end solutions for CO₂ capture, storage, and integration into existing facilities, helping industries decarbonize responsibly.",
-      img: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg", // carbon capture style
+      img: "/project-advisory/process-development/carbon.jpeg", // carbon capture style
     },
     {
       title: "Long-Duration Energy Storage",
       desc: "We support energy resilience through advanced storage technologies that ensure grid stability and optimize renewable energy use.",
-      img: "https://images.pexels.com/photos/159298/power-pole-dusk-sky-sunset-159298.jpeg", // energy storage
+      img: "/project-advisory/process-development/battery.jpg", // energy storage
     },
     {
       title: "Water & Wastewater Treatment",
       desc: "From industrial reuse to zero liquid discharge, we create treatment systems that ensure water security and environmental protection.",
-      img: "https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg", // water treatment
+      img: "/project-advisory/process-development/Wastewater-treatment.jpg", // water treatment
     },
     {
       title: "PFAS & Emerging Contaminant Removal",
       desc: "We offer tailored treatability studies and process design for challenging contaminants in air, soil, and water.",
-      img: "https://images.pexels.com/photos/129574/pexels-photo-129574.jpeg", // lab/contaminants
+      img: "/project-advisory/process-development/contaminant-removal.jpg", // lab/contaminants
     },
     {
       title: "Solid Waste & Byproduct Management",
       desc: "We engineer solutions for waste minimization, recovery, and disposal that align with circular economy principles.",
-      img: "https://images.pexels.com/photos/128421/pexels-photo-128421.jpeg", // recycling waste
+      img: "/project-advisory/process-development/solid-waste.jpg", // recycling waste
     },
   ];
   const services = [
     {
       title: "Process Hazard Analysis (PHA)",
       desc: "Risk assessment and safety systems design to ensure reliable and safe operations.",
-      img: "https://images.pexels.com/photos/532500/pexels-photo-532500.jpeg", // safety/industry
+      img: "/project-advisory/process-development/process-hazard.avif", // safety/industry
     },
     {
       title: "Control Systems & Instrumentation",
       desc: "Fully integrated automation, monitoring, and SCADA systems for better performance and traceability.",
-      img: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg", // control systems
+      img: "/project-advisory/process-development/Control Systems.avif", // control systems
     },
     {
       title: "Brownfield Upgrades & Retrofits",
       desc: "Modernizing legacy systems with minimal disruption to improve efficiency and meet new regulations.",
-      img: "https://images.pexels.com/photos/415945/pexels-photo-415945.jpeg", // upgrade/retrofit
+      img: "/project-advisory/process-development/upgrades.jpg", // upgrade/retrofit
     },
   ];
   return (
@@ -99,13 +91,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/project-advisory/process-development/hero.avif"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -130,7 +120,7 @@ export default function Page() {
           {/* Left Image */}
           <div className="h-full w-full">
             <img
-              src="/images/our-approach.jpg" // 🔹 Replace with your actual image
+              src="/project-advisory/process-development/smart-solution.avif" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
             />
@@ -138,8 +128,10 @@ export default function Page() {
 
           {/* Right Content */}
           <div className="p-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Smart Process Solutions from Start to Finish
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <span className="text-blue-500">Smart</span> Process{" "}
+              <span className="text-blue-500">Solutions</span> from Start to
+              Finish
             </h2>
 
             <p className="text-gray-700 mb-6">
@@ -160,8 +152,8 @@ export default function Page() {
       </section>{" "}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-6">
-            Our Capabilities at a Glance
+          <h2 className="text-5xl font-bold text-center mb-6">
+            Our <span className="text-blue-500">Capabilities</span> at a Glance
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
             Our services span consulting, design, and implementation, supporting
@@ -188,19 +180,19 @@ export default function Page() {
       </section>{" "}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Core Areas of Expertise
+          <h2 className="text-5xl font-bold text-center mb-12">
+            <span className="text-blue-500">Core Areas</span> of Expertise
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {expertise.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col"
+                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition flex flex-col"
               >
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-40 object-cover"
+                  className="w-full h-[250px] object-cover"
                 />
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold mb-3 text-gray-800">
@@ -222,12 +214,12 @@ export default function Page() {
             {services.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-gray-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col"
+                className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition flex flex-col"
               >
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-40 object-cover"
+                  className="w-full h-[230px] object-cover"
                 />
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold mb-3 text-gray-800">

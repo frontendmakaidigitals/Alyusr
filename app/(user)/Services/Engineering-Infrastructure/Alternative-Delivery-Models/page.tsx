@@ -15,27 +15,31 @@ export default function ConstructionManagementPage() {
     {
       title: "Design-Build (DB)",
       desc: "Combines design and construction into one contract and one team. This model speeds up timelines, simplifies communication, and ensures accountability.",
-      image: "/images/model1.jpg",
+      image:
+        "/Engineering-Infrastructure/alternative-delivery/design-build.jpg",
     },
     {
       title: "Integrated Project Delivery (IPD)",
       desc: "A highly collaborative process where the owner, designers, and builders share responsibilities, risks, and rewards. This approach enhances transparency, reduces waste, and improves value delivery.",
-      image: "/images/model2.jpg",
+      image:
+        "/Engineering-Infrastructure/alternative-delivery/construction-management.jpg",
     },
     {
       title: "Public-Private Partnerships (PPP)",
       desc: "Private sector investment and expertise are used to finance, build, and operate public projects, reducing public risk while delivering high-quality assets.",
-      image: "/images/model3.jpg",
+      image: "/Engineering-Infrastructure/alternative-delivery/ppp.jpg",
     },
     {
       title: "Construction Management at Risk (CMAR)",
       desc: "Gives the owner more design control while ensuring budget certainty. The construction manager acts as a consultant during design and assumes construction risk during execution.",
-      image: "/images/model4.jpg",
+      image:
+        "/Engineering-Infrastructure/alternative-delivery/Public-Private.jpg",
     },
     {
       title: "Progressive Design-Build",
       desc: "An evolving model where design and cost development happen collaboratively, allowing for flexibility and shared decision-making throughout the process.",
-      image: "/images/model5.jpg",
+      image:
+        "/Engineering-Infrastructure/alternative-delivery/Design-Builds.jpg",
     },
   ];
 
@@ -87,11 +91,9 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/Engineering-Infrastructure/alternative-delivery/hero.jpg"}
           className="w-full h-full object-cover object-bottom"
-          alt={""}
+          alt={"Alternative Delivery Models"}
           width={500}
           height={200}
         />
@@ -129,8 +131,14 @@ export default function ConstructionManagementPage() {
               fragmentation, and encourage team alignment from day one.
             </p>
           </div>
-          <div className="w-full h-[370px] bg-green-500">
-            <img src={""} alt={""} className="" />
+          <div className="w-full h-[370px] bg-slate-100 overflow-hidden">
+            <img
+              src={
+                "/Engineering-Infrastructure/alternative-delivery/why-us.jpg"
+              }
+              alt={""}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -164,26 +172,6 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
 
-      <section className="bg-sky-50 mt-10 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-10 container">
-          <div className="w-full h-[400px] bg-orange-400">
-            <img src={""} alt={""} className="" />
-          </div>
-          <div className="">
-            <h2 className="text-5xl font-bold text-sky-900 mb-16">
-              What Are Alternative Delivery Models?
-            </h2>
-            <p>
-              Alternative Delivery Models (ADMs) are innovative methods of
-              executing construction and infrastructure projects that integrate
-              planning, design, financing, and construction in more flexible and
-              collaborative ways. Unlike the traditional design-bid-build
-              process, these approaches streamline workflows, reduce
-              fragmentation, and encourage team alignment from day one.
-            </p>
-          </div>
-        </div>
-      </section>
       <section className="bg-gray-100 text-gray-900 py-16">
         <div className="container">
           <h2 className="text-5xl max-w-4xl mx-auto font-bold text-center mb-10">
@@ -228,8 +216,14 @@ export default function ConstructionManagementPage() {
               lifecycle.
             </p>
           </div>
-          <div className="w-full h-[400px] bg-green-500">
-            <img src={""} alt={""} className="" />
+          <div className="w-full h-[400px] bg-slate-100 overflow-hidden">
+            <img
+              src={
+                "/Engineering-Infrastructure/alternative-delivery/our-value.jpg"
+              }
+              alt={""}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>

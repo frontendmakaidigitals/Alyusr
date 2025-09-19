@@ -5,8 +5,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 
@@ -48,27 +46,27 @@ const differentiators = [
   {
     title: "CEO-Led, Specialized Departments",
     desc: "Our leadership is directly involved in driving project excellence. Each department is led by domain experts, ensuring in-depth technical insight and fast, informed decision-making.",
-    image: "/construction/ceo-led.jpg",
+    image: "/Engineering-Infrastructure/construction/ceo-led.jpg", // business leadership / CEO
   },
   {
     title: "In-House Capabilities",
     desc: "We offer fully integrated services under one roof, allowing seamless collaboration, cost control, and faster delivery.",
-    image: "/construction/in-house.jpg",
+    image: "/Engineering-Infrastructure/construction/inhouse.avif", // teamwork / collaboration
   },
   {
     title: "Class A Certified & Globally Recognized",
     desc: "Licensed in the Kingdom with Class A certification and multiple ISO standards, trusted by both government entities and private developers.",
-    image: "/construction/certified.jpg",
+    image: "/Engineering-Infrastructure/construction/certified.avif", // certificate / achievement
   },
   {
     title: "Proven Track Record in Mega Projects",
     desc: "From large-scale urban infrastructure to complex engineering projects, we deliver with consistency, accountability, and measurable results.",
-    image: "/construction/track-record.jpg",
+    image: "/Engineering-Infrastructure/construction/track-record.avif", // mega construction project
   },
   {
     title: "Tech-Driven & Future-Ready",
     desc: "We leverage advanced tools like AutoCAD, Revit, Civil 3D, and GIS platforms alongside top-tier equipment to ensure every detail is executed with accuracy and innovation.",
-    image: "/construction/tech.jpg",
+    image: "/Engineering-Infrastructure/construction/tech-driven.avif", // futuristic tech / engineering
   },
 ];
 
@@ -118,43 +116,43 @@ const keyResponsibilities = [
 const lifecyclePhases = [
   {
     title: "Project Feasibility & Analysis",
-    image: "/images/lifecycle/feasibility.jpg",
+    image: "/Engineering-Infrastructure/construction/Project Feasibility.avif",
   },
   {
     title: "Objective Setting & Stakeholder Alignment",
-    image: "/images/lifecycle/stakeholder.jpg",
+    image: "/Engineering-Infrastructure/construction/Stakeholder.avif",
   },
   {
     title: "Budgeting, Scheduling & Scope Definition",
-    image: "/images/lifecycle/budgeting.jpg",
+    image: "/Engineering-Infrastructure/construction/Budgeting.avif",
   },
   {
     title: "Strategy Development & Planning",
-    image: "/images/lifecycle/strategy.jpg",
+    image: "/Engineering-Infrastructure/construction/Strategy.avif",
   },
   {
     title: "Design Management & Risk Mitigation",
-    image: "/images/lifecycle/design-risk.jpg",
+    image: "/Engineering-Infrastructure/construction/Strategy Development.avif",
   },
   {
     title: "Resource Allocation & Team Coordination",
-    image: "/images/lifecycle/resource.jpg",
+    image: "/Engineering-Infrastructure/construction/team.avif",
   },
   {
     title: "Progress Monitoring & Communication Flow",
-    image: "/images/lifecycle/monitoring.jpg",
+    image: "/Engineering-Infrastructure/construction/progress.avif",
   },
   {
     title: "On-Site Construction Management",
-    image: "/images/lifecycle/onsite.jpg",
+    image: "/Engineering-Infrastructure/construction/Construction.avif",
   },
   {
     title: "Safety Compliance & Environmental Checks",
-    image: "/images/lifecycle/safety.jpg",
+    image: "/Engineering-Infrastructure/construction/safety.avif",
   },
   {
     title: "Quality Control, Close-Out & Handover",
-    image: "/images/lifecycle/quality.jpg",
+    image: "/Engineering-Infrastructure/construction/quality.avif",
   },
 ];
 
@@ -188,13 +186,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
-          className="w-full h-full object-cover object-bottom"
+          src={"/Engineering-Infrastructure/construction/hero.avif"}
+          className="w-full h-full object-cover"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -216,7 +212,7 @@ export default function ConstructionManagementPage() {
         <motion.h2 className="text-5xl font-semibold text-center mb-12">
           Our Key <span className="text-blue-500">Responsibilities</span>
         </motion.h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {keyResponsibilities.map((item, i) => {
             const Icon = item.icon; // Extract the icon component
             return (
@@ -293,18 +289,17 @@ export default function ConstructionManagementPage() {
                 {lifecyclePhases.map((phase, i) => (
                   <CarouselItem
                     key={i}
-                    className="md:basis-1/2 pt-5 relative lg:basis-1/3 2xl:basis-1/4 pl-4" // <-- spacing added
+                    className="md:basis-1/2 pt-5 relative lg:basis-1/3 pl-4" // <-- spacing added
                   >
                     <motion.h2 className="text-6xl z-10 left-8 text-white/80 font-bold absolute top-0 -translate-y-2 drop-shadow-[1px_1px_2px_rgba(0,0,0,0.4)]">
                       {i + 1}
                     </motion.h2>
 
                     <div className="bg-blue-50 h-full relative shadow-sm">
-                      <div className="w-full h-[400px] overflow-hidden rounded-lg">
+                      <div className=" h-[400px] overflow-hidden rounded-lg relative">
+                        <div className="absolute inset-0 w-full h-full bg-black/30" />
                         <Image
-                          src={
-                            "https://images.pexels.com/photos/5922204/pexels-photo-5922204.jpeg"
-                          }
+                          src={phase.image}
                           className="w-full h-full object-cover"
                           width={400}
                           height={400}
@@ -406,6 +401,8 @@ export default function ConstructionManagementPage() {
               <div className="h-[280px] rounded-lg border border-slate-900/40 overflow-hidden w-full relative">
                 <img
                   src={item.image}
+                  width={300}
+                  height={400}
                   alt={item.title}
                   className="object-cover w-full h-full"
                 />

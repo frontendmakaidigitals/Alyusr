@@ -18,7 +18,7 @@ export default function ConstructionManagementPage() {
         "Soil and rock sampling, borehole drilling, and lab testing",
         "In-situ testing (SPT, CPT, pressuremeter, permeability)",
       ],
-      image: "/images/capabilities/investigations.jpg",
+      image: "/Engineering-Infrastructure/ground-engineering/site-investigation.jpg",
     },
     {
       title: "Foundation Design & Earth Structures",
@@ -29,9 +29,9 @@ export default function ConstructionManagementPage() {
         "Complex piled foundation systems",
         "Ground bearing and suspended slabs",
         "Retaining walls, embankments, and soil-structure interaction analysis",
-        "Design of tunnels, shafts, and underground structures",
+        "Design of tunnels, shafts, and ground-engineering structures",
       ],
-      image: "/images/capabilities/foundation.jpg",
+      image: "/Engineering-Infrastructure/ground-engineering/Foundation-design.png",
     },
     {
       title: "Slope Stabilization & Soil Engineering",
@@ -43,7 +43,7 @@ export default function ConstructionManagementPage() {
         "Landslide risk assessment and remediation",
         "Seepage control and erosion mitigation",
       ],
-      image: "/images/capabilities/slope.jpg",
+      image: "/Engineering-Infrastructure/ground-engineering/Slope-Stabilazation.webp",
     },
     {
       title: "Groundwater & Geohazard Assessments",
@@ -56,7 +56,7 @@ export default function ConstructionManagementPage() {
         "Karst terrain and sinkhole hazard evaluations",
         "Rockfall and landslide hazard mapping",
       ],
-      image: "/images/capabilities/geohazard.jpg",
+      image: "/Engineering-Infrastructure/ground-engineering/groundwater-assesment.jpg",
     },
     {
       title: "Ground Treatment & Earthworks Design",
@@ -69,7 +69,7 @@ export default function ConstructionManagementPage() {
         "Reuse and conditioning of onsite material",
         "Dynamic compaction and vibroflotation",
       ],
-      image: "/images/capabilities/earthworks.jpg",
+      image: "/Engineering-Infrastructure/ground-engineering/ground-treatment.jpg",
     },
     {
       title: "Advanced Modeling & Simulation",
@@ -82,7 +82,7 @@ export default function ConstructionManagementPage() {
         "Seepage, thermal, and settlement modeling",
         "Performance-based design for infrastructure resilience",
       ],
-      image: "/images/capabilities/modeling.jpg",
+      image: "/Engineering-Infrastructure/ground-engineering/advanced-modelling.jpg",
     },
   ];
   const whatSetsUsApart = [
@@ -122,12 +122,12 @@ export default function ConstructionManagementPage() {
       <section className=" w-full h-[500px] text-center ">
         <Image
           src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
+            "/Engineering-Infrastructure/ground-engineering/hero.jpg"
           }
-          className="w-full h-full object-cover object-bottom"
+          className="w-full h-full object-cover "
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">

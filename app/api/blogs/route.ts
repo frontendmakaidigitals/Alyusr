@@ -2,6 +2,26 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
+export async function GET() {
+  try {
+    const dbPath = path.join(process.cwd(), "data", "db.json");
+
+    if (!fs.existsSync(dbPath)) {
+      return NextResponse.json({ blogs: [] });
+    }
+
+    const data = fs.readFileSync(dbPath, "utf-8");
+    const db = JSON.parse(data);
+
+    return NextResponse.json({ blogs: db.blogs || [] });
+  } catch (err) {
+    console.error("Error reading blogs:", err);
+    return NextResponse.json(
+      { success: false, error: "Failed to fetch blogs" },
+      { status: 500 }
+    );
+  }
+}
 export async function POST(req: Request) {
   try {
     const formData = await req.formData();
@@ -41,12 +61,6 @@ export async function POST(req: Request) {
       content,
       image: imageUrl,
     };
-
-    // Save to db.json or database
-    // Example:
-    // const dbPath = path.join(process.cwd(), "db.json");
-    // ... load JSON, push blog, save ...
-
     return NextResponse.json({ success: true, blog });
   } catch (err) {
     console.error(err);

@@ -41,7 +41,7 @@ export default function Page() {
   const capabilities = [
     {
       title: "Application Development",
-      img: "/images/app-dev.jpg",
+      img: "/Transportation-mobility/geo-intelligence/app-dev.png",
       points: [
         "Custom Desktop, Web, and Mobile GIS applications",
         "User-friendly interfaces for both technical and non-technical users",
@@ -50,7 +50,7 @@ export default function Page() {
     },
     {
       title: "Enterprise GIS Implementation",
-      img: "/images/enterprise-gis.jpg",
+      img: "/Transportation-mobility/geo-intelligence/gis.png",
       points: [
         "Organization-wide GIS platforms for asset management, planning, and monitoring",
         "Needs assessment, design, and deployment tailored to specific client goals",
@@ -59,7 +59,7 @@ export default function Page() {
     },
     {
       title: "Data Creation, Analysis & Visualization",
-      img: "/images/data-visualization.jpg",
+      img: "/Transportation-mobility/geo-intelligence/Data-creation.webp",
       points: [
         "GIS Data Creation from satellite, aerial, and field survey sources",
         "Spatial Analysis to identify patterns, risks, and opportunities",
@@ -68,7 +68,7 @@ export default function Page() {
     },
     {
       title: "Remote Sensing & Mapping",
-      img: "/images/remote-sensing.jpg",
+      img: "/Transportation-mobility/geo-intelligence/remote-mapping.png",
       points: [
         "High-resolution imagery acquisition via satellites and aerial surveys",
         "Unmanned Aircraft Systems (UAS) for rapid, cost-effective mapping and inspection",
@@ -77,7 +77,7 @@ export default function Page() {
     },
     {
       title: "Integration with Building Information Modeling (BIM)",
-      img: "/images/bim.jpg",
+      img: "/Transportation-mobility/geo-intelligence/Integration with Building Information Modeling (BIM).png",
       points: [
         "Link geospatial data with BIM models for enhanced planning and project execution",
         "Support for digital twins and smart city platforms",
@@ -89,22 +89,22 @@ export default function Page() {
     {
       title: "Multi-Disciplinary Expertise",
       desc: "Our teams combine GIS specialists, urban planners, engineers, and data scientists.",
-      img: "/images/expertise.jpg",
+      img: "/Transportation-mobility/geo-intelligence/Multi-Disciplinary Expertise.jpg"
     },
     {
       title: "Proven Global Experience",
       desc: "Hundreds of successful geospatial projects across government and industry sectors.",
-      img: "/images/experience.jpg",
+      img: "/Transportation-mobility/geo-intelligence/global.jpg"
     },
     {
       title: "Custom Solutions",
       desc: "We adapt tools and workflows to match your operational environment.",
-      img: "/images/custom-solutions.jpg",
+      img: "/Transportation-mobility/geo-intelligence/soluitions.webp",
     },
     {
       title: "Advanced Technology",
       desc: "We leverage AI, IoT integration, and predictive analytics to enhance geospatial insights.",
-      img: "/images/advanced-tech.jpg",
+      img: "/Transportation-mobility/geo-intelligence/advance-tech.jpg",
     },
   ];
   return (
@@ -131,7 +131,7 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Transportation-mobility/geo-intelligence/hero.jpg"} className="w-full h-full object-cover" alt={""} />
           </div>
         </div>
       </section>

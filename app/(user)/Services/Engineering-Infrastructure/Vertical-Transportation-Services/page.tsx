@@ -98,13 +98,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/Engineering-Infrastructure/Vertical Transportation/hero.avif"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -143,7 +141,9 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="h-[400px] w-full ">
             <img
-              src={"/engineering/pexels-thisisengineering-3913031.jpg"}
+              src={
+                "/Engineering-Infrastructure/Vertical Transportation/about.avif"
+              }
               alt={""}
               className="w-full h-full object-cover"
             />

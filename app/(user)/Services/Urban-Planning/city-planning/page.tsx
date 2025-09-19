@@ -17,7 +17,7 @@ export default function ConstructionManagementPage() {
     {
       title: "Master Planning & Urban Design",
       desc: "Strategic frameworks for urban growth, integrating function, livability, and aesthetics.",
-      image: "/images/master-planning.jpg",
+      image: "/urban-planning/city-planning/Master Planning.jpg",
       icon: Map,
       points: [
         "Mixed-use & residential master plans",
@@ -29,7 +29,7 @@ export default function ConstructionManagementPage() {
     {
       title: "Sustainability & Climate Resilience",
       desc: "Resilient strategies that future-proof cities through eco-conscious infrastructure.",
-      image: "/images/sustainability.jpg",
+      image: "/urban-planning/city-planning/Climate Resilience.jpg",
       icon: Leaf,
       points: [
         "Carbon-neutral strategies",
@@ -41,7 +41,7 @@ export default function ConstructionManagementPage() {
     {
       title: "Urban Analytics & Smart City Solutions",
       desc: "Data-driven planning tools that shape responsive and intelligent urban systems.",
-      image: "/images/smart-city.jpg",
+      image: "/urban-planning/city-planning/Smart City.jpeg",
       icon: Network,
       points: [
         "GIS & geospatial mapping",
@@ -53,7 +53,7 @@ export default function ConstructionManagementPage() {
     {
       title: "Green Urbanism & Nature Integration",
       desc: "Harmonizing nature and urban life for healthier, more vibrant communities.",
-      image: "/images/green-urbanism.jpg",
+      image: "/urban-planning/city-planning/Green Urbanism.jpeg",
       icon: TreePine,
       points: [
         "Urban green corridors",
@@ -67,19 +67,19 @@ export default function ConstructionManagementPage() {
   const services = [
     {
       title: "Environmental Impact Assessments",
-      image: "/images/environmental-impact.jpg",
+      image: "/urban-planning/city-planning/Environmental.jpg",
     },
     {
       title: "Economic Development Strategies",
-      image: "/images/economic-strategy.jpg",
+      image: "/urban-planning/city-planning/Economic.jpeg",
     },
     {
       title: "Concept Architecture & Place Branding",
-      image: "/images/place-branding.jpg",
+      image: "/urban-planning/city-planning/Concept Architecture.webp",
     },
     {
       title: "Geospatial Intelligence & Mapping",
-      image: "/images/geospatial.jpg",
+      image: "/urban-planning/city-planning/Geospatial.jpeg",
     },
   ];
 
@@ -120,13 +120,12 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/urban-planning/city-planning/hero.jpg"}
           className="w-full h-full object-cover object-bottom"
-          alt={""}
-          width={500}
-          height={200}
+          alt={"City planning Hero"}
+          width={1200}
+          height={400}
+          loading="lazy"
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -211,14 +210,15 @@ export default function ConstructionManagementPage() {
           {services.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300"
             >
               <div className="relative bg-slate-100 w-full h-56">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  fill
-                  className="object-cover"
+                  className=" w-full h-full object-cover"
+                  width={500}
+                  height={500}
                 />
               </div>
               <div className="p-5 space-y-3">

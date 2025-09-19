@@ -21,27 +21,27 @@ export default function ConstructionManagementPage() {
     {
       title: "Urban & Regional Master Planning",
       desc: "We craft development strategies for cities, districts, and regions, balancing growth with sustainability and quality of life.",
-      img: "/images/planning/urban.jpg",
+      img: "/urban-planning/planning-and-advisory/Master Planning.jpg",
     },
     {
       title: "Site Analysis & Land Use Planning",
       desc: "Our team conducts detailed land studies, zoning analysis, and site suitability evaluations for optimized land development.",
-      img: "/images/planning/site-analysis.jpg",
+      img: "/urban-planning/planning-and-advisory/Land Planning.jpg",
     },
     {
       title: "Strategic & Economic Planning",
       desc: "We assess project viability, investment opportunities, and economic impact to guide both public and private sector decisions.",
-      img: "/images/planning/strategic.jpg",
+      img: "/urban-planning/planning-and-advisory/Strategic.jpeg",
     },
     {
       title: "Sustainability & Resilience Advisory",
       desc: "Our experts integrate climate adaptation, environmental stewardship, and green building practices into all planning phases.",
-      img: "/images/planning/sustainability.jpg",
+      img: "/urban-planning/planning-and-advisory/saudi.jpg",
     },
     {
       title: "Policy & Regulatory Support",
       desc: "We help clients align their projects with municipal regulations, permitting procedures, and national strategic agendas.",
-      img: "/images/planning/policy.jpg",
+      img: "/urban-planning/planning-and-advisory/Policy.avif",
     },
   ];
   const reasons = [
@@ -96,14 +96,14 @@ export default function ConstructionManagementPage() {
       desc: `At ALYUSR, we believe that successful planning requires collaboration across a wide range of disciplines. Our planning experts work side by side with architects, engineers, environmental consultants, economists, and legal advisors to ensure a truly integrated approach. 
 This teamwork allows us to address every aspect of a project, technical, regulatory, financial, and social, through a unified lens. By combining expertise from different fields, we create solutions that are not only visionary in scope but also realistic, cost-effective, and fully compliant with local and national regulations. 
 This process leads to stronger outcomes, better coordination, and a smoother path from concept to execution. Whether it’s a complex urban development or a strategic infrastructure project, our interdisciplinary method ensures that every detail is thoughtfully considered and aligned with the project’s long-term goals.`,
-      img: "/images/team-collaboration.jpg",
+      img: "/urban-planning/planning-and-advisory/team.webp",
     },
     {
       title: "Community & Stakeholder Engagement",
       desc: `We recognize that great planning is not done in isolation; it is shaped by the people it impacts. At ALYUSR, we are committed to inclusive planning that actively involves the voices of communities and stakeholders.
 Through public consultation sessions, surveys, community workshops, and focus groups, we gather valuable insights from residents, local businesses, government bodies, and interest groups. These inputs help us understand the real needs, challenges, and aspirations of the people we serve. 
 Our approach ensures that strategies are not just designed from the top down, but are informed by on-the-ground realities and lived experiences. This two-way dialogue builds trust, transparency, and stronger community ownership of development outcomes. Ultimately, it leads to more sustainable and widely supported solutions that enhance quality of life and create places people are proud to call home.`,
-      img: "/images/community-engagement.jpg",
+      img: "/urban-planning/planning-and-advisory/community.jpg",
     },
   ];
 
@@ -116,13 +116,11 @@ Our approach ensures that strategies are not just designed from the top down, bu
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/urban-planning/planning-and-advisory/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1100}
+          height={700}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -269,7 +267,7 @@ Our approach ensures that strategies are not just designed from the top down, bu
                 viewport={{ once: true }}
                 className={`order-2 ${index % 2 !== 0 ? "md:order-1" : ""}`}
               >
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                <h2 className="text-2xl lg:text-4xl font-bold mb-4">
                   {section.title}
                 </h2>
                 <p className="text-gray-600 whitespace-pre-line">

@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Blogs from "../../(homepage)/Blogs";
+
 import { Editor } from "@/components/blocks/editor-00/editor";
 
 export default function BlogClient({ blog }: { blog: any }) {
@@ -24,6 +24,8 @@ export default function BlogClient({ blog }: { blog: any }) {
     const minutes = Math.ceil(wordCount / wordsPerMinute);
     return `${minutes} min read`;
   }
+
+  console.log(blog);
 
   return (
     <main className="pt-28 relative container ">
@@ -60,7 +62,9 @@ export default function BlogClient({ blog }: { blog: any }) {
         <ul className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-center lg:items-center mt-5 gap-3 w-full ">
           <li className="w-full lg:w-auto">
             <Link
-              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(blogTitle)}&url=${encodeURIComponent(blogURL)}`}
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                blogTitle
+              )}&url=${encodeURIComponent(blogURL)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full"
@@ -73,7 +77,9 @@ export default function BlogClient({ blog }: { blog: any }) {
 
           <li className="w-full lg:w-auto">
             <Link
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(blogURL)}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                blogURL
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full"
@@ -86,7 +92,9 @@ export default function BlogClient({ blog }: { blog: any }) {
 
           <li className="w-full lg:w-auto">
             <Link
-              href={`https://www.instagram.com/?url=${encodeURIComponent(blogURL)}`}
+              href={`https://www.instagram.com/?url=${encodeURIComponent(
+                blogURL
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full"
@@ -99,7 +107,9 @@ export default function BlogClient({ blog }: { blog: any }) {
 
           <li className="w-full lg:w-auto">
             <Link
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(blogURL)}`}
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                blogURL
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full"
@@ -134,7 +144,6 @@ export default function BlogClient({ blog }: { blog: any }) {
           ) : null}
         </div>
       </div>
-      <Blogs />
     </main>
   );
 }

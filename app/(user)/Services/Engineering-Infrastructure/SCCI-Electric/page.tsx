@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { motion } from "framer-motion";
@@ -15,7 +14,7 @@ import {
 export default function ConstructionManagementPage() {
   const markets = [
     {
-      image: "/images/rail.jpg", // Replace with your actual image paths
+      image: "/Engineering-Infrastructure/SCII/rail.jpeg", // Replace with your actual image paths
       title: "Rail and Transit Systems",
       desc: "SCCI Electric plays a critical role in modernizing and electrifying transportation networks. We install and maintain key systems to ensure safe, efficient, and continuous rail operation.",
       points: [
@@ -28,7 +27,7 @@ export default function ConstructionManagementPage() {
       ],
     },
     {
-      image: "/images/highway.jpg",
+      image: "/Engineering-Infrastructure/SCII/highway.avif",
       title: "Highways and Bridges",
       desc: "Supporting state DOTs and transportation agencies, we deliver smart infrastructure that enhances traffic flow, safety, and regional mobility.",
       points: [
@@ -41,7 +40,7 @@ export default function ConstructionManagementPage() {
       ],
     },
     {
-      image: "/images/water.jpg",
+      image: "/Engineering-Infrastructure/SCII/wastewater.jpg",
       title: "Water and Wastewater Facilities",
       desc: "We support critical water infrastructure by providing robust, dependable MEP installations for pumping stations and treatment plants.",
       points: [
@@ -97,12 +96,12 @@ export default function ConstructionManagementPage() {
       <section className=" w-full h-[500px] text-center ">
         <Image
           src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
+            "/Engineering-Infrastructure/SCII/hero.avif"
           }
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -138,7 +137,7 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="h-[400px] w-full ">
             <img
-              src={"/engineering/pexels-thisisengineering-3913031.jpg"}
+              src={"/Engineering-Infrastructure/SCII/about.avif"}
               alt={""}
               className="w-full h-full object-cover"
             />
@@ -174,14 +173,14 @@ export default function ConstructionManagementPage() {
               >
                 {/* Image column */}
                 <div
-                  className={`h-[340px] bg-green-500 w-full ${
+                  className={`h-[380px] bg-slate-100 w-full ${
                     isEven ? "lg:order-2" : "lg:order-1"
                   }`}
                 >
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover rounded-xl"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 

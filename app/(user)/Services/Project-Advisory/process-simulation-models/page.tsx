@@ -11,7 +11,7 @@ import {
   Users,
   BadgeCheck,
 } from "lucide-react";
-import { motion } from "motion/react";
+
 export default function Page() {
   const services = [
     {
@@ -54,58 +54,58 @@ export default function Page() {
     {
       name: "GMTS – General Marine Terminal Simulator",
       desc: "Simulates container terminal operations to compare physical layouts, operating modes, and equipment configurations. GMTS supports cost analysis, throughput assessment, and productivity benchmarking.",
-      img: "/images/tools/gmts.png",
+      img: "/project-advisory/process-simulation/gms.jpg",
     },
     {
       name: "BERTHA – Berth Capacity Analyzer",
       desc: "Analyzes variability in vessel arrivals, crane productivity, weather impacts, and maintenance shutdowns to determine terminal capacity. Tracks yard inventory in real-time and assists in estimating required handling equipment.",
-      img: "/images/tools/bertha.png",
+      img: "/project-advisory/process-simulation/berth.jpeg",
     },
     {
       name: "RailOps – Rail Network Simulator",
       desc: "Simulates passenger and freight rail networks with detailed train, locomotive, and railcar modeling. Useful for analyzing train scheduling, terminal rules, and network scalability from digital layout plans.",
-      img: "/images/tools/railops.png",
+      img: "/project-advisory/process-simulation/rail-simulator.jpg",
     },
     {
       name: "VNM – Vessel Network Model",
       desc: "Used for analyzing the capacity of harbors, ferry systems, or inland waterways. Accounts for dynamic conditions such as tides, vessel draft, fuel cost vs. speed, and environmental closures.",
-      img: "/images/tools/vnm.png",
+      img: "/project-advisory/process-simulation/vessel.avif",
     },
     {
       name: "BulkSim – Bulk Terminal Simulator",
       desc: "Models solid or liquid bulk terminal operations with real-time 3D visualizations. Simulates storage, conveyance, berth access, and demand fluctuation with custom visuals to represent different commodities.",
-      img: "/images/tools/bulksim.png",
+      img: "/project-advisory/process-simulation/bulk-sim.webp",
     },
     {
       name: " VISSIM – Roadway & Terminal Access Simulation",
       desc: "Industry-leading software used to simulate terminal gates and surrounding road infrastructure. Ideal for visualizing traffic flow, access points, and integration with urban mobility networks. Offers immersive 3D graphics for stakeholder presentation and design evaluation.",
-      img: "/images/tools/bulksim.png",
+      img: "/project-advisory/process-simulation/roadway-sim.png",
     },
   ];
   const sectors = [
     {
       title: "Seaport and Marine Terminal Planning",
-      img: "/images/sectors/seaport.jpg",
+      img: "/project-advisory/process-simulation/port.jpg",
     },
     {
       title: "Rail and Intermodal Yard Optimization",
-      img: "/images/sectors/rail.jpg",
+      img: "/project-advisory/process-simulation/railway.jpg",
     },
     {
       title: "Bulk Material Handling Facilities",
-      img: "/images/sectors/bulk.jpg",
+      img: "/project-advisory/process-simulation/bulksim.png",
     },
     {
       title: "Highway and Freight Corridor Analysis",
-      img: "/images/sectors/highway.jpg",
+      img: "/project-advisory/process-simulation/highway-corridor.png",
     },
     {
       title: "Urban Mobility & Smart Transportation Integration",
-      img: "/images/sectors/urban.jpg",
+      img: "/project-advisory/process-simulation/smart-transportation.jpg",
     },
     {
       title: "Operational Risk Modeling and Mitigation",
-      img: "/images/sectors/risk.jpg",
+      img: "/project-advisory/process-simulation/risk.webp",
     },
   ];
   const points = [
@@ -126,12 +126,12 @@ export default function Page() {
       <section className=" w-full h-[500px] text-center ">
         <Image
           src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
+            "/project-advisory/process-simulation/hero.jpg"
           }
           className="w-full h-full object-cover object-bottom"
-          alt={""}
-          width={500}
-          height={200}
+          alt={"hero"}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -202,8 +202,8 @@ export default function Page() {
       </section>
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Applications Across Sectors
+          <h2 className="text-5xl font-bold text-center mb-12">
+            <span className="text-blue-500">Application</span> Across Sectors
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">

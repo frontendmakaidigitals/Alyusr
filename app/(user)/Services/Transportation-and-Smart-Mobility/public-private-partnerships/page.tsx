@@ -73,7 +73,7 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Transportation-mobility/public-private/hero.jpg"} className="object-cover w-full h-full " alt={""} />
           </div>
         </div>
       </section>
@@ -82,9 +82,9 @@ export default function Page() {
           {/* Left Image */}
           <div className="w-full h-[450px] bg-slate-100">
             <img
-              src="/experience.jpg" // replace with your image path
+              src="/Transportation-mobility/public-private/exp.jpeg" // replace with your image path
               alt="Our Experience"
-              className="rounded-2xl w-full h-full shadow-lg"
+              className="w-full h-full object-cover"
             />
           </div>
 

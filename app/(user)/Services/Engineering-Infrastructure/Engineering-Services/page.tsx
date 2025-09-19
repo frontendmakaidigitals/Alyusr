@@ -34,27 +34,27 @@ const services = [
   {
     title: "Structural Engineering",
     desc: "We deliver safe, resilient, cost‑efficient structures through detailed analysis and innovative design. From high‑rise buildings to bridges and industrial facilities, our solutions prioritize structural integrity and long‑term performance.",
-    pexelsUrl: "/engineering/structure.jpg",
+    pexelsUrl: "/Engineering-Infrastructure/Engineering/structure.jpg",
   },
   {
     title: "MEP (Mechanical, Electrical & Plumbing) Engineering",
     desc: "Our team designs integrated MEP systems that ensure energy efficiency, safety, and smooth operations. We handle complex HVAC, lighting, fire safety, water systems, and more, fully coordinated across design disciplines.",
-    pexelsUrl: "/engineering/electrical.jpg",
+    pexelsUrl: "/Engineering-Infrastructure/Engineering/electrical.jpg",
   },
   {
     title: "Building Information Modeling (BIM)",
     desc: "Using platforms like Revit and Navisworks, we offer BIM modeling, clash detection, quantity take‑offs, and 5D simulation. This enables enhanced collaboration, reduced design conflicts, and smarter construction sequencing.",
-    pexelsUrl: "/engineering/blueprint.jpg",
+    pexelsUrl: "/Engineering-Infrastructure/Engineering/blueprint.jpg",
   },
   {
     title: "Infrastructure & Roads Engineering",
     desc: "We provide design and consultancy for roads, highways, drainage, water supply, utilities, and public infrastructure systems. Our civil engineers ensure regulatory compliance and future‑ready design.",
-    pexelsUrl: "/engineering/roads.jpg",
+    pexelsUrl: "/Engineering-Infrastructure/Engineering/roads.jpg",
   },
   {
     title: "Telecom & Low‑Current Systems",
     desc: "From ICT systems to fire alarms, access control, CCTV, and structured cabling, we deliver end‑to‑end low‑voltage engineering systems that power modern developments.",
-    pexelsUrl: "/engineering/telecom.jpg",
+    pexelsUrl: "/Engineering-Infrastructure/Engineering/telecom.jpg",
   },
 ];
 
@@ -68,11 +68,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/engineering/banner.jpg"}
-          className="w-full h-full object-cover object-bottom"
+          src={"/Engineering-Infrastructure/Engineering/hero.jpg"}
+          className="w-full h-full object-cover"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={700}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -123,7 +123,7 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="h-[500px] w-full ">
             <img
-              src={"/engineering/pexels-thisisengineering-3913031.jpg"}
+              src={"/Engineering-Infrastructure/Engineering/pexels-thisisengineering-3913031.jpg"}
               alt={""}
               className="w-full h-full object-cover"
             />
@@ -205,7 +205,7 @@ export default function ConstructionManagementPage() {
         <div className="container place-items-center grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="h-[500px] w-full ">
             <img
-              src={"/engineering/project-delivery.jpg"}
+              src={"/Engineering-Infrastructure/Engineering/project-delivery.jpg"}
               className=" w-full h-full object-cover"
               alt=""
             />

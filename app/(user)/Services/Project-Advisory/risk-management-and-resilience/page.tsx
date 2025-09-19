@@ -14,64 +14,64 @@ export default function Page() {
     {
       title: "Asset and Vulnerability Assessments",
       desc: "Identify the most critical assets and pinpoint where your system is most at risk.",
-      img: "/images/asset-assessment.jpg",
+      img: "/project-advisory/risk-management/assessment.jpeg",
     },
     {
       title: "Threat Analysis",
       desc: "Evaluate physical, environmental, digital, and operational threats to your organization.",
-      img: "/images/threat-analysis.jpg",
+      img: "/project-advisory/risk-management/Threat.jpg",
     },
     {
       title: "Resilience Planning",
       desc: "Develop recovery strategies that ensure continuity in operations, transportation, and utilities after a crisis.",
-      img: "/images/resilience-planning.jpg",
+      img: "/project-advisory/risk-management/Resilience.png",
     },
     {
       title: "Cost-Benefit & Impact Modeling",
       desc: "Assign value to resilience investments and support informed capital planning.",
-      img: "/images/cost-benefit.jpg",
+      img: "/project-advisory/risk-management/Cost-Benefit.avif",
     },
     {
       title: "Holistic Systems Thinking",
       desc: "Integrate resilience across human, natural, economic, and social systems.",
-      img: "/images/systems-thinking.jpg",
+      img: "/project-advisory/risk-management/holistic.webp",
     },
   ];
   const services = [
     {
       title: "Critical Infrastructure Protection",
       desc: "Safeguard essential systems such as water, energy, transport, and healthcare from disruptions.",
-      img: "/images/infrastructure.jpg",
+      img: "/project-advisory/risk-management/Protection.avif",
     },
     {
       title: "Climate Change Adaptation",
       desc: "Build infrastructure that withstands rising sea levels, storms, and heatwaves.",
-      img: "/images/climate-adaptation.jpg",
+      img: "/project-advisory/risk-management/Climate Change.jpg",
     },
     {
       title: "Cybersecurity Resilience",
       desc: "Mitigate digital threats and secure data, systems, and operational networks.",
-      img: "/images/cybersecurity.jpg",
+      img: "/project-advisory/risk-management/Cybersecurity.jpg",
     },
     {
       title: "Disaster Risk Reduction & Hazard Mitigation Planning",
       desc: "Identify disaster-prone areas and develop targeted plans to reduce risk.",
-      img: "/images/disaster-risk.jpg",
+      img: "/project-advisory/risk-management/Disaster Risk Rediction.jpg",
     },
     {
       title: "Disaster Recovery Services",
       desc: "Respond swiftly post-crisis with damage assessments, engineering support, and recovery strategies.",
-      img: "/images/disaster-recovery.jpg",
+      img: "/project-advisory/risk-management/Disaster Risk.jpg",
     },
     {
       title: "Physical Security & Hardening",
       desc: "Strengthen buildings and facilities against physical threats, criminal activity, and vandalism.",
-      img: "/images/security.jpg",
+      img: "/project-advisory/risk-management/Security.png",
     },
     {
       title: "Emergency Preparedness Training",
       desc: "Equip organizations with readiness strategies and protocols to respond quickly and effectively.",
-      img: "/images/emergency-training.jpg",
+      img: "/project-advisory/risk-management/Emergency Preparedness.webp",
     },
   ];
 
@@ -84,13 +84,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
-          className="w-full h-full object-cover object-bottom"
-          alt={""}
-          width={500}
-          height={200}
+          src={"/project-advisory/risk-management/hero.webp"}
+          className="w-full h-full object-cover"
+          alt={"hero"}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -121,7 +119,10 @@ export default function Page() {
           </p>
           <div className="grid gap-6 sm:grid-cols-2">
             {points.map((point, idx) => (
-              <div key={idx} className="flex items-start gap-3">
+              <div
+                key={idx}
+                className="flex bg-sky-50 p-3 rounded-lg items-start gap-3"
+              >
                 <BadgeCheck className="w-6 h-6 text-green-600 shrink-0 mt-1" />
                 <p className="text-gray-700">{point}</p>
               </div>
@@ -131,7 +132,9 @@ export default function Page() {
       </section>{" "}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-6">Our Approach</h2>
+          <h2 className="text-5xl font-bold text-center mb-6">
+            Our <span className="text-blue-500">Approach</span>
+          </h2>
           <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
             Our risk and resilience services are grounded in real-world data,
             global best practices, and local insight. We provide:
@@ -162,8 +165,8 @@ export default function Page() {
       </section>{" "}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-6">
-            Representative Services
+          <h2 className="text-5xl font-bold text-center mb-6">
+            <span className="text-blue-500">Representative</span> Services
           </h2>
           <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
             We provide specialized solutions to strengthen resilience and
@@ -246,7 +249,7 @@ export default function Page() {
           {/* Image */}
           <div className="relative bg-orange-100 w-full h-[430px] rounded-2xl overflow-hidden shadow-md">
             <Image
-              src="/images/post-disaster.jpg"
+              src="/project-advisory/risk-management/Disaster Risk.jpg"
               alt="Post-Disaster Response"
               fill
               className="object-cover"

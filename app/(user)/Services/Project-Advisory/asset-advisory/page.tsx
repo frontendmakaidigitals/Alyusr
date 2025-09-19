@@ -2,7 +2,7 @@
 import Image from "next/image";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { Landmark, Building2, Hospital, Train, Factory } from "lucide-react";
-import { motion } from "motion/react";
+
 export default function Page() {
   const sections = [
     {
@@ -68,27 +68,27 @@ export default function Page() {
     {
       title: "End-to-End Capability",
       desc: "From technical assessments to strategy and implementation, our integrated team covers every stage of asset advisory.",
-      img: "/images/end-to-end.jpg",
+      img: "/project-advisory/asset-advisory/end-to-end.jpg",
     },
     {
       title: "ISO-Certified Excellence",
       desc: "Proven quality, safety, and data integrity across all services, supported by globally recognized certifications.",
-      img: "/images/iso-certified.jpg",
+      img: "/project-advisory/asset-advisory/iso-certified.jpg",
     },
     {
       title: "Localized Insights, Global Standards",
       desc: "Deep expertise in regional regulations combined with alignment to Vision 2030 and international best practices.",
-      img: "/images/global-standards.jpg",
+      img: "/project-advisory/asset-advisory/global-standard.webp",
     },
     {
       title: "Sustainability-Focused",
       desc: "Helping clients reduce environmental impact through green solutions, efficiency improvements, and future-ready strategies.",
-      img: "/images/sustainability.jpg",
+      img: "/project-advisory/asset-advisory/Sustainability.webp",
     },
     {
       title: "Digital-First Approach",
       desc: "Empowering clients with intelligent dashboards, digital twins, and modern tools for smarter asset management.",
-      img: "/images/digital-first.jpg",
+      img: "/project-advisory/asset-advisory/digital-first.jpg",
     },
   ];
   return (
@@ -100,13 +100,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/project-advisory/asset-advisory/hero.jpg"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -127,9 +125,9 @@ export default function Page() {
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center bg-white rounded-2xl shadow-lg overflow-hidden">
           {/* Left Image */}
-          <div className="h-full w-full">
+          <div className="h-[400px] w-full">
             <img
-              src="/images/our-approach.jpg" // 🔹 Replace with your actual image
+              src="/project-advisory/asset-advisory/role.jpg" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
             />

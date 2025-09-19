@@ -9,43 +9,43 @@ export default function Page() {
   const services = [
     {
       title: "Interior Design Concept Development",
-      img: "/images/interior/concept.jpg",
+      img: "/urban-planning/interior/interior-design.avif",
     },
     {
       title: "Space Planning & Functional Zoning",
-      img: "/images/interior/space-planning.jpg",
+      img: "/urban-planning/interior/sapce-planning.avif",
     },
     {
       title: "Material & Finish Selection",
-      img: "/images/interior/materials.jpg",
+      img: "/urban-planning/interior/material.avif",
     },
     {
       title: "Lighting Design & Visual Comfort Strategies",
-      img: "/images/interior/lighting.jpg",
+      img: "/urban-planning/interior/lighting.avif",
     },
     {
       title: "Furniture, Fixtures & Equipment (FF&E) Planning",
-      img: "/images/interior/furniture.jpg",
+      img: "/urban-planning/interior/furniture.avif",
     },
     {
       title: "Wayfinding & Environmental Branding",
-      img: "/images/interior/wayfinding.jpg",
+      img: "/urban-planning/interior/wayfinding.avif",
     },
     {
       title: "Custom Joinery & Millwork Detailing",
-      img: "/images/interior/joinery.jpg",
+      img: "/urban-planning/interior/millwork.jpg",
     },
     {
       title: "Code & Accessibility Compliance",
-      img: "/images/interior/compliance.jpg",
+      img: "/urban-planning/interior/compliance.avif",
     },
     {
       title: "3D Visualization & Virtual Walkthroughs",
-      img: "/images/interior/3d.jpg",
+      img: "/urban-planning/interior/Visualization.avif",
     },
     {
       title: "Construction Documentation & Site Coordination",
-      img: "/images/interior/documentation.jpg",
+      img: "/urban-planning/interior/Site Coordination.avif",
     },
   ];
 
@@ -53,37 +53,37 @@ export default function Page() {
     {
       title: "Corporate & Workplace Environments",
       desc: "We design high-performance workplaces that boost productivity, support wellness, and reflect brand identity. From agile open-office layouts and executive suites to collaborative spaces and quiet zones, we help organizations foster innovation, employee satisfaction, and operational efficiency.",
-      img: "/images/interior/corporate.jpg",
+      img: "/urban-planning/interior/Corporate.avif",
     },
     {
       title: "Retail & Mixed-Use Developments",
       desc: "Our interiors team creates retail and commercial environments that captivate visitors, support business objectives, and enhance footfall. We design immersive customer journeys by integrating spatial flow, display strategies, lighting, and visual merchandising.",
-      img: "/images/interior/retail.jpg",
+      img: "/urban-planning/interior/Retail.avif",
     },
     {
       title: "Hotels & Hospitality Spaces",
       desc: "We deliver interior environments that reflect luxury, comfort, and authenticity, turning every guest's stay into a memorable experience. Whether boutique or large-scale hospitality, we align design with cultural context, brand standards, and operational efficiency.",
-      img: "/images/interior/hospitality.jpg",
+      img: "/urban-planning/interior/Hotels.avif",
     },
     {
       title: "Healthcare & Wellness Facilities",
       desc: "We design healthcare spaces that prioritize patient comfort, staff efficiency, and healing. Our approach blends functionality with softness, balancing infection control, accessibility, and aesthetics to support medical excellence and human dignity.",
-      img: "/images/interior/healthcare.jpg",
+      img: "/urban-planning/interior/Healthcare.jpg",
     },
     {
       title: "Education & Cultural Institutions",
       desc: "We create inspiring learning and cultural environments for the next generation. Whether it’s a modern school, university building, or museum, we design interiors that foster creativity, knowledge-sharing, and community interaction.",
-      img: "/images/interior/education.jpg",
+      img: "/urban-planning/interior/Education.jpg",
     },
     {
       title: "Government & Civic Interiors",
       desc: "We support national and municipal entities in designing public-facing spaces that are secure, inclusive, and service-oriented. Our team works closely with regulatory bodies to ensure that civic interiors reflect transparency, functionality, and pride.",
-      img: "/images/interior/government.jpg",
+      img: "/urban-planning/interior/Government.webp",
     },
     {
       title: "Luxury Residential Projects",
       desc: "We deliver bespoke residential interiors that blend comfort, style, and smart living. From high-end villas to branded apartments, our work reflects personal taste while maximizing functionality and spatial harmony.",
-      img: "/images/interior/residential.jpg",
+      img: "/urban-planning/interior/Luxury Residential.avif",
     },
   ];
 
@@ -105,13 +105,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
-          className="w-full h-full object-cover object-bottom"
+          src={"/urban-planning/interior/interior.avif"}
+          className="w-full h-full object-cover"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={700}
         />
       </section>
 
@@ -134,8 +132,12 @@ export default function Page() {
               ensuring continuity from concept through construction.
             </p>
           </div>
-          <div className="w-full h-[400px] bg-red-300">
-            <img src={""} alt={""} className="" />
+          <div className="w-full h-[400px] bg-slate-00">
+            <img
+              src={"/urban-planning/interior/creative.webp"}
+              alt={"team"}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -232,8 +234,12 @@ export default function Page() {
               project.
             </p>
           </div>
-          <div className="w-full h-[450px] bg-red-300">
-            <img src={""} alt={""} className="" />
+          <div className="w-full h-[450px] bg-red-100">
+            <img
+              src={"/urban-planning/interior/team.webp"}
+              alt={""}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -250,7 +256,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 container">
+        <div className="grid max-w-5xl grid-cols-1 lg:grid-cols-2 gap-10 container">
           {points.map((point, index) => (
             <motion.div
               key={index}

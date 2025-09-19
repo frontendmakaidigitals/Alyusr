@@ -16,27 +16,27 @@ export default function Page() {
     {
       title: "Rail Traffic Controller (RTC) – Freight Network Analysis",
       desc: "The Rail Traffic Controller (RTC) by Berkeley Simulation Software is the industry’s standard for freight rail simulation. With its state-of-the-art automated dispatching logic, RTC efficiently simulates large and complex freight networks, rivaling even human dispatchers. From small terminals to international freight routes, RTC ensures stakeholders understand the operational implications before committing to costly investments.",
-      img: "https://images.pexels.com/photos/1058946/pexels-photo-1058946.jpeg", // sample freight rail img
+      img: "/Transportation-mobility/rail-network-modelling/Rail Traffic Controller.jpg", 
     },
     {
       title: "OpenTrack – Passenger Network Optimization",
       desc: "OpenTrack by OpenTrack Railway Technology Ltd. is the global benchmark for passenger rail simulation. It is ideal for analyzing streetcars, LRT, commuter rail, and high-speed rail systems. OpenTrack allows us to test multiple passenger service scenarios, ensuring on-time performance, passenger comfort, and operational efficiency.",
-      img: "https://images.pexels.com/photos/980333/pexels-photo-980333.jpeg", // sample passenger train img
+      img: "/Transportation-mobility/rail-network-modelling/Passenger Network Optimization.jpg", // sample passenger train img
     },
     {
       title: "RailEST – Railway Electrification Simulation",
       desc: "Our in-house RailEST software specializes in train motion simulation and electrification system analysis. It models the performance of the most common systems: 750Vdc, 1500Vdc, 1x25kVac, and 2x25kVac, used in LRT, metro, commuter, and high-speed lines.",
-      img: "https://images.pexels.com/photos/221635/pexels-photo-221635.jpeg", // sample electrified rail img
+      img: "/Transportation-mobility/rail-network-modelling/Railway Electrification.jpg", // sample electrified rail img
     },
     {
       title: "RAILSIM – Train Performance & Traction Power Analysis",
       desc: "RAILSIM by SYSTRA is our go-to tool for analyzing track geometries and train performance. With its Train Performance Calculator (TPC), we can simulate how specific rolling stock operates over a given track design. Often, RAILSIM is paired with RTC or OpenTrack to deliver a comprehensive, multi-layered rail system analysis.",
-      img: "https://images.pexels.com/photos/54581/pexels-photo-54581.jpeg", // sample rail system img
+      img: "/Transportation-mobility/rail-network-modelling/RAILSIM.jpg", // sample rail system img
     },
     {
       title: "AnyLogic – Flexible Multi-Industry Rail Simulation",
       desc: "AnyLogic offers unmatched flexibility in rail operations modeling, allowing rapid model creation and 2D/3D visualizations.",
-      img: "https://images.pexels.com/photos/163688/train-railroad-tracks-railway-163688.jpeg", // sample flexible simulation img
+      img: "/Transportation-mobility/rail-network-modelling/railsim-modelling.jpg", // sample flexible simulation img
     },
   ];
 
@@ -44,22 +44,22 @@ export default function Page() {
     {
       title: "Multi-Tool Expertise",
       desc: "Proficiency across RTC, OpenTrack, RailEST, RAILSIM, and AnyLogic.",
-      img: "https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg", // freight trains
+      img: "/Transportation-mobility/rail-network-modelling/multitoo.jpg", // freight trains
     },
     {
       title: "Cross-Sector Experience",
       desc: "Freight, passenger, metro, high-speed rail, and mixed-use networks.",
-      img: "https://images.pexels.com/photos/163688/train-railway-station-railroad-transportation-163688.jpeg", // passenger
+      img: "/Transportation-mobility/rail-network-modelling/cross-sector.jpeg", // passenger
     },
     {
       title: "Global Standards, Local Insight",
       desc: "We merge international best practices with local requirements.",
-      img: "https://images.pexels.com/photos/106398/pexels-photo-106398.jpeg", // metro / modern
+      img: "/Transportation-mobility/rail-network-modelling/global-standards.webp", // metro / modern
     },
     {
       title: "End-to-End Support",
       desc: "From feasibility studies to final design validation.",
-      img: "https://images.pexels.com/photos/385998/pexels-photo-385998.jpeg", // planning
+      img: "/Transportation-mobility/rail-network-modelling/support.jpg", // planning
     },
   ];
   const services = [
@@ -122,7 +122,7 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Transportation-mobility/rail-network-modelling/hero.jpg"} className="w-full h-full object-cover" alt={""} />
           </div>
         </div>
       </section>
@@ -190,7 +190,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-12">
             Why Choose{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-sky-500 to-sky-600 bg-clip-text text-transparent">
               Al Yusr
             </span>{" "}
             for Rail Network Simulation?
@@ -205,7 +205,7 @@ export default function Page() {
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="h-60 w-full object-cover group-hover:scale-105 transition duration-500"
+                  className="h-64 w-full object-cover group-hover:scale-105 transition duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-90"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-left text-white">
@@ -221,7 +221,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-12">
             Our{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-sky-500 to-sky-600 bg-clip-text text-transparent">
               Rail Network
             </span>{" "}
             Modeling Services

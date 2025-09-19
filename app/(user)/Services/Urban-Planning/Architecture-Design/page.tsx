@@ -69,7 +69,7 @@ export default function Page() {
   const excellenceSections = [
     {
       title: "Focused on Design Excellence",
-      image: "/images/design-excellence.jpg", // Replace with actual path
+      image: "/urban-planning/architecture/Design Excellence.webp", // Replace with actual path
       description:
         "Our architects are problem solvers and storytellers. We design spaces that elevate quality of life, strengthen community identity, and support long-term operational success. Whether it’s a civic building, mixed-use development, residential tower, or educational campus, we approach every project with a commitment to design excellence.",
       bullets: [
@@ -82,7 +82,7 @@ export default function Page() {
     },
     {
       title: "Sustainable and Resilient by Design",
-      image: "/images/sustainable-design.jpg",
+      image: "/urban-planning/architecture/Sustainable design.jpg",
       description:
         "In line with Vision 2030 and global environmental goals, Al Yusr’s architecture services are focused on minimizing environmental impact and maximizing building resilience. We design for:",
       bullets: [
@@ -95,7 +95,7 @@ export default function Page() {
     },
     {
       title: "Digitally Driven Architecture",
-      image: "/images/digital-architecture.jpg",
+      image: "/urban-planning/architecture/Digitally.jpg",
       description:
         "Our architects work with industry-leading Building Information Modeling (BIM) platforms, integrated with performance modeling tools that support carbon analysis, daylight simulations, facade design, and construction sequencing. This allows us to deliver high-performance buildings with optimized resources and reduced rework.",
       bullets: [
@@ -125,13 +125,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
-          className="w-full h-full object-cover object-bottom"
+          src={"/urban-planning/architecture/hero.avif"}
+          className="w-full h-full object-cover "
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={700}
         />
       </section>
 
@@ -159,7 +157,13 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-red-400">
-            <img />
+            <Image
+              src={"/urban-planning/architecture/about.webp"}
+              className="w-full h-full object-cover object-bottom"
+              alt={""}
+              width={1200}
+              height={700}
+            />
           </div>
         </div>
       </section>

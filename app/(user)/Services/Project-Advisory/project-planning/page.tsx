@@ -65,13 +65,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
-          className="w-full h-full object-cover object-bottom"
-          alt={""}
-          width={500}
-          height={200}
+          src={"/project-advisory/project-planning/hero.jpg"}
+          className="w-full h-full object-cover "
+          alt={"Project Planning"}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -113,8 +111,14 @@ export default function Page() {
               viability.
             </p>
           </div>
-          <div className="h-[450px] w-full bg-red-500">
-            <Image src={""} alt={""} className="" />
+          <div className="h-[450px] w-full bg-slate-100">
+            <Image
+              src={"/project-advisory/project-planning/project-planning.avif"}
+              alt={"smart planning"}
+              className="w-full h-full object-cover"
+              width={500}
+              height={500}
+            />
           </div>
         </div>
       </section>

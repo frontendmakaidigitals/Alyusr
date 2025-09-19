@@ -17,7 +17,7 @@ export default function ConstructionManagementPage() {
         "Reverse Circulation Drilling (RCD)",
         "Offshore & In-Water Foundations",
       ],
-      img: "",
+      img: "/Engineering-Infrastructure/Foundation Engineering/deep-foundation.jpeg",
     },
     {
       title: "Micropile Systems",
@@ -28,7 +28,7 @@ export default function ConstructionManagementPage() {
         "Effective in unstable or contaminated soils",
         "Flexible angle installation",
       ],
-      img: "",
+      img: "/Engineering-Infrastructure/Foundation Engineering/Micropile.jpg",
     },
     {
       title: "Ground Improvement Techniques",
@@ -38,7 +38,7 @@ export default function ConstructionManagementPage() {
         "Vibroflotation & Stone Columns",
         "Jet Grouting & Pressure Grouting",
       ],
-      img: "",
+      img: "/Engineering-Infrastructure/Foundation Engineering/Ground Improvement.jpg",
     },
     {
       title: "Slope Stabilization & Excavation Shoring",
@@ -49,7 +49,7 @@ export default function ConstructionManagementPage() {
         "Tie-Back Anchors & Bracing Systems",
         "Temporary & Permanent Solutions",
       ],
-      img: "",
+      img: "/Engineering-Infrastructure/Foundation Engineering/Excavation.jpg",
     },
   ];
 
@@ -85,13 +85,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
-          className="w-full h-full object-cover object-bottom"
-          alt={""}
-          width={500}
-          height={200}
+          src={"/Engineering-Infrastructure/Foundation Engineering/hero.jpg"}
+          className="w-full h-full object-cover "
+          alt={"hero"}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -136,7 +134,7 @@ export default function ConstructionManagementPage() {
                 >
                   {/* Image Block */}
                   <div
-                    className={`h-[340px] bg-green-500 w-full ${
+                    className={`h-[340px] bg-slate-100 overflow-hidden w-full ${
                       isEven ? "lg:order-1" : "lg:order-2"
                     } order-1`}
                   >

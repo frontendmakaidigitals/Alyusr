@@ -19,8 +19,8 @@ const Footer = () => {
           <div>
             <Logo />
             <p className="text-sm text-slate-50 mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut
+              We deliver engineering and consulting solutions with global
+              expertise
             </p>
             {/* Social Links */}
             <div className="mt-8">

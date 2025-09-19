@@ -23,12 +23,14 @@ export default function ConstructionManagementPage() {
         "Oscillator/Rotator Shaft Systems",
         "Offshore and In-Water Foundation Systems",
       ],
+      img: "/Engineering-Infrastructure/structural/deep-foundation.avif",
     },
     {
       title: "Micropile Systems",
       description:
         "Specialized solutions for restricted access areas, seismic zones, and retrofitting of existing structures. Ideal for low-clearance, low-vibration environments.",
       items: [],
+      img: "/Engineering-Infrastructure/structural/Micropiles.png",
     },
     {
       title: "Slope Stabilization & Earth Retention",
@@ -39,6 +41,7 @@ export default function ConstructionManagementPage() {
         "Soil Nailing & Anchoring Systems",
         "Temporary & Permanent Shoring Designs",
       ],
+      img: "/Engineering-Infrastructure/structural/Earth Retention.jpg",
     },
     {
       title: "Ground Improvement Techniques",
@@ -50,12 +53,14 @@ export default function ConstructionManagementPage() {
         "Preloading and Wick Drains",
         "Chemical Stabilization",
       ],
+      img: "/Engineering-Infrastructure/structural/Ground Improvement.jpg",
     },
     {
       title: "Reverse Circulation Drilling (RCD)",
       description:
         "Expert recommendations for using RCD techniques in large-scale foundation projects requiring high precision and minimal disturbance.",
       items: [],
+      img: "/Engineering-Infrastructure/structural/Reverse Circulation Drilling.webp",
     },
   ];
   const items = [
@@ -79,23 +84,23 @@ export default function ConstructionManagementPage() {
   const industries = [
     {
       title: "High-Rise and Super-Tall Buildings",
-      image: "/images/industries/highrise.jpg",
+      image: "/Engineering-Infrastructure/structural/tall-building.avif",
     },
     {
       title: "Bridges and Transportation Infrastructure",
-      image: "/images/industries/bridges.jpg",
+      image: "/Engineering-Infrastructure/structural/bridges.avif",
     },
     {
       title: "Marine and Offshore Platforms",
-      image: "/images/industries/marine.jpg",
+      image: "/Engineering-Infrastructure/structural/marine.jpg",
     },
     {
       title: "Industrial Plants and Energy Facilities",
-      image: "/images/industries/industrial.jpg",
+      image: "/Engineering-Infrastructure/structural/Industrial Plants.avif",
     },
     {
       title: "Slope-Adjacent Residential and Commercial Developments",
-      image: "/images/industries/slope.jpg",
+      image: "/Engineering-Infrastructure/structural/Commercial.jpg",
     },
   ];
   const reasons = [
@@ -112,10 +117,10 @@ export default function ConstructionManagementPage() {
           Structural Legacy Consulting
         </h1>
       </div>
-      <section className=" w-full h-[500px] bg-yellow-500 text-center ">
+      <section className=" w-full h-[500px] bg-slate-100 text-center ">
         <Image
-          src={"/engineering/bannerjpg"}
-          className="w-full h-full object-cover object-bottom"
+          src={"/Engineering-Infrastructure/structural/hero.webp"}
+          className="w-full h-full object-cover"
           alt={""}
           width={500}
           height={200}
@@ -160,9 +165,7 @@ export default function ConstructionManagementPage() {
                     }`}
                   >
                     <img
-                      src={
-                        "https://images.pexels.com/photos/3309655/pexels-photo-3309655.jpeg"
-                      }
+                      src={area.img}
                       alt={area.title}
                       className="w-full h-full object-cover"
                     />
@@ -226,18 +229,18 @@ export default function ConstructionManagementPage() {
             {industries.map((industry, index) => {
               return (
                 <div key={index} className={``}>
-                  <motion.div className=" w-full bg-red-300 h-[220px] rounded-t-xl overflow-hidden">
+                  <motion.div className=" w-full bg-red-300 h-[220px] rounded-t-lg overflow-hidden">
                     <Image
                       src={industry.image}
                       alt={industry.title}
                       width={600}
                       height={400}
-                      className="w-full h-full object-cover  shadow-md"
+                      className="w-full h-full object-cover shadow-md"
                     />
                   </motion.div>
 
-                  <motion.div className=" w-full border bg-blue-50 text-slate-950 rounded-b-xl p-2 ">
-                    <h3 className="text-lg text-blue-900 font-semibold ">
+                  <motion.div className=" w-full border bg-blue-50 text-slate-950 rounded-b-xl p-3 ">
+                    <h3 className="text-lg text-blue-900 font-[700] ">
                       {industry.title}
                     </h3>
                   </motion.div>
@@ -274,8 +277,12 @@ export default function ConstructionManagementPage() {
               ))}
             </ul>
           </div>
-          <div className="h-[450px] bg-red-400 w-full">
-            <img />
+          <div className="h-[450px] bg-slate-100 w-full">
+            <img
+              src={"/Engineering-Infrastructure/structural/why-choose.avif"}
+              alt={""}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>

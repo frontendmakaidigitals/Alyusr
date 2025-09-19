@@ -1,6 +1,3 @@
-// app/blog/[slug]/page.tsx (server component)
-import { db } from "@/config/firebase";
-import { collection, getDocs } from "firebase/firestore";
 import { Metadata } from "next";
 import BlogClient from "./BlogClient";
 
@@ -13,7 +10,7 @@ type Blog = {
   metaTitle?: string;
   metaDesc?: string;
   imageURL?: string;
-  createdAt?: string | null; // 🔹 only keep createdAt
+  createdAt?: string | null;
   updatedAt?: string | null;
 };
 
@@ -26,21 +23,14 @@ function slugify(text: string): string {
     .replace(/\s+/g, "-");
 }
 
+// 🔹 Fetch all blogs from your API
 async function getBlogs(): Promise<Blog[]> {
-  const snapshot = await getDocs(collection(db, "blogs"));
-  return snapshot.docs.map((doc) => {
-    const data = doc.data() as Blog;
-
-    return {
-      ...data,
-      createdAt: data.createdAt
-        ? (data.createdAt as any).toDate().toLocaleDateString() // 🔹 ensure plain string
-        : null,
-      updatedAt: data.updatedAt
-        ? (data.updatedAt as any).toDate().toISOString() // 🔹 ensure plain string
-        : null,
-    };
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blogs`, {
+    next: { revalidate: 60 }, // ISR-friendly (revalidate every 60s)
   });
+
+  if (!res.ok) throw new Error("Failed to fetch blogs");
+  return res.json();
 }
 
 // 🔹 Metadata
@@ -49,8 +39,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const blogs = await getBlogs();
   const { slug } = await params;
+  const blogs = await getBlogs();
+
   const blog = blogs.find(
     (b) => slugify(b.title) === slugify(decodeURIComponent(slug))
   );
@@ -81,6 +72,7 @@ export default async function Page({
 }) {
   const { slug } = await params;
   const blogs = await getBlogs();
+
   const blog = blogs.find(
     (b) => slugify(b.title) === slugify(decodeURIComponent(slug))
   );

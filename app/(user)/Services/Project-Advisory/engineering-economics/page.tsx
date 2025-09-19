@@ -10,42 +10,42 @@ export default function Page() {
     {
       title: "Feasibility Studies",
       desc: "Evaluate whether a project is viable, achievable, and sustainable based on demand, site constraints, design, and return expectations.",
-      img: "/images/feasibility.jpg",
+      img: "/project-advisory/enigneering-economics/feasible-studies.avif",
     },
     {
       title: "Cost-Benefit Analysis (CBA)",
       desc: "Compare the total economic benefits against the projected costs to determine social value and justify public or private investment.",
-      img: "/images/cba.jpg",
+      img: "/project-advisory/enigneering-economics/reduce-cost.png",
     },
     {
       title: "Risk & Sensitivity Analysis",
       desc: "Assess uncertainties such as market fluctuations, inflation, and policy changes, and their potential impact on project performance.",
-      img: "/images/risk.jpg",
+      img: "/project-advisory/enigneering-economics/risk.webp",
     },
     {
       title: "PPP Advisory",
       desc: "Support clients in structuring public-private partnership models, financial responsibilities, and risk-sharing frameworks.",
-      img: "/images/ppp.jpg",
+      img: "/project-advisory/enigneering-economics/ppp.jpg",
     },
     {
       title: "Economic Impact Assessments",
       desc: "Measure how a project will affect jobs, income, investment, and regional growth.",
-      img: "/images/economic-impact.jpg",
+      img: "/project-advisory/enigneering-economics/Economic_Impact.webp",
     },
     {
       title: "Life-Cycle Cost Analysis (LCCA)",
       desc: "Calculate the total cost of ownership, including construction, operation, maintenance, and end-of-life to support long-term planning.",
-      img: "/images/lcca.jpg",
+      img: "/project-advisory/enigneering-economics/life-cycle.png",
     },
     {
       title: "Real Estate & Market Studies",
       desc: "Analyze land use value, tenant mix, absorption rates, and development potential for strategic positioning.",
-      img: "/images/real-estate.jpg",
+      img: "/project-advisory/enigneering-economics/real-estate-market.png",
     },
     {
       title: "Capital Investment Planning",
       desc: "Help prioritize investments across portfolios based on ROI, urgency, social need, and budget alignment.",
-      img: "/images/investment.jpg",
+      img: "/project-advisory/enigneering-economics/planning.avif",
     },
   ];
   const phases = [
@@ -101,27 +101,27 @@ export default function Page() {
     {
       title: "Multidisciplinary Insight",
       desc: "Our economists work alongside engineers, architects, urban planners, and sustainability experts, offering 360-degree advice.",
-      img: "/images/multidisciplinary.jpg",
+      img: "/project-advisory/enigneering-economics/Multidisciplinary Insight.jpg",
     },
     {
       title: "Evidence-Based Approach",
       desc: "We don’t rely on assumptions. Every recommendation is backed by real data, sound logic, and proven tools.",
-      img: "/images/evidence.jpg",
+      img: "/project-advisory/enigneering-economics/evidence.avif",
     },
     {
       title: "Local Knowledge, Global Expertise",
       desc: "We understand GCC market dynamics, cost structures, and regulatory frameworks, including Saudi Vision 2030 priorities.",
-      img: "/images/global-expertise.jpg",
+      img: "/project-advisory/enigneering-economics/global.jpg",
     },
     {
       title: "Pragmatic, Not Just Theoretical",
       desc: "Our deliverables are designed for action, supporting decision-making, funding applications, and investor engagement.",
-      img: "/images/pragmatic.jpg",
+      img: "/project-advisory/enigneering-economics/pragmatic.jpg",
     },
     {
       title: "Focus on Long-Term Value",
       desc: "We go beyond 'Is this project affordable?' to 'How do we make this project thrive over decades?'",
-      img: "/images/long-term.jpg",
+      img: "/project-advisory/enigneering-economics/focus.avif",
     },
   ];
   return (
@@ -133,18 +133,16 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/project-advisory/enigneering-economics/hero.avif"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-6">
+          <h2 className="text-5xl md:text-4xl font-bold text-center text-blue-900 mb-6">
             What We Do
           </h2>
           <p className="text-center text-gray-700 max-w-2xl mx-auto mb-12">
@@ -242,20 +240,21 @@ export default function Page() {
       </section>
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
-            Why Choose Al Yusr for Engineering Economics?
+          <h2 className="text-3xl md:text-5xl max-w-4xl mx-auto font-bold text-center  mb-12">
+            Why Choose <span className="text-blue-500">Al Yusr</span> for{" "}
+            <span className="text-green-500">Engineering Economics?</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid gird-cols-1 lg:grid-cols-3 gap-5">
             {points.map((point, idx) => (
               <div
                 key={idx}
-                className="bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+                className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
               >
                 <img
                   src={point.img}
                   alt={point.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-[230px] object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-blue-900 mb-2">

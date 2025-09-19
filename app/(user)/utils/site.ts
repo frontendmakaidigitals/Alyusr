@@ -117,7 +117,7 @@ export const siteConfig = {
             },
             {
               label: "visualization-and-virtual-reality",
-              link: "Interior-Architecture",
+              link: "visualization-and-virtual-reality",
             },
             {
               label: "Landscape Architecture",
@@ -306,7 +306,7 @@ export const siteConfig = {
           link: "Globally-Certified-Standards",
           label: "Globally Certified Standards",
           description:
-            "Why Al Yusr is the trusted global Infrastructure leader. Why Al Yusr is the trusted global Infrastructure leader",
+            "At ALYUSR, engineering is about people as much as structures. Guided by globally certified standards, we design with purpose to build spaces that shape better futures",
           img: "https://images.pexels.com/photos/6474498/pexels-photo-6474498.jpeg",
         },
         {
@@ -331,8 +331,8 @@ export const siteConfig = {
       ],
     },
     {
-      label: "Resources",
-      href: "/resources",
+      label: "Blogs",
+      href: "/blogs",
     },
     {
       label: "Our Presence",

@@ -115,7 +115,7 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Transportation-mobility/vertical-transportation/hero.png"} className="w-full h-full object-cover" alt={""} />
           </div>
         </div>
       </section>
@@ -125,6 +125,7 @@ export default function Page() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{once:true}}
             className="text-4xl lg:text-5xl font-bold mb-6"
           >
             Our <span className="text-blue-600">Approach</span>
@@ -134,6 +135,7 @@ export default function Page() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{once:true}}
             className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto"
           >
             We work closely with building owners, developers, architects,
@@ -150,6 +152,7 @@ export default function Page() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{once:true}}
             transition={{ duration: 0.6 }}
             className="text-4xl lg:text-5xl font-bold text-center mb-12"
           >
@@ -188,6 +191,7 @@ export default function Page() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{once:true}}
             className="text-4xl lg:text-5xl font-bold text-center mb-14"
           >
             Why Choose <span className="text-blue-600">Al Yusr</span> for
@@ -200,6 +204,7 @@ export default function Page() {
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{once:true}}
                 transition={{ duration: 0.6, delay: idx * 0.2 }}
                 className="bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition"
               >

@@ -16,37 +16,37 @@ export default function Page() {
       title: "Cost Planning & Budgeting",
       description:
         "Early-stage cost forecasts to guide design decisions and set realistic budgets.",
-      img: "/images/planning/sustainability.jpg",
+      img: "/project-advisory/cost-mangement/cost-management.jpg",
     },
     {
       title: "Quantity Surveying",
       description:
         "Detailed measurement and cost control services throughout the project.",
-      img: "/images/planning/sustainability.jpg",
+      img: "/project-advisory/cost-mangement/quality.jpg",
     },
     {
       title: "Feasibility & Financial Estimations",
       description:
         "Evaluate project viability, investment risks, and funding strategies.",
-      img: "/images/planning/sustainability.jpg",
+      img: "/project-advisory/cost-mangement/Feasibility.jpg",
     },
     {
       title: "Procurement & Tender Support",
       description:
         "Market-driven strategies to get the best value from contractors and suppliers.",
-      img: "/images/planning/sustainability.jpg",
+      img: "/project-advisory/cost-mangement/support.jpeg",
     },
     {
       title: "Contract Management",
       description:
         "Monitor contracts, handle variations, and provide administration support.",
-      img: "/images/planning/sustainability.jpg",
+      img: "/project-advisory/cost-mangement/Contract_Management.webp",
     },
     {
       title: "Final Account & Close-Out",
       description:
         "Ensure a clean financial finish with accurate final accounts and cost reports.",
-      img: "/images/planning/sustainability.jpg",
+      img: "/project-advisory/cost-mangement/close-out.png",
     },
   ];
   const points = [
@@ -105,13 +105,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
+          src={"/project-advisory/cost-mangement/cost-managemnt.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -182,7 +180,7 @@ export default function Page() {
           {/* Left Image */}
           <div className="h-full w-full">
             <img
-              src="/images/our-approach.jpg" // 🔹 Replace with your actual image
+              src="/project-advisory/cost-mangement/our-approach.jpg" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
             />

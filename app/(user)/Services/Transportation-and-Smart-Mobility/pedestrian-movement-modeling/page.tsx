@@ -8,39 +8,39 @@ export default function Page() {
       title: "Physical Layout",
       desc: "The design and structure of the built environment (e.g., corridors, entrances, exits, escalators).",
       icon: <Building className="w-8 h-8 text-blue-600" />,
-      img: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg", // mall/hallway
+      img: "/Transportation-mobility/pedestrian-movement/Physical.avif", // mall/hallway
     },
     {
       title: "Pedestrian Volume",
       desc: "The number of people entering, exiting, or moving through the space during a specific time period.",
       icon: <Users className="w-8 h-8 text-green-600" />,
-      img: "https://images.pexels.com/photos/301930/pexels-photo-301930.jpeg", // crowded street
+      img: "/Transportation-mobility/pedestrian-movement/Pedestrian Volume.avif", // crowded street
     },
     {
       title: "Pedestrian Behavior",
       desc: "Includes walking speed, crowd response, group dynamics, personal space preferences, and more.",
       icon: <Footprints className="w-8 h-8 text-purple-600" />,
-      img: "https://images.pexels.com/photos/109919/pexels-photo-109919.jpeg", // people walking
+      img: "/Transportation-mobility/pedestrian-movement/Behavior.avif", // people walking
     },
   ];
   const variables = [
     {
       title: "Time-Based Movement",
       desc: "Simulate peak vs. off-peak operations to understand crowd flow throughout the day.",
-      img: "https://images.pexels.com/photos/302743/pexels-photo-302743.jpeg", // busy metro crowd
+      img: "/Transportation-mobility/pedestrian-movement/Time-Based Movement.avif", // busy metro crowd
     },
     {
       title: "Walking Speeds",
       desc: "Account for diverse user groups, elderly individuals, people with children, passengers with luggage, etc.",
-      img: "https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg", // people walking different speeds
+      img: "/Transportation-mobility/pedestrian-movement/walking footpath.jpg", // people walking different speeds
     },
     {
       title: "User Footprint & Space Needs",
       desc: `Consider how much physical space people occupy, including:
-- Luggage or bicycles
-- Cultural preferences for personal space
-- Situational crowd tolerance (e.g., elevators, platforms)`,
-      img: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg", // crowd in station
+        - Luggage or bicycles
+        - Cultural preferences for personal space
+        - Situational crowd tolerance (e.g., elevators, platforms)`,
+      img: "/Transportation-mobility/pedestrian-movement/user-spce.jpg", // crowd in station
     },
   ];
 
@@ -91,7 +91,13 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img
+              src={
+                "/Transportation-mobility/pedestrian-movement/hero.avif"
+              }
+              className=""
+              alt={"w-full h-full object-cover"}
+            />
           </div>
         </div>
       </section>
@@ -178,7 +184,7 @@ export default function Page() {
           {/* Left: Image */}
           <div className="relative">
             <img
-              src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg" // replace with your choice
+              src="/Transportation-mobility/pedestrian-movement/planning.jpg"// replace with your choice
               alt="Measurable Outcomes"
               className="rounded-2xl shadow-lg object-cover w-full h-[450px]"
             />

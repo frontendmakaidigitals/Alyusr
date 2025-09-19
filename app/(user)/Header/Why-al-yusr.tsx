@@ -29,9 +29,9 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
         <p className="text-base">+966 54 154 0090</p>
 
         <div className="flex items-center gap-3">
-          <button className="bg-amber-200 text-black px-4 py-1.5 font-medium rounded">
+          <Link href={'/Contact'} className="bg-amber-200 text-black px-4 py-1.5 font-medium rounded">
             Contact us
-          </button>
+          </Link>
           <button className="bg-blue-500 text-white px-4 py-1.5 font-medium rounded">
             Follow
           </button>
