@@ -206,11 +206,11 @@ export const siteConfig = {
               link: "smart-infrastructure-and-digitals-systems",
             },
             {
-              label: "Geo-Intelligence Analytics:",
+              label: "Geo-Intelligence Analytics",
               link: "geo-intelligence-analytics",
             },
             {
-              label: "IT and Cybersecurity-",
+              label: "IT and Cybersecurity",
               link: "it-and-cybersecurity",
             },
             {
@@ -321,13 +321,13 @@ export const siteConfig = {
           label: "CEO Led - Specialized Departments",
           description:
             "At Al Yusr, every department is guided by executive leadership to ensure expert oversight and exceptional delivery",
-          img: "https://images.pexels.com/photos/4342352/pexels-photo-4342352.jpeg",
+          img: "https://images.pexels.com/photos/7654586/pexels-photo-7654586.jpeg",
         },
       ],
       tabs: [
-        { label: "Architecture and Design", link: "/" },
-        { label: "Environmental Contracting", link: "/" },
-        { label: "Digital Infrastructure Services", link: "/" },
+        { label: "Architecture and Design", link: "/Services/Urban-Planning/Architecture-Design" },
+        { label: "Environmental Contracting", link: "/Services/Environment-Sustainability-and-Resilience/environmental-services" },
+        { label: "Digital Infrastructure Services", link: "Services/Transportation-and-Smart-Mobility/it-and-cybersecurity" },
       ],
     },
     {

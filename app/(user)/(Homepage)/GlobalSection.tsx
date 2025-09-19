@@ -25,9 +25,6 @@ const GlobalSection = () => {
             borders, while maintaining a deep understanding of local
             regulations, culture, and market dynamics.
           </p>
-          <button className="mt-6 bg-gradient-to-br px-4 py-[.45rem] text-sm rounded-lg text-slate-50 flex items-center gap-2 from-[#387EF0] to-[#2651C2]">
-            Explore Our Projects <ArrowUpRight />
-          </button>
         </div>
 
         <motion.img

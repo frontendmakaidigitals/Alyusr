@@ -1,42 +1,52 @@
 "use client";
 import React, { useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import BgLayer from "../app_chunks/BgLayer";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { useInView } from "framer-motion";
+import Link from "next/link";
 const MotionImage = motion(Image);
 const Services = () => {
   const services = [
     {
       title: "Construction Management",
+      link: "/Services/Engineering-Infrastructure/Construction-Management",
       img: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg",
     },
     {
       title: "Engineering",
+      link: "/Services/Engineering-Infrastructure/Engineering-Services",
       img: "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
     },
     {
       title: "Environmental Services",
+      link: "/Services/Environment-Sustainability-and-Resilience/environmental-services",
       img: "https://images.pexels.com/photos/30589066/pexels-photo-30589066.jpeg",
     },
     {
       title: "IT and Cybersecurity",
+      link: "/Services/Transportation-and-Smart-Mobility/it-and-cybersecurity",
       img: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg",
     },
     {
       title: "Planning and Consulting",
+      link: "/Services/Urban-Planning/planning-and-advisory",
       img: "https://images.pexels.com/photos/4098228/pexels-photo-4098228.jpeg",
     },
     {
       title: "Process Developement & Implementation",
+      link: "/Services/Project-Advisory/process-development-and-implementation",
       img: "https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg",
     },
     {
-      title: "Planning",
+      title: "Cost Planning",
+      link: "/Services/Project-Advisory/cost-management",
       img: "https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg",
     },
     {
       title: "Community Engagement",
+      link: "/Services/Environment-Sustainability-and-Resilience/climate-adaptation",
       img: "https://images.pexels.com/photos/3280130/pexels-photo-3280130.jpeg",
     },
   ];
@@ -110,6 +120,14 @@ const Services = () => {
           );
         })}
       </motion.ul>
+      <div className="flex justify-center items-center">
+        <Link
+          href={"/Services"}
+          className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+        >
+          View all services <ArrowUpRight />
+        </Link>
+      </div>
     </section>
   );
 };

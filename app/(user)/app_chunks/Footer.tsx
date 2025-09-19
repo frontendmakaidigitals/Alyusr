@@ -50,31 +50,31 @@ const Footer = () => {
                 {[
                   {
                     title: "Project Management",
-                    href: "/Services/HR-Services/Staffing-Solution",
+                    href: "/Services/Project-Advisory/program-management",
                   },
                   {
                     title: "Architectural & Engineering Design",
-                    href: "/Services/HR-Services/Hr-Operations",
+                    href: "/Services/Urban-Planning/Architecture-Design",
                   },
                   {
-                    title: "Urban & Regional Planning",
-                    href: "/Services/HR-Services/Virtual-Admin-Support",
+                    title: "Urban Design",
+                    href: "/Services/Urban-Planning/urban-policy",
                   },
                   {
                     title: "Technical Support & Supervision",
-                    href: "/Services/Organization-Consulting/Talent-Management",
+                    href: "/Services/Transportation-and-Smart-Mobility/it-and-cybersecurity",
                   },
                   {
                     title: "Safety & Risk Analysis",
-                    href: "/Services/Career-Development/Career-advisory",
+                    href: "/Services/Project-Advisory/risk-management-and-resilience",
                   },
                   {
-                    title: "Infrastructure Consulting",
-                    href: "/Services/Career-Development/Career-advisory",
+                    title: "Landscape Architecture",
+                    href: "/Services/Urban-Planning/Landscape-Architecture",
                   },
                   {
-                    title: "Digital Engineering & BIM",
-                    href: "/Services/Career-Development/Career-advisory",
+                    title: "Rail Network",
+                    href: "/Services/Transportation-and-Smart-Mobility/rail-network-modeling",
                   },
                 ].map(({ title, href }, i) => (
                   <li key={i}>
@@ -91,28 +91,29 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4">Menu</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/Locations/KSA" className="hover:underline">
+                  <Link href="/" className="hover:underline">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/Locations/India" className="hover:underline">
+                  <Link
+                    href="/Who-we-are/Company-Overview"
+                    className="hover:underline"
+                  >
                     Who We Are
                   </Link>
                 </li>
                 <li>
-                  <Link href="/Locations/Egypt" className="hover:underline">
+                  <Link
+                    href="/Why-Al-Yusr/Trusted-by-Government-and-Private-Sectors"
+                    className="hover:underline"
+                  >
                     Why Al Yusr
                   </Link>
                 </li>
                 <li>
-                  <Link href="/Locations/UAE" className="hover:underline">
+                  <Link href="/Services" className="hover:underline">
                     What We Do
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/Locations/UAE" className="hover:underline">
-                    Resources
                   </Link>
                 </li>
               </ul>
@@ -128,13 +129,13 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/About" className="hover:underline">
-                    About
+                  <Link href="/Contact" className="hover:underline">
+                    Contact
                   </Link>
                 </li>
                 <li>
-                  <Link href="/Contact" className="hover:underline">
-                    Contact
+                  <Link href="/our-presence" className="hover:underline">
+                    Our Presence
                   </Link>
                 </li>
               </ul>

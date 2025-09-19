@@ -25,15 +25,6 @@ import {
 import Image from "next/image";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" },
-  }),
-};
-
 const specialCapabilities = [
   "Commercial Building Layouts",
   "Residential & Villa Project Oversight",
