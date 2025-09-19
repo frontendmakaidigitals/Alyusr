@@ -85,7 +85,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Alternative Delivery Models
         </h1>
       </div>
@@ -119,7 +119,7 @@ export default function ConstructionManagementPage() {
       <section className="bg-sky-50 mt-10 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-10 container">
           <div className="">
-            <h2 className="text-5xl font-bold text-sky-900 mb-5">
+            <h2 className="text-4xl lg:text-5xl font-bold text-sky-900 mb-5">
               What Are Alternative Delivery Models?
             </h2>
             <p>
@@ -144,7 +144,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="bg-white text-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-12">
             Our <span className="text-blue-500">Core Delivery</span> Models
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -174,7 +174,7 @@ export default function ConstructionManagementPage() {
 
       <section className="bg-gray-100 text-gray-900 py-16">
         <div className="container">
-          <h2 className="text-5xl max-w-4xl mx-auto font-bold text-center mb-10">
+          <h2 className="text-4xl lg:text-5xl max-w-4xl mx-auto font-bold text-center mb-10">
             When Should You Consider{" "}
             <span className="text-blue-500">Alternative Delivery?</span>
           </h2>
@@ -195,7 +195,7 @@ export default function ConstructionManagementPage() {
       <section className="bg-sky-50 mt-10 py-20">
         <div className="grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10 container">
           <div className="">
-            <h2 className="text-5xl font-bold text-sky-900 mb-5">
+            <h2 className="text-4xl lg:text-5xl font-bold text-sky-900 mb-5">
               Our Value Proposition
             </h2>
             <p>
@@ -229,7 +229,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="py-20 bg-white text-gray-900">
         <div className="container">
-          <h2 className="text-5xl max-w-5xl mx-auto font-bold text-center mb-14">
+          <h2 className="text-4xl lg:text-5xl max-w-5xl mx-auto font-bold text-center mb-14">
             <span className="text-green-600">Advantages</span> of{" "}
             <span className="text-blue-500">Alternative Delivery</span> Models
             with Al Yusr

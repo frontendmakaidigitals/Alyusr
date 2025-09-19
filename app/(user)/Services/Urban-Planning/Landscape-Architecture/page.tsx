@@ -84,7 +84,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Landscape Architecture
         </h1>
       </div>
@@ -120,7 +120,7 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold text-gray-800 mb-6"
+            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6"
           >
             Our <span className="text-blue-500">Design Philosophy</span>
           </motion.h2>
@@ -176,7 +176,7 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold text-gray-800 text-center mb-6"
+            className="text-4xl lg:text-5xl font-bold text-gray-800 text-center mb-6"
           >
             <span className="text-blue-500">Services</span> We Offer
           </motion.h2>

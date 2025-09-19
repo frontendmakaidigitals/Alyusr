@@ -71,7 +71,7 @@ export default function TechnicalExpertisePage() {
             Technical Expertise
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 text-6xl font-semibold">
+          <p className="mt-3 text-slate-200 text-5xl lg:text-6xl font-semibold">
             Expertise You Can Trust. Delivery You Can Count On.
           </p>
         </div>
@@ -83,17 +83,11 @@ export default function TechnicalExpertisePage() {
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
-      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
-        {/* Background image */}
-
-        {/* Left gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
-
-        {/* Container with text */}
-        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+      <section className=" bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent overflow-hidden relative">
+        <div className="relative py-16 z-10  flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+              <h1 className="text-4xl lg:text-5xl font-semibold leading-tighter  mb-4">
                 <span className="text-blue-500">Expertise</span> You Can Rely On
               </h1>
               <p className="text-lg text-gray-700">
@@ -128,7 +122,7 @@ export default function TechnicalExpertisePage() {
 
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800">
+          <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800">
             <span className="text-blue-500">Multidisciplinary</span>{" "}
             Capabilities
           </h2>
@@ -172,29 +166,36 @@ export default function TechnicalExpertisePage() {
 
       <section className="py-16 container ">
         <div className=" text-center">
-          <h2 className="text-5xl font-semibold text-gray-800 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-semibold text-gray-800 mb-4">
             Advanced <span className="text-blue-500">Tools & Technologies</span>
           </h2>
           <p className="text-gray-700 mb-6">
             To deliver precision and speed, we rely on globally recognized tools
             such as:
           </p>
-          <ul className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm text-gray-700">
+          <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 text-sm text-gray-700">
             {[
-              "AutoCAD",
-              "Revit",
-              "Civil 3D",
-              "GIS Platforms",
-              "BIM",
-              "Topcon",
-              "Trimble",
-              "Leica Stations",
+              { tool: "AutoCAD", icon: "/Tools/autocad.png" },
+              { tool: "Revit", icon: "/Tools/revit.png" },
+              { tool: "Civil 3D", icon: "/Tools/civil-3d.jpg" },
+              { tool: "GIS Platforms", icon: "/Tools/gis.png" },
+              { tool: "BIM", icon: "/Tools/bim.webp" },
+              { tool: "Topcon", icon: "/Tools/topcon.png" },
+              { tool: "Trimble", icon: "/Tools/trimble.png" },
+              { tool: "Leica Stations", icon: "/Tools/Leica.png" },
             ].map((tool, i) => (
               <li
                 key={i}
-                className="bg-sky-100 text-sky-800 font-medium rounded-lg px-4 py-2 text-center shadow-sm"
+                className="border border-slate-100/30 text-sky-800 font-medium rounded-lg px-4 py-2 text-center shadow-sm"
               >
-                {tool}
+                <div className="w-full h-[100px] ">
+                  <img
+                    src={tool.icon}
+                    alt={tool.tool}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <p className="mt-3">{tool.tool}</p>
               </li>
             ))}
           </ul>

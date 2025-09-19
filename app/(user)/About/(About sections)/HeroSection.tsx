@@ -26,7 +26,7 @@ const HeroSection = () => {
         className="w-full relative overflow-hidden"
       >
         <div className="relative z-30 container mx-auto py-10 flex flex-col justify-center items-center h-full max-w-3xl">
-          <h1 className="text-6xl font-[500] text-slate-50 text-center">
+          <h1 className="text-5xl lg:text-6xl font-[500] text-slate-50 text-center">
             About Us
           </h1>
           <p className="mt-3 text-slate-50 text-center">

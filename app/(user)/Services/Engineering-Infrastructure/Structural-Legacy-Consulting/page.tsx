@@ -113,7 +113,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Structural Legacy Consulting
         </h1>
       </div>
@@ -148,7 +148,7 @@ export default function ConstructionManagementPage() {
 
       <section className="py-20 px-6 md:px-10  text-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">
             Our <span className="text-blue-500">Core Expertise</span>
           </h2>
           <div className="grid grid-cols-1 gap-8">
@@ -197,7 +197,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="bg-blue-50 py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-sky-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-sky-900 mb-6">
             Specialized Equipment Advisory
           </h2>
           <p className="text-slate-950 mb-12 max-w-3xl mx-auto">
@@ -221,7 +221,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="py-20 bg-gray-50">
         <div className="container px-4">
-          <h2 className="text-5xl text-center font-bold mb-12 text-gray-800">
+          <h2 className="text-4xl lg:text-5xl text-center font-bold mb-12 text-gray-800">
             <span className="text-blue-500">Industries</span> We Serve
           </h2>
 
@@ -258,7 +258,7 @@ export default function ConstructionManagementPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-5xl font-bold text-start text-sky-900 mb-10"
+              className="text-4xl lg:text-5xl font-bold text-start text-sky-900 mb-10"
             >
               Why Partner with Al Yusr?
             </motion.h2>

@@ -126,7 +126,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               Environmental Assessment & Permitting
             </h1>
             <p>

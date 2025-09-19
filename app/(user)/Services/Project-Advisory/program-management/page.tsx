@@ -41,7 +41,7 @@ export default function Page() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Program Management
         </h1>
       </div>
@@ -75,7 +75,7 @@ export default function Page() {
         <div className="container place-items-center grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
             {" "}
-            <h1 className="text-6xl font-[600]">
+            <h1 className="text-5xl lg:text-6xl font-[600]">
               Outcome-Driven <span className="text-blue-500">Leadership</span>
             </h1>
             <p className="mt-3">
@@ -107,7 +107,7 @@ export default function Page() {
       <section className="py-20 bg-gradient-to-br from-blue-50/20 to-blue-400/10">
         <div className="container max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold text-gray-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
               Our <span className="text-blue-500">Capabilities</span> at a
               Glance
             </h2>
@@ -201,7 +201,7 @@ export default function Page() {
         <div className="container">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-5xl max-w-5xl mx-auto font-bold">
+            <h2 className="text-4xl lg:text-5xl max-w-5xl mx-auto font-bold">
               Why Choose Al Yusr for{" "}
               <span className="text-blue-500">Program Management?</span>
             </h2>

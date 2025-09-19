@@ -87,7 +87,7 @@ export default function SafetyCommitmentsPage() {
             Safety Commitments
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 text-6xl font-semibold">
+          <p className="mt-3 text-slate-200 text-5xl lg:text-6xl font-semibold">
             Expertise You Can Trust. Delivery You Can Count On.
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function SafetyCommitmentsPage() {
           <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
             {/* Text */}
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter mb-4">
+              <h1 className="text-4xl lg:text-5xl font-semibold leading-tighter mb-4">
                 Our Commitment to Safety
               </h1>
               <p className="text-lg text-gray-700">
@@ -154,7 +154,7 @@ export default function SafetyCommitmentsPage() {
             </div>
             {/* Text */}
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter mb-4">
+              <h1 className="text-4xl lg:text-5xl font-semibold leading-tighter mb-4">
                 Our Culture of Safety
               </h1>
               <p className="text-lg text-gray-700">

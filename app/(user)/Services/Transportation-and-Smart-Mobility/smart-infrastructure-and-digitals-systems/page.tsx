@@ -12,7 +12,8 @@ export default function Page() {
         "Funding & Policy Support: Strategy development, grant consulting, and compliance",
         "ICT Infrastructure: Voice, data, and video cabling; WAN, LAN, and PON systems",
       ],
-      image: "/Transportation-mobility/smart-infrastructure/global-connectivity.jpg",
+      image:
+        "/Transportation-mobility/smart-infrastructure/global-connectivity.jpg",
     },
     {
       title: "Wireless & Satellite Communication",
@@ -50,7 +51,8 @@ export default function Page() {
         "Digital Twins: Real-time simulation of building performance for predictive maintenance",
         "IoT Integration: Connecting devices and systems for intelligent, automated environments",
       ],
-      image: "/Transportation-mobility/smart-infrastructure/smart-buildings.jpeg",
+      image:
+        "/Transportation-mobility/smart-infrastructure/smart-buildings.jpeg",
     },
     {
       title: "Mission-Critical Technologies",
@@ -59,7 +61,8 @@ export default function Page() {
         "Audiovisual & Integrated Experiences: Smart conference rooms, immersive multimedia, and public engagement systems",
         "Smart Systems Control: Unified platforms for infrastructure management",
       ],
-      image: "/Transportation-mobility/smart-infrastructure/Mission-Critical.webp",
+      image:
+        "/Transportation-mobility/smart-infrastructure/Mission-Critical.webp",
     },
   ];
   const reasons = [
@@ -94,7 +97,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-4xl lg:text-5xl font-semibold">
               <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">
                 Smart
               </span>{" "}
@@ -123,12 +126,16 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
-            <img src={"/Transportation-mobility/smart-infrastructure/hero.jpg"} className="w-full h-full object-cover" alt={""} />
+            <img
+              src={"/Transportation-mobility/smart-infrastructure/hero.jpg"}
+              className="w-full h-full object-cover"
+              alt={""}
+            />
           </div>
         </div>
       </section>
       <section className="py-20 bg-gray-50">
-        <h2 className="text-5xl font-bold text-center mb-16">
+        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16">
           Our <span className="text-blue-600">Digital Capabilities</span>
         </h2>
 
@@ -166,7 +173,7 @@ export default function Page() {
       </section>{" "}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 mx-auto max-w-4xl">
+          <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-12 mx-auto max-w-4xl">
             Why Choose <span className="text-blue-600">Al Yusr</span> for Smart
             Infrastructure?
           </h2>

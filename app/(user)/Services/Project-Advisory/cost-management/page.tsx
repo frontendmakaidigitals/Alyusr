@@ -99,7 +99,7 @@ export default function Page() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Cost Management Services
         </h1>
       </div>
@@ -136,7 +136,7 @@ export default function Page() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold text-gray-800 mb-12 text-center"
+            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-12 text-center"
           >
             What <span className="text-blue-500">We Offer</span>
           </motion.h2>

@@ -94,7 +94,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-4xl lg:text-5xl font-semibold">
               Urban <span className="text-blue-600">Mobility</span> Solutions
             </h1>
 
@@ -114,12 +114,16 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
-            <img src={"/Transportation-mobility/urban-mobility/hero.png"} className="w-full h-full object-cover" alt={""} />
+            <img
+              src={"/Transportation-mobility/urban-mobility/hero.png"}
+              className="w-full h-full object-cover"
+              alt={""}
+            />
           </div>
         </div>
       </section>
       <section className="py-16 px-6 lg:px-20 bg-gray-50">
-        <h2 className="text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-12">
           Our <span className="text-blue-600">Scope of Work</span>
         </h2>
         <div className="space-y-20">

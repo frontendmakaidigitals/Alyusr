@@ -119,15 +119,13 @@ export default function Page() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Process Simulation Models
         </h1>
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "/project-advisory/process-simulation/hero.jpg"
-          }
+          src={"/project-advisory/process-simulation/hero.jpg"}
           className="w-full h-full object-cover object-bottom"
           alt={"hero"}
           width={1200}
@@ -202,7 +200,7 @@ export default function Page() {
       </section>
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-12">
             <span className="text-blue-500">Application</span> Across Sectors
           </h2>
 

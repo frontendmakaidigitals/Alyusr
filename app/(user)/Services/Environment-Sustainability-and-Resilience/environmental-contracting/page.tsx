@@ -94,7 +94,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               <span className="text-green-500">Environmental</span>{" "}
               <span className="text-blue-500">Contracting</span>
             </h1>
@@ -147,7 +147,7 @@ export default function Page() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="text-5xl text-center font-bold text-gray-900 mb-12">
+          <h2 className="text-4xl lg:text-5xl text-center font-bold text-gray-900 mb-12">
             <span className="text-blue-500">Our Services</span> at a Glance
           </h2>
 
@@ -178,7 +178,7 @@ export default function Page() {
 
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-blue-100">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 text-center">
-          <h2 className="text-5xl font-bold text-gray-900 mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
             Why Choose <span className="text-blue-600">Al Yusr</span>
           </h2>
 

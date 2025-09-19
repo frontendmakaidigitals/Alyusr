@@ -61,7 +61,9 @@ const Services = () => {
 
   return (
     <section className="container py-20 mx-auto">
-      <h1 className="text-5xl font-semibold text-center">Our Services</h1>
+      <h1 className="text-4xl lg:text-5xl font-semibold text-center">
+        Our Services
+      </h1>
       <motion.ul
         transition={{ staggerChildren: 1 }}
         className="grid grid-cols-1 lg:grid-cols-4 gap-2 mt-12"

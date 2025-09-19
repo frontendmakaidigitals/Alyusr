@@ -87,7 +87,7 @@ const Herosection = () => {
                         duration: 1.4,
                         ease: [0.19, 1, 0.22, 1],
                       }}
-                      className="text-4xl lg:text-6xl !text-slate-50 font-[600] max-w-2xl"
+                      className="text-4xl lg:text-5xl lg:text-6xl !text-slate-50 font-[600] max-w-2xl"
                     >
                       {slides[activeIndex].title}
                     </motion.h1>

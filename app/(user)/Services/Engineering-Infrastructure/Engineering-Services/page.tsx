@@ -62,7 +62,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Engineering Services
         </h1>
       </div>
@@ -96,7 +96,7 @@ export default function ConstructionManagementPage() {
       <section className="my-20">
         <div className="container place-items-center grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div>
-            <h1 className="text-5xl font-[600] max-w-xl">
+            <h1 className="text-4xl lg:text-5xl font-[600] max-w-xl">
               Our <span className="text-blue-500">Capabilities</span> at a
               Glance
             </h1>
@@ -123,7 +123,9 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="h-[500px] w-full ">
             <img
-              src={"/Engineering-Infrastructure/Engineering/pexels-thisisengineering-3913031.jpg"}
+              src={
+                "/Engineering-Infrastructure/Engineering/pexels-thisisengineering-3913031.jpg"
+              }
               alt={""}
               className="w-full h-full object-cover"
             />
@@ -133,7 +135,7 @@ export default function ConstructionManagementPage() {
       <section className="bg-white py-20 px-6 text-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold">
+            <h2 className="text-4xl lg:text-5xl font-bold">
               Our <span className="text-blue-500">Core Services</span>
             </h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -205,13 +207,15 @@ export default function ConstructionManagementPage() {
         <div className="container place-items-center grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="h-[500px] w-full ">
             <img
-              src={"/Engineering-Infrastructure/Engineering/project-delivery.jpg"}
+              src={
+                "/Engineering-Infrastructure/Engineering/project-delivery.jpg"
+              }
               className=" w-full h-full object-cover"
               alt=""
             />
           </div>
           <div>
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-4xl lg:text-5xl font-semibold">
               Integrated, BIM-Led{" "}
               <span className="text-blue-500">Project Delivery</span>
             </h1>
@@ -237,7 +241,7 @@ export default function ConstructionManagementPage() {
       <section className="bg-white py-20 px-6 text-gray-900">
         <div className="container">
           <div className="text-center mb-12 max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold">
+            <h2 className="text-4xl lg:text-5xl font-bold">
               Why Choose <span className="text-blue-500">Al Yusr</span> for
               Engineering Services?
             </h2>

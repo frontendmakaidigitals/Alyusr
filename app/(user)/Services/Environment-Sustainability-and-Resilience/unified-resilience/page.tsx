@@ -113,7 +113,9 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">Unified Resilience</h1>
+            <h1 className="text-4xl lg:text-5xl font-[600]">
+              Unified Resilience
+            </h1>
             <h2 className="text-lg text-blue-400 font-[500]">
               Protecting Infrastructure, Enabling Continuity
             </h2>
@@ -139,7 +141,7 @@ export default function Page() {
       <section className="relative py-20 bg-gradient-to-br from-slate-50 via-white to-slate-100">
         <div className="container mx-auto px-6 max-w-7xl">
           {/* Heading */}
-          <motion.h2 className="text-3xl md:text-5xl font-bold text-center text-slate-900 mb-16">
+          <motion.h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-slate-900 mb-16">
             Our <span className="text-primary">Areas of Focus</span>
           </motion.h2>
 
@@ -171,7 +173,7 @@ export default function Page() {
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100">
         <div className="container text-center">
           {/* Section Heading */}
-          <motion.h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-12">
+          <motion.h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
             <span className="text-blue-500">Industries</span> We Support
           </motion.h2>
 
@@ -211,7 +213,7 @@ export default function Page() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-gray-900 mb-12"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-12"
           >
             Why Choose <span className="text-blue-500">Al Yusr?</span>
           </motion.h2>

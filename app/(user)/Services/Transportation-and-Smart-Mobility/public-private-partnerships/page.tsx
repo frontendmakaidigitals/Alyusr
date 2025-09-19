@@ -53,7 +53,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               Public-Private{" "}
               <span className="text-blue-500">Partnerships (P3)</span>
             </h1>
@@ -73,7 +73,11 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={"/Transportation-mobility/public-private/hero.jpg"} className="object-cover w-full h-full " alt={""} />
+            <img
+              src={"/Transportation-mobility/public-private/hero.jpg"}
+              className="object-cover w-full h-full "
+              alt={""}
+            />
           </div>
         </div>
       </section>
@@ -90,7 +94,7 @@ export default function Page() {
 
           {/* Right Content */}
           <div>
-            <h2 className="text-5xl font-bold text-gray-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
               Our <span className="text-blue-500">Experience</span>
             </h2>
             <p className="mt-6 text-lg text-gray-700 leading-relaxed">

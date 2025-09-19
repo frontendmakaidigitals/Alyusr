@@ -28,7 +28,7 @@ const Industry = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto">
-        <h1 className="text-5xl text-center font-semibold">
+        <h1 className="text-4xl lg:text-5xl text-center font-semibold">
           Industry <span className="text-blue-500">Insights</span> and{" "}
           <span className="text-blue-500">Case</span> Studies
         </h1>

@@ -75,7 +75,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl  md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl  md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Visualization and Virtual Reality
         </h1>
       </div>
@@ -108,7 +108,7 @@ export default function ConstructionManagementPage() {
       <section className="py-20">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 place-items-center">
           <div>
-            <h1 className="text-5xl font-[700]">
+            <h1 className="text-4xl lg:text-5xl font-[700]">
               <span className="text-blue-500">Engaging</span> People,{" "}
               <span className="text-blue-500">Empowering</span> Places
             </h1>
@@ -141,7 +141,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="py-16 bg-white">
         <div className=" container ">
-          <h2 className="text-5xl font-bold text-gray-900 text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 text-center mb-12">
             What <span className="text-blue-500">We Do</span>
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -225,7 +225,7 @@ export default function ConstructionManagementPage() {
 
       <section className="py-16 bg-muted/30">
         <div className="container">
-          <h2 className="text-5xl text-center font-bold text-gray-900 mb-10">
+          <h2 className="text-4xl lg:text-5xl text-center font-bold text-gray-900 mb-10">
             Why Choose <span className="text-blue-500">Al Yusr</span>?
           </h2>
           <div className="grid gap-6 grid-cols-1 lg:grid-cols-3">

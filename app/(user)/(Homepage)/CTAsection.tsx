@@ -23,7 +23,7 @@ const Marquee = () => {
   return (
     <section className="pt-20 text-center bg-white">
       {/* Heading */}
-      <h1 className="text-4xl md:text-5xl font-semibold max-w-3xl mx-auto">
+      <h1 className="text-4xl md:text-4xl lg:text-5xl font-semibold max-w-3xl mx-auto">
         Our Trusted <span className="text-blue-600">Partners</span>
       </h1>
 

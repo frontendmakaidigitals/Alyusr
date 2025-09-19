@@ -84,7 +84,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               <span className="text-blue-500">EHS Management</span> Consulting
             </h1>
             <p>
@@ -122,7 +122,7 @@ export default function Page() {
 
           {/* Right Content */}
           <div>
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Our <span className="text-blue-600">Approach</span>
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -147,7 +147,7 @@ export default function Page() {
 
       <section className="py-20 bg-gradient-to-br from-white via-blue-50 to-white">
         <div className="container mx-auto ">
-          <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12 text-center">
             What <span className="text-blue-600">Sets Us Apart</span>
           </h2>
 
@@ -176,7 +176,7 @@ export default function Page() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="text-5xl font-bold text-gray-900 mb-6 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-center">
             Our <span className="text-blue-600">Services</span>
           </h2>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">

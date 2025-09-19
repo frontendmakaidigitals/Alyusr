@@ -89,12 +89,12 @@ export default function Page() {
     {
       title: "Multi-Disciplinary Expertise",
       desc: "Our teams combine GIS specialists, urban planners, engineers, and data scientists.",
-      img: "/Transportation-mobility/geo-intelligence/Multi-Disciplinary Expertise.jpg"
+      img: "/Transportation-mobility/geo-intelligence/Multi-Disciplinary Expertise.jpg",
     },
     {
       title: "Proven Global Experience",
       desc: "Hundreds of successful geospatial projects across government and industry sectors.",
-      img: "/Transportation-mobility/geo-intelligence/global.jpg"
+      img: "/Transportation-mobility/geo-intelligence/global.jpg",
     },
     {
       title: "Custom Solutions",
@@ -112,7 +112,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               Geo-<span className="text-blue-500">Intelligence</span> &{" "}
               <span className="text-blue-500">Analysis</span>
             </h1>
@@ -131,7 +131,11 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={"/Transportation-mobility/geo-intelligence/hero.jpg"} className="w-full h-full object-cover" alt={""} />
+            <img
+              src={"/Transportation-mobility/geo-intelligence/hero.jpg"}
+              className="w-full h-full object-cover"
+              alt={""}
+            />
           </div>
         </div>
       </section>
@@ -140,7 +144,7 @@ export default function Page() {
         <div className="container mx-auto px-6 lg:px-12">
           {/* Heading */}
           <div className="text-center mb-12 max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-foreground">
+            <h2 className="text-3xl lg:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
               Why <span className="text-blue-500">Geo-Intelligence</span>{" "}
               Matters
             </h2>
@@ -190,7 +194,7 @@ export default function Page() {
         <div className="container mx-auto px-6 lg:px-12">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-foreground">
+            <h2 className="text-3xl lg:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
               Our <span className="text-blue-500">Capabilities</span>
             </h2>
           </div>
@@ -236,7 +240,7 @@ export default function Page() {
         <div className="container mx-auto px-6 lg:px-12">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold tracking-tight text-foreground">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
               How <span className="text-blue-500">We Deliver</span> Value
             </h2>
           </div>

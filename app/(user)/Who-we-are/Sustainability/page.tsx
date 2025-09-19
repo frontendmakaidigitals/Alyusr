@@ -86,7 +86,7 @@ export default function Page() {
             Sustainability at Al Yusr Engineering Consultancy
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 text-6xl font-semibold">
+          <p className="mt-3 text-slate-200 text-5xl lg:text-6xl font-semibold">
             Our Commitment: Building a Sustainable Future Together
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function Page() {
         <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+              <h1 className="text-4xl lg:text-5xl font-semibold leading-tighter  mb-4">
                 Leading with Purpose on{" "}
                 <span className="text-bllue-500">Sustainability</span>
               </h1>
@@ -147,7 +147,7 @@ export default function Page() {
             className="rounded-xl shadow-md"
           />
           <div>
-            <h2 className="text-5xl font-semibold mb-4">
+            <h2 className="text-4xl lg:text-5xl font-semibold mb-4">
               Why <span className="text-blue-500">Sustainability</span> Matters
               to Us
             </h2>
@@ -243,7 +243,7 @@ export default function Page() {
             />
           </div>
           <div className="max-w-5xl mx-auto container">
-            <h2 className="text-5xl font-semibold mb-4">
+            <h2 className="text-4xl lg:text-5xl font-semibold mb-4">
               Our <span className="text-blue-500">Global</span> Commitment
             </h2>
             <p className="text-gray-700 text-lg">

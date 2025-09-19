@@ -88,7 +88,7 @@ export default function Page() {
         className="w-full relative overflow-hidden"
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
-          <h1 className="text-5xl font-bold text-slate-50">
+          <h1 className="text-4xl lg:text-5xl font-bold text-slate-50">
             In-House Capabilities
             <br className="hidden sm:block" />
           </h1>
@@ -114,7 +114,7 @@ export default function Page() {
         <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold text-sky-800 leading-tighter  mb-4">
+              <h1 className="text-4xl lg:text-5xl font-semibold text-sky-800 leading-tighter  mb-4">
                 Expertise Under One Roof
               </h1>
               <p className="text-lg text-gray-700">
@@ -280,7 +280,7 @@ export default function Page() {
       </section>
       <section>
         <div className="my-24 container">
-          <h3 className="text-5xl font-bold text-center text-gray-800 mb-16">
+          <h3 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-16">
             Why It Matters to <span className="text-blue-500">Our Clients</span>
           </h3>
           <Carousel

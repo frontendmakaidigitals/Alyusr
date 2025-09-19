@@ -42,7 +42,7 @@ export default function Page() {
             Leadership & Vision
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 text-6xl font-semibold">
+          <p className="mt-3 text-slate-200 text-5xl lg:text-6xl font-semibold">
             Guiding Innovation. Engineering the Future.
           </p>
         </div>

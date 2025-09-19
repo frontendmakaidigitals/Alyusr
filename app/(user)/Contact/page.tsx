@@ -92,7 +92,7 @@ const Contact = () => {
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-6xl font-extrabold text-white text-center drop-shadow-md "
+            className="text-5xl lg:text-6xl font-extrabold text-white text-center drop-shadow-md "
           >
             Contact Us
           </motion.h1>

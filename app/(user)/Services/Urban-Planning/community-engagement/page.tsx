@@ -79,7 +79,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Community Engagement
         </h1>
       </div>
@@ -115,7 +115,7 @@ export default function ConstructionManagementPage() {
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 place-items-center">
           <div>
             {" "}
-            <h1 className="text-5xl font-[700]">
+            <h1 className="text-4xl lg:text-5xl font-[700]">
               <span className="text-blue-500">Engaging</span> People,{" "}
               <span className="text-blue-500">Empowering</span> Places
             </h1>
@@ -202,7 +202,7 @@ export default function ConstructionManagementPage() {
             />
           </div>
           <div className="space-y-6">
-            <h2 className="text-5xl font-bold tracking-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
               <span className="text-blue-500">Innovating Engagement</span> for
               the Future
             </h2>

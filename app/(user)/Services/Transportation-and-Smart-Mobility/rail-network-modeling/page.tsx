@@ -16,7 +16,7 @@ export default function Page() {
     {
       title: "Rail Traffic Controller (RTC) – Freight Network Analysis",
       desc: "The Rail Traffic Controller (RTC) by Berkeley Simulation Software is the industry’s standard for freight rail simulation. With its state-of-the-art automated dispatching logic, RTC efficiently simulates large and complex freight networks, rivaling even human dispatchers. From small terminals to international freight routes, RTC ensures stakeholders understand the operational implications before committing to costly investments.",
-      img: "/Transportation-mobility/rail-network-modelling/Rail Traffic Controller.jpg", 
+      img: "/Transportation-mobility/rail-network-modelling/Rail Traffic Controller.jpg",
     },
     {
       title: "OpenTrack – Passenger Network Optimization",
@@ -99,7 +99,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-4xl lg:text-5xl font-semibold">
               <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">
                 Rail Network
               </span>{" "}
@@ -122,12 +122,16 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={"/Transportation-mobility/rail-network-modelling/hero.jpg"} className="w-full h-full object-cover" alt={""} />
+            <img
+              src={"/Transportation-mobility/rail-network-modelling/hero.jpg"}
+              className="w-full h-full object-cover"
+              alt={""}
+            />
           </div>
         </div>
       </section>
       <section className="py-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-12">
           Our{" "}
           <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400 bg-clip-text text-transparent">
             Rail Simulation

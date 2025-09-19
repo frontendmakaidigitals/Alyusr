@@ -89,15 +89,13 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           SCCI Electric
         </h1>
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "/Engineering-Infrastructure/SCII/hero.avif"
-          }
+          src={"/Engineering-Infrastructure/SCII/hero.avif"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}
@@ -124,7 +122,7 @@ export default function ConstructionManagementPage() {
       <section className="my-20">
         <div className="container place-items-center grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-4xl lg:text-5xl font-semibold">
               What We <span className="text-blue-500">Do</span>
             </h1>
             <p className="mt-3 text-lg">
@@ -151,7 +149,7 @@ export default function ConstructionManagementPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl font-bold mb-4"
+            className="text-4xl lg:text-5xl font-bold mb-4"
           >
             <span className="text-blue-500">Markets</span> We Serve
           </motion.h2>
@@ -209,7 +207,7 @@ export default function ConstructionManagementPage() {
 
       <section className="bg-blue-50 py-16">
         <div className="container px-6">
-          <h2 className="text-5xl font-bold text-center text-blue-900 mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-blue-900 mb-12">
             Why Choose SCCI Electric?
           </h2>
           <div className="grid gap-8 grid-cols-1 lg:grid-cols-4">

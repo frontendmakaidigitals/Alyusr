@@ -40,7 +40,7 @@ export default function Page() {
             Certifications & Accreditations
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 text-6xl font-semibold">
+          <p className="mt-3 text-slate-200 text-5xl lg:text-6xl font-semibold">
             Expertise You Can Trust. Delivery You Can Count On.
           </p>
         </div>
@@ -62,7 +62,7 @@ export default function Page() {
         <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+              <h1 className="text-4xl lg:text-5xl font-semibold leading-tighter  mb-4">
                 Our <span className="text-blue-500">Global</span> Standards &
                 Accreditations
               </h1>
@@ -93,7 +93,7 @@ export default function Page() {
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto  grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-5xl font-bold text-sky-800 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-sky-800 mb-4">
               Class A Certificate: Engineering Excellence Recognized Nationally
             </h2>
             <p className="text-gray-700 mb-4">
@@ -134,7 +134,7 @@ export default function Page() {
 
       <section className="py-20 px-6 bg-sky-50">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-5xl font-bold text-center text-gray-800 mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">
             International <span className="text-blue-600">ISO</span>{" "}
             Certifications
           </h2>
@@ -191,7 +191,7 @@ export default function Page() {
 
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-5xl font-bold text-center text-gray-800 mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">
             <span className="text-blue-500">Global</span> Memberships &
             Registrations
           </h2>

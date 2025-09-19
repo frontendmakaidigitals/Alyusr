@@ -35,7 +35,7 @@ export default function Page() {
             Transforming Saudi’s Future
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 text-6xl font-semibold">
+          <p className="mt-3 text-slate-200 text-5xl lg:text-6xl font-semibold">
             Engineering Progress. Empowering Vision 2030.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function Page() {
         <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-semibold leading-tighter  mb-4">
+              <h1 className="text-4xl lg:text-5xl font-semibold leading-tighter  mb-4">
                 Heading
               </h1>
               <p className="text-lg text-gray-700">
@@ -95,7 +95,7 @@ export default function Page() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-5xl font-semibold mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6"
           >
             Building the <span className="text-blue-500">Kingdom</span> of
             Tomorrow
@@ -159,7 +159,7 @@ export default function Page() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-14"
+            className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-14"
           >
             Our <span className="text-blue-500">Contribution</span> to{" "}
             <span>Vision 2030</span>

@@ -85,7 +85,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               Data-Driven Planning for{" "}
               <span className="text-blue-500">Smarter Cities</span>
             </h1>
@@ -102,7 +102,11 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={"/Transportation-mobility/city-analytics/hero.webp"} className="w-full h-full object-cover" alt={""} />
+            <img
+              src={"/Transportation-mobility/city-analytics/hero.webp"}
+              className="w-full h-full object-cover"
+              alt={""}
+            />
           </div>
         </div>
       </section>
@@ -110,12 +114,16 @@ export default function Page() {
         <div className="container grid grid-cols-1 lg:grid-cols-2 place-items-center gap-12">
           {/* Image Left */}
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={"/Transportation-mobility/city-analytics/visualizing.jpg"} className="w-full h-full object-cover" alt={""} />
+            <img
+              src={"/Transportation-mobility/city-analytics/visualizing.jpg"}
+              className="w-full h-full object-cover"
+              alt={""}
+            />
           </div>
 
           {/* Content Right */}
           <div className="w-full space-y-2">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               Where <span className="text-green-500">Strategy</span> Meets{" "}
               <span className="text-blue-500">Technology</span>
             </h1>
@@ -141,7 +149,7 @@ export default function Page() {
         <div className="container mx-auto px-6 lg:px-12">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold tracking-tight text-foreground">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
               Our <span className="text-blue-500">Focus Areas</span>
             </h2>
           </div>
@@ -178,7 +186,7 @@ export default function Page() {
         <div className="container mx-auto px-6 lg:px-12">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold tracking-tight text-foreground">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
               <span className="text-blue-500">Tools</span> We Use
             </h2>
           </div>

@@ -56,7 +56,7 @@ export default function ConstructionManagementPage() {
         "Project scheduling & risk management",
         "Program and construction oversight",
       ],
-      img:"/Engineering-Infrastructure/underground/Planning.avif"
+      img: "/Engineering-Infrastructure/underground/Planning.avif",
     },
     {
       title: "Geotechnical & Geological Engineering",
@@ -67,7 +67,7 @@ export default function ConstructionManagementPage() {
         "Geotechnical risk assessment",
         "Settlement prediction and monitoring",
       ],
-      img:"/Engineering-Infrastructure/underground/Geological.avif"
+      img: "/Engineering-Infrastructure/underground/Geological.avif",
     },
     {
       title: "Tunnel Design & Engineering",
@@ -78,7 +78,7 @@ export default function ConstructionManagementPage() {
         "NATM/SEM: For complex geological conditions",
         "Cut-and-Cover & Trenchless Systems",
       ],
-      img:"/Engineering-Infrastructure/underground/tunnel-design.avif"
+      img: "/Engineering-Infrastructure/underground/tunnel-design.avif",
     },
     {
       title: "Trenchless Technology Solutions",
@@ -89,7 +89,7 @@ export default function ConstructionManagementPage() {
         "Pipe jacking",
         "Auger boring",
       ],
-      img:"/Engineering-Infrastructure/underground/trenchless.jpg"
+      img: "/Engineering-Infrastructure/underground/trenchless.jpg",
     },
     {
       title: "Tunnel Inspection, Rehab & Asset Management",
@@ -101,7 +101,7 @@ export default function ConstructionManagementPage() {
         "Structural rehabilitation",
         "Asset tracking and lifecycle management",
       ],
-      img:"/Engineering-Infrastructure/underground/tunnel-inspection.jpeg"
+      img: "/Engineering-Infrastructure/underground/tunnel-inspection.jpeg",
     },
     {
       title: "Resident Engineering & Construction Support",
@@ -113,22 +113,20 @@ export default function ConstructionManagementPage() {
         "Safety audits and progress reporting",
         "Change management and claim analysis",
       ],
-      img:"/Engineering-Infrastructure/underground/resident-engineer.webp"
+      img: "/Engineering-Infrastructure/underground/resident-engineer.webp",
     },
   ];
 
   return (
     <main className="bg-white text-gray-900">
       <div className="container   my-10">
-        <h1 className="text-4xl max-w-3xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl max-w-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Tunnels & Underground Infrastructure
         </h1>
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "/Engineering-Infrastructure/underground/hero.jpg"
-          }
+          src={"/Engineering-Infrastructure/underground/hero.jpg"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}
@@ -155,7 +153,7 @@ export default function ConstructionManagementPage() {
       {/* Features */}
       <section className="py-24 container space-y-20">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-5xl font-bold mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             What We <span className="text-blue-500">Do</span>
           </h2>
           <p className="text-gray-700 text-lg">
@@ -212,7 +210,7 @@ export default function ConstructionManagementPage() {
 
       <section className="bg-blue-50 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center text-blue-900 mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-blue-900 mb-12">
             Why Choose Al Yusr?
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

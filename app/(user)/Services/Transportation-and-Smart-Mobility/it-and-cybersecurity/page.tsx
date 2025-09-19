@@ -113,7 +113,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               <span className="text-blue-500">IT</span> &{" "}
               <span className="text-sky-500">Cybersecurity</span> Services
             </h1>
@@ -127,7 +127,11 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={"/Transportation-mobility/it-and-cybersecurity/hero.jpg"} className="" alt={""} />
+            <img
+              src={"/Transportation-mobility/it-and-cybersecurity/hero.jpg"}
+              className=""
+              alt={""}
+            />
           </div>
         </div>
       </section>
@@ -136,7 +140,7 @@ export default function Page() {
         <div className="container mx-auto px-6 lg:px-12">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold tracking-tight text-foreground">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
               How <span className="text-blue-500">We Deliver</span> Value
             </h2>
           </div>
@@ -217,7 +221,7 @@ export default function Page() {
 
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-bold text-gray-900 mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
             Why Choose <span className="text-blue-600">Al Yusr?</span>
           </h2>
 

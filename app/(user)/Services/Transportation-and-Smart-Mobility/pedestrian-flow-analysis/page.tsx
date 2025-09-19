@@ -153,7 +153,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               Pedestrian <span className="text-blue-500">Flow Analysis</span>
             </h1>
             <p>
@@ -179,7 +179,7 @@ export default function Page() {
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           {/* Title */}
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl lg:text-5xl font-bold text-gray-900 text-center mb-16">
             What Is{" "}
             <span className="text-blue-600">Pedestrian Flow Analysis?</span>
           </h2>
@@ -226,7 +226,7 @@ export default function Page() {
 
           {/* What We Analyze */}
           <div>
-            <h3 className="text-5xl font-semibold text-gray-900 text-center mb-12">
+            <h3 className="text-4xl lg:text-5xl font-semibold text-gray-900 text-center mb-12">
               What <span className="text-blue-500">We Analyze</span>
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -314,7 +314,7 @@ export default function Page() {
         <div className="container ">
           {/* Text Content */}
           <div className="">
-            <h2 className="text-5xl text-center font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl text-center font-bold text-gray-900 mb-4">
               Deliverables You Can Expect
             </h2>
             <ul className="grid grid-cols-1 lg:grid-cols-4 gap-4">

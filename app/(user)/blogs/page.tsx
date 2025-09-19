@@ -88,7 +88,7 @@ const Page = () => {
                           <span className="p-2 text-xs bg-dimondra-white text-slate-900 rounded-lg">
                             {blog.category}
                           </span>
-                          <h1 className="text-4xl lg:text-6xl max-w-2xl mt-3 text-slate-50 tracking-tighter font-[500]">
+                          <h1 className="text-4xl lg:text-5xl lg:text-6xl max-w-2xl mt-3 text-slate-50 tracking-tighter font-[500]">
                             {blog.title}
                           </h1>
                           <div className="mt-1 max-w-3xl">

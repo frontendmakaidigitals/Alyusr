@@ -171,7 +171,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Construction Management
         </h1>
       </div>
@@ -200,7 +200,7 @@ export default function ConstructionManagementPage() {
       </section>
       {/* Features */}
       <section className="container my-20">
-        <motion.h2 className="text-5xl font-semibold text-center mb-12">
+        <motion.h2 className="text-4xl lg:text-5xl font-semibold text-center mb-12">
           Our Key <span className="text-blue-500">Responsibilities</span>
         </motion.h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -234,7 +234,7 @@ export default function ConstructionManagementPage() {
       <section className="bg-white py-20 px-6 text-gray-900">
         <div className="flex  items-center gap-5">
           <div>
-            <motion.h2 className="text-5xl font-bold mb-2 text-start">
+            <motion.h2 className="text-4xl lg:text-5xl font-bold mb-2 text-start">
               Full <span className="text-blue-500">Project Lifecycle</span>{" "}
               Expertise
             </motion.h2>
@@ -282,7 +282,7 @@ export default function ConstructionManagementPage() {
                     key={i}
                     className="md:basis-1/2 pt-5 relative lg:basis-1/3 pl-4" // <-- spacing added
                   >
-                    <motion.h2 className="text-6xl z-10 left-8 text-white/80 font-bold absolute top-0 -translate-y-2 drop-shadow-[1px_1px_2px_rgba(0,0,0,0.4)]">
+                    <motion.h2 className="text-5xl lg:text-6xl z-10 left-8 text-white/80 font-bold absolute top-0 -translate-y-2 drop-shadow-[1px_1px_2px_rgba(0,0,0,0.4)]">
                       {i + 1}
                     </motion.h2>
 
@@ -310,7 +310,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="py-16 container">
         <motion.h2
-          className="text-5xl font-semibold text-center mb-6"
+          className="text-4xl lg:text-5xl font-semibold text-center mb-6"
           initial="hidden"
           whileInView="visible"
         >
@@ -354,7 +354,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="py-16 container">
         <motion.h2
-          className="text-5xl font-semibold text-center mb-3"
+          className="text-4xl lg:text-5xl font-semibold text-center mb-3"
           initial="hidden"
           whileInView="visible"
           variants={{

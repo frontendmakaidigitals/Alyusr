@@ -92,7 +92,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Vertical Transportation Services
         </h1>
       </div>
@@ -126,7 +126,7 @@ export default function ConstructionManagementPage() {
       <section className="my-20">
         <div className="container place-items-center grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-4xl lg:text-5xl font-semibold">
               Our <span className="text-blue-500">Approach</span>
             </h1>
             <p className="mt-3 text-lg">
@@ -153,7 +153,7 @@ export default function ConstructionManagementPage() {
       {/* Features */}
       <section className="bg-blue-50 py-20">
         <div className="container">
-          <h2 className="text-5xl font-bold text-center  mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center  mb-12">
             Our <span className="text-blue-500">Services</span>
           </h2>
           <div className="grid gap-10 grid-cols-1 lg:grid-cols-2">
@@ -184,7 +184,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className=" py-16">
         <div className="container">
-          <h2 className="text-5xl max-w-5xl mx-auto font-bold text-center text-black mb-12">
+          <h2 className="text-4xl lg:text-5xl max-w-5xl mx-auto font-bold text-center text-black mb-12">
             Why Choose Al Yusr for{" "}
             <span className="text-blue-500">Vertical Transportation?</span>
           </h2>

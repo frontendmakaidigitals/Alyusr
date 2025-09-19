@@ -126,7 +126,9 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">Climate Adaptation Services</h1>
+            <h1 className="text-4xl lg:text-5xl font-[600]">
+              Climate Adaptation Services
+            </h1>
             <p>
               Climate change is one of the most urgent challenges of our time,
               demanding immediate and long-term solutions. Increasingly severe
@@ -148,7 +150,7 @@ export default function Page() {
       </section>
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-slate-900 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 text-center">
             Our Capabilities
           </h2>
           <p className="mt-4 text-slate-600 text-center max-w-3xl mx-auto">
@@ -178,7 +180,7 @@ export default function Page() {
       </section>{" "}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-slate-900 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 text-center">
             Climate Adaptation Services
           </h2>
           <p className="mt-4 text-slate-600 text-center max-w-3xl mx-auto">
@@ -212,7 +214,7 @@ export default function Page() {
       </section>{" "}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center text-slate-900">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-slate-900">
             Benefits of Partnering with Al Yusr
           </h2>
 

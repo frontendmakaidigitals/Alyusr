@@ -45,7 +45,7 @@ export default function CareersPage() {
   return (
     <main className="">
       <section className="grid max-w-7xl grid-cols-1 place-items-center gap-10 lg:grid-cols-2 container my-14">
-        <h1 className="text-6xl font-[600] border-r border-slate-900/50 ">
+        <h1 className="text-5xl lg:text-6xl font-[600] border-r border-slate-900/50 ">
           Join the company with the bold new vision.
         </h1>
         <div>
@@ -141,7 +141,7 @@ function CareersForm() {
   return (
     <section className="relative py-16 bg-blue-50">
       <div className="max-w-6xl mx-auto ">
-        <h2 className="text-5xl font-bold text-start text-gray-800 mb-6">
+        <h2 className="text-4xl lg:text-5xl font-bold text-start text-gray-800 mb-6">
           Let's begin our creative journey together
         </h2>
 

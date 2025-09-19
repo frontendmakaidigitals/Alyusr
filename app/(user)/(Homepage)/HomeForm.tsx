@@ -43,7 +43,7 @@ const HomeForm = () => {
   return (
     <div className="py-28">
       <div className="container mx-auto">
-        <h1 className="text-5xl font-[600] text-center">
+        <h1 className="text-4xl lg:text-5xl font-[600] text-center">
           Get in <span className="text-blue-500">Touch with Us</span>
         </h1>
         <div className="grid grid-cols-1 place-items-center lg:grid-cols-2 gap-7 mt-12">

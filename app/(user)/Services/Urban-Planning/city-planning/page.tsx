@@ -114,7 +114,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           City Planning Services
         </h1>
       </div>
@@ -148,7 +148,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="bg-gray-50 py-20 px-4 md:px-8">
         <div className="container mb-16 text-center">
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Urban <span className="text-blue-500">Planning</span> &{" "}
             <span className="text-green-500">Sustainable</span> Design
           </h2>
@@ -201,7 +201,7 @@ export default function ConstructionManagementPage() {
 
       <section className="bg-gray-50 py-20 px-4 md:px-8">
         <div className="container text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             <span className="text-blue-500">Supporting</span> Services
           </h2>
         </div>
@@ -233,7 +233,7 @@ export default function ConstructionManagementPage() {
 
       <section className="bg-gray-50 py-20 px-6 md:px-12">
         <div className="container text-center mb-16">
-          <h2 className="text-5xl  font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl  font-bold text-gray-900 mb-4">
             What <span className="text-blue-500">Sets Us</span> Apart?
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">

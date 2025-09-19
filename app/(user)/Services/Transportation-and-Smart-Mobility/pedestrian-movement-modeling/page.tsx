@@ -71,7 +71,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               <span className="text-blue-500">Pedestrian Movement</span>{" "}
               Planning
             </h1>
@@ -92,9 +92,7 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={
-                "/Transportation-mobility/pedestrian-movement/hero.avif"
-              }
+              src={"/Transportation-mobility/pedestrian-movement/hero.avif"}
               className=""
               alt={"w-full h-full object-cover"}
             />
@@ -184,7 +182,7 @@ export default function Page() {
           {/* Left: Image */}
           <div className="relative">
             <img
-              src="/Transportation-mobility/pedestrian-movement/planning.jpg"// replace with your choice
+              src="/Transportation-mobility/pedestrian-movement/planning.jpg" // replace with your choice
               alt="Measurable Outcomes"
               className="rounded-2xl shadow-lg object-cover w-full h-[450px]"
             />
@@ -248,7 +246,7 @@ export default function Page() {
       </section>
       <section className="py-20 bg-gradient-to-r from-blue-50 via-white to-blue-100">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
             Why Choose <span className="text-blue-500">Al Yusr?</span>
           </h2>
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">

@@ -78,7 +78,7 @@ export default function Page() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Process Simulation Models
         </h1>
       </div>
@@ -132,7 +132,7 @@ export default function Page() {
       </section>{" "}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-6">
             Our <span className="text-blue-500">Approach</span>
           </h2>
           <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
@@ -165,7 +165,7 @@ export default function Page() {
       </section>{" "}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-6">
             <span className="text-blue-500">Representative</span> Services
           </h2>
           <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">

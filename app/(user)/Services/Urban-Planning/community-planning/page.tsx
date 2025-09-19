@@ -91,7 +91,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Community Planning
         </h1>
       </div>
@@ -117,7 +117,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="bg-gray-100 py-20 px-4">
         <div className="container text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
             Our <span className="text-blue-500">Planning</span> Framework
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -136,7 +136,7 @@ export default function ConstructionManagementPage() {
               viewport={{ once: true }}
               className={`rounded-2xl p-6 text-white shadow-xl ${item.gradient}`}
             >
-              <div className="text-5xl font-bold text-black/60 shrink-0 mb-4">
+              <div className="text-4xl lg:text-5xl font-bold text-black/60 shrink-0 mb-4">
                 {item.step}
               </div>
               <div className="mt-3">
@@ -152,7 +152,7 @@ export default function ConstructionManagementPage() {
 
       <section className="py-20 bg-sky-50">
         <div className="container ">
-          <h2 className="text-5xl font-bold mb-10 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-10 text-center">
             What We <span className="text-blue-500">Offer</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -190,7 +190,7 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-5xl font-[700] mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+            className="text-4xl lg:text-5xl font-[700] mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
           >
             Community Engagement & Stakeholder Collaboration
           </motion.h2>
@@ -253,7 +253,9 @@ export default function ConstructionManagementPage() {
               viewport={{ once: true }}
             >
               <Image
-                src={"/urban-planning/community-planning/Resilient Communities.jpg"}
+                src={
+                  "/urban-planning/community-planning/Resilient Communities.jpg"
+                }
                 alt="Sustainable Community"
                 width={900}
                 height={900}
@@ -316,7 +318,7 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold text-gray-800 mb-10"
+            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-10"
           >
             Why <span className="text-blue-500">Al Yusr?</span>
           </motion.h2>

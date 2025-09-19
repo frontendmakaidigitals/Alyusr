@@ -162,7 +162,9 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">Environmental Services</h1>
+            <h1 className="text-4xl lg:text-5xl font-[600]">
+              Environmental Services
+            </h1>
             <p>
               At Al Yusr Engineering Consulting, we offer a full range of
               environmental services that help public and private sector clients
@@ -193,7 +195,7 @@ export default function Page() {
             <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 ring-1 ring-inset ring-emerald-200">
               <Leaf className="h-3.5 w-3.5" aria-hidden /> Sustainable Solutions
             </span>
-            <h2 className="mt-4 text-5xl font-bold tracking-tight text-slate-900">
+            <h2 className="mt-4 text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">
               What We Offer
             </h2>
             <p className="mt-3 text-base text-slate-600">
@@ -296,7 +298,7 @@ export default function Page() {
       </section>
       <section className="relative isolate overflow-hidden bg-gradient-to-b from-white to-slate-50 py-20">
         <div className="container ">
-          <h2 className="text-5xl text-center max-w-3xl mx-auto font-bold tracking-tight text-slate-900">
+          <h2 className="text-4xl lg:text-5xl text-center max-w-3xl mx-auto font-bold tracking-tight text-slate-900">
             Why Choose Al Yusr for Environmental Services?
           </h2>
           <div className="mt-10 max-w-5xl mx-auto">

@@ -36,10 +36,12 @@ export const siteConfig = {
         {
           button: "Donwload Now",
           img: "/cover-page.jpg",
+          action: "download",
         },
         {
           button: "Get Expert Advise",
           img: "https://images.pexels.com/photos/5439438/pexels-photo-5439438.jpeg",
+          action: "contact",
         },
       ],
     },
@@ -325,9 +327,18 @@ export const siteConfig = {
         },
       ],
       tabs: [
-        { label: "Architecture and Design", link: "/Services/Urban-Planning/Architecture-Design" },
-        { label: "Environmental Contracting", link: "/Services/Environment-Sustainability-and-Resilience/environmental-services" },
-        { label: "Digital Infrastructure Services", link: "Services/Transportation-and-Smart-Mobility/it-and-cybersecurity" },
+        {
+          label: "Architecture and Design",
+          link: "/Services/Urban-Planning/Architecture-Design",
+        },
+        {
+          label: "Environmental Contracting",
+          link: "/Services/Environment-Sustainability-and-Resilience/environmental-services",
+        },
+        {
+          label: "Digital Infrastructure Services",
+          link: "Services/Transportation-and-Smart-Mobility/it-and-cybersecurity",
+        },
       ],
     },
     {
@@ -375,7 +386,7 @@ type WhoWeAreNav = {
   }[];
   tagLine: string;
   wideCard: { label: string; desc: string; img: string; link: string }[];
-  imgCard: { button: string; img: string }[];
+  imgCard: { button: string; img: string, action:string }[];
 };
 
 type WhatWeDoNav = {

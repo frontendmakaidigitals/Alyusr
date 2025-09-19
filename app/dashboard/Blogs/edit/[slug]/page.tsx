@@ -450,7 +450,7 @@ const PreviewBlog = ({
           <p className="p-2 text-xs bg-teal-100 text-teal-700 rounded-lg font-bold font-quicksand text-center mb-2">
             {blog?.category}
           </p>
-          <h1 className="text-6xl tracking-tighter font-[600] text-center">
+          <h1 className="text-5xl lg:text-6xl tracking-tighter font-[600] text-center">
             {blog?.title}
           </h1>
         </div>

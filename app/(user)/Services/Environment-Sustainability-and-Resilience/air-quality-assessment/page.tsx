@@ -107,7 +107,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               Air Quality Assessment Services
             </h1>
             <p>
@@ -204,7 +204,7 @@ export default function Page() {
       </section>
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <h2 className="text-5xl text-center mx-auto font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl text-center mx-auto font-bold text-gray-900 mb-6">
             Why Choose <span className="text-blue-600">Al Yusr</span> for Air
             Quality Assessment?
           </h2>

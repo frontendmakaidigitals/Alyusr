@@ -127,7 +127,7 @@ export default function Page() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Engineering Economics Services
         </h1>
       </div>
@@ -142,7 +142,7 @@ export default function Page() {
       </section>
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="text-5xl md:text-4xl font-bold text-center text-blue-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl md:text-4xl font-bold text-center text-blue-900 mb-6">
             What We Do
           </h2>
           <p className="text-center text-gray-700 max-w-2xl mx-auto mb-12">
@@ -240,7 +240,7 @@ export default function Page() {
       </section>
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <h2 className="text-3xl md:text-5xl max-w-4xl mx-auto font-bold text-center  mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl max-w-4xl mx-auto font-bold text-center  mb-12">
             Why Choose <span className="text-blue-500">Al Yusr</span> for{" "}
             <span className="text-green-500">Engineering Economics?</span>
           </h2>

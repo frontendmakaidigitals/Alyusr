@@ -90,7 +90,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Urban Design Services
         </h1>
       </div>
@@ -106,7 +106,7 @@ export default function ConstructionManagementPage() {
       <section className="mt-10">
         <div className="grid container place-items-center grid-cols-1 lg:grid-cols-2 gap-9">
           <div>
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               Designing Walkable, Green, and Future-Ready Cities
             </h1>
             <p className="mt-4 text-lg">
@@ -140,7 +140,7 @@ export default function ConstructionManagementPage() {
       <section className="py-20 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <h2 className="text-5xl font-bold text-gray-900 mb-3">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
               Our <span className="text-blue-500">Urban Services</span>
             </h2>
             <p className="text-gray-600 text-lg">
@@ -173,7 +173,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="bg-white py-20">
         <div className="container text-center">
-          <h2 className="text-5xl font-bold mb-10">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-10">
             <span className="text-blue-500">Specialized</span> Capabilities
           </h2>
           <div className="grid gap-10 grid-cols-1 lg:grid-cols-4">
@@ -194,7 +194,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="bg-white py-20 px-4">
         <div className=" container text-center mb-12">
-          <h2 className="text-5xl font-bold">
+          <h2 className="text-4xl lg:text-5xl font-bold">
             Why <span className="text-blue-500">Choose</span> Al Yusr for{" "}
             <span className="text-green-500">Urban Design</span>
           </h2>

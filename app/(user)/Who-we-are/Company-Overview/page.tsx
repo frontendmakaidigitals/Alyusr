@@ -42,7 +42,7 @@ export default function Page() {
             Company Overview
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 text-6xl font-semibold">
+          <p className="mt-3 text-slate-200 text-5xl lg:text-6xl font-semibold">
             Trusted Engineering Experts Supporting Saudi Vision 2030
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function Page() {
       <section className="py-20">
         <div className="container  grid md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-5xl font-semibold text-sky-800 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-semibold text-sky-800 mb-4">
               Company Overview
             </h2>
             <p className="text-gray-700 text-lg mb-4">
@@ -102,7 +102,7 @@ export default function Page() {
             />
           </div>
           <div>
-            <h2 className="text-5xl font-semibold text-sky-800 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-semibold text-sky-800 mb-4">
               Our History
             </h2>
             <p className="text-gray-700 text-lg mb-4">
@@ -127,7 +127,7 @@ export default function Page() {
       {/* Fast Facts */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-5xl font-semibold text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-semibold text-center mb-12">
             Fast <span className="text-sky-800">Facts</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

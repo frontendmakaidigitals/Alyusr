@@ -106,7 +106,7 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">
+            <h1 className="text-4xl lg:text-5xl font-[600]">
               <span className="text-blue-500">EHS</span> and{" "}
               <span className="text-blue-500">ESG</span> Solutions
             </h1>
@@ -133,7 +133,7 @@ export default function Page() {
       </section>
       <section className="py-20 bg-gradient-to-br from-gray-50 via-surface-50 to-white relative">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-bold text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-12">
             Our <span className="text-blue-500">Agile Process</span>
           </h2>
 
@@ -169,7 +169,7 @@ export default function Page() {
 
       <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-slate-100">
         <div className="container mx-auto px-6 text-center">
-          <motion.h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-12">
+          <motion.h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-12">
             Our <span className="text-blue-500">Differentiators</span>
           </motion.h2>
 
@@ -199,7 +199,7 @@ export default function Page() {
       <section className="py-20 bg-white relative">
         <div className="container mx-auto px-6">
           <motion.h2
-            className="text-3xl md:text-5xl font-bold text-slate-900 text-center mb-12 max-w-xl mx-auto"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 text-center mb-12 max-w-xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

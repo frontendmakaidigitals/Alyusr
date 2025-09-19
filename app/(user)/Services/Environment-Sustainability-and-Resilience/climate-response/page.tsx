@@ -87,7 +87,9 @@ export default function Page() {
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <h1 className="text-5xl font-[600]">Climate Response Services</h1>
+            <h1 className="text-4xl lg:text-5xl font-[600]">
+              Climate Response Services
+            </h1>
             <p>
               Climate change is one of the defining challenges of our time, with
               impacts already being felt through rising temperatures, extreme
@@ -111,7 +113,7 @@ export default function Page() {
       </section>
       <section className="relative isolate overflow-hidden bg-gradient-to-b from-white to-slate-50 py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 lg:text-5xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 lg:text-4xl lg:text-5xl text-center">
             Our Climate Response Services
           </h2>
 
@@ -150,7 +152,7 @@ export default function Page() {
       </section>
       <section className="relative isolate overflow-hidden bg-gradient-to-b from-white to-slate-50 py-20">
         <div className="container ">
-          <h2 className="text-5xl text-center max-w-3xl mx-auto font-bold tracking-tight text-slate-900">
+          <h2 className="text-4xl lg:text-5xl text-center max-w-3xl mx-auto font-bold tracking-tight text-slate-900">
             Key Benefits of Our Climate Response Services
           </h2>
           <div className="mt-10 max-w-5xl mx-auto">

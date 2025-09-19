@@ -11,7 +11,7 @@ interface dataProps {
     }[];
   }[];
   wideCard: { label: string; desc: string; img: string; link: string }[];
-  imgCard: { button: string; img: string }[];
+  imgCard: { button: string; img: string; action: string }[];
 }
 
 const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
@@ -89,9 +89,24 @@ to-[#6366f1]  hover:text-white rounded-full px-4 py-2 transition"
                 height={600}
                 className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
               />
-              <button className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white whitespace-nowrap text-sm font-medium px-5 py-2 rounded-full border border-black shadow-md">
-                {img.button}
-              </button>
+
+              {img.action === "download" ? (
+                <a
+                  href={"/brochure/brochure.pdf"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white whitespace-nowrap text-sm font-medium px-5 py-2 rounded-full border border-black shadow-md"
+                >
+                  {img.button}
+                </a>
+              ) : (
+                <Link
+                  href="/Contact"
+                  className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white whitespace-nowrap text-sm font-medium px-5 py-2 rounded-full border border-black shadow-md"
+                >
+                  {img.button}
+                </Link>
+              )}
             </div>
           ))}
         </div>

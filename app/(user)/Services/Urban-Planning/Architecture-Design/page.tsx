@@ -119,7 +119,7 @@ export default function Page() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Architecture
         </h1>
       </div>
@@ -137,7 +137,7 @@ export default function Page() {
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
           <div>
             {" "}
-            <h1 className="text-5xl font-[600] text-sky-800">
+            <h1 className="text-4xl lg:text-5xl font-[600] text-sky-800">
               Design with Purpose
             </h1>
             <p className="mt-4">
@@ -170,7 +170,7 @@ export default function Page() {
       <section className="bg-gray-50 ">
         <div className="container py-12">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-5xl font-bold text-gray-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
               <span className="text-blue-500">Our Capabilities</span> at a
               Glance
             </h2>
@@ -238,7 +238,7 @@ export default function Page() {
 
       <section className="py-16 bg-gray-50">
         <div className="container max-w-6xl">
-          <h2 className="text-5xl font-bold text-center text-gray-800 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-4">
             Where <span className="text-blue-500">We Work</span>
           </h2>
           <p className="text-gray-600  text-center mb-10">
@@ -266,7 +266,7 @@ export default function Page() {
       </section>
       <section className="py-16 bg-white">
         <div className="max-w-3xl container text-center">
-          <h2 className="text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
             Why Choose <span className="text-blue-600">Al Yusr</span> for
             Architecture?
           </h2>

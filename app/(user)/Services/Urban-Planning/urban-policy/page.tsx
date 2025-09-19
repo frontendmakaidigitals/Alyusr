@@ -62,7 +62,7 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Urban Policy and Development
         </h1>
       </div>
@@ -99,7 +99,7 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold text-gray-800 mb-12 text-center"
+            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-12 text-center"
           >
             What <span className="text-blue-500">We Offer</span>
           </motion.h2>
@@ -148,7 +148,7 @@ export default function ConstructionManagementPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl font-bold mb-4 text-gray-800">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
               Our Approach:{" "}
               <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
                 Regenerative Redevelopment
@@ -200,7 +200,7 @@ export default function ConstructionManagementPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold"
+            className="text-4xl lg:text-5xl font-bold"
           >
             Why Choose <span className="text-blue-500">Al Yusr</span>
           </motion.h2>

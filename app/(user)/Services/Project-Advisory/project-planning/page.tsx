@@ -59,7 +59,7 @@ export default function Page() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Project Planning
         </h1>
       </div>
@@ -92,7 +92,7 @@ export default function Page() {
         <div className="container place-items-center grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
             {" "}
-            <h1 className="text-6xl font-[600]">
+            <h1 className="text-5xl lg:text-6xl font-[600]">
               Smart <span className="text-blue-500">Planning</span> for Smarter{" "}
               <span className="text-green-500">Development</span>
             </h1>
@@ -178,7 +178,7 @@ export default function Page() {
 
       <section className="py-16 bg-gray-900 ">
         <div className="container text-center max-w-6xl">
-          <h1 className="leading-[4.1rem] text-6xl font-[600] mb-3 bg-gradient-to-r from-blue-600 via-fuchsia-400 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="leading-[4.1rem] text-5xl lg:text-6xl font-[600] mb-3 bg-gradient-to-r from-blue-600 via-fuchsia-400 to-blue-600 bg-clip-text text-transparent">
             Sustainability at the Core
           </h1>
           <p className="text-white text-lg">
@@ -193,7 +193,7 @@ export default function Page() {
       </section>
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-bold mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Why Choose Al Yusr for{" "}
             <span className="text-blue-500">Project Planning?</span>
           </h2>

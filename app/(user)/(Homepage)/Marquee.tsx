@@ -19,7 +19,7 @@ const Marquee = () => {
 
   return (
     <section className="py-20">
-      <h1 className="text-5xl text-center max-w-3xl mx-auto font-[600]">
+      <h1 className="text-4xl lg:text-5xl text-center max-w-3xl mx-auto font-[600]">
         Powering Precision{" "}
         <span className="text-blue-500">Through Innovation</span>
       </h1>

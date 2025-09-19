@@ -10,7 +10,7 @@ const GlobalSection = () => {
     <div className="py-20  bg-gradient-to-br from-[#ebf3ff] to-[#e2ecff]">
       <div className="grid grid-cols-1 place-items-center lg:grid-cols-2 gap-12 container mx-auto">
         <div ref={ref} className="">
-          <h1 className="text-6xl font-[500]">
+          <h1 className="text-4xl lg:text-5xl lg:text-6xl font-[500]">
             A Worldwide Footprint,{" "}
             <span className="text-blue-500">Globally Present</span>
           </h1>

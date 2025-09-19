@@ -110,7 +110,7 @@ Our approach ensures that strategies are not just designed from the top down, bu
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Planning and Advisory Solutions
         </h1>
       </div>
@@ -148,7 +148,7 @@ Our approach ensures that strategies are not just designed from the top down, bu
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold text-gray-800 mb-12 text-center"
+            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-12 text-center"
           >
             What <span className="text-blue-500">We Offer</span>
           </motion.h2>

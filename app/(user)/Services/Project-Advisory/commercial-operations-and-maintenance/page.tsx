@@ -127,7 +127,7 @@ export default function Page() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Commercial Operations & Maintenance
         </h1>
       </div>
@@ -157,7 +157,7 @@ export default function Page() {
       </section>
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-blue-900 mb-14">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-blue-900 mb-14">
             What We Deliver
           </h2>
 

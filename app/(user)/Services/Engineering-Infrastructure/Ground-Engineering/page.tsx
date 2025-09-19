@@ -18,7 +18,8 @@ export default function ConstructionManagementPage() {
         "Soil and rock sampling, borehole drilling, and lab testing",
         "In-situ testing (SPT, CPT, pressuremeter, permeability)",
       ],
-      image: "/Engineering-Infrastructure/ground-engineering/site-investigation.jpg",
+      image:
+        "/Engineering-Infrastructure/ground-engineering/site-investigation.jpg",
     },
     {
       title: "Foundation Design & Earth Structures",
@@ -31,7 +32,8 @@ export default function ConstructionManagementPage() {
         "Retaining walls, embankments, and soil-structure interaction analysis",
         "Design of tunnels, shafts, and ground-engineering structures",
       ],
-      image: "/Engineering-Infrastructure/ground-engineering/Foundation-design.png",
+      image:
+        "/Engineering-Infrastructure/ground-engineering/Foundation-design.png",
     },
     {
       title: "Slope Stabilization & Soil Engineering",
@@ -43,7 +45,8 @@ export default function ConstructionManagementPage() {
         "Landslide risk assessment and remediation",
         "Seepage control and erosion mitigation",
       ],
-      image: "/Engineering-Infrastructure/ground-engineering/Slope-Stabilazation.webp",
+      image:
+        "/Engineering-Infrastructure/ground-engineering/Slope-Stabilazation.webp",
     },
     {
       title: "Groundwater & Geohazard Assessments",
@@ -56,7 +59,8 @@ export default function ConstructionManagementPage() {
         "Karst terrain and sinkhole hazard evaluations",
         "Rockfall and landslide hazard mapping",
       ],
-      image: "/Engineering-Infrastructure/ground-engineering/groundwater-assesment.jpg",
+      image:
+        "/Engineering-Infrastructure/ground-engineering/groundwater-assesment.jpg",
     },
     {
       title: "Ground Treatment & Earthworks Design",
@@ -69,7 +73,8 @@ export default function ConstructionManagementPage() {
         "Reuse and conditioning of onsite material",
         "Dynamic compaction and vibroflotation",
       ],
-      image: "/Engineering-Infrastructure/ground-engineering/ground-treatment.jpg",
+      image:
+        "/Engineering-Infrastructure/ground-engineering/ground-treatment.jpg",
     },
     {
       title: "Advanced Modeling & Simulation",
@@ -82,7 +87,8 @@ export default function ConstructionManagementPage() {
         "Seepage, thermal, and settlement modeling",
         "Performance-based design for infrastructure resilience",
       ],
-      image: "/Engineering-Infrastructure/ground-engineering/advanced-modelling.jpg",
+      image:
+        "/Engineering-Infrastructure/ground-engineering/advanced-modelling.jpg",
     },
   ];
   const whatSetsUsApart = [
@@ -115,15 +121,13 @@ export default function ConstructionManagementPage() {
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-800">
           Ground Engineering Services
         </h1>
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={
-            "/Engineering-Infrastructure/ground-engineering/hero.jpg"
-          }
+          src={"/Engineering-Infrastructure/ground-engineering/hero.jpg"}
           className="w-full h-full object-cover "
           alt={""}
           width={1200}
@@ -156,7 +160,7 @@ export default function ConstructionManagementPage() {
       {/* Features */}
       <section className="bg-sky-50 mt-10 py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center  mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center  mb-16">
             What We <span className="text-blue-500">Offer</span>
           </h2>
 
@@ -213,7 +217,7 @@ export default function ConstructionManagementPage() {
       </section>
       <section className="bg-blue-50 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center text-blue-900 mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-blue-900 mb-12">
             Why Choose Al Yusr?
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
