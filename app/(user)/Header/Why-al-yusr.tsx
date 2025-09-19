@@ -17,8 +17,8 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
   return (
     <div className="flex flex-col lg:flex-row justify-between items-start gap-10 text-white">
       {/* Left Section */}
-      <div className="flex flex-col items-start space-y-4 pr-5 border-r border-slate-200/40">
-        <div className="w-[300px] h-[270px]">
+      <div className="lg:flex hidden  flex-col items-start space-y-4 pr-5 border-r border-slate-200/40">
+        <div className=" w-[300px] h-[270px]">
           <img
             src="https://images.pexels.com/photos/5686514/pexels-photo-5686514.jpeg"
             alt="Cityscape"
@@ -29,7 +29,10 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
         <p className="text-base">+966 54 154 0090</p>
 
         <div className="flex items-center gap-3">
-          <Link href={'/Contact'} className="bg-amber-200 text-black px-4 py-1.5 font-medium rounded">
+          <Link
+            href={"/Contact"}
+            className="bg-amber-200 text-black px-4 py-1.5 font-medium rounded"
+          >
             Contact us
           </Link>
           <button className="bg-blue-500 text-white px-4 py-1.5 font-medium rounded">
@@ -71,11 +74,11 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
         </div>
 
         {tabs && tabs.length > 0 && (
-          <div className="flex flex-wrap gap-4 mt-6">
+          <div className="flex  flex-col lg:flex-row lg:flex-wrap gap-4 mt-6">
             {tabs.map((tab, idx) => (
               <p
                 key={idx}
-                className="border text-blue-300 border-blue-200/60 rounded-full px-4 py-1 text-sm"
+                className="border text-blue-300 border-blue-200/60 rounded-full px-5 py-[.7rem] lg:px-4 lg:py-1 text-sm"
               >
                 {tab.label}
               </p>

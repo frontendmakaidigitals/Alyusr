@@ -18,7 +18,7 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
   return (
     <section className="w-full  text-white ">
       <div className="grid grid-cols-1 md:grid-cols-[280px_1fr_1fr] gap-8 items-start">
-        {/* Left Side Navigation */}
+
         <ul className="space-y-4">
           {data.map((section, idx) => (
             <li key={idx}>

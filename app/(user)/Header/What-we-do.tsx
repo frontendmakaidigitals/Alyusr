@@ -16,9 +16,11 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
     <div className="flex items-start justify-between gap-7 w-full">
       <div>
         <div>
-          <h3 className="text-lg font-[500]">Service We Provide</h3>
+          <h3 className="text-lg font-[500] hidden lg:block">
+            Service We Provide
+          </h3>
         </div>
-        <div className="flex items-start gap-8">
+        <div className="flex flex-col lg:flex-row items-start gap-8">
           {data.map((service, idx) => (
             <ul key={idx} className="space-y-2 mt-2">
               <h3 className="font-[500] text-blue-300 whitespace-nowrap">
@@ -26,7 +28,7 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
               </h3>
               <div className="space-y-3">
                 {service.items.map((item, id) => (
-                  <li className="text-sm whitespace-nowrap" key={id}>
+                  <li className="text-sm text-white whitespace-nowrap" key={id}>
                     <Link
                       href={`/Services/${
                         service.label === "Engineering & Infrastructure"
@@ -37,7 +39,8 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
                           ? "Transportation-and-Smart-Mobility"
                           : service.label === "Project Advisory"
                           ? "Project-Advisory"
-                          : service.label === "Environment, Sustainability & Resilience"
+                          : service.label ===
+                            "Environment, Sustainability & Resilience"
                           ? "Environment-Sustainability-and-Resilience"
                           : null
                       }/${item.link}`}

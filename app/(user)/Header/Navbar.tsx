@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../app_chunks/Logo";
 import { siteConfig } from "../utils/site";
 import type { SiteConfig } from "../utils/site";
@@ -10,6 +10,14 @@ import WhoWeAre from "./Who-we-are";
 import WhyAlYusr from "./Why-al-yusr";
 import WhatWeDo from "./What-we-do";
 import Link from "next/link";
+
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "../app_chunks/Accordion";
+import { Menu, X } from "lucide-react";
 const Navbar = () => {
   const [currIdx, setCurrIdx] = useState<null | number>(null);
   const menu: SiteConfig["navItems"] = siteConfig.navItems;
@@ -36,7 +44,7 @@ const Navbar = () => {
   return (
     <header className=" bg-[#000000] relative z-50">
       <div className="flex py-3 lg:py-0 justify-between items-center container mx-auto">
-        <Logo  />
+        <Logo />
 
         {/* Menu Starts from here */}
 
@@ -172,9 +180,106 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        <MenuMobile menu={menu} />
       </div>
     </header>
   );
 };
 
 export default Navbar;
+
+const MenuMobile = ({ menu }: { menu: SiteConfig["navItems"] }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; // disable scroll
+    } else {
+      document.body.style.overflow = ""; // restore scroll
+    }
+
+    return () => {
+      document.body.style.overflow = ""; // cleanup
+    };
+  }, [isOpen]);
+  return (
+    <div className="block lg:hidden">
+      {/* Toggle button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="p-2 rounded-lg bg-slate-50/40"
+      >
+        {isOpen ? (
+          <X className="text-white" />
+        ) : (
+          <Menu className="text-white" />
+        )}
+      </button>
+
+      <AnimatePresence>
+        {isOpen ? (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: "0%" }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
+            className="fixed z-50 bg-black w-screen h-[calc(100vh-86px)] left-0 top-[86px] p-6 overflow-y-auto"
+          >
+            <Accordion type="single" collapsible className="space-y-4">
+              {menu.map((item, idx) =>
+                "services" in item && item.services ? (
+                  <AccordionItem
+                    key={idx}
+                    value={`item-${idx}`}
+                    className="border-b border-slate-700"
+                  >
+                    <AccordionTrigger className="text-white flex items-center justify-between">
+                      {item.label}
+                    </AccordionTrigger>
+                    <AccordionContent className="pt-4 pb-6">
+                      {item.label === "Who We Are" ? (
+                        <div>
+                          <WhoWeAre
+                            data={item.services}
+                            wideCard={item.wideCard}
+                            imgCard={item.imgCard}
+                          />
+
+                          
+                        </div>
+                      ) : null}
+
+                      {item.label === "Why Al Yusr" ? (
+                        <WhyAlYusr data={item.services} tabs={item.tabs} />
+                      ) : null}
+
+                      {item.label === "What We Do" ? (
+                        <WhatWeDo
+                          data={item.services}
+                          locationsData={item.locationsData}
+                        />
+                      ) : null}
+                    </AccordionContent>
+                  </AccordionItem>
+                ) : (
+                  "href" in item &&
+                  item.href && (
+                    <div key={idx} className="border-b border-slate-700 py-3">
+                      <Link
+                        href={item.href}
+                        className="text-white text-base hover:text-sky-400"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </div>
+                  )
+                )
+              )}
+            </Accordion>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </div>
+  );
+};
