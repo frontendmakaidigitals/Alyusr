@@ -85,6 +85,10 @@ export const siteConfig = {
               link: "Ground-Engineering",
             },
             {
+              label: "Infrastructure Protection",
+              link: "infrastructure-protection",
+            },
+            {
               label: "Alternative Delivery Models",
               link: "Alternative-Delivery-Models",
             },
@@ -118,7 +122,7 @@ export const siteConfig = {
               link: "community-engagement",
             },
             {
-              label: "visualization-and-virtual-reality",
+              label: "Visualization & Virtual Reality",
               link: "visualization-and-virtual-reality",
             },
             {

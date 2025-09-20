@@ -11,9 +11,10 @@ interface dataProps {
     link: string;
   }[];
   tabs?: { label: string; link: string }[];
+  onNavigate?: () => void;
 }
 
-const WhyAlYusr = ({ data, tabs }: dataProps) => {
+const WhyAlYusr = ({ data, tabs, onNavigate }: dataProps) => {
   return (
     <div className="flex flex-col lg:flex-row justify-between items-start gap-10 text-white">
       {/* Left Section */}
@@ -31,6 +32,7 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
         <div className="flex items-center gap-3">
           <Link
             href={"/Contact"}
+            onClick={onNavigate}
             className="bg-amber-200 text-black px-4 py-1.5 font-medium rounded"
           >
             Contact us
@@ -53,6 +55,7 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
           {data.map((item, idx) => (
             <Link
               key={idx}
+              onClick={onNavigate}
               href={`/Why-Al-Yusr/${item.link}`}
               className="flex items-start gap-3"
             >
@@ -76,12 +79,13 @@ const WhyAlYusr = ({ data, tabs }: dataProps) => {
         {tabs && tabs.length > 0 && (
           <div className="flex  flex-col lg:flex-row lg:flex-wrap gap-4 mt-6">
             {tabs.map((tab, idx) => (
-              <p
+              <Link
                 key={idx}
+                href={tab.link}
                 className="border text-blue-300 border-blue-200/60 rounded-full px-5 py-[.7rem] lg:px-4 lg:py-1 text-sm"
               >
                 {tab.label}
-              </p>
+              </Link>
             ))}
           </div>
         )}

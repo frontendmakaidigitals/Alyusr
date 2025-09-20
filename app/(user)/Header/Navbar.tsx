@@ -202,9 +202,10 @@ const MenuMobile = ({ menu }: { menu: SiteConfig["navItems"] }) => {
       document.body.style.overflow = ""; // cleanup
     };
   }, [isOpen]);
+  const handleClose = () => setIsOpen(false);
+
   return (
     <div className="block lg:hidden">
-      {/* Toggle button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 rounded-lg bg-slate-50/40"
@@ -243,20 +244,24 @@ const MenuMobile = ({ menu }: { menu: SiteConfig["navItems"] }) => {
                             data={item.services}
                             wideCard={item.wideCard}
                             imgCard={item.imgCard}
+                            onNavigate={handleClose} // 👈 pass close handler
                           />
-
-                          
                         </div>
                       ) : null}
 
                       {item.label === "Why Al Yusr" ? (
-                        <WhyAlYusr data={item.services} tabs={item.tabs} />
+                        <WhyAlYusr
+                          onNavigate={handleClose} // 👈 pass close handler
+                          data={item.services}
+                          tabs={item.tabs}
+                        />
                       ) : null}
 
                       {item.label === "What We Do" ? (
                         <WhatWeDo
                           data={item.services}
                           locationsData={item.locationsData}
+                          onNavigate={handleClose} // 👈 pass close handler
                         />
                       ) : null}
                     </AccordionContent>

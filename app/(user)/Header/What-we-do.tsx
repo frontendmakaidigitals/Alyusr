@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { ChevronRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 interface dataProps {
   data: {
@@ -9,8 +7,9 @@ interface dataProps {
     items: { label: string; link: string }[];
   }[];
   locationsData: { country: string; cities: string[] }[];
+  onNavigate?: () => void;
 }
-const WhatWeDo = ({ data, locationsData }: dataProps) => {
+const WhatWeDo = ({ data, locationsData, onNavigate }: dataProps) => {
   const [currIndex, setCurrIndex] = useState(0);
   return (
     <div className="flex items-start justify-between gap-7 w-full">
@@ -30,6 +29,7 @@ const WhatWeDo = ({ data, locationsData }: dataProps) => {
                 {service.items.map((item, id) => (
                   <li className="text-sm text-white whitespace-nowrap" key={id}>
                     <Link
+                      onClick={onNavigate}
                       href={`/Services/${
                         service.label === "Engineering & Infrastructure"
                           ? "Engineering-Infrastructure"

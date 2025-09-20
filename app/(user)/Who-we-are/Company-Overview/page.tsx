@@ -42,7 +42,7 @@ export default function Page() {
             Company Overview
             <br className="hidden sm:block" />
           </h1>
-          <p className="mt-3 text-slate-200 text-5xl lg:text-6xl font-semibold">
+          <p className="mt-3 text-slate-200 text-4xl lg:text-6xl font-semibold">
             Trusted Engineering Experts Supporting Saudi Vision 2030
           </p>
         </div>
@@ -57,8 +57,18 @@ export default function Page() {
 
       {/* Company Overview */}
       <section className="py-20">
-        <div className="container  grid md:grid-cols-2 gap-12">
-          <div>
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Image first on mobile, second on desktop */}
+          <div className="order-1 lg:order-2">
+            <img
+              src="/company overview/company overview.jpg"
+              alt="Company Overview"
+              className="rounded-xl shadow-lg w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Text second on mobile, first on desktop */}
+          <div className="order-2 lg:order-1">
             <h2 className="text-4xl lg:text-5xl font-semibold text-sky-800 mb-4">
               Company Overview
             </h2>
@@ -79,13 +89,6 @@ export default function Page() {
               At ALYUSR, we don’t just build projects, we build trust,
               innovation, and lasting impact.
             </p>
-          </div>
-          <div>
-            <img
-              src="/company overview/company overview.jpg"
-              alt="Company Overview"
-              className="rounded-xl shadow-lg w-full h-full object-cover"
-            />
           </div>
         </div>
       </section>

@@ -12,13 +12,13 @@ interface dataProps {
   }[];
   wideCard: { label: string; desc: string; img: string; link: string }[];
   imgCard: { button: string; img: string; action: string }[];
+  onNavigate?: () => void;
 }
 
-const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
+const WhoWeAre = ({ data, imgCard, wideCard, onNavigate }: dataProps) => {
   return (
     <section className="w-full  text-white ">
       <div className="grid grid-cols-1 md:grid-cols-[280px_1fr_1fr] gap-8 items-start">
-
         <ul className="space-y-4">
           {data.map((section, idx) => (
             <li key={idx}>
@@ -26,6 +26,7 @@ const WhoWeAre = ({ data, imgCard, wideCard }: dataProps) => {
                 {section.submenu.map((item, subIdx) => (
                   <li key={subIdx}>
                     <Link
+                      onClick={onNavigate}
                       href={`/Who-we-are/${item.link}`}
                       className="block w-full text-center border border-blue-300 hover:bg-gradient-to-br from-[#06b6d4]
 via-[#2563eb]
@@ -49,6 +50,7 @@ to-[#6366f1]  hover:text-white rounded-full px-4 py-2 transition"
             {wideCard.map((card, idx) => (
               <li key={idx}>
                 <Link
+                  onClick={onNavigate}
                   href={`/Who-we-are/${card.link}`}
                   className="flex items-start gap-4 group"
                 >
@@ -92,6 +94,7 @@ to-[#6366f1]  hover:text-white rounded-full px-4 py-2 transition"
 
               {img.action === "download" ? (
                 <a
+                  onClick={onNavigate}
                   href={"/brochure/brochure.pdf"}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -101,6 +104,7 @@ to-[#6366f1]  hover:text-white rounded-full px-4 py-2 transition"
                 </a>
               ) : (
                 <Link
+                  onClick={onNavigate}
                   href="/Contact"
                   className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white whitespace-nowrap text-sm font-medium px-5 py-2 rounded-full border border-black shadow-md"
                 >
