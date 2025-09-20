@@ -1,6 +1,6 @@
 import React from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-
+import Link from "next/link";
 import Image from "next/image";
 import BgLayer from "../app_chunks/BgLayer";
 const Marquee = () => {
@@ -65,9 +65,9 @@ const Marquee = () => {
             Vision 2030. properties or speak to our experienced consultants
             today.
           </p>
-          <button className="mt-5 px-6 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-all">
+          <Link href={'/Contact'} className="mt-5 px-6 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-all">
             VIEW NOW
-          </button>
+          </Link>
         </div>
       </div>
     </section>
