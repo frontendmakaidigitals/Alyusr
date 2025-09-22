@@ -17,7 +17,7 @@ export default function ConstructionManagementPage() {
     {
       title: "Master Planning & Urban Design",
       desc: "Strategic frameworks for urban growth, integrating function, livability, and aesthetics.",
-      image: "/urban-planning/city-planning/Master Planning.jpg",
+      image: "/urban-planning/city-planning/Master Planning.webp",
       icon: Map,
       points: [
         "Mixed-use & residential master plans",
@@ -29,7 +29,7 @@ export default function ConstructionManagementPage() {
     {
       title: "Sustainability & Climate Resilience",
       desc: "Resilient strategies that future-proof cities through eco-conscious infrastructure.",
-      image: "/urban-planning/city-planning/Climate Resilience.jpg",
+      image: "/urban-planning/city-planning/Climate Resilience.webp",
       icon: Leaf,
       points: [
         "Carbon-neutral strategies",
@@ -41,7 +41,7 @@ export default function ConstructionManagementPage() {
     {
       title: "Urban Analytics & Smart City Solutions",
       desc: "Data-driven planning tools that shape responsive and intelligent urban systems.",
-      image: "/urban-planning/city-planning/Smart City.jpeg",
+      image: "/urban-planning/city-planning/Smart City.webp",
       icon: Network,
       points: [
         "GIS & geospatial mapping",
@@ -53,7 +53,7 @@ export default function ConstructionManagementPage() {
     {
       title: "Green Urbanism & Nature Integration",
       desc: "Harmonizing nature and urban life for healthier, more vibrant communities.",
-      image: "/urban-planning/city-planning/Green Urbanism.jpeg",
+      image: "/urban-planning/city-planning/Green Urbanism.webp",
       icon: TreePine,
       points: [
         "Urban green corridors",
@@ -67,11 +67,11 @@ export default function ConstructionManagementPage() {
   const services = [
     {
       title: "Environmental Impact Assessments",
-      image: "/urban-planning/city-planning/Environmental.jpg",
+      image: "/urban-planning/city-planning/Environmental.webp",
     },
     {
       title: "Economic Development Strategies",
-      image: "/urban-planning/city-planning/Economic.jpeg",
+      image: "/urban-planning/city-planning/Economic.webp",
     },
     {
       title: "Concept Architecture & Place Branding",
@@ -79,7 +79,7 @@ export default function ConstructionManagementPage() {
     },
     {
       title: "Geospatial Intelligence & Mapping",
-      image: "/urban-planning/city-planning/Geospatial.jpeg",
+      image: "/urban-planning/city-planning/Geospatial.webp",
     },
   ];
 
@@ -120,7 +120,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/city-planning/hero.jpg"}
+          src={"/urban-planning/city-planning/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={"City planning Hero"}
           width={1200}

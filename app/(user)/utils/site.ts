@@ -23,7 +23,7 @@ export const siteConfig = {
           link: "Leadership-and-Vision",
           label: "Leadership & Vision",
           desc: "Al Yusr’s leadership drives innovation, excellence, and a clear vision for the Kingdom’s future. ",
-          img: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Saudi_Vision_2030_logo.svg/1200px-Saudi_Vision_2030_logo.svg.png",
+          img: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Saudi_Vision_2030_logo.svg/1200px-Saudi_Vision_2030_logo.svg.jpeg",
         },
         {
           link: "Transforming-Saudi-Future",
@@ -35,7 +35,7 @@ export const siteConfig = {
       imgCard: [
         {
           button: "Donwload Now",
-          img: "/cover-page.jpg",
+          img: "/cover-page.jpeg",
           action: "download",
         },
         {
@@ -320,7 +320,7 @@ export const siteConfig = {
           label: "In-House Capabilities",
           description:
             "Al Yusr delivers all major services in-house, ensuring full control, quality, and efficiency at every stage",
-          img: "https://images.pexels.com/photos/33266/work-chinese-industrial-professional.jpg",
+          img: "https://images.pexels.com/photos/33266/work-chinese-industrial-professional.jpeg",
         },
         {
           link: "CEO-Led-Specialized-Departments",
@@ -390,7 +390,7 @@ type WhoWeAreNav = {
   }[];
   tagLine: string;
   wideCard: { label: string; desc: string; img: string; link: string }[];
-  imgCard: { button: string; img: string, action:string }[];
+  imgCard: { button: string; img: string; action: string }[];
 };
 
 type WhatWeDoNav = {

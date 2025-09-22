@@ -50,7 +50,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="/company overview/banner.jpg"
+          src="/company overview/banner.webp"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -61,7 +61,7 @@ export default function Page() {
           {/* Image first on mobile, second on desktop */}
           <div className="order-1 lg:order-2">
             <img
-              src="/company overview/company overview.jpg"
+              src="/company overview/company overview.webp"
               alt="Company Overview"
               className="rounded-xl shadow-lg w-full h-full object-cover"
             />
@@ -99,7 +99,7 @@ export default function Page() {
           {" "}
           <div>
             <img
-              src="/company overview/our history.jpg"
+              src="/company overview/our history.webp"
               alt="Company Overview"
               className="rounded-xl shadow-lg w-full h-full object-cover"
             />

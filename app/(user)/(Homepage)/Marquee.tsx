@@ -2,19 +2,19 @@ import React from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 const Marquee = () => {
   const Icons = [
-    { title: "AutoCAD", img: "autocad.png" },
+    { title: "AutoCAD", img: "autocad.webp" },
     { title: "Autodesk", img: "autodesk.webp" },
-    { title: "ETABS", img: "etabs.png" },
-    { title: "ETAP", img: "etap.png" },
-    { title: "Gsuite", img: "Gsuite-logo.png" },
-    { title: "HAP", img: "hap.avif" },
-    { title: "Lumion", img: "lumion.png" },
+    { title: "ETABS", img: "etabs.webp" },
+    { title: "ETAP", img: "etap.webp" },
+    { title: "Gsuite", img: "Gsuite-logo.webp" },
+    { title: "HAP", img: "hap.webp" },
+    { title: "Lumion", img: "lumion.webp" },
     { title: "Microsoft Office", img: "msOffice.webp" },
-    { title: "Primavera P6 (Oracle)", img: "p6Oracle.png" },
-    { title: "Revit", img: "revit.jpg" },
-    { title: "Microsoft Teams", img: "Teams.png" },
-    { title: "Tekla", img: "Tekla.png" },
-    { title: "V-Ray", img: "v-ray.png" },
+    { title: "Primavera P6 (Oracle)", img: "p6Oracle.webp" },
+    { title: "Revit", img: "revit.webp" },
+    { title: "Microsoft Teams", img: "Teams.webp" },
+    { title: "Tekla", img: "Tekla.webp" },
+    { title: "V-Ray", img: "v-ray.webp" },
   ];
 
   return (

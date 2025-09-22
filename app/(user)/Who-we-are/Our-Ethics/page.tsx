@@ -58,7 +58,7 @@ export default function Page() {
             </div>
             <div className="h-[450px] w-full bg-slate-100">
               <img
-                src="/our division 2/heading.jpg"
+                src="/our division 2/heading.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -91,7 +91,7 @@ export default function Page() {
               className="w-full bg-slate-100 lg:w-1/2 h-64 lg:h-[400px] relative rounded-xl overflow-hidden"
             >
               <Image
-                src="/ethics-image.jpg" // replace with your image path
+                src="/ethics-image.webp" // replace with your image path
                 alt="Ethical Culture"
                 fill
                 className="object-cover object-center rounded-xl"
@@ -177,7 +177,10 @@ export default function Page() {
 
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {codeItems.map((item, i) => (
-                <li key={i} className="flex bg-sky-100 p-2 rounded-lg items-start gap-3">
+                <li
+                  key={i}
+                  className="flex bg-sky-100 p-2 rounded-lg items-start gap-3"
+                >
                   <BadgeCheck className="w-5 h-5 text-green-600 mt-1 shrink-0" />
                   <span>{item}</span>
                 </li>

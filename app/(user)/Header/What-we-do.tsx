@@ -67,7 +67,7 @@ const WhatWeDo = ({ data, locationsData, onNavigate }: dataProps) => {
           width={300}
           height={300}
           src={
-            "https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg"
+            "https://images.pexels.com/photos/1109541/pexels-photo-1109541.webp"
           }
           alt={""}
           className="w-full h-full object-cover"

@@ -98,7 +98,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/Vertical Transportation/hero.avif"}
+          src={"/Engineering-Infrastructure/Vertical Transportation/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}
@@ -142,7 +142,7 @@ export default function ConstructionManagementPage() {
           <div className="h-[400px] w-full ">
             <img
               src={
-                "/Engineering-Infrastructure/Vertical Transportation/about.avif"
+                "/Engineering-Infrastructure/Vertical Transportation/about.webp"
               }
               alt={""}
               className="w-full h-full object-cover"

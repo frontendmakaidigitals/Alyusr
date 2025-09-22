@@ -16,30 +16,30 @@ export default function ConstructionManagementPage() {
       title: "Design-Build (DB)",
       desc: "Combines design and construction into one contract and one team. This model speeds up timelines, simplifies communication, and ensures accountability.",
       image:
-        "/Engineering-Infrastructure/alternative-delivery/design-build.jpg",
+        "/Engineering-Infrastructure/alternative-delivery/design-build.webp",
     },
     {
       title: "Integrated Project Delivery (IPD)",
       desc: "A highly collaborative process where the owner, designers, and builders share responsibilities, risks, and rewards. This approach enhances transparency, reduces waste, and improves value delivery.",
       image:
-        "/Engineering-Infrastructure/alternative-delivery/construction-management.jpg",
+        "/Engineering-Infrastructure/alternative-delivery/construction-management.webp",
     },
     {
       title: "Public-Private Partnerships (PPP)",
       desc: "Private sector investment and expertise are used to finance, build, and operate public projects, reducing public risk while delivering high-quality assets.",
-      image: "/Engineering-Infrastructure/alternative-delivery/ppp.jpg",
+      image: "/Engineering-Infrastructure/alternative-delivery/ppp.webp",
     },
     {
       title: "Construction Management at Risk (CMAR)",
       desc: "Gives the owner more design control while ensuring budget certainty. The construction manager acts as a consultant during design and assumes construction risk during execution.",
       image:
-        "/Engineering-Infrastructure/alternative-delivery/Public-Private.jpg",
+        "/Engineering-Infrastructure/alternative-delivery/Public-Private.webp",
     },
     {
       title: "Progressive Design-Build",
       desc: "An evolving model where design and cost development happen collaboratively, allowing for flexibility and shared decision-making throughout the process.",
       image:
-        "/Engineering-Infrastructure/alternative-delivery/Design-Builds.jpg",
+        "/Engineering-Infrastructure/alternative-delivery/Design-Builds.webp",
     },
   ];
 
@@ -91,7 +91,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/alternative-delivery/hero.jpg"}
+          src={"/Engineering-Infrastructure/alternative-delivery/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={"Alternative Delivery Models"}
           width={500}
@@ -134,7 +134,7 @@ export default function ConstructionManagementPage() {
           <div className="w-full h-[370px] bg-slate-100 overflow-hidden">
             <img
               src={
-                "/Engineering-Infrastructure/alternative-delivery/why-us.jpg"
+                "/Engineering-Infrastructure/alternative-delivery/why-us.webp"
               }
               alt={""}
               className="w-full h-full object-cover"
@@ -219,7 +219,7 @@ export default function ConstructionManagementPage() {
           <div className="w-full h-[400px] bg-slate-100 overflow-hidden">
             <img
               src={
-                "/Engineering-Infrastructure/alternative-delivery/our-value.jpg"
+                "/Engineering-Infrastructure/alternative-delivery/our-value.webp"
               }
               alt={""}
               className="w-full h-full object-cover"

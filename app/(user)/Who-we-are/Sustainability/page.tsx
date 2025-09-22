@@ -94,7 +94,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-bottom"
-          src="/sustainability 2/banner.jpg"
+          src="/sustainability 2/banner.webp"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -128,7 +128,7 @@ export default function Page() {
             </div>
             <div className="h-[450px]">
               <img
-                src="/sustainability 2/heading.jpg"
+                src="/sustainability 2/heading.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -142,7 +142,7 @@ export default function Page() {
       <section className="py-20 ">
         <div className="container  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <img
-            src="/sustainability 2/why.jpg"
+            src="/sustainability 2/why.webp"
             alt="Sustainable city"
             className="rounded-xl shadow-md"
           />
@@ -224,7 +224,7 @@ export default function Page() {
         </div>
         <div className="w-full h-[450px]  rounded-xl">
           <img
-            src="/sustainability 2/approach.jpg"
+            src="/sustainability 2/approach.webp"
             alt="Sustainable city"
             className="rounded-xl shadow-md w-full h-full object-cover"
           />
@@ -237,7 +237,7 @@ export default function Page() {
           <div className="w-full h-[450px]  rounded-xl">
             {" "}
             <img
-              src="/sustainability 2/commitment.jpg"
+              src="/sustainability 2/commitment.webp"
               alt="Sustainable city"
               className="rounded-xl shadow-md w-full h-full object-cover"
             />
@@ -298,7 +298,7 @@ export default function Page() {
           </div>
           <div className="w-full h-[450px] overflow-hidden rounded-xl">
             <img
-              src="/sustainability 2/innovation.jpg"
+              src="/sustainability 2/innovation.webp"
               alt=""
               className="w-full h-full object-cover"
             />

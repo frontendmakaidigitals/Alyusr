@@ -17,7 +17,7 @@ export default function ConstructionManagementPage() {
         "Reverse Circulation Drilling (RCD)",
         "Offshore & In-Water Foundations",
       ],
-      img: "/Engineering-Infrastructure/Foundation Engineering/deep-foundation.jpeg",
+      img: "/Engineering-Infrastructure/Foundation Engineering/deep-foundation.webp",
     },
     {
       title: "Micropile Systems",
@@ -28,7 +28,7 @@ export default function ConstructionManagementPage() {
         "Effective in unstable or contaminated soils",
         "Flexible angle installation",
       ],
-      img: "/Engineering-Infrastructure/Foundation Engineering/Micropile.jpg",
+      img: "/Engineering-Infrastructure/Foundation Engineering/Micropile.webp",
     },
     {
       title: "Ground Improvement Techniques",
@@ -38,7 +38,7 @@ export default function ConstructionManagementPage() {
         "Vibroflotation & Stone Columns",
         "Jet Grouting & Pressure Grouting",
       ],
-      img: "/Engineering-Infrastructure/Foundation Engineering/Ground Improvement.jpg",
+      img: "/Engineering-Infrastructure/Foundation Engineering/Ground Improvement.webp",
     },
     {
       title: "Slope Stabilization & Excavation Shoring",
@@ -49,7 +49,7 @@ export default function ConstructionManagementPage() {
         "Tie-Back Anchors & Bracing Systems",
         "Temporary & Permanent Solutions",
       ],
-      img: "/Engineering-Infrastructure/Foundation Engineering/Excavation.jpg",
+      img: "/Engineering-Infrastructure/Foundation Engineering/Excavation.webp",
     },
   ];
 
@@ -85,7 +85,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/Foundation Engineering/hero.jpg"}
+          src={"/Engineering-Infrastructure/Foundation Engineering/hero.webp"}
           className="w-full h-full object-cover "
           alt={"hero"}
           width={1200}

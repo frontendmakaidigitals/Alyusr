@@ -109,7 +109,7 @@ const services = [
   },
   {
     title: "Smart Infrastructure & Digital Systems",
-    img: "smart solutions.jpg",
+    img: "smart solutions.webp",
   },
   {
     title: "Environmental Assessment and Permitting",

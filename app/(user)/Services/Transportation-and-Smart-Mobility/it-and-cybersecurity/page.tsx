@@ -8,12 +8,12 @@ export default function Page() {
     {
       title: "Multi-Disciplinary Expertise",
       desc: "Our teams combine GIS specialists, urban planners, engineers, and data scientists.",
-      img: "/Transportation-mobility/it-and-cybersecurity/Multi-Disciplinary Expertise.jpg",
+      img: "/Transportation-mobility/it-and-cybersecurity/Multi-Disciplinary Expertise.webp",
     },
     {
       title: "Proven Global Experience",
       desc: "Hundreds of successful geospatial projects across government and industry sectors.",
-      img: "/Transportation-mobility/it-and-cybersecurity/global.jpg",
+      img: "/Transportation-mobility/it-and-cybersecurity/global.webp",
     },
     {
       title: "Custom Solutions",
@@ -23,7 +23,7 @@ export default function Page() {
     {
       title: "Advanced Technology",
       desc: "We leverage AI, IoT integration, and predictive analytics to enhance geospatial insights.",
-      img: "/Transportation-mobility/it-and-cybersecurity/advance-tech.jpg",
+      img: "/Transportation-mobility/it-and-cybersecurity/advance-tech.webp",
     },
   ];
 
@@ -31,7 +31,7 @@ export default function Page() {
     {
       title: "Cybersecurity Solutions",
       desc: "In an increasingly digital world, threats evolve daily. Al Yusr provides strategic and technical cybersecurity solutions to ensure the confidentiality, integrity, and availability of your systems, whether your data is in use, in motion, or at rest. We protect both IT and Operational Technology (OT) environments across government, infrastructure, and private sector organizations.",
-      img: "/Transportation-mobility/it-and-cybersecurity/advance-tech.jpg",
+      img: "/Transportation-mobility/it-and-cybersecurity/advance-tech.webp",
       points: [
         "Cyber Risk Assessment & Management",
         "Threat Detection & Incident Response",
@@ -43,7 +43,7 @@ export default function Page() {
     {
       title: "Cloud & Virtual Infrastructure",
       desc: "Al Yusr partners with leading cloud providers to offer secure, scalable, and compliant cloud solutions. From virtual data centers to multi-cloud management, we help clients transition smoothly into the cloud while maintaining the highest security and performance standards.",
-      img: "/Transportation-mobility/it-and-cybersecurity/cloud-ingra.jpeg",
+      img: "/Transportation-mobility/it-and-cybersecurity/cloud-ingra.webp",
       points: [
         "Secure Cloud Architecture & Migration",
         "Application Hosting & Data Storage",
@@ -54,7 +54,7 @@ export default function Page() {
     {
       title: "Integrated IT Solutions",
       desc: "Our expert team delivers IT infrastructure and software solutions designed for mission-critical operations. Whether designing new systems or upgrading legacy networks, we focus on availability, security, and performance.",
-      img: "/Transportation-mobility/it-and-cybersecurity/Integrated IT Solutions .jpg",
+      img: "/Transportation-mobility/it-and-cybersecurity/Integrated IT Solutions .webp",
       points: [
         "Network Architecture & Operations",
         "IT Infrastructure & Cabling Design",
@@ -65,7 +65,7 @@ export default function Page() {
     {
       title: "Industrial Control Systems (ICS) Security",
       desc: "Critical infrastructure, such as water, energy, and transportation, is vulnerable to cyber threats. We bridge the gap between engineering and cybersecurity by securing Industrial Control Systems (ICS), SCADA, and automation networks.",
-      img: "/Transportation-mobility/it-and-cybersecurity/Industrial Control System.jpg",
+      img: "/Transportation-mobility/it-and-cybersecurity/Industrial Control System.webp",
       points: [
         "ICS Vulnerability Assessments",
         "Secure Design of Control Systems",
@@ -76,7 +76,7 @@ export default function Page() {
     {
       title: "Secure Data Center Design & Deployment",
       desc: "Combining our engineering expertise with IT know-how, we deliver resilient and efficient data centers for sectors like healthcare, banking, public services, and defense. From design to commissioning, we ensure compliance, uptime, and scalability.",
-      img: "/Transportation-mobility/it-and-cybersecurity/Data Center .jpg",
+      img: "/Transportation-mobility/it-and-cybersecurity/Data Center .webp",
       points: [
         "Tier III/IV Certified Infrastructure",
         "Redundant Power & Cooling Systems",
@@ -128,7 +128,7 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/it-and-cybersecurity/hero.jpg"}
+              src={"/Transportation-mobility/it-and-cybersecurity/hero.webp"}
               className=""
               alt={""}
             />

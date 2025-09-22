@@ -123,7 +123,7 @@ export default function Page() {
           </div>
           <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/certificate page/Class A certificate.png"
+              src="/certificate page/Class A certificate.webp"
               alt="Class A Certification"
               fill
               className="object-cover w-full h-full object-center"
@@ -143,27 +143,27 @@ export default function Page() {
               {
                 label: "ISO 9001:2015",
                 desc: "Quality Management",
-                img: "/certificate page/ISO 9001.png",
+                img: "/certificate page/ISO 9001.webp",
               },
               {
                 label: "ISO 14001:2015",
                 desc: "Environmental Management",
-                img: "/certificate page/ISO 14001.png",
+                img: "/certificate page/ISO 14001.webp",
               },
               {
                 label: "ISO 45001:2018",
                 desc: "Occupational Health & Safety",
-                img: "/certificate page/ISO 45001.png",
+                img: "/certificate page/ISO 45001.webp",
               },
               {
                 label: "ISO 31000:2018",
                 desc: "Risk Management",
-                img: "/certificate page/ISO 31000.png",
+                img: "/certificate page/ISO 31000.webp",
               },
               {
                 label: "ISO 21500:2021",
                 desc: "Project Management Framework",
-                img: "/certificate page/ISO 21500.png",
+                img: "/certificate page/ISO 21500.webp",
               },
             ].map((iso, i) => (
               <div

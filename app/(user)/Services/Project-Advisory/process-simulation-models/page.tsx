@@ -54,22 +54,22 @@ export default function Page() {
     {
       name: "GMTS – General Marine Terminal Simulator",
       desc: "Simulates container terminal operations to compare physical layouts, operating modes, and equipment configurations. GMTS supports cost analysis, throughput assessment, and productivity benchmarking.",
-      img: "/project-advisory/process-simulation/gms.jpg",
+      img: "/project-advisory/process-simulation/gms.webp",
     },
     {
       name: "BERTHA – Berth Capacity Analyzer",
       desc: "Analyzes variability in vessel arrivals, crane productivity, weather impacts, and maintenance shutdowns to determine terminal capacity. Tracks yard inventory in real-time and assists in estimating required handling equipment.",
-      img: "/project-advisory/process-simulation/berth.jpeg",
+      img: "/project-advisory/process-simulation/berth.webp",
     },
     {
       name: "RailOps – Rail Network Simulator",
       desc: "Simulates passenger and freight rail networks with detailed train, locomotive, and railcar modeling. Useful for analyzing train scheduling, terminal rules, and network scalability from digital layout plans.",
-      img: "/project-advisory/process-simulation/rail-simulator.jpg",
+      img: "/project-advisory/process-simulation/rail-simulator.webp",
     },
     {
       name: "VNM – Vessel Network Model",
       desc: "Used for analyzing the capacity of harbors, ferry systems, or inland waterways. Accounts for dynamic conditions such as tides, vessel draft, fuel cost vs. speed, and environmental closures.",
-      img: "/project-advisory/process-simulation/vessel.avif",
+      img: "/project-advisory/process-simulation/vessel.webp",
     },
     {
       name: "BulkSim – Bulk Terminal Simulator",
@@ -79,29 +79,29 @@ export default function Page() {
     {
       name: " VISSIM – Roadway & Terminal Access Simulation",
       desc: "Industry-leading software used to simulate terminal gates and surrounding road infrastructure. Ideal for visualizing traffic flow, access points, and integration with urban mobility networks. Offers immersive 3D graphics for stakeholder presentation and design evaluation.",
-      img: "/project-advisory/process-simulation/roadway-sim.png",
+      img: "/project-advisory/process-simulation/roadway-sim.webp",
     },
   ];
   const sectors = [
     {
       title: "Seaport and Marine Terminal Planning",
-      img: "/project-advisory/process-simulation/port.jpg",
+      img: "/project-advisory/process-simulation/port.webp",
     },
     {
       title: "Rail and Intermodal Yard Optimization",
-      img: "/project-advisory/process-simulation/railway.jpg",
+      img: "/project-advisory/process-simulation/railway.webp",
     },
     {
       title: "Bulk Material Handling Facilities",
-      img: "/project-advisory/process-simulation/bulksim.png",
+      img: "/project-advisory/process-simulation/bulksim.webp",
     },
     {
       title: "Highway and Freight Corridor Analysis",
-      img: "/project-advisory/process-simulation/highway-corridor.png",
+      img: "/project-advisory/process-simulation/highway-corridor.webp",
     },
     {
       title: "Urban Mobility & Smart Transportation Integration",
-      img: "/project-advisory/process-simulation/smart-transportation.jpg",
+      img: "/project-advisory/process-simulation/smart-transportation.webp",
     },
     {
       title: "Operational Risk Modeling and Mitigation",
@@ -125,7 +125,7 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/process-simulation/hero.jpg"}
+          src={"/project-advisory/process-simulation/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={"hero"}
           width={1200}

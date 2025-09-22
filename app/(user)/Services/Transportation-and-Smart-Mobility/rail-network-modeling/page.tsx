@@ -16,27 +16,27 @@ export default function Page() {
     {
       title: "Rail Traffic Controller (RTC) – Freight Network Analysis",
       desc: "The Rail Traffic Controller (RTC) by Berkeley Simulation Software is the industry’s standard for freight rail simulation. With its state-of-the-art automated dispatching logic, RTC efficiently simulates large and complex freight networks, rivaling even human dispatchers. From small terminals to international freight routes, RTC ensures stakeholders understand the operational implications before committing to costly investments.",
-      img: "/Transportation-mobility/rail-network-modelling/Rail Traffic Controller.jpg",
+      img: "/Transportation-mobility/rail-network-modelling/Rail Traffic Controller.webp",
     },
     {
       title: "OpenTrack – Passenger Network Optimization",
       desc: "OpenTrack by OpenTrack Railway Technology Ltd. is the global benchmark for passenger rail simulation. It is ideal for analyzing streetcars, LRT, commuter rail, and high-speed rail systems. OpenTrack allows us to test multiple passenger service scenarios, ensuring on-time performance, passenger comfort, and operational efficiency.",
-      img: "/Transportation-mobility/rail-network-modelling/Passenger Network Optimization.jpg", // sample passenger train img
+      img: "/Transportation-mobility/rail-network-modelling/Passenger Network Optimization.webp", // sample passenger train img
     },
     {
       title: "RailEST – Railway Electrification Simulation",
       desc: "Our in-house RailEST software specializes in train motion simulation and electrification system analysis. It models the performance of the most common systems: 750Vdc, 1500Vdc, 1x25kVac, and 2x25kVac, used in LRT, metro, commuter, and high-speed lines.",
-      img: "/Transportation-mobility/rail-network-modelling/Railway Electrification.jpg", // sample electrified rail img
+      img: "/Transportation-mobility/rail-network-modelling/Railway Electrification.webp", // sample electrified rail img
     },
     {
       title: "RAILSIM – Train Performance & Traction Power Analysis",
       desc: "RAILSIM by SYSTRA is our go-to tool for analyzing track geometries and train performance. With its Train Performance Calculator (TPC), we can simulate how specific rolling stock operates over a given track design. Often, RAILSIM is paired with RTC or OpenTrack to deliver a comprehensive, multi-layered rail system analysis.",
-      img: "/Transportation-mobility/rail-network-modelling/RAILSIM.jpg", // sample rail system img
+      img: "/Transportation-mobility/rail-network-modelling/RAILSIM.webp", // sample rail system img
     },
     {
       title: "AnyLogic – Flexible Multi-Industry Rail Simulation",
       desc: "AnyLogic offers unmatched flexibility in rail operations modeling, allowing rapid model creation and 2D/3D visualizations.",
-      img: "/Transportation-mobility/rail-network-modelling/railsim-modelling.jpg", // sample flexible simulation img
+      img: "/Transportation-mobility/rail-network-modelling/railsim-modelling.webp", // sample flexible simulation img
     },
   ];
 
@@ -44,12 +44,12 @@ export default function Page() {
     {
       title: "Multi-Tool Expertise",
       desc: "Proficiency across RTC, OpenTrack, RailEST, RAILSIM, and AnyLogic.",
-      img: "/Transportation-mobility/rail-network-modelling/multitoo.jpg", // freight trains
+      img: "/Transportation-mobility/rail-network-modelling/multitoo.webp", // freight trains
     },
     {
       title: "Cross-Sector Experience",
       desc: "Freight, passenger, metro, high-speed rail, and mixed-use networks.",
-      img: "/Transportation-mobility/rail-network-modelling/cross-sector.jpeg", // passenger
+      img: "/Transportation-mobility/rail-network-modelling/cross-sector.webp", // passenger
     },
     {
       title: "Global Standards, Local Insight",
@@ -59,7 +59,7 @@ export default function Page() {
     {
       title: "End-to-End Support",
       desc: "From feasibility studies to final design validation.",
-      img: "/Transportation-mobility/rail-network-modelling/support.jpg", // planning
+      img: "/Transportation-mobility/rail-network-modelling/support.webp", // planning
     },
   ];
   const services = [
@@ -123,7 +123,7 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/rail-network-modelling/hero.jpg"}
+              src={"/Transportation-mobility/rail-network-modelling/hero.webp"}
               className="w-full h-full object-cover"
               alt={""}
             />

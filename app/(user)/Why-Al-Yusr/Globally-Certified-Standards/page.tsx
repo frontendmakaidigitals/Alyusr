@@ -49,7 +49,7 @@ export default function CertificationsPage() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-top"
-          src="https://www.poynter.org/wp-content/uploads/2019/03/shutterstock_285251927.jpg"
+          src="https://www.poynter.org/wp-content/uploads/2019/03/shutterstock_285251927.jpeg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>

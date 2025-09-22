@@ -17,7 +17,7 @@ const divisions = [
       "Roads, Drainage & Hydrology",
       "Telecom & Low-Current Systems",
     ],
-    image: "/our division 2/Engineering & Design Division.jpg", // Replace with your local or remote image
+    image: "/our division 2/Engineering & Design Division.webp", // Replace with your local or remote image
   },
   {
     title: "Architecture & Urban Planning Division",
@@ -30,7 +30,7 @@ const divisions = [
       "Masterplanning & Land Use Studies",
       "Design Optimization & Value Engineering",
     ],
-    image: "/our division 2/Architecture & Urban Planning.jpg",
+    image: "/our division 2/Architecture & Urban Planning.webp",
   },
   {
     title: "Construction & Project Management Division",
@@ -44,7 +44,7 @@ const divisions = [
       "Fire & Safety Engineering",
       "Site Investigations & Surveying",
     ],
-    image: "/our division 2/Construction & Project Management.jpg",
+    image: "/our division 2/Construction & Project Management.webp",
   },
   {
     title: "Sustainability & Smart Solutions Division",
@@ -57,7 +57,7 @@ const divisions = [
       "Energy Efficiency & Resource Management",
       "Digital Twin & Performance Monitoring",
     ],
-    image: "/our division 2/smart solutions.jpg",
+    image: "/our division 2/smart solutions.webp",
   },
   {
     title: "Digital Engineering & BIM Division",
@@ -70,7 +70,7 @@ const divisions = [
       "Data Analytics for Project Optimization",
       "Digital Design Reviews",
     ],
-    image: "/our division 2/Digital Engineering & BIM Division.jpg",
+    image: "/our division 2/Digital Engineering & BIM Division.webp",
   },
   {
     title: "Strategy & Advisory Division",
@@ -83,7 +83,7 @@ const divisions = [
       "Risk & Cost Analysis",
       "Market Research & Opportunity Mapping",
     ],
-    image: "/our division 2/Strategy & Advisory.jpg",
+    image: "/our division 2/Strategy & Advisory.webp",
   },
 ];
 
@@ -123,7 +123,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="/our division 2/banner.jpg"
+          src="/our division 2/banner.webp"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -159,7 +159,7 @@ export default function Page() {
             </div>
             <div className="h-[450px] w-full">
               <img
-                src="/our division 2/heading.jpg"
+                src="/our division 2/heading.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />

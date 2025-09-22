@@ -54,19 +54,19 @@ export default function Page() {
       title: "Environmental Risk Assessment & Mitigation",
       desc: "Identification and remediation of contaminated land, invasive species management, and ecological protection measures to reduce risks and delays.",
       image:
-        "/Environment-Sustainability/Environmental Contracting/Environmental Risk.jpg", // environment protection
+        "/Environment-Sustainability/Environmental Contracting/Environmental Risk.webp", // environment protection
     },
     {
       title: "Specialist Contracting Services",
       desc: "Enabling works, site clearance, ground stabilization, and remediation of complex sites to prepare safe, compliant, and build-ready land.",
       image:
-        "/Environment-Sustainability/Environmental Contracting/specialist-contracting.jpg", // construction site
+        "/Environment-Sustainability/Environmental Contracting/specialist-contracting.webp", // construction site
     },
     {
       title: "Regulatory & Compliance Management",
       desc: "Support with permitting, regulatory approvals, and stakeholder engagement to keep projects on track and compliant with environmental standards.",
       image:
-        "/Environment-Sustainability/Environmental Contracting/Regulatory & Compliance.jpg", // compliance meeting
+        "/Environment-Sustainability/Environmental Contracting/Regulatory & Compliance.webp", // compliance meeting
     },
   ];
 
@@ -113,7 +113,13 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={"/Environment-Sustainability/Environmental Contracting/hero.webp"} className="w-full h-full objext-cover" alt={"Env contracting"} />
+            <img
+              src={
+                "/Environment-Sustainability/Environmental Contracting/hero.webp"
+              }
+              className="w-full h-full objext-cover"
+              alt={"Env contracting"}
+            />
           </div>
         </div>
       </section>

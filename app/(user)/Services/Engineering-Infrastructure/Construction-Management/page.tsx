@@ -37,27 +37,27 @@ const differentiators = [
   {
     title: "CEO-Led, Specialized Departments",
     desc: "Our leadership is directly involved in driving project excellence. Each department is led by domain experts, ensuring in-depth technical insight and fast, informed decision-making.",
-    image: "/Engineering-Infrastructure/construction/ceo-led.jpg", // business leadership / CEO
+    image: "/Engineering-Infrastructure/construction/ceo-led.webp", // business leadership / CEO
   },
   {
     title: "In-House Capabilities",
     desc: "We offer fully integrated services under one roof, allowing seamless collaboration, cost control, and faster delivery.",
-    image: "/Engineering-Infrastructure/construction/inhouse.avif", // teamwork / collaboration
+    image: "/Engineering-Infrastructure/construction/inhouse.webp", // teamwork / collaboration
   },
   {
     title: "Class A Certified & Globally Recognized",
     desc: "Licensed in the Kingdom with Class A certification and multiple ISO standards, trusted by both government entities and private developers.",
-    image: "/Engineering-Infrastructure/construction/certified.avif", // certificate / achievement
+    image: "/Engineering-Infrastructure/construction/certified.webp", // certificate / achievement
   },
   {
     title: "Proven Track Record in Mega Projects",
     desc: "From large-scale urban infrastructure to complex engineering projects, we deliver with consistency, accountability, and measurable results.",
-    image: "/Engineering-Infrastructure/construction/track-record.avif", // mega construction project
+    image: "/Engineering-Infrastructure/construction/track-record.webp", // mega construction project
   },
   {
     title: "Tech-Driven & Future-Ready",
     desc: "We leverage advanced tools like AutoCAD, Revit, Civil 3D, and GIS platforms alongside top-tier equipment to ensure every detail is executed with accuracy and innovation.",
-    image: "/Engineering-Infrastructure/construction/tech-driven.avif", // futuristic tech / engineering
+    image: "/Engineering-Infrastructure/construction/tech-driven.webp", // futuristic tech / engineering
   },
 ];
 
@@ -107,43 +107,43 @@ const keyResponsibilities = [
 const lifecyclePhases = [
   {
     title: "Project Feasibility & Analysis",
-    image: "/Engineering-Infrastructure/construction/Project Feasibility.avif",
+    image: "/Engineering-Infrastructure/construction/Project Feasibility.webp",
   },
   {
     title: "Objective Setting & Stakeholder Alignment",
-    image: "/Engineering-Infrastructure/construction/Stakeholder.avif",
+    image: "/Engineering-Infrastructure/construction/Stakeholder.webp",
   },
   {
     title: "Budgeting, Scheduling & Scope Definition",
-    image: "/Engineering-Infrastructure/construction/Budgeting.avif",
+    image: "/Engineering-Infrastructure/construction/Budgeting.webp",
   },
   {
     title: "Strategy Development & Planning",
-    image: "/Engineering-Infrastructure/construction/Strategy.avif",
+    image: "/Engineering-Infrastructure/construction/Strategy.webp",
   },
   {
     title: "Design Management & Risk Mitigation",
-    image: "/Engineering-Infrastructure/construction/Strategy Development.avif",
+    image: "/Engineering-Infrastructure/construction/Strategy Development.webp",
   },
   {
     title: "Resource Allocation & Team Coordination",
-    image: "/Engineering-Infrastructure/construction/team.avif",
+    image: "/Engineering-Infrastructure/construction/team.webp",
   },
   {
     title: "Progress Monitoring & Communication Flow",
-    image: "/Engineering-Infrastructure/construction/progress.avif",
+    image: "/Engineering-Infrastructure/construction/progress.webp",
   },
   {
     title: "On-Site Construction Management",
-    image: "/Engineering-Infrastructure/construction/Construction.avif",
+    image: "/Engineering-Infrastructure/construction/Construction.webp",
   },
   {
     title: "Safety Compliance & Environmental Checks",
-    image: "/Engineering-Infrastructure/construction/safety.avif",
+    image: "/Engineering-Infrastructure/construction/safety.webp",
   },
   {
     title: "Quality Control, Close-Out & Handover",
-    image: "/Engineering-Infrastructure/construction/quality.avif",
+    image: "/Engineering-Infrastructure/construction/quality.webp",
   },
 ];
 
@@ -177,7 +177,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/construction/hero.avif"}
+          src={"/Engineering-Infrastructure/construction/hero.webp"}
           className="w-full h-full object-cover"
           alt={""}
           width={1200}

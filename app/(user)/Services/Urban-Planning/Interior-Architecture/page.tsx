@@ -9,43 +9,43 @@ export default function Page() {
   const services = [
     {
       title: "Interior Design Concept Development",
-      img: "/urban-planning/interior/interior-design.avif",
+      img: "/urban-planning/interior/interior-design.webp",
     },
     {
       title: "Space Planning & Functional Zoning",
-      img: "/urban-planning/interior/sapce-planning.avif",
+      img: "/urban-planning/interior/sapce-planning.webp",
     },
     {
       title: "Material & Finish Selection",
-      img: "/urban-planning/interior/material.avif",
+      img: "/urban-planning/interior/material.webp",
     },
     {
       title: "Lighting Design & Visual Comfort Strategies",
-      img: "/urban-planning/interior/lighting.avif",
+      img: "/urban-planning/interior/lighting.webp",
     },
     {
       title: "Furniture, Fixtures & Equipment (FF&E) Planning",
-      img: "/urban-planning/interior/furniture.avif",
+      img: "/urban-planning/interior/furniture.webp",
     },
     {
       title: "Wayfinding & Environmental Branding",
-      img: "/urban-planning/interior/wayfinding.avif",
+      img: "/urban-planning/interior/wayfinding.webp",
     },
     {
       title: "Custom Joinery & Millwork Detailing",
-      img: "/urban-planning/interior/millwork.jpg",
+      img: "/urban-planning/interior/millwork.webp",
     },
     {
       title: "Code & Accessibility Compliance",
-      img: "/urban-planning/interior/compliance.avif",
+      img: "/urban-planning/interior/compliance.webp",
     },
     {
       title: "3D Visualization & Virtual Walkthroughs",
-      img: "/urban-planning/interior/Visualization.avif",
+      img: "/urban-planning/interior/Visualization.webp",
     },
     {
       title: "Construction Documentation & Site Coordination",
-      img: "/urban-planning/interior/Site Coordination.avif",
+      img: "/urban-planning/interior/Site Coordination.webp",
     },
   ];
 
@@ -53,27 +53,27 @@ export default function Page() {
     {
       title: "Corporate & Workplace Environments",
       desc: "We design high-performance workplaces that boost productivity, support wellness, and reflect brand identity. From agile open-office layouts and executive suites to collaborative spaces and quiet zones, we help organizations foster innovation, employee satisfaction, and operational efficiency.",
-      img: "/urban-planning/interior/Corporate.avif",
+      img: "/urban-planning/interior/Corporate.webp",
     },
     {
       title: "Retail & Mixed-Use Developments",
       desc: "Our interiors team creates retail and commercial environments that captivate visitors, support business objectives, and enhance footfall. We design immersive customer journeys by integrating spatial flow, display strategies, lighting, and visual merchandising.",
-      img: "/urban-planning/interior/Retail.avif",
+      img: "/urban-planning/interior/Retail.webp",
     },
     {
       title: "Hotels & Hospitality Spaces",
       desc: "We deliver interior environments that reflect luxury, comfort, and authenticity, turning every guest's stay into a memorable experience. Whether boutique or large-scale hospitality, we align design with cultural context, brand standards, and operational efficiency.",
-      img: "/urban-planning/interior/Hotels.avif",
+      img: "/urban-planning/interior/Hotels.webp",
     },
     {
       title: "Healthcare & Wellness Facilities",
       desc: "We design healthcare spaces that prioritize patient comfort, staff efficiency, and healing. Our approach blends functionality with softness, balancing infection control, accessibility, and aesthetics to support medical excellence and human dignity.",
-      img: "/urban-planning/interior/Healthcare.jpg",
+      img: "/urban-planning/interior/Healthcare.webp",
     },
     {
       title: "Education & Cultural Institutions",
       desc: "We create inspiring learning and cultural environments for the next generation. Whether it’s a modern school, university building, or museum, we design interiors that foster creativity, knowledge-sharing, and community interaction.",
-      img: "/urban-planning/interior/Education.jpg",
+      img: "/urban-planning/interior/Education.webp",
     },
     {
       title: "Government & Civic Interiors",
@@ -83,7 +83,7 @@ export default function Page() {
     {
       title: "Luxury Residential Projects",
       desc: "We deliver bespoke residential interiors that blend comfort, style, and smart living. From high-end villas to branded apartments, our work reflects personal taste while maximizing functionality and spatial harmony.",
-      img: "/urban-planning/interior/Luxury Residential.avif",
+      img: "/urban-planning/interior/Luxury Residential.webp",
     },
   ];
 
@@ -105,7 +105,7 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/interior/interior.avif"}
+          src={"/urban-planning/interior/interior.webp"}
           className="w-full h-full object-cover"
           alt={""}
           width={1200}

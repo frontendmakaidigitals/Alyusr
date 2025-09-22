@@ -47,32 +47,32 @@ export default function Page() {
     {
       title: "Hazard Modeling",
       desc: "Using advanced data tools and simulations, we forecast the potential impact of climate hazards such as floods, storms, and droughts. This helps decision-makers plan effectively and reduce risks before they occur.",
-      img: "/Environment-Sustainability/climate-adaptation/hazard.png",
+      img: "/Environment-Sustainability/climate-adaptation/hazard.webp",
     },
     {
       title: "Vulnerability Assessment",
       desc: "We evaluate risks to critical assets, infrastructure, and communities by analyzing exposure and sensitivity to climate threats. The results guide tailored strategies to protect people and property.",
-      img: "/Environment-Sustainability/climate-adaptation/Assessment.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/Assessment.webp",
     },
     {
       title: "Hazard Mitigation Planning",
       desc: "Our experts design proactive strategies that minimize the impact of disasters. By reducing vulnerabilities in advance, we help safeguard investments and ensure faster recovery after events.",
-      img: "/Environment-Sustainability/climate-adaptation/Hazard Mitigatio.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/Hazard Mitigatio.webp",
     },
     {
       title: "Business Continuity Planning/Updates",
       desc: "We develop and update plans that ensure operations continue during and after disruptions. From emergency response to long-term recovery, our strategies help organizations remain resilient and agile.",
-      img: "/Environment-Sustainability/climate-adaptation/Business plan.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/Business plan.webp",
     },
     {
       title: "Climate Adaptation & Resilience Planning",
       desc: "We create long-term adaptation strategies for cities, regions, and organizations. These plans integrate sustainability, resilience, and climate projections to build stronger and more adaptive systems.",
-      img: "/Environment-Sustainability/climate-adaptation/climate-adaption.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/climate-adaption.webp",
     },
     {
       title: "Resilient Infrastructure Design/Build",
       desc: "Our engineers and planners design infrastructure capable of withstanding extreme weather and long-term climate changes. From resilient transport networks to flood-proof facilities, we build systems that protect communities and economies.",
-      img: "/Environment-Sustainability/climate-adaptation/infrastructure Design.jpeg",
+      img: "/Environment-Sustainability/climate-adaptation/infrastructure Design.webp",
     },
   ];
   const benefits = [
@@ -144,7 +144,7 @@ export default function Page() {
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
               src={
-                "/Environment-Sustainability/climate-adaptation/climate-adaptions.jpg"
+                "/Environment-Sustainability/climate-adaptation/climate-adaptions.webp"
               }
               className="w-fulll h-full object-cover"
               alt={"climate adaptation hero"}

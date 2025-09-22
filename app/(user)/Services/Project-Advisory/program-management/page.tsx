@@ -47,7 +47,7 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/project-management/hero.avif"}
+          src={"/project-advisory/project-management/hero.webp"}
           className="w-full h-full object-cover"
           alt={"Program Management Hero"}
           width={1200}
@@ -94,7 +94,7 @@ export default function Page() {
           </div>
           <div className="h-[450px] w-full bg-slate-100">
             <Image
-              src={"/project-advisory/project-management/Leadership.avif"}
+              src={"/project-advisory/project-management/Leadership.webp"}
               alt={"Outcome Driven Leadership"}
               width={500}
               height={500}
@@ -143,7 +143,7 @@ export default function Page() {
             {/* Image */}
             <div className="relative w-full h-80 lg:h-[400px] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src={"/project-advisory/project-management/graph.avif"}
+                src={"/project-advisory/project-management/graph.webp"}
                 alt="Built for Scale"
                 width={500}
                 height={500}
@@ -186,7 +186,7 @@ export default function Page() {
             {/* Image */}
             <div className="relative w-full h-80 lg:h-[400px] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/project-advisory/project-management/digital.avif"
+                src="/project-advisory/project-management/digital.webp"
                 alt="Digital Delivery"
                 className="object-cover w-full h-full"
                 width={500}

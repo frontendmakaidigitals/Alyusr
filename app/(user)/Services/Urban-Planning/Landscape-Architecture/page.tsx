@@ -20,21 +20,21 @@ export default function ConstructionManagementPage() {
       description:
         "We respect the local context, drawing from regional heritage, community values, and site-specific narratives to craft spaces that reflect the people they serve.",
       gradient: "from-[#1e3a8a] to-[#3b82f6]",
-      img: "/urban-planning/landscape/Cultural.jpg",
+      img: "/urban-planning/landscape/Cultural.webp",
     },
     {
       title: "Ecological Performance",
       description:
         "Our landscapes are designed to adapt and endure. We apply measurable sustainability metrics to ensure long-term environmental viability.",
       gradient: "from-[#065f46] to-[#10b981]",
-      img: "/urban-planning/landscape/Ecological.jpg",
+      img: "/urban-planning/landscape/Ecological.webp",
     },
     {
       title: "People-Centered Design",
       description:
         "We prioritize accessibility, safety, and inclusivity, creating spaces where people gather, move, relax, and thrive.",
       gradient: "from-[#9d174d] to-[#ec4899]",
-      img: "/urban-planning/landscape/People-Centered.jpg",
+      img: "/urban-planning/landscape/People-Centered.webp",
     },
   ];
   const services = [
@@ -90,7 +90,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/landscape/hero.jpg"}
+          src={"/urban-planning/landscape/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={"hero"}
           width={1200}
@@ -254,7 +254,7 @@ export default function ConstructionManagementPage() {
             </div>
             <div className=" bg-blue-100 text-blue-800 h-[400px] rounded-xl w-full mb-5">
               <Image
-                src={"/urban-planning/landscape/global-vision.png"}
+                src={"/urban-planning/landscape/global-vision.webp"}
                 alt={""}
                 width={800}
                 height={800}

@@ -14,22 +14,22 @@ export default function Page() {
     {
       title: "Asset and Vulnerability Assessments",
       desc: "Identify the most critical assets and pinpoint where your system is most at risk.",
-      img: "/project-advisory/risk-management/assessment.jpeg",
+      img: "/project-advisory/risk-management/assessment.webp",
     },
     {
       title: "Threat Analysis",
       desc: "Evaluate physical, environmental, digital, and operational threats to your organization.",
-      img: "/project-advisory/risk-management/Threat.jpg",
+      img: "/project-advisory/risk-management/Threat.webp",
     },
     {
       title: "Resilience Planning",
       desc: "Develop recovery strategies that ensure continuity in operations, transportation, and utilities after a crisis.",
-      img: "/project-advisory/risk-management/Resilience.png",
+      img: "/project-advisory/risk-management/Resilience.webp",
     },
     {
       title: "Cost-Benefit & Impact Modeling",
       desc: "Assign value to resilience investments and support informed capital planning.",
-      img: "/project-advisory/risk-management/Cost-Benefit.avif",
+      img: "/project-advisory/risk-management/Cost-Benefit.webp",
     },
     {
       title: "Holistic Systems Thinking",
@@ -41,32 +41,32 @@ export default function Page() {
     {
       title: "Critical Infrastructure Protection",
       desc: "Safeguard essential systems such as water, energy, transport, and healthcare from disruptions.",
-      img: "/project-advisory/risk-management/Protection.avif",
+      img: "/project-advisory/risk-management/Protection.webp",
     },
     {
       title: "Climate Change Adaptation",
       desc: "Build infrastructure that withstands rising sea levels, storms, and heatwaves.",
-      img: "/project-advisory/risk-management/Climate Change.jpg",
+      img: "/project-advisory/risk-management/Climate Change.webp",
     },
     {
       title: "Cybersecurity Resilience",
       desc: "Mitigate digital threats and secure data, systems, and operational networks.",
-      img: "/project-advisory/risk-management/Cybersecurity.jpg",
+      img: "/project-advisory/risk-management/Cybersecurity.webp",
     },
     {
       title: "Disaster Risk Reduction & Hazard Mitigation Planning",
       desc: "Identify disaster-prone areas and develop targeted plans to reduce risk.",
-      img: "/project-advisory/risk-management/Disaster Risk Rediction.jpg",
+      img: "/project-advisory/risk-management/Disaster Risk Rediction.webp",
     },
     {
       title: "Disaster Recovery Services",
       desc: "Respond swiftly post-crisis with damage assessments, engineering support, and recovery strategies.",
-      img: "/project-advisory/risk-management/Disaster Risk.jpg",
+      img: "/project-advisory/risk-management/Disaster Risk.webp",
     },
     {
       title: "Physical Security & Hardening",
       desc: "Strengthen buildings and facilities against physical threats, criminal activity, and vandalism.",
-      img: "/project-advisory/risk-management/Security.png",
+      img: "/project-advisory/risk-management/Security.webp",
     },
     {
       title: "Emergency Preparedness Training",
@@ -249,7 +249,7 @@ export default function Page() {
           {/* Image */}
           <div className="relative bg-orange-100 w-full h-[430px] rounded-2xl overflow-hidden shadow-md">
             <Image
-              src="/project-advisory/risk-management/Disaster Risk.jpg"
+              src="/project-advisory/risk-management/Disaster Risk.webp"
               alt="Post-Disaster Response"
               fill
               className="object-cover"

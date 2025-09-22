@@ -36,32 +36,32 @@ export default function ConstructionManagementPage() {
     {
       title: "Strategic Master Planning",
       desc: "Integrated land use plans that define the future shape, purpose, and scale of development.",
-      img: "/urban-planning/community-planning/Strategic Master.jpeg",
+      img: "/urban-planning/community-planning/Strategic Master.webp",
     },
     {
       title: "Community-Centered Design",
       desc: "Plans that prioritize walkability, accessibility, cultural integration, and social well-being.",
-      img: "/urban-planning/community-planning/Community-Centered.jpeg",
+      img: "/urban-planning/community-planning/Community-Centered.webp",
     },
     {
       title: "Regulatory Planning & Zoning Support",
       desc: "Analysis and recommendations to align your development with local laws, environmental constraints, and growth policies.",
-      img: "/urban-planning/community-planning/Regulatory Planning.jpeg",
+      img: "/urban-planning/community-planning/Regulatory Planning.webp",
     },
     {
       title: "Green Infrastructure & Public Realm",
       desc: "Nature-based solutions and inclusive spaces that enhance the quality of life and urban resilience.",
-      img: "/urban-planning/community-planning/Green Infrastructure.jpeg",
+      img: "/urban-planning/community-planning/Green Infrastructure.webp",
     },
     {
       title: "Mobility & Connectivity Frameworks",
       desc: "Planning for inclusive transportation options, roads, public transit, pedestrian, and cycling networks.",
-      img: "/urban-planning/community-planning/Mobility.jpeg",
+      img: "/urban-planning/community-planning/Mobility.webp",
     },
     {
       title: "Economic & Social Sustainability",
       desc: "Creating communities that are economically viable and socially balanced across demographics.",
-      img: "/urban-planning/community-planning/Social Sustainability.jpeg",
+      img: "/urban-planning/community-planning/Social Sustainability.webp",
     },
   ];
 
@@ -97,7 +97,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/community-planning/hero.jpg"}
+          src={"/urban-planning/community-planning/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1100}
@@ -254,7 +254,7 @@ export default function ConstructionManagementPage() {
             >
               <Image
                 src={
-                  "/urban-planning/community-planning/Resilient Communities.jpg"
+                  "/urban-planning/community-planning/Resilient Communities.webp"
                 }
                 alt="Sustainable Community"
                 width={900}
@@ -274,7 +274,7 @@ export default function ConstructionManagementPage() {
               viewport={{ once: true }}
             >
               <Image
-                src={"/urban-planning/community-planning/private-sector.avif"}
+                src={"/urban-planning/community-planning/private-sector.webp"}
                 alt="Urban Development Experience"
                 width={1200}
                 height={900}

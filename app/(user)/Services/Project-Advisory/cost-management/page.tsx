@@ -16,25 +16,25 @@ export default function Page() {
       title: "Cost Planning & Budgeting",
       description:
         "Early-stage cost forecasts to guide design decisions and set realistic budgets.",
-      img: "/project-advisory/cost-mangement/cost-management.jpg",
+      img: "/project-advisory/cost-mangement/cost-management.webp",
     },
     {
       title: "Quantity Surveying",
       description:
         "Detailed measurement and cost control services throughout the project.",
-      img: "/project-advisory/cost-mangement/quality.jpg",
+      img: "/project-advisory/cost-mangement/quality.webp",
     },
     {
       title: "Feasibility & Financial Estimations",
       description:
         "Evaluate project viability, investment risks, and funding strategies.",
-      img: "/project-advisory/cost-mangement/Feasibility.jpg",
+      img: "/project-advisory/cost-mangement/Feasibility.webp",
     },
     {
       title: "Procurement & Tender Support",
       description:
         "Market-driven strategies to get the best value from contractors and suppliers.",
-      img: "/project-advisory/cost-mangement/support.jpeg",
+      img: "/project-advisory/cost-mangement/support.webp",
     },
     {
       title: "Contract Management",
@@ -46,7 +46,7 @@ export default function Page() {
       title: "Final Account & Close-Out",
       description:
         "Ensure a clean financial finish with accurate final accounts and cost reports.",
-      img: "/project-advisory/cost-mangement/close-out.png",
+      img: "/project-advisory/cost-mangement/close-out.webp",
     },
   ];
   const points = [
@@ -180,7 +180,7 @@ export default function Page() {
           {/* Left Image */}
           <div className="h-full w-full">
             <img
-              src="/project-advisory/cost-mangement/our-approach.jpg" // 🔹 Replace with your actual image
+              src="/project-advisory/cost-mangement/our-approach.webp" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
             />

@@ -21,27 +21,27 @@ export default function ConstructionManagementPage() {
     {
       title: "Urban & Regional Master Planning",
       desc: "We craft development strategies for cities, districts, and regions, balancing growth with sustainability and quality of life.",
-      img: "/urban-planning/planning-and-advisory/Master Planning.jpg",
+      img: "/urban-planning/planning-and-advisory/Master Planning.webp",
     },
     {
       title: "Site Analysis & Land Use Planning",
       desc: "Our team conducts detailed land studies, zoning analysis, and site suitability evaluations for optimized land development.",
-      img: "/urban-planning/planning-and-advisory/Land Planning.jpg",
+      img: "/urban-planning/planning-and-advisory/Land Planning.webp",
     },
     {
       title: "Strategic & Economic Planning",
       desc: "We assess project viability, investment opportunities, and economic impact to guide both public and private sector decisions.",
-      img: "/urban-planning/planning-and-advisory/Strategic.jpeg",
+      img: "/urban-planning/planning-and-advisory/Strategic.webp",
     },
     {
       title: "Sustainability & Resilience Advisory",
       desc: "Our experts integrate climate adaptation, environmental stewardship, and green building practices into all planning phases.",
-      img: "/urban-planning/planning-and-advisory/saudi.jpg",
+      img: "/urban-planning/planning-and-advisory/saudi.webp",
     },
     {
       title: "Policy & Regulatory Support",
       desc: "We help clients align their projects with municipal regulations, permitting procedures, and national strategic agendas.",
-      img: "/urban-planning/planning-and-advisory/Policy.avif",
+      img: "/urban-planning/planning-and-advisory/Policy.webp",
     },
   ];
   const reasons = [
@@ -103,7 +103,7 @@ This process leads to stronger outcomes, better coordination, and a smoother pat
       desc: `We recognize that great planning is not done in isolation; it is shaped by the people it impacts. At ALYUSR, we are committed to inclusive planning that actively involves the voices of communities and stakeholders.
 Through public consultation sessions, surveys, community workshops, and focus groups, we gather valuable insights from residents, local businesses, government bodies, and interest groups. These inputs help us understand the real needs, challenges, and aspirations of the people we serve. 
 Our approach ensures that strategies are not just designed from the top down, but are informed by on-the-ground realities and lived experiences. This two-way dialogue builds trust, transparency, and stronger community ownership of development outcomes. Ultimately, it leads to more sustainable and widely supported solutions that enhance quality of life and create places people are proud to call home.`,
-      img: "/urban-planning/planning-and-advisory/community.jpg",
+      img: "/urban-planning/planning-and-advisory/community.webp",
     },
   ];
 

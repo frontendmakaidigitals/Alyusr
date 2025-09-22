@@ -68,22 +68,22 @@ export default function ConstructionManagementPage() {
     {
       title: "Integrated Expertise",
       desc: "We bring together architects, engineers, urban planners, and environmental consultants to deliver complete, cross-functional solutions.",
-      img: "/urban-planning/urban-design/Integrated.jpeg",
+      img: "/urban-planning/urban-design/Integrated.webp",
     },
     {
       title: "Culturally Relevant",
       desc: "Our designs respect Saudi heritage while embracing innovation and global urban trends.",
-      img: "/urban-planning/urban-design/Culturally.jpeg",
+      img: "/urban-planning/urban-design/Culturally.webp",
     },
     {
       title: "Sustainability-Driven",
       desc: "We plan for long-term social, economic, and environmental health.",
-      img: "/urban-planning/urban-design/Sustainability-Driven.jpeg",
+      img: "/urban-planning/urban-design/Sustainability-Driven.webp",
     },
     {
       title: "Community-Focused",
       desc: "Every design centers on the needs of the people who live and work there.",
-      img: "/urban-planning/urban-design/Community-Focused.jpeg",
+      img: "/urban-planning/urban-design/Community-Focused.webp",
     },
   ];
 
@@ -96,7 +96,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/urban-design/hero.jpg"}
+          src={"/urban-planning/urban-design/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}
@@ -130,7 +130,7 @@ export default function ConstructionManagementPage() {
             <Image
               width={500}
               height={500}
-              src={"/urban-planning/urban-design/about.avif"}
+              src={"/urban-planning/urban-design/about.webp"}
               className="w-full h-full object-cover"
               alt={""}
             />

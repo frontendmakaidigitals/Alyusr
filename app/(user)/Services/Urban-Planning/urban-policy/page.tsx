@@ -9,27 +9,27 @@ export default function ConstructionManagementPage() {
     {
       title: "Site Assessments & Investigations",
       desc: "Identify pollutants and understand environmental risks.",
-      img: "/urban-planning/urban-policy/Site-Investigation.jpg",
+      img: "/urban-planning/urban-policy/Site-Investigation.webp",
     },
     {
       title: "Remediation & Cleanup Design",
       desc: "Plan safe, cost-effective, and sustainable cleanup strategies.",
-      img: "/urban-planning/urban-policy/cleanup-design.jpg",
+      img: "/urban-planning/urban-policy/cleanup-design.webp",
     },
     {
       title: "Regulatory Guidance",
       desc: "Navigate complex environmental laws and secure approvals.",
-      img: "/urban-planning/urban-policy/Regulatory.jpg",
+      img: "/urban-planning/urban-policy/Regulatory.webp",
     },
     {
       title: "Restoration & Reuse Planning",
       desc: "Integrate site cleanup with future development goals.",
-      img: "/urban-planning/urban-policy/Reuse Planning.jpeg",
+      img: "/urban-planning/urban-policy/Reuse Planning.webp",
     },
     {
       title: "Community Engagement",
       desc: "Build trust through transparent communication and stakeholder involvement.",
-      img: "/urban-planning/urban-policy/Community Engagement.jpg",
+      img: "/urban-planning/urban-policy/Community Engagement.webp",
     },
   ];
   const points = [
@@ -68,7 +68,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/urban-policy/hero.jpg"}
+          src={"/urban-planning/urban-policy/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}
@@ -185,7 +185,7 @@ export default function ConstructionManagementPage() {
             className="relative w-full h-[430px] bg-slate-200 rounded-xl overflow-hidden shadow-md"
           >
             <Image
-              src={"/urban-planning/urban-policy/about.png"} // Replace with your image path
+              src={"/urban-planning/urban-policy/about.webp"} // Replace with your image path
               alt="Regenerative Redevelopment"
               fill
               className="object-cover"

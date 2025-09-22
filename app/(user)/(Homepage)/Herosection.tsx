@@ -40,27 +40,27 @@ const Herosection = () => {
     {
       title: "TRUSTED GLOBAL INFRASTRUCTURE LEADER",
       desc: "Delivering transformative engineering solutions that power the future of cities, industries, and communities.",
-      img: "/global.jpg",
+      img: "/global.webp",
     },
     {
       title: "ENGINEERING THE FUTURE OF GLOBAL MEGA PROJECTS",
       desc: "Delivering world-class infrastructure, smart cities, and sustainable solutions: trusted by governments, developers, and industries across regions.",
-      img: "/mega.jpg",
+      img: "/mega.webp",
     },
     {
       title: "DRIVEN BY INDUSTRY-LED EXPERTISE",
       desc: "Powered by certified professionals, advanced tools, and proven methodologies to deliver complex projects with confidence and precision.",
-      img: "/experts.jpg",
+      img: "/experts.webp",
     },
     {
       title: "TRUSTED GLOBAL INFRASTRUCTURE LEADER",
       desc: "Delivering transformative engineering solutions that power the future of cities, industries, and communities.",
-      img: "/global.jpg",
+      img: "/global.webp",
     },
     {
       title: "ENGINEERING THE FUTURE OF GLOBAL MEGA PROJECTS",
       desc: "Delivering world-class infrastructure, smart cities, and sustainable solutions: trusted by governments, developers, and industries across regions.",
-      img: "/mega.jpg",
+      img: "/mega.webp",
     },
   ];
   return (

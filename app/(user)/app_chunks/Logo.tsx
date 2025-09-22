@@ -8,7 +8,7 @@ type LogoProps = {
   height?: number;
 };
 
-const Logo = ({ img = "/Logo2.png", width = 160, height = 20 }: LogoProps) => {
+const Logo = ({ img = "/Logo2.webp", width = 160, height = 20 }: LogoProps) => {
   return (
     <Link href={"/"}>
       <Image src={img} width={width} height={height} alt="Logo" />

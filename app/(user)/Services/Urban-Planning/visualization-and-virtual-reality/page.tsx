@@ -15,27 +15,27 @@ export default function ConstructionManagementPage() {
     {
       title: "3D Visualization & Rendering",
       desc: "High-quality, photorealistic images that communicate design intent with precision, perfect for marketing, stakeholder approvals, and public presentations.",
-      img: "/urban-planning/visualization/Visualization.avif",
+      img: "/urban-planning/visualization/Visualization.webp",
     },
     {
       title: "Virtual Reality (VR) Experiences",
       desc: "Immersive, interactive environments that allow users to virtually 'walk through' a space, providing an unparalleled understanding of scale, flow, and spatial relationships.",
-      img: "/urban-planning/visualization/Virtual Reality.jpg",
+      img: "/urban-planning/visualization/Virtual Reality.webp",
     },
     {
       title: "Augmented Reality (AR) Integration",
       desc: "Overlay digital models on physical environments for real-time design reviews, public engagement, and field-based decision-making.",
-      img: "/urban-planning/visualization/augumented.jpg",
+      img: "/urban-planning/visualization/augumented.webp",
     },
     {
       title: "Fly-Through Animations & Walkthroughs",
       desc: "Dynamic video sequences that simulate movement through a space, enhancing storytelling and enabling better visualization of architectural features and infrastructure.",
-      img: "/urban-planning/visualization/animations.jpg",
+      img: "/urban-planning/visualization/animations.webp",
     },
     {
       title: "Photomontages & Contextual Imagery",
       desc: "Blending proposed developments into real-world photographs to evaluate visual impact and ensure contextual alignment with surrounding environments.",
-      img: "/urban-planning/visualization/Photomontages.avif",
+      img: "/urban-planning/visualization/Photomontages.webp",
     },
   ];
   const points = [
@@ -81,7 +81,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/visualization/hero.jpg"}
+          src={"/urban-planning/visualization/hero.webp"}
           className="w-full h-full object-cover"
           alt={"hero"}
           width={1200}
@@ -130,7 +130,7 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="w-full h-[400px] bg-red-300">
             <Image
-              src={"/urban-planning/visualization/about1.jpg"}
+              src={"/urban-planning/visualization/about1.webp"}
               alt={""}
               width={500}
               height={500}
@@ -214,7 +214,7 @@ export default function ConstructionManagementPage() {
             className="relative w-full h-[230px] lg:h-[420px]  rounded-lg overflow-hidden shadow-lg"
           >
             <Image
-              src={"/urban-planning/visualization/about2.jpg"}
+              src={"/urban-planning/visualization/about2.webp"}
               alt="Visualization Communication"
               fill
               className="object-cover w-full h-full"

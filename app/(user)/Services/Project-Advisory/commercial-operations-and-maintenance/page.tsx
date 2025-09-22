@@ -7,7 +7,7 @@ export default function Page() {
     {
       title: "Facility Management",
       desc: "Comprehensive support to maintain daily operations and enhance long-term facility value.",
-      img: "/project-advisory/commercial-operations/Facility Management.avif",
+      img: "/project-advisory/commercial-operations/Facility Management.webp",
       items: [
         "Routine & Preventive Maintenance",
         "Facility Engineering & Design Support",
@@ -19,7 +19,7 @@ export default function Page() {
     {
       title: "Hard Services",
       desc: "Hands-on maintenance and repairs handled by skilled, certified technicians.",
-      img: "/project-advisory/commercial-operations/hard-services.avif",
+      img: "/project-advisory/commercial-operations/hard-services.webp",
       items: [
         "HVAC, Electrical & Mechanical Systems",
         "Robotics, Cranes & Hoists Maintenance",
@@ -31,7 +31,7 @@ export default function Page() {
     {
       title: "Soft Services",
       desc: "Integrated non-technical support functions that improve workplace experience.",
-      img: "/project-advisory/commercial-operations/pest-control.avif",
+      img: "/project-advisory/commercial-operations/pest-control.webp",
       items: [
         "Janitorial & Cleaning",
         "Landscaping & Pest Control",
@@ -43,7 +43,7 @@ export default function Page() {
     {
       title: "Production Maintenance",
       desc: "Optimizing factory output by ensuring reliable operation of production assets.",
-      img: "/project-advisory/commercial-operations/product-maintainence.avif",
+      img: "/project-advisory/commercial-operations/product-maintainence.webp",
       items: [
         "Full-Line & Plant Maintenance",
         "Reactive, Preventive & Predictive Maintenance (PdM)",
@@ -54,7 +54,7 @@ export default function Page() {
     {
       title: "Workplace & Space Solutions",
       desc: "Enhancing functionality, comfort, and efficiency of office environments.",
-      img: "/project-advisory/commercial-operations/Space Solutions.avif",
+      img: "/project-advisory/commercial-operations/Space Solutions.webp",
       items: [
         "Space Planning & Capital Improvements",
         "Project & Furniture Management",
@@ -64,7 +64,7 @@ export default function Page() {
     {
       title: "Logistics & Supply Chain Services",
       desc: "Complete logistical support to streamline operations and reduce downtime.",
-      img: "/project-advisory/commercial-operations/Logistics.avif",
+      img: "/project-advisory/commercial-operations/Logistics.webp",
       items: [
         "Global Logistics & Warehousing",
         "Customs Management & Material Preservation",
@@ -76,7 +76,7 @@ export default function Page() {
     {
       title: "Field Support",
       desc: "Deployment of skilled personnel across disciplines to meet urgent or complex needs.",
-      img: "/project-advisory/commercial-operations/Field Support.avif",
+      img: "/project-advisory/commercial-operations/Field Support.webp",
       items: [
         "Construction & Plant Operations",
         "Process Safety Management & Quality Control",
@@ -87,7 +87,7 @@ export default function Page() {
     {
       title: "Integrated Management Support",
       desc: "Ensuring seamless, efficient operations through centralized process oversight.",
-      img: "/project-advisory/commercial-operations/Support.avif",
+      img: "/project-advisory/commercial-operations/Support.webp",
       items: [
         "Finance & Accounting Integration",
         "Risk & SH&E (Safety, Health & Environment) Programs",
@@ -133,7 +133,7 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/commercial-operations/hero.avif"}
+          src={"/project-advisory/commercial-operations/hero.webp"}
           className="w-full h-full object-cover object-top"
           alt={""}
           width={1200}

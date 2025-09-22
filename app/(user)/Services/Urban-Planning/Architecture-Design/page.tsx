@@ -82,7 +82,7 @@ export default function Page() {
     },
     {
       title: "Sustainable and Resilient by Design",
-      image: "/urban-planning/architecture/Sustainable design.jpg",
+      image: "/urban-planning/architecture/Sustainable design.webp",
       description:
         "In line with Vision 2030 and global environmental goals, Al Yusr’s architecture services are focused on minimizing environmental impact and maximizing building resilience. We design for:",
       bullets: [
@@ -95,7 +95,7 @@ export default function Page() {
     },
     {
       title: "Digitally Driven Architecture",
-      image: "/urban-planning/architecture/Digitally.jpg",
+      image: "/urban-planning/architecture/Digitally.webp",
       description:
         "Our architects work with industry-leading Building Information Modeling (BIM) platforms, integrated with performance modeling tools that support carbon analysis, daylight simulations, facade design, and construction sequencing. This allows us to deliver high-performance buildings with optimized resources and reduced rework.",
       bullets: [
@@ -125,7 +125,7 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/architecture/hero.avif"}
+          src={"/urban-planning/architecture/hero.webp"}
           className="w-full h-full object-cover "
           alt={""}
           width={1200}

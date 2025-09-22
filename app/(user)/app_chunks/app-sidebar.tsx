@@ -35,12 +35,12 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar >
+    <Sidebar>
       <SidebarTrigger />
       <SidebarContent className="py-5">
         <SidebarGroup>
           <SidebarGroupLabel>
-            <Logo img={"/logo-black.png"} />
+            <Logo img={"/logo-black.webp"} />
           </SidebarGroupLabel>
           <SidebarGroupContent className=" mt-20">
             <SidebarMenu className="space-y-2">

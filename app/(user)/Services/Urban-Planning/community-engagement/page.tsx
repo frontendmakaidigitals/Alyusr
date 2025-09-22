@@ -195,7 +195,7 @@ export default function ConstructionManagementPage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
           <div className="relative bg-green-400 w-full h-[400px] rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/images/engagement.jpg" // replace with your image path
+              src="/images/engagement.webp" // replace with your image path
               alt="Innovating Engagement"
               fill
               className="object-cover"

@@ -23,14 +23,14 @@ export default function ConstructionManagementPage() {
         "Oscillator/Rotator Shaft Systems",
         "Offshore and In-Water Foundation Systems",
       ],
-      img: "/Engineering-Infrastructure/structural/deep-foundation.avif",
+      img: "/Engineering-Infrastructure/structural/deep-foundation.webp",
     },
     {
       title: "Micropile Systems",
       description:
         "Specialized solutions for restricted access areas, seismic zones, and retrofitting of existing structures. Ideal for low-clearance, low-vibration environments.",
       items: [],
-      img: "/Engineering-Infrastructure/structural/Micropiles.png",
+      img: "/Engineering-Infrastructure/structural/Micropiles.webp",
     },
     {
       title: "Slope Stabilization & Earth Retention",
@@ -41,7 +41,7 @@ export default function ConstructionManagementPage() {
         "Soil Nailing & Anchoring Systems",
         "Temporary & Permanent Shoring Designs",
       ],
-      img: "/Engineering-Infrastructure/structural/Earth Retention.jpg",
+      img: "/Engineering-Infrastructure/structural/Earth Retention.webp",
     },
     {
       title: "Ground Improvement Techniques",
@@ -53,7 +53,7 @@ export default function ConstructionManagementPage() {
         "Preloading and Wick Drains",
         "Chemical Stabilization",
       ],
-      img: "/Engineering-Infrastructure/structural/Ground Improvement.jpg",
+      img: "/Engineering-Infrastructure/structural/Ground Improvement.webp",
     },
     {
       title: "Reverse Circulation Drilling (RCD)",
@@ -84,23 +84,23 @@ export default function ConstructionManagementPage() {
   const industries = [
     {
       title: "High-Rise and Super-Tall Buildings",
-      image: "/Engineering-Infrastructure/structural/tall-building.avif",
+      image: "/Engineering-Infrastructure/structural/tall-building.webp",
     },
     {
       title: "Bridges and Transportation Infrastructure",
-      image: "/Engineering-Infrastructure/structural/bridges.avif",
+      image: "/Engineering-Infrastructure/structural/bridges.webp",
     },
     {
       title: "Marine and Offshore Platforms",
-      image: "/Engineering-Infrastructure/structural/marine.jpg",
+      image: "/Engineering-Infrastructure/structural/marine.webp",
     },
     {
       title: "Industrial Plants and Energy Facilities",
-      image: "/Engineering-Infrastructure/structural/Industrial Plants.avif",
+      image: "/Engineering-Infrastructure/structural/Industrial Plants.webp",
     },
     {
       title: "Slope-Adjacent Residential and Commercial Developments",
-      image: "/Engineering-Infrastructure/structural/Commercial.jpg",
+      image: "/Engineering-Infrastructure/structural/Commercial.webp",
     },
   ];
   const reasons = [
@@ -279,7 +279,7 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="h-[450px] bg-slate-100 w-full">
             <img
-              src={"/Engineering-Infrastructure/structural/why-choose.avif"}
+              src={"/Engineering-Infrastructure/structural/why-choose.webp"}
               alt={""}
               className="w-full h-full object-cover"
             />

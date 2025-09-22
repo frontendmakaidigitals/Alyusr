@@ -68,12 +68,12 @@ export default function Page() {
     {
       title: "End-to-End Capability",
       desc: "From technical assessments to strategy and implementation, our integrated team covers every stage of asset advisory.",
-      img: "/project-advisory/asset-advisory/end-to-end.jpg",
+      img: "/project-advisory/asset-advisory/end-to-end.webp",
     },
     {
       title: "ISO-Certified Excellence",
       desc: "Proven quality, safety, and data integrity across all services, supported by globally recognized certifications.",
-      img: "/project-advisory/asset-advisory/iso-certified.jpg",
+      img: "/project-advisory/asset-advisory/iso-certified.webp",
     },
     {
       title: "Localized Insights, Global Standards",
@@ -88,7 +88,7 @@ export default function Page() {
     {
       title: "Digital-First Approach",
       desc: "Empowering clients with intelligent dashboards, digital twins, and modern tools for smarter asset management.",
-      img: "/project-advisory/asset-advisory/digital-first.jpg",
+      img: "/project-advisory/asset-advisory/digital-first.webp",
     },
   ];
   return (
@@ -100,7 +100,7 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/asset-advisory/hero.jpg"}
+          src={"/project-advisory/asset-advisory/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}
@@ -127,7 +127,7 @@ export default function Page() {
           {/* Left Image */}
           <div className="h-[400px] w-full">
             <img
-              src="/project-advisory/asset-advisory/role.jpg" // 🔹 Replace with your actual image
+              src="/project-advisory/asset-advisory/role.webp" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
             />

@@ -6,18 +6,18 @@ import BgLayer from "../app_chunks/BgLayer";
 const Marquee = () => {
   const partners = [
     { title: "Agriserv", img: "agriserv logo.webp" },
-    { title: "AHC", img: "ahc logo.png" },
-    { title: "Gasco", img: "gasco logo.jpg" },
-    { title: "Ladun", img: "ladun logo.png" },
-    { title: "Land Sterling", img: "land sterling logo.jpg" },
-    { title: "Memar", img: "memar logo.jpg" },
-    { title: "Miemar", img: "Miemar logo.jpg" },
-    { title: "Naber Real Estate", img: "naber real estate logo.jpg" },
-    { title: "Nadec", img: "nadec logo.png" },
-    { title: "Othaim", img: "othaim logo.jpg" },
-    { title: "Rabiah & Nassar", img: "rabiah & nassar logo.png" },
-    { title: "Rikaz", img: "rikaz logo.jpg" },
-    { title: "Saline Water", img: "saline water logo.png" },
+    { title: "AHC", img: "ahc logo.webp" },
+    { title: "Gasco", img: "gasco logo.webp" },
+    { title: "Ladun", img: "ladun logo.webp" },
+    { title: "Land Sterling", img: "land sterling logo.webp" },
+    { title: "Memar", img: "memar logo.webp" },
+    { title: "Miemar", img: "Miemar logo.webp" },
+    { title: "Naber Real Estate", img: "naber real estate logo.webp" },
+    { title: "Nadec", img: "nadec logo.webp" },
+    { title: "Othaim", img: "othaim logo.webp" },
+    { title: "Rabiah & Nassar", img: "rabiah & nassar logo.webp" },
+    { title: "Rikaz", img: "rikaz logo.webp" },
+    { title: "Saline Water", img: "saline water logo.webp" },
   ];
 
   return (
@@ -65,7 +65,10 @@ const Marquee = () => {
             Vision 2030. properties or speak to our experienced consultants
             today.
           </p>
-          <Link href={'/Contact'} className="mt-5 px-6 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-all">
+          <Link
+            href={"/Contact"}
+            className="mt-5 px-6 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-all"
+          >
             VIEW NOW
           </Link>
         </div>

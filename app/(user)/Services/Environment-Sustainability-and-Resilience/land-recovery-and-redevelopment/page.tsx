@@ -31,12 +31,12 @@ export default function Page() {
     {
       title: "Baseline Field Studies",
       desc: "We conduct biological and ecological surveys to establish a strong foundation for environmental planning.",
-      img: "/Environment-Sustainability/land-recovery/Baseline Field Studies.jpg", // 🌿 nature survey
+      img: "/Environment-Sustainability/land-recovery/Baseline Field Studies.webp", // 🌿 nature survey
     },
     {
       title: "Cultural & Heritage Resources",
       desc: "Comprehensive assessments ensure that cultural heritage and Indigenous communities are respected and preserved.",
-      img: "/Environment-Sustainability/land-recovery/Cultural & Heritage Resources.jpg", // 🏛️ heritage site
+      img: "/Environment-Sustainability/land-recovery/Cultural & Heritage Resources.webp", // 🏛️ heritage site
     },
     {
       title: "Digital Analyses & Data Conveyance",
@@ -46,32 +46,32 @@ export default function Page() {
     {
       title: "Ecological Design, Implementation & Restoration",
       desc: "We restore habitats, design sustainable landscapes, and rehabilitate ecosystems for resilience.",
-      img: "/Environment-Sustainability/land-recovery/Ecological Design.jpg", // 🌱 eco restoration
+      img: "/Environment-Sustainability/land-recovery/Ecological Design.webp", // 🌱 eco restoration
     },
     {
       title: "Environmental & Social Impact Assessments",
       desc: "Legally compliant impact assessments balancing regulatory requirements with business objectives.",
-      img: "/Environment-Sustainability/land-recovery/Environmental & Social.jpeg", // 📊 impact analysis
+      img: "/Environment-Sustainability/land-recovery/Environmental & Social.webp", // 📊 impact analysis
     },
     {
       title: "Environmental Planning, Mitigation & Monitoring",
       desc: "Strategies to minimize environmental impacts during construction and operation with ongoing monitoring.",
-      img: "/Environment-Sustainability/land-recovery/Environmental-Planning.jpg", // 🌍 planning
+      img: "/Environment-Sustainability/land-recovery/Environmental-Planning.webp", // 🌍 planning
     },
     {
       title: "Environmental Policy Development",
       desc: "Crafting policies that align with regulations and global standards, supporting compliance & sustainability.",
-      img: "/Environment-Sustainability/land-recovery/Environmental Policy.jpg", // 📑 policy making
+      img: "/Environment-Sustainability/land-recovery/Environmental Policy.webp", // 📑 policy making
     },
     {
       title: "Regulatory Permitting & Negotiation",
       desc: "We work with regulatory bodies to secure permits, negotiate requirements, and resolve challenges early.",
-      img: "/Environment-Sustainability/land-recovery/Regulatory Permitting.jpg", // 📝 agreement
+      img: "/Environment-Sustainability/land-recovery/Regulatory Permitting.webp", // 📝 agreement
     },
     {
       title: "Siting, Feasibility Studies & Program Management",
       desc: "We assess feasibility, identify optimal locations, and provide management support for approvals.",
-      img: "/Environment-Sustainability/land-recovery/Siting, Feasibility Studies.jpg", // 🏗️ site planning
+      img: "/Environment-Sustainability/land-recovery/Siting, Feasibility Studies.webp", // 🏗️ site planning
     },
     {
       title: "Stakeholder & Public Engagement",
@@ -81,12 +81,12 @@ export default function Page() {
     {
       title: "Fate & Effects Transport / Dispersion Modeling",
       desc: "Using advanced modeling, we predict pollutant movement to evaluate risks and guide mitigation.",
-      img: "/Environment-Sustainability/land-recovery/Fate & Effects.jpg", // 🌊 modeling
+      img: "/Environment-Sustainability/land-recovery/Fate & Effects.webp", // 🌊 modeling
     },
     {
       title: "Visual & Noise Impact Assessments",
       desc: "Analyzing visual and noise impacts, we provide solutions to reduce community concerns and improve acceptance.",
-      img: "/Environment-Sustainability/land-recovery/Noise Impact Assessments.jpg", // 🔊 noise impact
+      img: "/Environment-Sustainability/land-recovery/Noise Impact Assessments.webp", // 🔊 noise impact
     },
     {
       title: "Resilience & Climate Change",
@@ -143,7 +143,11 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={"/Environment-Sustainability/land-recovery/hero.jpg"} className="w-full h-full object-cover" alt={"land recovery"} />
+            <img
+              src={"/Environment-Sustainability/land-recovery/hero.webp"}
+              className="w-full h-full object-cover"
+              alt={"land recovery"}
+            />
           </div>
         </div>
       </section>

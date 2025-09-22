@@ -30,12 +30,12 @@ export default function Page() {
     {
       title: "Baseline Field Studies",
       desc: "We conduct biological and ecological surveys to establish a strong foundation for environmental planning. These studies identify sensitive habitats, species, and resources that must be protected during project development.",
-      img: "/Environment-Sustainability/Environmental Assessment/Baseline Field Studies.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Baseline Field Studies.webp",
     },
     {
       title: "Cultural & Heritage Resources",
       desc: "Our experts in archaeology, anthropology, and historic architecture provide comprehensive assessments, ensuring that cultural heritage and Indigenous communities are respected and preserved.",
-      img: "/Environment-Sustainability/Environmental Assessment/Cultural & Heritage Resources.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Cultural & Heritage Resources.webp",
     },
     {
       title: "Digital Analyses & Data Conveyance",
@@ -45,32 +45,32 @@ export default function Page() {
     {
       title: "Ecological Design, Implementation & Restoration",
       desc: "We integrate science-based solutions to restore natural habitats, design sustainable landscapes, and rehabilitate ecosystems for long-term resilience.",
-      img: "/Environment-Sustainability/Environmental Assessment/Ecological Design.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Ecological Design.webp",
     },
     {
       title: "Environmental & Social Impact Assessments",
       desc: "Our specialists prepare and deliver legally compliant impact assessments, balancing regulatory requirements with business objectives to keep projects on track.",
-      img: "/Environment-Sustainability/Environmental Assessment/Environmental & Social.jpeg",
+      img: "/Environment-Sustainability/Environmental Assessment/Environmental & Social.webp",
     },
     {
       title: "Environmental Planning, Mitigation & Monitoring",
       desc: "We design strategies to minimize environmental impacts during construction and operation, followed by ongoing monitoring to ensure compliance and sustainability.",
-      img: "/Environment-Sustainability/Environmental Assessment/Environmental-Planning.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Environmental-Planning.webp",
     },
     {
       title: "Environmental Policy Development",
       desc: "Our team helps clients craft policies and strategies that align with local regulations and global environmental standards, supporting both compliance and sustainability goals.",
-      img: "/Environment-Sustainability/Environmental Assessment/Environmental Policy.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Environmental Policy.webp",
     },
     {
       title: "Regulatory Permitting & Negotiation",
       desc: "We work closely with regulatory bodies to secure permits, negotiate requirements, and resolve potential challenges early in the project lifecycle.",
-      img: "/Environment-Sustainability/Environmental Assessment/Regulatory Permitting.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Regulatory Permitting.webp",
     },
     {
       title: "Siting, Feasibility Studies & Program Management",
       desc: "We assess project feasibility, identify optimal locations, and provide end-to-end management support to streamline permitting and approvals.",
-      img: "/Environment-Sustainability/Environmental Assessment/Siting, Feasibility Studies.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Siting, Feasibility Studies.webp",
     },
     {
       title: "Stakeholder & Public Engagement",
@@ -80,12 +80,12 @@ export default function Page() {
     {
       title: "Fate & Effects Transport / Dispersion Modeling",
       desc: "Using advanced modeling, we predict the movement of air, water, and soil pollutants to evaluate risks and guide mitigation measures.",
-      img: "/Environment-Sustainability/Environmental Assessment/Fate & Effects.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Fate & Effects.webp",
     },
     {
       title: "Visual & Noise Impact Assessments",
       desc: "We analyze how projects affect landscapes, views, and noise levels, providing solutions to reduce community impacts and improve acceptance.",
-      img: "/Environment-Sustainability/Environmental Assessment/Noise Impact Assessments.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Noise Impact Assessments.webp",
     },
     {
       title: "Resilience & Climate Change",
@@ -148,7 +148,7 @@ export default function Page() {
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
               src={
-                "/Environment-Sustainability/Environmental Assessment/hero.png"
+                "/Environment-Sustainability/Environmental Assessment/hero.webp"
               }
               className="w-full h-full object-cover"
               alt={"environmental assesment hero"}
@@ -216,7 +216,10 @@ export default function Page() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {reasons.map((item, idx) => (
-              <div key={idx} className="flex bg-slate-100 p-3 rounded-xl items-start space-x-4">
+              <div
+                key={idx}
+                className="flex bg-slate-100 p-3 rounded-xl items-start space-x-4"
+              >
                 <span>
                   <BadgeCheck className="w-7 h-7 fill-green-500 text-white flex-shrink-0 mt-1" />
                 </span>

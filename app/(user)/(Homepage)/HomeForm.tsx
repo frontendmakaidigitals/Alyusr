@@ -50,7 +50,7 @@ const HomeForm = () => {
           <div className="w-full h-[350px] lg:h-[630px]">
             <img
               className="w-full h-full object-cover"
-              src={"/contactImage.png"}
+              src={"/contactImage.webp"}
               alt={""}
             />
           </div>

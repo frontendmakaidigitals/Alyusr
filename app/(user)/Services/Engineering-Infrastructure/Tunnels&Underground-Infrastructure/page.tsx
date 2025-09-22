@@ -56,7 +56,7 @@ export default function ConstructionManagementPage() {
         "Project scheduling & risk management",
         "Program and construction oversight",
       ],
-      img: "/Engineering-Infrastructure/underground/Planning.avif",
+      img: "/Engineering-Infrastructure/underground/Planning.webp",
     },
     {
       title: "Geotechnical & Geological Engineering",
@@ -67,7 +67,7 @@ export default function ConstructionManagementPage() {
         "Geotechnical risk assessment",
         "Settlement prediction and monitoring",
       ],
-      img: "/Engineering-Infrastructure/underground/Geological.avif",
+      img: "/Engineering-Infrastructure/underground/Geological.webp",
     },
     {
       title: "Tunnel Design & Engineering",
@@ -78,7 +78,7 @@ export default function ConstructionManagementPage() {
         "NATM/SEM: For complex geological conditions",
         "Cut-and-Cover & Trenchless Systems",
       ],
-      img: "/Engineering-Infrastructure/underground/tunnel-design.avif",
+      img: "/Engineering-Infrastructure/underground/tunnel-design.webp",
     },
     {
       title: "Trenchless Technology Solutions",
@@ -89,7 +89,7 @@ export default function ConstructionManagementPage() {
         "Pipe jacking",
         "Auger boring",
       ],
-      img: "/Engineering-Infrastructure/underground/trenchless.jpg",
+      img: "/Engineering-Infrastructure/underground/trenchless.webp",
     },
     {
       title: "Tunnel Inspection, Rehab & Asset Management",
@@ -101,7 +101,7 @@ export default function ConstructionManagementPage() {
         "Structural rehabilitation",
         "Asset tracking and lifecycle management",
       ],
-      img: "/Engineering-Infrastructure/underground/tunnel-inspection.jpeg",
+      img: "/Engineering-Infrastructure/underground/tunnel-inspection.webp",
     },
     {
       title: "Resident Engineering & Construction Support",
@@ -126,7 +126,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/underground/hero.jpg"}
+          src={"/Engineering-Infrastructure/underground/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}

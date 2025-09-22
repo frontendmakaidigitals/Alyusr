@@ -13,7 +13,7 @@ export default function Page() {
         "Tracking growth in cycling, walking, and micro-mobility adoption.",
         "Identifying patterns in urban freight delivery to reduce congestion.",
       ],
-      image: "/Transportation-mobility/urban-mobility/travel-pattern.jpg",
+      image: "/Transportation-mobility/urban-mobility/travel-pattern.webp",
     },
     {
       title: "Technology Integration",
@@ -33,7 +33,7 @@ export default function Page() {
         "Car-sharing programs to reduce private car dependency.",
         "E-scooter and micro-mobility hubs in high-demand zones.",
       ],
-      image: "/Transportation-mobility/urban-mobility/shared-mobility.jpg",
+      image: "/Transportation-mobility/urban-mobility/shared-mobility.webp",
     },
     {
       title: "Freight & Logistics Planning",
@@ -43,7 +43,7 @@ export default function Page() {
         "Develop time-restricted delivery schedules for efficiency.",
         "Incorporate low-emission freight vehicles into urban supply chains.",
       ],
-      image: "/Transportation-mobility/urban-mobility/freight-planning.jpg",
+      image: "/Transportation-mobility/urban-mobility/freight-planning.webp",
     },
     {
       title: "Sustainable Transport Planning",
@@ -54,7 +54,8 @@ export default function Page() {
         "Cycling infrastructure that is safe and connected.",
         "Initiatives to reduce single-occupancy vehicle trips.",
       ],
-      image: "/Transportation-mobility/urban-mobility/Sustainable-planning.jpg",
+      image:
+        "/Transportation-mobility/urban-mobility/Sustainable-planning.webp",
     },
     {
       title: "Mobilitics™ Scenario Planning",
@@ -64,7 +65,7 @@ export default function Page() {
         "Assess infrastructure resilience against future challenges.",
         "Test different investment strategies before committing resources.",
       ],
-      image: "/Transportation-mobility/urban-mobility/Scenario Planning.jpg",
+      image: "/Transportation-mobility/urban-mobility/Scenario Planning.webp",
     },
   ];
   const reasons = [
@@ -115,7 +116,7 @@ export default function Page() {
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/urban-mobility/hero.png"}
+              src={"/Transportation-mobility/urban-mobility/hero.webp"}
               className="w-full h-full object-cover"
               alt={""}
             />

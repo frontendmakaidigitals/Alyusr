@@ -65,7 +65,7 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/project-planning/hero.jpg"}
+          src={"/project-advisory/project-planning/hero.webp"}
           className="w-full h-full object-cover "
           alt={"Project Planning"}
           width={1200}
@@ -113,7 +113,7 @@ export default function Page() {
           </div>
           <div className="h-[450px] w-full bg-slate-100">
             <Image
-              src={"/project-advisory/project-planning/project-planning.avif"}
+              src={"/project-advisory/project-planning/project-planning.webp"}
               alt={"smart planning"}
               className="w-full h-full object-cover"
               width={500}

@@ -33,17 +33,17 @@ export default function Page() {
       icon: Cpu,
     },
   ];
-  
+
   const services = [
     {
       title: "Air Permitting & Compliance Strategy",
       desc: "We help clients navigate complex permitting processes with clarity, ensuring full compliance with regulatory requirements while minimizing costs and delays.",
-      img: "/Environment-Sustainability/Air-Quality-Assessment/air-permitting.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/air-permitting.webp",
     },
     {
       title: "Air Pollution Control Engineering",
       desc: "Our engineers design and implement cutting-edge emissions reduction systems, tailored to meet the unique needs of each industry sector.",
-      img: "/Environment-Sustainability/Air-Quality-Assessment/Air-Pollution-Control.png",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Air-Pollution-Control.webp",
     },
     {
       title: "Ambient Monitoring & Source Testing",
@@ -53,7 +53,7 @@ export default function Page() {
     {
       title: "Atmospheric Dispersion, Accidental Release & CFD Modeling",
       desc: "Using advanced simulation tools, we predict how pollutants disperse in different conditions, helping clients prepare for and mitigate potential risks.",
-      img: "/Environment-Sustainability/Air-Quality-Assessment/Atmospheric-Dispersion.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Atmospheric-Dispersion.webp",
     },
     {
       title: "Carbon Management & Sustainability Advisory",
@@ -63,7 +63,7 @@ export default function Page() {
     {
       title: "Construction Impact Assessments",
       desc: "Our specialists evaluate air quality impacts during construction activities and provide solutions to mitigate dust, emissions, and other risks.",
-      img: "/Environment-Sustainability/Air-Quality-Assessment/construction.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/construction.webp",
     },
     {
       title: "Emission Inventories & Mobile Source Studies",
@@ -78,22 +78,22 @@ export default function Page() {
     {
       title: "Indoor Air Quality & Occupational Safety Management",
       desc: "Our team ensures healthy indoor environments by monitoring air quality and managing workplace safety standards across industries.",
-      img: "/Environment-Sustainability/Air-Quality-Assessment/Indoor Air Quality.png",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Indoor Air Quality.webp",
     },
     {
       title: "Odor & Noise Modeling, Monitoring, and Control",
       desc: "We deliver technical solutions to reduce nuisance odors and noise pollution, helping clients protect community relations and meet compliance.",
-      img: "/Environment-Sustainability/Air-Quality-Assessment/Odor & Noise Modeling.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Odor & Noise Modeling.webp",
     },
     {
       title: "Expert Witness Testimony",
       desc: "Our experts provide credible, science-based insights to support clients in legal and regulatory cases related to air quality issues.",
-      img: "/Environment-Sustainability/Air-Quality-Assessment/Expert Witness Testimony.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Expert Witness Testimony.webp",
     },
     {
       title: "Strategic Technical Support",
       desc: "We advise trade associations, governments, and private clients with customized strategies for policy development, compliance, and long-term planning.",
-      img: "/Environment-Sustainability/Air-Quality-Assessment/Strategic Technical Support.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Strategic Technical Support.webp",
     },
   ];
   const points = [
@@ -129,7 +129,13 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={"/Environment-Sustainability/Air-Quality-Assessment/hero.jpg"} className="w-full h-full object-cover" alt={"air quality hero"} />
+            <img
+              src={
+                "/Environment-Sustainability/Air-Quality-Assessment/hero.webp"
+              }
+              className="w-full h-full object-cover"
+              alt={"air quality hero"}
+            />
           </div>
         </div>
       </section>
@@ -184,7 +190,7 @@ export default function Page() {
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{once:true}}
+                viewport={{ once: true }}
                 transition={{ delay: idx * 0.05, duration: 0.5 }}
                 className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden"
               >

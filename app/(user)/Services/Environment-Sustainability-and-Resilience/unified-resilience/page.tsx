@@ -9,7 +9,7 @@ export default function Page() {
     {
       title: "Communication Systems",
       desc: "We design and secure communication networks that stay functional even during emergencies. From satellite connectivity to redundant fiber systems, we ensure uninterrupted communication for critical operations.",
-      img: "/Environment-Sustainability/Unified Resilience/Communication Systems.jpg",
+      img: "/Environment-Sustainability/Unified Resilience/Communication Systems.webp",
     },
     {
       title: "Information Technology & Cybersecurity",
@@ -24,17 +24,17 @@ export default function Page() {
     {
       title: "Operational Technology & Industrial Control Systems (ICS)",
       desc: "Critical automation systems require specialized protection. We secure ICS and SCADA networks to prevent failures, sabotage, and cyber intrusions that could impact production or safety.",
-      img: "/Environment-Sustainability/Unified Resilience/Operational Technology.jpg",
+      img: "/Environment-Sustainability/Unified Resilience/Operational Technology.webp",
     },
     {
       title: "Utilities & Energy Systems",
       desc: "Our engineers design resilient energy and water systems capable of withstanding disruptions. Whether it’s protecting power grids or securing water supply networks, we deliver reliable utility resilience.",
-      img: "/Environment-Sustainability/Unified Resilience/Utilities & Energy Systems.jpg",
+      img: "/Environment-Sustainability/Unified Resilience/Utilities & Energy Systems.webp",
     },
     {
       title: "Facility Automation",
       desc: "From smart buildings to advanced control systems, we integrate automation that enhances safety, efficiency, and continuity. These systems are designed to adapt quickly during crises or disruptions.",
-      img: "/Environment-Sustainability/Unified Resilience/Facility Automation.png",
+      img: "/Environment-Sustainability/Unified Resilience/Facility Automation.webp",
     },
     {
       title: "Employee Safety",
@@ -49,7 +49,7 @@ export default function Page() {
     {
       title: "Asset & Inventory Management",
       desc: "We provide systems for tracking, monitoring, and securing critical assets and inventory. This ensures resources are available and accounted for during both routine operations and crisis situations.",
-      img: "/Environment-Sustainability/Unified Resilience/Asset & Inventory Management.jpeg",
+      img: "/Environment-Sustainability/Unified Resilience/Asset & Inventory Management.webp",
     },
   ];
 
@@ -57,37 +57,37 @@ export default function Page() {
     {
       title: "Oil & Gas",
       desc: "Securing energy facilities and pipelines.",
-      img: "/Environment-Sustainability/Unified Resilience/Oil & Gas.avif",
+      img: "/Environment-Sustainability/Unified Resilience/Oil & Gas.webp",
     },
     {
       title: "Government & Defense",
       desc: "Supporting national resilience and emergency preparedness.",
-      img: "/Environment-Sustainability/Unified Resilience/Government & Defense.jpg",
+      img: "/Environment-Sustainability/Unified Resilience/Government & Defense.webp",
     },
     {
       title: "Transportation",
       desc: "Keeping airports, ports, and rail networks operational.",
-      img: "/Environment-Sustainability/Unified Resilience/Transportation.jpg",
+      img: "/Environment-Sustainability/Unified Resilience/Transportation.webp",
     },
     {
       title: "Energy & Utilities",
       desc: "Strengthening grid stability and power generation facilities.",
-      img: "/Environment-Sustainability/Unified Resilience/Energy & Utilities.jpg",
+      img: "/Environment-Sustainability/Unified Resilience/Energy & Utilities.webp",
     },
     {
       title: "Engineering & Construction",
       desc: "Embedding resilience into infrastructure from the start.",
-      img: "/Environment-Sustainability/Unified Resilience/Engineering & Construction.jpg",
+      img: "/Environment-Sustainability/Unified Resilience/Engineering & Construction.webp",
     },
     {
       title: "Financial Services",
       desc: "Protecting data integrity and operational continuity in high-stakes environments.",
-      img: "/Environment-Sustainability/Unified Resilience/Financial Services.jpg",
+      img: "/Environment-Sustainability/Unified Resilience/Financial Services.webp",
     },
     {
       title: "Manufacturing",
       desc: "Ensuring production systems are secure and adaptive.",
-      img: "/Environment-Sustainability/Unified Resilience/Manufacturing.jpg",
+      img: "/Environment-Sustainability/Unified Resilience/Manufacturing.webp",
     },
   ];
   const points = [
@@ -136,7 +136,7 @@ export default function Page() {
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
               src={
-                "/Environment-Sustainability/Unified Resilience/Manufacturing.jpg"
+                "/Environment-Sustainability/Unified Resilience/Manufacturing.webp"
               }
               className="w-full h-full object-cover"
               alt={"Unified Resillience"}

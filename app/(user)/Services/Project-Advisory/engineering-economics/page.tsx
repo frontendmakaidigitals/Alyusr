@@ -10,12 +10,12 @@ export default function Page() {
     {
       title: "Feasibility Studies",
       desc: "Evaluate whether a project is viable, achievable, and sustainable based on demand, site constraints, design, and return expectations.",
-      img: "/project-advisory/enigneering-economics/feasible-studies.avif",
+      img: "/project-advisory/enigneering-economics/feasible-studies.webp",
     },
     {
       title: "Cost-Benefit Analysis (CBA)",
       desc: "Compare the total economic benefits against the projected costs to determine social value and justify public or private investment.",
-      img: "/project-advisory/enigneering-economics/reduce-cost.png",
+      img: "/project-advisory/enigneering-economics/reduce-cost.webp",
     },
     {
       title: "Risk & Sensitivity Analysis",
@@ -25,7 +25,7 @@ export default function Page() {
     {
       title: "PPP Advisory",
       desc: "Support clients in structuring public-private partnership models, financial responsibilities, and risk-sharing frameworks.",
-      img: "/project-advisory/enigneering-economics/ppp.jpg",
+      img: "/project-advisory/enigneering-economics/ppp.webp",
     },
     {
       title: "Economic Impact Assessments",
@@ -35,17 +35,17 @@ export default function Page() {
     {
       title: "Life-Cycle Cost Analysis (LCCA)",
       desc: "Calculate the total cost of ownership, including construction, operation, maintenance, and end-of-life to support long-term planning.",
-      img: "/project-advisory/enigneering-economics/life-cycle.png",
+      img: "/project-advisory/enigneering-economics/life-cycle.webp",
     },
     {
       title: "Real Estate & Market Studies",
       desc: "Analyze land use value, tenant mix, absorption rates, and development potential for strategic positioning.",
-      img: "/project-advisory/enigneering-economics/real-estate-market.png",
+      img: "/project-advisory/enigneering-economics/real-estate-market.webp",
     },
     {
       title: "Capital Investment Planning",
       desc: "Help prioritize investments across portfolios based on ROI, urgency, social need, and budget alignment.",
-      img: "/project-advisory/enigneering-economics/planning.avif",
+      img: "/project-advisory/enigneering-economics/planning.webp",
     },
   ];
   const phases = [
@@ -101,27 +101,27 @@ export default function Page() {
     {
       title: "Multidisciplinary Insight",
       desc: "Our economists work alongside engineers, architects, urban planners, and sustainability experts, offering 360-degree advice.",
-      img: "/project-advisory/enigneering-economics/Multidisciplinary Insight.jpg",
+      img: "/project-advisory/enigneering-economics/Multidisciplinary Insight.webp",
     },
     {
       title: "Evidence-Based Approach",
       desc: "We don’t rely on assumptions. Every recommendation is backed by real data, sound logic, and proven tools.",
-      img: "/project-advisory/enigneering-economics/evidence.avif",
+      img: "/project-advisory/enigneering-economics/evidence.webp",
     },
     {
       title: "Local Knowledge, Global Expertise",
       desc: "We understand GCC market dynamics, cost structures, and regulatory frameworks, including Saudi Vision 2030 priorities.",
-      img: "/project-advisory/enigneering-economics/global.jpg",
+      img: "/project-advisory/enigneering-economics/global.webp",
     },
     {
       title: "Pragmatic, Not Just Theoretical",
       desc: "Our deliverables are designed for action, supporting decision-making, funding applications, and investor engagement.",
-      img: "/project-advisory/enigneering-economics/pragmatic.jpg",
+      img: "/project-advisory/enigneering-economics/pragmatic.webp",
     },
     {
       title: "Focus on Long-Term Value",
       desc: "We go beyond 'Is this project affordable?' to 'How do we make this project thrive over decades?'",
-      img: "/project-advisory/enigneering-economics/focus.avif",
+      img: "/project-advisory/enigneering-economics/focus.webp",
     },
   ];
   return (
@@ -133,7 +133,7 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/enigneering-economics/hero.avif"}
+          src={"/project-advisory/enigneering-economics/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}

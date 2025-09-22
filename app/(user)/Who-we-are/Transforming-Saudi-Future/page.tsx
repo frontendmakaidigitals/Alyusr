@@ -43,7 +43,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="/saudi-vision/banner.jpg"
+          src="/saudi-vision/banner.webp"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -78,7 +78,7 @@ export default function Page() {
             </div>
             <div className="h-[450px]">
               <img
-                src="/saudi-vision/heading.jpg"
+                src="/saudi-vision/heading.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -223,7 +223,7 @@ export default function Page() {
         </motion.div>
         <div className="w-full h-[400px]">
           <img
-            src="/saudi-vision/team.jpg"
+            src="/saudi-vision/team.webp"
             alt={""}
             className="w-full h-full object-cover"
           />

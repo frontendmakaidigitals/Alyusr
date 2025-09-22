@@ -43,32 +43,32 @@ export default function Page() {
     {
       title: "Low-Carbon, High-Performance Developments",
       desc: "Tools and metrics to reduce carbon emissions, optimize energy use, and improve operational performance in urban environments.",
-      img: "/Transportation-mobility/city-analytics/low-carbon.jpg",
+      img: "/Transportation-mobility/city-analytics/low-carbon.webp",
     },
     {
       title: "Strategic Energy & Emissions Planning",
       desc: "Integrated modeling of energy demand, renewable potential, and emissions forecasting to support sustainable urban transitions.",
-      img: "/Transportation-mobility/city-analytics/Emissions Planning.jpg",
+      img: "/Transportation-mobility/city-analytics/Emissions Planning.webp",
     },
     {
       title: "Sustainable Infrastructure",
       desc: "Assessing infrastructure needs using lifecycle, cost-benefit, and environmental impact data for smarter investments.",
-      img: "/Transportation-mobility/city-analytics/sustainable-infra.jpg",
+      img: "/Transportation-mobility/city-analytics/sustainable-infra.webp",
     },
     {
       title: "Climate Resilience & Risk Modeling",
       desc: "Identifying and mitigating climate-related risks (heat, flooding, water stress) through spatial and temporal data analysis.",
-      img: "/Transportation-mobility/city-analytics/Climate Resilience.jpg",
+      img: "/Transportation-mobility/city-analytics/Climate Resilience.webp",
     },
     {
       title: "Smart City Systems & Integration",
       desc: "Building digital frameworks for connected services, mobility, utilities, waste, and governance, to improve citizen experience.",
-      img: "/Transportation-mobility/city-analytics/smart-city.jpg",
+      img: "/Transportation-mobility/city-analytics/smart-city.webp",
     },
     {
       title: "Interactive Online Planning Tools",
       desc: "Custom dashboards and GIS platforms for engaging stakeholders and visualizing the impact of planning scenarios in real time.",
-      img: "/Transportation-mobility/city-analytics/technology.jpeg",
+      img: "/Transportation-mobility/city-analytics/technology.webp",
     },
   ];
 
@@ -115,7 +115,7 @@ export default function Page() {
           {/* Image Left */}
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/city-analytics/visualizing.jpg"}
+              src={"/Transportation-mobility/city-analytics/visualizing.webp"}
               className="w-full h-full object-cover"
               alt={""}
             />

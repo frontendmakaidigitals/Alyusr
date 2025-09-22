@@ -41,7 +41,7 @@ export default function Page() {
   const capabilities = [
     {
       title: "Application Development",
-      img: "/Transportation-mobility/geo-intelligence/app-dev.png",
+      img: "/Transportation-mobility/geo-intelligence/app-dev.webp",
       points: [
         "Custom Desktop, Web, and Mobile GIS applications",
         "User-friendly interfaces for both technical and non-technical users",
@@ -50,7 +50,7 @@ export default function Page() {
     },
     {
       title: "Enterprise GIS Implementation",
-      img: "/Transportation-mobility/geo-intelligence/gis.png",
+      img: "/Transportation-mobility/geo-intelligence/gis.webp",
       points: [
         "Organization-wide GIS platforms for asset management, planning, and monitoring",
         "Needs assessment, design, and deployment tailored to specific client goals",
@@ -68,7 +68,7 @@ export default function Page() {
     },
     {
       title: "Remote Sensing & Mapping",
-      img: "/Transportation-mobility/geo-intelligence/remote-mapping.png",
+      img: "/Transportation-mobility/geo-intelligence/remote-mapping.webp",
       points: [
         "High-resolution imagery acquisition via satellites and aerial surveys",
         "Unmanned Aircraft Systems (UAS) for rapid, cost-effective mapping and inspection",
@@ -77,7 +77,7 @@ export default function Page() {
     },
     {
       title: "Integration with Building Information Modeling (BIM)",
-      img: "/Transportation-mobility/geo-intelligence/Integration with Building Information Modeling (BIM).png",
+      img: "/Transportation-mobility/geo-intelligence/Integration with Building Information Modeling (BIM).webp",
       points: [
         "Link geospatial data with BIM models for enhanced planning and project execution",
         "Support for digital twins and smart city platforms",
@@ -89,12 +89,12 @@ export default function Page() {
     {
       title: "Multi-Disciplinary Expertise",
       desc: "Our teams combine GIS specialists, urban planners, engineers, and data scientists.",
-      img: "/Transportation-mobility/geo-intelligence/Multi-Disciplinary Expertise.jpg",
+      img: "/Transportation-mobility/geo-intelligence/Multi-Disciplinary Expertise.webp",
     },
     {
       title: "Proven Global Experience",
       desc: "Hundreds of successful geospatial projects across government and industry sectors.",
-      img: "/Transportation-mobility/geo-intelligence/global.jpg",
+      img: "/Transportation-mobility/geo-intelligence/global.webp",
     },
     {
       title: "Custom Solutions",
@@ -104,7 +104,7 @@ export default function Page() {
     {
       title: "Advanced Technology",
       desc: "We leverage AI, IoT integration, and predictive analytics to enhance geospatial insights.",
-      img: "/Transportation-mobility/geo-intelligence/advance-tech.jpg",
+      img: "/Transportation-mobility/geo-intelligence/advance-tech.webp",
     },
   ];
   return (
@@ -132,7 +132,7 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/geo-intelligence/hero.jpg"}
+              src={"/Transportation-mobility/geo-intelligence/hero.webp"}
               className="w-full h-full object-cover"
               alt={""}
             />

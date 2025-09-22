@@ -19,7 +19,7 @@ export default function ConstructionManagementPage() {
         "In-situ testing (SPT, CPT, pressuremeter, permeability)",
       ],
       image:
-        "/Engineering-Infrastructure/ground-engineering/site-investigation.jpg",
+        "/Engineering-Infrastructure/ground-engineering/site-investigation.webp",
     },
     {
       title: "Foundation Design & Earth Structures",
@@ -33,7 +33,7 @@ export default function ConstructionManagementPage() {
         "Design of tunnels, shafts, and ground-engineering structures",
       ],
       image:
-        "/Engineering-Infrastructure/ground-engineering/Foundation-design.png",
+        "/Engineering-Infrastructure/ground-engineering/Foundation-design.webp",
     },
     {
       title: "Slope Stabilization & Soil Engineering",
@@ -60,7 +60,7 @@ export default function ConstructionManagementPage() {
         "Rockfall and landslide hazard mapping",
       ],
       image:
-        "/Engineering-Infrastructure/ground-engineering/groundwater-assesment.jpg",
+        "/Engineering-Infrastructure/ground-engineering/groundwater-assesment.webp",
     },
     {
       title: "Ground Treatment & Earthworks Design",
@@ -74,7 +74,7 @@ export default function ConstructionManagementPage() {
         "Dynamic compaction and vibroflotation",
       ],
       image:
-        "/Engineering-Infrastructure/ground-engineering/ground-treatment.jpg",
+        "/Engineering-Infrastructure/ground-engineering/ground-treatment.webp",
     },
     {
       title: "Advanced Modeling & Simulation",
@@ -88,7 +88,7 @@ export default function ConstructionManagementPage() {
         "Performance-based design for infrastructure resilience",
       ],
       image:
-        "/Engineering-Infrastructure/ground-engineering/advanced-modelling.jpg",
+        "/Engineering-Infrastructure/ground-engineering/advanced-modelling.webp",
     },
   ];
   const whatSetsUsApart = [
@@ -127,7 +127,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/ground-engineering/hero.jpg"}
+          src={"/Engineering-Infrastructure/ground-engineering/hero.webp"}
           className="w-full h-full object-cover "
           alt={""}
           width={1200}

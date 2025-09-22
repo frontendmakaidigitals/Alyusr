@@ -31,7 +31,7 @@ export default function Page() {
     {
       title: "EHS Compliance Program Development & Implementation",
       desc: "Design and rollout of compliance frameworks aligned with local and international regulations.",
-      img: "/Environment-Sustainability/ehs-management-consulting/Development & Implementation.jpg", // Compliance / teamwork
+      img: "/Environment-Sustainability/ehs-management-consulting/Development & Implementation.webp", // Compliance / teamwork
     },
     {
       title: "Process Safety Management & Risk Evaluations",
@@ -41,12 +41,12 @@ export default function Page() {
     {
       title: "Industrial Hygiene Monitoring & Assessment",
       desc: "Workplace exposure assessments, monitoring plans, and control recommendations to protect worker health.",
-      img: "/Environment-Sustainability/ehs-management-consulting/Industrial Hygiene Monitoring.jpg", // Lab / monitoring
+      img: "/Environment-Sustainability/ehs-management-consulting/Industrial Hygiene Monitoring.webp", // Lab / monitoring
     },
     {
       title: "EHS Management Systems Support",
       desc: "Development, implementation, and optimization of environmental and occupational health management systems.",
-      img: "/Environment-Sustainability/ehs-management-consulting/EHS Management.jpeg",
+      img: "/Environment-Sustainability/ehs-management-consulting/EHS Management.webp",
     },
     {
       title: "Global Regulatory Intelligence & Advisory",
@@ -66,17 +66,17 @@ export default function Page() {
     {
       title: "Outsourced EHS Support",
       desc: "Al Yusr can function as your embedded EHS partner, supporting day-to-day compliance and strategic EHS initiatives.",
-      img: "/Environment-Sustainability/ehs-management-consulting/Outsourced EHS Support.avif",
+      img: "/Environment-Sustainability/ehs-management-consulting/Outsourced EHS Support.webp",
     },
     {
       title: "EHS Management Information Systems (EMIS)",
       desc: "Digital platforms for monitoring compliance metrics, reporting incidents, and improving decision-making.",
-      img: "/Environment-Sustainability/ehs-management-consulting/EHS Management Systems.jpg",
+      img: "/Environment-Sustainability/ehs-management-consulting/EHS Management Systems.webp",
     },
     {
       title: "Mergers & Acquisitions Due Diligence",
       desc: "EHS risk evaluation for asset purchases, business acquisitions, and portfolio transitions.",
-      img: "/Environment-Sustainability/ehs-management-consulting/Acquisitions Due.jpeg",
+      img: "/Environment-Sustainability/ehs-management-consulting/Acquisitions Due.webp",
     },
   ];
   return (
@@ -106,7 +106,7 @@ export default function Page() {
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
               src={
-                "/Environment-Sustainability/ehs-management-consulting/EHS Management.jpeg"
+                "/Environment-Sustainability/ehs-management-consulting/EHS Management.webp"
               }
               className="w-full h-full object-cover"
               alt={""}
@@ -119,7 +119,7 @@ export default function Page() {
           {/* Left Image */}
           <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/Environment-Sustainability/ehs-management-consulting/Our Approach.jpg"
+              src="/Environment-Sustainability/ehs-management-consulting/Our Approach.webp"
               alt="Our Approach"
               className="object-cover w-full h-full"
               width={200}

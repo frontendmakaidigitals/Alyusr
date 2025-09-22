@@ -14,7 +14,7 @@ import {
 export default function ConstructionManagementPage() {
   const markets = [
     {
-      image: "/Engineering-Infrastructure/SCII/rail.jpeg", // Replace with your actual image paths
+      image: "/Engineering-Infrastructure/SCII/rail.webp", // Replace with your actual image paths
       title: "Rail and Transit Systems",
       desc: "SCCI Electric plays a critical role in modernizing and electrifying transportation networks. We install and maintain key systems to ensure safe, efficient, and continuous rail operation.",
       points: [
@@ -27,7 +27,7 @@ export default function ConstructionManagementPage() {
       ],
     },
     {
-      image: "/Engineering-Infrastructure/SCII/highway.avif",
+      image: "/Engineering-Infrastructure/SCII/highway.webp",
       title: "Highways and Bridges",
       desc: "Supporting state DOTs and transportation agencies, we deliver smart infrastructure that enhances traffic flow, safety, and regional mobility.",
       points: [
@@ -40,7 +40,7 @@ export default function ConstructionManagementPage() {
       ],
     },
     {
-      image: "/Engineering-Infrastructure/SCII/wastewater.jpg",
+      image: "/Engineering-Infrastructure/SCII/wastewater.webp",
       title: "Water and Wastewater Facilities",
       desc: "We support critical water infrastructure by providing robust, dependable MEP installations for pumping stations and treatment plants.",
       points: [
@@ -95,7 +95,7 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/SCII/hero.avif"}
+          src={"/Engineering-Infrastructure/SCII/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}
@@ -135,7 +135,7 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="h-[400px] w-full ">
             <img
-              src={"/Engineering-Infrastructure/SCII/about.avif"}
+              src={"/Engineering-Infrastructure/SCII/about.webp"}
               alt={""}
               className="w-full h-full object-cover"
             />

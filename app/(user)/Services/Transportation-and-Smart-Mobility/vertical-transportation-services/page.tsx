@@ -116,7 +116,7 @@ export default function Page() {
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/vertical-transportation/hero.png"}
+              src={"/Transportation-mobility/vertical-transportation/hero.webp"}
               className="w-full h-full object-cover"
               alt={""}
             />

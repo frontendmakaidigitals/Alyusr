@@ -32,7 +32,7 @@ export default function Page() {
     {
       title: "Air Pollution Control",
       desc: "We design and implement systems for dust, gas, and particulate removal to meet environmental air quality standards.",
-      img: "/project-advisory/process-development/air-pollution.jpeg", // smokestack/air pollution
+      img: "/project-advisory/process-development/air-pollution.webp", // smokestack/air pollution
     },
     {
       title: "Alternative Fuels & Clean Energy",
@@ -42,44 +42,44 @@ export default function Page() {
     {
       title: "Carbon Capture & Sequestration (CCS)",
       desc: "We provide end-to-end solutions for CO₂ capture, storage, and integration into existing facilities, helping industries decarbonize responsibly.",
-      img: "/project-advisory/process-development/carbon.jpeg", // carbon capture style
+      img: "/project-advisory/process-development/carbon.webp", // carbon capture style
     },
     {
       title: "Long-Duration Energy Storage",
       desc: "We support energy resilience through advanced storage technologies that ensure grid stability and optimize renewable energy use.",
-      img: "/project-advisory/process-development/battery.jpg", // energy storage
+      img: "/project-advisory/process-development/battery.webp", // energy storage
     },
     {
       title: "Water & Wastewater Treatment",
       desc: "From industrial reuse to zero liquid discharge, we create treatment systems that ensure water security and environmental protection.",
-      img: "/project-advisory/process-development/Wastewater-treatment.jpg", // water treatment
+      img: "/project-advisory/process-development/Wastewater-treatment.webp", // water treatment
     },
     {
       title: "PFAS & Emerging Contaminant Removal",
       desc: "We offer tailored treatability studies and process design for challenging contaminants in air, soil, and water.",
-      img: "/project-advisory/process-development/contaminant-removal.jpg", // lab/contaminants
+      img: "/project-advisory/process-development/contaminant-removal.webp", // lab/contaminants
     },
     {
       title: "Solid Waste & Byproduct Management",
       desc: "We engineer solutions for waste minimization, recovery, and disposal that align with circular economy principles.",
-      img: "/project-advisory/process-development/solid-waste.jpg", // recycling waste
+      img: "/project-advisory/process-development/solid-waste.webp", // recycling waste
     },
   ];
   const services = [
     {
       title: "Process Hazard Analysis (PHA)",
       desc: "Risk assessment and safety systems design to ensure reliable and safe operations.",
-      img: "/project-advisory/process-development/process-hazard.avif", // safety/industry
+      img: "/project-advisory/process-development/process-hazard.webp", // safety/industry
     },
     {
       title: "Control Systems & Instrumentation",
       desc: "Fully integrated automation, monitoring, and SCADA systems for better performance and traceability.",
-      img: "/project-advisory/process-development/Control Systems.avif", // control systems
+      img: "/project-advisory/process-development/Control Systems.webp", // control systems
     },
     {
       title: "Brownfield Upgrades & Retrofits",
       desc: "Modernizing legacy systems with minimal disruption to improve efficiency and meet new regulations.",
-      img: "/project-advisory/process-development/upgrades.jpg", // upgrade/retrofit
+      img: "/project-advisory/process-development/upgrades.webp", // upgrade/retrofit
     },
   ];
   return (
@@ -91,7 +91,7 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/process-development/hero.avif"}
+          src={"/project-advisory/process-development/hero.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}
@@ -120,7 +120,7 @@ export default function Page() {
           {/* Left Image */}
           <div className="h-full w-full">
             <img
-              src="/project-advisory/process-development/smart-solution.avif" // 🔹 Replace with your actual image
+              src="/project-advisory/process-development/smart-solution.webp" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
             />

@@ -19,37 +19,37 @@ export default function TechnicalExpertisePage() {
       title: "Structural Engineering",
       desc: "Design of safe, efficient, and code-compliant structures for buildings and infrastructure.",
 
-      img: "/technical expertise 2/structural engineering.jpg",
+      img: "/technical expertise 2/structural engineering.webp",
     },
     {
       title: "Mechanical, Electrical & Plumbing (MEP)",
       desc: "Integrated building systems that ensure functionality, energy efficiency, and comfort.",
 
-      img: "/technical expertise 2/mep.jpg",
+      img: "/technical expertise 2/mep.webp",
     },
     {
       title: "Infrastructure Design",
       desc: "Roads, utilities, drainage, and networks are designed for high performance and resilience.",
 
-      img: "/technical expertise 2/Infrastructure Design.jpg",
+      img: "/technical expertise 2/Infrastructure Design.webp",
     },
     {
       title: "Water, Drainage & Hydrology",
       desc: "Smart water management solutions, including stormwater systems and hydraulic modeling.",
 
-      img: "/technical expertise 2/Water, Drainage & Hydrology.jpg",
+      img: "/technical expertise 2/Water, Drainage & Hydrology.webp",
     },
     {
       title: "Telecommunication & Low Current Systems",
       desc: "Reliable, secure systems for modern connectivity and building automation.",
 
-      img: "/technical expertise 2/Telecommunication & Low Current Systems.jpg",
+      img: "/technical expertise 2/Telecommunication & Low Current Systems.webp",
     },
     {
       title: "Urban & Regional Planning",
       desc: "Large-scale planning with a focus on smart growth, land optimization, and community livability.",
 
-      img: "/technical expertise 2/Urban & Regional Planning.jpg",
+      img: "/technical expertise 2/Urban & Regional Planning.webp",
     },
   ];
 
@@ -79,7 +79,7 @@ export default function TechnicalExpertisePage() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="/technical expertise 2/banner.jpg"
+          src="/technical expertise 2/banner.webp"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -110,7 +110,7 @@ export default function TechnicalExpertisePage() {
             </div>
             <div className="h-[450px]">
               <img
-                src="/technical expertise 2/heading.jpg"
+                src="/technical expertise 2/heading.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
@@ -175,14 +175,14 @@ export default function TechnicalExpertisePage() {
           </p>
           <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 text-sm text-gray-700">
             {[
-              { tool: "AutoCAD", icon: "/Tools/autocad.png" },
-              { tool: "Revit", icon: "/Tools/revit.png" },
-              { tool: "Civil 3D", icon: "/Tools/civil-3d.jpg" },
-              { tool: "GIS Platforms", icon: "/Tools/gis.png" },
+              { tool: "AutoCAD", icon: "/Tools/autocad.webp" },
+              { tool: "Revit", icon: "/Tools/revit.webp" },
+              { tool: "Civil 3D", icon: "/Tools/civil-3d.webp" },
+              { tool: "GIS Platforms", icon: "/Tools/gis.webp" },
               { tool: "BIM", icon: "/Tools/bim.webp" },
-              { tool: "Topcon", icon: "/Tools/topcon.png" },
-              { tool: "Trimble", icon: "/Tools/trimble.png" },
-              { tool: "Leica Stations", icon: "/Tools/Leica.png" },
+              { tool: "Topcon", icon: "/Tools/topcon.webp" },
+              { tool: "Trimble", icon: "/Tools/trimble.webp" },
+              { tool: "Leica Stations", icon: "/Tools/Leica.webp" },
             ].map((tool, i) => (
               <li
                 key={i}

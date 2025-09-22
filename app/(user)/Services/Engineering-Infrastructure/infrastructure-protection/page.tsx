@@ -98,7 +98,7 @@ export default function ConstructionManagementPage() {
       <section className=" w-full h-[500px] text-center ">
         <Image
           src={
-            "/Engineering-Infrastructure/infrastructure-protection/Critical Infrastructure Protection.jpg"
+            "/Engineering-Infrastructure/infrastructure-protection/Critical.webp"
           }
           className="w-full h-full object-cover object-bottom"
           alt={"Hero"}
@@ -134,7 +134,7 @@ export default function ConstructionManagementPage() {
           {/* Image Section */}
           <div className="order-1 lg:order-2 h-[450px]">
             <img
-              src="/Engineering-Infrastructure/infrastructure-protection/Securing the Foundations.jpeg"
+              src="/Engineering-Infrastructure/infrastructure-protection/Securing.webp"
               alt="Critical Infrastructure Protection"
               className="rounded-xl shadow-lg w-full h-full object-cover object-top"
             />
@@ -147,7 +147,7 @@ export default function ConstructionManagementPage() {
           {/* Image Section */}
           <div className="order-1">
             <img
-              src="/Engineering-Infrastructure/infrastructure-protection/Resilience.jpg"
+              src="/Engineering-Infrastructure/infrastructure-protection/Resilience.webp"
               alt="Converged Resilience"
               className="rounded-xl shadow-lg w-full h-full object-cover"
             />

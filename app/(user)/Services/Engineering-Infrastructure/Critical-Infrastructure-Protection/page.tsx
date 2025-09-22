@@ -10,63 +10,63 @@ export default function ConstructionManagementPage() {
     {
       title: "Cybersecurity & Information Protection",
       desc: "We develop comprehensive cyber defense strategies for OT and IT systems, securing networks against unauthorized access, disruption, and data loss.",
-      img: "/images/expertise/cybersecurity.jpg", // replace with actual image path
+      img: "/images/expertise/cybersecurity.webp", // replace with actual image path
     },
     {
       title: "Physical Security Planning & Design",
       desc: "From perimeters to intrusion detection, we design layered protection systems with access control and blast mitigation.",
-      img: "/images/expertise/physical-security.jpg",
+      img: "/images/expertise/physical-security.webp",
     },
     {
       title: "Risk Assessment & Threat Modeling",
       desc: "We conduct vulnerability and risk analyses using simulation, GIS, and scenario planning to prioritize mitigation strategies.",
-      img: "/images/expertise/risk-assessment.jpg",
+      img: "/images/expertise/risk-assessment.webp",
     },
     {
       title: "Resilience Planning & Business Continuity",
       desc: "We help organizations prepare for and recover from cyber breaches, outages, and other disruptions with continuity planning.",
-      img: "/images/expertise/resilience.jpg",
+      img: "/images/expertise/resilience.webp",
     },
     {
       title: "Integrated Systems & Smart Monitoring",
       desc: "We implement real-time monitoring and response systems with smart technologies for early warning and command control.",
-      img: "/images/expertise/smart-monitoring.jpg",
+      img: "/images/expertise/smart-monitoring.webp",
     },
     {
       title: "Governance, Policy & Compliance",
       desc: "We support clients in navigating regulations and aligning strategies with standards like NIST, ISO, SAMA, and Vision 2030.",
-      img: "/images/expertise/governance.jpg",
+      img: "/images/expertise/governance.webp",
     },
   ];
 
   const sectors = [
     {
       title: "Government Ministries & Municipalities",
-      img: "/images/sectors/government.jpg",
+      img: "/images/sectors/government.webp",
     },
     {
       title: "Airports, Ports & Transportation Systems",
-      img: "/images/sectors/transport.jpg",
+      img: "/images/sectors/transport.webp",
     },
     {
       title: "Energy & Utility Providers",
-      img: "/images/sectors/energy.jpg",
+      img: "/images/sectors/energy.webp",
     },
     {
       title: "Water & Wastewater Infrastructure",
-      img: "/images/sectors/water.jpg",
+      img: "/images/sectors/water.webp",
     },
     {
       title: "Healthcare & Public Institutions",
-      img: "/images/sectors/healthcare.jpg",
+      img: "/images/sectors/healthcare.webp",
     },
     {
       title: "Data Centers & Communication Networks",
-      img: "/images/sectors/datacenter.jpg",
+      img: "/images/sectors/datacenter.webp",
     },
     {
       title: "Industrial & Petrochemical Facilities",
-      img: "/images/sectors/industrial.jpg",
+      img: "/images/sectors/industrial.webp",
     },
   ];
 
@@ -88,7 +88,7 @@ export default function ConstructionManagementPage() {
       <section className=" w-full h-[500px] text-center ">
         <Image
           src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
+            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.webp"
           }
           className="w-full h-full object-cover object-bottom"
           alt={""}

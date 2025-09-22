@@ -24,7 +24,7 @@ const Contact = () => {
       country: "United Kingdom",
       city: "London Office",
       email: "uk@alyusr.com.sa",
-      flag: "/contact-flags/uk.jpg",
+      flag: "/contact-flags/uk.webp",
       bg: "#E8EAF6", // indigo 50
       text: "#1A237E", // indigo 900
     },
@@ -32,7 +32,7 @@ const Contact = () => {
       country: "Sri Lanka",
       city: "Colombo Office",
       email: "srilanka@alyusr.com.sa",
-      flag: "/contact-flags/srilanka.png",
+      flag: "/contact-flags/srilanka.webp",
       bg: "#FFF8E1", // amber 50
       text: "#FF6F00", // amber 900
     },
@@ -40,7 +40,7 @@ const Contact = () => {
       country: "Egypt",
       city: "Cairo Office",
       email: "egypt@alyusr.com.sa",
-      flag: "/contact-flags/egypt.png",
+      flag: "/contact-flags/egypt.webp",
       bg: "#FFEBEE", // red 50
       text: "#B71C1C", // red 900
     },

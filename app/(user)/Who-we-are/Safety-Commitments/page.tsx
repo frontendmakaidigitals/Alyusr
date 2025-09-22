@@ -95,7 +95,7 @@ export default function SafetyCommitmentsPage() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src={"/safety commitments/umit-yildirim-9OB46apMbC4-unsplash.jpg"}
+          src={"/safety commitments/umit-yildirim-9OB46apMbC4-unsplash.webp"}
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -131,7 +131,7 @@ export default function SafetyCommitmentsPage() {
             {/* Image */}
             <div className="h-[450px] w-full">
               <img
-                src="/safety commitments/sandy-millar-yvpexJFLTSU-unsplash.jpg"
+                src="/safety commitments/sandy-millar-yvpexJFLTSU-unsplash.webp"
                 alt="Safety Image"
                 className="w-full h-full object-cover rounded-lg"
               />
@@ -146,7 +146,7 @@ export default function SafetyCommitmentsPage() {
             {/* Image */}
             <div className="h-[450px] w-full order-last lg:order-first">
               <img
-                src="/safety commitments/jeriden-villegas-VLPUm5wP5Z0-unsplash.jpg"
+                src="/safety commitments/jeriden-villegas-VLPUm5wP5Z0-unsplash.webp"
                 alt="Safety Culture"
                 className="w-full h-full object-cover rounded-lg"
               />

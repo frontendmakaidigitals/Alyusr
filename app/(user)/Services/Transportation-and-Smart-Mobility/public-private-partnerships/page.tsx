@@ -74,7 +74,7 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/public-private/hero.jpg"}
+              src={"/Transportation-mobility/public-private/hero.webp"}
               className="object-cover w-full h-full "
               alt={""}
             />
@@ -86,7 +86,7 @@ export default function Page() {
           {/* Left Image */}
           <div className="w-full h-[450px] bg-slate-100">
             <img
-              src="/Transportation-mobility/public-private/exp.jpeg" // replace with your image path
+              src="/Transportation-mobility/public-private/exp.webp" // replace with your image path
               alt="Our Experience"
               className="w-full h-full object-cover"
             />

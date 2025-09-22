@@ -14,7 +14,7 @@ export default function Page() {
         "KPI frameworks and success metrics",
         "Visioning and value proposition development",
       ],
-      img: "/project-advisory/strategic-consulting/business-transformation.jpg", // business meeting
+      img: "/project-advisory/strategic-consulting/business-transformation.webp", // business meeting
     },
     {
       title: "Organizational Dynamics & Change Management",
@@ -58,7 +58,7 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/strategic-consulting/design-led.jpeg"}
+          src={"/project-advisory/strategic-consulting/design-led.webp"}
           className="w-full h-full object-cover object-bottom"
           alt={""}
           width={1200}
@@ -83,7 +83,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className="h-full w-full">
             <img
-              src="/project-advisory/strategic-consulting/design-led.png" // 🔹 Replace with your actual image
+              src="/project-advisory/strategic-consulting/design-led.webp" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
             />

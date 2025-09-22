@@ -13,7 +13,7 @@ export default function Page() {
         "ICT Infrastructure: Voice, data, and video cabling; WAN, LAN, and PON systems",
       ],
       image:
-        "/Transportation-mobility/smart-infrastructure/global-connectivity.jpg",
+        "/Transportation-mobility/smart-infrastructure/global-connectivity.webp",
     },
     {
       title: "Wireless & Satellite Communication",
@@ -23,7 +23,7 @@ export default function Page() {
         "Public Safety Communications: P25, VHF/UHF radio systems for emergency response",
         "LEO Satellite Systems for remote and maritime connectivity",
       ],
-      image: "/Transportation-mobility/smart-infrastructure/multi-network.jpg",
+      image: "/Transportation-mobility/smart-infrastructure/multi-network.webp",
     },
     {
       title: "Healthcare Technology Solutions",
@@ -32,7 +32,7 @@ export default function Page() {
         "Safety & Security: Infant protection, RTLS, automated dispensing cabinets (ADC)",
         "Medical IoT: Device connectivity for better patient care and operational efficiency",
       ],
-      image: "/Transportation-mobility/smart-infrastructure/healthcare.jpg",
+      image: "/Transportation-mobility/smart-infrastructure/healthcare.webp",
     },
     {
       title: "Security & Cyber Resilience",
@@ -52,7 +52,7 @@ export default function Page() {
         "IoT Integration: Connecting devices and systems for intelligent, automated environments",
       ],
       image:
-        "/Transportation-mobility/smart-infrastructure/smart-buildings.jpeg",
+        "/Transportation-mobility/smart-infrastructure/smart-buildings.webp",
     },
     {
       title: "Mission-Critical Technologies",
@@ -127,7 +127,7 @@ export default function Page() {
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/smart-infrastructure/hero.jpg"}
+              src={"/Transportation-mobility/smart-infrastructure/hero.webp"}
               className="w-full h-full object-cover"
               alt={""}
             />
