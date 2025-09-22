@@ -320,7 +320,7 @@ export const siteConfig = {
           label: "In-House Capabilities",
           description:
             "Al Yusr delivers all major services in-house, ensuring full control, quality, and efficiency at every stage",
-          img: "https://images.pexels.com/photos/33266/work-chinese-industrial-professional.jpeg",
+          img: "https://images.pexels.com/photos/4483860/pexels-photo-4483860.jpeg",
         },
         {
           link: "CEO-Led-Specialized-Departments",

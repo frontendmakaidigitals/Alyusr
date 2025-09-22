@@ -95,29 +95,32 @@ const Services = () => {
               onMouseLeave={() => setHoveredIndex(null)}
               className="h-[320px] p-2 flex flex-col justify-end overflow-hidden rounded-lg w-full relative cursor-pointer"
             >
-              {/* Background image */}
-              <MotionImage
-                src={service.img}
-                alt=""
-                fill
-                className="object-cover absolute inset-0"
-                animate={{ scale: isHovered ? 1.15 : 1 }}
-                transition={{ duration: 0.7, ease: [0.19, 1, 0.22, 1] }}
-              />
-              <BgLayer color="bg-slate-900/30" />
+              <Link href={service.link}>
+                <MotionImage
+                  src={service.img}
+                  alt=""
+                  fill
+                  className="object-cover absolute inset-0"
+                  animate={{ scale: isHovered ? 1.15 : 1 }}
+                  transition={{ duration: 0.7, ease: [0.19, 1, 0.22, 1] }}
+                />
+                <BgLayer color="bg-slate-900/30" />
 
-              <motion.div
-                layout
-                animate={{ opacity: animationFinished ? 1 : 0 }}
-                transition={{ duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
-                className={`w-full  text-slate-50 rounded-md relative   !p-3  ${
-                  animationFinished
-                    ? "backdrop-filter backdrop-blur-lg bg-gradient-to-tr from-[#387EF0]/40 to-[#387EF0]/70 z-10"
-                    : ""
-                }`}
-              >
-                <h3 className="font-semibold relative z-10">{service.title}</h3>
-              </motion.div>
+                <motion.div
+                  layout
+                  animate={{ opacity: animationFinished ? 1 : 0 }}
+                  transition={{ duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
+                  className={`w-full  text-slate-50 rounded-md relative   !p-3  ${
+                    animationFinished
+                      ? "backdrop-filter backdrop-blur-lg bg-gradient-to-tr from-[#387EF0]/40 to-[#387EF0]/70 z-10"
+                      : ""
+                  }`}
+                >
+                  <h3 className="font-semibold relative z-10">
+                    {service.title}
+                  </h3>
+                </motion.div>
+              </Link>
             </motion.li>
           );
         })}
