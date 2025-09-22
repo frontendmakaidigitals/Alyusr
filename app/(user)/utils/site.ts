@@ -34,8 +34,8 @@ export const siteConfig = {
       ],
       imgCard: [
         {
-          button: "Donwload Now",
-          img: "/cover-page.jpeg",
+          button: "Download Now",
+          img: "/cover-page.webp",
           action: "download",
         },
         {
