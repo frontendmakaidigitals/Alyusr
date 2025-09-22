@@ -6,6 +6,7 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import BgLayer from "../app_chunks/BgLayer";
 import { motion } from "motion/react";
@@ -29,11 +30,11 @@ const Herosection = () => {
   }, [activeIndex, api]);
 
   const titles = [
-    "Vision 2030",
-    "Smart Cities",
-    "Engineering",
-    "Architecture & Infrastructure",
-    "Foundation",
+    { title: "Vision 2030", link: "/Who-we-are/Leadership-and-Vision" },
+    { title: "Smart Cities", link: "/Services/Transportation-and-Smart-Mobility/smart-infrastructure-and-digitals-systems" },
+    { title: "Engineering", link: "/Services/Engineering-Infrastructure/Engineering-Services" },
+    { title: "Architecture & Infrastructure", link: "/Services/Urban-Planning/Architecture-Design" },
+    { title: "Foundation", link: "/Services/Engineering-Infrastructure/Foundation-Engineering-Solutions" },
   ];
 
   const slides = [
@@ -87,7 +88,7 @@ const Herosection = () => {
                         duration: 1.4,
                         ease: [0.19, 1, 0.22, 1],
                       }}
-                      className="text-4xl lg:text-5xl lg:text-6xl !text-slate-50 font-[600] max-w-2xl"
+                      className="text-4xl lg:text-5xl !text-slate-50 font-[600] max-w-2xl"
                     >
                       {slides[activeIndex].title}
                     </motion.h1>
@@ -141,24 +142,26 @@ const Herosection = () => {
                 idx < 4 ? "border-r" : ""
               }`}
             >
-              <span className="relative z-10 text-slate-50 block text-sm font-medium whitespace-nowrap overflow-hidden text-ellipsis">
-                {title}
-              </span>
-              {idx === activeIndex % 4 && (
-                <>
-                  <span
-                    className="absolute bottom-0  left-0 h-1 z-0 w-full"
-                    style={{
-                      animation:
-                        "fillBar 8s cubic-bezier(0.19, 1, 0.22, 1) forwards",
-                      height: "100%",
-                    }}
-                    key={activeIndex}
-                  >
-                    <span className="absolute inset-0 w-full h-full  bg-gradient-to-r from-[#1A2980] via-[#2464da] to-[#1A2980]" />
-                  </span>
-                </>
-              )}
+              <Link href={title.link}>
+                <span className="relative z-10 text-slate-50 block text-sm font-medium whitespace-nowrap overflow-hidden text-ellipsis">
+                  {title.title}
+                </span>
+                {idx === activeIndex % 4 && (
+                  <>
+                    <span
+                      className="absolute bottom-0  left-0 h-1 z-0 w-full"
+                      style={{
+                        animation:
+                          "fillBar 8s cubic-bezier(0.19, 1, 0.22, 1) forwards",
+                        height: "100%",
+                      }}
+                      key={activeIndex}
+                    >
+                      <span className="absolute inset-0 w-full h-full  bg-gradient-to-r from-[#1A2980] via-[#2464da] to-[#1A2980]" />
+                    </span>
+                  </>
+                )}
+              </Link>
             </li>
           ))}
         </ul>

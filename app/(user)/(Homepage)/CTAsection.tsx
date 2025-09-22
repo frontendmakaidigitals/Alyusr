@@ -66,7 +66,9 @@ const Marquee = () => {
             today.
           </p>
           <Link
-            href={"/Contact"}
+            href="/brochure/brochure.pdf"
+            target="_blank" 
+            rel="noopener noreferrer"
             className="mt-5 px-6 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-all"
           >
             VIEW NOW

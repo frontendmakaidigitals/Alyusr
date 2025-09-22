@@ -341,7 +341,7 @@ export const siteConfig = {
         },
         {
           label: "Digital Infrastructure Services",
-          link: "Services/Transportation-and-Smart-Mobility/it-and-cybersecurity",
+          link: "/Services/Transportation-and-Smart-Mobility/it-and-cybersecurity",
         },
       ],
     },
