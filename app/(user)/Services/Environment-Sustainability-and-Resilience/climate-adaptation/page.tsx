@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-
-import { motion } from "motion/react";
 import {
   Building2,
   AlertTriangle,
@@ -44,37 +42,37 @@ export default function Page() {
     {
       title: "Natural Disaster Preparedness Review",
       desc: "We assess the current readiness of organizations, cities, and communities to face natural disasters. Our reviews identify strengths, gaps, and opportunities to improve emergency response and recovery systems.",
-      img: "/images/services/disaster-preparedness.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/natural-disaster.webp",
     },
     {
       title: "Hazard Modeling",
       desc: "Using advanced data tools and simulations, we forecast the potential impact of climate hazards such as floods, storms, and droughts. This helps decision-makers plan effectively and reduce risks before they occur.",
-      img: "/images/services/hazard-modeling.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/hazard.png",
     },
     {
       title: "Vulnerability Assessment",
       desc: "We evaluate risks to critical assets, infrastructure, and communities by analyzing exposure and sensitivity to climate threats. The results guide tailored strategies to protect people and property.",
-      img: "/images/services/vulnerability-assessment.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/Assessment.jpg",
     },
     {
       title: "Hazard Mitigation Planning",
       desc: "Our experts design proactive strategies that minimize the impact of disasters. By reducing vulnerabilities in advance, we help safeguard investments and ensure faster recovery after events.",
-      img: "/images/services/mitigation-planning.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/Hazard Mitigatio.jpg",
     },
     {
       title: "Business Continuity Planning/Updates",
       desc: "We develop and update plans that ensure operations continue during and after disruptions. From emergency response to long-term recovery, our strategies help organizations remain resilient and agile.",
-      img: "/images/services/business-continuity.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/Business plan.jpg",
     },
     {
       title: "Climate Adaptation & Resilience Planning",
       desc: "We create long-term adaptation strategies for cities, regions, and organizations. These plans integrate sustainability, resilience, and climate projections to build stronger and more adaptive systems.",
-      img: "/images/services/adaptation-planning.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/climate-adaption.jpg",
     },
     {
       title: "Resilient Infrastructure Design/Build",
       desc: "Our engineers and planners design infrastructure capable of withstanding extreme weather and long-term climate changes. From resilient transport networks to flood-proof facilities, we build systems that protect communities and economies.",
-      img: "/images/services/resilient-infrastructure.jpg",
+      img: "/Environment-Sustainability/climate-adaptation/infrastructure Design.jpeg",
     },
   ];
   const benefits = [
@@ -144,7 +142,13 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img
+              src={
+                "/Environment-Sustainability/climate-adaptation/climate-adaptions.jpg"
+              }
+              className="w-fulll h-full object-cover"
+              alt={"climate adaptation hero"}
+            />
           </div>
         </div>
       </section>
@@ -197,10 +201,10 @@ export default function Page() {
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-[230px] lg:h-[250px] object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-slate-900">
+                  <h3 className="text-xl font-semibold text-slate-900">
                     {service.title}
                   </h3>
                   <p className="mt-2 text-slate-600 text-sm leading-relaxed">

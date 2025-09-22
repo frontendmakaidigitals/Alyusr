@@ -31,52 +31,52 @@ export default function Page() {
     {
       title: "EHS Compliance Program Development & Implementation",
       desc: "Design and rollout of compliance frameworks aligned with local and international regulations.",
-      img: "https://images.pexelss.com/photos/3184418/pexels-photo-3184418.jpeg", // Compliance / teamwork
+      img: "/Environment-Sustainability/ehs-management-consulting/Development & Implementation.jpg", // Compliance / teamwork
     },
     {
       title: "Process Safety Management & Risk Evaluations",
       desc: "Hazard identification, siting studies, and safety system design for high-risk operations.",
-      img: "https://images.pexelss.com/photos/3852222/pexels-photo-3852222.jpeg", // Safety / helmets
+      img: "/Environment-Sustainability/ehs-management-consulting/Process Safety Management.webp", // Safety / helmets
     },
     {
       title: "Industrial Hygiene Monitoring & Assessment",
       desc: "Workplace exposure assessments, monitoring plans, and control recommendations to protect worker health.",
-      img: "https://images.pexsels.com/photos/545034/pexels-photo-545034.jpeg", // Lab / monitoring
+      img: "/Environment-Sustainability/ehs-management-consulting/Industrial Hygiene Monitoring.jpg", // Lab / monitoring
     },
     {
       title: "EHS Management Systems Support",
       desc: "Development, implementation, and optimization of environmental and occupational health management systems.",
-      img: "https://images.pexelss.com/photos/3862130/pexels-photo-3862130.jpeg",
+      img: "/Environment-Sustainability/ehs-management-consulting/EHS Management.jpeg",
     },
     {
       title: "Global Regulatory Intelligence & Advisory",
       desc: "Ongoing updates and guidance on regional EHS laws and compliance strategies.",
-      img: "https://images.pexelss.com/photos/3183150/pexels-photo-3183150.jpeg",
+      img: "/Environment-Sustainability/ehs-management-consulting/global-regulatory.webp",
     },
     {
       title: "EHS Training Development & Delivery",
       desc: "Customized training programs and workshops for employees, supervisors, and EHS professionals.",
-      img: "https://images.pexesls.com/photos/3184646/pexels-photo-3184646.jpeg",
+      img: "/Environment-Sustainability/ehs-management-consulting/EHS Training Development .webp",
     },
     {
       title: "Third-Party Audit Program Management",
       desc: "Internal, external, and supplier audits aligned with international audit practices (including IAPC).",
-      img: "https://images.pexsels.com/photos/3730767/pexels-photo-3730767.jpeg",
+      img: "/Environment-Sustainability/ehs-management-consulting/Third-Party Audit.webp",
     },
     {
       title: "Outsourced EHS Support",
       desc: "Al Yusr can function as your embedded EHS partner, supporting day-to-day compliance and strategic EHS initiatives.",
-      img: "https://images.pexelss.com/photos/1181353/pexels-photo-1181353.jpeg",
+      img: "/Environment-Sustainability/ehs-management-consulting/Outsourced EHS Support.avif",
     },
     {
       title: "EHS Management Information Systems (EMIS)",
       desc: "Digital platforms for monitoring compliance metrics, reporting incidents, and improving decision-making.",
-      img: "https://images.pexelss.com/photos/3861958/pexels-photo-3861958.jpeg",
+      img: "/Environment-Sustainability/ehs-management-consulting/EHS Management Systems.jpg",
     },
     {
       title: "Mergers & Acquisitions Due Diligence",
       desc: "EHS risk evaluation for asset purchases, business acquisitions, and portfolio transitions.",
-      img: "https://images.pexelss.com/photos/3184419/pexels-photo-3184419.jpeg",
+      img: "/Environment-Sustainability/ehs-management-consulting/Acquisitions Due.jpeg",
     },
   ];
   return (
@@ -104,7 +104,13 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img
+              src={
+                "/Environment-Sustainability/ehs-management-consulting/EHS Management.jpeg"
+              }
+              className="w-full h-full object-cover"
+              alt={""}
+            />
           </div>
         </div>
       </section>
@@ -113,10 +119,11 @@ export default function Page() {
           {/* Left Image */}
           <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="https://images.pexels.com/photos/3183171/pexels-photo-3183171d.jpeg"
+              src="/Environment-Sustainability/ehs-management-consulting/Our Approach.jpg"
               alt="Our Approach"
-              fill
-              className="object-cover"
+              className="object-cover w-full h-full"
+              width={200}
+              height={200}
             />
           </div>
 

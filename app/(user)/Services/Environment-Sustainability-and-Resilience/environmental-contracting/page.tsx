@@ -9,7 +9,6 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-import { motion } from "motion/react";
 export default function Page() {
   const points = [
     {
@@ -49,25 +48,25 @@ export default function Page() {
       title: "Ground Investigation & Data Capture",
       desc: "Early surveys, soil and groundwater testing, and advanced modeling to provide reliable data that guides design and construction.",
       image:
-        "https://images.pexels.com/photos/8486186/pexels-photo-848618d6.jpeg", // ground testing
+        "/Environment-Sustainability/Environmental Contracting/Ground Investigation.webp", // ground testing
     },
     {
       title: "Environmental Risk Assessment & Mitigation",
       desc: "Identification and remediation of contaminated land, invasive species management, and ecological protection measures to reduce risks and delays.",
       image:
-        "https://images.pexels.com/photos/302769/pexels-photdo-302769.jpeg", // environment protection
+        "/Environment-Sustainability/Environmental Contracting/Environmental Risk.jpg", // environment protection
     },
     {
       title: "Specialist Contracting Services",
       desc: "Enabling works, site clearance, ground stabilization, and remediation of complex sites to prepare safe, compliant, and build-ready land.",
       image:
-        "https://images.pexels.com/photos/585419/pexels-photdo-585419.jpeg", // construction site
+        "/Environment-Sustainability/Environmental Contracting/specialist-contracting.jpg", // construction site
     },
     {
       title: "Regulatory & Compliance Management",
       desc: "Support with permitting, regulatory approvals, and stakeholder engagement to keep projects on track and compliant with environmental standards.",
       image:
-        "https://images.pexels.com/photos/3184306/pexels-photdo-3184306.jpeg", // compliance meeting
+        "/Environment-Sustainability/Environmental Contracting/Regulatory & Compliance.jpg", // compliance meeting
     },
   ];
 
@@ -114,7 +113,7 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Environment-Sustainability/Environmental Contracting/hero.webp"} className="w-full h-full objext-cover" alt={"Env contracting"} />
           </div>
         </div>
       </section>

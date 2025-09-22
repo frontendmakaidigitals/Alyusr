@@ -2,7 +2,6 @@
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 import { Leaf, Users, Building2, Recycle, BadgeCheck } from "lucide-react";
-import Image from "next/image";
 import { motion } from "motion/react";
 export default function Page() {
   const approaches = [
@@ -32,67 +31,67 @@ export default function Page() {
     {
       title: "Baseline Field Studies",
       desc: "We conduct biological and ecological surveys to establish a strong foundation for environmental planning.",
-      img: "https://images.pexels.com/dphotos/70365/pexels-photo-70365.jpeg", // 🌿 nature survey
+      img: "/Environment-Sustainability/land-recovery/Baseline Field Studies.jpg", // 🌿 nature survey
     },
     {
       title: "Cultural & Heritage Resources",
       desc: "Comprehensive assessments ensure that cultural heritage and Indigenous communities are respected and preserved.",
-      img: "https://images.pexels.com/pdhotos/259783/pexels-photo-259783.jpeg", // 🏛️ heritage site
+      img: "/Environment-Sustainability/land-recovery/Cultural & Heritage Resources.jpg", // 🏛️ heritage site
     },
     {
       title: "Digital Analyses & Data Conveyance",
       desc: "Using drones, GIS mapping, and interactive platforms, we deliver digital environmental impact reports.",
-      img: "https://images.pexels.com/phdotos/1109543/pexels-photo-1109543.jpeg", // 🚁 drone mapping
+      img: "/Environment-Sustainability/land-recovery/Digital Analyses & Data Conveyance.webp", // 🚁 drone mapping
     },
     {
       title: "Ecological Design, Implementation & Restoration",
       desc: "We restore habitats, design sustainable landscapes, and rehabilitate ecosystems for resilience.",
-      img: "https://images.pexels.com/phdotos/1212693/pexels-photo-1212693.jpeg", // 🌱 eco restoration
+      img: "/Environment-Sustainability/land-recovery/Ecological Design.jpg", // 🌱 eco restoration
     },
     {
       title: "Environmental & Social Impact Assessments",
       desc: "Legally compliant impact assessments balancing regulatory requirements with business objectives.",
-      img: "https://images.pexels.com/phdotos/325944/pexels-photo-325944.jpeg", // 📊 impact analysis
+      img: "/Environment-Sustainability/land-recovery/Environmental & Social.jpeg", // 📊 impact analysis
     },
     {
       title: "Environmental Planning, Mitigation & Monitoring",
       desc: "Strategies to minimize environmental impacts during construction and operation with ongoing monitoring.",
-      img: "https://images.pexels.com/phdotos/325185/pexels-photo-325185.jpeg", // 🌍 planning
+      img: "/Environment-Sustainability/land-recovery/Environmental-Planning.jpg", // 🌍 planning
     },
     {
       title: "Environmental Policy Development",
       desc: "Crafting policies that align with regulations and global standards, supporting compliance & sustainability.",
-      img: "https://images.pexels.com/phdotos/3184465/pexels-photo-3184465.jpeg", // 📑 policy making
+      img: "/Environment-Sustainability/land-recovery/Environmental Policy.jpg", // 📑 policy making
     },
     {
       title: "Regulatory Permitting & Negotiation",
       desc: "We work with regulatory bodies to secure permits, negotiate requirements, and resolve challenges early.",
-      img: "https://images.pexels.com/phdotos/5668473/pexels-photo-5668473.jpeg", // 📝 agreement
+      img: "/Environment-Sustainability/land-recovery/Regulatory Permitting.jpg", // 📝 agreement
     },
     {
       title: "Siting, Feasibility Studies & Program Management",
       desc: "We assess feasibility, identify optimal locations, and provide management support for approvals.",
-      img: "https://images.pexels.com/phodtos/313691/pexels-photo-313691.jpeg", // 🏗️ site planning
+      img: "/Environment-Sustainability/land-recovery/Siting, Feasibility Studies.jpg", // 🏗️ site planning
     },
     {
       title: "Stakeholder & Public Engagement",
       desc: "We foster transparent dialogue with stakeholders through workshops, consultations, and digital platforms.",
-      img: "https://images.pexels.com/phodtos/3183197/pexels-photo-3183197.jpeg", // 👥 engagement
+      img: "/Environment-Sustainability/land-recovery/Stakeholder & Public.webp", // 👥 engagement
     },
     {
       title: "Fate & Effects Transport / Dispersion Modeling",
       desc: "Using advanced modeling, we predict pollutant movement to evaluate risks and guide mitigation.",
-      img: "https://images.pexels.com/phodtos/586744/pexels-photo-586744.jpeg", // 🌊 modeling
+      img: "/Environment-Sustainability/land-recovery/Fate & Effects.jpg", // 🌊 modeling
     },
     {
       title: "Visual & Noise Impact Assessments",
       desc: "Analyzing visual and noise impacts, we provide solutions to reduce community concerns and improve acceptance.",
-      img: "https://images.pexels.com/phodtos/3408744/pexels-photo-3408744.jpeg", // 🔊 noise impact
+      img: "/Environment-Sustainability/land-recovery/Noise Impact Assessments.jpg", // 🔊 noise impact
     },
     {
       title: "Resilience & Climate Change",
       desc: "Integrating climate change considerations into assessments to help projects adapt to long-term challenges.",
-      img: "https://images.pexels.com/phodtos/929385/pexels-photo-929385.jpeg", // ☀️ climate resilience
+      img: "/Environment-Sustainability/land-recovery/climate-chnage.webp", // ☀️ climate resilience
     },
   ];
   const points = [
@@ -144,7 +143,7 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Environment-Sustainability/land-recovery/hero.jpg"} className="w-full h-full object-cover" alt={"land recovery"} />
           </div>
         </div>
       </section>

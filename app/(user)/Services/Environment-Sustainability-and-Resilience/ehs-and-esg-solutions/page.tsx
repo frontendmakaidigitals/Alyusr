@@ -24,43 +24,43 @@ export default function Page() {
       title: "Strategy & Roadmap",
       desc: "We begin by aligning with your organizational goals, analyzing existing systems, and defining a long-term digital strategy that supports future growth and compliance.",
 
-      img: "/images/strategy.jpg",
+      img: "/Environment-Sustainability/esg-solutions/Strategy & Roadmap.png",
     },
     {
       title: "Requirements & Gap Analysis",
       desc: "Through workshops and assessments, we translate business objectives into technical requirements, identifying where improvements or integrations are needed.",
 
-      img: "/images/gap-analysis.jpg",
+      img: "/Environment-Sustainability/esg-solutions/requirements.webp",
     },
     {
       title: "Technology Selection",
       desc: "Using our knowledge of leading platforms, we help select the right-fit EHS/ESG software, avoiding costly over-customization while ensuring the solution meets your needs.",
 
-      img: "/images/technology.jpg",
+      img: "/Environment-Sustainability/esg-solutions/Technology Selection.jpg",
     },
     {
       title: "Design & Implementation",
       desc: "We configure and deploy systems that improve data visibility, automation, and integration with enterprise applications. Mobile-ready and user-friendly solutions ensure adoption.",
 
-      img: "/images/implementation.jpg",
+      img: "/Environment-Sustainability/esg-solutions/Design & Implementation.avif",
     },
     {
       title: "Interfaces & Dashboards",
       desc: "Our team creates web-based interfaces, mobile tools, and tailored dashboards that simplify workflows, reduce costs, and provide real-time insights for decision-making.",
 
-      img: "/images/dashboard.jpg",
+      img: "/Environment-Sustainability/esg-solutions/Interfaces & Dashboards.png",
     },
     {
       title: "Reporting & Analytics",
       desc: "We deliver advanced reporting and ESG dashboards that integrate seamlessly with your existing systems, ensuring compliance with global standards while providing investor-ready data.",
 
-      img: "/images/analytics.jpg",
+      img: "/Environment-Sustainability/esg-solutions/Reporting & Analytics.jpg",
     },
     {
       title: "Change Management & Support",
       desc: "From training to post-implementation assistance, we ensure smooth transitions. Our flexible support model keeps your team empowered while providing ongoing expertise when needed.",
 
-      img: "/images/support.jpg",
+      img: "/Environment-Sustainability/esg-solutions/support.avif",
     },
   ];
   const differentiators = [
@@ -127,7 +127,13 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img
+              src={
+                "/Environment-Sustainability/esg-solutions/hero.jpg"
+              }
+              className="w-full h-full object-cover"
+              alt={"EHS and ESG"}
+            />
           </div>
         </div>
       </section>

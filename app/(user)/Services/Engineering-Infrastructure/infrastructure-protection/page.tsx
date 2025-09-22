@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-import { motion } from "framer-motion";
 import { BadgeCheck, Globe, Users, ShieldCheck, Lightbulb } from "lucide-react";
 import {
   Shield,
@@ -99,12 +98,12 @@ export default function ConstructionManagementPage() {
       <section className=" w-full h-[500px] text-center ">
         <Image
           src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
+            "/Engineering-Infrastructure/infrastructure-protection/Critical Infrastructure Protection.jpg"
           }
           className="w-full h-full object-cover object-bottom"
-          alt={""}
-          width={500}
-          height={200}
+          alt={"Hero"}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="py-20 bg-gray-50">
@@ -135,7 +134,7 @@ export default function ConstructionManagementPage() {
           {/* Image Section */}
           <div className="order-1 lg:order-2 h-[450px]">
             <img
-              src="https://images.pexels.com/photos/5439438/pexels-photo-5439438.jpeg"
+              src="/Engineering-Infrastructure/infrastructure-protection/Securing the Foundations.jpeg"
               alt="Critical Infrastructure Protection"
               className="rounded-xl shadow-lg w-full h-full object-cover object-top"
             />
@@ -148,7 +147,7 @@ export default function ConstructionManagementPage() {
           {/* Image Section */}
           <div className="order-1">
             <img
-              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg"
+              src="/Engineering-Infrastructure/infrastructure-protection/Resilience.jpg"
               alt="Converged Resilience"
               className="rounded-xl shadow-lg w-full h-full object-cover"
             />

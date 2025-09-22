@@ -3,8 +3,6 @@ import Image from "next/image";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { Globe2, Cpu, FileCheck, Users, BadgeCheck } from "lucide-react";
 
-import { motion } from "motion/react";
-
 export default function Page() {
   const items = [
     {
@@ -32,67 +30,67 @@ export default function Page() {
     {
       title: "Baseline Field Studies",
       desc: "We conduct biological and ecological surveys to establish a strong foundation for environmental planning. These studies identify sensitive habitats, species, and resources that must be protected during project development.",
-      img: "/images/services/baseline.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Baseline Field Studies.jpg",
     },
     {
       title: "Cultural & Heritage Resources",
       desc: "Our experts in archaeology, anthropology, and historic architecture provide comprehensive assessments, ensuring that cultural heritage and Indigenous communities are respected and preserved.",
-      img: "/images/services/cultural.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Cultural & Heritage Resources.jpg",
     },
     {
       title: "Digital Analyses & Data Conveyance",
       desc: "Using drones, GIS mapping, and interactive platforms, we deliver digital environmental impact reports that enhance transparency and speed up permitting processes.",
-      img: "/images/services/digital.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Digital Analyses & Data Conveyance.webp",
     },
     {
       title: "Ecological Design, Implementation & Restoration",
       desc: "We integrate science-based solutions to restore natural habitats, design sustainable landscapes, and rehabilitate ecosystems for long-term resilience.",
-      img: "/images/services/ecological.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Ecological Design.jpg",
     },
     {
       title: "Environmental & Social Impact Assessments",
       desc: "Our specialists prepare and deliver legally compliant impact assessments, balancing regulatory requirements with business objectives to keep projects on track.",
-      img: "/images/services/impact.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Environmental & Social.jpeg",
     },
     {
       title: "Environmental Planning, Mitigation & Monitoring",
       desc: "We design strategies to minimize environmental impacts during construction and operation, followed by ongoing monitoring to ensure compliance and sustainability.",
-      img: "/images/services/monitoring.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Environmental-Planning.jpg",
     },
     {
       title: "Environmental Policy Development",
       desc: "Our team helps clients craft policies and strategies that align with local regulations and global environmental standards, supporting both compliance and sustainability goals.",
-      img: "/images/services/policy.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Environmental Policy.jpg",
     },
     {
       title: "Regulatory Permitting & Negotiation",
       desc: "We work closely with regulatory bodies to secure permits, negotiate requirements, and resolve potential challenges early in the project lifecycle.",
-      img: "/images/services/permits.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Regulatory Permitting.jpg",
     },
     {
       title: "Siting, Feasibility Studies & Program Management",
       desc: "We assess project feasibility, identify optimal locations, and provide end-to-end management support to streamline permitting and approvals.",
-      img: "/images/services/feasibility.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Siting, Feasibility Studies.jpg",
     },
     {
       title: "Stakeholder & Public Engagement",
       desc: "Through workshops, consultations, and digital platforms, we foster transparent dialogue with stakeholders, ensuring community support and trust.",
-      img: "/images/services/stakeholders.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Stakeholder & Public.webp",
     },
     {
       title: "Fate & Effects Transport / Dispersion Modeling",
       desc: "Using advanced modeling, we predict the movement of air, water, and soil pollutants to evaluate risks and guide mitigation measures.",
-      img: "/images/services/modeling.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Fate & Effects.jpg",
     },
     {
       title: "Visual & Noise Impact Assessments",
       desc: "We analyze how projects affect landscapes, views, and noise levels, providing solutions to reduce community impacts and improve acceptance.",
-      img: "/images/services/noise.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/Noise Impact Assessments.jpg",
     },
     {
       title: "Resilience & Climate Change",
       desc: "Our team integrates climate change considerations into environmental assessments, helping projects adapt to long-term environmental challenges.",
-      img: "/images/services/climate.jpg",
+      img: "/Environment-Sustainability/Environmental Assessment/climate-chnage.webp",
     },
   ];
   const reasons = [
@@ -148,7 +146,13 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img
+              src={
+                "/Environment-Sustainability/Environmental Assessment/hero.png"
+              }
+              className="w-full h-full object-cover"
+              alt={"environmental assesment hero"}
+            />
           </div>
         </div>
       </section>
@@ -176,7 +180,7 @@ export default function Page() {
       </section>
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12 text-center">
             Our <span className="text-green-600">Services</span>
           </h2>
 
@@ -184,9 +188,9 @@ export default function Page() {
             {services.map((service, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-4 flex flex-col"
+                className="bg-white p-1 rounded-2xl shadow-sm hover:shadow-lg transition flex flex-col"
               >
-                <div className="relative w-full h-48 rounded-xl overflow-hidden">
+                <div className="relative w-full h-[250px] rounded-xl overflow-hidden">
                   <Image
                     src={service.img}
                     alt={service.title}
@@ -194,10 +198,12 @@ export default function Page() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-gray-900">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-gray-600 text-sm">{service.desc}</p>
+                <div className="p-2 mt-1">
+                  <h3 className=" text-lg font-semibold text-gray-900">
+                    {service.title}
+                  </h3>
+                  <p className="mt-2 text-gray-600 text-sm">{service.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -205,12 +211,12 @@ export default function Page() {
       </section>
       <section className="py-16 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12 text-center">
             Why Choose <span className="text-blue-600">Al Yusr</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {reasons.map((item, idx) => (
-              <div key={idx} className="flex items-start space-x-4">
+              <div key={idx} className="flex bg-slate-100 p-3 rounded-xl items-start space-x-4">
                 <span>
                   <BadgeCheck className="w-7 h-7 fill-green-500 text-white flex-shrink-0 mt-1" />
                 </span>

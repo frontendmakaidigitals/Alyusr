@@ -18,34 +18,33 @@ export default function Page() {
       description:
         "We support clients in creating climate action and adaptation plans tailored to their unique environmental, economic, and social contexts. Our plans incorporate emissions reduction pathways, adaptation measures, and financing strategies to ensure sustainable and achievable implementation.",
       image:
-        "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg", // replace with license-free image
+        "/Environment-Sustainability/climate-response/climate-action-plan.jpg", // replace with license-free image
     },
     {
       title: "Climate Risk & Vulnerability Assessments",
       description:
         "Our team conducts risk assessments that evaluate vulnerabilities across infrastructure, communities, and ecosystems. These assessments guide decision-makers in prioritizing investments and strengthening resilience to floods, heatwaves, droughts, and severe weather events.",
-      image:
-        "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg",
+      image: "/Environment-Sustainability/climate-response/climate-risk.jpeg",
     },
     {
       title: "Climate Finance & Policy Advisory",
       description:
         "We help clients access climate finance mechanisms and align projects with international standards such as the Paris Agreement, UN SDGs, and Green Climate Fund requirements. Our advisory ensures climate initiatives attract the political support and funding they need.",
-      image:
-        "https://images.pexels.com/photos/4386373/pexels-photo-4386373.jpeg",
+      image: "/Environment-Sustainability/climate-response/Climate Finance.jpg",
     },
     {
       title: "Resilient Infrastructure & Design",
       description:
         "From coastal protection systems to flood-resilient urban planning, we integrate climate considerations into infrastructure design and development. Our goal is to create assets that can withstand future climate shocks while remaining cost-effective and sustainable.",
-      image: "https://images.pexels.com/photos/439416/pexels-photo-439416.jpeg",
+      image:
+        "/Environment-Sustainability/climate-response/Resilient Infrastructure.jpeg",
     },
     {
       title: "Knowledge Sharing & Global Collaboration",
       description:
         "Leveraging our global climate response platform, we connect experts across geographies to share emerging science, innovative tools, and best practices. This ensures that our clients benefit from the latest international experience and lessons learned.",
       image:
-        "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+        "/Environment-Sustainability/climate-response/Knowledge Sharing.avif",
     },
   ];
   const benefits = [
@@ -107,13 +106,17 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img
+              src={"/Environment-Sustainability/climate-response/climate.jpg"}
+              className="w-full h-full object-cover"
+              alt={""}
+            />
           </div>
         </div>
       </section>
       <section className="relative isolate overflow-hidden bg-gradient-to-b from-white to-slate-50 py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 lg:text-4xl lg:text-5xl text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-slate-900 lg:text-5xl text-center">
             Our Climate Response Services
           </h2>
 

@@ -121,7 +121,7 @@ export default function Page() {
       title: "Smart Environmental Solutions",
       description:
         "We utilize the latest technology and digital tools to drive innovation in environmental consulting:",
-      image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg", // Replace with your preferred license-free image
+      image: "/Environment-Sustainability/environmental-services/smart-env.avif", // Replace with your preferred license-free image
       reverse: false,
       items: [
         "Mobile field data collection applications",
@@ -137,7 +137,7 @@ export default function Page() {
       description:
         "Al Yusr integrates advanced tools and scientific methods to deliver accurate, actionable insights:",
       image:
-        "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg", // Replace with your preferred license-free image
+        "/Environment-Sustainability/environmental-services/Technical Edge.avif", // Replace with your preferred license-free image
       reverse: true,
       items: [
         "Remote Sensing & GIS Analysis",
@@ -181,7 +181,7 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Environment-Sustainability/environmental-services/hero.avif"} className="w-full h-full object-cover" alt={"Hero "} />
           </div>
         </div>
       </section>

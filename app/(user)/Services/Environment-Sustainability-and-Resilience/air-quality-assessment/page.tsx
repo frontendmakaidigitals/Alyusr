@@ -33,66 +33,67 @@ export default function Page() {
       icon: Cpu,
     },
   ];
+  
   const services = [
     {
       title: "Air Permitting & Compliance Strategy",
       desc: "We help clients navigate complex permitting processes with clarity, ensuring full compliance with regulatory requirements while minimizing costs and delays.",
-      img: "/images/air-permitting.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/air-permitting.jpg",
     },
     {
       title: "Air Pollution Control Engineering",
       desc: "Our engineers design and implement cutting-edge emissions reduction systems, tailored to meet the unique needs of each industry sector.",
-      img: "/images/pollution-control.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Air-Pollution-Control.png",
     },
     {
       title: "Ambient Monitoring & Source Testing",
       desc: "Through on-site monitoring and source testing, we measure air quality, identify pollution sources, and verify compliance with environmental standards.",
-      img: "/images/monitoring-testing.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Ambient Monitoring.webp",
     },
     {
       title: "Atmospheric Dispersion, Accidental Release & CFD Modeling",
       desc: "Using advanced simulation tools, we predict how pollutants disperse in different conditions, helping clients prepare for and mitigate potential risks.",
-      img: "/images/dispersion-modeling.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Atmospheric-Dispersion.jpg",
     },
     {
       title: "Carbon Management & Sustainability Advisory",
       desc: "We create practical carbon reduction strategies that align with international climate targets, enabling clients to meet sustainability commitments.",
-      img: "/images/carbon-management.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Carbon Management.webp",
     },
     {
       title: "Construction Impact Assessments",
       desc: "Our specialists evaluate air quality impacts during construction activities and provide solutions to mitigate dust, emissions, and other risks.",
-      img: "/images/construction-impact.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/construction.jpg",
     },
     {
       title: "Emission Inventories & Mobile Source Studies",
       desc: "By tracking emissions from stationary facilities and mobile fleets, we provide the data needed for effective regulatory compliance and planning.",
-      img: "/images/emission-inventories.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Emission Inventories.webp",
     },
     {
       title: "Health Risk Assessments",
       desc: "We assess the health impacts of air pollution on workers and surrounding communities, offering strategies to safeguard well-being and safety.",
-      img: "/images/health-risk.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Health Risk.webp",
     },
     {
       title: "Indoor Air Quality & Occupational Safety Management",
       desc: "Our team ensures healthy indoor environments by monitoring air quality and managing workplace safety standards across industries.",
-      img: "/images/indoor-air.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Indoor Air Quality.png",
     },
     {
       title: "Odor & Noise Modeling, Monitoring, and Control",
       desc: "We deliver technical solutions to reduce nuisance odors and noise pollution, helping clients protect community relations and meet compliance.",
-      img: "/images/odor-noise.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Odor & Noise Modeling.jpg",
     },
     {
       title: "Expert Witness Testimony",
       desc: "Our experts provide credible, science-based insights to support clients in legal and regulatory cases related to air quality issues.",
-      img: "/images/expert-testimony.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Expert Witness Testimony.jpg",
     },
     {
       title: "Strategic Technical Support",
       desc: "We advise trade associations, governments, and private clients with customized strategies for policy development, compliance, and long-term planning.",
-      img: "/images/strategic-support.jpg",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Strategic Technical Support.jpg",
     },
   ];
   const points = [
@@ -128,7 +129,7 @@ export default function Page() {
             </p>
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img src={""} className="" alt={""} />
+            <img src={"/Environment-Sustainability/Air-Quality-Assessment/hero.jpg"} className="w-full h-full object-cover" alt={"air quality hero"} />
           </div>
         </div>
       </section>
@@ -167,7 +168,7 @@ export default function Page() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold text-center text-gray-900"
+            className="text-3xl md:text-5xl font-bold text-center text-gray-900"
           >
             Our Services
           </motion.h2>
@@ -183,6 +184,7 @@ export default function Page() {
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{once:true}}
                 transition={{ delay: idx * 0.05, duration: 0.5 }}
                 className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden"
               >
