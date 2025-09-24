@@ -20,10 +20,9 @@ interface Blog {
   id: string;
   title: string;
   content: string;
-  imageURL: string;
+  image: string;
   author: string;
   category: string;
-  createdAt?: string | null;
 }
 interface BlogsResponse {
   blogs: Blog[];
@@ -52,110 +51,118 @@ const Page = () => {
 
   return (
     <div className="pb-24">
-      <div className="w-full overflow-hidden">
-        <Carousel
-          plugins={[plugin.current]}
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
-          className="w-full"
-        >
-          <CarouselContent className="h-[70vh] lg:h-[95vh] p-1 rounded-xl">
-            {blogs
-              .sort((a, b) => {
-                const aTime = a.createdAt ? new Date(a.createdAt).getTime() : 0;
-                const bTime = b.createdAt ? new Date(b.createdAt).getTime() : 0;
-                return bTime - aTime;
-              })
-              .slice(0, 3)
-              .map((blog) => (
-                <CarouselItem className="h-full" key={blog.id}>
-                  <Link
-                    href={`/blogs/${encodeURIComponent(
-                      blog.title.toLowerCase().replace(/\s+/g, "-")
-                    )}`}
-                  >
-                    <div className="w-full h-full relative">
-                      <BgLayer color={"bg-slate-900/40 z-10"} />
-                      <div className="absolute inset-0 w-full rounded-lg overflow-hidden h-full">
-                        <img
-                          className="w-full h-full object-cover"
-                          src={blog.imageURL}
-                          alt={blog.title}
-                        />
-                      </div>
-                      <BgLayer color="bg-slate-900/20" />
-                      <div className="relative z-20 flex flex-col lg:flex-row items-end justify-end lg:justify-between container py-9 w-full h-full">
-                        <div>
-                          <span className="p-2 text-xs bg-dimondra-white text-slate-900 rounded-lg">
-                            {blog.category}
-                          </span>
-                          <h1 className="text-4xl lg:text-5xl  max-w-2xl mt-3 text-slate-50 tracking-tighter font-[500]">
-                            {blog.title}
-                          </h1>
-                          <div className="mt-1 max-w-3xl">
-                            {blog.content && (
-                              <Editor
-                                editorSerializedState={
-                                  typeof blog.content === "string"
-                                    ? JSON.parse(blog.content)
-                                    : blog.content
-                                }
-                                readOnly
-                                clampLines={2}
-                                blogPage={false}
-                                text="text-slate-50"
-                              />
-                            )}
+      {blogs.length > 0 ? (
+        <>
+          <div className="w-full overflow-hidden">
+            <Carousel
+              plugins={[plugin.current]}
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
+              className="w-full"
+            >
+              <CarouselContent className="h-[70vh] lg:h-[95vh] p-1 rounded-xl">
+                {blogs
+                  .sort((a, b) => {
+                    const aTime = a.id ? new Date(a.id).getTime() : 0;
+                    const bTime = b.id ? new Date(b.id).getTime() : 0;
+                    return bTime - aTime;
+                  })
+                  .slice(0, 3)
+                  .map((blog) => (
+                    <CarouselItem className="h-full" key={blog.id}>
+                      <Link
+                        href={`/blogs/${encodeURIComponent(
+                          blog.title.toLowerCase().replace(/\s+/g, "-")
+                        )}`}
+                      >
+                        <div className="w-full h-full relative">
+                          <BgLayer color={"bg-slate-900/40 z-10"} />
+                          <div className="absolute inset-0 w-full rounded-lg overflow-hidden h-full">
+                            <img
+                              className="w-full h-full object-cover"
+                              src={blog.image}
+                              alt={blog.title}
+                            />
+                          </div>
+                          <BgLayer color="bg-slate-900/20" />
+                          <div className="relative z-20 flex flex-col lg:flex-row items-end justify-end lg:justify-between container py-9 w-full h-full">
+                            <div>
+                              <span className="p-2 text-xs bg-red-100 text-slate-900 rounded-lg">
+                                {blog.category}
+                              </span>
+                              <h1 className="text-4xl lg:text-5xl  max-w-2xl mt-3 text-slate-50 tracking-tighter font-[500]">
+                                {blog.title}
+                              </h1>
+                              <div className="mt-1 max-w-3xl">
+                                {blog.content && (
+                                  <Editor
+                                    editorSerializedState={
+                                      typeof blog.content === "string"
+                                        ? JSON.parse(blog.content)
+                                        : blog.content
+                                    }
+                                    readOnly
+                                    clampLines={2}
+                                    blogPage={false}
+                                    text="text-slate-50"
+                                  />
+                                )}
+                              </div>
+                            </div>
+                            <div className="mt-5 lg:mt-0">
+                              <div className="flex items-center gap-4">
+                                <div className="p-2 bg-slate-200 rounded-full">
+                                  <User className="size-[16px]" />
+                                </div>
+                                <p className="text-slate-50">{blog.author}</p>
+                              </div>
+                              <div className="flex items-center gap-4 mt-3">
+                                <div className="p-2 bg-slate-200 rounded-full">
+                                  <Calendar className="size-[16px]" />
+                                </div>
+                                <p className="text-slate-50 mt-2">
+                                  {blog.id
+                                    ? new Date(blog.id).toLocaleDateString()
+                                    : ""}
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div className="mt-5 lg:mt-0">
-                          <div className="flex items-center gap-4">
-                            <div className="p-2 bg-slate-200 rounded-full">
-                              <User className="size-[16px]" />
-                            </div>
-                            <p className="text-slate-50">{blog.author}</p>
-                          </div>
-                          <div className="flex items-center gap-4 mt-3">
-                            <div className="p-2 bg-slate-200 rounded-full">
-                              <Calendar className="size-[16px]" />
-                            </div>
-                            <p className="text-slate-50 mt-2">
-                              {blog.createdAt
-                                ? new Date(blog.createdAt).toLocaleDateString()
-                                : ""}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </CarouselItem>
-              ))}
-          </CarouselContent>
+                      </Link>
+                    </CarouselItem>
+                  ))}
+              </CarouselContent>
 
-          {/* Carousel Controls */}
-          <div className="absolute top-1/2 left-2 lg:-left-10 flex items-center justify-center">
-            <CarouselPrevious className="relative left-0 translate-x-0 hover:translate-x-0 hover:bg-primary/90" />
+              {/* Carousel Controls */}
+              <div className="absolute top-1/2 left-2 lg:-left-10 flex items-center justify-center">
+                <CarouselPrevious className="relative left-0 translate-x-0 hover:translate-x-0 hover:bg-primary/90" />
+              </div>
+              <div className="absolute top-1/2 right-2 lg:-right-10 flex items-center justify-center">
+                <CarouselNext className="relative right-0 translate-x-0 hover:translate-x-0 hover:bg-primary/90" />
+              </div>
+            </Carousel>
           </div>
-          <div className="absolute top-1/2 right-2 lg:-right-10 flex items-center justify-center">
-            <CarouselNext className="relative right-0 translate-x-0 hover:translate-x-0 hover:bg-primary/90" />
-          </div>
-        </Carousel>
-      </div>
 
-      {/* Topics */}
-      <div className="container my-10">
-        <h2 className="font-[600] text-4xl text-dimondra-black tracking-tighter">
-          Blogs Topics
-        </h2>
-        <p className="text-sm mt-2">
-          Discover blogs categorized by themes — from AI breakthroughs to modern
-          web development trends.
-        </p>
-      </div>
-      <div className="container">
-        <BlogTopic blogs={blogs} />
-      </div>
+          {/* Topics */}
+          <div className="container my-10">
+            <h2 className="font-[600] text-4xl text-dimondra-black tracking-tighter">
+              Blogs Topics
+            </h2>
+            <p className="text-sm mt-2">
+              Discover blogs categorized by themes — from AI breakthroughs to
+              modern web development trends.
+            </p>
+          </div>
+          <div className="container">
+            <BlogTopic blogs={blogs} />
+          </div>
+        </>
+      ) : (
+        <div className="w-full flex justify-center items-center h-[80vh]">
+          <p className="text-slate-500 text-xl">No Blogs Found</p>
+        </div>
+      )}
     </div>
   );
 };
@@ -168,8 +175,8 @@ const BlogTopic = ({ blogs }: { blogs: Blog[] }) => {
 
   const sortedBlogs = useMemo(() => {
     return [...blogs].sort((a, b) => {
-      const bTime = b.createdAt ? new Date(b.createdAt).getTime() : 0;
-      const aTime = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+      const bTime = b.id ? new Date(b.id).getTime() : 0;
+      const aTime = a.id ? new Date(a.id).getTime() : 0;
       return bTime - aTime;
     });
   }, [blogs]);
@@ -221,7 +228,7 @@ const BlogTopic = ({ blogs }: { blogs: Blog[] }) => {
                     <div className="h-[250px] lg:h-[220px] w-full rounded-lg overflow-hidden">
                       <img
                         className="w-full h-full object-cover"
-                        src={blog.imageURL}
+                        src={blog.image}
                         alt={blog.title}
                       />
                     </div>

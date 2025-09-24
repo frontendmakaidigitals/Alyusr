@@ -23,17 +23,19 @@ function slugify(text: string): string {
     .replace(/\s+/g, "-");
 }
 
-// 🔹 Fetch all blogs from your API
 async function getBlogs(): Promise<Blog[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blogs`, {
-    next: { revalidate: 60 }, // ISR-friendly (revalidate every 60s)
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/api/blogs`,
+    {
+      next: { revalidate: 60 },
+    }
+  );
 
   if (!res.ok) throw new Error("Failed to fetch blogs");
-  return res.json();
+  const data = await res.json();
+  return data.blogs;
 }
 
-// 🔹 Metadata
 export async function generateMetadata({
   params,
 }: {
@@ -64,7 +66,6 @@ export async function generateMetadata({
   };
 }
 
-// 🔹 Page
 export default async function Page({
   params,
 }: {
@@ -72,7 +73,6 @@ export default async function Page({
 }) {
   const { slug } = await params;
   const blogs = await getBlogs();
-
   const blog = blogs.find(
     (b) => slugify(b.title) === slugify(decodeURIComponent(slug))
   );

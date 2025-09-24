@@ -1,4 +1,3 @@
-// app/blog/[slug]/BlogClient.tsx
 "use client";
 import {
   User,
@@ -10,7 +9,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import Blogs from "../../app_chunks/Blogs";
 import { Editor } from "@/components/blocks/editor-00/editor";
 
 export default function BlogClient({ blog }: { blog: any }) {
@@ -25,8 +24,6 @@ export default function BlogClient({ blog }: { blog: any }) {
     return `${minutes} min read`;
   }
 
-  console.log(blog);
-
   return (
     <main className="pt-28 relative container ">
       <div className="flex flex-col items-center">
@@ -40,20 +37,16 @@ export default function BlogClient({ blog }: { blog: any }) {
 
       <div className="flex flex-col items-center mt-8">
         {/* Blog Info */}
-        <ul className="flex flex-row  justify-between lg:justify-center items-center gap-4 text-sm  sm:divide-y-0 sm:divide-x divide-slate-300 w-full  lg:px-0">
-          <li className="flex items-center gap-3 py-2 sm:py-0">
-            <div>
-              <User size={16} />
-            </div>
+        <ul className="flex flex-row justify-between lg:justify-center items-center text-sm sm:divide-y-0 sm:divide-x divide-slate-300 w-full lg:px-0">
+          <li className="flex items-center gap-3 py-2 sm:py-0 px-3">
+            <User size={16} />
             <p>{blog?.author}</p>
           </li>
-          <li className="flex items-center gap-2 py-2 sm:py-0 pl-0 sm:pl-3">
-            <div>
-              <Calendar size={"16"} />
-            </div>
-            {blog.createdAt ? <>{blog.createdAt}</> : null}
+          <li className="flex items-center gap-3 py-2 sm:py-0 px-3">
+            <Calendar size={16} />
+            {blog.id ? <>{blog.id}</> : null}
           </li>
-          <li className="py-2 sm:py-0 pl-0 sm:pl-3 hidden lg:block">
+          <li className="hidden lg:flex items-center py-2 sm:py-0 px-3">
             {blog?.content ? calculateReadTime(blog?.content) : null}
           </li>
         </ul>
@@ -124,7 +117,7 @@ export default function BlogClient({ blog }: { blog: any }) {
 
       <div className="w-full h-[300px] lg:h-[580px] mt-12 rounded-xl overflow-hidden">
         <img
-          src={blog?.imageURL}
+          src={blog?.image}
           alt={blog?.title}
           className="w-full h-full object-cover"
         />
@@ -144,6 +137,7 @@ export default function BlogClient({ blog }: { blog: any }) {
           ) : null}
         </div>
       </div>
+      <Blogs />
     </main>
   );
 }

@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { motion } from "motion/react";
 import Image from "next/image";
+import BgLayer from "../app_chunks/BgLayer";
 const Process = () => {
   const processes = [
     {
@@ -123,8 +124,8 @@ const Process = () => {
                     {i + 1}
                   </motion.h2>
 
-                  <div className="bg-blue-50 h-full relative shadow-sm">
-                    <div className=" h-[450px] w-full overflow-hidden rounded-lg relative">
+                  <div className="bg-blue-50  h-full relative shadow-sm">
+                    <div className="h-[360px] lg:h-[450px] w-full overflow-hidden rounded-lg relative">
                       <div className="absolute inset-0 w-full h-full bg-black/10" />
                       <Image
                         src={phase.image}
@@ -133,8 +134,9 @@ const Process = () => {
                         height={400}
                         alt={""}
                       />
+                      <BgLayer color="bg-black/40" />
                     </div>
-                    <h3 className="font-semibold hidden absolute text-xl max-w-[90%] text-slate-50 p-4 bottom-0  left-0">
+                    <h3 className="bg-blue-600/70  m-2 rounded-lg  font-semibold absolute max-w-[90%] text-blue-100 px-3 py-[.4rem] bottom-0  left-0">
                       {phase.title}
                     </h3>
                   </div>
