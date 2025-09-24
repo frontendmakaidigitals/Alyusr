@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       "upload.wikimedia.org",
     ],
   },
+  
 };
 
 export default nextConfig;

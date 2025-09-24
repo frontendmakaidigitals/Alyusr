@@ -1,9 +1,41 @@
 "use client";
 import { ArrowUpRight, Circle } from "lucide-react";
 import Link from "next/link";
-import db from "@/data/db.json";
+import { useEffect, useState } from "react";
+type Contact = {
+  id: string;
+  name: string;
+  phone: string;
+  email: string;
+  message: string;
+  createdAt: string;
+};
+
 const DashboardPage = () => {
-  const data = db;
+  const [blogs, setBlogs] = useState([]);
+  const [contacts, setContacts] = useState<Contact[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const blogsRes = await fetch("/api/blogs");
+        const blogsData = await blogsRes.json();
+        setBlogs(blogsData.blogs || []);
+
+        const contactsRes = await fetch("/api/contact");
+        const contactsData = await contactsRes.json();
+        setContacts(contactsData.contacts || []);
+      } catch (err) {
+        console.error("Failed to fetch data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="min-h-screen w-full ">
       <h1 className="text-2xl mb-3 font-[500]">
@@ -13,7 +45,7 @@ const DashboardPage = () => {
       <div className="grid grid-cols-4  gap-7">
         <div className="border border-slate-900/40 rounded-3xl p-4">
           <h2 className="text-lg font-[600]">Blogs</h2>
-          <p className="text-7xl mt-4">{data.blogs.length}</p>
+          <p className="text-7xl mt-4">{blogs.length}</p>
           <Link
             href={"dashboard/Blogs"}
             className="flex items-center w-fit mt-6 gap-3 rounded-2xl bg-[#58000f] hover:bg-[#800000]  text-slate-50 px-4  py-2"
@@ -27,7 +59,7 @@ const DashboardPage = () => {
 
         <div className="border border-slate-900/40 rounded-3xl p-4">
           <h2 className="text-lg font-[600]">Queries</h2>
-          <p className="text-7xl mt-4">{data.contacts.length}</p>
+          <p className="text-7xl mt-4">{contacts.length}</p>
           <Link
             href={"/dashboard/Queries"}
             className="flex items-center w-fit mt-6 gap-3 rounded-2xl bg-[#58000f] hover:bg-[#800000]  text-slate-50 px-4  py-2"

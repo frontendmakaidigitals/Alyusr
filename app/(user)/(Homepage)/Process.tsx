@@ -12,40 +12,40 @@ import Image from "next/image";
 const Process = () => {
   const processes = [
     {
-      title: "Research",
+      title: "Engagement",
       description:
         "We begin by thoroughly analyzing your goals, audience, and market trends to uncover insights that shape a strong foundation for your project.",
-      image: "/process/process1.svg",
+      image: "/process/engagement.avif",
     },
     {
-      title: "Design",
+      title: "Assessment",
       description:
         "Our creative team transforms ideas into user-centric, visually compelling designs that balance aesthetics with intuitive functionality.",
-      image: "/process/process2.svg",
+      image: "/process/assessment.avif",
     },
     {
-      title: "Development",
+      title: "Planning",
       description:
         "We bring the designs to life with clean, efficient, and scalable code—ensuring performance, security, and flexibility.",
-      image: "/process/process3.svg",
+      image: "/process/planning.avif",
     },
     {
-      title: "Testing",
+      title: "Execution",
       description:
         "Rigorous testing across devices and environments guarantees reliability, usability, and a seamless user experience.",
-      image: "/process/process4.svg",
+      image: "/process/execution.jpg",
+    },
+    {
+      title: "Monitoring",
+      description:
+        "Your project goes live with a smooth rollout, ensuring stability, visibility, and an impactful first impression.",
+      image: "/process/monitoring.webp",
     },
     {
       title: "Launch",
       description:
-        "Your project goes live with a smooth rollout, ensuring stability, visibility, and an impactful first impression.",
-      image: "/process/process5.svg",
-    },
-    {
-      title: "Maintenance",
-      description:
         "We provide ongoing monitoring, updates, and enhancements to keep your project secure, optimized, and future-ready.",
-      image: "/process/process6.svg",
+      image: "/process/Launch.jpeg",
     },
   ];
   const [api, setApi] = useState<CarouselApi>();
@@ -117,18 +117,18 @@ const Process = () => {
               {processes.map((phase, i) => (
                 <CarouselItem
                   key={i}
-                  className="basis-3/4 pt-5 relative lg:basis-2/5"
+                  className="basis-3/4 pt-5 relative lg:basis-3/8"
                 >
                   <motion.h2 className="text-5xl lg:text-6xl z-10 left-8 text-white/80 font-bold absolute top-0 -translate-y-2 drop-shadow-[1px_1px_2px_rgba(0,0,0,0.4)]">
                     {i + 1}
                   </motion.h2>
 
                   <div className="bg-blue-50 h-full relative shadow-sm">
-                    <div className=" h-[410px] w-full overflow-hidden rounded-lg relative">
+                    <div className=" h-[450px] w-full overflow-hidden rounded-lg relative">
                       <div className="absolute inset-0 w-full h-full bg-black/10" />
                       <Image
                         src={phase.image}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                         width={400}
                         height={400}
                         alt={""}

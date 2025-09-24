@@ -40,12 +40,12 @@ export async function POST(req: Request) {
       );
     }
 
-    const uploadsDir = "/var/www/your-app/uploads";
+    // Save image in public/uploads
+    const uploadsDir = path.join(process.cwd(), "public", "uploads");
     if (!fs.existsSync(uploadsDir)) {
       fs.mkdirSync(uploadsDir, { recursive: true });
     }
 
-    // Save file to VPS
     const filePath = path.join(uploadsDir, file.name);
     const buffer = Buffer.from(await file.arrayBuffer());
     fs.writeFileSync(filePath, buffer);
@@ -53,6 +53,7 @@ export async function POST(req: Request) {
     const imageUrl = `/uploads/${file.name}`;
 
     const blog = {
+      id: Date.now(),
       title,
       metaTitle,
       metaDesc,
@@ -61,11 +62,108 @@ export async function POST(req: Request) {
       content,
       image: imageUrl,
     };
+
+    // Path to db.json
+    const dbDir = path.join(process.cwd(), "data");
+    const dbPath = path.join(dbDir, "db.json");
+
+    // Ensure data directory exists
+    if (!fs.existsSync(dbDir)) {
+      fs.mkdirSync(dbDir, { recursive: true });
+    }
+
+    // Ensure db.json exists with default structure
+    if (!fs.existsSync(dbPath)) {
+      fs.writeFileSync(
+        dbPath,
+        JSON.stringify({ blogs: [], contacts: [] }, null, 2),
+        "utf-8"
+      );
+    }
+
+    // Read existing db
+    const data = fs.readFileSync(dbPath, "utf-8");
+    const db = JSON.parse(data);
+
+    // Make sure blogs exists
+    if (!Array.isArray(db.blogs)) {
+      db.blogs = [];
+    }
+
+    db.blogs.push(blog);
+
+    // Write back to db.json
+    fs.writeFileSync(dbPath, JSON.stringify(db, null, 2), "utf-8");
+
     return NextResponse.json({ success: true, blog });
   } catch (err) {
     console.error(err);
     return NextResponse.json(
       { success: false, error: "Upload failed" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function DELETE(req: Request) {
+  try {
+    const dbPath = path.join(process.cwd(), "data", "db.json");
+
+    if (!fs.existsSync(dbPath)) {
+      return NextResponse.json(
+        { success: false, error: "No blogs found" },
+        { status: 404 }
+      );
+    }
+
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id");
+    if (!id) {
+      return NextResponse.json(
+        { success: false, error: "Missing id" },
+        { status: 400 }
+      );
+    }
+
+    type Blog = {
+      id: string;
+      title: string;
+      metaTitle: string;
+      metaDesc: string;
+      author: string;
+      category: string;
+      content: string;
+      image: string; // e.g., "/uploads/filename.jpg"
+    };
+
+    const data = fs.readFileSync(dbPath, "utf-8");
+    const db = JSON.parse(data) as { blogs: Blog[] };
+    db.blogs = Array.isArray(db.blogs) ? db.blogs : [];
+
+    // Find the blog to delete
+    const blogToDelete = db.blogs.find((blog) => blog.id == id);
+    if (blogToDelete) {
+      const imagePath = path.join(process.cwd(), "public", blogToDelete.image);
+      if (fs.existsSync(imagePath)) {
+        fs.unlinkSync(imagePath); // delete image
+      }
+    }
+
+    // Filter out the blog
+    const filteredBlogs = db.blogs.filter((blog) => blog.id != id);
+
+    // Save updated blogs
+    fs.writeFileSync(
+      dbPath,
+      JSON.stringify({ blogs: filteredBlogs }, null, 2),
+      "utf-8"
+    );
+
+    return NextResponse.json({ success: true, blogs: filteredBlogs });
+  } catch (err) {
+    console.error("Error deleting blog:", err);
+    return NextResponse.json(
+      { success: false, error: "Failed to delete blog" },
       { status: 500 }
     );
   }

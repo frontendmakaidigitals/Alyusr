@@ -8,13 +8,18 @@ function readDb() {
   return JSON.parse(file);
 }
 
-export async function PUT(req: NextRequest) {
+export async function PUT(
+  req: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
   try {
+    const { id } = await params;
+
     const formData = await req.formData();
-    const id = formData.get("id");
 
     const db = readDb();
-    const blog = db.blogs.find((b: any) => b.id === id);
+
+    const blog = db.blogs.find((b: any) => b.id == id);
 
     if (!blog) {
       return NextResponse.json(
@@ -36,6 +41,14 @@ export async function PUT(req: NextRequest) {
       if (!fs.existsSync(uploadsDir)) {
         fs.mkdirSync(uploadsDir, { recursive: true });
       }
+
+      if (blog.image) {
+        const oldImagePath = path.join(process.cwd(), "public", blog.image);
+        if (fs.existsSync(oldImagePath)) {
+          fs.unlinkSync(oldImagePath);
+        }
+      }
+
       const filePath = path.join(uploadsDir, file.name);
       const buffer = Buffer.from(await file.arrayBuffer());
       fs.writeFileSync(filePath, buffer);
@@ -56,19 +69,29 @@ export async function PUT(req: NextRequest) {
   }
 }
 
-export async function GET(req: NextRequest, { params }: any) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
   try {
-    const { id } = params;
+    const { id } = await params;
+
     const db = readDb();
-    const blog = db.blogs.find((b: any) => b.id === id);
+    const blog = db.blogs.find((b: any) => String(b.id) === id);
 
     if (!blog) {
-      return NextResponse.json({ success: false, error: "Blog not found" }, { status: 404 });
+      return NextResponse.json(
+        { success: false, error: "Blog not found" },
+        { status: 404 }
+      );
     }
 
     return NextResponse.json({ success: true, blog });
   } catch (err) {
     console.error("Fetch failed:", err);
-    return NextResponse.json({ success: false, error: "Failed to fetch blog" }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: "Failed to fetch blog" },
+      { status: 500 }
+    );
   }
 }

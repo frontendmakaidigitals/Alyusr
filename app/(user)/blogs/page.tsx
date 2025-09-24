@@ -25,7 +25,9 @@ interface Blog {
   category: string;
   createdAt?: string | null;
 }
-
+interface BlogsResponse {
+  blogs: Blog[];
+}
 const Page = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
@@ -38,8 +40,8 @@ const Page = () => {
       try {
         const res = await fetch("/api/blogs");
         if (!res.ok) throw new Error("Failed to fetch blogs");
-        const data: Blog[] = await res.json();
-        setBlogs(data);
+        const data: BlogsResponse = await res.json();
+        setBlogs(data.blogs);
       } catch (error) {
         console.error("Error fetching blogs:", error);
       }
@@ -47,10 +49,9 @@ const Page = () => {
 
     fetchBlogs();
   }, []);
-  console.log(blogs);
+
   return (
     <div className="pb-24">
-      {/* 🔹 Hero Carousel */}
       <div className="w-full overflow-hidden">
         <Carousel
           plugins={[plugin.current]}
@@ -88,7 +89,7 @@ const Page = () => {
                           <span className="p-2 text-xs bg-dimondra-white text-slate-900 rounded-lg">
                             {blog.category}
                           </span>
-                          <h1 className="text-4xl lg:text-5xl lg:text-6xl max-w-2xl mt-3 text-slate-50 tracking-tighter font-[500]">
+                          <h1 className="text-4xl lg:text-5xl  max-w-2xl mt-3 text-slate-50 tracking-tighter font-[500]">
                             {blog.title}
                           </h1>
                           <div className="mt-1 max-w-3xl">

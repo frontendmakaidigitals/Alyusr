@@ -11,9 +11,8 @@ const Head = () => {
   };
 
   return (
-    <header className="bg-white ">
+    <header className="bg-slate-100 ">
       <div className="flex container py-4  justify-between items-center">
-        {" "}
         <h1 className="text-2xl text-black font-semibold capitalize">
           Dashboard
         </h1>

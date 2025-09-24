@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react"; // adjust path to your JSON file
+import { motion, AnimatePresence } from "motion/react";
+import { useRouter } from "next/navigation";
 import {
   Select,
   SelectItem,
@@ -27,7 +28,7 @@ type Blog = {
   author: string;
   category: string;
   content: string;
-  image: string;
+  image: string | File;
   createdAt?: string;
 };
 
@@ -78,10 +79,10 @@ export default function Page() {
     author: "",
     category: "",
     content: "",
-    image: null as File | null,
+    image: "" as string | File,
     id: "",
-    createdAt: "",
   });
+  const router = useRouter();
   useEffect(() => {
     async function fetchBlog() {
       const res = await fetch(`/api/blogs/${blogId}`);
@@ -97,9 +98,11 @@ export default function Page() {
           author: blog.author,
           category: blog.category,
           content: blog.content,
-          image: blog.image ?? null,
-          createdAt: blog.createdAt ?? new Date().toISOString(),
+          image: blog.image,
         });
+        if (typeof blog.image === "string" && blog.image) {
+          setImagePreview(blog.image);
+        }
       }
     }
     fetchBlog();
@@ -121,7 +124,6 @@ export default function Page() {
       setImagePreview(URL.createObjectURL(file));
     }
   };
-
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -138,7 +140,6 @@ export default function Page() {
         return;
       }
 
-      // Build FormData for file + text fields
       const formData = new FormData();
       formData.append("title", blogData.title);
       formData.append("metaTitle", blogData.metaTitle);
@@ -152,14 +153,10 @@ export default function Page() {
         formData.append("image", blogData.image);
       }
 
-      // if editing → PUT, else → POST
-      const res = await fetch(
-        blogData ? `/api/blogs/${blogId}` : "/api/blogs",
-        {
-          method: blogData ? "PUT" : "POST",
-          body: formData,
-        }
-      );
+      const res = await fetch(`/api/blogs/${blogId}`, {
+        method: "PUT",
+        body: formData,
+      });
 
       const result = await res.json();
 
@@ -167,9 +164,9 @@ export default function Page() {
         toast.success(
           blogData ? "Blog updated successfully!" : "Blog saved successfully!"
         );
+        router.push("/dashboard/Blogs");
 
         if (!blogData) {
-          // reset only when adding new blog
           setBlogData({
             title: "",
             metaTitle: "",
@@ -177,9 +174,8 @@ export default function Page() {
             author: "",
             category: "",
             content: "",
-            image: null,
+            image: "" as string | File,
             id: "",
-            createdAt: new Date().toISOString(),
           });
           setImagePreview(null);
         }
@@ -208,7 +204,7 @@ export default function Page() {
     }
     setShowPreview(true);
   };
-  console.log(blogData.category, "category");
+
   if (!blogData) {
     return (
       <div className="max-w-3xl mx-auto p-6">
@@ -329,7 +325,13 @@ export default function Page() {
               >
                 Choose
               </label>
-              <p className="max-w-xs">{blogData.image?.name}</p>
+              <p className="max-w-xs">
+                {typeof blogData.image === "string"
+                  ? blogData.image
+                  : blogData.image instanceof File
+                  ? blogData.image.name
+                  : ""}
+              </p>
               <Input
                 id="fileAdd"
                 className="hidden"
@@ -354,12 +356,19 @@ export default function Page() {
           </div>
 
           <div className="col-span-2">
-            <div className="bg-gray-50 w-full overflow-hidden rounded-lg border">
-              <Editor
-                onSerializedChange={(val) =>
-                  handleChange("content", JSON.stringify(val))
-                }
-              />
+            <div className="bg-gray-50  w-full overflow-hidden rounded-lg border">
+              {blogData.content ? (
+                <Editor
+                  onSerializedChange={(val) =>
+                    handleChange("content", JSON.stringify(val))
+                  }
+                  editorSerializedState={
+                    typeof blogData.content === "string"
+                      ? JSON.parse(blogData.content)
+                      : blogData.content
+                  }
+                />
+              ) : null}
             </div>
           </div>
         </div>
@@ -394,7 +403,13 @@ export default function Page() {
 
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent className="max-w-3xl text-white max-h-[90vh] overflow-auto p-4 !border-transparent !bg-transparent">
-            <DialogTitle>{blogData.image?.name}</DialogTitle>
+            <DialogTitle>
+              {typeof blogData.image === "string"
+                ? blogData.image
+                : blogData.image instanceof File
+                ? blogData.image.name
+                : ""}
+            </DialogTitle>
             {imagePreview && (
               <img
                 src={imagePreview}
@@ -407,7 +422,7 @@ export default function Page() {
       </form>
 
       <Dialog open={showPreview} onOpenChange={setShowPreview}>
-        <DialogContent className="max-w-8xl text-white max-h-full overflow-auto p-4 !border-transparent !bg-transparent">
+        <DialogContent className="w-full min-w-full text-white max-h-full overflow-auto p-4 !border-transparent !bg-transparent">
           <DialogTitle>Blog Preview: {blogData.title}</DialogTitle>
           <PreviewBlog
             blog={{
@@ -419,7 +434,6 @@ export default function Page() {
               category: blogData.category,
               content: blogData.content,
               image: typeof blogData.image === "string" ? blogData.image : "",
-              createdAt: blogData?.createdAt ?? new Date().toISOString(),
             }}
             imagePreview={imagePreview}
           />
@@ -443,20 +457,19 @@ const PreviewBlog = ({
     return `${minutes} min read`;
   }
   return (
-    <div className="bg-[#eef7ff] py-10 ">
-      {/* Hero Section */}
+    <div className="bg-[#eef7ff] w-full py-10 ">
       <div className="container">
         <div className="flex flex-col items-center">
-          <p className="p-2 text-xs bg-teal-100 text-teal-700 rounded-lg font-bold font-quicksand text-center mb-2">
+          <p className="p-2 text-xs bg-red-100 text-red-900 rounded-lg font-bold font-quicksand text-center mb-2">
             {blog?.category}
           </p>
-          <h1 className="text-5xl lg:text-6xl tracking-tighter font-[600] text-center">
+          <h1 className="text-5xl lg:text-6xl text-slate-900 tracking-tighter font-[600] text-center">
             {blog?.title}
           </h1>
         </div>
 
         <div className="flex flex-col items-center mt-8">
-          <ul className="flex items-center gap-4 text-sm divide-x divide-slate-300">
+          <ul className="flex items-center gap-4 text-slate-900 text-sm divide-x divide-slate-300">
             <li className="flex items-center gap-3 ">
               <div className="w-fit p-2 rounded-full bg-slate-200">
                 <User size={16} />
@@ -488,7 +501,7 @@ const PreviewBlog = ({
           </ul>
         </div>
 
-        <div className="w-full h-[580px] mt-12 rounded-xl overflow-hidden">
+        <div className="w-full h-[300px] lg:h-[580px] mt-12 rounded-xl overflow-hidden">
           <img
             src={imagePreview || ""}
             alt={blog?.title}
@@ -496,7 +509,7 @@ const PreviewBlog = ({
           />
         </div>
         <div className="max-w-5xl mx-auto ">
-          <div className="mt-8">
+          <div className="mt-8 text-slate-900">
             {blog?.content ? (
               <Editor
                 editorSerializedState={

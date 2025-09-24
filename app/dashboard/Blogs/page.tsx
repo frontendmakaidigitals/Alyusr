@@ -12,36 +12,50 @@ const BlogListPage = () => {
     id: string;
     title: string;
     content: string;
-    imageURL: string;
+    image: string;
     createdAt: string;
     author: string;
     category?: string;
   }
 
   const [blogs, setBlogs] = useState<Blog[]>([]);
+  type BlogsResponse = {
+    blogs: Blog[];
+  };
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch("/api/blogs");
+        if (!res.ok) throw new Error("Failed to fetch blogs");
+        const data: BlogsResponse = await res.json();
+        setBlogs(data.blogs);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      }
+    };
 
- useEffect(() => {
-     const fetchBlogs = async () => {
-       try {
-         const res = await fetch("/api/blogs");
-         if (!res.ok) throw new Error("Failed to fetch blogs");
-         const data: Blog[] = await res.json();
-         setBlogs(data);
-       } catch (error) {
-         console.error("Error fetching blogs:", error);
-       }
-     };
- 
-     fetchBlogs();
-   }, []);
+    fetchBlogs();
+  }, []);
 
-  const handleDeleteBlog = (id: string) => {
+  const handleDeleteBlog = async (id: string) => {
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this blog?"
     );
     if (!confirmDelete) return;
 
-    setBlogs((prev) => prev.filter((blog) => blog.id !== id));
+    try {
+      const res = await fetch(`/api/blogs?id=${id}`, {
+        method: "DELETE",
+      });
+
+      if (!res.ok) throw new Error("Failed to delete blog");
+
+      // Remove from frontend state
+      setBlogs((prev) => prev.filter((blog) => blog.id !== id));
+    } catch (err) {
+      console.error("Error deleting blog:", err);
+      alert("Failed to delete blog. Please try again.");
+    }
   };
 
   return (
@@ -75,7 +89,7 @@ const BlogListPage = () => {
 
       <div className="overflow-x-auto border rounded-lg shadow-sm">
         <table className="min-w-full bg-white text-sm">
-          <thead className="bg-teal-700 text-white">
+          <thead className="bg-red-900 text-white">
             <tr>
               <th className="text-left px-6 py-3">Image</th>
               <th className="text-left px-6 py-3">Title</th>
@@ -86,45 +100,53 @@ const BlogListPage = () => {
             </tr>
           </thead>
           <tbody>
-            {blogs.map((blog) => (
-              <tr key={blog.id} className="border-t hover:bg-gray-50">
-                <td className="px-6 py-4">
-                  <img
-                    src={blog.imageURL}
-                    alt={blog.title}
-                    className="w-16 h-16 object-cover rounded"
-                  />
-                </td>
-                <td className="px-6 py-4 font-medium">{blog.title}</td>
-                <td className="px-6 py-4">
-                  {new Date(blog.createdAt).toLocaleDateString()}
-                </td>
-                <td className="px-6 py-4">
-                  <span className="inline-block px-2 py-1 text-xs rounded bg-teal-100 text-teal-800">
-                    {blog.category}
-                  </span>
-                </td>
-                <td className="px-6 py-4">{blog.author}</td>
-                <td className="px-6 py-4">
-                  <div className="flex flex-wrap gap-2">
-                    <button
-                      onClick={() =>
-                        router.push(`/dashboard/Blogs/edit/${blog.id}`)
-                      }
-                      className="px-3 py-1 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 rounded"
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={() => handleDeleteBlog(blog.id)}
-                      className="px-3 py-1 text-xs font-medium text-white bg-red-600 hover:bg-red-700 rounded"
-                    >
-                      Delete
-                    </button>
-                  </div>
+            {blogs.length > 0 ? (
+              blogs.map((blog) => (
+                <tr key={blog.id} className="border-t hover:bg-gray-50">
+                  <td className="px-6 py-4">
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      className="w-16 h-16 object-cover rounded"
+                    />
+                  </td>
+                  <td className="px-6 py-4 font-medium">{blog.title}</td>
+                  <td className="px-6 py-4">
+                    {new Date(blog.id).toLocaleDateString()}
+                  </td>
+                  <td className="px-6 py-4">
+                    <span className="inline-block px-2 py-1 text-xs rounded bg-red-100 text-red-900">
+                      {blog.category}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4">{blog.author}</td>
+                  <td className="px-6 py-4">
+                    <div className="flex flex-wrap gap-2">
+                      <button
+                        onClick={() =>
+                          router.push(`/dashboard/Blogs/edit/${blog.id}`)
+                        }
+                        className="px-3 py-1 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 rounded"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => handleDeleteBlog(blog.id)}
+                        className="px-3 py-1 text-xs font-medium text-white bg-red-600 hover:bg-red-700 rounded"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan={6} className="text-center text-lg p-6 text-slate-500">
+                  No Blogs found
                 </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

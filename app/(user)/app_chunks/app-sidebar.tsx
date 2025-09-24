@@ -1,3 +1,4 @@
+"use client";
 import { Home, Book, MessageSquareQuote } from "lucide-react";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import Link from "next/link";
@@ -10,10 +11,10 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import Logo from "./Logo";
 
-// Menu items.
 const items = [
   {
     title: "Visit Home",
@@ -34,12 +35,18 @@ const items = [
 ];
 
 export function AppSidebar() {
+  const { open } = useSidebar();
+
   return (
     <Sidebar>
-      <SidebarTrigger />
       <SidebarContent className="py-5">
+        <SidebarTrigger
+          className={`bg-red-900 hover:bg-red-800 z-10 ${
+            open ? "-translate-x-1/2" : "-translate-x-2"
+          } size-10 text-white hover:text-white rounded-full left-full  top-24 absolute`}
+        />
         <SidebarGroup>
-          <SidebarGroupLabel>
+          <SidebarGroupLabel className="flex justify-center mt-5">
             <Logo img={"/logo-black.webp"} />
           </SidebarGroupLabel>
           <SidebarGroupContent className=" mt-20">
@@ -48,7 +55,7 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
                     asChild
-                    className="hover:bg-[#58000f] hover:text-slate-50 py-5 transition-colors duration-250"
+                    className="hover:bg-red-900 hover:text-slate-50 py-5 transition-colors duration-250"
                   >
                     <Link href={`/${item.url}`}>
                       <item.icon className="!w-5 !h-5" />

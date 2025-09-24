@@ -2,6 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Mail, Phone, MapPin, MapPinned, Earth } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { toast } from "sonner";
 import BgLayer from "../app_chunks/BgLayer";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -77,6 +78,58 @@ const Contact = () => {
     "Not region-specific or relevant",
   ];
 
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    message: "",
+    company: "",
+    interest: "",
+    location: "",
+  });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setForm({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          message: "",
+          company: "",
+          interest: "",
+          location: "",
+        });
+        toast.success("Form submitted successfully!");
+      } else {
+        console.error("Failed to submit form:", res.statusText);
+        toast.error("Something went wrong");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section>
       {/* Hero Section */}
@@ -127,7 +180,10 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <form className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-xl p-10 rounded-2xl space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-xl p-10 rounded-2xl space-y-6"
+          >
             <h2 className="text-3xl font-bold text-slate-800 mb-4 border-l-4 border-blue-500 pl-3">
               Enquiry Form
             </h2>
@@ -136,15 +192,20 @@ const Contact = () => {
                 <Label>First Name</Label>
                 <Input
                   type="text"
-                  placeholder="John"
+                  name="firstName"
+                  value={form.firstName}
+                  onChange={handleChange}
+                  placeholder="First Name"
                   className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
                 <Label>Last Name</Label>
                 <Input
-                  type="text"
-                  placeholder="Andrews"
+                  name="lastName"
+                  value={form.lastName}
+                  onChange={handleChange}
+                  placeholder="Last Name"
                   className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -154,15 +215,21 @@ const Contact = () => {
                 <Label>Email</Label>
                 <Input
                   type="email"
-                  placeholder="example@email.com"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Email"
                   className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
                 <Label>Contact</Label>
                 <Input
-                  type="number"
-                  placeholder="+971 234 5678"
+                  type={"number"}
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="phone"
                   className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -171,14 +238,22 @@ const Contact = () => {
               <div>
                 <Label>Company</Label>
                 <Input
-                  type="text"
-                  placeholder="Your Company"
+                  type={"text"}
+                  name="company"
+                  value={form.company}
+                  onChange={handleChange}
+                  placeholder="Company"
                   className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
                 <Label>Interest</Label>
-                <Select>
+                <Select
+                  value={form.interest}
+                  onValueChange={(value) =>
+                    setForm((prev) => ({ ...prev, interest: value }))
+                  }
+                >
                   <SelectTrigger className="w-full mt-2 !h-12 bg-slate-50">
                     <SelectValue placeholder="Select your Interest" />
                   </SelectTrigger>
@@ -197,7 +272,12 @@ const Contact = () => {
             </div>
             <div>
               <Label>Global Region</Label>
-              <Select>
+              <Select
+                value={form.location}
+                onValueChange={(value) =>
+                  setForm((prev) => ({ ...prev, location: value }))
+                }
+              >
                 <SelectTrigger className="w-full mt-2 !h-12 bg-slate-50">
                   <SelectValue placeholder="Select your Region" />
                 </SelectTrigger>
@@ -222,10 +302,39 @@ const Contact = () => {
             <Button
               type="submit"
               variant="default"
-              size={"lg"}
-              className="w-full bg-gradient-to-br from-blue-500 to-blue-700 text-white font-semibold  rounded-xl shadow-lg hover:scale-[1.02] transition"
+              size="lg"
+              disabled={loading}
+              className={`w-full bg-gradient-to-br from-blue-500 to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:scale-[1.02] transition ${
+                loading ? "opacity-70 cursor-not-allowed" : ""
+              }`}
             >
-              Send Enquiry
+              {loading ? (
+                <span className="flex items-center justify-center gap-2">
+                  <svg
+                    className="animate-spin h-4 w-4 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    ></path>
+                  </svg>
+                  Sending...
+                </span>
+              ) : (
+                "Send Enquiry"
+              )}
             </Button>
           </form>
         </motion.div>

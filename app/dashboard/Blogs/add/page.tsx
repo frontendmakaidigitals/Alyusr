@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import Spinner from "@/app/(user)/app_chunks/spinner";
+
 import {
   Select,
   SelectItem,
@@ -122,6 +123,7 @@ export default function AddBlogPage() {
 
       if (result.success) {
         toast.success("Blog saved successfully!");
+        router.push("/dashboard/Blogs");
         setBlogData({
           title: "",
           metaTitle: "",
