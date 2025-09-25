@@ -351,7 +351,7 @@ export default function AddBlogPage() {
       </form>
 
       <Dialog open={showPreview} onOpenChange={setShowPreview}>
-        <DialogContent className="max-w-8xl text-white max-h-full overflow-auto p-4 !border-transparent !bg-transparent">
+        <DialogContent className="w-full min-w-full text-white max-h-full overflow-auto p-4 !border-transparent !bg-transparent">
           <DialogTitle>Blog Preview: {blogData.title}</DialogTitle>
           <PreviewBlog blog={blogData} imagePreview={imagePreview} />
         </DialogContent>
@@ -386,15 +386,15 @@ const PreviewBlog = ({
       {/* Hero Section */}
       <div className="container">
         <div className="flex flex-col items-center">
-          <p className="p-2 text-xs bg-teal-100 text-teal-700 rounded-lg font-bold font-quicksand text-center mb-2">
+          <p className="p-2 text-xs bg-red-100 text-red-900 rounded-lg font-bold font-quicksand text-center mb-2">
             {blog?.category}
           </p>
-          <h1 className="text-5xl lg:text-6xl tracking-tighter font-[600] text-center">
+          <h1 className="text-5xl lg:text-6xl text-slate-900 tracking-tighter font-[600] text-center">
             {blog?.title}
           </h1>
         </div>
 
-        <div className="flex flex-col items-center mt-8">
+        <div className="flex flex-col items-center mt-8  text-slate-900">
           <ul className="flex items-center gap-4 text-sm divide-x divide-slate-300">
             <li className="flex items-center gap-3 ">
               <div className="w-fit p-2 rounded-full bg-slate-200">
@@ -434,7 +434,7 @@ const PreviewBlog = ({
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="max-w-5xl mx-auto ">
+        <div className="max-w-5xl mx-auto text-slate-900 ">
           <div className="mt-8">
             {blog?.content ? (
               <Editor
