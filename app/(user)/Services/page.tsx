@@ -5,135 +5,262 @@ import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
 import { motion } from "motion/react";
 import { useInView } from "../hooks/useInView";
+import Link from "next/link";
 const services = [
   {
     title: "Construction Management",
-    link:'',img: "construction-management.webp",
+    link: "/Engineering-Infrastructure/Construction-Management",
+    img: "construction-management.webp",
   },
-  { title: "Engineering Services", link:'',img: "Engineering.webp" },
-  { title: "Environmental Services", link:'',img: "environmental-contracting-2.webp" },
-  { title: "IT and Cybersecurity", link:'',img: "it-and-cybersecurity.webp" },
+  {
+    title: "Engineering Services",
+    link: "/Engineering-Infrastructure/Engineering-Services",
+    img: "Engineering.webp",
+  },
+  {
+    title: "Environmental Services",
+    link: "/Environment-Sustainability-and-Resilience/environmental-services",
+    img: "environmental-contracting-2.webp",
+  },
+  {
+    title: "IT and Cybersecurity",
+    link: "/Transportation-and-Smart-Mobility/it-and-cybersecurity",
+    img: "it-and-cybersecurity.webp",
+  },
   {
     title: "Planning & Advisory Solutions",
-    link:'',img: "Planning.webp",
+    link: "/Transportation-and-Smart-Mobility/planning-and-advisory",
+    img: "Planning.webp",
   },
   {
     title: "Process Development & Implementation",
-    link:'',img: "process-development-&-implementation.webp",
+    link: "/Project-Advisory/project-planning",
+    img: "process-development-&-implementation.webp",
   },
-  { title: "Project Planning", link:'',img: "planning-2.webp" },
-  { title: "Community Engagement", link:'',img: "community-engagement.webp" },
-  { title: "Program Management", link:'',img: "program-management.webp" },
-  { title: "Architecture Design", link:'',img: "Architecture.webp" },
-  { title: "Process Simulation Models", link:'',img: "simulation-models.webp" },
-  { title: "City Analytics", link:'',img: "cities-solutions.webp" },
-  { title: "Community Planning", link:'',img: "Planning.webp" },
+  {
+    title: "Project Planning",
+    link: "/Project-Advisory/process-development-and-implementation",
+    img: "planning-2.webp",
+  },
+  {
+    title: "Community Engagement",
+    link: "/Urban-Planning/community-engagement",
+    img: "community-engagement.webp",
+  },
+  {
+    title: "Program Management",
+    link: "/Project-Advisory/program-management",
+    img: "program-management.webp",
+  },
+  {
+    title: "Architecture Design",
+    link: "/Urban-Planning/Architecture-Design",
+    img: "Architecture.webp",
+  },
+  {
+    title: "Process Simulation Models",
+    link: "/Project-Advisory/process-simulation-models",
+    img: "simulation-models.webp",
+  },
+  {
+    title: "City Analytics",
+    link: "/Transportation-and-Smart-Mobility/city-analytics",
+    img: "cities-solutions.webp",
+  },
+  {
+    title: "Community Planning",
+    link: "/Urban-Planning/Community-Planning",
+    img: "Planning.webp",
+  },
   {
     title: "EHS Management Consulting",
-    link:'',img: "ehs-management-consulting-and-compliance-2.webp",
+    link: "/Environment-Sustainability-and-Resilience/ehs-management-consulting",
+    img: "ehs-management-consulting-and-compliance-2.webp",
   },
   {
     title: "Structural Legacy Consulting",
-    link:'',img: "strategic-consulting.webp",
+    link: "/Engineering-Infrastructure/Structural-Legacy-Consulting",
+    img: "strategic-consulting.webp",
   },
-  { title: "Landscape Architecture", link:'',img: "landscape-architecture.webp" },
+  {
+    title: "Landscape Architecture",
+    link: "/Urban-Planning/Landscape-Architecture",
+    img: "landscape-architecture.webp",
+  },
   {
     title: "Visualization and Virtual Reality",
-    link:'',img: "visualization-and-virtual-reality.webp",
+    link: "/Urban-Planning/visualization-and-virtual-reality",
+    img: "visualization-and-virtual-reality.webp",
   },
   {
     title: "SCCI Electrical Engineering",
-    link:'',img: "scci-electric.webp",
+    link: "/Engineering-Infrastructure/SCCI-Electric",
+    img: "scci-electric.webp",
   },
   {
     title: "Vertical Transportation Services",
-    link:'',img: "vertical-transportation-services-(north-america)-2.webp",
+    link: "/Engineering-Infrastructure/Vertical-Transportation-Services",
+    img: "vertical-transportation-services-(north-america)-2.webp",
   },
   {
     title: "Pedestrian Flow Analysis",
-    link:'',img: "pedestrian-modelling-(north-america).webp",
+    link: "/Transportation-and-Smart-Mobility/pedestrian-flow-analysis",
+    img: "pedestrian-modelling-(north-america).webp",
   },
   {
     title: "Commercial Operations and Maintenance",
-    link:'',img: "industrial-and-commercial-operations-and-maintenance-2.webp",
+    link: "/Project-Advisory/commercial-operations-and-maintenance",
+    img: "industrial-and-commercial-operations-and-maintenance-2.webp",
   },
   {
     title: "Risk Management & Resilience",
-    link:'',img: "risk-management-&-resilience.webp",
+    link: "/Project-Advisory/risk-management-and-resilience",
+    img: "risk-management-&-resilience.webp",
   },
   {
     title: "Pedestrian Movement Modeling",
-    link:'',img: "pedestrian-modelling-in-action.webp",
+    link: "/Transportation-and-Smart-Mobility/pedestrian-movement-modeling",
+    img: "pedestrian-modelling-in-action.webp",
   },
   {
     title: "Alternative Delivery Models",
-    link:'',img: "alternative-delivery-models.webp",
+    link: "/Engineering-Infrastructure/Alternative-Delivery-Models",
+    img: "alternative-delivery-models.webp",
   },
-  { title: "City Planning", link:'',img: "program-management.webp" },
-  { title: "Interior Architecture", link:'',img: "interior-architecture.webp" },
+  {
+    title: "City Planning",
+    link: "/Urban-Planning/city-planning",
+    img: "program-management.webp",
+  },
+  {
+    title: "Interior Architecture",
+    link: "/Urban-Planning/city-planning",
+    img: "interior-architecture.webp",
+  },
   {
     title: "Infrastructure Protection",
-    link:'',img: "critical-infrastructure-protection.webp",
+    link: "/Engineering-Infrastructure/infrastructure-protection",
+    img: "critical-infrastructure-protection.webp",
   },
   {
     title: "Public-Private Partnerships",
-    link:'',img: "public-private-partnerships.webp",
+    link: "/Transportation-and-Smart-Mobility/public-private-partnerships",
+    img: "public-private-partnerships.webp",
   },
-  { title: "Engineering Economics", link:'',img: "Economics.webp" },
-  { title: "Urban Design", link:'',img: "urban-design.webp" },
-  { title: "Ground Engineering", link:'',img: "ground-engineering-1.webp" },
+  {
+    title: "Engineering Economics",
+    link: "/Project-Advisory/engineering-economics",
+    img: "Economics.webp",
+  },
+  {
+    title: "Urban Design",
+    link: "/Urban-Planning/urban-design",
+    img: "urban-design.webp",
+  },
+  {
+    title: "Ground Engineering",
+    link: "/Engineering-Infrastructure/Ground-Engineering",
+    img: "ground-engineering-1.webp",
+  },
   {
     title: "Tunnels and Underground Infrastructure",
-    link:'',img: "tunnels,-trenchless-technology-and-underground-infrastructure.webp",
+    link: "/Engineering-Infrastructure/Tunnels&Underground-Infrastructure",
+    img: "tunnels,-trenchless-technology-and-underground-infrastructure.webp",
   },
-  { title: "Asset Advisory", link:'',img: "asset-advisory.webp" },
-  { title: "Strategic Consulting", link:'',img: "strategic-consulting.webp" },
+  {
+    title: "Asset Advisory",
+    link: "/Project-Advisory/asset-advisory",
+    img: "asset-advisory.webp",
+  },
+  {
+    title: "Strategic Consulting",
+    link: "/Project-Advisory/strategic-consulting",
+    img: "strategic-consulting.webp",
+  },
   {
     title: "Urban Policy & Development",
-    link:'',img: "urban-design.webp",
+    link: "/Urban-Planning/urban-policy",
+    img: "urban-design.webp",
   },
-  { title: "Climate Response", link:'',img: "climate-adaptation.webp" },
-  { title: "Rail Network Modeling", link:'',img: "rail-simulations.webp" },
+  {
+    title: "Climate Response",
+    link: "/Environment-Sustainability-and-Resilience/climate-response",
+    img: "climate-adaptation.webp",
+  },
+  {
+    title: "Rail Network Modeling",
+    link: "/Transportation-and-Smart-Mobility/rail-network-modeling",
+    img: "rail-simulations.webp",
+  },
   {
     title: "Air Quality Assessment",
-    link:'',img: "air-quality-consulting-and-engineering.webp",
+    link: "/Environment-Sustainability-and-Resilience/air-quality-assessment",
+    img: "air-quality-consulting-and-engineering.webp",
   },
   {
     title: "Land Recovery & Redevelopment",
-    link:'',img: "remediation,-restoration-and-redevelopment.webp",
+    link: "/Environment-Sustainability-and-Resilience/land-recovery-and-redevelopment",
+    img: "remediation,-restoration-and-redevelopment.webp",
   },
   {
     title: "Geo-Intelligence Analytics",
-    link:'',img: "geospatial-services.webp",
+    link: "/Transportation-and-Smart-Mobility/geo-intelligence-analytics",
+    img: "geospatial-services.webp",
   },
   {
     title: "Foundation Engineering Solutions",
-    link:'',img: "foundations-contracting.webp",
+    link: "/Engineering-Infrastructure/Foundation-Engineering-Solutions",
+    img: "foundations-contracting.webp",
   },
   {
     title: "Smart Infrastructure & Digital Systems",
-    link:'',img: "smart solutions.webp",
+    link: "/Transportation-and-Smart-Mobility/smart-infrastructure-and-digitals-systems",
+    img: "smart solutions.webp",
   },
   {
     title: "Environmental Assessment and Permitting",
-    link:'',img: "environmental-contracting.webp",
+    link: "/Environment-Sustainability-and-Resilience/environmental-assessment",
+    img: "environmental-contracting.webp",
   },
-  { title: "Unified Resilience", link:'',img: "risk-management-&-resilience.webp" },
-  { title: "Climate Adaptation", link:'',img: "climate-adaptation.webp" },
-  { title: "Cost Management", link:'',img: "cost-management.webp" },
-  { title: "Urban Mobility", link:'',img: "urbanism-+-planning.webp" },
+  {
+    title: "Unified Resilience",
+    link: "/Environment-Sustainability-and-Resilience/unified-resilience",
+    img: "risk-management-&-resilience.webp",
+  },
+  {
+    title: "Climate Adaptation",
+    link: "/Environment-Sustainability-and-Resilience/climate-adaptation",
+    img: "climate-adaptation.webp",
+  },
+  {
+    title: "Cost Management",
+    link: "/Project-Advisory/cost-management",
+    img: "cost-management.webp",
+  },
+  {
+    title: "Urban Mobility",
+    link: "/Transportation-and-Smart-Mobility/urban-mobility",
+    img: "urbanism-+-planning.webp",
+  },
   {
     title: "Environmental Contracting",
-    link:'',img: "environmental-and-social-impact-assessment-and-permitting.webp",
+    link: "/Environment-Sustainability-and-Resilience/environmental-contracting",
+    img: "environmental-and-social-impact-assessment-and-permitting.webp",
   },
   {
     title: "Digital EHS & ESG Solutions",
-    link:'',img: "digital-ehsesg-solutions.webp",
+    link: "/Environment-Sustainability-and-Resilience/ehs-and-esg-solutions",
+    img: "digital-ehsesg-solutions.webp",
   },
-  { title: "Electrical Contracting", link:'',img: "electrical-contracting.webp" },
+  {
+    title: "Electrical Contracting",
+    link: "/Engineering-Infrastructure/Critical-Infrastructure-Protection",
+    img: "electrical-contracting.webp",
+  },
   {
     title: "Multinational Investment",
-    link:'',img: "multinational-investment-and-development-1.webp",
+    link: "/Urban-Planning/Interior-Architecture",
+    img: "multinational-investment-and-development-1.webp",
   },
 ];
 const Page = () => {
@@ -225,17 +352,19 @@ const Page = () => {
                 key={idx}
                 className="aspect-square w-full relative"
               >
-                <h2 className="absolute z-10 bottom-3 left-3 text-xl font-medium text-slate-50">
-                  {service.title}
-                </h2>
-                <BgLayer color="bg-slate-900/50" />
-                <Image
-                  width={300}
-                  height={300}
-                  src={`/services/${service.img}`}
-                  alt={service.title}
-                  className="w-full h-full object-cover"
-                />
+                <Link href={`/Services${service.link}`}>
+                  <h2 className="absolute z-10 bottom-3 left-3 text-xl font-medium text-slate-50">
+                    {service.title}
+                  </h2>
+                  <BgLayer color="bg-slate-900/50" />
+                  <Image
+                    width={300}
+                    height={300}
+                    src={`/services/${service.img}`}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                </Link>
               </motion.li>
             ))}
           {loading &&
