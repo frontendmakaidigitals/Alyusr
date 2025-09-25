@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
     domains: [
       "images.pexels.com", // Add any other domains you use
       "upload.wikimedia.org",
-      "alyusr-co.com"
+      "alyusr-co.com",
+      "milestonehomesre.com"
     ],
   },
   
