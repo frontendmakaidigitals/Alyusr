@@ -105,7 +105,7 @@ const BlogListPage = () => {
                 <tr key={blog.id} className="border-t hover:bg-gray-50">
                   <td className="px-6 py-4">
                     <img
-                      src={blog.image}
+                      src={`/api/uploads/${blog.image}`}
                       alt={blog.title}
                       className="w-16 h-16 object-cover rounded"
                     />

@@ -80,7 +80,7 @@ const Page = () => {
                           <div className="absolute inset-0 w-full rounded-lg overflow-hidden h-full">
                             <img
                               className="w-full h-full object-cover"
-                              src={blog.image}
+                              src={`/api/uploads/${blog.image}`}
                               alt={blog.title}
                             />
                           </div>

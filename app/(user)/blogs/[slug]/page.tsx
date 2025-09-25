@@ -55,7 +55,7 @@ export async function generateMetadata({
       title: blog?.metaTitle || blog?.title,
       description: blog?.metaDesc || "",
       images: blog?.imageURL ? [blog.imageURL] : [],
-      url: `https://dimondra.com/blog/${slug}`,
+      url: `https://alyusr-co.com/blog/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
