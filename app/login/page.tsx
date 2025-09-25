@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
-import Button from "../(user)/App_Chunks/Components/Button";
+import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import BgLayer from "@/components/BgLayer";
+import BgLayer from "../(user)/app_chunks/BgLayer";
 const validEmail = "admin";
 const validPassword = "12345678";
 export default function LoginPage() {
@@ -70,7 +70,7 @@ export default function LoginPage() {
           />
         </div>
         <Button
-          className="w-full flex justify-center mt-10 bg-dimondra-teal/50 hover:bg-dimondra-tealDark hover:text-dimondra-white"
+          className="w-full flex justify-center mt-10 bg-red-900 hover:bg-dimondra-tealDark hover:text-dimondra-white"
           type="submit"
         >
           Login
