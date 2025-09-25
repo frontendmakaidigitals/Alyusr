@@ -117,7 +117,7 @@ export default function BlogClient({ blog }: { blog: any }) {
 
       <div className="w-full h-[300px] lg:h-[580px] mt-12 rounded-xl overflow-hidden">
         <img
-          src={blog?.image}
+          src={`/api/uploads/${blog.image}`}
           alt={blog?.title}
           className="w-full h-full object-cover"
         />
