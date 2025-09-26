@@ -15,7 +15,7 @@ import {
   Handshake,
   BadgeCheck,
 } from "lucide-react";
-export default function ConstructionManagementPage() {
+export default function Page() {
   const capabilities = [
     {
       title: "Community Visioning Sessions & Town Halls",

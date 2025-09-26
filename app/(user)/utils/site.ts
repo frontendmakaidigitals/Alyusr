@@ -106,8 +106,8 @@ export const siteConfig = {
               link: "urban-design",
             },
             {
-              label: "Community Planning",
-              link: "Community-Planning",
+              label: "City Planning",
+              link: "city-planning",
             },
             {
               label: "Urban Policy",
