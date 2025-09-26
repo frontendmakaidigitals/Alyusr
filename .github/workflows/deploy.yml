@@ -88,7 +88,10 @@ jobs:
           
           # Build application
           npm run build
-          
+
+          # Clear Next.js image optimizer cache so new headers (inline) take effect
+          rm -rf .next/cache/images || true
+
           # Restart PM2 process
           pm2 restart alyusr || pm2 start npm --name "alyusr" -- start -- --port 3006
           
