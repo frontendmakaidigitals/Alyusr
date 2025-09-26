@@ -1,5 +1,4 @@
-
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     domains: [
@@ -7,7 +6,6 @@ const nextConfig = {
       "upload.wikimedia.org",
     ],
   },
-  
 };
 
-export default nextConfig;
+module.exports = nextConfig;
