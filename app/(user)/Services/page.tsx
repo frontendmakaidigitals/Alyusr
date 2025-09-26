@@ -254,7 +254,7 @@ const services = [
   },
   {
     title: "Electrical Contracting",
-    link: "/Engineering-Infrastructure/Critical-Infrastructure-Protection",
+    link: "/Engineering-Infrastructure/infrastructure-protection",
     img: "electrical-contracting.webp",
   },
   {
