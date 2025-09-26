@@ -44,7 +44,7 @@ export default function BlogClient({ blog }: { blog: any }) {
           </li>
           <li className="flex items-center gap-3 py-2 sm:py-0 px-3">
             <Calendar size={16} />
-            {blog.id ? <>{blog.id}</> : null}
+            {blog.id ? <>{new Date(blog.id).toLocaleDateString()}</> : null}
           </li>
           <li className="hidden lg:flex items-center py-2 sm:py-0 px-3">
             {blog?.content ? calculateReadTime(blog?.content) : null}
