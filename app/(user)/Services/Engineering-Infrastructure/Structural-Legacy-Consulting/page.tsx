@@ -280,7 +280,7 @@ export default function ConstructionManagementPage() {
           <div className="h-[450px] bg-slate-100 w-full">
             <img
               src={"/Engineering-Infrastructure/structural/why-choose.webp"}
-              alt={""}
+              alt={"why choose"}
               className="w-full h-full object-cover"
             />
           </div>

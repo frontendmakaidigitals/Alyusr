@@ -83,15 +83,13 @@ export default function Page() {
           Community Engagement
         </h1>
       </div>
-      <section className=" w-full h-[500px] text-center ">
+      <section className=" w-full h-[500px] overflow-hidden">
         <Image
-          src={
-            "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg"
-          }
-          className="w-full h-full object-cover object-bottom"
+          src={"/urban-planning/community-engagement/hero.webp"}
+          className="w-full h-full object-cover object-top "
           alt={""}
-          width={500}
-          height={200}
+          width={1200}
+          height={800}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -135,8 +133,16 @@ export default function Page() {
               all community members can participate meaningfully.
             </p>
           </div>
-          <div className="w-full h-[400px] bg-red-300">
-            <Image src={""} alt={""} className="" />
+          <div className="w-full h-[400px] bg-slate-100 ">
+            <Image
+              src={
+                "/urban-planning/community-engagement/Empowering Places.webp"
+              }
+              alt={""}
+              width={500}
+              height={500}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -195,10 +201,12 @@ export default function Page() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
           <div className="relative bg-green-400 w-full h-[400px] rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/images/engagement.webp" // replace with your image path
+              src={
+                "/urban-planning/community-engagement/innovative-engagement.webp"
+              }
               alt="Innovating Engagement"
+              className="w-full h-full object-cover"
               fill
-              className="object-cover"
             />
           </div>
           <div className="space-y-6">

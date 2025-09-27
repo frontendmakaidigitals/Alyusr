@@ -1,6 +1,6 @@
 "use client";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-
+import Image from "next/image";
 import { Leaf, Users, Building2, Recycle, BadgeCheck } from "lucide-react";
 import { motion } from "motion/react";
 export default function Page() {
@@ -211,8 +211,9 @@ export default function Page() {
                 className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden"
               >
                 <div className="bg-slate-100 w-full h-[240px]">
-                  <img
+                  <Image
                     src={service.img}
+                    fill
                     alt={service.title}
                     className="w-full h-full object-cover"
                   />
