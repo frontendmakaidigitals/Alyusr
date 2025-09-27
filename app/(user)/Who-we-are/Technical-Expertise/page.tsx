@@ -37,19 +37,19 @@ export default function TechnicalExpertisePage() {
       title: "Water, Drainage & Hydrology",
       desc: "Smart water management solutions, including stormwater systems and hydraulic modeling.",
 
-      img: "/technical expertise 2/Water, Drainage & Hydrology.webp",
+      img: "/technical expertise 2/Water-Drainage & Hydrology.webp",
     },
     {
       title: "Telecommunication & Low Current Systems",
       desc: "Reliable, secure systems for modern connectivity and building automation.",
 
-      img: "/technical expertise 2/Telecommunication & Low Current Systems.webp",
+      img: "/technical expertise 2/Telecommunication-Low Current Systems.webp",
     },
     {
       title: "Urban & Regional Planning",
       desc: "Large-scale planning with a focus on smart growth, land optimization, and community livability.",
 
-      img: "/technical expertise 2/Urban & Regional Planning.webp",
+      img: "/technical expertise 2/Urban-Regional Planning.webp",
     },
   ];
 

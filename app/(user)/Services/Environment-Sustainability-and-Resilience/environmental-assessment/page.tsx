@@ -35,12 +35,12 @@ export default function Page() {
     {
       title: "Cultural & Heritage Resources",
       desc: "Our experts in archaeology, anthropology, and historic architecture provide comprehensive assessments, ensuring that cultural heritage and Indigenous communities are respected and preserved.",
-      img: "/Environment-Sustainability/Environmental Assessment/Cultural & Heritage Resources.webp",
+      img: "/Environment-Sustainability/Environmental Assessment/Cultural-Heritage Resources.webp",
     },
     {
       title: "Digital Analyses & Data Conveyance",
       desc: "Using drones, GIS mapping, and interactive platforms, we deliver digital environmental impact reports that enhance transparency and speed up permitting processes.",
-      img: "/Environment-Sustainability/Environmental Assessment/Digital Analyses & Data Conveyance.webp",
+      img: "/Environment-Sustainability/Environmental Assessment/Digital Analyses-Data Conveyance.webp",
     },
     {
       title: "Ecological Design, Implementation & Restoration",
@@ -50,7 +50,7 @@ export default function Page() {
     {
       title: "Environmental & Social Impact Assessments",
       desc: "Our specialists prepare and deliver legally compliant impact assessments, balancing regulatory requirements with business objectives to keep projects on track.",
-      img: "/Environment-Sustainability/Environmental Assessment/Environmental & Social.webp",
+      img: "/Environment-Sustainability/Environmental Assessment/Environmental-Social.webp",
     },
     {
       title: "Environmental Planning, Mitigation & Monitoring",
@@ -70,17 +70,17 @@ export default function Page() {
     {
       title: "Siting, Feasibility Studies & Program Management",
       desc: "We assess project feasibility, identify optimal locations, and provide end-to-end management support to streamline permitting and approvals.",
-      img: "/Environment-Sustainability/Environmental Assessment/Siting, Feasibility Studies.webp",
+      img: "/Environment-Sustainability/Environmental Assessment/Siting-Feasibility Studies.webp",
     },
     {
       title: "Stakeholder & Public Engagement",
       desc: "Through workshops, consultations, and digital platforms, we foster transparent dialogue with stakeholders, ensuring community support and trust.",
-      img: "/Environment-Sustainability/Environmental Assessment/Stakeholder & Public.webp",
+      img: "/Environment-Sustainability/Environmental Assessment/Stakeholder-Public.webp",
     },
     {
       title: "Fate & Effects Transport / Dispersion Modeling",
       desc: "Using advanced modeling, we predict the movement of air, water, and soil pollutants to evaluate risks and guide mitigation measures.",
-      img: "/Environment-Sustainability/Environmental Assessment/Fate & Effects.webp",
+      img: "/Environment-Sustainability/Environmental Assessment/Fate-Effects.webp",
     },
     {
       title: "Visual & Noise Impact Assessments",

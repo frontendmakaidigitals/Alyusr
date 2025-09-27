@@ -17,7 +17,7 @@ const divisions = [
       "Roads, Drainage & Hydrology",
       "Telecom & Low-Current Systems",
     ],
-    image: "/our division 2/Engineering & Design Division.webp", // Replace with your local or remote image
+    image: "/our division 2/Engineering-Design Division.webp", // Replace with your local or remote image
   },
   {
     title: "Architecture & Urban Planning Division",
@@ -30,7 +30,7 @@ const divisions = [
       "Masterplanning & Land Use Studies",
       "Design Optimization & Value Engineering",
     ],
-    image: "/our division 2/Architecture & Urban Planning.webp",
+    image: "/our division 2/Architecture-Urban Planning.webp",
   },
   {
     title: "Construction & Project Management Division",
@@ -44,7 +44,7 @@ const divisions = [
       "Fire & Safety Engineering",
       "Site Investigations & Surveying",
     ],
-    image: "/our division 2/Construction & Project Management.webp",
+    image: "/our division 2/Construction-Project Management.webp",
   },
   {
     title: "Sustainability & Smart Solutions Division",
@@ -70,7 +70,7 @@ const divisions = [
       "Data Analytics for Project Optimization",
       "Digital Design Reviews",
     ],
-    image: "/our division 2/Digital Engineering & BIM Division.webp",
+    image: "/our division 2/Digital Engineering-BIM Division.webp",
   },
   {
     title: "Strategy & Advisory Division",
@@ -83,7 +83,7 @@ const divisions = [
       "Risk & Cost Analysis",
       "Market Research & Opportunity Mapping",
     ],
-    image: "/our division 2/Strategy & Advisory.webp",
+    image: "/our division 2/Strategy-Advisory.webp",
   },
 ];
 

@@ -29,7 +29,7 @@ export default function Page() {
     {
       title: "Utilities & Energy Systems",
       desc: "Our engineers design resilient energy and water systems capable of withstanding disruptions. Whether it’s protecting power grids or securing water supply networks, we deliver reliable utility resilience.",
-      img: "/Environment-Sustainability/Unified Resilience/Utilities & Energy Systems.webp",
+      img: "/Environment-Sustainability/Unified Resilience/Utilities-Energy Systems.webp",
     },
     {
       title: "Facility Automation",
@@ -49,7 +49,7 @@ export default function Page() {
     {
       title: "Asset & Inventory Management",
       desc: "We provide systems for tracking, monitoring, and securing critical assets and inventory. This ensures resources are available and accounted for during both routine operations and crisis situations.",
-      img: "/Environment-Sustainability/Unified Resilience/Asset & Inventory Management.webp",
+      img: "/Environment-Sustainability/Unified Resilience/Asset-Inventory Management.webp",
     },
   ];
 
@@ -57,12 +57,12 @@ export default function Page() {
     {
       title: "Oil & Gas",
       desc: "Securing energy facilities and pipelines.",
-      img: "/Environment-Sustainability/Unified Resilience/Oil & Gas.webp",
+      img: "/Environment-Sustainability/Unified Resilience/Oil-Gas.webp",
     },
     {
       title: "Government & Defense",
       desc: "Supporting national resilience and emergency preparedness.",
-      img: "/Environment-Sustainability/Unified Resilience/Government & Defense.webp",
+      img: "/Environment-Sustainability/Unified Resilience/Government-Defense.webp",
     },
     {
       title: "Transportation",
@@ -77,7 +77,7 @@ export default function Page() {
     {
       title: "Engineering & Construction",
       desc: "Embedding resilience into infrastructure from the start.",
-      img: "/Environment-Sustainability/Unified Resilience/Engineering & Construction.webp",
+      img: "/Environment-Sustainability/Unified Resilience/Engineering-Construction.webp",
     },
     {
       title: "Financial Services",

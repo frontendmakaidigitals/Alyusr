@@ -24,7 +24,7 @@ export default function Page() {
       title: "Strategy & Roadmap",
       desc: "We begin by aligning with your organizational goals, analyzing existing systems, and defining a long-term digital strategy that supports future growth and compliance.",
 
-      img: "/Environment-Sustainability/esg-solutions/Strategy & Roadmap.webp",
+      img: "/Environment-Sustainability/esg-solutions/Strategy-Roadmap.webp",
     },
     {
       title: "Requirements & Gap Analysis",
@@ -42,19 +42,19 @@ export default function Page() {
       title: "Design & Implementation",
       desc: "We configure and deploy systems that improve data visibility, automation, and integration with enterprise applications. Mobile-ready and user-friendly solutions ensure adoption.",
 
-      img: "/Environment-Sustainability/esg-solutions/Design & Implementation.webp",
+      img: "/Environment-Sustainability/esg-solutions/Design-Implementation.webp",
     },
     {
       title: "Interfaces & Dashboards",
       desc: "Our team creates web-based interfaces, mobile tools, and tailored dashboards that simplify workflows, reduce costs, and provide real-time insights for decision-making.",
 
-      img: "/Environment-Sustainability/esg-solutions/Interfaces & Dashboards.webp",
+      img: "/Environment-Sustainability/esg-solutions/Interfaces-Dashboards.webp",
     },
     {
       title: "Reporting & Analytics",
       desc: "We deliver advanced reporting and ESG dashboards that integrate seamlessly with your existing systems, ensuring compliance with global standards while providing investor-ready data.",
 
-      img: "/Environment-Sustainability/esg-solutions/Reporting & Analytics.webp",
+      img: "/Environment-Sustainability/esg-solutions/Reporting-Analytics.webp",
     },
     {
       title: "Change Management & Support",

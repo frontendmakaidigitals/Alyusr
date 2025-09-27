@@ -35,7 +35,7 @@ const services = [
   {
     title: "Process Development & Implementation",
     link: "/Project-Advisory/project-planning",
-    img: "process-development-&-implementation.webp",
+    img: "process-development-implementation.webp",
   },
   {
     title: "Project Planning",
@@ -115,7 +115,7 @@ const services = [
   {
     title: "Risk Management & Resilience",
     link: "/Project-Advisory/risk-management-and-resilience",
-    img: "risk-management-&-resilience.webp",
+    img: "risk-management-resilience.webp",
   },
   {
     title: "Pedestrian Movement Modeling",
@@ -165,7 +165,7 @@ const services = [
   {
     title: "Tunnels and Underground Infrastructure",
     link: "/Engineering-Infrastructure/Tunnels&Underground-Infrastructure",
-    img: "tunnels,-trenchless-technology-and-underground-infrastructure.webp",
+    img: "tunnels-trenchless-technology-and-underground-infrastructure.webp",
   },
   {
     title: "Asset Advisory",
@@ -200,7 +200,7 @@ const services = [
   {
     title: "Land Recovery & Redevelopment",
     link: "/Environment-Sustainability-and-Resilience/land-recovery-and-redevelopment",
-    img: "remediation,-restoration-and-redevelopment.webp",
+    img: "remediation-restoration-and-redevelopment.webp",
   },
   {
     title: "Geo-Intelligence Analytics",

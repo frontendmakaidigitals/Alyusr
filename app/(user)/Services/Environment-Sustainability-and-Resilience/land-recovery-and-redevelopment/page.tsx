@@ -71,7 +71,7 @@ export default function Page() {
     {
       title: "Siting, Feasibility Studies & Program Management",
       desc: "We assess feasibility, identify optimal locations, and provide management support for approvals.",
-      img: "/Environment-Sustainability/land-recovery/Siting, Feasibility Studies.webp", // 🏗️ site planning
+      img: "/Environment-Sustainability/land-recovery/Siting-Feasibility Studies.webp", // 🏗️ site planning
     },
     {
       title: "Stakeholder & Public Engagement",

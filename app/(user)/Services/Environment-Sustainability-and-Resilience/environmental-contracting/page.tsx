@@ -66,7 +66,7 @@ export default function Page() {
       title: "Regulatory & Compliance Management",
       desc: "Support with permitting, regulatory approvals, and stakeholder engagement to keep projects on track and compliant with environmental standards.",
       image:
-        "/Environment-Sustainability/Environmental Contracting/Regulatory & Compliance.webp", // compliance meeting
+        "/Environment-Sustainability/Environmental Contracting/Regulatory-Compliance.webp", // compliance meeting
     },
   ];
 

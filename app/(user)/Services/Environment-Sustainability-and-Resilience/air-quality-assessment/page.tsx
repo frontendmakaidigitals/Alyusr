@@ -83,7 +83,7 @@ export default function Page() {
     {
       title: "Odor & Noise Modeling, Monitoring, and Control",
       desc: "We deliver technical solutions to reduce nuisance odors and noise pollution, helping clients protect community relations and meet compliance.",
-      img: "/Environment-Sustainability/Air-Quality-Assessment/Odor & Noise Modeling.webp",
+      img: "/Environment-Sustainability/Air-Quality-Assessment/Odor-Noise Modeling.webp",
     },
     {
       title: "Expert Witness Testimony",
