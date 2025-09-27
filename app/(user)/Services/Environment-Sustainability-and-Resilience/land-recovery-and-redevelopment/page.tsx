@@ -213,7 +213,8 @@ export default function Page() {
                 <div className="bg-slate-100 w-full h-[240px]">
                   <Image
                     src={service.img}
-                    fill
+                    width={400}
+                    height={400}
                     alt={service.title}
                     className="w-full h-full object-cover"
                   />
