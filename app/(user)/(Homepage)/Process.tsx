@@ -112,7 +112,7 @@ const Process = () => {
               align: "start",
             }}
             setApi={setApi}
-            className="w-full"
+            className="!w-full"
           >
             <CarouselContent className="-ml-4 ">
               {processes.map((phase, i) => (

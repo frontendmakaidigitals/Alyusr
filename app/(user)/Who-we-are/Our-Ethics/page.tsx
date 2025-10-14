@@ -35,7 +35,7 @@ export default function Page() {
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-                Our
+                Our{" "}
                 <span className="text-blue-500">Ethics</span>
               </h1>
               <p className="text-lg text-gray-700">
@@ -88,13 +88,13 @@ export default function Page() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="w-full bg-slate-100 lg:w-1/2 h-64 lg:h-[400px] relative rounded-xl overflow-hidden"
+              className="w-full bg-slate-100 lg:w-1/2 h-64 lg:h-[500px] relative rounded-xl overflow-hidden"
             >
               <Image
-                src="/ethics-image.webp" // replace with your image path
+                src="/our-ethics.jpg" // replace with your image path
                 alt="Ethical Culture"
                 fill
-                className="object-cover object-center rounded-xl"
+                className="object-cover object-center w-full h-full rounded-xl"
               />
             </motion.div>
 
