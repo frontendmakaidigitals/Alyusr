@@ -31,7 +31,7 @@ export default function Page() {
     {
       title: "EHS Compliance Program Development & Implementation",
       desc: "Design and rollout of compliance frameworks aligned with local and international regulations.",
-      img: "/Environment-Sustainability/ehs-management-consulting/Development & Implementation.webp", // Compliance / teamwork
+      img: "/Environment-Sustainability/ehs-management-consulting/Development-Implementation.webp", // Compliance / teamwork
     },
     {
       title: "Process Safety Management & Risk Evaluations",

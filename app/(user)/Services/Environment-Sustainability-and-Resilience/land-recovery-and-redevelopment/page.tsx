@@ -1,6 +1,6 @@
 "use client";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-
+import Image from "next/image";
 import { Leaf, Users, Building2, Recycle, BadgeCheck } from "lucide-react";
 import { motion } from "motion/react";
 export default function Page() {
@@ -36,12 +36,12 @@ export default function Page() {
     {
       title: "Cultural & Heritage Resources",
       desc: "Comprehensive assessments ensure that cultural heritage and Indigenous communities are respected and preserved.",
-      img: "/Environment-Sustainability/land-recovery/Cultural & Heritage Resources.webp", // 🏛️ heritage site
+      img: "/Environment-Sustainability/land-recovery/Cultural-Heritage Resources.webp", // 🏛️ heritage site
     },
     {
       title: "Digital Analyses & Data Conveyance",
       desc: "Using drones, GIS mapping, and interactive platforms, we deliver digital environmental impact reports.",
-      img: "/Environment-Sustainability/land-recovery/Digital Analyses & Data Conveyance.webp", // 🚁 drone mapping
+      img: "/Environment-Sustainability/land-recovery/Digital Analyses-Data Conveyance.webp", // 🚁 drone mapping
     },
     {
       title: "Ecological Design, Implementation & Restoration",
@@ -51,7 +51,7 @@ export default function Page() {
     {
       title: "Environmental & Social Impact Assessments",
       desc: "Legally compliant impact assessments balancing regulatory requirements with business objectives.",
-      img: "/Environment-Sustainability/land-recovery/Environmental & Social.webp", // 📊 impact analysis
+      img: "/Environment-Sustainability/land-recovery/Environmental-Social.webp", // 📊 impact analysis
     },
     {
       title: "Environmental Planning, Mitigation & Monitoring",
@@ -71,17 +71,17 @@ export default function Page() {
     {
       title: "Siting, Feasibility Studies & Program Management",
       desc: "We assess feasibility, identify optimal locations, and provide management support for approvals.",
-      img: "/Environment-Sustainability/land-recovery/Siting, Feasibility Studies.webp", // 🏗️ site planning
+      img: "/Environment-Sustainability/land-recovery/Siting-Feasibility Studies.webp", // 🏗️ site planning
     },
     {
       title: "Stakeholder & Public Engagement",
       desc: "We foster transparent dialogue with stakeholders through workshops, consultations, and digital platforms.",
-      img: "/Environment-Sustainability/land-recovery/Stakeholder & Public.webp", // 👥 engagement
+      img: "/Environment-Sustainability/land-recovery/Stakeholder-Public.webp", // 👥 engagement
     },
     {
       title: "Fate & Effects Transport / Dispersion Modeling",
       desc: "Using advanced modeling, we predict pollutant movement to evaluate risks and guide mitigation.",
-      img: "/Environment-Sustainability/land-recovery/Fate & Effects.webp", // 🌊 modeling
+      img: "/Environment-Sustainability/land-recovery/Fate-Effects.webp", // 🌊 modeling
     },
     {
       title: "Visual & Noise Impact Assessments",
@@ -211,8 +211,10 @@ export default function Page() {
                 className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden"
               >
                 <div className="bg-slate-100 w-full h-[240px]">
-                  <img
+                  <Image
                     src={service.img}
+                    width={400}
+                    height={400}
                     alt={service.title}
                     className="w-full h-full object-cover"
                   />

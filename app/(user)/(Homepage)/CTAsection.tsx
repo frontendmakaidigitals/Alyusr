@@ -15,7 +15,7 @@ const Marquee = () => {
     { title: "Naber Real Estate", img: "naber real estate logo.webp" },
     { title: "Nadec", img: "nadec logo.webp" },
     { title: "Othaim", img: "othaim logo.webp" },
-    { title: "Rabiah & Nassar", img: "rabiah & nassar logo.webp" },
+    { title: "Rabiah & Nassar", img: "rabiah-nassar logo.webp" },
     { title: "Rikaz", img: "rikaz logo.webp" },
     { title: "Saline Water", img: "saline water logo.webp" },
   ];

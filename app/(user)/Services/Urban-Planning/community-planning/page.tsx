@@ -4,7 +4,7 @@ import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 import { motion } from "motion/react";
 import { BadgeCheck } from "lucide-react";
-export default function ConstructionManagementPage() {
+export default function Page() {
   const phases = [
     {
       title: "Research & Baseline Assessment",
