@@ -81,6 +81,7 @@ const WhyAlYusr = ({ data, tabs, onNavigate }: dataProps) => {
             {tabs.map((tab, idx) => (
               <Link
                 key={idx}
+                onClick={onNavigate}
                 href={tab.link}
                 className="border text-blue-300 border-blue-200/60 rounded-full px-5 py-[.7rem] lg:px-4 lg:py-1 text-sm"
               >

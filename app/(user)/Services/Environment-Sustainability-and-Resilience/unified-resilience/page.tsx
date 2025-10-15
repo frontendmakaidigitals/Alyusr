@@ -72,7 +72,7 @@ export default function Page() {
     {
       title: "Energy & Utilities",
       desc: "Strengthening grid stability and power generation facilities.",
-      img: "/Environment-Sustainability/Unified Resilience/Energy & Utilities.webp",
+      img: "/Environment-Sustainability/Unified Resilience/Energy-Utilities.webp",
     },
     {
       title: "Engineering & Construction",

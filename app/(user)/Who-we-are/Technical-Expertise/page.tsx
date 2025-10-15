@@ -37,7 +37,7 @@ export default function TechnicalExpertisePage() {
       title: "Water, Drainage & Hydrology",
       desc: "Smart water management solutions, including stormwater systems and hydraulic modeling.",
 
-      img: "/technical expertise 2/Water-Drainage & Hydrology.webp",
+      img: "/technical expertise 2/Water-Drainage-Hydrology.webp",
     },
     {
       title: "Telecommunication & Low Current Systems",

@@ -14,13 +14,14 @@ import {
   DollarSign,
   Cpu,
   Repeat,
+  ArrowLeft,
+  ArrowRight,
 } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import Image from "next/image";
 export default function Page() {
@@ -37,6 +38,25 @@ export default function Page() {
     const top = sectionRef.current?.offsetTop || 0;
     setSectionTop(top);
   }, []);
+  const [api, setApi] = useState<CarouselApi>();
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const update = () => {
+      setCanScrollPrev(api.canScrollPrev());
+      setCanScrollNext(api.canScrollNext());
+    };
+
+    update();
+    api.on("select", update);
+
+    return () => {
+      api.off?.("select", update);
+    };
+  }, [api]);
   return (
     <div className="bg-white text-gray-800">
       {/* HERO SECTION */}
@@ -60,16 +80,16 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="https://images.pexels.com/photos/129112/pexels-photo-129112.jpeg"
+          src="/why/govt-sector-hero.jpeg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
 
       {/* OVERVIEW SECTION */}
-      <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+      <div className="relative z-10 min-h-[85vh] py-20 lg:py-0 flex flex-col h-full justify-center items-center">
         <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
           <div className="max-w-2xl">
-            <h1 className="text-4xl lg:text-5xl font-semibold text-sky-800 leading-tighter  mb-4">
+            <h1 className="text-4xl lg:text-5xl font-semibold text-sky-800 leading-tighter mb-4">
               Government and Private Sector Approved
             </h1>
             <p className="text-lg text-gray-700">
@@ -91,7 +111,7 @@ export default function Page() {
           </div>
           <div className="h-[450px]">
             <img
-              src="https://images.pexels.com/photos/2100942/pexels-photo-2100942.jpeg"
+              src="/why/govt-sector-about.jpeg"
               alt="About Background"
               className=" w-full h-full object-cover"
             />
@@ -101,7 +121,7 @@ export default function Page() {
       </div>
 
       {/* CERTIFICATIONS LIST */}
-      <section className="bg-gradient-to-b from-white via-sky-50 to-white py-24 px-6 sm:px-10">
+      <section className="bg-gradient-to-b from-white via-sky-50 to-white py-24 lg:px-6">
         <div className="container max-w-6xl mx-auto">
           {/* HEADLINE */}
           <div className="text-center mb-20">
@@ -197,7 +217,8 @@ export default function Page() {
             opts={{
               align: "start",
             }}
-            className="w-full px-4" // Add horizontal padding to avoid edge cuts
+            setApi={setApi}
+            className="w-full" // Add horizontal padding to avoid edge cuts
           >
             <CarouselContent className="gap-4 px-10">
               {" "}
@@ -205,19 +226,19 @@ export default function Page() {
               {[
                 {
                   title: "Strategic Alignment",
-                  img: "https://images.pexels.com/photos/1181615/pexels-photo-1181615.jpeg",
+                  img: "/why/in-house-Strategic-Alignment.jpeg",
                 },
                 {
                   title: "Streamlined Oversight",
-                  img: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+                  img: "/why/in-house-Streamlined Oversight.jpeg",
                 },
                 {
                   title: "Consistent Quality",
-                  img: "https://images.pexels.com/photos/7564203/pexels-photo-7564203.jpeg",
+                  img: "/why/in-house-Consistent-Quality.jpeg",
                 },
                 {
                   title: "Client Trust",
-                  img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+                  img: "/why/in-houseClient Trust.jpeg",
                 },
               ].map((point, i) => (
                 <CarouselItem
@@ -242,9 +263,24 @@ export default function Page() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
           </Carousel>
+
+          <div className="my-6 flex justify-end gap-2">
+            <button
+              disabled={!canScrollPrev}
+              onClick={() => api?.scrollPrev()}
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
+            >
+              <ArrowLeft />
+            </button>
+            <button
+              disabled={!canScrollNext}
+              onClick={() => api?.scrollNext()}
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
+            >
+              <ArrowRight />
+            </button>
+          </div>
         </div>
       </section>
     </div>

@@ -14,6 +14,8 @@ import {
   ShieldCheck,
   BadgeCheck,
   ArrowUpRight,
+  ArrowRight,
+  ArrowLeft,
 } from "lucide-react";
 import {
   Carousel,
@@ -21,6 +23,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import Image from "next/image";
 export default function Page() {
@@ -32,6 +35,25 @@ export default function Page() {
     [sectionTop, sectionTop + 400],
     [0, 100]
   );
+  const [api, setApi] = useState<CarouselApi>();
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const update = () => {
+      setCanScrollPrev(api.canScrollPrev());
+      setCanScrollNext(api.canScrollNext());
+    };
+
+    update();
+    api.on("select", update);
+
+    return () => {
+      api.off?.("select", update);
+    };
+  }, [api]);
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
@@ -100,7 +122,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="https://images.pexels.com/photos/4489794/pexels-photo-4489794.jpeg"
+          src="/why-in-hero-house.jpeg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -109,7 +131,7 @@ export default function Page() {
 
         {/* Left gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
-
+        <BgLayer />
         {/* Container with text */}
         <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
@@ -134,20 +156,20 @@ export default function Page() {
             </div>
             <div className="h-[450px]">
               <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+                src="/why-about.jpeg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
-              <BgLayer />
             </div>
           </div>
         </div>
       </section>
-      <section className="relative py-24 px-6 sm:px-10 bg-gradient-to-b from-white to-sky-50">
+      <section className="relative py-24 lg:px-6 bg-gradient-to-b from-white to-sky-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              What Sets Our In-House Model Apart?
+              What Sets Our{" "}
+              <span className="text-blue-500">In-House Model</span> Apart?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               ALYUSR’s integrated approach ensures precision, speed, and
@@ -190,7 +212,8 @@ export default function Page() {
       <section className="">
         <div className="container my-24">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-            Core In-House Capabilities Include
+            Core <span className="text-blue-500">In-House Capabilities</span>{" "}
+            Include
           </h2>
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -287,32 +310,31 @@ export default function Page() {
             opts={{
               align: "start",
             }}
-            className="w-full px-4" // Add horizontal padding to avoid edge cuts
+              setApi={setApi}
+            className="!w-full" // Add horizontal padding to avoid edge cuts
           >
-            <CarouselContent className="gap-4 px-10">
-              {" "}
-              {/* optional spacing between cards */}
+            <CarouselContent className="gap-4 px-4">
               {[
                 {
                   title: "Strategic Alignment",
-                  img: "https://images.pexels.com/photos/1181615/pexels-photo-1181615.jpeg",
+                  img: "/why/in-house-Strategic-Alignment.jpeg",
                 },
                 {
                   title: "Streamlined Oversight",
-                  img: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+                  img: "/why/in-house-Streamlined Oversight.jpeg",
                 },
                 {
                   title: "Consistent Quality",
-                  img: "https://images.pexels.com/photos/7564203/pexels-photo-7564203.jpeg",
+                  img: "/why/in-house-Consistent-Quality.jpeg",
                 },
                 {
                   title: "Client Trust",
-                  img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+                  img: "/why/in-houseClient Trust.jpeg",
                 },
               ].map((point, i) => (
                 <CarouselItem
                   key={i}
-                  className="group md:basis-1/2 !p-0 lg:basis-1/3 bg-slate-300 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
+                  className="group basis-4/5 !p-0 lg:basis-1/3 bg-slate-300 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
                 >
                   <div className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <div className="relative h-[300px] w-full bg-sky-100">
@@ -332,9 +354,24 @@ export default function Page() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
           </Carousel>
+
+          <div className="my-6 flex justify-end gap-2">
+            <button
+              disabled={!canScrollPrev}
+              onClick={() => api?.scrollPrev()}
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
+            >
+              <ArrowLeft />
+            </button>
+            <button
+              disabled={!canScrollNext}
+              onClick={() => api?.scrollNext()}
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
+            >
+              <ArrowRight />
+            </button>
+          </div>
         </div>
       </section>
     </div>

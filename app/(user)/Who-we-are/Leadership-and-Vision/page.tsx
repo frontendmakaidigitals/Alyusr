@@ -56,11 +56,12 @@ export default function Page() {
       </motion.div>
 
       {/* Leadership Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 lg:px-6 bg-white">
         <div className="container grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-              Leadership That Builds with Purpose
+              <span className="text-blue-500">Leadership</span> That Builds with
+              Purpose
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
               At ALYUSR, leadership is about inspiring progress, driving
@@ -76,9 +77,9 @@ export default function Page() {
               <li>✓ High ethical and professional standards</li>
             </ul>
           </div>
-          <div className="rounded-xl h-[450px] overflow-hidden">
+          <div className="rounded-xl h-[260px] lg:h-[450px] overflow-hidden">
             <img
-              src="/Leadership-Vision 2/leadership.webp"
+              src="/our-ethics.jpg"
               alt="Leadership at ALYUSR"
               className="w-full h-full object-cover"
             />
@@ -97,7 +98,7 @@ export default function Page() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+            <h3 className="text-3xl font-semibold text-gray-800 mb-3">
               Our Vision
             </h3>
             <p className="text-gray-700 leading-relaxed">
@@ -115,7 +116,7 @@ export default function Page() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+            <h3 className="text-3xl font-semibold text-gray-800 mb-3">
               Our Mission
             </h3>
             <p className="text-gray-700 leading-relaxed">
@@ -126,7 +127,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="bg-gradient-to-br from-slate-50 to-white py-20 px-6">
+      <section className="bg-gradient-to-br from-slate-50 to-white py-20 lg:px-6">
         <div className="container mx-auto max-w-7xl grid md:grid-cols-2 gap-12 items-center">
           {/* LEFT TEXT BLOCK */}
           <div>
@@ -167,10 +168,10 @@ export default function Page() {
       </section>
 
       {/* Vision 2030 Commitment */}
-      <section className="py-20 px-6">
+      <section className="pt-12 lg:py-20 px-6">
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            How We Support Vision 2030
+            How We Support <span className="text-blue-500">Vision 2030</span>
           </h2>
         </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">

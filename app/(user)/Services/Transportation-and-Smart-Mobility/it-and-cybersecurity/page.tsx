@@ -112,7 +112,17 @@ export default function Page() {
     <main className="bg-white text-gray-900">
       <section className="py-10">
         <div className="container grid grid-cols-1 place-items-center lg:grid-cols-2 gap-10">
-          <div className="space-y-3">
+          {/* Image first on mobile, second on desktop */}
+          <div className="w-full h-[230px] lg:h-[400px] bg-slate-100 rounded-lg order-1 lg:order-2">
+            <img
+              src={"/Transportation-mobility/it-and-cybersecurity/hero.webp"}
+              className="w-full h-full object-cover"
+              alt="IT & Cybersecurity"
+            />
+          </div>
+
+          {/* Text second on mobile, first on desktop */}
+          <div className="space-y-3 order-2 lg:order-1">
             <h1 className="text-4xl lg:text-5xl font-[600]">
               <span className="text-blue-500">IT</span> &{" "}
               <span className="text-sky-500">Cybersecurity</span> Services
@@ -125,13 +135,6 @@ export default function Page() {
               protect, streamline, and future-proof our clients’ digital
               infrastructure.
             </p>
-          </div>
-          <div className="w-full h-[400px] bg-slate-100 rounded-lg">
-            <img
-              src={"/Transportation-mobility/it-and-cybersecurity/hero.webp"}
-              className=""
-              alt={""}
-            />
           </div>
         </div>
       </section>

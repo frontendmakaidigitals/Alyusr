@@ -49,7 +49,7 @@ export default function Page() {
       </motion.div>
       <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
         {/* Background image */}
-
+        <BgLayer />
         {/* Left gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
 
@@ -58,7 +58,7 @@ export default function Page() {
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
               <h1 className="text-4xl lg:text-5xl font-semibold leading-tighter  mb-4">
-                Heading
+                <span className="text-blue-500">Engineering</span> the Future of <span className="text-teal-600">Saudi Arabia</span>
               </h1>
               <p className="text-lg text-gray-700">
                 At ALYUSR Engineering Consulting, we are proud to play a vital
@@ -82,7 +82,6 @@ export default function Page() {
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
-              <BgLayer />
             </div>
           </div>
         </div>
@@ -203,7 +202,7 @@ export default function Page() {
       </section>
 
       {/* Local Roots */}
-      <section className="bg-gray-50 place-items-center gap-5 grid grid-cols-1 lg:grid-cols-2 py-20 px-6 lg:px-24">
+      <section className="bg-gray-50 place-items-center gap-5 grid grid-cols-1 lg:grid-cols-2 pt-12 lg:py-20 px-6 lg:px-24">
         <motion.div
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}

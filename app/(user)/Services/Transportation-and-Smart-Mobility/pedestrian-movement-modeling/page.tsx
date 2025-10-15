@@ -93,8 +93,8 @@ export default function Page() {
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
               src={"/Transportation-mobility/pedestrian-movement/hero.webp"}
-              className=""
-              alt={"w-full h-full object-cover"}
+              className="w-full h-full object-cover"
+              alt={"pedestrian movement"}
             />
           </div>
         </div>

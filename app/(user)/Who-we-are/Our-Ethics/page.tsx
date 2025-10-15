@@ -5,6 +5,7 @@ import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
+import Link from "next/link";
 const codeItems = [
   "Legal compliance requirements under local and international law",
   "Guidelines for ethical decision-making in daily operations",
@@ -29,14 +30,13 @@ export default function Page() {
   }, []);
   return (
     <main className="">
-      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
-        {/* Container with text */}
+      <section className="min-h-[85vh] py-12 lg:py-0 overflow-hidden relative">
+        <BgLayer />
         <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-semibold leading-tighter  mb-4">
-                Our{" "}
-                <span className="text-blue-500">Ethics</span>
+                Our <span className="text-blue-500">Ethics</span>
               </h1>
               <p className="text-lg text-gray-700">
                 At ALYUSR Engineering Consulting, we believe that ethical
@@ -52,9 +52,9 @@ export default function Page() {
                 ethical, and respectful across all markets we operate in.
               </p>
 
-              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+              <Link href={'/Contact'} className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
                 Discover Our Story <ArrowUpRight />
-              </button>
+              </Link>
             </div>
             <div className="h-[450px] w-full bg-slate-100">
               <img
@@ -62,7 +62,6 @@ export default function Page() {
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
-              <BgLayer />
             </div>
           </div>
         </div>

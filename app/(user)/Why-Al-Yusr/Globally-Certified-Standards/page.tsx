@@ -4,13 +4,12 @@ import { Leaf, Globe, BadgeCheck, Star } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import BgLayer from "@/app/(user)/app_chunks/BgLayer";
 import { motion, useScroll, useTransform } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowLeft, ArrowRight } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 export default function CertificationsPage() {
   const [sectionTop, setSectionTop] = useState(0);
@@ -26,6 +25,25 @@ export default function CertificationsPage() {
     const top = sectionRef.current?.offsetTop || 0;
     setSectionTop(top);
   }, []);
+  const [api, setApi] = useState<CarouselApi>();
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const update = () => {
+      setCanScrollPrev(api.canScrollPrev());
+      setCanScrollNext(api.canScrollNext());
+    };
+
+    update();
+    api.on("select", update);
+
+    return () => {
+      api.off?.("select", update);
+    };
+  }, [api]);
   return (
     <div className="bg-white text-gray-800">
       {/* HERO SECTION */}
@@ -49,14 +67,14 @@ export default function CertificationsPage() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-top"
-          src="https://www.poynter.org/wp-content/uploads/2019/03/shutterstock_285251927.jpeg"
+          src="/why/global-standard.jpg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
       {/* OVERVIEW SECTION */}
       <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
         {/* Background image */}
-
+        <BgLayer />
         {/* Left gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
 
@@ -87,11 +105,10 @@ export default function CertificationsPage() {
             </div>
             <div className="h-[450px]">
               <img
-                src="https://images.pexels.com/photos/12324202/pexels-photo-12324202.jpeg"
+                src="/why/about.jpeg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
-              <BgLayer />
             </div>
           </div>
         </div>
@@ -159,11 +176,12 @@ export default function CertificationsPage() {
       </section>
 
       {/* GLOBAL MEMBERSHIPS */}
-      <section className="relative bg-gradient-to-br from-sky-100 via-white to-sky-50 py-24 px-6 sm:px-10">
+      <section className="relative bg-gradient-to-br from-sky-100 via-white to-sky-50 py-24 lg:px-6 ">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Global Accreditations & Memberships
+              <span className="text-blue-500">Global</span> Accreditations &
+              Memberships
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our global accreditations reflect ALYUSR’s dedication to
@@ -230,32 +248,32 @@ export default function CertificationsPage() {
             opts={{
               align: "start",
             }}
-            className="w-full px-4" // Add horizontal padding to avoid edge cuts
+            setApi={setApi}
+            className="w-full" // Add horizontal padding to avoid edge cuts
           >
-            <CarouselContent className="gap-4 px-10">
+            <CarouselContent className="gap-4 px-7 lg:px-10">
               {" "}
-              {/* optional spacing between cards */}
               {[
                 {
                   title: "Strategic Alignment",
-                  img: "https://images.pexels.com/photos/1181615/pexels-photo-1181615.jpeg",
+                  img: "/why/in-house-Strategic-Alignment.jpeg",
                 },
                 {
                   title: "Streamlined Oversight",
-                  img: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+                  img: "/why/in-house-Streamlined Oversight.jpeg",
                 },
                 {
                   title: "Consistent Quality",
-                  img: "https://images.pexels.com/photos/7564203/pexels-photo-7564203.jpeg",
+                  img: "/why/in-house-Consistent-Quality.jpeg",
                 },
                 {
                   title: "Client Trust",
-                  img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+                  img: "/why/in-houseClient Trust.jpeg",
                 },
               ].map((point, i) => (
                 <CarouselItem
                   key={i}
-                  className="group md:basis-1/2 !p-0 lg:basis-1/3 bg-slate-300 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
+                  className="group basis-2/2 !p-0 lg:basis-1/3 bg-slate-300 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
                 >
                   <div className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <div className="relative h-[300px] w-full bg-sky-100">
@@ -275,9 +293,24 @@ export default function CertificationsPage() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
           </Carousel>
+
+          <div className="my-6 flex justify-end gap-2">
+            <button
+              disabled={!canScrollPrev}
+              onClick={() => api?.scrollPrev()}
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
+            >
+              <ArrowLeft />
+            </button>
+            <button
+              disabled={!canScrollNext}
+              onClick={() => api?.scrollNext()}
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
+            >
+              <ArrowRight />
+            </button>
+          </div>
         </div>
       </section>
 

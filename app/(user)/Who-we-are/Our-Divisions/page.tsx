@@ -5,6 +5,7 @@ import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
+import Link from "next/link";
 const divisions = [
   {
     title: "Engineering & Design Division",
@@ -132,7 +133,7 @@ export default function Page() {
 
         {/* Left gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
-
+        <BgLayer />
         {/* Container with text */}
         <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
@@ -153,9 +154,12 @@ export default function Page() {
                 quality, and agility to every stage of the project lifecycle.
               </p>
 
-              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+              <Link
+                href={"/Contact"}
+                className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+              >
                 Discover Our Story <ArrowUpRight />
-              </button>
+              </Link>
             </div>
             <div className="h-[450px] w-full">
               <img
@@ -163,7 +167,6 @@ export default function Page() {
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
-              <BgLayer />
             </div>
           </div>
         </div>

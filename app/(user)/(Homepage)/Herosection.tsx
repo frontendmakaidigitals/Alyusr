@@ -31,10 +31,22 @@ const Herosection = () => {
 
   const titles = [
     { title: "Vision 2030", link: "/Who-we-are/Leadership-and-Vision" },
-    { title: "Smart Cities", link: "/Services/Transportation-and-Smart-Mobility/smart-infrastructure-and-digitals-systems" },
-    { title: "Engineering", link: "/Services/Engineering-Infrastructure/Engineering-Services" },
-    { title: "Architecture & Infrastructure", link: "/Services/Urban-Planning/Architecture-Design" },
-    { title: "Foundation", link: "/Services/Engineering-Infrastructure/Foundation-Engineering-Solutions" },
+    {
+      title: "Smart Cities",
+      link: "/Services/Transportation-and-Smart-Mobility/smart-infrastructure-and-digitals-systems",
+    },
+    {
+      title: "Engineering",
+      link: "/Services/Engineering-Infrastructure/Engineering-Services",
+    },
+    {
+      title: "Architecture & Infrastructure",
+      link: "/Services/Urban-Planning/Architecture-Design",
+    },
+    {
+      title: "Foundation",
+      link: "/Services/Engineering-Infrastructure/Foundation-Engineering-Solutions",
+    },
   ];
 
   const slides = [
@@ -105,19 +117,21 @@ const Herosection = () => {
                     >
                       {slides[activeIndex].desc}
                     </motion.p>
-                    <motion.button
-                      key={slides[activeIndex].img}
-                      initial={{ x: 200, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{
-                        delay: 0.4,
-                        duration: 1.4,
-                        ease: [0.19, 1, 0.22, 1],
-                      }}
-                      className="bg-gradient-to-br mt-4 px-4 py-[.45rem] text-sm rounded-lg text-slate-50 flex items-center gap-2 from-[#387EF0] to-[#2651C2]"
-                    >
-                      Explore Our Services <ArrowUpRight />
-                    </motion.button>
+                    <Link href={"/Contact"}>
+                      <motion.button
+                        key={slides[activeIndex].img}
+                        initial={{ x: 200, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{
+                          delay: 0.4,
+                          duration: 1.4,
+                          ease: [0.19, 1, 0.22, 1],
+                        }}
+                        className="bg-gradient-to-br mt-4 px-4 py-[.45rem] text-sm rounded-lg text-slate-50 flex items-center gap-2 from-[#387EF0] to-[#2651C2]"
+                      >
+                        Explore Our Services <ArrowUpRight />
+                      </motion.button>
+                    </Link>
                   </div>
                 </div>
                 <BgLayer />

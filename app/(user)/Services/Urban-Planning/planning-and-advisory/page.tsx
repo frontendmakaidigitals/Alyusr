@@ -279,7 +279,7 @@ Our approach ensures that strategies are not just designed from the top down, bu
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="pt-12 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

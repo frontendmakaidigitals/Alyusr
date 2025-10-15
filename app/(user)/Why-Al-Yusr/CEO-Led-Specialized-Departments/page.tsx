@@ -24,6 +24,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import CTA from "../../app_chunks/CTA";
 
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
@@ -62,20 +63,19 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="https://images.pexels.com/photos/5717512/pexels-photo-5717512.jpeg"
+          src="/ceo-hero-img.jpeg"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
 
       {/* WHAT SETS US APART */}
-      <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
+      <section className="lg:min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
+        <div className="absolute  inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
+        <BgLayer />
         {/* Background image */}
 
-        {/* Left gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
-
         {/* Container with text */}
-        <div className="relative z-10 min-h-[85vh] flex flex-col h-full justify-center items-center">
+        <div className="relative z-10 lg:min-h-[85vh] flex flex-col h-full justify-center items-center">
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
               <h1 className="text-4xl lg:text-5xl font-semibold text-sky-800 leading-tighter  mb-4">
@@ -101,11 +101,10 @@ export default function Page() {
             </div>
             <div className="h-[450px]">
               <img
-                src="https://images.pexels.com/photos/3783585/pexels-photo-3783585.jpeg"
+                src="/ceo-led-about.jpeg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
-              <BgLayer />
             </div>
           </div>
         </div>
@@ -116,7 +115,8 @@ export default function Page() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              A Structure Designed for Success
+              A <span className="text-blue-500">Structure Designed</span> for
+              Success
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               Each department within ALYUSR is built around a focused area of
@@ -193,7 +193,8 @@ export default function Page() {
       <section className="relative bg-white py-24 container">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            We Are Driven by Process & Backed by Expertise
+            We Are Driven by{" "}
+            <span className="text-blue-500">Process & Backed</span> by Expertise
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             At ALYUSR, executive leadership is hands-on — present at every
@@ -312,23 +313,14 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-3xl text-center">
-          <h3 className="text-3xl font-semibold text-gray-800 mb-4">
-            Your Project. Our People. One Team.
-          </h3>
-          <p className="text-lg text-gray-600 mb-8">
-            With fully in-house capabilities, ALYUSR offers clients unmatched
-            efficiency, precision, and project confidence. We&apos;re not just
+      <CTA
+        title="Your Project. Our People. One Team."
+        desc=" With fully in-house capabilities, ALYUSR offers clients unmatched
+            efficiency, precision, and project confidence. We're not just
             consultants, we’re your engineering partner from concept to
-            completion.
-          </p>
-          <button className="px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg shadow hover:bg-sky-700 transition">
-            Start a Project With Us
-          </button>
-        </div>
-      </section>
+            completion."
+        btn=" Start a Project With Us"
+      />
     </div>
   );
 }

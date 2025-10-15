@@ -232,7 +232,7 @@ export default function ConstructionManagementPage() {
         </p>
       </section>
       <section className="bg-white py-20 px-6 text-gray-900">
-        <div className="flex  items-center gap-5">
+        <div className=" flex flex-col lg:flex-row items-center gap-5">
           <div>
             <motion.h2 className="text-4xl lg:text-5xl font-bold mb-2 text-start">
               Full <span className="text-blue-500">Project Lifecycle</span>{" "}
@@ -274,13 +274,13 @@ export default function ConstructionManagementPage() {
                 align: "start",
               }}
               setApi={setApi}
-              className="w-full min-w-4xl "
+              className="!w-full"
             >
               <CarouselContent className="-ml-4 ">
                 {lifecyclePhases.map((phase, i) => (
                   <CarouselItem
                     key={i}
-                    className="md:basis-1/2 pt-5 relative lg:basis-1/3 pl-4" // <-- spacing added
+                    className="basis-4/5 pt-5 relative lg:basis-1/3 pl-4" // <-- spacing added
                   >
                     <motion.h2 className="text-5xl lg:text-6xl z-10 left-8 text-white/80 font-bold absolute top-0 -translate-y-2 drop-shadow-[1px_1px_2px_rgba(0,0,0,0.4)]">
                       {i + 1}
@@ -308,6 +308,8 @@ export default function ConstructionManagementPage() {
           </div>
         </div>
       </section>
+      
+      
       <section className="py-16 container">
         <motion.h2
           className="text-4xl lg:text-5xl font-semibold text-center mb-6"
