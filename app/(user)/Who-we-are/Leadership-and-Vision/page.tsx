@@ -50,7 +50,7 @@ export default function Page() {
         <motion.img
           style={{ y: yTransform }}
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
-          src="/Leadership & Vision 2/banner.webp"
+          src="/Leadership-Vision 2/banner.webp"
           alt="ALYUSR Engineering Hero Background"
         />
       </motion.div>
@@ -78,7 +78,7 @@ export default function Page() {
           </div>
           <div className="rounded-xl h-[450px] overflow-hidden">
             <img
-              src="/Leadership & Vision 2/leadership.webp"
+              src="/Leadership-Vision 2/leadership.webp"
               alt="Leadership at ALYUSR"
               className="w-full h-full object-cover"
             />
@@ -92,7 +92,7 @@ export default function Page() {
           <div>
             <div className="rounded-xl mb-4 h-[350px] overflow-hidden">
               <img
-                src="/Leadership & Vision 2/leadership.webp"
+                src="/Leadership-Vision 2/leadership.webp"
                 alt="Leadership at ALYUSR"
                 className="w-full h-full object-cover"
               />
@@ -110,7 +110,7 @@ export default function Page() {
           <div>
             <div className="rounded-xl h-[350px] mb-4 overflow-hidden">
               <img
-                src="/Leadership & Vision 2/mission.webp"
+                src="/Leadership-Vision 2/mission.webp"
                 alt="Leadership at ALYUSR"
                 className="w-full h-full object-cover"
               />
@@ -158,7 +158,7 @@ export default function Page() {
           {/* RIGHT IMAGE BLOCK */}
           <div className="relative h-[400px] w-full rounded-xl overflow-hidden shadow-xl">
             <img
-              src="/Leadership & Vision 2/vision 2030.webp"
+              src="/Leadership-Vision 2/vision 2030.webp"
               alt="Vision 2030 Project"
               className="w-full h-full object-cover object-center"
             />

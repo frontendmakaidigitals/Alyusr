@@ -18,7 +18,7 @@ export default function Home() {
       <GlobalSection />
       <CTASection />
       <Process />
-      <Blogs />
+     
       <Industry />
       <HomeForm />
     </main>

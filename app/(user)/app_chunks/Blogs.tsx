@@ -55,7 +55,6 @@ const Blogs = () => {
         console.error("Error fetching blogs:", error);
       }
     };
-
     fetchBlogs();
   }, []);
 

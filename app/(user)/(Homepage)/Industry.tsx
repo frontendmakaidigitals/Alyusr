@@ -1,29 +1,63 @@
 "use client";
-import React from "react";
-import { User, Building2, Hammer } from "lucide-react";
-import BgLayer from "../app_chunks/BgLayer";
 
+import React, { useEffect, useState } from "react";
+import BgLayer from "../app_chunks/BgLayer";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import { motion } from "motion/react";
+import Image from "next/image";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { Editor } from "@/components/blocks/editor-00/editor";
 const Industry = () => {
-  const Industries = [
-    {
-      img: "https://images.pexels.com/photos/21391305/pexels-photo-21391305.jpeg", // Add a valid image path
-      title: "Owners / Developers",
-      icon: User,
-      desc: "We work with owners to develop their digital data and BIM management program that defines their content.",
-    },
-    {
-      img: "https://images.pexels.com/photos/5453857/pexels-photo-5453857.jpeg", // Add a valid image path
-      title: "Consultants",
-      icon: Building2,
-      desc: "We ensure the transition fromold and faulty system to modern and more reliable BIM programs.",
-    },
-    {
-      img: "https://images.pexels.com/photos/6196229/pexels-photo-6196229.jpeg", // Add a valid image path
-      title: "Contractors",
-      icon: Hammer,
-      desc: "With BIMLEAD, contractors can optimize their construction processes, improve collabration with other.",
-    },
-  ];
+  interface Blog {
+    id: string | number;
+    title: string;
+    content: string;
+    image?: string;
+    author?: string;
+    [key: string]: any;
+  }
+
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [api, setApi] = useState<CarouselApi>();
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const update = () => {
+      setCanScrollPrev(api.canScrollPrev());
+      setCanScrollNext(api.canScrollNext());
+    };
+
+    update();
+    api.on("select", update);
+
+    return () => {
+      api.off?.("select", update);
+    };
+  }, [api]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch("/api/blogs");
+        if (!res.ok) throw new Error("Failed to fetch blogs");
+
+        const data = await res.json();
+        setBlogs(data.blogs || []);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      }
+    };
+    fetchBlogs();
+  }, []);
 
   return (
     <section className="py-20">
@@ -36,45 +70,80 @@ const Industry = () => {
           In-depth articles on engineering trends, smart infrastructure,
           sustainability, and Vision 2030 impact.
         </h2>
-
-        <ul className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
-          {Industries.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <li
-                key={idx}
-                className={`relative w-full h-[400px] ${
-                  idx < 3 ? "mb-[120px]" : ""
-                } rounded-xl`}
-              >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="absolute inset-0 w-full h-full object-cover "
-                />
-                <BgLayer />
-                <div className="absolute bottom-0 translate-y-1/2 bg-white shadow-lg rounded-lg p-6 w-[90%] left-1/2 transform -translate-x-1/2">
-                  <div className="mb-4 flex items-center gap-2 text-blue-600">
-                    <Icon className="w-20 h-20 p-2 text-white bg-blue-500 rounded-full left-1/2 -translate-x-1/2 absolute top-0 -translate-y-1/2" />
-
-                    <h2 className="text-2xl text-slate-600 mt-8 font-semibold w-full text-center">
-                      {item.title}
-                    </h2>
+        <Carousel
+          opts={{ align: "start" }}
+          setApi={setApi}
+          className="w-full mt-12"
+        >
+          <CarouselContent className="lg:px-5">
+            {blogs.map((item, idx) => {
+              return (
+                <CarouselItem
+                  key={idx}
+                  className={`relative w-full basis-1/1  lg:basis-1/3 h-[400px] ${
+                    idx < 3 ? "mb-[120px]" : ""
+                  } rounded-xl`}
+                >
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="absolute inset-0 w-full h-full object-cover "
+                  />
+                  <BgLayer />
+                  <div className="absolute bottom-0 translate-y-1/2 bg-white shadow-lg rounded-lg p-6 w-[90%] left-1/2 transform -translate-x-1/2">
+                    <div className="mb-4 flex items-center gap-2 text-blue-600">
+                      <h2 className="text-2xl text-slate-600 mt-8 font-semibold w-full text-center">
+                        {item.title}
+                      </h2>
+                    </div>
+                    <div className="mt-1 text-sm text-gray-600">
+                      {item.content ? (
+                        <Editor
+                          editorSerializedState={
+                            typeof item.content === "string"
+                              ? JSON.parse(item.content)
+                              : item.content
+                          }
+                          readOnly
+                          clampLines={2}
+                          blogPage={false}
+                        />
+                      ) : null}
+                    </div>
+                    <div className="w-full flex justify-center">
+                      {" "}
+                      <Link
+                        href={`/blogs/${encodeURIComponent(
+                          item.title.toLowerCase().replace(/\s+/g, "-")
+                        )}`}
+                        className="text-black font-[600] hover:underline text-sm"
+                      >
+                        Read more
+                      </Link>
+                    </div>
                   </div>
-                  <p className="text-gray-700 text-sm mb-4 text-center">
-                    {item.desc}
-                  </p>
-                  <div className="w-full flex justify-center">
-                    {" "}
-                    <button className="text-black font-[600] hover:underline text-sm">
-                      Read more
-                    </button>
-                  </div>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+        </Carousel>
+
+        <div className="mt-7 lg:mt-0 flex justify-end gap-2">
+          <button
+            disabled={!canScrollPrev}
+            onClick={() => api?.scrollPrev()}
+            className="bg-blue-500 disabled:bg-slate-400 text-white p-2 rounded-full"
+          >
+            <ArrowLeft />
+          </button>
+          <button
+            disabled={!canScrollNext}
+            onClick={() => api?.scrollNext()}
+            className="bg-blue-500 disabled:bg-slate-400 text-white p-2 rounded-full"
+          >
+            <ArrowRight />
+          </button>
+        </div>
       </div>
     </section>
   );

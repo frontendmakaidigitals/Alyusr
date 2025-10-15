@@ -56,7 +56,7 @@ export default function ConstructionManagementPage() {
         "Project scheduling & risk management",
         "Program and construction oversight",
       ],
-      img: "/Engineering-Infrastructure/underground/Planning.webp",
+      img: "/Engineering-Infrastructure/underground/planning.webp",
     },
     {
       title: "Geotechnical & Geological Engineering",
@@ -67,7 +67,7 @@ export default function ConstructionManagementPage() {
         "Geotechnical risk assessment",
         "Settlement prediction and monitoring",
       ],
-      img: "/Engineering-Infrastructure/underground/Geological.webp",
+      img: "/Engineering-Infrastructure/underground/geological.webp",
     },
     {
       title: "Tunnel Design & Engineering",
