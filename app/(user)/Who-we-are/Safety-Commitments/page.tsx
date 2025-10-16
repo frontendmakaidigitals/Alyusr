@@ -124,9 +124,12 @@ export default function SafetyCommitmentsPage() {
                 standards, including ISO 45001, and reinforced by strong
                 leadership, clear procedures, and empowered teams.
               </p>
-              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+              <Link
+                href={"/Contact"}
+                className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+              >
                 Discover Our Story <ArrowUpRight />
-              </button>
+              </Link>
             </div>
             {/* Image */}
             <div className="h-[450px] w-full">
@@ -166,9 +169,12 @@ export default function SafetyCommitmentsPage() {
                 programs are designed to prevent incidents, improve performance,
                 and promote continuous learning across all departments.
               </p>
-              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+              <Link
+                href={"/Contact"}
+                className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+              >
                 Discover Our Story <ArrowUpRight />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -12,52 +12,11 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import BgLayer from "../../app_chunks/BgLayer";
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
-  const safetyPractices = [
-    {
-      icon: <ShieldCheck className="w-6 h-6 text-sky-700" />,
-      title: "Leadership-Driven Safety Culture",
-      desc: "Senior managers actively champion all safety initiatives with visible commitment and ongoing improvement across all business units.",
-    },
-    {
-      icon: <Users className="w-6 h-6 text-sky-700" />,
-      title: "Employee Participation & Awareness",
-      desc: "Staff engage in planning, inspections, audits, and toolbox talks. Hazard reporting and open communication are strongly encouraged.",
-    },
-    {
-      icon: <GraduationCap className="w-6 h-6 text-sky-700" />,
-      title: "Training & Safety Orientation",
-      desc: "Every employee receives role-based training. Safety knowledge is consistently reinforced from onboarding to senior levels.",
-    },
-    {
-      icon: <ClipboardList className="w-6 h-6 text-sky-700" />,
-      title: "Risk-Based Planning",
-      desc: "Pre-task risk assessments are conducted to mitigate exposure and ensure compliance at every stage of the project lifecycle.",
-    },
-    {
-      icon: <Workflow className="w-6 h-6 text-sky-700" />,
-      title: "Contractor & Partner Integration",
-      desc: "Subcontractors are held to ALYUSR's safety standards through joint inspections and shared performance goals.",
-    },
-    {
-      icon: <AlertCircle className="w-6 h-6 text-sky-700" />,
-      title: "Incident Prevention & Response",
-      desc: "We track, investigate, and analyze incidents. Corrective actions are mandatory for all recordable events.",
-    },
-    {
-      icon: <HeartPulse className="w-6 h-6 text-sky-700" />,
-      title: "Fit-for-Duty Policy",
-      desc: "All team members must report physically and mentally fit. Health and wellness programs support a safe workplace.",
-    },
-    {
-      icon: <Star className="w-6 h-6 text-sky-700" />,
-      title: "Recognition & Rewards",
-      desc: "Outstanding safety behavior is rewarded through internal awards and milestones to promote a culture of excellence.",
-    },
-  ];
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
@@ -101,7 +60,7 @@ export default function Page() {
 
       <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
         {/* Background image */}
-
+        <BgLayer />
         {/* Left gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent" />
 
@@ -122,9 +81,12 @@ export default function Page() {
                 resilient infrastructure for generations to come.
               </p>
 
-              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+              <Link
+                href={"/Contact"}
+                className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+              >
                 Discover Our Story <ArrowUpRight />
-              </button>
+              </Link>
             </div>
             <div className="h-[450px]">
               <img
@@ -132,7 +94,6 @@ export default function Page() {
                 alt="About Background"
                 className=" w-full h-full object-cover"
               />
-              <BgLayer />
             </div>
           </div>
         </div>
@@ -242,7 +203,7 @@ export default function Page() {
               className="rounded-xl shadow-md w-full h-full object-cover"
             />
           </div>
-          <div className="max-w-5xl mx-auto container">
+          <div className="max-w-5xl mx-auto mt-12 lg:mt-0 container">
             <h2 className="text-4xl lg:text-5xl font-semibold mb-4">
               Our <span className="text-blue-500">Global</span> Commitment
             </h2>

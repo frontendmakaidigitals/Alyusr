@@ -117,7 +117,7 @@ const Herosection = () => {
                     >
                       {slides[activeIndex].desc}
                     </motion.p>
-                    <Link href={"/Contact"}>
+                    <Link href={"/Services"}>
                       <motion.button
                         key={slides[activeIndex].img}
                         initial={{ x: 200, opacity: 0 }}

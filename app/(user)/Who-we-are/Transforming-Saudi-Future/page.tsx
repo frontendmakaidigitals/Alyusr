@@ -58,7 +58,8 @@ export default function Page() {
           <div className="container gap-10 place-items-center grid grid-cols-1 lg:grid-cols-2 px-4  ">
             <div className="max-w-2xl">
               <h1 className="text-4xl lg:text-5xl font-semibold leading-tighter  mb-4">
-                <span className="text-blue-500">Engineering</span> the Future of <span className="text-teal-600">Saudi Arabia</span>
+                <span className="text-blue-500">Engineering</span> the Future of{" "}
+                <span className="text-teal-600">Saudi Arabia</span>
               </h1>
               <p className="text-lg text-gray-700">
                 At ALYUSR Engineering Consulting, we are proud to play a vital
@@ -72,9 +73,12 @@ export default function Page() {
                 services that support long-term growth.
               </p>
 
-              <button className="mt-6 bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+              <Link
+                href={"/Contact"}
+                className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+              >
                 Discover Our Story <ArrowUpRight />
-              </button>
+              </Link>
             </div>
             <div className="h-[450px]">
               <img
