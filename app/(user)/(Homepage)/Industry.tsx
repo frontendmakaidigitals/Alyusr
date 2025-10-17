@@ -85,7 +85,7 @@ const Industry = () => {
                   } rounded-xl`}
                 >
                   <img
-                    src={item.img}
+                      src={`/api/uploads/${item.image}`}
                     alt={item.title}
                     className="absolute inset-0 w-full h-full object-cover "
                   />
