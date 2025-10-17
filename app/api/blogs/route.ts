@@ -5,7 +5,6 @@ import path from "path";
 export async function GET() {
   try {
     const dbPath = path.join(process.cwd(), "data", "db.json");
-
     if (!fs.existsSync(dbPath)) {
       return NextResponse.json({ blogs: [] });
     }
@@ -81,6 +80,7 @@ export async function POST(req: Request) {
       );
     }
 
+    // Read existing db
     const data = fs.readFileSync(dbPath, "utf-8");
     const db = JSON.parse(data);
 
