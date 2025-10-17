@@ -11,6 +11,7 @@ import {
   HeartPulse,
   ArrowUpRight,
 } from "lucide-react";
+import Link from "next/link";
 import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
