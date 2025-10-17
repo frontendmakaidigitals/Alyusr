@@ -110,13 +110,13 @@ const Industry = () => {
                         />
                       ) : null}
                     </div>
-                    <div className="w-full flex justify-center">
+                    <div className="w-full flex mt-3 justify-center">
                       {" "}
                       <Link
                         href={`/blogs/${encodeURIComponent(
                           item.title.toLowerCase().replace(/\s+/g, "-")
                         )}`}
-                        className="text-black font-[600] hover:underline text-sm"
+                        className="text-blue-600 font-[600] hover:underline text-sm"
                       >
                         Read more
                       </Link>
