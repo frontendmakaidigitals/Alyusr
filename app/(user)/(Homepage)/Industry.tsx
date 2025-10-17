@@ -8,11 +8,11 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { motion } from "motion/react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Editor } from "@/components/blocks/editor-00/editor";
+
 const Industry = () => {
   interface Blog {
     id: string | number;
@@ -61,7 +61,7 @@ const Industry = () => {
 
   return (
     <section className="py-20">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <h1 className="text-4xl lg:text-5xl text-center font-semibold">
           Industry <span className="text-blue-500">Insights</span> and{" "}
           <span className="text-blue-500">Case</span> Studies
@@ -70,34 +70,34 @@ const Industry = () => {
           In-depth articles on engineering trends, smart infrastructure,
           sustainability, and Vision 2030 impact.
         </h2>
-        <Carousel
-          opts={{ align: "start" }}
-          setApi={setApi}
-          className="w-full mt-12"
-        >
-          <CarouselContent className="lg:px-5">
-            {blogs.map((item, idx) => {
-              return (
-                <CarouselItem
-                  key={idx}
-                  className={`relative w-full basis-1/1  lg:basis-1/3 h-[400px] ${
-                    idx < 3 ? "mb-[120px]" : ""
-                  } rounded-xl`}
-                >
-                  <img
+
+        {/* Carousel Section */}
+        <Carousel opts={{ align: "start" }} setApi={setApi} className="w-full mt-12">
+          <CarouselContent className="-ml-4">
+            {blogs.map((item, idx) => (
+              <CarouselItem
+                key={idx}
+                className="pl-4 sm:basis-11/12 md:basis-1/2 lg:basis-1/3"
+              >
+                <div className="relative h-[420px] rounded-xl overflow-hidden group">
+                  <div className="absolute inset-0">
+                    <Image
                       src={`/api/uploads/${item.image}`}
-                    alt={item.title}
-                    className="absolute inset-0 w-full h-full object-cover "
-                  />
-                  <BgLayer />
-                  <div className="absolute bottom-0 translate-y-1/2 bg-white shadow-lg rounded-lg p-6 w-[90%] left-1/2 transform -translate-x-1/2">
-                    <div className="mb-4 flex items-center gap-2 text-blue-600">
-                      <h2 className="text-2xl text-slate-600 mt-8 font-semibold w-full text-center">
-                        {item.title}
-                      </h2>
-                    </div>
-                    <div className="mt-1 text-sm text-gray-600">
-                      {item.content ? (
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <BgLayer />
+                  </div>
+
+                  {/* Card overlay content */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] bg-white rounded-xl shadow-lg p-5">
+                    <h2 className="text-xl font-semibold text-slate-700 text-center mb-3 line-clamp-2">
+                      {item.title}
+                    </h2>
+
+                    <div className="text-sm text-gray-600 line-clamp-2">
+                      {item.content && (
                         <Editor
                           editorSerializedState={
                             typeof item.content === "string"
@@ -106,29 +106,29 @@ const Industry = () => {
                           }
                           readOnly
                           clampLines={2}
-                          blogPage={false}
                         />
-                      ) : null}
+                      )}
                     </div>
-                    <div className="w-full flex mt-3 justify-center">
-                      {" "}
+
+                    <div className="w-full flex justify-center mt-3">
                       <Link
                         href={`/blogs/${encodeURIComponent(
                           item.title.toLowerCase().replace(/\s+/g, "-")
                         )}`}
-                        className="text-blue-600 font-[600] hover:underline text-sm"
+                        className="text-blue-600 font-semibold hover:underline text-sm"
                       >
-                        Read more
+                        Read more →
                       </Link>
                     </div>
                   </div>
-                </CarouselItem>
-              );
-            })}
+                </div>
+              </CarouselItem>
+            ))}
           </CarouselContent>
         </Carousel>
 
-        <div className="mt-7 lg:mt-0 flex justify-end gap-2">
+        {/* Navigation Buttons */}
+        <div className="mt-7 flex justify-end gap-2">
           <button
             disabled={!canScrollPrev}
             onClick={() => api?.scrollPrev()}
