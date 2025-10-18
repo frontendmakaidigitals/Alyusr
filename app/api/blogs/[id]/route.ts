@@ -2,128 +2,75 @@ import { NextResponse, NextRequest } from "next/server";
 import fs from "fs";
 import path from "path";
 import zlib from "zlib";
+import db from "@/lib/db";
 
-const dbPath = path.join(process.cwd(), "data", "db.json");
 const uploadsDir = path.join(process.cwd(), "data/uploads");
 
-// --- Utility Functions ---
-
-async function readDb() {
-  const file = await fs.promises.readFile(dbPath, "utf-8");
-  const db = JSON.parse(file);
-  interface Blog {
-    id: string | number;
-    title: string;
-    metaTitle: string;
-    metaDesc: string;
-    author: string;
-    category: string;
-    content: string;
-    image?: string;
-  }
-
-  interface DbStructure {
-    blogs: Blog[];
-  }
-
-    // ✅ Decompress blog contents
-    if (Array.isArray(db.blogs)) {
-      db.blogs = db.blogs.map((b: Blog): Blog => {
-        if (b.content && typeof b.content === "string" && b.content.startsWith("gz:")) {
-          try {
-            const compressed = Buffer.from(b.content.slice(3), "base64");
-            const decompressed = zlib.gunzipSync(compressed).toString("utf-8");
-            b.content = decompressed;
-          } catch (err) {
-            console.warn("⚠️ Failed to decompress content for blog:", b.id, err);
-          }
-      }
-      return b;
-    });
-  }
-
-  return db;
-}
-
-// Debounced async write
-let pendingWrite: any = null;
-let writeTimer: NodeJS.Timeout | null = null;
-
-async function writeDb(data: any) {
-  pendingWrite = data;
-  if (writeTimer) clearTimeout(writeTimer);
-
-  writeTimer = setTimeout(async () => {
-    try {
-      await fs.promises.writeFile(dbPath, JSON.stringify(pendingWrite, null, 2), "utf-8");
-      console.log("✅ Database saved successfully");
-    } catch (err) {
-      console.error("❌ Failed to save database:", err);
-    } finally {
-      pendingWrite = null;
-    }
-  }, 800);
-}
-
-// --- API Routes ---
-
-export async function PUT(
-  req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+// --- PUT (Update blog) ---
+export async function PUT( req: NextRequest, { params }: { params: Promise<{ id: string }> } ) {
   try {
     const { id } = await params;
     const formData = await req.formData();
-    const db = await readDb();
 
-    const blog = db.blogs.find((b: any) => b.id == id);
-    if (!blog) {
+    const existing = db.prepare("SELECT * FROM blogs WHERE id = ?").get(id);
+    if (!existing) {
       return NextResponse.json(
         { success: false, error: "Blog not found" },
         { status: 404 }
       );
     }
 
-    // --- Update fields ---
-    blog.title = formData.get("title") as string;
-    blog.metaTitle = formData.get("metaTitle") as string;
-    blog.metaDesc = formData.get("metaDesc") as string;
-    blog.author = formData.get("author") as string;
-    blog.category = formData.get("category") as string;
+    // Extract form fields
+    const title = formData.get("title");
+    const metaTitle = formData.get("metaTitle");
+    const metaDesc = formData.get("metaDesc");
+    const author = formData.get("author");
+    const category = formData.get("category");
+    const rawContent = formData.get("content");
+    const file = formData.get("image");
 
-    // --- Compress content before saving ---
-    const rawContent = formData.get("content") as string;
-    if (rawContent && rawContent.length > 0) {
+    // --- Compress content ---
+    let content = existing.content;
+    if (typeof rawContent === "string" && rawContent.length > 0) {
       const compressed = zlib.gzipSync(rawContent);
-      blog.content = "gz:" + compressed.toString("base64");
+      content = "gz:" + compressed.toString("base64");
     }
 
-    // --- Handle image upload ---
-    const file = formData.get("image") as File | null;
-    if (file && file.size > 0) {
+    // --- Handle image ---
+    let image = existing.image;
+    if (file instanceof File && file.size > 0) {
       await fs.promises.mkdir(uploadsDir, { recursive: true });
 
-      if (blog.image && blog.image !== file.name) {
-        const oldPath = path.join(uploadsDir, blog.image);
+      // Delete old image if new one is different
+      if (image && image !== file.name) {
+        const oldPath = path.join(uploadsDir, image);
         if (fs.existsSync(oldPath)) {
           try {
             await fs.promises.unlink(oldPath);
-            console.log(`🗑️ Deleted old image: ${oldPath}`);
           } catch (err) {
-            console.error("⚠️ Failed to delete old image:", err);
+            console.warn("⚠️ Failed to delete old image:", err);
           }
         }
       }
 
-      const filePath = path.join(uploadsDir, file.name);
+      const newPath = path.join(uploadsDir, file.name);
       const buffer = Buffer.from(await file.arrayBuffer());
-      await fs.promises.writeFile(filePath, buffer);
-      blog.image = file.name;
+      await fs.promises.writeFile(newPath, buffer);
+      image = file.name;
     }
 
-    await writeDb(db);
+    const now = new Date().toISOString();
 
-    return NextResponse.json({ success: true, blog });
+    // --- Update SQLite record ---
+    db.prepare(
+      `UPDATE blogs
+       SET title = ?, metaTitle = ?, metaDesc = ?, author = ?, category = ?, content = ?, image = ?, updatedAt = ?
+       WHERE id = ?`
+    ).run(title, metaTitle, metaDesc, author, category, content, image, now, id);
+
+    const updated = db.prepare("SELECT * FROM blogs WHERE id = ?").get(id);
+
+    return NextResponse.json({ success: true, blog: updated });
   } catch (err) {
     console.error("Update failed:", err);
     return NextResponse.json(
@@ -133,20 +80,28 @@ export async function PUT(
   }
 }
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+// --- GET (Fetch single blog) ---
+export async function GET( req: NextRequest, { params }: { params: Promise<{ id: string }> } ) {
   try {
     const { id } = await params;
-    const db = await readDb();
-    const blog = db.blogs.find((b: any) => String(b.id) === id);
+    const blog = db.prepare("SELECT * FROM blogs WHERE id = ?").get(id);
 
     if (!blog) {
       return NextResponse.json(
         { success: false, error: "Blog not found" },
         { status: 404 }
       );
+    }
+
+    // --- Decompress content if gzipped ---
+    if (blog.content?.startsWith("gz:")) {
+      try {
+        const compressed = Buffer.from(blog.content.slice(3), "base64");
+        const decompressed = zlib.gunzipSync(compressed).toString("utf-8");
+        blog.content = decompressed;
+      } catch (err) {
+        console.warn("⚠️ Failed to decompress content for blog:", id, err);
+      }
     }
 
     return NextResponse.json({ success: true, blog });
