@@ -8,12 +8,16 @@ export async function GET() {
   try {
     const blogs = db.prepare("SELECT * FROM blogs ORDER BY updatedAt DESC").all();
 
-    const processedBlogs = blogs.map(blog => {
+    interface CompressedBlog extends Blog {
+      content: string;
+    }
+
+    const processedBlogs: Blog[] = blogs.map((blog: CompressedBlog) => {
       if (blog.content?.startsWith("gz:")) {
         try {
-          const compressed = Buffer.from(blog.content.slice(3), "base64");
+          const compressed: Buffer = Buffer.from(blog.content.slice(3), "base64");
           blog.content = zlib.gunzipSync(compressed).toString("utf-8");
-        } catch (err) {
+        } catch (err: unknown) {
           console.warn("Failed to decompress blog", blog.id, err);
         }
       }
