@@ -3,19 +3,27 @@ import path from "path";
 import fs from "fs";
 import { v4 as uuidv4 } from "uuid";
 import db from "@/lib/db";
-
+import zlib from "zlib";
 export async function GET() {
   try {
-    const blogs = db
-      .prepare("SELECT * FROM blogs ORDER BY updatedAt DESC")
-      .all();
-    return NextResponse.json({ blogs });
+    const blogs = db.prepare("SELECT * FROM blogs ORDER BY updatedAt DESC").all();
+
+    const processedBlogs = blogs.map(blog => {
+      if (blog.content?.startsWith("gz:")) {
+        try {
+          const compressed = Buffer.from(blog.content.slice(3), "base64");
+          blog.content = zlib.gunzipSync(compressed).toString("utf-8");
+        } catch (err) {
+          console.warn("Failed to decompress blog", blog.id, err);
+        }
+      }
+      return blog;
+    });
+
+    return NextResponse.json({ blogs: processedBlogs });
   } catch (err) {
     console.error("Error reading blogs:", err);
-    return NextResponse.json(
-      { success: false, error: "Failed to fetch blogs" },
-      { status: 500 }
-    );
+    return NextResponse.json({ success: false, error: "Failed to fetch blogs" }, { status: 500 });
   }
 }
 
