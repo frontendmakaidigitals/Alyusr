@@ -215,7 +215,7 @@ export default function AddBlogPage() {
           </div>
           <div>
             <Label
-              className="block text-sm font-medium mb-[6px]"
+              className="block text-sm font-medium mb-[7px]"
               htmlFor="author"
             >
               Author
