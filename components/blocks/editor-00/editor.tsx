@@ -40,7 +40,6 @@ import { ActionsPlugin } from "@/components/editor/plugins/actions/actions-plugi
 import { ClearEditorActionPlugin } from "@/components/editor/plugins/actions/clear-editor-plugin";
 import { CounterCharacterPlugin } from "@/components/editor/plugins/actions/counter-character-plugin";
 import { useState } from "react";
-import { AutoLinkPlugin } from "@lexical/react/LexicalAutoLinkPlugin";
 import { AutoLinkNode, LinkNode } from "@lexical/link";
 import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
 import { FloatingLinkEditorPlugin } from "@/components/editor/plugins/toolbar/floatingLinkToolbar";
@@ -49,7 +48,7 @@ import { InsertTable } from "@/components/editor/plugins/toolbar/block-insert/in
 import { TablePlugin } from "@lexical/react/LexicalTablePlugin";
 import { BlockInsertPlugin } from "@/components/editor/plugins/toolbar/block-insert-plugin";
 import { LexicalEditor } from "lexical";
-
+import { SafeAutoLinkPlugin } from "@/components/editor/plugins/safeAutoPlugin";
 const editorConfig: InitialConfigType = {
   namespace: "Editor",
   theme: editorTheme,
@@ -92,7 +91,9 @@ export function Editor({
 }) {
   return (
     <div
-      className={`${readOnly ? "bg-transparent" : "bg-background"}  overflow-hidden ${readOnly ? "" : "rounded-lg border shadow"} `}
+      className={`${
+        readOnly ? "bg-transparent" : "bg-background"
+      }  overflow-hidden ${readOnly ? "" : "rounded-lg border shadow"} `}
     >
       <LexicalComposer
         initialConfig={{
@@ -206,7 +207,6 @@ export function Plugins({
         {readOnly && blogPage === false ? (
           // Plain text preview with clamp
           <div className={`relative line-clamp-${clampLines} text-sm ${text}`}>
-         
             {renderPlainTextFromEditorState(serialized)}
           </div>
         ) : (
@@ -225,7 +225,8 @@ export function Plugins({
           />
         )}
         <ClickableLinkPlugin />
-        <AutoLinkPlugin matchers={MATCHERS} />
+        <SafeAutoLinkPlugin matchers={MATCHERS} />
+
         <LinkPlugin />
         <FloatingLinkEditorPlugin
           anchorElem={floatingAnchorElem}
@@ -233,7 +234,7 @@ export function Plugins({
           setIsLinkEditMode={setIsLinkEditMode}
         />
         <HistoryPlugin />
-         {!readOnly && <TablePlugin />}
+        {!readOnly && <TablePlugin />}
         <ListPlugin />
         <CheckListPlugin />
       </div>
