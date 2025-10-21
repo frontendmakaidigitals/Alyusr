@@ -6,14 +6,28 @@ import { dbGet, dbRun } from "@/lib/db";
 
 const uploadsDir = path.join(process.cwd(), "data/uploads");
 
+// Add TypeScript interfaces
+interface Blog {
+  id: string;
+  title: string;
+  metaTitle: string;
+  metaDesc: string;
+  author: string;
+  category: string;
+  content: string;
+  image: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 // --- PUT (Update blog) ---
 export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
     const formData = await req.formData();
 
-    // Check if blog exists
-    const existing = await dbGet("SELECT * FROM blogs WHERE id = ?", [id]);
+    // Check if blog exists - add type annotation
+    const existing: Blog | null = await dbGet("SELECT * FROM blogs WHERE id = ?", [id]) as Blog | null;
     if (!existing) {
       return NextResponse.json(
         { success: false, error: "Blog not found" },
@@ -22,13 +36,13 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     }
 
     // Extract form fields
-    const title = formData.get("title");
-    const metaTitle = formData.get("metaTitle");
-    const metaDesc = formData.get("metaDesc");
-    const author = formData.get("author");
-    const category = formData.get("category");
-    const rawContent = formData.get("content");
-    const file = formData.get("image");
+    const title = formData.get("title") as string | null;
+    const metaTitle = formData.get("metaTitle") as string | null;
+    const metaDesc = formData.get("metaDesc") as string | null;
+    const author = formData.get("author") as string | null;
+    const category = formData.get("category") as string | null;
+    const rawContent = formData.get("content") as string | null;
+    const file = formData.get("image") as File | null;
 
     // --- Compress content ---
     let content = existing.content;
@@ -71,7 +85,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     );
 
     // Get updated blog
-    const updated = await dbGet("SELECT * FROM blogs WHERE id = ?", [id]);
+    const updated: Blog = await dbGet("SELECT * FROM blogs WHERE id = ?", [id]) as Blog;
 
     return NextResponse.json({ success: true, blog: updated });
   } catch (err) {
@@ -87,7 +101,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
-    const blog = await dbGet("SELECT * FROM blogs WHERE id = ?", [id]);
+    const blog: Blog | null = await dbGet("SELECT * FROM blogs WHERE id = ?", [id]) as Blog | null;
 
     if (!blog) {
       return NextResponse.json(
@@ -123,7 +137,7 @@ export async function DELETE(req: NextRequest, { params }: { params: Promise<{ i
     const { id } = await params;
 
     // Check if blog exists and get image info
-    const existing = await dbGet("SELECT * FROM blogs WHERE id = ?", [id]);
+    const existing: Blog | null = await dbGet("SELECT * FROM blogs WHERE id = ?", [id]) as Blog | null;
     if (!existing) {
       return NextResponse.json(
         { success: false, error: "Blog not found" },
