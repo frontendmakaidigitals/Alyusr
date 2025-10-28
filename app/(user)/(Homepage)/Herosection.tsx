@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
-
+import '@/app/globals.css'
 import BgLayer from "../app_chunks/BgLayer";
 
 import {
@@ -185,16 +185,7 @@ const Herosection = () => {
         </ul>
       </div>
 
-      <style jsx>{`
-        @keyframes fillBar {
-          0% {
-            width: 0%;
-          }
-          100% {
-            width: 100%;
-          }
-        }
-      `}</style>
+       
     </section>
   );
 };
