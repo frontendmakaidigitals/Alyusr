@@ -1,11 +1,12 @@
 "use client";
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import BgLayer from "../app_chunks/BgLayer";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { useInView } from "framer-motion";
 import Link from "next/link";
+
+import BgLayer from "../app_chunks/BgLayer";
 const MotionImage = motion(Image);
 const Services = () => {
   const services = [
@@ -65,9 +66,9 @@ const Services = () => {
         Our Services
       </h1>
       <motion.ul
-        transition={{ staggerChildren: 1 }}
-        className="grid grid-cols-1 lg:grid-cols-4 gap-2 mt-12"
         ref={serviceRef}
+        className="grid grid-cols-1 lg:grid-cols-4 gap-2 mt-12"
+        transition={{ staggerChildren: 1 }}
       >
         {services.map((service, idx) => {
           const isHovered = hoveredIndex === idx;
@@ -80,28 +81,28 @@ const Services = () => {
                 x: inView ? 0 : -100,
                 opacity: inView ? 1 : 0,
               }}
+              className="h-[320px] p-2 flex flex-col justify-end overflow-hidden rounded-lg w-full relative cursor-pointer"
               transition={{
                 duration: 0.7,
                 ease: [0.19, 1, 0.22, 1],
                 delay: 0.05 * idx,
               }}
+              viewport={{ once: true }}
               onAnimationComplete={() => {
                 if (inView && idx === services.length - 1) {
                   setAnimationFinished(true);
                 }
               }}
-              viewport={{ once: true }}
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="h-[320px] p-2 flex flex-col justify-end overflow-hidden rounded-lg w-full relative cursor-pointer"
             >
               <Link href={service.link}>
                 <MotionImage
-                  src={service.img}
-                  alt=""
                   fill
-                  className="object-cover absolute inset-0"
+                  alt=""
                   animate={{ scale: isHovered ? 1.15 : 1 }}
+                  className="object-cover absolute inset-0"
+                  src={service.img}
                   transition={{ duration: 0.7, ease: [0.19, 1, 0.22, 1] }}
                 />
                 <BgLayer color="bg-slate-900/30" />
@@ -109,12 +110,12 @@ const Services = () => {
                 <motion.div
                   layout
                   animate={{ opacity: animationFinished ? 1 : 0 }}
-                  transition={{ duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
                   className={`w-full  text-slate-50 rounded-md relative   !p-3  ${
                     animationFinished
                       ? "backdrop-filter backdrop-blur-lg bg-gradient-to-tr from-[#387EF0]/40 to-[#387EF0]/70 z-10"
                       : ""
                   }`}
+                  transition={{ duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
                 >
                   <h3 className="font-semibold relative z-10">
                     {service.title}
@@ -127,8 +128,8 @@ const Services = () => {
       </motion.ul>
       <div className="flex justify-center items-center">
         <Link
-          href={"/Services"}
           className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+          href={"/Services"}
         >
           View all services <ArrowUpRight />
         </Link>

@@ -9,7 +9,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import Blogs from "../../app_chunks/Blogs";
+
 import { Editor } from "@/components/blocks/editor-00/editor";
 
 export default function BlogClient({ blog }: { blog: any }) {
@@ -21,6 +23,7 @@ export default function BlogClient({ blog }: { blog: any }) {
     const wordsPerMinute = 200;
     const wordCount = text.trim().split(/\s+/).length;
     const minutes = Math.ceil(wordCount / wordsPerMinute);
+
     return `${minutes} min read`;
   }
 
@@ -55,12 +58,12 @@ export default function BlogClient({ blog }: { blog: any }) {
         <ul className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-center lg:items-center mt-5 gap-3 w-full ">
           <li className="w-full lg:w-auto">
             <Link
-              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                blogTitle
-              )}&url=${encodeURIComponent(blogURL)}`}
-              target="_blank"
-              rel="noopener noreferrer"
               className="w-full"
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                blogTitle,
+              )}&url=${encodeURIComponent(blogURL)}`}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <button className="w-full justify-center p-2 flex text-slate-50 items-center gap-2  border border-slate-200 rounded-lg bg-[#1DA1F2]">
                 <Twitter />
@@ -70,12 +73,12 @@ export default function BlogClient({ blog }: { blog: any }) {
 
           <li className="w-full lg:w-auto">
             <Link
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                blogURL
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
               className="w-full"
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                blogURL,
+              )}`}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <button className="w-full justify-center p-2 flex text-slate-50 items-center gap-2  border border-slate-200 rounded-lg bg-[#1877F2]">
                 <Facebook />
@@ -85,12 +88,12 @@ export default function BlogClient({ blog }: { blog: any }) {
 
           <li className="w-full lg:w-auto">
             <Link
-              href={`https://www.instagram.com/?url=${encodeURIComponent(
-                blogURL
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
               className="w-full"
+              href={`https://www.instagram.com/?url=${encodeURIComponent(
+                blogURL,
+              )}`}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <button className="w-full justify-center p-2 flex text-slate-50 items-center gap-2  border border-slate-200 rounded-lg bg-[#E4405F]">
                 <Instagram />
@@ -100,12 +103,12 @@ export default function BlogClient({ blog }: { blog: any }) {
 
           <li className="w-full lg:w-auto">
             <Link
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-                blogURL
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
               className="w-full"
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                blogURL,
+              )}`}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <button className="w-full justify-center p-2 flex text-slate-50 items-center gap-2  border border-slate-200 rounded-lg bg-[#0A66C2]">
                 <Linkedin />
@@ -117,22 +120,22 @@ export default function BlogClient({ blog }: { blog: any }) {
 
       <div className="w-full h-[300px] lg:h-[580px] mt-12 rounded-xl overflow-hidden">
         <img
-          src={`/api/uploads/${blog.image}`}
           alt={blog?.title}
           className="w-full h-full object-cover"
+          src={`/api/uploads/${blog.image}`}
         />
       </div>
       <div className="max-w-5xl mx-auto ">
         <div className="mt-8">
           {blog?.content ? (
             <Editor
+              readOnly
+              blogPage={true}
               editorSerializedState={
                 typeof blog.content === "string"
                   ? JSON.parse(blog.content)
                   : null
               }
-              readOnly
-              blogPage={true}
             />
           ) : null}
         </div>

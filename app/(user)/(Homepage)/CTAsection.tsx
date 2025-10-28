@@ -1,8 +1,10 @@
 import React from "react";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import Link from "next/link";
 import Image from "next/image";
+
 import BgLayer from "../app_chunks/BgLayer";
+
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 const Marquee = () => {
   const partners = [
     { title: "Agriserv", img: "agriserv logo.webp" },
@@ -30,13 +32,13 @@ const Marquee = () => {
       {/* Client Logo Slider */}
       <div className="mt-10">
         <InfiniteMovingCards
-          items={partners}
+          cards={true}
           dir={"client logo"}
           direction="right"
-          speed="slow"
-          iconSize={"size-40"}
           gap={"gap-8"}
-          cards={true}
+          iconSize={"size-40"}
+          items={partners}
+          speed="slow"
         />
       </div>
 
@@ -44,14 +46,14 @@ const Marquee = () => {
       <div className="relative container mx-auto lg:max-w-5xl h-[270px] w-full lg:rounded-2xl overflow-hidden shadow-xl mt-10">
         {/* Background image */}
         <Image
+          alt="Dubai Property"
+          className="absolute !w-full !h-full object-cover inset-0"
+          height={120}
+          objectFit="cover"
           src={
             "https://images.pexels.com/photos/139207/pexels-photo-139207.jpeg"
           }
-          alt="Dubai Property"
-          objectFit="cover"
-          className="absolute !w-full !h-full object-cover inset-0"
           width={1200}
-          height={120}
         />
         <BgLayer color="bg-black/50" />
 
@@ -66,10 +68,10 @@ const Marquee = () => {
             today.
           </p>
           <Link
-            href="/brochure/brochure.pdf"
-            target="_blank" 
-            rel="noopener noreferrer"
             className="mt-5 px-6 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-all"
+            href="/brochure/brochure.pdf"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             VIEW NOW
           </Link>

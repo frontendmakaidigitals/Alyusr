@@ -1,20 +1,11 @@
 "use client";
-import { Users } from "lucide-react";
-import {
-  ShieldCheck,
-  GraduationCap,
-  ClipboardList,
-  Workflow,
-  AlertCircle,
-  HeartPulse,
-  Star,
-  ArrowUpRight,
-  BadgeCheck,
-} from "lucide-react";
-import BgLayer from "../../app_chunks/BgLayer";
+import { ArrowUpRight, BadgeCheck } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+
+import BgLayer from "../../app_chunks/BgLayer";
+
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
@@ -23,22 +14,24 @@ export default function Page() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
+
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "60vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-2xl  text-slate-50">
@@ -51,10 +44,10 @@ export default function Page() {
         </div>
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
-          style={{ y: yTransform }}
+          alt="ALYUSR Engineering Hero Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-bottom"
           src="/sustainability 2/banner.webp"
-          alt="ALYUSR Engineering Hero Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
 
@@ -82,17 +75,17 @@ export default function Page() {
               </p>
 
               <Link
-                href={"/Contact"}
                 className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+                href={"/Contact"}
               >
                 Discover Our Story <ArrowUpRight />
               </Link>
             </div>
             <div className="h-[450px]">
               <img
-                src="/sustainability 2/heading.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
+                src="/sustainability 2/heading.webp"
               />
             </div>
           </div>
@@ -103,9 +96,9 @@ export default function Page() {
       <section className="py-20 ">
         <div className="container  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <img
-            src="/sustainability 2/why.webp"
             alt="Sustainable city"
             className="rounded-xl shadow-md"
+            src="/sustainability 2/why.webp"
           />
           <div>
             <h2 className="text-4xl lg:text-5xl font-semibold mb-4">
@@ -185,9 +178,9 @@ export default function Page() {
         </div>
         <div className="w-full h-[450px]  rounded-xl">
           <img
-            src="/sustainability 2/approach.webp"
             alt="Sustainable city"
             className="rounded-xl shadow-md w-full h-full object-cover"
+            src="/sustainability 2/approach.webp"
           />
         </div>
       </section>
@@ -198,9 +191,9 @@ export default function Page() {
           <div className="w-full h-[450px]  rounded-xl">
             {" "}
             <img
-              src="/sustainability 2/commitment.webp"
               alt="Sustainable city"
               className="rounded-xl shadow-md w-full h-full object-cover"
+              src="/sustainability 2/commitment.webp"
             />
           </div>
           <div className="max-w-5xl mx-auto mt-12 lg:mt-0 container">
@@ -259,17 +252,17 @@ export default function Page() {
           </div>
           <div className="w-full h-[450px] overflow-hidden rounded-xl">
             <img
-              src="/sustainability 2/innovation.webp"
               alt=""
               className="w-full h-full object-cover"
+              src="/sustainability 2/innovation.webp"
             />
           </div>
         </div>
       </section>
 
       <EngineeringCTA
-        title="Stay Informed with Our Insights"
         desc="We regularly share knowledge and case studies on sustainability trends, challenges, and solutions. Discover how Al Yusr is helping clients transition to nature-positive practices, navigate carbon markets, and embrace climate-resilient infrastructure."
+        title="Stay Informed with Our Insights"
       />
     </div>
   );

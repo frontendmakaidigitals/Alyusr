@@ -1,12 +1,4 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import {
   CheckCircle,
   Globe,
@@ -16,8 +8,16 @@ import {
   GraduationCap,
   BadgeCheck,
 } from "lucide-react";
-import Image from "next/image";
 import { motion } from "motion/react";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const processSteps = [
     {
@@ -101,6 +101,7 @@ export default function Page() {
     "Ability to improve regulatory compliance, investor confidence, and sustainability outcomes.",
     "Tailored, data-driven strategies that transform compliance from a burden into an opportunity.",
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -128,9 +129,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Environment-Sustainability/esg-solutions/hero.webp"}
-              className="w-full h-full object-cover"
               alt={"EHS and ESG"}
+              className="w-full h-full object-cover"
+              src={"/Environment-Sustainability/esg-solutions/hero.webp"}
             />
           </div>
         </div>
@@ -149,9 +150,9 @@ export default function Page() {
                     <div>
                       <div className="relative bg-slate-100 h-[220px] rounded-lg w-full mb-2">
                         <img
-                          src={step.img}
                           alt={step.title}
                           className="object-cover w-full h-full"
+                          src={step.img}
                         />
                       </div>
 
@@ -182,9 +183,9 @@ export default function Page() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 <div className="h-full shadow-md hover:shadow-xl transition rounded-2xl border border-slate-200">
                   <div className="p-6 flex flex-col items-center text-center">
@@ -205,9 +206,9 @@ export default function Page() {
           <motion.h2
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 text-center mb-12 max-w-xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Why Choose <span className="text-blue-500">Al Yusr</span> for EHS &
             ESG?
@@ -219,9 +220,9 @@ export default function Page() {
                 key={i}
                 className="flex p-3 rounded-lg items-start gap-4 bg-blue-50"
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 0 }}
               >
                 <span className="">
                   <BadgeCheck className="w-7 h-7 fill-green-600 text-white flex-shrink-0 mt-1" />
@@ -233,9 +234,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title=" Ready to strengthen your EHS and ESG systems?"
-        desc=" Let Al Yusr help you build sustainable, transparent, and resilient operations."
         btn="Contact Us Today"
+        desc=" Let Al Yusr help you build sustainable, transparent, and resilient operations."
+        title=" Ready to strengthen your EHS and ESG systems?"
       />
     </main>
   );

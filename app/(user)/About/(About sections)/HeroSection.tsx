@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+
 import BgLayer from "@/app/(user)/app_chunks/BgLayer";
 const HeroSection = () => {
   const [sectionTop, setSectionTop] = useState(0);
@@ -10,20 +11,23 @@ const HeroSection = () => {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
+
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
+
   return (
     <section>
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "55vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container mx-auto py-10 flex flex-col justify-center items-center h-full max-w-3xl">
           <h1 className="text-5xl lg:text-6xl font-[500] text-slate-50 text-center">
@@ -42,10 +46,10 @@ const HeroSection = () => {
 
         {/* Parallax image */}
         <motion.img
-          style={{ y: yTransform }}
+          alt=""
           className="absolute scale-[1.2] inset-0 w-full h-full object-cover object-center"
           src="https://images.pexels.com/photos/1181438/pexels-photo-1181438.jpeg"
-          alt=""
+          style={{ y: yTransform }}
         />
       </motion.div>
     </section>

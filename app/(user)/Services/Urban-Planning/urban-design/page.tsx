@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   Landmark,
   TreeDeciduous,
@@ -14,6 +13,8 @@ import {
   CloudSun,
 } from "lucide-react";
 import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function ConstructionManagementPage() {
   const services = [
     {
@@ -96,11 +97,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/urban-design/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={900}
+          src={"/urban-planning/urban-design/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="mt-10">
@@ -128,11 +129,11 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="w-full h-[450px] rounded-lg">
             <Image
-              width={500}
+              alt={""}
+              className="w-full h-full object-cover"
               height={500}
               src={"/urban-planning/urban-design/about.webp"}
-              className="w-full h-full object-cover"
-              alt={""}
+              width={500}
             />
           </div>
         </div>
@@ -151,6 +152,7 @@ export default function ConstructionManagementPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
+
               return (
                 <div
                   key={index}
@@ -180,9 +182,9 @@ export default function ConstructionManagementPage() {
             {capabilities.map((item, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -6 }}
-                transition={{ type: "spring", stiffness: 80 }}
                 className="bg-gray-100 rounded-2xl p-8 text-left shadow-md"
+                transition={{ type: "spring", stiffness: 80 }}
+                whileHover={{ y: -6 }}
               >
                 <div className="mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
@@ -212,11 +214,11 @@ export default function ConstructionManagementPage() {
             >
               <div className="w-full h-52 relative">
                 <Image
-                  src={item.img}
                   alt={item.title}
-                  width={400}
-                  height={400}
                   className="w-full h-full object-cover"
+                  height={400}
+                  src={item.img}
+                  width={400}
                 />
               </div>
               <div className="px-5 py-3 text-left">
@@ -228,9 +230,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Plan the Future Together"
-        desc="From idea to implementation, Al Yusr supports you at every step of your urban development journey. Whether it’s a city-wide vision or a community-scale design, we help you build a smarter, greener, and more connected future."
         btn="Contact Us Today"
+        desc="From idea to implementation, Al Yusr supports you at every step of your urban development journey. Whether it’s a city-wide vision or a community-scale design, we help you build a smarter, greener, and more connected future."
+        title="Let’s Plan the Future Together"
       />
     </main>
   );

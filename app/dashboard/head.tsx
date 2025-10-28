@@ -27,8 +27,8 @@ const Head = () => {
             </button>
           </div>
           <button
-            onClick={handleLogout}
             className="text-sm border hover:bg-dimondra-tealDark hover:border-dimondra-tealDark hover:text-dimondra-white py-2 px-4 rounded-full flex items-center gap-2"
+            onClick={handleLogout}
           >
             <span>
               <LogOut className="w-5 h-5" />

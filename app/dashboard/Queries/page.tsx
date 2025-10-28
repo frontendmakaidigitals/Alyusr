@@ -14,11 +14,13 @@ type Contact = {
 const Page = () => {
   const [loading, setLoading] = useState(true);
   const [contacts, setContacts] = useState<Contact[]>([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const contactsRes = await fetch("/api/contact");
         const contactsData = await contactsRes.json();
+
         setContacts(contactsData.contacts || []);
       } catch (err) {
         console.error("Failed to fetch data:", err);
@@ -29,6 +31,7 @@ const Page = () => {
 
     fetchData();
   }, []);
+
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-6">All Queries</h1>
@@ -61,8 +64,8 @@ const Page = () => {
             ) : (
               <tr>
                 <td
-                  colSpan={5}
                   className="text-center text-lg p-6 text-slate-500"
+                  colSpan={5}
                 >
                   No Contacts found
                 </td>

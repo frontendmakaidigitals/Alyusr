@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { BadgeCheck } from "lucide-react";
+
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-import { motion } from "framer-motion";
-import { BadgeCheck, Globe, Users, ShieldCheck, Lightbulb } from "lucide-react";
 
 export default function ConstructionManagementPage() {
   const expertiseData = [
@@ -87,13 +87,13 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
+          alt={""}
+          className="w-full h-full object-cover object-bottom"
+          height={200}
           src={
             "https://images.pexels.com/photos/1078884/pexels-photo-1078884.webp"
           }
-          className="w-full h-full object-cover object-bottom"
-          alt={""}
           width={500}
-          height={200}
         />
       </section>
 
@@ -122,14 +122,14 @@ export default function ConstructionManagementPage() {
             </p>
           </div>
           <div>
-            <img src={""} alt={""} className="" />
+            <img alt={""} className="" src={""} />
           </div>
         </div>
       </section>
       <section className="bg-sky-50 mt-10 py-20">
         <div className="grid grid-cols-1 lg:grid-cols2 gap-10 container">
           <div>
-            <img src={""} alt={""} className="" />
+            <img alt={""} className="" src={""} />
           </div>
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-sky-900 mb-16">
@@ -167,10 +167,10 @@ export default function ConstructionManagementPage() {
               >
                 <div className="relative w-full md:w-48 h-48 md:h-auto">
                   <Image
-                    src={item.img}
-                    alt={item.title}
                     fill
+                    alt={item.title}
                     className="object-cover"
+                    src={item.img}
                   />
                 </div>
                 <div className="p-6 flex flex-col justify-center">
@@ -197,10 +197,10 @@ export default function ConstructionManagementPage() {
               >
                 <div className="relative w-full h-48">
                   <Image
-                    src={sector.img}
-                    alt={sector.title}
                     fill
+                    alt={sector.title}
                     className="object-cover"
+                    src={sector.img}
                   />
                 </div>
                 <div className="p-5 text-center">
@@ -234,9 +234,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Protecting What Matters Most"
-        desc="In a world where threats are unpredictable and ever-evolving, resilience must be designed, not hoped for. At Al Yusr, we bring together strategy, security, and innovation to ensure that your critical infrastructure is prepared for the future."
         btn="Contact Us Today"
+        desc="In a world where threats are unpredictable and ever-evolving, resilience must be designed, not hoped for. At Al Yusr, we bring together strategy, security, and innovation to ensure that your critical infrastructure is prepared for the future."
+        title="Protecting What Matters Most"
       />
     </main>
   );

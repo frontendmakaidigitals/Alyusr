@@ -1,8 +1,9 @@
 "use client";
 
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { ShieldCheck, Layers, Award, Cpu } from "lucide-react";
 import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const values = [
     {
@@ -108,6 +109,7 @@ export default function Page() {
       icon: Cpu,
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -115,9 +117,9 @@ export default function Page() {
           {/* Image first on mobile, second on desktop */}
           <div className="w-full h-[230px] lg:h-[400px] bg-slate-100 rounded-lg order-1 lg:order-2">
             <img
-              src={"/Transportation-mobility/it-and-cybersecurity/hero.webp"}
-              className="w-full h-full object-cover"
               alt="IT & Cybersecurity"
+              className="w-full h-full object-cover"
+              src={"/Transportation-mobility/it-and-cybersecurity/hero.webp"}
             />
           </div>
 
@@ -153,18 +155,18 @@ export default function Page() {
             {values.map((val, index) => (
               <motion.div
                 key={index}
+                className="bg-card rounded-2xl shadow-md border border-border overflow-hidden flex flex-col"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-2xl shadow-md border border-border overflow-hidden flex flex-col"
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {/* Image */}
                 <div className="bg-slate-100">
                   <img
-                    src={val.img}
                     alt={val.title}
                     className="w-full h-44 object-cover"
+                    src={val.img}
                   />
                 </div>
 
@@ -188,20 +190,20 @@ export default function Page() {
           {solutions.map((sol, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
               className={`flex flex-col lg:flex-row items-center gap-10 ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
+              initial={{ opacity: 0, y: 30 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               {/* Image */}
               <div className="w-full lg:w-1/2">
                 <img
-                  src={sol.img}
                   alt={sol.title}
                   className="rounded-2xl shadow-lg w-full h-[320px] object-cover"
+                  src={sol.img}
                 />
               </div>
 
@@ -247,9 +249,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Shaping Smarter, Safer Communities"
-        desc="At Al Yusr, our Geo-Intelligence & Analysis services are more than just maps; they are powerful decision-making tools that help our clients create sustainable, secure, and future-ready environments."
         btn="Contact Us Today"
+        desc="At Al Yusr, our Geo-Intelligence & Analysis services are more than just maps; they are powerful decision-making tools that help our clients create sustainable, secure, and future-ready environments."
+        title="Shaping Smarter, Safer Communities"
       />
     </main>
   );

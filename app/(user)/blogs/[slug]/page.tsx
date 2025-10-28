@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+
 import BlogClient from "./BlogClient";
 
 type Blog = {
@@ -30,6 +31,7 @@ async function getBlogs(): Promise<Blog[]> {
 
   if (!res.ok) throw new Error("Failed to fetch blogs");
   const data = await res.json();
+
   return data.blogs;
 }
 
@@ -42,7 +44,7 @@ export async function generateMetadata({
   const blogs = await getBlogs();
 
   const blog = blogs.find(
-    (b) => slugify(b.title) === slugify(decodeURIComponent(slug))
+    (b) => slugify(b.title) === slugify(decodeURIComponent(slug)),
   );
 
   return {
@@ -71,7 +73,7 @@ export default async function Page({
   const { slug } = await params;
   const blogs = await getBlogs();
   const blog = blogs.find(
-    (b) => slugify(b.title) === slugify(decodeURIComponent(slug))
+    (b) => slugify(b.title) === slugify(decodeURIComponent(slug)),
   );
 
   if (!blog) {

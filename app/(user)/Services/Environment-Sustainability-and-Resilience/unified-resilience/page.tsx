@@ -1,9 +1,10 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 import { BadgeCheck } from "lucide-react";
 import Image from "next/image";
 import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const focusAreas = [
     {
@@ -108,6 +109,7 @@ export default function Page() {
       desc: "Prioritizing people and communities alongside infrastructure.",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -135,11 +137,11 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
+              alt={"Unified Resillience"}
+              className="w-full h-full object-cover"
               src={
                 "/Environment-Sustainability/Unified Resilience/Manufacturing.webp"
               }
-              className="w-full h-full object-cover"
-              alt={"Unified Resillience"}
             />
           </div>
         </div>
@@ -160,9 +162,9 @@ export default function Page() {
               >
                 <div className="bg-slate-100 w-full h-[240px]">
                   <img
-                    src={area.img}
                     alt={area.title}
                     className="w-full h-full object-cover"
+                    src={area.img}
                   />
                 </div>
                 <div className="p-6">
@@ -192,13 +194,13 @@ export default function Page() {
               >
                 {/* Background Image */}{" "}
                 <Image
-                  src={industry.img}
-                  alt={industry.title}
                   fill
+                  alt={industry.title}
                   className=" object-cover group-hover:scale-110 transition-transform duration-500"
+                  src={industry.img}
                 />
                 {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors"></div>
+                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors" />
                 {/* Text Overlay */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 text-left">
                   <h3 className="text-xl font-semibold text-white">
@@ -215,11 +217,11 @@ export default function Page() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
           {/* Heading */}
           <motion.h2
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-12"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-12"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Why Choose <span className="text-blue-500">Al Yusr?</span>
           </motion.h2>
@@ -229,11 +231,11 @@ export default function Page() {
             {points.map((point, idx) => (
               <motion.div
                 key={idx}
+                className="flex items-start gap-4 bg-blue-50 p-3 rounded-lg"
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-4 bg-blue-50 p-3 rounded-lg"
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {/* Icon */}
                 <div className="flex-shrink-0 text-white">
@@ -253,9 +255,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Build Resilience That Lasts"
-        desc=" Let Al Yusr help you design and deliver unified resilience strategies that protect your assets, people, and operations."
         btn="Contact Us Today"
+        desc=" Let Al Yusr help you design and deliver unified resilience strategies that protect your assets, people, and operations."
+        title="Build Resilience That Lasts"
       />
     </main>
   );

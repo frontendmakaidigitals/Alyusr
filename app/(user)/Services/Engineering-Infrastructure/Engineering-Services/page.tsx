@@ -1,8 +1,9 @@
 "use client";
 
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { MountainSnow, Landmark, Waves, BadgeCheck } from "lucide-react";
 import Image from "next/image";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 const specializedExpertise = [
   {
@@ -68,11 +69,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/Engineering/hero.webp"}
-          className="w-full h-full object-cover"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover"
           height={700}
+          src={"/Engineering-Infrastructure/Engineering/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -123,11 +124,11 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="h-[500px] w-full ">
             <img
+              alt={""}
+              className="w-full h-full object-cover"
               src={
                 "/Engineering-Infrastructure/Engineering/pexels-thisisengineering-3913031.webp"
               }
-              alt={""}
-              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -153,9 +154,9 @@ export default function ConstructionManagementPage() {
               >
                 <div className="h-[280px] rounded-lg border border-slate-900/40 overflow-hidden w-full relative">
                   <img
-                    src={service.pexelsUrl}
                     alt={service.title}
                     className="object-cover w-full h-full"
+                    src={service.pexelsUrl}
                   />
                 </div>
                 <div className="p-4">
@@ -207,11 +208,11 @@ export default function ConstructionManagementPage() {
         <div className="container place-items-center grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="h-[500px] w-full ">
             <img
+              alt=""
+              className=" w-full h-full object-cover"
               src={
                 "/Engineering-Infrastructure/Engineering/project-delivery.webp"
               }
-              className=" w-full h-full object-cover"
-              alt=""
             />
           </div>
           <div>
@@ -267,11 +268,11 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Need Engineering Experts? Let’s Talk."
+        btn="Contact Us"
         desc={
           "Whether it’s a high-rise tower, an infrastructure masterplan, or a complex facility, Al Yusr Engineering Consulting is your trusted partner for dependable engineering solutions."
         }
-        btn="Contact Us"
+        title="Need Engineering Experts? Let’s Talk."
       />
     </main>
   );

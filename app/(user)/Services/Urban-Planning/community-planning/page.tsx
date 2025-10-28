@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-
 import { motion } from "motion/react";
 import { BadgeCheck } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const phases = [
     {
@@ -88,6 +88,7 @@ export default function Page() {
     "Expertise in both greenfield and brownfield developments",
     "Commitment to quality, innovation, and long-term value",
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -97,11 +98,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/community-planning/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1100}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/urban-planning/community-planning/hero.webp"}
+          width={1100}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -130,11 +131,11 @@ export default function Page() {
           {phases.map((item, index) => (
             <motion.div
               key={index}
+              className={`rounded-2xl p-6 text-white shadow-xl ${item.gradient}`}
               initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`rounded-2xl p-6 text-white shadow-xl ${item.gradient}`}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               <div className="text-4xl lg:text-5xl font-bold text-black/60 shrink-0 mb-4">
                 {item.step}
@@ -159,17 +160,17 @@ export default function Page() {
             {offerings.map((item, i) => (
               <motion.div
                 key={i}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
                 className="relative rounded-2xl overflow-hidden shadow-lg group"
+                transition={{ duration: 0.3 }}
+                whileHover={{ scale: 1.02 }}
               >
                 <div className="h-[330px] w-full">
                   <Image
-                    src={item.img}
                     alt={item.title}
-                    width={600}
-                    height={400}
                     className="w-full h-full object-cover"
+                    height={400}
+                    src={item.img}
+                    width={600}
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 group-hover:from-black/80 transition duration-300" />
@@ -186,21 +187,21 @@ export default function Page() {
       <section className="bg-gradient-to-br from-blue-50 via-white to-blue-100 py-20 px-4 md:px-10">
         <div className="max-w-5xl mx-auto text-center">
           <motion.h2
+            className="text-4xl lg:text-5xl font-[700] mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-[700] mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Community Engagement & Stakeholder Collaboration
           </motion.h2>
 
           <motion.p
+            className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             We recognize that successful planning begins with listening. Al Yusr
             facilitates structured stakeholder consultations, public workshops,
@@ -218,9 +219,9 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              whileInView={{ opacity: 1, x: 0 }}
             >
               <h2 className="text-4xl font-bold mb-6 text-sky-800">
                 Sustainable & Resilient Communities
@@ -248,18 +249,18 @@ export default function Page() {
             <motion.div
               className="rounded-2xl bg-slate-100 overflow-hidden shadow-lg"
               initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              whileInView={{ opacity: 1, x: 0 }}
             >
               <Image
+                alt="Sustainable Community"
+                className="w-full h-full object-cover"
+                height={900}
                 src={
                   "/urban-planning/community-planning/Resilient Communities.webp"
                 }
-                alt="Sustainable Community"
                 width={900}
-                height={900}
-                className="w-full h-full object-cover"
               />
             </motion.div>
           </div>
@@ -269,25 +270,25 @@ export default function Page() {
             <motion.div
               className="rounded-2xl overflow-hidden shadow-lg order-2 md:order-1"
               initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              whileInView={{ opacity: 1, x: 0 }}
             >
               <Image
-                src={"/urban-planning/community-planning/private-sector.webp"}
                 alt="Urban Development Experience"
-                width={1200}
-                height={900}
                 className="w-full h-full object-cover"
+                height={900}
+                src={"/urban-planning/community-planning/private-sector.webp"}
+                width={1200}
               />
             </motion.div>
 
             <motion.div
               className="order-1 md:order-2"
               initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              whileInView={{ opacity: 1, x: 0 }}
             >
               <h2 className="text-4xl font-bold mb-6 text-blue-900">
                 Our Experience
@@ -314,11 +315,11 @@ export default function Page() {
       <section className="bg-sky-50 py-20 px-4 md:px-10">
         <div className="max-w-5xl mx-auto text-center">
           <motion.h2
+            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-10"
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-10"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Why <span className="text-blue-500">Al Yusr?</span>
           </motion.h2>
@@ -327,11 +328,11 @@ export default function Page() {
             {points.map((point, index) => (
               <motion.div
                 key={index}
+                className="flex items-start gap-3 bg-blue-100 p-3 rounded-lg"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-3 bg-blue-100 p-3 rounded-lg"
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 <BadgeCheck className="text-white fill-green-500 mt-1 shrink-0" />
                 <span className="text-gray-700 text-lg">{point}</span>
@@ -342,9 +343,9 @@ export default function Page() {
       </section>
 
       <EngineeringCTA
-        title="Let’s Plan the Future Together"
-        desc="From idea to implementation, Al Yusr supports you at every step of your urban development journey. Whether it’s a city-wide vision or a community-scale design, we help you build a smarter, greener, and more connected future."
         btn="Contact Us Today"
+        desc="From idea to implementation, Al Yusr supports you at every step of your urban development journey. Whether it’s a city-wide vision or a community-scale design, we help you build a smarter, greener, and more connected future."
+        title="Let’s Plan the Future Together"
       />
     </main>
   );

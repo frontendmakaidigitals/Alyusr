@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { BadgeCheck } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const services = [
     {
@@ -58,11 +59,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/strategic-consulting/design-led.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/project-advisory/strategic-consulting/design-led.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -83,9 +84,9 @@ export default function Page() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className="h-full w-full">
             <img
-              src="/project-advisory/strategic-consulting/design-led.webp" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
+              src="/project-advisory/strategic-consulting/design-led.webp" // 🔹 Replace with your actual image
             />
           </div>
 
@@ -138,9 +139,9 @@ export default function Page() {
                 {/* Image */}
                 <div className="lg:w-1/2">
                   <img
-                    src={service.img}
                     alt={service.title}
                     className="w-full h-[420px] object-cover rounded-2xl shadow-lg"
+                    src={service.img}
                   />
                 </div>
 
@@ -167,9 +168,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Build the Future Together"
-        desc="Whether you're shaping a new organization, reimagining your operations, or planning for smart growth, Al Yusr's Strategic Consulting team is your trusted partner for creating clarity, value, and vision."
         btn="Contact Us Today"
+        desc="Whether you're shaping a new organization, reimagining your operations, or planning for smart growth, Al Yusr's Strategic Consulting team is your trusted partner for creating clarity, value, and vision."
+        title="Let’s Build the Future Together"
       />
     </main>
   );

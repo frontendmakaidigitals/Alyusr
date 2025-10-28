@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { motion } from "framer-motion";
 import { BadgeCheck } from "lucide-react";
 import { Leaf, Globe2, Users, Lightbulb, GraduationCap } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function ConstructionManagementPage() {
   const services = [
     {
@@ -59,6 +60,7 @@ export default function ConstructionManagementPage() {
       desc: "We support our clients with up-to-date knowledge, webinars, and workshops to stay ahead of evolving regulations.",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -68,11 +70,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/urban-policy/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/urban-planning/urban-policy/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -95,11 +97,11 @@ export default function ConstructionManagementPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <motion.h2
+            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-12 text-center"
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-12 text-center"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             What <span className="text-blue-500">We Offer</span>
           </motion.h2>
@@ -109,19 +111,19 @@ export default function ConstructionManagementPage() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
+                className="rounded-xl border border-gray-200 bg-sky-50 p-1 shadow-sm hover:shadow-md transition-shadow duration-200 max-w-sm mx-auto"
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="rounded-xl border border-gray-200 bg-sky-50 p-1 shadow-sm hover:shadow-md transition-shadow duration-200 max-w-sm mx-auto"
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {service.img && (
                   <div className="relative bg-red-300 w-full h-60 rounded-lg overflow-hidden">
                     <Image
-                      src={service.img}
-                      alt={service.title}
                       fill
+                      alt={service.title}
                       className="object-cover"
+                      src={service.img}
                     />
                   </div>
                 )}
@@ -144,9 +146,9 @@ export default function ConstructionManagementPage() {
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            whileInView={{ opacity: 1, x: 0 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
               Our Approach:{" "}
@@ -178,17 +180,17 @@ export default function ConstructionManagementPage() {
 
           {/* Side Image */}
           <motion.div
+            className="relative w-full h-[430px] bg-slate-200 rounded-xl overflow-hidden shadow-md"
             initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative w-full h-[430px] bg-slate-200 rounded-xl overflow-hidden shadow-md"
+            whileInView={{ opacity: 1, x: 0 }}
           >
             <Image
-              src={"/urban-planning/urban-policy/about.webp"} // Replace with your image path
-              alt="Regenerative Redevelopment"
               fill
+              alt="Regenerative Redevelopment"
               className="object-cover"
+              src={"/urban-planning/urban-policy/about.webp"} // Replace with your image path
             />
           </motion.div>
         </div>
@@ -196,11 +198,11 @@ export default function ConstructionManagementPage() {
       <section className="bg-white py-16 px-4 md:px-10">
         <div className="text-center container mb-14">
           <motion.h2
+            className="text-4xl lg:text-5xl font-bold"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Why Choose <span className="text-blue-500">Al Yusr</span>
           </motion.h2>
@@ -210,11 +212,11 @@ export default function ConstructionManagementPage() {
           {points.map((item, index) => (
             <motion.div
               key={index}
+              className="bg-sky-50 rounded-xl p-6 shadow-sm hover:shadow-md transition"
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-sky-50 rounded-xl p-6 shadow-sm hover:shadow-md transition"
+              whileInView={{ opacity: 1, y: 0 }}
             >
               <div className="mb-4 rounded-md p-2 bg-blue-500 w-fit">
                 {item.icon}
@@ -228,9 +230,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Ready to Redevelop?"
-        desc="Whether you're transforming industrial land, decommissioning facilities, or revitalizing urban zones, Al Yusr provides the expertise, tools, and vision to do it right."
         btn="Contact Us Today"
+        desc="Whether you're transforming industrial land, decommissioning facilities, or revitalizing urban zones, Al Yusr provides the expertise, tools, and vision to do it right."
+        title="Ready to Redevelop?"
       />
     </main>
   );

@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "motion/react";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   Wrench,
   Truck,
@@ -8,8 +7,9 @@ import {
   LayoutTemplate,
   BadgeCheck,
 } from "lucide-react";
-
 import Image from "next/image";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function ConstructionManagementPage() {
   const expertise = [
@@ -110,6 +110,7 @@ export default function ConstructionManagementPage() {
     "Customized Solutions for Challenging Geotechnical Profiles",
     "Emphasis on Safety, Durability, and Structural Resilience",
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -119,11 +120,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] bg-slate-100 text-center ">
         <Image
-          src={"/Engineering-Infrastructure/structural/hero.webp"}
-          className="w-full h-full object-cover"
           alt={""}
-          width={500}
+          className="w-full h-full object-cover"
           height={200}
+          src={"/Engineering-Infrastructure/structural/hero.webp"}
+          width={500}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -154,6 +155,7 @@ export default function ConstructionManagementPage() {
           <div className="grid grid-cols-1 gap-8">
             {expertise.map((area, index) => {
               const isEven = index % 2 === 0;
+
               return (
                 <div
                   key={index}
@@ -165,9 +167,9 @@ export default function ConstructionManagementPage() {
                     }`}
                   >
                     <img
-                      src={area.img}
                       alt={area.title}
                       className="w-full h-full object-cover"
+                      src={area.img}
                     />
                   </div>
 
@@ -231,11 +233,11 @@ export default function ConstructionManagementPage() {
                 <div key={index} className={``}>
                   <motion.div className=" w-full bg-red-300 h-[220px] rounded-t-lg overflow-hidden">
                     <Image
-                      src={industry.image}
                       alt={industry.title}
-                      width={600}
-                      height={400}
                       className="w-full h-full object-cover shadow-md"
+                      height={400}
+                      src={industry.image}
+                      width={600}
                     />
                   </motion.div>
 
@@ -255,10 +257,10 @@ export default function ConstructionManagementPage() {
           <div>
             {" "}
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
               className="text-4xl lg:text-5xl font-bold text-start text-sky-900 mb-10"
+              initial={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5 }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               Why Partner with Al Yusr?
             </motion.h2>
@@ -266,10 +268,10 @@ export default function ConstructionManagementPage() {
               {reasons.map((reason, index) => (
                 <motion.li
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="flex items-start gap-4 text-blue-950"
+                  initial={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                 >
                   <BadgeCheck className="w-6 h-6 text-white fill-green-500  mt-1 flex-shrink-0" />
                   <p className="text-lg font-medium">{reason}</p>
@@ -279,19 +281,19 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="h-[450px] bg-slate-100 w-full">
             <img
-              src={"/Engineering-Infrastructure/structural/why-choose.webp"}
               alt={"why choose"}
               className="w-full h-full object-cover"
+              src={"/Engineering-Infrastructure/structural/why-choose.webp"}
             />
           </div>
         </div>
       </section>
       <EngineeringCTA
-        title="Need Engineering Experts? Let’s Talk."
+        btn="Contact Us"
         desc={
           "Whether it’s a high-rise tower, an infrastructure masterplan, or a complex facility, Al Yusr Engineering Consulting is your trusted partner for dependable engineering solutions."
         }
-        btn="Contact Us"
+        title="Need Engineering Experts? Let’s Talk."
       />
     </main>
   );

@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { Building2, BadgeCheck } from "lucide-react";
 import {
   Wrench,
@@ -10,6 +9,8 @@ import {
   RefreshCcw,
   Scale,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function Page() {
   const points = [
@@ -82,6 +83,7 @@ export default function Page() {
       img: "/project-advisory/process-development/upgrades.webp", // upgrade/retrofit
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -91,11 +93,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/process-development/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/project-advisory/process-development/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -120,9 +122,9 @@ export default function Page() {
           {/* Left Image */}
           <div className="h-full w-full">
             <img
-              src="/project-advisory/process-development/smart-solution.webp" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
+              src="/project-advisory/process-development/smart-solution.webp" // 🔹 Replace with your actual image
             />
           </div>
 
@@ -190,9 +192,9 @@ export default function Page() {
                 className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition flex flex-col"
               >
                 <img
-                  src={item.img}
                   alt={item.title}
                   className="w-full h-[250px] object-cover"
+                  src={item.img}
                 />
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold mb-3 text-gray-800">
@@ -217,9 +219,9 @@ export default function Page() {
                 className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition flex flex-col"
               >
                 <img
-                  src={item.img}
                   alt={item.title}
                   className="w-full h-[230px] object-cover"
+                  src={item.img}
                 />
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold mb-3 text-gray-800">
@@ -251,9 +253,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Build Better Processes Together"
-        desc="Whether you’re launching a greenfield facility, upgrading an existing system, or facing environmental compliance challenges, Al Yusr Engineering Consulting is your reliable partner for intelligent process development and implementation."
         btn="Contact Us Today"
+        desc="Whether you’re launching a greenfield facility, upgrading an existing system, or facing environmental compliance challenges, Al Yusr Engineering Consulting is your reliable partner for intelligent process development and implementation."
+        title="Let’s Build Better Processes Together"
       />
     </main>
   );

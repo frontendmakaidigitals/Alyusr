@@ -54,19 +54,21 @@ export const TABLE: ElementTransformer = {
 
     for (const row of node.getChildren()) {
       const rowOutput = [];
+
       if (!$isTableRowNode(row)) {
         continue;
       }
 
       let isHeaderRow = false;
+
       for (const cell of row.getChildren()) {
         // It's TableCellNode so it's just to make flow happy
         if ($isTableCellNode(cell)) {
           rowOutput.push(
             $convertToMarkdownString(OTHER_MARKDOWN_TRANSFORMERS, cell).replace(
               /\n/g,
-              "\\n"
-            )
+              "\\n",
+            ),
           );
           if (cell.__headerState === TableCellHeaderStates.ROW) {
             isHeaderRow = true;
@@ -87,12 +89,14 @@ export const TABLE: ElementTransformer = {
     // Header row
     if (TABLE_ROW_DIVIDER_REG_EXP.test(match[0])) {
       const table = parentNode.getPreviousSibling();
+
       if (!table || !$isTableNode(table)) {
         return;
       }
 
       const rows = table.getChildren();
       const lastRow = rows[rows.length - 1];
+
       if (!lastRow || !$isTableRowNode(lastRow)) {
         return;
       }
@@ -104,12 +108,13 @@ export const TABLE: ElementTransformer = {
         }
         cell.setHeaderStyles(
           TableCellHeaderStates.ROW,
-          TableCellHeaderStates.ROW
+          TableCellHeaderStates.ROW,
         );
       });
 
       // Remove line
       parentNode.remove();
+
       return;
     }
 
@@ -147,6 +152,7 @@ export const TABLE: ElementTransformer = {
       maxCells = Math.max(maxCells, cells.length);
       rows.unshift(cells);
       const previousSibling = sibling.getPreviousSibling();
+
       sibling.remove();
       sibling = previousSibling;
     }
@@ -155,6 +161,7 @@ export const TABLE: ElementTransformer = {
 
     for (const cells of rows) {
       const tableRow = $createTableRowNode();
+
       table.append(tableRow);
 
       for (let i = 0; i < maxCells; i++) {
@@ -163,6 +170,7 @@ export const TABLE: ElementTransformer = {
     }
 
     const previousSibling = parentNode.getPreviousSibling();
+
     if (
       $isTableNode(previousSibling) &&
       getTableColumnsSize(previousSibling) === maxCells
@@ -180,20 +188,25 @@ export const TABLE: ElementTransformer = {
 
 function getTableColumnsSize(table: TableNode) {
   const row = table.getFirstChild();
+
   return $isTableRowNode(row) ? row.getChildrenSize() : 0;
 }
 
 const $createTableCell = (textContent: string): TableCellNode => {
   textContent = textContent.replace(/\\n/g, "");
   const cell = $createTableCellNode(TableCellHeaderStates.NO_STATUS);
+
   $convertFromMarkdownString(textContent, OTHER_MARKDOWN_TRANSFORMERS, cell);
+
   return cell;
 };
 
 const mapToTableCells = (textContent: string): Array<TableCellNode> | null => {
   const match = textContent.match(TABLE_ROW_REG_EXP);
+
   if (!match || !match[1]) {
     return null;
   }
+
   return match[1].split("|").map((text) => $createTableCell(text));
 };

@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { Landmark, Building2, Hospital, Train, Factory } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function Page() {
   const sections = [
@@ -91,6 +92,7 @@ export default function Page() {
       img: "/project-advisory/asset-advisory/digital-first.webp",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -100,11 +102,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/asset-advisory/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/project-advisory/asset-advisory/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -127,9 +129,9 @@ export default function Page() {
           {/* Left Image */}
           <div className="h-[400px] w-full">
             <img
-              src="/project-advisory/asset-advisory/role.webp" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
+              src="/project-advisory/asset-advisory/role.webp" // 🔹 Replace with your actual image
             />
           </div>
 
@@ -178,7 +180,7 @@ export default function Page() {
                       key={j}
                       className="flex items-start gap-3 text-blue-700"
                     >
-                      <span className="h-2 w-2 mt-2 rounded-full bg-blue-500"></span>
+                      <span className="h-2 w-2 mt-2 rounded-full bg-blue-500" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -225,9 +227,9 @@ export default function Page() {
               >
                 <div className="  w-full h-[230px] bg-white shadow-inner overflow-hidden">
                   <img
-                    src={item.img}
                     alt={item.title}
                     className="w-full h-full object-cover"
+                    src={item.img}
                   />
                 </div>
                 <div className="p-5">
@@ -244,9 +246,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Future-Ready Assets"
-        desc="Your assets are more than buildings; they are long-term investments, community anchors, and engines of productivity. Let Al Yusr Engineering Consulting help you unlock their full potential with intelligent advisory, strategic insight, and real-world action."
         btn="Contact Us Today"
+        desc="Your assets are more than buildings; they are long-term investments, community anchors, and engines of productivity. Let Al Yusr Engineering Consulting help you unlock their full potential with intelligent advisory, strategic insight, and real-world action."
+        title="Future-Ready Assets"
       />
     </main>
   );

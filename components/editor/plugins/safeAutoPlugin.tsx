@@ -1,10 +1,16 @@
 "use client";
 
+import type { LinkMatcher } from "@lexical/react/LexicalAutoLinkPlugin";
+
 import { useEffect } from "react";
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
 import { AutoLinkNode } from "@lexical/link";
-import { $getSelection, $isRangeSelection, $isTextNode, $createTextNode, LexicalEditor } from "lexical";
-import type { LinkMatcher } from "@lexical/react/LexicalAutoLinkPlugin";
+import {
+  $getSelection,
+  $isRangeSelection,
+  $isTextNode,
+  $createTextNode,
+} from "lexical";
 
 interface SafeAutoLinkPluginProps {
   matchers: LinkMatcher[];
@@ -20,21 +26,25 @@ export function SafeAutoLinkPlugin({ matchers }: SafeAutoLinkPluginProps) {
       // Only run auto-link logic if editor is focused
       const activeElement = document.activeElement;
       const root = editor.getRootElement();
+
       if (!root?.contains(activeElement)) {
         return; // skip if editor is not focused
       }
 
       editorState.read(() => {
         const selection = $getSelection();
+
         if (!$isRangeSelection(selection)) return;
 
         const nodes = selection.getNodes();
+
         nodes.forEach((node) => {
           if (!$isTextNode(node)) return;
           const text = node.getTextContent();
 
           matchers.forEach((matcher) => {
             const match = matcher(text);
+
             if (match) {
               // Replace matched text with a link node
               const start = match.index;
@@ -45,6 +55,7 @@ export function SafeAutoLinkPlugin({ matchers }: SafeAutoLinkPluginProps) {
               const afterText = text.slice(end);
 
               const parent = node.getParent();
+
               if (!parent) return;
 
               editor.update(() => {
@@ -52,6 +63,7 @@ export function SafeAutoLinkPlugin({ matchers }: SafeAutoLinkPluginProps) {
                 node.replace($createTextNode(beforeText));
 
                 const linkNode = new AutoLinkNode(match.url);
+
                 linkNode.append($createTextNode(linkText));
                 parent.append(linkNode);
 

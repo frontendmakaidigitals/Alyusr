@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { motion } from "framer-motion";
 import {
   Workflow,
@@ -11,6 +10,8 @@ import {
   UserCheck,
   BadgeCheck,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function ConstructionManagementPage() {
   const services = [
@@ -98,11 +99,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/Vertical Transportation/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/Engineering-Infrastructure/Vertical Transportation/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -141,11 +142,11 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="h-[400px] w-full ">
             <img
+              alt={""}
+              className="w-full h-full object-cover"
               src={
                 "/Engineering-Infrastructure/Vertical Transportation/about.webp"
               }
-              alt={""}
-              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -160,9 +161,9 @@ export default function ConstructionManagementPage() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -6 }}
-                transition={{ type: "spring", stiffness: 100 }}
                 className="bg-white rounded-2xl p-6 shadow-md border border-blue-100"
+                transition={{ type: "spring", stiffness: 100 }}
+                whileHover={{ y: -6 }}
               >
                 <h3 className="text-3xl font-semibold text-sky-800 mb-4">
                   {service.title}
@@ -191,12 +192,13 @@ export default function ConstructionManagementPage() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((item, index) => {
               const Icon = item.icon;
+
               return (
                 <motion.div
                   key={index}
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 100 }}
                   className="bg-white rounded-2xl p-6 shadow-md border border-blue-100"
+                  transition={{ type: "spring", stiffness: 100 }}
+                  whileHover={{ y: -6 }}
                 >
                   <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-800 rounded-full mb-4">
                     <Icon className="w-6 h-6" />
@@ -212,9 +214,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Built to Power Progress"
-        desc="Whether we're energizing a new transit corridor, upgrading bridge control systems, or supporting water utility modernization, SCCI Electric is committed to powering progress through safe, smart, and sustainable electrical solutions."
         btn="Contact Us Today"
+        desc="Whether we're energizing a new transit corridor, upgrading bridge control systems, or supporting water utility modernization, SCCI Electric is committed to powering progress through safe, smart, and sustainable electrical solutions."
+        title="Built to Power Progress"
       />
     </main>
   );

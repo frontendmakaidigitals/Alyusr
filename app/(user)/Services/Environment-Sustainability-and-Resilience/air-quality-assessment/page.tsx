@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-import { Globe2, Scale, Share2, Layers, Cpu, BadgeCheck } from "lucide-react";
 
+import { Globe2, Scale, Share2, Layers, Cpu, BadgeCheck } from "lucide-react";
 import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function Page() {
   const differentiators = [
@@ -103,6 +103,7 @@ export default function Page() {
     "Full-service offering from permitting and design to compliance and monitoring.",
     "Strong partnerships with leading technology providers to deliver advanced solutions.",
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -130,11 +131,11 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
+              alt={"air quality hero"}
+              className="w-full h-full object-cover"
               src={
                 "/Environment-Sustainability/Air-Quality-Assessment/hero.webp"
               }
-              className="w-full h-full object-cover"
-              alt={"air quality hero"}
             />
           </div>
         </div>
@@ -148,6 +149,7 @@ export default function Page() {
           <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {differentiators.map((item, idx) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={idx}
@@ -171,10 +173,10 @@ export default function Page() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
             className="text-3xl md:text-5xl font-bold text-center text-gray-900"
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Our Services
           </motion.h2>
@@ -188,16 +190,16 @@ export default function Page() {
             {services.map((service, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05, duration: 0.5 }}
                 className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                transition={{ delay: idx * 0.05, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 <img
-                  src={service.img}
                   alt={service.title}
                   className="w-full h-48 object-cover"
+                  src={service.img}
                 />
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900">
@@ -232,9 +234,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Take the Next Step Toward Cleaner Air"
-        desc=" At Al Yusr, we don’t just help you meet air quality standards,  we help you stay ahead of them. Contact us today to discuss how our air quality services can support your business, your community, and your sustainability goals."
         btn="Contact Us Today"
+        desc=" At Al Yusr, we don’t just help you meet air quality standards,  we help you stay ahead of them. Contact us today to discuss how our air quality services can support your business, your community, and your sustainability goals."
+        title="Take the Next Step Toward Cleaner Air"
       />
     </main>
   );

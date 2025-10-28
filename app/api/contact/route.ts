@@ -1,7 +1,8 @@
-import { NextResponse } from "next/server";
-import { nanoid } from "nanoid";
 import fs from "fs";
 import path from "path";
+
+import { NextResponse } from "next/server";
+import { nanoid } from "nanoid";
 type Contact = {
   id: string;
   name: string;
@@ -35,7 +36,7 @@ export async function POST(req: Request) {
       fs.writeFileSync(
         dbPath,
         JSON.stringify({ contacts: [] }, null, 2),
-        "utf-8"
+        "utf-8",
       );
     }
 
@@ -66,9 +67,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true, contact: newContact });
   } catch (err) {
     console.error("Failed to add contact:", err);
+
     return NextResponse.json(
       { success: false, error: "Failed to add contact" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -90,9 +92,10 @@ export async function GET() {
     });
   } catch (err) {
     console.error("Failed to fetch contacts:", err);
+
     return NextResponse.json(
       { success: false, error: "Failed to fetch contacts" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

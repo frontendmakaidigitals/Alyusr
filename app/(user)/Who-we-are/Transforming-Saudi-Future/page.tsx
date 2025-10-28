@@ -1,10 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight, CheckCircle } from "lucide-react";
+
+import BgLayer from "../../app_chunks/BgLayer";
+
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
@@ -13,22 +15,24 @@ export default function Page() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
+
   return (
     <div className="text-gray-900">
       {/* Hero Section */}
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "60vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-2xl  text-slate-50">
@@ -41,10 +45,10 @@ export default function Page() {
         </div>
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
-          style={{ y: yTransform }}
+          alt="ALYUSR Engineering Hero Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
           src="/saudi-vision/banner.webp"
-          alt="ALYUSR Engineering Hero Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
       <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
@@ -74,17 +78,17 @@ export default function Page() {
               </p>
 
               <Link
-                href={"/Contact"}
                 className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+                href={"/Contact"}
               >
                 Discover Our Story <ArrowUpRight />
               </Link>
             </div>
             <div className="h-[450px]">
               <img
-                src="/saudi-vision/heading.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
+                src="/saudi-vision/heading.webp"
               />
             </div>
           </div>
@@ -94,11 +98,11 @@ export default function Page() {
       <section className="bg-gray-50 py-20 px-6 lg:px-24">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Building the <span className="text-blue-500">Kingdom</span> of
             Tomorrow
@@ -127,18 +131,18 @@ export default function Page() {
             ].map(({ title, desc, img }, index) => (
               <motion.div
                 key={index}
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 20 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.2 }}
                 className="bg-white rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition overflow-hidden"
+                initial={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.4, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {/* Top blue accent bar */}
                 <div className="h-1 w-full bg-blue-500" />
 
                 {/* Image */}
                 <div className="relative w-full h-[240px] mb-4">
-                  <Image src={img} alt={title} fill className="object-cover" />
+                  <Image fill alt={title} className="object-cover" src={img} />
                 </div>
 
                 {/* Content */}
@@ -158,22 +162,22 @@ export default function Page() {
       <section className="relative bg-gradient-to-br from-white via-blue-50 to-white py-24 px-6 lg:px-24">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
             className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-14"
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Our <span className="text-blue-500">Contribution</span> to{" "}
             <span>Vision 2030</span>
           </motion.h2>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="grid md:grid-cols-2 gap-10 text-left text-gray-700 text-lg leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             {[
               [
@@ -191,9 +195,9 @@ export default function Page() {
                 {group.map((text, j) => (
                   <motion.li
                     key={j}
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ type: "spring", stiffness: 300 }}
                     className="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm hover:shadow-md"
+                    transition={{ type: "spring", stiffness: 300 }}
+                    whileHover={{ scale: 1.02 }}
                   >
                     <CheckCircle className="text-blue-600 mt-1" size={22} />
                     <span>{text}</span>
@@ -210,9 +214,9 @@ export default function Page() {
         <motion.div
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}
         >
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Local Roots, Global Vision
@@ -226,9 +230,9 @@ export default function Page() {
         </motion.div>
         <div className="w-full h-[400px]">
           <img
-            src="/saudi-vision/team.webp"
             alt={""}
             className="w-full h-full object-cover"
+            src="/saudi-vision/team.webp"
           />
         </div>
       </section>
@@ -236,9 +240,9 @@ export default function Page() {
       {/* CTA */}
 
       <EngineeringCTA
-        title="Partner With Us"
-        desc="Join us in building a future that reflects the ambition, innovation, and heritage of the Kingdom. Let’s engineer the next chapter of Saudi Arabia, together."
         btn="Explore Our Services"
+        desc="Join us in building a future that reflects the ambition, innovation, and heritage of the Kingdom. Let’s engineer the next chapter of Saudi Arabia, together."
+        title="Partner With Us"
       />
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { ShieldCheck, Users, Cpu, Lock, Award } from "lucide-react";
-import Image from "next/image";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const capabilities = [
     {
@@ -92,6 +92,7 @@ export default function Page() {
       desc: "Trusted by government agencies, infrastructure developers, and private enterprises across the GCC.",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -127,9 +128,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/smart-infrastructure/hero.webp"}
-              className="w-full h-full object-cover"
               alt={""}
+              className="w-full h-full object-cover"
+              src={"/Transportation-mobility/smart-infrastructure/hero.webp"}
             />
           </div>
         </div>
@@ -150,9 +151,9 @@ export default function Page() {
               {/* Image */}
               <div className="w-full md:w-1/2">
                 <img
-                  src={cap.image}
                   alt={cap.title}
                   className="rounded-2xl shadow-lg w-full h-[350px] object-cover"
+                  src={cap.image}
                 />
               </div>
 
@@ -197,9 +198,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Powering the Kingdom’s Digital Transformation"
-        desc="Aligned with Saudi Vision 2030, Al Yusr’s Smart Infrastructure & Digital Services empower cities, businesses, and industries to embrace the Fourth Industrial Revolution, delivering not only connectivity but also sustainability, resilience, and smarter decision-making."
         btn="Contact Us Today"
+        desc="Aligned with Saudi Vision 2030, Al Yusr’s Smart Infrastructure & Digital Services empower cities, businesses, and industries to embrace the Fourth Industrial Revolution, delivering not only connectivity but also sustainability, resilience, and smarter decision-making."
+        title="Powering the Kingdom’s Digital Transformation"
       />
     </main>
   );

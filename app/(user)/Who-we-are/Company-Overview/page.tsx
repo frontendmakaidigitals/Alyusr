@@ -8,10 +8,11 @@ import {
   LayoutDashboard,
   Milestone,
 } from "lucide-react";
-
-import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+
+import BgLayer from "../../app_chunks/BgLayer";
+
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
@@ -20,22 +21,24 @@ export default function Page() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
+
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "60vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-2xl  text-slate-50">
@@ -48,10 +51,10 @@ export default function Page() {
         </div>
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
-          style={{ y: yTransform }}
+          alt="ALYUSR Engineering Hero Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
           src="/company overview/banner.webp"
-          alt="ALYUSR Engineering Hero Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
 
@@ -61,9 +64,9 @@ export default function Page() {
           {/* Image first on mobile, second on desktop */}
           <div className="order-1 lg:order-2">
             <img
-              src="/company overview/company overview.webp"
               alt="Company Overview"
               className="rounded-xl shadow-lg w-full h-full object-cover"
+              src="/company overview/company overview.webp"
             />
           </div>
 
@@ -99,9 +102,9 @@ export default function Page() {
           {" "}
           <div>
             <img
-              src="/company overview/our history.webp"
               alt="Company Overview"
               className="rounded-xl shadow-lg w-full h-full object-cover"
+              src="/company overview/our history.webp"
             />
           </div>
           <div>
@@ -174,11 +177,11 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Engineering the Future of Saudi Arabia and Beyond"
         desc="  From Riyadh to the world, ALYUSR delivers visionary engineering and design solutions that
     support national transformation and global standards. Backed by ISO certifications and a
     proven project track record, we are your trusted partner in building sustainable, smart,
     and impactful environments."
+        title="Engineering the Future of Saudi Arabia and Beyond"
       />
     </div>
   );

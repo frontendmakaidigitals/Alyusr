@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   BadgeCheck,
   Clock,
@@ -10,6 +9,8 @@ import {
   Users,
   Lightbulb,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function ConstructionManagementPage() {
   const models = [
     {
@@ -82,6 +83,7 @@ export default function ConstructionManagementPage() {
       icon: Lightbulb,
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -91,11 +93,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/alternative-delivery/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={"Alternative Delivery Models"}
-          width={500}
+          className="w-full h-full object-cover object-bottom"
           height={200}
+          src={"/Engineering-Infrastructure/alternative-delivery/hero.webp"}
+          width={500}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -133,11 +135,11 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="w-full h-[370px] bg-slate-100 overflow-hidden">
             <img
+              alt={""}
+              className="w-full h-full object-cover"
               src={
                 "/Engineering-Infrastructure/alternative-delivery/why-us.webp"
               }
-              alt={""}
-              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -155,9 +157,9 @@ export default function ConstructionManagementPage() {
               >
                 <div className="h-[280px] rounded-lg border border-slate-900/40 bg-slate-100 overflow-hidden w-full relative">
                   <img
-                    src={model.image}
                     alt={model.title}
                     className="object-cover w-full h-full"
+                    src={model.image}
                   />
                 </div>
                 <div className="p-4">
@@ -218,11 +220,11 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 overflow-hidden">
             <img
+              alt={""}
+              className="w-full h-full object-cover"
               src={
                 "/Engineering-Infrastructure/alternative-delivery/our-value.webp"
               }
-              alt={""}
-              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -253,9 +255,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Partner with Al Yusr for Your Project Needs"
-        desc="If your project needs a faster, more efficient delivery approach, talk to the Al Yusr team. We'll help you select and implement a model that reduces complexity and ensures measurable success."
         btn="Contact Us Today"
+        desc="If your project needs a faster, more efficient delivery approach, talk to the Al Yusr team. We'll help you select and implement a model that reduces complexity and ensures measurable success."
+        title="Partner with Al Yusr for Your Project Needs"
       />
     </main>
   );

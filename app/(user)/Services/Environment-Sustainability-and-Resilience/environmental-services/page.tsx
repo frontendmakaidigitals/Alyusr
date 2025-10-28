@@ -1,5 +1,4 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   Leaf,
   MapPinned,
@@ -18,100 +17,102 @@ import {
   CloudSunRain,
   BadgeCheck,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const services = [
     {
-      icon: <Leaf className="h-6 w-6" aria-hidden />,
+      icon: <Leaf aria-hidden className="h-6 w-6" />,
       title: "Ecological & Baseline Studies",
       accent: "bg-emerald-100 text-emerald-700 ring-emerald-200",
       items: [
         {
           label: "Field surveys and GIS mapping",
-          icon: <MapPinned className="h-4 w-4" aria-hidden />,
+          icon: <MapPinned aria-hidden className="h-4 w-4" />,
         },
         {
           label: "Biodiversity assessments",
-          icon: <Binoculars className="h-4 w-4" aria-hidden />,
+          icon: <Binoculars aria-hidden className="h-4 w-4" />,
         },
         {
           label: "Habitat and wildlife analysis",
-          icon: <Trees className="h-4 w-4" aria-hidden />,
+          icon: <Trees aria-hidden className="h-4 w-4" />,
         },
       ],
     },
     {
-      icon: <FileText className="h-6 w-6" aria-hidden />,
+      icon: <FileText aria-hidden className="h-6 w-6" />,
       title: "Environmental Impact Assessments (EIA)",
       accent: "bg-sky-100 text-sky-700 ring-sky-200",
       items: [
         {
           label: "Project-specific EIAs and Strategic EIAs",
-          icon: <ClipboardCheck className="h-4 w-4" aria-hidden />,
+          icon: <ClipboardCheck aria-hidden className="h-4 w-4" />,
         },
         {
           label: "Environmental Management Plans (EMP)",
-          icon: <ShieldCheck className="h-4 w-4" aria-hidden />,
+          icon: <ShieldCheck aria-hidden className="h-4 w-4" />,
         },
         {
           label: "Regulatory approvals support",
-          icon: <SlidersHorizontal className="h-4 w-4" aria-hidden />,
+          icon: <SlidersHorizontal aria-hidden className="h-4 w-4" />,
         },
       ],
     },
     {
-      icon: <Recycle className="h-6 w-6" aria-hidden />,
+      icon: <Recycle aria-hidden className="h-6 w-6" />,
       title: "Waste Management Consultancy",
       accent: "bg-amber-100 text-amber-700 ring-amber-200",
       items: [
         {
           label: "Integrated waste reduction and diversion strategies",
-          icon: <Recycle className="h-4 w-4" aria-hidden />,
+          icon: <Recycle aria-hidden className="h-4 w-4" />,
         },
         {
           label: "Planning and policy recommendations",
-          icon: <FileText className="h-4 w-4" aria-hidden />,
+          icon: <FileText aria-hidden className="h-4 w-4" />,
         },
         {
           label: "Smart waste systems and digital permit platforms",
-          icon: <Cpu className="h-4 w-4" aria-hidden />,
+          icon: <Cpu aria-hidden className="h-4 w-4" />,
         },
       ],
     },
     {
-      icon: <TestTubes className="h-6 w-6" aria-hidden />,
+      icon: <TestTubes aria-hidden className="h-6 w-6" />,
       title: "Remediation & Monitoring",
       accent: "bg-rose-100 text-rose-700 ring-rose-200",
       items: [
         {
           label: "Contaminated site remediation",
-          icon: <FlaskConical className="h-4 w-4" aria-hidden />,
+          icon: <FlaskConical aria-hidden className="h-4 w-4" />,
         },
         {
           label: "Long-term monitoring and reporting",
-          icon: <BarChart3 className="h-4 w-4" aria-hidden />,
+          icon: <BarChart3 aria-hidden className="h-4 w-4" />,
         },
         {
           label: "Groundwater and soil testing",
-          icon: <TestTubes className="h-4 w-4" aria-hidden />,
+          icon: <TestTubes aria-hidden className="h-4 w-4" />,
         },
       ],
     },
     {
-      icon: <CloudSunRain className="h-6 w-6" aria-hidden />,
+      icon: <CloudSunRain aria-hidden className="h-6 w-6" />,
       title: "Sustainability Advisory & Reporting",
       accent: "bg-violet-100 text-violet-700 ring-violet-200",
       items: [
         {
           label: "ESG integration and corporate sustainability strategies",
-          icon: <ShieldCheck className="h-4 w-4" aria-hidden />,
+          icon: <ShieldCheck aria-hidden className="h-4 w-4" />,
         },
         {
           label: "Carbon footprint analysis and reduction planning",
-          icon: <Footprints className="h-4 w-4" aria-hidden />,
+          icon: <Footprints aria-hidden className="h-4 w-4" />,
         },
         {
           label: "Climate resilience assessments",
-          icon: <CloudSunRain className="h-4 w-4" aria-hidden />,
+          icon: <CloudSunRain aria-hidden className="h-4 w-4" />,
         },
       ],
     },
@@ -158,6 +159,7 @@ export default function Page() {
     "Proven success on large-scale, multi-sector environmental projects",
     "Deep understanding of local regulations and international best practices",
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -183,11 +185,11 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
+              alt={"Hero "}
+              className="w-full h-full object-cover"
               src={
                 "/Environment-Sustainability/environmental-services/hero.webp"
               }
-              className="w-full h-full object-cover"
-              alt={"Hero "}
             />
           </div>
         </div>
@@ -200,7 +202,7 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 ring-1 ring-inset ring-emerald-200">
-              <Leaf className="h-3.5 w-3.5" aria-hidden /> Sustainable Solutions
+              <Leaf aria-hidden className="h-3.5 w-3.5" /> Sustainable Solutions
             </span>
             <h2 className="mt-4 text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">
               What We Offer
@@ -225,7 +227,7 @@ export default function Page() {
                     {group.icon}
                   </div>
                   <h3 className="text-lg font-semibold text-slate-900">
-                    <span className="absolute inset-0" aria-hidden></span>
+                    <span aria-hidden className="absolute inset-0" />
                     {group.title}
                   </h3>
                 </div>
@@ -265,9 +267,9 @@ export default function Page() {
               >
                 <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-lg">
                   <img
-                    src={section.image}
                     alt={section.title}
                     className="h-full w-full object-cover"
+                    src={section.image}
                   />
                 </div>
               </div>
@@ -326,9 +328,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Shaping a Sustainable Tomorrow"
-        desc="Whether it’s conducting impact studies, implementing air quality monitoring systems, or launching digital waste management tools, Al Yusr is committed to building a greener future. Our work helps clients make informed decisions, reduce environmental risks, and meet the growing demand for sustainable development."
         btn="Contact Us Today"
+        desc="Whether it’s conducting impact studies, implementing air quality monitoring systems, or launching digital waste management tools, Al Yusr is committed to building a greener future. Our work helps clients make informed decisions, reduce environmental risks, and meet the growing demand for sustainable development."
+        title="Shaping a Sustainable Tomorrow"
       />
     </main>
   );

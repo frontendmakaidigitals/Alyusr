@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { motion } from "framer-motion";
 import { BadgeCheck, Globe, Users, ShieldCheck, Lightbulb } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function ConstructionManagementPage() {
   const capabilities = [
@@ -118,6 +119,7 @@ export default function ConstructionManagementPage() {
       icon: Lightbulb,
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -127,11 +129,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/ground-engineering/hero.webp"}
-          className="w-full h-full object-cover "
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover "
           height={800}
+          src={"/Engineering-Infrastructure/ground-engineering/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -167,13 +169,14 @@ export default function ConstructionManagementPage() {
           <div className="space-y-16 container">
             {capabilities.map((item, index) => {
               const isEven = index % 2 === 0;
+
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
                   className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 rounded-2xl text-black"
+                  initial={{ opacity: 0, y: 40 }}
+                  transition={{ duration: 0.5 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                 >
                   {/* Image Block */}
                   <div
@@ -182,9 +185,9 @@ export default function ConstructionManagementPage() {
                     } order-1`}
                   >
                     <img
-                      src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover rounded-xl"
+                      src={item.image}
                     />
                   </div>
 
@@ -223,12 +226,13 @@ export default function ConstructionManagementPage() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {whatSetsUsApart.map((item, index) => {
               const Icon = item.icon;
+
               return (
                 <motion.div
                   key={index}
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 100 }}
                   className="bg-white rounded-2xl p-6 shadow-md border border-blue-100"
+                  transition={{ type: "spring", stiffness: 100 }}
+                  whileHover={{ y: -6 }}
                 >
                   <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-800 rounded-full mb-4">
                     <Icon className="w-6 h-6" />
@@ -244,9 +248,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Building Confidence from the Ground Up"
-        desc="At Al Yusr, we understand that strong, sustainable infrastructure begins with solid ground. Whether you're working with uncertain subsurface conditions or challenging timelines, our Ground Engineering team is here to provide solutions that minimize risk, ensure safety, and drive performance from concept to construction."
         btn="Contact Us Today"
+        desc="At Al Yusr, we understand that strong, sustainable infrastructure begins with solid ground. Whether you're working with uncertain subsurface conditions or challenging timelines, our Ground Engineering team is here to provide solutions that minimize risk, ensure safety, and drive performance from concept to construction."
+        title="Building Confidence from the Ground Up"
       />
     </main>
   );

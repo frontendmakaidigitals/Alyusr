@@ -21,10 +21,12 @@ const DashboardPage = () => {
       try {
         const blogsRes = await fetch("/api/blogs");
         const blogsData = await blogsRes.json();
+
         setBlogs(blogsData.blogs || []);
 
         const contactsRes = await fetch("/api/contact");
         const contactsData = await contactsRes.json();
+
         setContacts(contactsData.contacts || []);
       } catch (err) {
         console.error("Failed to fetch data:", err);
@@ -47,8 +49,8 @@ const DashboardPage = () => {
           <h2 className="text-lg font-[600]">Blogs</h2>
           <p className="text-7xl mt-4">{blogs.length}</p>
           <Link
-            href={"dashboard/Blogs"}
             className="flex items-center w-fit mt-6 gap-3 rounded-2xl bg-[#58000f] hover:bg-[#800000]  text-slate-50 px-4  py-2"
+            href={"dashboard/Blogs"}
           >
             <span>View All</span>
             <span>
@@ -61,8 +63,8 @@ const DashboardPage = () => {
           <h2 className="text-lg font-[600]">Queries</h2>
           <p className="text-7xl mt-4">{contacts.length}</p>
           <Link
-            href={"/dashboard/Queries"}
             className="flex items-center w-fit mt-6 gap-3 rounded-2xl bg-[#58000f] hover:bg-[#800000]  text-slate-50 px-4  py-2"
+            href={"/dashboard/Queries"}
           >
             <span>View All</span>
             <span>

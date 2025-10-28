@@ -1,11 +1,13 @@
 "use client";
 import { ArrowUpRight, BadgeCheck } from "lucide-react";
 import Image from "next/image";
-import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import Link from "next/link";
+
+import BgLayer from "../../app_chunks/BgLayer";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 const codeItems = [
   "Legal compliance requirements under local and international law",
   "Guidelines for ethical decision-making in daily operations",
@@ -21,13 +23,15 @@ export default function Page() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
+
   return (
     <main className="">
       <section className="min-h-[85vh] py-12 lg:py-0 overflow-hidden relative">
@@ -52,15 +56,18 @@ export default function Page() {
                 ethical, and respectful across all markets we operate in.
               </p>
 
-              <Link href={'/Contact'} className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition">
+              <Link
+                className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+                href={"/Contact"}
+              >
                 Discover Our Story <ArrowUpRight />
               </Link>
             </div>
             <div className="h-[450px] w-full bg-slate-100">
               <img
-                src="/our division 2/heading.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
+                src="/our division 2/heading.webp"
               />
             </div>
           </div>
@@ -71,11 +78,11 @@ export default function Page() {
         <div className="container mx-auto px-6">
           {/* Section Heading */}
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-sky-800 text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Our Ethical Culture
           </motion.h2>
@@ -83,27 +90,27 @@ export default function Page() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Image */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
               className="w-full bg-slate-100 lg:w-1/2 h-64 lg:h-[500px] relative rounded-xl overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               <Image
-                src="/our-ethics.jpg" // replace with your image path
-                alt="Ethical Culture"
                 fill
+                alt="Ethical Culture"
                 className="object-cover object-center w-full h-full rounded-xl"
+                src="/our-ethics.jpg" // replace with your image path
               />
             </motion.div>
 
             {/* Text Content */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
               className="w-full lg:w-1/2 space-y-6"
+              initial={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               <p>
                 Our business culture is grounded in fairness, professionalism,
@@ -153,21 +160,21 @@ export default function Page() {
       <section className="bg-sky-50 py-20">
         <div className="container mx-auto px-6">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-sky-800 text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Code of Ethics & Conduct
           </motion.h2>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto space-y-6 text-gray-700"
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             <p>
               ALYUSR follows a strict Code of Ethics and Business Conduct, which
@@ -195,8 +202,8 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title=" Governance & Oversight"
         desc="Our internal Ethics & Compliance Committee, led by senior management, ensures regular review of our ethics policies, incident reports, and internal audits. This committee works closely with department heads and legal advisors to implement improvements and ensure company-wide accountability."
+        title=" Governance & Oversight"
       />
     </main>
   );

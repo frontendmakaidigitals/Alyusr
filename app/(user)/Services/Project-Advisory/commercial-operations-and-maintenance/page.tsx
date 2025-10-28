@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { Building2, Cpu, Leaf, Target, Globe2 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const categories = [
     {
@@ -124,6 +125,7 @@ export default function Page() {
       icon: <Globe2 className="w-10 h-10 text-purple-600" />,
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -133,11 +135,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/commercial-operations/hero.webp"}
-          className="w-full h-full object-cover object-top"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-top"
           height={800}
+          src={"/project-advisory/commercial-operations/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -168,9 +170,9 @@ export default function Page() {
                 className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
               >
                 <img
-                  src={cat.img}
                   alt={cat.title}
                   className="w-full h-48 object-cover"
+                  src={cat.img}
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-blue-900 mb-2">
@@ -206,9 +208,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Ready to elevate your facility operations?"
-        desc="Partner with Al Yusr to ensure peak performance, long-term reliability, and smarter asset management."
         btn="Contact Us Today"
+        desc="Partner with Al Yusr to ensure peak performance, long-term reliability, and smarter asset management."
+        title="Ready to elevate your facility operations?"
       />
     </main>
   );

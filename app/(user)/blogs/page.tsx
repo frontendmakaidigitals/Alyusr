@@ -3,6 +3,11 @@
 import React, { useState, useEffect, useMemo } from "react";
 import clsx from "clsx";
 import Autoplay from "embla-carousel-autoplay";
+import { Calendar, MoveUpRight, User } from "lucide-react";
+import Link from "next/link";
+
+import BgLayer from "../app_chunks/BgLayer";
+
 import {
   Carousel,
   CarouselContent,
@@ -11,10 +16,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import BgLayer from "../app_chunks/BgLayer";
-import { Calendar, MoveUpRight, User } from "lucide-react";
 import { Editor } from "@/components/blocks/editor-00/editor";
-import Link from "next/link";
 
 interface Blog {
   id: string;
@@ -29,7 +31,7 @@ interface BlogsResponse {
 }
 const Page = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: true }),
   );
 
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -38,8 +40,10 @@ const Page = () => {
     const fetchBlogs = async () => {
       try {
         const res = await fetch("/api/blogs");
+
         if (!res.ok) throw new Error("Failed to fetch blogs");
         const data: BlogsResponse = await res.json();
+
         setBlogs(data.blogs);
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -55,33 +59,34 @@ const Page = () => {
         <>
           <div className="w-full overflow-hidden">
             <Carousel
+              className="w-full"
               plugins={[plugin.current]}
               onMouseEnter={plugin.current.stop}
               onMouseLeave={plugin.current.reset}
-              className="w-full"
             >
               <CarouselContent className="h-[70vh] lg:h-[95vh] p-1 rounded-xl">
                 {blogs
                   .sort((a, b) => {
                     const aTime = a.id ? new Date(a.id).getTime() : 0;
                     const bTime = b.id ? new Date(b.id).getTime() : 0;
+
                     return bTime - aTime;
                   })
                   .slice(0, 3)
                   .map((blog) => (
-                    <CarouselItem className="h-full" key={blog.id}>
+                    <CarouselItem key={blog.id} className="h-full">
                       <Link
                         href={`/blogs/${encodeURIComponent(
-                          blog.title.toLowerCase().replace(/\s+/g, "-")
+                          blog.title.toLowerCase().replace(/\s+/g, "-"),
                         )}`}
                       >
                         <div className="w-full h-full relative">
                           <BgLayer color={"bg-slate-900/40 z-10"} />
                           <div className="absolute inset-0 w-full rounded-lg overflow-hidden h-full">
                             <img
+                              alt={blog.title}
                               className="w-full h-full object-cover"
                               src={`/api/uploads/${blog.image}`}
-                              alt={blog.title}
                             />
                           </div>
                           <BgLayer color="bg-slate-900/20" />
@@ -96,14 +101,14 @@ const Page = () => {
                               <div className="mt-1 max-w-3xl">
                                 {blog.content && (
                                   <Editor
+                                    readOnly
+                                    blogPage={false}
+                                    clampLines={2}
                                     editorSerializedState={
                                       typeof blog.content === "string"
                                         ? JSON.parse(blog.content)
                                         : blog.content
                                     }
-                                    readOnly
-                                    clampLines={2}
-                                    blogPage={false}
                                     text="text-slate-50"
                                   />
                                 )}
@@ -177,6 +182,7 @@ const BlogTopic = ({ blogs }: { blogs: Blog[] }) => {
     return [...blogs].sort((a, b) => {
       const bTime = b.id ? new Date(b.id).getTime() : 0;
       const aTime = a.id ? new Date(a.id).getTime() : 0;
+
       return bTime - aTime;
     });
   }, [blogs]);
@@ -186,9 +192,11 @@ const BlogTopic = ({ blogs }: { blogs: Blog[] }) => {
 
   const allTopics = useMemo(() => {
     const topicsSet = new Set<string>(["All"]);
+
     remainingBlogs.forEach((blog) => {
       if (blog.category) topicsSet.add(blog.category);
     });
+
     return Array.from(topicsSet);
   }, [remainingBlogs]);
 
@@ -206,13 +214,13 @@ const BlogTopic = ({ blogs }: { blogs: Blog[] }) => {
             {allTopics.map((topic) => (
               <button
                 key={topic}
-                onClick={() => setActiveTopic(topic)}
                 className={clsx(
                   "px-4 py-2 rounded-lg text-sm font-medium border",
                   activeTopic === topic
                     ? "bg-dimondra-teal text-dimondra-white border-dimondra-tealDark"
-                    : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+                    : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100",
                 )}
+                onClick={() => setActiveTopic(topic)}
               >
                 {topic}
               </button>
@@ -227,9 +235,9 @@ const BlogTopic = ({ blogs }: { blogs: Blog[] }) => {
                   <CardContent className="w-full px-1 pt-1 pb-5">
                     <div className="h-[250px] lg:h-[220px] w-full rounded-lg overflow-hidden">
                       <img
+                        alt={blog.title}
                         className="w-full h-full object-cover"
                         src={blog.image}
-                        alt={blog.title}
                       />
                     </div>
                     <div className="mt-3 px-2">
@@ -237,20 +245,20 @@ const BlogTopic = ({ blogs }: { blogs: Blog[] }) => {
                       <div className="mt-1">
                         {blog.content && (
                           <Editor
+                            readOnly
+                            blogPage={false}
+                            clampLines={2}
                             editorSerializedState={
                               typeof blog.content === "string"
                                 ? JSON.parse(blog.content)
                                 : blog.content
                             }
-                            readOnly
-                            clampLines={2}
-                            blogPage={false}
                           />
                         )}
                       </div>
                       <Link
                         href={`/blogs/${encodeURIComponent(
-                          blog.title.toLowerCase().replace(/\s+/g, "-")
+                          blog.title.toLowerCase().replace(/\s+/g, "-"),
                         )}`}
                       >
                         <button className="absolute right-4 bottom-1 translate-y-1/2 bg-dimondra-teal hover:bg-dimondra-tealDark text-dimondra-white rounded-lg p-2">

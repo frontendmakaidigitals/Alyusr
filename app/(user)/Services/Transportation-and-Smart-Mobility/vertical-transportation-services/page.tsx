@@ -1,6 +1,4 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-import { Lightbulb, Layers, Globe2, CheckCircle2 } from "lucide-react";
 import { motion } from "motion/react";
 import {
   PenTool,
@@ -12,6 +10,8 @@ import {
   Cpu,
   Handshake,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const services = [
     {
@@ -87,6 +87,7 @@ export default function Page() {
       desc: "Our solutions are always tailored to your building type, usage patterns, and long-term goals.",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -116,9 +117,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/vertical-transportation/hero.webp"}
-              className="w-full h-full object-cover"
               alt={""}
+              className="w-full h-full object-cover"
+              src={"/Transportation-mobility/vertical-transportation/hero.webp"}
             />
           </div>
         </div>
@@ -126,21 +127,21 @@ export default function Page() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
           <motion.h2
+            className="text-4xl lg:text-4xl lg:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-4xl lg:text-5xl font-bold mb-6"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Our <span className="text-blue-600">Approach</span>
           </motion.h2>
 
           <motion.p
+            className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             We work closely with building owners, developers, architects,
             engineers, and facility managers to provide comprehensive support
@@ -154,11 +155,11 @@ export default function Page() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="text-4xl lg:text-4xl lg:text-5xl font-bold text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Our <span className="text-blue-600">Services</span>
           </motion.h2>
@@ -167,10 +168,10 @@ export default function Page() {
             {services.map((service, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: idx * 0.2 }}
                 className="bg-white shadow-lg rounded-2xl p-8 border border-gray-100"
+                initial={{ opacity: 0, y: 30 }}
+                transition={{ duration: 0.7, delay: idx * 0.2 }}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 <div className="flex items-center gap-3 mb-4">
                   {service.icon}
@@ -192,11 +193,11 @@ export default function Page() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.h2
+            className="text-4xl lg:text-4xl lg:text-5xl font-bold text-center mb-14"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-4xl lg:text-5xl font-bold text-center mb-14"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Why Choose <span className="text-blue-600">Al Yusr</span> for
             Vertical Transportation?
@@ -206,11 +207,11 @@ export default function Page() {
             {reasons.map((reason, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.2 }}
                 className="bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition"
+                initial={{ opacity: 0, y: 30 }}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 <div className="flex items-center gap-3 mb-4">
                   {reason.icon}
@@ -223,9 +224,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Elevate Your Project with Smart Mobility Solutions"
-        desc="Whether you're planning a new development, upgrading an existing system, or troubleshooting complex elevator performance issues, Al Yusr’s Vertical Transportation team is here to help."
         btn="Contact us today"
+        desc="Whether you're planning a new development, upgrading an existing system, or troubleshooting complex elevator performance issues, Al Yusr’s Vertical Transportation team is here to help."
+        title="Elevate Your Project with Smart Mobility Solutions"
       />
     </main>
   );

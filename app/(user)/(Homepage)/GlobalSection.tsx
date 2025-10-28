@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
+
 import { useInView } from "../hooks/useInView";
 const GlobalSection = () => {
   const { ref, inView } = useInView({ amount: 0.9, once: true });
@@ -29,9 +29,9 @@ const GlobalSection = () => {
 
         <motion.img
           animate={{ scale: inView ? 1 : 0 }}
-          transition={{ duration: 0.9, type: "spring" }}
           className="w-full object-contain h-[330px] xl:h-[520px] 2xl:h-[550px]"
           src={"/Global.webp"}
+          transition={{ duration: 0.9, type: "spring" }}
         />
       </div>
     </div>

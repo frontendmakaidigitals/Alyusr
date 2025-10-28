@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { BadgeCheck } from "lucide-react";
 import {
   Landmark,
@@ -13,6 +12,8 @@ import {
   Factory,
   Server,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function Page() {
   const capabilities = [
@@ -125,11 +126,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/architecture/hero.webp"}
-          className="w-full h-full object-cover "
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover "
           height={700}
+          src={"/urban-planning/architecture/hero.webp"}
+          width={1200}
         />
       </section>
 
@@ -158,11 +159,11 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-red-400">
             <Image
-              src={"/urban-planning/architecture/about.webp"}
-              className="w-full h-full object-cover object-bottom"
               alt={""}
-              width={1200}
+              className="w-full h-full object-cover object-bottom"
               height={700}
+              src={"/urban-planning/architecture/about.webp"}
+              width={1200}
             />
           </div>
         </div>
@@ -208,11 +209,11 @@ export default function Page() {
               {/* Image */}
               <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-md">
                 <Image
-                  src={section.image}
                   alt={section.title}
-                  width={800}
-                  height={600}
                   className="w-full h-full object-cover"
+                  height={600}
+                  src={section.image}
+                  width={800}
                 />
               </div>
 
@@ -286,9 +287,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Design the Future, Together"
-        desc="If you’re looking for architecture that performs as beautifully as it looks, Al Yusr Engineering Consulting is your partner in delivering spaces that are visionary, responsible, and truly transformative."
         btn="Contact Us Today"
+        desc="If you’re looking for architecture that performs as beautifully as it looks, Al Yusr Engineering Consulting is your partner in delivering spaces that are visionary, responsible, and truly transformative."
+        title="Let’s Design the Future, Together"
       />
     </main>
   );

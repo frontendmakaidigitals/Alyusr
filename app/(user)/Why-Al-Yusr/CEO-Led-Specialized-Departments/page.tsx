@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import BgLayer from "@/app/(user)/app_chunks/BgLayer";
 import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
@@ -17,6 +16,10 @@ import {
   GaugeCircle,
   Handshake,
 } from "lucide-react";
+import Link from "next/link";
+
+import CTA from "../../app_chunks/CTA";
+
 import {
   Carousel,
   CarouselContent,
@@ -24,8 +27,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import CTA from "../../app_chunks/CTA";
-import Link from "next/link";
+import BgLayer from "@/app/(user)/app_chunks/BgLayer";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -33,22 +35,24 @@ export default function Page() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
+
   return (
     <div className="bg-white text-gray-800">
       {/* HERO */}
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "60vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-slate-50">
@@ -61,10 +65,10 @@ export default function Page() {
         </div>
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
-          style={{ y: yTransform }}
+          alt="ALYUSR Engineering Hero Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
           src="/ceo-hero-img.jpeg"
-          alt="ALYUSR Engineering Hero Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
 
@@ -96,17 +100,17 @@ export default function Page() {
               </p>
 
               <Link
-                href={"/Contact"}
                 className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+                href={"/Contact"}
               >
                 Discover Our Story <ArrowUpRight />
               </Link>
             </div>
             <div className="h-[450px]">
               <img
-                src="/ceo-led-about.jpeg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
+                src="/ceo-led-about.jpeg"
               />
             </div>
           </div>
@@ -169,6 +173,7 @@ export default function Page() {
               },
             ].map((item, i) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={i}
@@ -264,10 +269,10 @@ export default function Page() {
           </h2>
 
           <Carousel
+            className="w-full px-4" // Add horizontal padding to avoid edge cuts
             opts={{
               align: "start",
             }}
-            className="w-full px-4" // Add horizontal padding to avoid edge cuts
           >
             <CarouselContent className="gap-4 px-10">
               {" "}
@@ -296,10 +301,10 @@ export default function Page() {
                 >
                   <div className="relative h-[300px] w-full">
                     <Image
-                      src={point.img}
-                      alt={point.title}
                       fill
+                      alt={point.title}
                       className="object-cover  w-full h-full"
+                      src={point.img}
                     />
                   </div>
                   <div className="p-5 bg-blue-500">
@@ -317,12 +322,12 @@ export default function Page() {
       </section>
 
       <CTA
-        title="Your Project. Our People. One Team."
+        btn=" Start a Project With Us"
         desc=" With fully in-house capabilities, ALYUSR offers clients unmatched
             efficiency, precision, and project confidence. We're not just
             consultants, we’re your engineering partner from concept to
             completion."
-        btn=" Start a Project With Us"
+        title="Your Project. Our People. One Team."
       />
     </div>
   );

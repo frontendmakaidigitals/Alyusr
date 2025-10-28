@@ -68,29 +68,29 @@ export default function CareersPage() {
       <section className="grid grid-cols-1 place-items-start lg:grid-cols-[1fr_.7fr_1fr] gap-12">
         <div className="w-full aspect-square rounded-[20px] overflow-hidden border-[2px] border-slate-900">
           <img
+            alt={""}
             className="w-full h-full object-cover"
             src={
               "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg"
             }
-            alt={""}
           />
         </div>
         <div className="w-full aspect-square rounded-[20px] overflow-hidden border-[2px] border-slate-900">
           <img
+            alt={""}
             className="w-full h-full object-cover"
             src={
               "https://images.pexels.com/photos/7709110/pexels-photo-7709110.jpeg"
             }
-            alt={""}
           />
         </div>
         <div className="w-full aspect-square rounded-[20px] overflow-hidden border-[2px] border-slate-900">
           <img
+            alt={""}
             className="w-full h-full object-cover"
             src={
               "https://images.pexels.com/photos/2422293/pexels-photo-2422293.jpeg"
             }
-            alt={""}
           />
         </div>
       </section>
@@ -118,6 +118,7 @@ function CareersForm() {
 
     if (files) {
       const file = files[0];
+
       setForm({ ...form, [name]: file });
       if (file) {
         setPreviewUrl(URL.createObjectURL(file));
@@ -163,10 +164,10 @@ function CareersForm() {
             </li>
             <li className="flex items-center gap-2">
               <Link
-                href="https://www.google.com/maps?q=Riyadh+Al+Sahafa+District+Olaya+Street"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
+                href="https://www.google.com/maps?q=Riyadh+Al+Sahafa+District+Olaya+Street"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 <span className="">
                   <MapPin className="fill-black size-7 stroke-white" />
@@ -175,64 +176,64 @@ function CareersForm() {
               </Link>
             </li>
           </ul>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
-                type="text"
+                required
+                className="w-full px-3 py-[.7rem] border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
                 name="name"
                 placeholder="Full Name"
+                type="text"
                 value={form.name}
                 onChange={handleChange}
-                className="w-full px-3 py-[.7rem] border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
-                required
               />
               <input
-                type="email"
+                required
+                className="w-full px-3 py-[.7rem] border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
                 name="email"
                 placeholder="Email Address"
+                type="email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full px-3 py-[.7rem] border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
-                required
               />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
-                type="tel"
+                className="w-full px-3 py-[.7rem] border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
                 name="phone"
                 placeholder="Phone Number"
+                type="tel"
                 value={form.phone}
                 onChange={handleChange}
-                className="w-full px-3 py-[.7rem] border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
               />
               <input
-                type="text"
+                required
+                className="w-full px-3 py-[.7rem] border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
                 name="position"
                 placeholder="Position You’re Applying For"
+                type="text"
                 value={form.position}
                 onChange={handleChange}
-                className="w-full px-3 py-[.7rem] border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
-                required
               />
             </div>
 
             <textarea
+              className="w-full px-3 resize-none py-[.7rem] border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
               name="message"
               placeholder="Cover Letter / Additional Information"
+              rows={4}
               value={form.message}
               onChange={handleChange}
-              rows={4}
-              className="w-full px-3 resize-none py-[.7rem] border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
-            ></textarea>
+            />
             <div>
               <label className="block mb-2 text-gray-700 font-medium">
                 Upload Resume
               </label>
 
               <label
-                htmlFor="resume"
                 className="flex items-center justify-between gap-3 w-full px-3 py-[.7rem] border border-gray-300 rounded-xl bg-gray-50 cursor-pointer focus-within:ring-2 focus-within:ring-blue-500 outline-none"
+                htmlFor="resume"
               >
                 <div className="flex flex-col text-sm text-gray-700">
                   {form.resume ? (
@@ -253,13 +254,13 @@ function CareersForm() {
                 </div>
 
                 <input
-                  id="resume"
-                  type="file"
-                  name="resume"
                   accept=".pdf,.doc,.docx"
-                  onChange={handleChange}
                   className="sr-only"
+                  id="resume"
+                  name="resume"
                   required={!form.resume}
+                  type="file"
+                  onChange={handleChange}
                 />
 
                 {/* Action buttons */}
@@ -267,20 +268,20 @@ function CareersForm() {
                   <div className="flex items-center gap-2">
                     {previewUrl && (
                       <a
-                        href={previewUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-blue-100 text-blue-600 hover:bg-blue-200 transition"
                         aria-label="View Resume"
+                        className="p-2 rounded-lg bg-blue-100 text-blue-600 hover:bg-blue-200 transition"
+                        href={previewUrl}
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
                         <Eye className="w-4 h-4" />
                       </a>
                     )}
                     <button
+                      aria-label="Remove Resume"
+                      className="p-2 rounded-lg bg-red-100 text-red-600 hover:bg-red-200 transition"
                       type="button"
                       onClick={handleRemoveResume}
-                      className="p-2 rounded-lg bg-red-100 text-red-600 hover:bg-red-200 transition"
-                      aria-label="Remove Resume"
                     >
                       <X className="w-4 h-4" />
                     </button>
@@ -289,8 +290,8 @@ function CareersForm() {
               </label>
             </div>
             <button
-              type="submit"
               className="w-full cursor-pointer px-3 py-[.7rem] bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg transition-all"
+              type="submit"
             >
               Submit Application
             </button>

@@ -1,4 +1,6 @@
 "use client";
+import type { LinkMatcher } from "@lexical/react/LexicalAutoLinkPlugin";
+
 import React from "react";
 import { ListItemNode, ListNode } from "@lexical/list";
 import { CheckListPlugin } from "@lexical/react/LexicalCheckListPlugin";
@@ -7,7 +9,6 @@ import {
   LexicalComposer,
 } from "@lexical/react/LexicalComposer";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
-import { HistoryToolbarPlugin } from "@/components/editor/plugins/toolbar/history-toolbar-plugin";
 import { EditorState, SerializedEditorState } from "lexical";
 import { ClearEditorPlugin } from "@lexical/react/LexicalClearEditorPlugin";
 import { OnChangePlugin } from "@lexical/react/LexicalOnChangePlugin";
@@ -16,6 +17,10 @@ import { ListPlugin } from "@lexical/react/LexicalListPlugin";
 import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { HeadingNode, QuoteNode } from "@lexical/rich-text";
 import { ParagraphNode, TextNode } from "lexical";
+
+import { ClickableLinkPlugin } from "@lexical/react/LexicalClickableLinkPlugin";
+import { HistoryToolbarPlugin } from "@/components/editor/plugins/toolbar/history-toolbar-plugin";
+
 import { ElementFormatToolbarPlugin } from "@/components/editor/plugins/toolbar/element-format-toolbar-plugin";
 import { ContentEditable } from "@/components/editor/editor-ui/content-editable";
 import { BlockFormatDropDown } from "@/components/editor/plugins/toolbar/block-format-toolbar-plugin";
@@ -34,20 +39,27 @@ import { FontFamilyToolbarPlugin } from "@/components/editor/plugins/toolbar/fon
 import { FontFormatToolbarPlugin } from "@/components/editor/plugins/toolbar/font-format-toolbar-plugin";
 import { FontSizeToolbarPlugin } from "@/components/editor/plugins/toolbar/font-size-toolbar-plugin";
 import { LinkToolbarPlugin } from "@/components/editor/plugins/toolbar/link-toolbar-plugin";
-import { ClickableLinkPlugin } from "@lexical/react/LexicalClickableLinkPlugin";
-import type { LinkMatcher } from "@lexical/react/LexicalAutoLinkPlugin";
+
 import { ActionsPlugin } from "@/components/editor/plugins/actions/actions-plugin";
 import { ClearEditorActionPlugin } from "@/components/editor/plugins/actions/clear-editor-plugin";
 import { CounterCharacterPlugin } from "@/components/editor/plugins/actions/counter-character-plugin";
+
 import { useState } from "react";
 import { AutoLinkNode, LinkNode } from "@lexical/link";
 import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
+
 import { FloatingLinkEditorPlugin } from "@/components/editor/plugins/toolbar/floatingLinkToolbar";
+
 import { TableNode, TableRowNode, TableCellNode } from "@lexical/table";
+
 import { InsertTable } from "@/components/editor/plugins/toolbar/block-insert/insert-table";
+
 import { TablePlugin } from "@lexical/react/LexicalTablePlugin";
+
 import { BlockInsertPlugin } from "@/components/editor/plugins/toolbar/block-insert-plugin";
+
 import { LexicalEditor } from "lexical";
+
 import { SafeAutoLinkPlugin } from "@/components/editor/plugins/safeAutoPlugin";
 const editorConfig: InitialConfigType = {
   namespace: "Editor",
@@ -107,10 +119,10 @@ export function Editor({
       >
         <TooltipProvider>
           <Plugins
+            blogPage={blogPage}
+            clampLines={clampLines}
             readOnly={readOnly}
             serialized={editorSerializedState}
-            clampLines={clampLines}
-            blogPage={blogPage}
             text={text}
           />
           <OnChangePlugin
@@ -146,6 +158,7 @@ export function Plugins({
 
   const urlMatcher: LinkMatcher = (text: string) => {
     const match = URL_REGEX.exec(text);
+
     if (!match) return null;
 
     const fullMatch = match[0];
@@ -168,6 +181,7 @@ export function Plugins({
       setFloatingAnchorElem(_floatingAnchorElem);
     }
   };
+
   return (
     <div className="relative">
       {/* Toolbar only visible in editing mode */}
@@ -192,7 +206,7 @@ export function Plugins({
               {["bold", "italic", "underline", "strikethrough"].map(
                 (format) => (
                   <FontFormatToolbarPlugin key={format} format={format} />
-                )
+                ),
               )}
               <LinkToolbarPlugin setIsLinkEditMode={setIsLinkEditMode} />
               <BlockInsertPlugin>
@@ -211,17 +225,17 @@ export function Plugins({
           </div>
         ) : (
           <RichTextPlugin
+            ErrorBoundary={LexicalErrorBoundary}
             contentEditable={
               <div ref={onRef}>
                 <ContentEditable
-                  placeholder={placeholder}
                   className={`ContentEditable__root relative block ${
                     readOnly ? "" : "h-72 min-h-96 overflow-auto px-8 py-4"
                   } focus:outline-none`}
+                  placeholder={placeholder}
                 />
               </div>
             }
-            ErrorBoundary={LexicalErrorBoundary}
           />
         )}
         <ClickableLinkPlugin />
@@ -259,16 +273,18 @@ export function Plugins({
 }
 // Render plain text for preview
 function renderPlainTextFromEditorState(
-  serialized: SerializedEditorState | undefined
+  serialized: SerializedEditorState | undefined,
 ) {
   if (!serialized) return "";
   try {
     const root = serialized.root;
+
     if (!root || !root.children) return "";
+
     return root.children
       .map(
         (node: any) =>
-          node.children?.map((child: any) => child.text).join(" ") ?? ""
+          node.children?.map((child: any) => child.text).join(" ") ?? "",
       )
       .join(" ");
   } catch (e) {

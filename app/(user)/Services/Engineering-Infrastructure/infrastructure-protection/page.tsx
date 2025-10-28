@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-import { BadgeCheck, Globe, Users, ShieldCheck, Lightbulb } from "lucide-react";
+import { BadgeCheck, Lightbulb } from "lucide-react";
 import {
   Shield,
   Lock,
@@ -17,6 +16,8 @@ import {
   HeartPulse,
   Server,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function ConstructionManagementPage() {
   const sectors = [
@@ -88,6 +89,7 @@ export default function ConstructionManagementPage() {
     "Alignment with Vision 2030’s national resilience and smart infrastructure goals",
     "Local presence with global best practice insights",
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -97,13 +99,13 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
+          alt={"Hero"}
+          className="w-full h-full object-cover object-bottom"
+          height={800}
           src={
             "/Engineering-Infrastructure/infrastructure-protection/Critical.webp"
           }
-          className="w-full h-full object-cover object-bottom"
-          alt={"Hero"}
           width={1200}
-          height={800}
         />
       </section>
       <section className="py-20 bg-gray-50">
@@ -134,9 +136,9 @@ export default function ConstructionManagementPage() {
           {/* Image Section */}
           <div className="order-1 lg:order-2 h-[450px]">
             <img
-              src="/Engineering-Infrastructure/infrastructure-protection/Securing.webp"
               alt="Critical Infrastructure Protection"
               className="rounded-xl shadow-lg w-full h-full object-cover object-top"
+              src="/Engineering-Infrastructure/infrastructure-protection/Securing.webp"
             />
           </div>
         </div>
@@ -147,9 +149,9 @@ export default function ConstructionManagementPage() {
           {/* Image Section */}
           <div className="order-1">
             <img
-              src="/Engineering-Infrastructure/infrastructure-protection/Resilience.webp"
               alt="Converged Resilience"
               className="rounded-xl shadow-lg w-full h-full object-cover"
+              src="/Engineering-Infrastructure/infrastructure-protection/Resilience.webp"
             />
           </div>
 
@@ -237,9 +239,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Protecting What Matters Most"
-        desc="In a world where threats are unpredictable and ever-evolving, resilience must be designed, not hoped for. At Al Yusr, we bring together strategy, security, and innovation to ensure that your critical infrastructure is prepared for the future."
         btn="Contact Us Today"
+        desc="In a world where threats are unpredictable and ever-evolving, resilience must be designed, not hoped for. At Al Yusr, we bring together strategy, security, and innovation to ensure that your critical infrastructure is prepared for the future."
+        title="Protecting What Matters Most"
       />
     </main>
   );

@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { motion } from "framer-motion";
 import {
   CheckCircle,
@@ -10,6 +9,8 @@ import {
   Zap,
   BadgeCheck,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function ConstructionManagementPage() {
   const services = [
     {
@@ -81,11 +82,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/visualization/hero.webp"}
-          className="w-full h-full object-cover"
           alt={"hero"}
-          width={1200}
+          className="w-full h-full object-cover"
           height={700}
+          src={"/urban-planning/visualization/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -130,11 +131,11 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="w-full h-[400px] bg-red-300">
             <Image
-              src={"/urban-planning/visualization/about1.webp"}
               alt={""}
-              width={500}
-              height={500}
               className="w-full h-full object-cover"
+              height={500}
+              src={"/urban-planning/visualization/about1.webp"}
+              width={500}
             />
           </div>
         </div>
@@ -152,10 +153,10 @@ export default function ConstructionManagementPage() {
               >
                 <div className="relative w-full h-48">
                   <Image
-                    src={service.img}
-                    alt={service.title}
                     fill
+                    alt={service.title}
                     className="object-cover"
+                    src={service.img}
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
@@ -173,11 +174,11 @@ export default function ConstructionManagementPage() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
+            className="space-y-6"
             initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            whileInView={{ opacity: 1, x: 0 }}
           >
             <h2 className="text-4xl font-bold text-gray-900">
               Enhancing{" "}
@@ -207,17 +208,17 @@ export default function ConstructionManagementPage() {
 
           {/* Right Image */}
           <motion.div
+            className="relative w-full h-[230px] lg:h-[420px]  rounded-lg overflow-hidden shadow-lg"
             initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative w-full h-[230px] lg:h-[420px]  rounded-lg overflow-hidden shadow-lg"
+            whileInView={{ opacity: 1, x: 0 }}
           >
             <Image
-              src={"/urban-planning/visualization/about2.webp"}
-              alt="Visualization Communication"
               fill
+              alt="Visualization Communication"
               className="object-cover w-full h-full"
+              src={"/urban-planning/visualization/about2.webp"}
             />
           </motion.div>
         </div>
@@ -244,9 +245,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Build with the Community, Not Around It"
-        desc="If you’re planning a project that touches people’s lives, make sure their voices are part of the process from the start. At Al Yusr, we turn engagement into impact, helping clients gain insight, build consensus, and deliver with purpose."
         btn="Contact Us Today"
+        desc="If you’re planning a project that touches people’s lives, make sure their voices are part of the process from the start. At Al Yusr, we turn engagement into impact, helping clients gain insight, build consensus, and deliver with purpose."
+        title="Let’s Build with the Community, Not Around It"
       />
     </main>
   );

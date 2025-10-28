@@ -1,7 +1,6 @@
 "use client";
 import { ArrowUpRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import BgLayer from "@/app/(user)/app_chunks/BgLayer";
 import { motion, useScroll, useTransform } from "motion/react";
 import {
   Landmark,
@@ -17,13 +16,15 @@ import {
   ArrowLeft,
   ArrowRight,
 } from "lucide-react";
+import Image from "next/image";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import Image from "next/image";
+import BgLayer from "@/app/(user)/app_chunks/BgLayer";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -31,11 +32,12 @@ export default function Page() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
   const [api, setApi] = useState<CarouselApi>();
@@ -57,15 +59,16 @@ export default function Page() {
       api.off?.("select", update);
     };
   }, [api]);
+
   return (
     <div className="bg-white text-gray-800">
       {/* HERO SECTION */}
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "60vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-slate-50">
@@ -78,10 +81,10 @@ export default function Page() {
         </div>
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
-          style={{ y: yTransform }}
+          alt="ALYUSR Engineering Hero Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
           src="/why/govt-sector-hero.jpeg"
-          alt="ALYUSR Engineering Hero Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
 
@@ -111,9 +114,9 @@ export default function Page() {
           </div>
           <div className="h-[450px]">
             <img
-              src="/why/govt-sector-about.jpeg"
               alt="About Background"
               className=" w-full h-full object-cover"
+              src="/why/govt-sector-about.jpeg"
             />
             <BgLayer />
           </div>
@@ -214,11 +217,11 @@ export default function Page() {
           </div>
 
           <Carousel
+            className="w-full" // Add horizontal padding to avoid edge cuts
             opts={{
               align: "start",
             }}
             setApi={setApi}
-            className="w-full" // Add horizontal padding to avoid edge cuts
           >
             <CarouselContent className="gap-4 px-10">
               {" "}
@@ -248,10 +251,10 @@ export default function Page() {
                   <div className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <div className="relative h-[300px] w-full bg-sky-100">
                       <Image
-                        src={point.img}
-                        alt={point.title}
                         fill
+                        alt={point.title}
                         className="object-cover  group-hover:scale-105 transition-transform duration-300"
+                        src={point.img}
                       />
                     </div>
                     <div className="p-5">
@@ -267,16 +270,16 @@ export default function Page() {
 
           <div className="my-6 flex justify-end gap-2">
             <button
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
               disabled={!canScrollPrev}
               onClick={() => api?.scrollPrev()}
-              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
             >
               <ArrowLeft />
             </button>
             <button
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
               disabled={!canScrollNext}
               onClick={() => api?.scrollNext()}
-              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
             >
               <ArrowRight />
             </button>

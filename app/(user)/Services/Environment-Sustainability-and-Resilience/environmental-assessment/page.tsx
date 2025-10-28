@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { Globe2, Cpu, FileCheck, Users, BadgeCheck } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function Page() {
   const items = [
@@ -119,6 +120,7 @@ export default function Page() {
       desc: "Successful delivery of large-scale environmental and permitting programs across diverse industries.",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -147,11 +149,11 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
+              alt={"environmental assesment hero"}
+              className="w-full h-full object-cover"
               src={
                 "/Environment-Sustainability/Environmental Assessment/hero.webp"
               }
-              className="w-full h-full object-cover"
-              alt={"environmental assesment hero"}
             />
           </div>
         </div>
@@ -192,10 +194,10 @@ export default function Page() {
               >
                 <div className="relative w-full h-[250px] rounded-xl overflow-hidden">
                   <Image
-                    src={service.img}
-                    alt={service.title}
                     fill
+                    alt={service.title}
                     className="object-cover"
+                    src={service.img}
                   />
                 </div>
                 <div className="p-2 mt-1">
@@ -235,9 +237,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Build Smarter and Greener Projects"
-        desc="At Al Yusr, we go beyond compliance; we help you unlock approvals faster, reduce risks, and build trust with communities while protecting the environment. Whether you’re planning a new development, upgrading existing infrastructure, or restoring ecosystems, our Environmental Assessment & Permitting team has the expertise and technology to deliver results."
         btn="Contact Us Today"
+        desc="At Al Yusr, we go beyond compliance; we help you unlock approvals faster, reduce risks, and build trust with communities while protecting the environment. Whether you’re planning a new development, upgrading existing infrastructure, or restoring ecosystems, our Environmental Assessment & Permitting team has the expertise and technology to deliver results."
+        title="Build Smarter and Greener Projects"
       />
     </main>
   );

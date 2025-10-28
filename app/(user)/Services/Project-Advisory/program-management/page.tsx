@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   Compass,
   Map,
@@ -12,9 +11,10 @@ import {
   ShieldCheck,
   Users,
   Network,
-  CheckCircle2,
   BadgeCheck,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const services = [
     { title: "Pre-Project Planning & Feasibility Studies", icon: Compass },
@@ -47,11 +47,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/project-management/hero.webp"}
-          className="w-full h-full object-cover"
           alt={"Program Management Hero"}
-          width={1200}
+          className="w-full h-full object-cover"
           height={800}
+          src={"/project-advisory/project-management/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -94,11 +94,11 @@ export default function Page() {
           </div>
           <div className="h-[450px] w-full bg-slate-100">
             <Image
-              src={"/project-advisory/project-management/Leadership.webp"}
               alt={"Outcome Driven Leadership"}
-              width={500}
-              height={500}
               className="w-full h-full object-cover"
+              height={500}
+              src={"/project-advisory/project-management/Leadership.webp"}
+              width={500}
             />
           </div>
         </div>
@@ -143,11 +143,11 @@ export default function Page() {
             {/* Image */}
             <div className="relative w-full h-80 lg:h-[400px] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src={"/project-advisory/project-management/graph.webp"}
                 alt="Built for Scale"
-                width={500}
-                height={500}
                 className="w-full h-full object-cover"
+                height={500}
+                src={"/project-advisory/project-management/graph.webp"}
+                width={500}
               />
             </div>
             {/* Text */}
@@ -186,11 +186,11 @@ export default function Page() {
             {/* Image */}
             <div className="relative w-full h-80 lg:h-[400px] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/project-advisory/project-management/digital.webp"
                 alt="Digital Delivery"
                 className="object-cover w-full h-full"
-                width={500}
                 height={500}
+                src="/project-advisory/project-management/digital.webp"
+                width={500}
               />
             </div>
           </div>
@@ -224,9 +224,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Shaping Transformation Through Program Excellence"
-        desc="At Al Yusr, we’re not just managing projects, we’re building legacies. Our program management solutions are designed to support long-term value, empower public institutions, and enable private clients to lead with confidence."
         btn="Contact Us Today"
+        desc="At Al Yusr, we’re not just managing projects, we’re building legacies. Our program management solutions are designed to support long-term value, empower public institutions, and enable private clients to lead with confidence."
+        title="Shaping Transformation Through Program Excellence"
       />
     </main>
   );

@@ -2,13 +2,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from "@/components/ui/carousel";
-
-import {
   FileSearch,
   CalendarClock,
   Goal,
@@ -23,6 +16,13 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import Image from "next/image";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 const specialCapabilities = [
@@ -177,11 +177,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/construction/hero.webp"}
-          className="w-full h-full object-cover"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover"
           height={800}
+          src={"/Engineering-Infrastructure/construction/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -206,13 +206,14 @@ export default function ConstructionManagementPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {keyResponsibilities.map((item, i) => {
             const Icon = item.icon; // Extract the icon component
+
             return (
               <motion.div
                 key={i}
                 className="bg-gray-50 rounded-xl shadow hover:shadow-md border overflow-hidden"
+                custom={i}
                 initial="hidden"
                 whileInView="visible"
-                custom={i}
               >
                 <div className="p-6 flex items-start gap-4">
                   <span>
@@ -241,9 +242,9 @@ export default function ConstructionManagementPage() {
 
             <motion.p
               className="text-start "
+              custom={0}
               initial="hidden"
               whileInView="visible"
-              custom={0}
             >
               Our project managers are equipped to handle every stage of the
               construction life cycle. From concept to commissioning, we apply a
@@ -255,26 +256,26 @@ export default function ConstructionManagementPage() {
           <div>
             <div className="my-6 flex justify-end gap-2">
               <button
+                className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
                 disabled={!canScrollPrev}
                 onClick={() => api?.scrollPrev()}
-                className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
               >
                 <ArrowLeft />
               </button>
               <button
+                className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
                 disabled={!canScrollNext}
                 onClick={() => api?.scrollNext()}
-                className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
               >
                 <ArrowRight />
               </button>
             </div>
             <Carousel
+              className="!w-full"
               opts={{
                 align: "start",
               }}
               setApi={setApi}
-              className="!w-full"
             >
               <CarouselContent className="-ml-4 ">
                 {lifecyclePhases.map((phase, i) => (
@@ -290,11 +291,11 @@ export default function ConstructionManagementPage() {
                       <div className=" h-[400px] overflow-hidden rounded-lg relative">
                         <div className="absolute inset-0 w-full h-full bg-black/30" />
                         <Image
-                          src={phase.image}
-                          className="w-full h-full object-cover"
-                          width={400}
-                          height={400}
                           alt={""}
+                          className="w-full h-full object-cover"
+                          height={400}
+                          src={phase.image}
+                          width={400}
                         />
                       </div>
                       <h3 className="font-semibold absolute text-xl max-w-[90%] text-slate-50 p-4 bottom-0  left-0">
@@ -308,8 +309,7 @@ export default function ConstructionManagementPage() {
           </div>
         </div>
       </section>
-      
-      
+
       <section className="py-16 container">
         <motion.h2
           className="text-4xl lg:text-5xl font-semibold text-center mb-6"
@@ -342,9 +342,9 @@ export default function ConstructionManagementPage() {
             <motion.li
               key={i}
               className=" bg-blue-50 p-4 rounded-lg"
+              custom={i}
               initial="hidden"
               whileInView="visible"
-              custom={i}
             >
               <span className="">
                 <BadgeCheck className="text-green-50 w-8 h-8 fill-green-400 mb-3" />
@@ -358,18 +358,17 @@ export default function ConstructionManagementPage() {
         <motion.h2
           className="text-4xl lg:text-5xl font-semibold text-center mb-3"
           initial="hidden"
-          whileInView="visible"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
+          whileInView="visible"
         >
           What <span className="text-blue-500">Sets Us</span> Apart
         </motion.h2>
         <motion.p
           className="text-center max-w-4xl mx-auto mb-12 text-gray-600"
           initial="hidden"
-          whileInView="visible"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: {
@@ -378,6 +377,7 @@ export default function ConstructionManagementPage() {
               transition: { duration: 0.5, delay: 0.1 },
             },
           }}
+          whileInView="visible"
         >
           At Al Yusr Engineering Consulting, we go beyond traditional project
           management. Our strength lies in our ability to integrate vision,
@@ -393,11 +393,11 @@ export default function ConstructionManagementPage() {
             >
               <div className="h-[280px] rounded-lg border border-slate-900/40 overflow-hidden w-full relative">
                 <img
-                  src={item.image}
-                  width={300}
-                  height={400}
                   alt={item.title}
                   className="object-cover w-full h-full"
+                  height={400}
+                  src={item.image}
+                  width={300}
                 />
               </div>
               <div className="p-4">
@@ -411,9 +411,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title=" Need Reliable Project Oversight?"
-        desc="Al Yusr Engineering Consulting is here to take your project from concept to completion with confidence, clarity, and control. Let our seasoned team manage the process so you can focus on the bigger picture."
         btn="Contact Us Today"
+        desc="Al Yusr Engineering Consulting is here to take your project from concept to completion with confidence, clarity, and control. Let our seasoned team manage the process so you can focus on the bigger picture."
+        title=" Need Reliable Project Oversight?"
       />
     </main>
   );

@@ -1,6 +1,5 @@
 "use client";
 
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   Info,
   Database,
@@ -9,6 +8,8 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const reasons = [
     {
@@ -107,6 +108,7 @@ export default function Page() {
       img: "/Transportation-mobility/geo-intelligence/advance-tech.webp",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -132,9 +134,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/geo-intelligence/hero.webp"}
-              className="w-full h-full object-cover"
               alt={""}
+              className="w-full h-full object-cover"
+              src={"/Transportation-mobility/geo-intelligence/hero.webp"}
             />
           </div>
         </div>
@@ -157,14 +159,15 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {reasons.map((item, index) => {
               const Icon = item.icon;
+
               return (
                 <motion.div
                   key={index}
+                  className="bg-card rounded-2xl shadow-md border border-border p-6 flex flex-col items-center text-center space-y-4"
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-card rounded-2xl shadow-md border border-border p-6 flex flex-col items-center text-center space-y-4"
+                  whileInView={{ opacity: 1, y: 0 }}
                 >
                   <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center">
                     <Icon className="w-7 h-7 text-blue-500" />
@@ -204,18 +207,18 @@ export default function Page() {
             {capabilities.map((cap, index) => (
               <motion.div
                 key={index}
+                className="bg-card rounded-2xl shadow-md border border-border overflow-hidden flex flex-col"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-2xl shadow-md border border-border overflow-hidden flex flex-col"
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {/* Image */}
                 <div className="w-full h-[230px] bg-slate-100">
                   <img
-                    src={cap.img}
                     alt={cap.title}
                     className="w-full h-full object-cover"
+                    src={cap.img}
                   />
                 </div>
 
@@ -250,18 +253,18 @@ export default function Page() {
             {values.map((val, index) => (
               <motion.div
                 key={index}
+                className="bg-card rounded-2xl shadow-md border border-border overflow-hidden flex flex-col"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-2xl shadow-md border border-border overflow-hidden flex flex-col"
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {/* Image */}
                 <div className="bg-slate-100">
                   <img
-                    src={val.img}
                     alt={val.title}
                     className="w-full h-44 object-cover"
+                    src={val.img}
                   />
                 </div>
 
@@ -280,9 +283,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Shaping Smarter, Safer Communities"
-        desc="At Al Yusr, our Geo-Intelligence & Analysis services are more than just maps; they are powerful decision-making tools that help our clients create sustainable, secure, and future-ready environments."
         btn="Contact Us Today"
+        desc="At Al Yusr, our Geo-Intelligence & Analysis services are more than just maps; they are powerful decision-making tools that help our clients create sustainable, secure, and future-ready environments."
+        title="Shaping Smarter, Safer Communities"
       />
     </main>
   );

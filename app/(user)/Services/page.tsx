@@ -1,11 +1,13 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import BgLayer from "../app_chunks/BgLayer";
 import Image from "next/image";
-import { Skeleton } from "@/components/ui/skeleton";
 import { motion } from "motion/react";
-import { useInView } from "../hooks/useInView";
 import Link from "next/link";
+
+import { useInView } from "../hooks/useInView";
+import BgLayer from "../app_chunks/BgLayer";
+
+import { Skeleton } from "@/components/ui/skeleton";
 const services = [
   {
     title: "Construction Management",
@@ -266,12 +268,14 @@ const services = [
 const Page = () => {
   const chunkArray = (
     arr: { title: string; link: string; img: string }[],
-    chunkSize: number
+    chunkSize: number,
   ) => {
     const result = [];
+
     for (let i = 0; i < arr.length; i += chunkSize) {
       result.push(arr.slice(i, i + chunkSize));
     }
+
     return result;
   };
   const [visibleChunks, setVisibleChunks] = useState(1);
@@ -279,10 +283,12 @@ const Page = () => {
   const bottomRef = useRef<HTMLDivElement>(null);
   const chunks = chunkArray(services, Math.ceil(services.length / 5));
   const { inView, ref } = useInView();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
+
         if (entry.isIntersecting && visibleChunks < chunks.length && !loading) {
           setLoading(true);
           setTimeout(() => {
@@ -291,7 +297,7 @@ const Page = () => {
           }, 1200); // show loading for 500ms
         }
       },
-      { threshold: 1.0 }
+      { threshold: 1.0 },
     );
 
     if (bottomRef.current) observer.observe(bottomRef.current);
@@ -341,16 +347,16 @@ const Page = () => {
             .flat()
             .map((service, idx) => (
               <motion.li
-                animate={{ scale: inView ? 1 : 0, opacity: inView ? 1 : 0 }}
-                viewport={{ once: true }}
+                key={idx}
                 ref={ref}
+                animate={{ scale: inView ? 1 : 0, opacity: inView ? 1 : 0 }}
+                className="aspect-square w-full relative"
                 transition={{
                   duration: 0.4,
                   type: "spring",
                   delay: 0.1 * idx,
                 }}
-                key={idx}
-                className="aspect-square w-full relative"
+                viewport={{ once: true }}
               >
                 <Link href={`/Services${service.link}`}>
                   <h2 className="absolute z-10 bottom-3 left-3 text-xl font-medium text-slate-50">
@@ -358,11 +364,11 @@ const Page = () => {
                   </h2>
                   <BgLayer color="bg-slate-900/50" />
                   <Image
-                    width={300}
-                    height={300}
-                    src={`/services/${service.img}`}
                     alt={service.title}
                     className="w-full h-full object-cover"
+                    height={300}
+                    src={`/services/${service.img}`}
+                    width={300}
                   />
                 </Link>
               </motion.li>

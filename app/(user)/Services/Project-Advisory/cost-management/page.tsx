@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   Calculator,
   Building2,
@@ -10,6 +9,8 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const services = [
     {
@@ -105,11 +106,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/cost-mangement/cost-managemnt.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/project-advisory/cost-mangement/cost-managemnt.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -132,11 +133,11 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <motion.h2
+            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-12 text-center"
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-12 text-center"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             What <span className="text-blue-500">We Offer</span>
           </motion.h2>
@@ -146,19 +147,19 @@ export default function Page() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
+                className="rounded-xl border border-gray-200 bg-sky-50 p-1 shadow-sm hover:shadow-md transition-shadow duration-200 max-w-sm mx-auto"
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="rounded-xl border border-gray-200 bg-sky-50 p-1 shadow-sm hover:shadow-md transition-shadow duration-200 max-w-sm mx-auto"
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {service.img && (
                   <div className="relative bg-red-300 w-full h-60 rounded-lg overflow-hidden">
                     <Image
-                      src={service.img}
-                      alt={service.title}
                       fill
+                      alt={service.title}
                       className="object-cover"
+                      src={service.img}
                     />
                   </div>
                 )}
@@ -180,9 +181,9 @@ export default function Page() {
           {/* Left Image */}
           <div className="h-full w-full">
             <img
-              src="/project-advisory/cost-mangement/our-approach.webp" // 🔹 Replace with your actual image
               alt="Our Approach"
               className="w-full h-full object-cover"
+              src="/project-advisory/cost-mangement/our-approach.webp" // 🔹 Replace with your actual image
             />
           </div>
 
@@ -205,7 +206,7 @@ export default function Page() {
             <ul className="space-y-4 mb-6">
               {points.map((point, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <span className="h-2 w-2 mt-2 rounded-full bg-blue-600"></span>
+                  <span className="h-2 w-2 mt-2 rounded-full bg-blue-600" />
                   <span className="text-gray-800">{point}</span>
                 </li>
               ))}
@@ -275,9 +276,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Build with Confidence"
-        desc="Whether you're developing a mega project or managing a complex infrastructure upgrade, Al Yusr’s cost management services help you stay on budget, reduce risk, and achieve lasting value."
         btn="Contact Us Today"
+        desc="Whether you're developing a mega project or managing a complex infrastructure upgrade, Al Yusr’s cost management services help you stay on budget, reduce risk, and achieve lasting value."
+        title="Build with Confidence"
       />
     </main>
   );

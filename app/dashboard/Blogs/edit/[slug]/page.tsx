@@ -1,12 +1,13 @@
 "use client";
 import { FormEvent } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useRouter } from "next/navigation";
+import { DialogTitle } from "@radix-ui/react-dialog";
+import { toast } from "sonner";
+import { Eye, Upload, User, Facebook, Twitter } from "lucide-react";
+
 import {
   Select,
   SelectItem,
@@ -14,11 +15,11 @@ import {
   SelectValue,
   SelectContent,
 } from "@/components/ui/select";
-import { DialogTitle } from "@radix-ui/react-dialog";
 import Spinner from "@/app/(user)/app_chunks/spinner";
 import { Editor } from "@/components/blocks/editor-00/editor";
-import { toast } from "sonner";
-import { Eye, Upload, User, Facebook, Twitter } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 type Blog = {
   id?: string;
@@ -83,9 +84,11 @@ export default function Page() {
     id: "",
   });
   const router = useRouter();
+
   useEffect(() => {
     async function fetchBlog() {
       const res = await fetch(`/api/blogs/${blogId}`);
+
       if (res.ok) {
         const data = await res.json();
         const blog = data.blog;
@@ -110,7 +113,7 @@ export default function Page() {
 
   const handleChange = (
     key: keyof typeof blogData,
-    value: string | File | null
+    value: string | File | null,
   ) => {
     setBlogData((prev) => ({
       ...prev,
@@ -119,6 +122,7 @@ export default function Page() {
   };
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
+
     if (file) {
       handleChange("image", file);
       setImagePreview(URL.createObjectURL(file));
@@ -137,10 +141,12 @@ export default function Page() {
       ) {
         toast.error("Please fill in all required fields.");
         setLoading(false);
+
         return;
       }
 
       const formData = new FormData();
+
       formData.append("title", blogData.title);
       formData.append("metaTitle", blogData.metaTitle);
       formData.append("metaDesc", blogData.metaDesc);
@@ -162,7 +168,7 @@ export default function Page() {
 
       if (result.success) {
         toast.success(
-          blogData ? "Blog updated successfully!" : "Blog saved successfully!"
+          blogData ? "Blog updated successfully!" : "Blog saved successfully!",
         );
         router.push("/dashboard/Blogs");
 
@@ -200,6 +206,7 @@ export default function Page() {
       !blogData.author
     ) {
       toast.error("Something went wrong");
+
       return;
     }
     setShowPreview(true);
@@ -228,12 +235,12 @@ export default function Page() {
               Blog Title
             </Label>
             <Input
+              className="h-12"
               id={"blogTitle"}
               name={"blogTitle"}
               placeholder="Blog Title"
               value={blogData.title}
               onChange={(e) => handleChange("title", e.target.value)}
-              className="h-12"
             />
           </div>
           <div>
@@ -244,12 +251,12 @@ export default function Page() {
               Meta Title
             </Label>
             <Input
+              className="h-12"
               id={"metaTitle"}
               name={"metaTitle"}
               placeholder="Meta Title"
               value={blogData.metaTitle}
               onChange={(e) => handleChange("metaTitle", e.target.value)}
-              className="h-12"
             />
           </div>
           <div>
@@ -260,12 +267,12 @@ export default function Page() {
               Meta Description
             </Label>
             <Input
+              className="h-12"
               id={"metaDesc"}
               name={"metaDesc"}
               placeholder="Meta Description"
               value={blogData.metaDesc}
               onChange={(e) => handleChange("metaDesc", e.target.value)}
-              className="h-12"
             />
           </div>
           <div>
@@ -276,19 +283,19 @@ export default function Page() {
               Author
             </Label>
             <Input
-              name={"author"}
+              className="h-12" //
               id={"author"}
+              name={"author"}
               placeholder="Author"
               value={blogData.author}
-              className="h-12" //
               onChange={(e) => handleChange("author", e.target.value)}
             />
           </div>
 
           <div>
             <Label
-              htmlFor="category"
               className="block text-sm font-medium mb-[6px]"
+              htmlFor="category"
             >
               Select Category
             </Label>
@@ -297,7 +304,7 @@ export default function Page() {
               value={blogData.category ?? ""} // must match one of topic.key
               onValueChange={(value) => handleChange("category", value)}
             >
-              <SelectTrigger id="category" className="!h-12 w-full">
+              <SelectTrigger className="!h-12 w-full" id="category">
                 <SelectValue placeholder="Select category" />
               </SelectTrigger>
 
@@ -313,15 +320,15 @@ export default function Page() {
 
           <div>
             <Label
-              htmlFor="fileAdd"
               className="block text-sm font-medium mb-[6px]"
+              htmlFor="fileAdd"
             >
               Image
             </Label>
             <div className="relative flex items-center border border-gray-100 shadow gap-3 line-clamp-1 bg-white w-full px-3 py-[.22rem] rounded-lg">
               <label
-                htmlFor="fileAdd"
                 className="px-3 rounded-md py-[.45rem] bg-blue-500 text-slate-50 cursor-pointer"
+                htmlFor="fileAdd"
               >
                 Choose
               </label>
@@ -329,24 +336,24 @@ export default function Page() {
                 {typeof blogData.image === "string"
                   ? blogData.image
                   : blogData.image instanceof File
-                  ? blogData.image.name
-                  : ""}
+                    ? blogData.image.name
+                    : ""}
               </p>
               <Input
-                id="fileAdd"
-                className="hidden"
-                type="file"
                 accept="image/*"
+                className="hidden"
+                id="fileAdd"
+                type="file"
                 onChange={handleImageChange}
               />
               <AnimatePresence mode="wait">
                 {imagePreview && (
                   <motion.button
-                    type="button"
-                    initial={{ scale: 0, y: "-50%" }}
                     animate={{ scale: 1, y: "-50%" }}
-                    onClick={() => setOpen(true)}
                     className="absolute rounded-lg bg-lime-300 px-4 py-2 top-1/2 right-3"
+                    initial={{ scale: 0, y: "-50%" }}
+                    type="button"
+                    onClick={() => setOpen(true)}
                   >
                     View
                   </motion.button>
@@ -359,13 +366,13 @@ export default function Page() {
             <div className="bg-gray-50  w-full overflow-hidden rounded-lg border">
               {blogData.content ? (
                 <Editor
-                  onSerializedChange={(val) =>
-                    handleChange("content", JSON.stringify(val))
-                  }
                   editorSerializedState={
                     typeof blogData.content === "string"
                       ? JSON.parse(blogData.content)
                       : blogData.content
+                  }
+                  onSerializedChange={(val) =>
+                    handleChange("content", JSON.stringify(val))
                   }
                 />
               ) : null}
@@ -375,19 +382,19 @@ export default function Page() {
 
         <div className="w-full flex justify-end gap-4">
           <Button
+            className="py-6 bg-blue-600 hover:bg-blue-700 text-slate-50"
+            size="lg"
             type="button"
             onClick={handlePreview}
-            size="lg"
-            className="py-6 bg-blue-600 hover:bg-blue-700 text-slate-50"
           >
             <Eye /> Preview
           </Button>
 
           <Button
-            disabled={loading}
-            type="submit"
-            size="lg"
             className="py-6 bg-teal-700 text-slate-50 hover:bg-teal-800"
+            disabled={loading}
+            size="lg"
+            type="submit"
           >
             {loading ? (
               <span className="flex items-center gap-2">
@@ -407,14 +414,14 @@ export default function Page() {
               {typeof blogData.image === "string"
                 ? blogData.image
                 : blogData.image instanceof File
-                ? blogData.image.name
-                : ""}
+                  ? blogData.image.name
+                  : ""}
             </DialogTitle>
             {imagePreview && (
               <img
-                src={imagePreview}
                 alt="Full Preview"
                 className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                src={imagePreview}
               />
             )}
           </DialogContent>
@@ -454,8 +461,10 @@ const PreviewBlog = ({
     const wordsPerMinute = 200; // average reading speed
     const wordCount = text.trim().split(/\s+/).length;
     const minutes = Math.ceil(wordCount / wordsPerMinute);
+
     return `${minutes} min read`;
   }
+
   return (
     <div className="bg-[#eef7ff] w-full py-10 ">
       <div className="container">
@@ -503,22 +512,22 @@ const PreviewBlog = ({
 
         <div className="w-full h-[300px] lg:h-[580px] mt-12 rounded-xl overflow-hidden">
           <img
-            src={imagePreview || ""}
             alt={blog?.title}
             className="w-full h-full object-cover"
+            src={imagePreview || ""}
           />
         </div>
         <div className="max-w-5xl mx-auto ">
           <div className="mt-8 text-slate-900">
             {blog?.content ? (
               <Editor
+                readOnly
+                blogPage={true}
                 editorSerializedState={
                   typeof blog.content === "string"
                     ? JSON.parse(blog.content)
                     : null
                 }
-                readOnly
-                blogPage={true}
               />
             ) : null}
           </div>

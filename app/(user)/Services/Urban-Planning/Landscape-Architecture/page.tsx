@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   TreePalm,
   Building2,
@@ -8,10 +7,10 @@ import {
   Route,
   Landmark,
   Waves,
-  Leaf,
-  Globe,
 } from "lucide-react";
 import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function ConstructionManagementPage() {
   const principles = [
@@ -81,6 +80,7 @@ export default function ConstructionManagementPage() {
       gradient: "from-blue-600 to-blue-400",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -90,11 +90,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/landscape/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={"hero"}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={700}
+          src={"/urban-planning/landscape/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -116,20 +116,20 @@ export default function ConstructionManagementPage() {
       <section className="bg-gray-50 py-20 mt-16 px-4 md:px-10">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
+            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6"
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Our <span className="text-blue-500">Design Philosophy</span>
           </motion.h2>
           <motion.p
+            className="text-gray-600 max-w-3xl mx-auto text-lg mb-14"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-gray-600 max-w-3xl mx-auto text-lg mb-14"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             We view landscape architecture not just as a design discipline, but
             as a catalyst for social, ecological, and economic transformation.
@@ -142,19 +142,19 @@ export default function ConstructionManagementPage() {
             {principles.map((item, index) => (
               <motion.div
                 key={index}
+                className={`rounded-xl bg-blue-50 shadow-lg text-black`}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.5 }}
                 viewport={{ once: true }}
-                className={`rounded-xl bg-blue-50 shadow-lg text-black`}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 <div className=" w-full h-[230px] rounded-xl overflow-hidden bg-red-300">
                   <Image
+                    alt={""}
+                    className="w-full h-full object-cover"
+                    height={400}
                     src={item.img}
                     width={400}
-                    height={400}
-                    className="w-full h-full object-cover"
-                    alt={""}
                   />
                 </div>
                 <div className="p-5">
@@ -172,20 +172,20 @@ export default function ConstructionManagementPage() {
       <section className="py-14 bg-gradient-to-br from-blue-50 via-white to-blue-100">
         <div className="container">
           <motion.h2
+            className="text-4xl lg:text-5xl font-bold text-gray-800 text-center mb-6"
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold text-gray-800 text-center mb-6"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             <span className="text-blue-500">Services</span> We Offer
           </motion.h2>
           <motion.p
+            className="text-gray-600 max-w-3xl text-center mx-auto text-lg mb-14"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-gray-600 max-w-3xl text-center mx-auto text-lg mb-14"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             We provide a comprehensive range of landscape and urban design
             solutions that prioritize sustainability, resilience, and community
@@ -196,11 +196,11 @@ export default function ConstructionManagementPage() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
+                className={`rounded-xl shadow-md p-6 bg-blue-50`}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
                 viewport={{ once: true }}
-                className={`rounded-xl shadow-md p-6 bg-blue-50`}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 <div className="mb-4 ">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-2 text-sky-800">
@@ -217,11 +217,11 @@ export default function ConstructionManagementPage() {
           <div className="bg-white p-6 rounded-xl grid grid-cols-1 place-items-center lg:grid-cols-2 gap-5">
             <div className=" bg-blue-100 text-blue-800 h-[400px] rounded-xl w-full mb-5">
               <Image
-                src={"/urban-planning/landscape/Landscape Performance.webp"}
                 alt={""}
-                width={800}
-                height={800}
                 className="w-full h-full object-cover"
+                height={800}
+                src={"/urban-planning/landscape/Landscape Performance.webp"}
+                width={800}
               />
             </div>
             <div>
@@ -254,20 +254,20 @@ export default function ConstructionManagementPage() {
             </div>
             <div className=" bg-blue-100 text-blue-800 h-[400px] rounded-xl w-full mb-5">
               <Image
-                src={"/urban-planning/landscape/global-vision.webp"}
                 alt={""}
-                width={800}
-                height={800}
                 className="w-full h-full object-cover"
+                height={800}
+                src={"/urban-planning/landscape/global-vision.webp"}
+                width={800}
               />
             </div>
           </div>
         </div>
       </section>
       <EngineeringCTA
-        title="Let's Shape Sustainable Landscapes Together"
-        desc="Whether you’re planning a regional open space network or a small urban plaza, Al Yusr's Landscape Architecture team brings creative insight, technical rigor, and a deep understanding of place."
         btn="Contact Us Today"
+        desc="Whether you’re planning a regional open space network or a small urban plaza, Al Yusr's Landscape Architecture team brings creative insight, technical rigor, and a deep understanding of place."
+        title="Let's Shape Sustainable Landscapes Together"
       />
     </main>
   );

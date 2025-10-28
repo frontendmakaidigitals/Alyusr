@@ -8,8 +8,9 @@ import {
   Phone,
 } from "lucide-react";
 import Link from "next/link";
-import Logo from "./Logo";
 import { Printer } from "lucide-react";
+
+import Logo from "./Logo";
 const Footer = () => {
   return (
     <footer className="bg-black overflow-hidden relative">
@@ -28,13 +29,13 @@ const Footer = () => {
                 Follow Us
               </h4>
               <div className="flex space-x-4 text-slate-50">
-                <Link href="/" target="_blank" rel="noopener noreferrer">
+                <Link href="/" rel="noopener noreferrer" target="_blank">
                   <Facebook className="h-6 w-6" />
                 </Link>
-                <Link href="/" target="_blank" rel="noopener noreferrer">
+                <Link href="/" rel="noopener noreferrer" target="_blank">
                   <Instagram className="h-6 w-6" />
                 </Link>
-                <Link href="/" target="_blank" rel="noopener noreferrer">
+                <Link href="/" rel="noopener noreferrer" target="_blank">
                   <Linkedin className="h-6 w-6" />
                 </Link>
               </div>
@@ -78,7 +79,7 @@ const Footer = () => {
                   },
                 ].map(({ title, href }, i) => (
                   <li key={i}>
-                    <Link href={href} className="hover:underline">
+                    <Link className="hover:underline" href={href}>
                       {title}
                     </Link>
                   </li>
@@ -91,28 +92,28 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4">Menu</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/" className="hover:underline">
+                  <Link className="hover:underline" href="/">
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/Who-we-are/Company-Overview"
                     className="hover:underline"
+                    href="/Who-we-are/Company-Overview"
                   >
                     Who We Are
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/Why-Al-Yusr/Trusted-by-Government-and-Private-Sectors"
                     className="hover:underline"
+                    href="/Why-Al-Yusr/Trusted-by-Government-and-Private-Sectors"
                   >
                     Why Al Yusr
                   </Link>
                 </li>
                 <li>
-                  <Link href="/Services" className="hover:underline">
+                  <Link className="hover:underline" href="/Services">
                     What We Do
                   </Link>
                 </li>
@@ -124,17 +125,17 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/blogs" className="hover:underline">
+                  <Link className="hover:underline" href="/blogs">
                     Blogs
                   </Link>
                 </li>
                 <li>
-                  <Link href="/Contact" className="hover:underline">
+                  <Link className="hover:underline" href="/Contact">
                     Contact
                   </Link>
                 </li>
                 <li>
-                  <Link href="/our-presence" className="hover:underline">
+                  <Link className="hover:underline" href="/our-presence">
                     Our Presence
                   </Link>
                 </li>

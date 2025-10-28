@@ -1,9 +1,9 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { ShieldCheck, Globe2, Factory, FileCheck2 } from "lucide-react";
-
 import Image from "next/image";
 import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const features = [
     {
@@ -79,6 +79,7 @@ export default function Page() {
       img: "/Environment-Sustainability/ehs-management-consulting/Acquisitions Due.webp",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -105,11 +106,11 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
+              alt={""}
+              className="w-full h-full object-cover"
               src={
                 "/Environment-Sustainability/ehs-management-consulting/EHS Management.webp"
               }
-              className="w-full h-full object-cover"
-              alt={""}
             />
           </div>
         </div>
@@ -119,11 +120,11 @@ export default function Page() {
           {/* Left Image */}
           <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/Environment-Sustainability/ehs-management-consulting/Our Approach.webp"
               alt="Our Approach"
               className="object-cover w-full h-full"
-              width={200}
               height={200}
+              src="/Environment-Sustainability/ehs-management-consulting/Our Approach.webp"
+              width={200}
             />
           </div>
 
@@ -199,9 +200,9 @@ export default function Page() {
               >
                 <div className="bg-slate-100 w-full h-[240px]">
                   <img
-                    src={service.img}
                     alt={service.title}
                     className="w-full h-full object-cover"
+                    src={service.img}
                   />
                 </div>
                 <div className="p-6">
@@ -216,9 +217,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Partner with Al Yusr for EHS Excellence"
-        desc="With a strong presence in the region and access to a global network of regulatory and technical experts, Al Yusr is your trusted EHS consulting partner. We combine strategy, science, and compliance expertise to help organizations meet stakeholder expectations, maintain operational integrity, and protect the planet."
         btn="Contact Us Today"
+        desc="With a strong presence in the region and access to a global network of regulatory and technical experts, Al Yusr is your trusted EHS consulting partner. We combine strategy, science, and compliance expertise to help organizations meet stakeholder expectations, maintain operational integrity, and protect the planet."
+        title="Partner with Al Yusr for EHS Excellence"
       />
     </main>
   );

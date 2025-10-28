@@ -1,8 +1,9 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import Image from "next/image";
 import { Leaf, Users, Building2, Recycle, BadgeCheck } from "lucide-react";
 import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const approaches = [
     {
@@ -116,6 +117,7 @@ export default function Page() {
       desc: "We empower clients with knowledge on regulations, emerging contaminants, and sustainable practices.",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -144,9 +146,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Environment-Sustainability/land-recovery/hero.webp"}
-              className="w-full h-full object-cover"
               alt={"land recovery"}
+              className="w-full h-full object-cover"
+              src={"/Environment-Sustainability/land-recovery/hero.webp"}
             />
           </div>
         </div>
@@ -154,11 +156,11 @@ export default function Page() {
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100">
         <div className="container">
           <motion.div
+            className="text-center mb-14"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-14"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
               Our <span className="text-blue-500">Approach</span>
@@ -175,11 +177,11 @@ export default function Page() {
             {approaches.map((item, idx) => (
               <motion.div
                 key={idx}
+                className="bg-white rounded-2xl shadow-md p-5 hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.15 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-md p-5 hover:shadow-xl transition-shadow"
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {/* Icon */}
                 <div className="flex-shrink-0  p-3 bg-blue-100 rounded-xl w-fit mb-5">
@@ -212,11 +214,11 @@ export default function Page() {
               >
                 <div className="bg-slate-100 w-full h-[240px]">
                   <Image
-                    src={service.img}
-                    width={400}
-                    height={400}
                     alt={service.title}
                     className="w-full h-full object-cover"
+                    height={400}
+                    src={service.img}
+                    width={400}
                   />
                 </div>
                 <div className="p-6">
@@ -264,9 +266,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Talk About Your Project"
-        desc=" Al Yusr can help unlock the hidden potential of your contaminated sites. Contact us to discuss tailored solutions for remediation, restoration, and redevelopment."
         btn="Contact Us Today"
+        desc=" Al Yusr can help unlock the hidden potential of your contaminated sites. Contact us to discuss tailored solutions for remediation, restoration, and redevelopment."
+        title="Let’s Talk About Your Project"
       />
     </main>
   );

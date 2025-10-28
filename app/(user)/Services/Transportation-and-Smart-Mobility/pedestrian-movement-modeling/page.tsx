@@ -1,7 +1,7 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { Building, Users, Footprints } from "lucide-react";
-import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const steps = [
     {
@@ -66,6 +66,7 @@ export default function Page() {
       desc: "Assess the impact of temporary barriers or phased openings on pedestrian access.",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -92,9 +93,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/pedestrian-movement/hero.webp"}
-              className="w-full h-full object-cover"
               alt={"pedestrian movement"}
+              className="w-full h-full object-cover"
+              src={"/Transportation-mobility/pedestrian-movement/hero.webp"}
             />
           </div>
         </div>
@@ -121,9 +122,9 @@ export default function Page() {
                 className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
               >
                 <img
-                  src={step.img}
                   alt={step.title}
                   className="w-full h-48 object-cover"
+                  src={step.img}
                 />
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
@@ -159,9 +160,9 @@ export default function Page() {
                 className="relative group overflow-hidden rounded-2xl shadow-md"
               >
                 <img
-                  src={item.img}
                   alt={item.title}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  src={item.img}
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -182,9 +183,9 @@ export default function Page() {
           {/* Left: Image */}
           <div className="relative">
             <img
-              src="/Transportation-mobility/pedestrian-movement/planning.webp" // replace with your choice
               alt="Measurable Outcomes"
               className="rounded-2xl shadow-lg object-cover w-full h-[450px]"
+              src="/Transportation-mobility/pedestrian-movement/planning.webp" // replace with your choice
             />
           </div>
 
@@ -207,7 +208,7 @@ export default function Page() {
                 "Congestion Mapping",
               ].map((point, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2 rounded-full bg-blue-600"></span>
+                  <span className="w-2 h-2 mt-2 rounded-full bg-blue-600" />
                   <span>{point}</span>
                 </li>
               ))}
@@ -259,9 +260,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Need expert pedestrian planning for your next development?"
-        desc=" Contact Al Yusr today to simulate smarter movement, reduce crowd risk, and enhance the usability of your space."
         btn="Contact Us Today"
+        desc=" Contact Al Yusr today to simulate smarter movement, reduce crowd risk, and enhance the usability of your space."
+        title="Need expert pedestrian planning for your next development?"
       />
     </main>
   );

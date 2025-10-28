@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   Building2,
   AlertTriangle,
@@ -9,6 +7,8 @@ import {
   FileText,
   BadgeCheck,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function Page() {
   const capabilities = [
@@ -119,6 +119,7 @@ export default function Page() {
       desc: "Solutions built to adapt not just to today’s risks, but tomorrow’s uncertainties.",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -143,11 +144,11 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
+              alt={"climate adaptation hero"}
+              className="w-fulll h-full object-cover"
               src={
                 "/Environment-Sustainability/climate-adaptation/climate-adaptions.webp"
               }
-              className="w-fulll h-full object-cover"
-              alt={"climate adaptation hero"}
             />
           </div>
         </div>
@@ -199,9 +200,9 @@ export default function Page() {
                 className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
               >
                 <img
-                  src={service.img}
                   alt={service.title}
                   className="w-full h-[230px] lg:h-[250px] object-cover"
+                  src={service.img}
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-slate-900">
@@ -266,9 +267,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Adapt today for a safer tomorrow."
-        desc=" Partner with Al Yusr to protect your assets, people, and communities from the impacts of climate change. Let’s design resilience together."
         btn="Contact Us Today"
+        desc=" Partner with Al Yusr to protect your assets, people, and communities from the impacts of climate change. Let’s design resilience together."
+        title="Adapt today for a safer tomorrow."
       />
     </main>
   );

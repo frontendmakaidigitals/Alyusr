@@ -26,11 +26,11 @@ const WhoWeAre = ({ data, imgCard, wideCard, onNavigate }: dataProps) => {
                 {section.submenu.map((item, subIdx) => (
                   <li key={subIdx}>
                     <Link
-                      onClick={onNavigate}
-                      href={`/Who-we-are/${item.link}`}
                       className="block w-full text-center border border-blue-300 hover:bg-gradient-to-br from-[#06b6d4]
 via-[#2563eb]
 to-[#6366f1]  hover:text-white rounded-full px-4 py-2 transition"
+                      href={`/Who-we-are/${item.link}`}
+                      onClick={onNavigate}
                     >
                       {item.label}
                     </Link>
@@ -50,17 +50,17 @@ to-[#6366f1]  hover:text-white rounded-full px-4 py-2 transition"
             {wideCard.map((card, idx) => (
               <li key={idx}>
                 <Link
-                  onClick={onNavigate}
-                  href={`/Who-we-are/${card.link}`}
                   className="flex items-start gap-4 group"
+                  href={`/Who-we-are/${card.link}`}
+                  onClick={onNavigate}
                 >
                   <div className="w-[120px] h-[100px] 2xl:w-[150px] 2xl:h-[120px] overflow-hidden rounded-md bg-gray-800 shrink-0">
                     <Image
-                      src={card.img}
                       alt={card.label}
-                      width={150}
-                      height={120}
                       className="w-full h-full object-cover group-hover:scale-105 transition"
+                      height={120}
+                      src={card.img}
+                      width={150}
                     />
                   </div>
                   <div>
@@ -85,28 +85,28 @@ to-[#6366f1]  hover:text-white rounded-full px-4 py-2 transition"
               className="relative rounded-lg overflow-hidden group w-full h-[280px]"
             >
               <Image
-                src={img.img}
                 alt={img.button}
-                width={700}
-                height={600}
                 className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                height={600}
+                src={img.img}
+                width={700}
               />
 
               {img.action === "download" ? (
                 <a
-                  onClick={onNavigate}
-                  href={"/brochure/brochure.pdf"}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white whitespace-nowrap text-sm font-medium px-5 py-2 rounded-full border border-black shadow-md"
+                  href={"/brochure/brochure.pdf"}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  onClick={onNavigate}
                 >
                   {img.button}
                 </a>
               ) : (
                 <Link
-                  onClick={onNavigate}
-                  href="/Contact"
                   className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white whitespace-nowrap text-sm font-medium px-5 py-2 rounded-full border border-black shadow-md"
+                  href="/Contact"
+                  onClick={onNavigate}
                 >
                   {img.button}
                 </Link>

@@ -1,10 +1,15 @@
 "use client";
 import { FormEvent, useState } from "react";
+import { DialogTitle } from "@radix-ui/react-dialog";
+import { AnimatePresence, motion } from "motion/react";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
+import { Eye, Upload, User, Facebook, Twitter } from "lucide-react";
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import Spinner from "@/app/(user)/app_chunks/spinner";
-
 import {
   Select,
   SelectItem,
@@ -12,12 +17,7 @@ import {
   SelectValue,
   SelectContent,
 } from "@/components/ui/select";
-import { DialogTitle } from "@radix-ui/react-dialog";
-import { AnimatePresence, motion } from "motion/react";
 import { Editor } from "@/components/blocks/editor-00/editor";
-import { toast } from "sonner";
-import { useRouter } from "next/navigation";
-import { Eye, Upload, User, Facebook, Twitter } from "lucide-react";
 import { Label } from "@/components/ui/label";
 export default function AddBlogPage() {
   const router = useRouter();
@@ -71,7 +71,7 @@ export default function AddBlogPage() {
 
   const handleChange = (
     key: keyof typeof blogData,
-    value: string | File | null
+    value: string | File | null,
   ) => {
     setBlogData((prev) => ({
       ...prev,
@@ -81,6 +81,7 @@ export default function AddBlogPage() {
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
+
     if (file) {
       handleChange("image", file);
       setImagePreview(URL.createObjectURL(file));
@@ -101,11 +102,13 @@ export default function AddBlogPage() {
       ) {
         toast.error("Please fill in all fields and upload an image.");
         setLoading(false);
+
         return;
       }
 
       // Build FormData for file + text fields
       const formData = new FormData();
+
       formData.append("title", blogData.title);
       formData.append("metaTitle", blogData.metaTitle);
       formData.append("metaDesc", blogData.metaDesc);
@@ -154,10 +157,12 @@ export default function AddBlogPage() {
       !blogData.author
     ) {
       toast.error("Something went wrong");
+
       return;
     }
     setShowPreview(true);
   };
+
   return (
     <div className="pb-10">
       <h1 className="text-2xl font-semibold">Add New Blog</h1>
@@ -173,12 +178,12 @@ export default function AddBlogPage() {
               Blog Title
             </Label>
             <Input
+              className="h-12"
               id={"blogTitle"}
               name={"blogTitle"}
               placeholder="Blog Title"
               value={blogData.title}
               onChange={(e) => handleChange("title", e.target.value)}
-              className="h-12"
             />
           </div>
           <div>
@@ -189,12 +194,12 @@ export default function AddBlogPage() {
               Meta Title
             </Label>
             <Input
+              className="h-12"
               id={"metaTitle"}
               name={"metaTitle"}
               placeholder="Meta Title"
               value={blogData.metaTitle}
               onChange={(e) => handleChange("metaTitle", e.target.value)}
-              className="h-12"
             />
           </div>
           <div>
@@ -205,12 +210,12 @@ export default function AddBlogPage() {
               Meta Description
             </Label>
             <Input
+              className="h-12"
               id={"metaDesc"}
               name={"metaDesc"}
               placeholder="Meta Description"
               value={blogData.metaDesc}
               onChange={(e) => handleChange("metaDesc", e.target.value)}
-              className="h-12"
             />
           </div>
           <div>
@@ -221,19 +226,19 @@ export default function AddBlogPage() {
               Author
             </Label>
             <Input
-              name={"author"}
+              className="h-12" //
               id={"author"}
+              name={"author"}
               placeholder="Author"
               value={blogData.author}
-              className="h-12" //
               onChange={(e) => handleChange("author", e.target.value)}
             />
           </div>
 
           <div>
             <Label
-              htmlFor="category"
               className="block text-sm font-medium mb-[6px]"
+              htmlFor="category"
             >
               Select Category
             </Label>
@@ -242,9 +247,9 @@ export default function AddBlogPage() {
               onValueChange={(value) => handleChange("category", value)}
             >
               <SelectTrigger
-                name={"category"}
-                id={"category"}
                 className="!h-12 w-full"
+                id={"category"}
+                name={"category"}
               >
                 <SelectValue placeholder="Select category" />
               </SelectTrigger>
@@ -261,34 +266,34 @@ export default function AddBlogPage() {
 
           <div>
             <Label
-              htmlFor="fileAdd"
               className="block text-sm font-medium mb-[6px]"
+              htmlFor="fileAdd"
             >
               Image
             </Label>
             <div className="relative flex items-center border border-gray-100 shadow gap-3 line-clamp-1 bg-white w-full px-3 py-[.22rem] rounded-lg">
               <label
-                htmlFor="fileAdd"
                 className="px-3 rounded-md py-[.45rem] bg-blue-500 text-slate-50 cursor-pointer"
+                htmlFor="fileAdd"
               >
                 Choose
               </label>
               <p className="max-w-xs">{blogData.image?.name}</p>
               <Input
-                id="fileAdd"
-                className="hidden"
-                type="file"
                 accept="image/*"
+                className="hidden"
+                id="fileAdd"
+                type="file"
                 onChange={handleImageChange}
               />
               <AnimatePresence mode="wait">
                 {imagePreview && (
                   <motion.button
-                    type="button"
-                    initial={{ scale: 0, y: "-50%" }}
                     animate={{ scale: 1, y: "-50%" }}
-                    onClick={() => setOpen(true)}
                     className="absolute rounded-lg bg-lime-300 px-4 py-2 top-1/2 right-3"
+                    initial={{ scale: 0, y: "-50%" }}
+                    type="button"
+                    onClick={() => setOpen(true)}
                   >
                     View
                   </motion.button>
@@ -310,19 +315,19 @@ export default function AddBlogPage() {
 
         <div className="w-full flex justify-end gap-4">
           <Button
+            className="py-6 bg-blue-600 hover:bg-blue-700 text-slate-50"
+            size="lg"
             type="button"
             onClick={handlePreview}
-            size="lg"
-            className="py-6 bg-blue-600 hover:bg-blue-700 text-slate-50"
           >
             <Eye /> Preview
           </Button>
 
           <Button
-            disabled={loading}
-            type="submit"
-            size="lg"
             className="py-6 bg-teal-700 text-slate-50 hover:bg-teal-800"
+            disabled={loading}
+            size="lg"
+            type="submit"
           >
             {loading ? (
               <span className="flex items-center gap-2">
@@ -341,9 +346,9 @@ export default function AddBlogPage() {
             <DialogTitle>{blogData.image?.name}</DialogTitle>
             {imagePreview && (
               <img
-                src={imagePreview}
                 alt="Full Preview"
                 className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                src={imagePreview}
               />
             )}
           </DialogContent>
@@ -379,8 +384,10 @@ const PreviewBlog = ({
     const wordsPerMinute = 200; // average reading speed
     const wordCount = text.trim().split(/\s+/).length;
     const minutes = Math.ceil(wordCount / wordsPerMinute);
+
     return `${minutes} min read`;
   }
+
   return (
     <div className="bg-[#eef7ff] py-10 ">
       {/* Hero Section */}
@@ -429,22 +436,22 @@ const PreviewBlog = ({
 
         <div className="w-full h-[580px] mt-12 rounded-xl overflow-hidden">
           <img
-            src={imagePreview || ""}
             alt={blog?.title}
             className="w-full h-full object-cover"
+            src={imagePreview || ""}
           />
         </div>
         <div className="max-w-5xl mx-auto text-slate-900 ">
           <div className="mt-8">
             {blog?.content ? (
               <Editor
+                readOnly
+                blogPage={true}
                 editorSerializedState={
                   typeof blog.content === "string"
                     ? JSON.parse(blog.content)
                     : null
                 }
-                readOnly
-                blogPage={true}
               />
             ) : null}
           </div>

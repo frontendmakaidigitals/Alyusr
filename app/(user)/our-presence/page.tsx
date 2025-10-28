@@ -1,9 +1,10 @@
 "use client";
 import { useRef, useEffect } from "react";
 import Image from "next/image";
-import EngineeringCTA from "../app_chunks/CTA";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import EngineeringCTA from "../app_chunks/CTA";
 import "@/app/globals.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -58,11 +59,11 @@ export default function OurPresence() {
 
       <section className="h-[500px] w-full">
         <Image
-          width={900}
-          height={400}
-          src="https://images.pexels.com/photos/335394/pexels-photo-335394.jpeg"
           alt=""
           className="w-full h-full object-cover"
+          height={400}
+          src="https://images.pexels.com/photos/335394/pexels-photo-335394.jpeg"
+          width={900}
         />
       </section>
 
@@ -81,17 +82,17 @@ export default function OurPresence() {
       <div className="container grid grid-cols-1 mt-16">
         {offices.map((office, idx) => (
           <OfficeCard
-            length={offices.length}
             key={office.country}
-            office={office}
             idx={idx}
+            length={offices.length}
+            office={office}
           />
         ))}
       </div>
 
       <EngineeringCTA
-        title="Partner With Us, Wherever You Are"
         desc="From the Middle East to Europe and beyond, our teams are ready to deliver innovative, sustainable, and future-ready engineering solutions tailored to your market."
+        title="Partner With Us, Wherever You Are"
       />
     </section>
   );
@@ -110,9 +111,11 @@ function OfficeCard({
 
   useEffect(() => {
     const wrapper = wrapperRef.current;
+
     if (!wrapper) return;
 
     const img = wrapper.querySelector<HTMLImageElement>("img.img-project");
+
     if (!img) return;
 
     // Ensure image is hidden until reveal starts
@@ -150,8 +153,10 @@ function OfficeCard({
     wrapper.style.position = "relative";
 
     const masks: HTMLDivElement[] = [];
+
     for (let i = 0; i < 9; i++) {
       const mask = document.createElement("div");
+
       mask.className = "mask-tile";
       Object.assign(mask.style, {
         position: "absolute",
@@ -189,10 +194,11 @@ function OfficeCard({
       img,
       { scale: 1.08 },
       { scale: 1, duration: 0.4, ease: "power3.out" },
-      0
+      0,
     );
 
     const order = [[0], [1, 3], [2, 4, 6], [5, 7], [8]];
+
     order.forEach((group, i) => {
       tl.to(
         group.map((idx) => masks[idx]),
@@ -202,7 +208,7 @@ function OfficeCard({
           duration: 0.9,
           stagger: 0.06,
         },
-        i * 0.18
+        i * 0.18,
       );
     });
 
@@ -227,11 +233,11 @@ function OfficeCard({
         }`}
       >
         <Image
-          src={office.img}
-          alt={office.country}
           fill
+          alt={office.country}
           className="img-project object-cover w-full h-full"
           data-animate="true"
+          src={office.img}
         />
       </div>
 

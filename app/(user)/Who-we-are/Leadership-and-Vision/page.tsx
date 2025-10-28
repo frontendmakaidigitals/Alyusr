@@ -2,16 +2,17 @@
 
 import {
   Building2,
-  Users,
   Compass,
   Globe,
   Brain,
   TreeDeciduous,
   Network,
 } from "lucide-react";
-import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+
+import BgLayer from "../../app_chunks/BgLayer";
+
 import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
@@ -20,22 +21,24 @@ export default function Page() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
+
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "60vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-2xl  text-slate-50">
@@ -48,10 +51,10 @@ export default function Page() {
         </div>
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
-          style={{ y: yTransform }}
+          alt="ALYUSR Engineering Hero Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
           src="/Leadership-Vision 2/banner.webp"
-          alt="ALYUSR Engineering Hero Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
 
@@ -79,9 +82,9 @@ export default function Page() {
           </div>
           <div className="rounded-xl h-[260px] lg:h-[450px] overflow-hidden">
             <img
-              src="/our-ethics.jpg"
               alt="Leadership at ALYUSR"
               className="w-full h-full object-cover"
+              src="/our-ethics.jpg"
             />
           </div>
         </div>
@@ -93,9 +96,9 @@ export default function Page() {
           <div>
             <div className="rounded-xl mb-4 h-[350px] overflow-hidden">
               <img
-                src="/Leadership-Vision 2/leadership.webp"
                 alt="Leadership at ALYUSR"
                 className="w-full h-full object-cover"
+                src="/Leadership-Vision 2/leadership.webp"
               />
             </div>
             <h3 className="text-3xl font-semibold text-gray-800 mb-3">
@@ -111,9 +114,9 @@ export default function Page() {
           <div>
             <div className="rounded-xl h-[350px] mb-4 overflow-hidden">
               <img
-                src="/Leadership-Vision 2/mission.webp"
                 alt="Leadership at ALYUSR"
                 className="w-full h-full object-cover"
+                src="/Leadership-Vision 2/mission.webp"
               />
             </div>
             <h3 className="text-3xl font-semibold text-gray-800 mb-3">
@@ -159,9 +162,9 @@ export default function Page() {
           {/* RIGHT IMAGE BLOCK */}
           <div className="relative h-[400px] w-full rounded-xl overflow-hidden shadow-xl">
             <img
-              src="/Leadership-Vision 2/vision 2030.webp"
               alt="Vision 2030 Project"
               className="w-full h-full object-cover object-center"
+              src="/Leadership-Vision 2/vision 2030.webp"
             />
           </div>
         </div>
@@ -226,8 +229,8 @@ export default function Page() {
       </section>
 
       <EngineeringCTA
-        title="Nationwide Impact"
         desc="From Riyadh to NEOM, and from the Eastern Province to Tabuk, ALYUSR is helping reshape the Kingdom’s landscape, one project at a time. We partner with both public and private sector entities to deliver value, reduce environmental impact, and create long-lasting infrastructure for generations to come."
+        title="Nationwide Impact"
       />
     </div>
   );

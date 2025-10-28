@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
-import BgLayer from "./BgLayer";
 import Link from "next/link";
+
+import BgLayer from "./BgLayer";
 export default function EngineeringCTA({
   title,
   desc,
@@ -31,7 +32,10 @@ export default function EngineeringCTA({
             {desc}
           </p>
 
-          <Link href={'/Contact'} className="inline-flex items-center gap-2 bg-white text-sky-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-sky-100 transition duration-300">
+          <Link
+            className="inline-flex items-center gap-2 bg-white text-sky-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-sky-100 transition duration-300"
+            href={"/Contact"}
+          >
             {btn}
             <ArrowRight className="w-5 h-5" />
           </Link>
@@ -39,7 +43,6 @@ export default function EngineeringCTA({
 
         {/* Decorative Circles */}
       </div>
-     
     </section>
   );
 }

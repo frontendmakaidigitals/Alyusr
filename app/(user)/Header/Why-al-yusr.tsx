@@ -21,9 +21,9 @@ const WhyAlYusr = ({ data, tabs, onNavigate }: dataProps) => {
       <div className="lg:flex hidden  flex-col items-start space-y-4 pr-5 border-r border-slate-200/40">
         <div className=" w-[300px] h-[270px]">
           <img
-            src="https://images.pexels.com/photos/5686514/pexels-photo-5686514.jpeg"
             alt="Cityscape"
             className="w-full h-full object-cover rounded"
+            src="https://images.pexels.com/photos/5686514/pexels-photo-5686514.jpeg"
           />
         </div>
 
@@ -31,9 +31,9 @@ const WhyAlYusr = ({ data, tabs, onNavigate }: dataProps) => {
 
         <div className="flex items-center gap-3">
           <Link
+            className="bg-amber-200 text-black px-4 py-1.5 font-medium rounded"
             href={"/Contact"}
             onClick={onNavigate}
-            className="bg-amber-200 text-black px-4 py-1.5 font-medium rounded"
           >
             Contact us
           </Link>
@@ -55,17 +55,17 @@ const WhyAlYusr = ({ data, tabs, onNavigate }: dataProps) => {
           {data.map((item, idx) => (
             <Link
               key={idx}
-              onClick={onNavigate}
-              href={`/Why-Al-Yusr/${item.link}`}
               className="flex items-start gap-3"
+              href={`/Why-Al-Yusr/${item.link}`}
+              onClick={onNavigate}
             >
               <div className="w-[100px] h-[70px] rounded overflow-hidden flex-shrink-0">
                 <Image
-                  src={item.img}
                   alt={item.label}
-                  width={100}
-                  height={70}
                   className="w-full h-full object-cover"
+                  height={70}
+                  src={item.img}
+                  width={100}
                 />
               </div>
               <div>
@@ -81,9 +81,9 @@ const WhyAlYusr = ({ data, tabs, onNavigate }: dataProps) => {
             {tabs.map((tab, idx) => (
               <Link
                 key={idx}
-                onClick={onNavigate}
-                href={tab.link}
                 className="border text-blue-300 border-blue-200/60 rounded-full px-5 py-[.7rem] lg:px-4 lg:py-1 text-sm"
+                href={tab.link}
+                onClick={onNavigate}
               >
                 {tab.label}
               </Link>

@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { motion } from "framer-motion";
 import {
   ShieldCheck,
@@ -10,6 +9,8 @@ import {
   Star,
   BadgeCheck,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function ConstructionManagementPage() {
   const markets = [
@@ -95,11 +96,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/SCII/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/Engineering-Infrastructure/SCII/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -135,9 +136,9 @@ export default function ConstructionManagementPage() {
           </div>
           <div className="h-[400px] w-full ">
             <img
-              src={"/Engineering-Infrastructure/SCII/about.webp"}
               alt={""}
               className="w-full h-full object-cover"
+              src={"/Engineering-Infrastructure/SCII/about.webp"}
             />
           </div>
         </div>
@@ -146,10 +147,10 @@ export default function ConstructionManagementPage() {
       <section className="bg-gray-100 py-20">
         <div className="text-center container mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="text-4xl lg:text-5xl font-bold mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.6 }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             <span className="text-blue-500">Markets</span> We Serve
           </motion.h2>
@@ -161,13 +162,14 @@ export default function ConstructionManagementPage() {
         <div className="space-y-16 container">
           {markets.map((item, index) => {
             const isEven = index % 2 === 0; // 0-based index
+
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
                 className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 rounded-2xl text-black"
+                initial={{ opacity: 0, y: 40 }}
+                transition={{ duration: 0.5 }}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {/* Image column */}
                 <div
@@ -176,9 +178,9 @@ export default function ConstructionManagementPage() {
                   }`}
                 >
                   <img
-                    src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover"
+                    src={item.image}
                   />
                 </div>
 
@@ -213,12 +215,13 @@ export default function ConstructionManagementPage() {
           <div className="grid gap-8 grid-cols-1 lg:grid-cols-4">
             {features.map((item, index) => {
               const Icon = item.icon;
+
               return (
                 <motion.div
                   key={index}
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 100 }}
                   className="bg-white rounded-2xl p-6 shadow-md border border-blue-100"
+                  transition={{ type: "spring", stiffness: 100 }}
+                  whileHover={{ y: -6 }}
                 >
                   <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-800 rounded-full mb-4">
                     <Icon className="w-6 h-6" />
@@ -234,9 +237,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Built to Power Progress"
-        desc="Whether we're energizing a new transit corridor, upgrading bridge control systems, or supporting water utility modernization, SCCI Electric is committed to powering progress through safe, smart, and sustainable electrical solutions."
         btn="Contact Us Today"
+        desc="Whether we're energizing a new transit corridor, upgrading bridge control systems, or supporting water utility modernization, SCCI Electric is committed to powering progress through safe, smart, and sustainable electrical solutions."
+        title="Built to Power Progress"
       />
     </main>
   );

@@ -1,6 +1,5 @@
 "use client";
 
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   Users,
   Map,
@@ -21,7 +20,8 @@ import {
   FileText,
   Layers,
 } from "lucide-react";
-import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const features = [
     {
@@ -168,11 +168,11 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
+              alt={""}
+              className="w-full h-full object-cover"
               src={
                 "/Transportation-mobility/pedestrian-flow-analysis/hero.webp"
               }
-              className="w-full h-full object-cover"
-              alt={""}
             />
           </div>
         </div>
@@ -217,11 +217,11 @@ export default function Page() {
             {/* Image / Illustration */}
             <div className="w-full h-[400px] bg-slate-100 rounded-lg">
               <img
+                alt={""}
+                className="w-full h-full object-cover"
                 src={
                   "/Transportation-mobility/pedestrian-flow-analysis/Pedestrian Flow Analysis.webp"
                 }
-                className="w-full h-full object-cover"
-                alt={""}
               />
             </div>
           </div>
@@ -305,9 +305,9 @@ export default function Page() {
           {/* Image */}
           <div>
             <img
-              src="/Transportation-mobility/pedestrian-flow-analysis/why-choose.webp"
               alt="Why Choose Al Yusr"
               className="rounded-2xl shadow-lg w-full h-[450px] object-cover"
+              src="/Transportation-mobility/pedestrian-flow-analysis/why-choose.webp"
             />
           </div>
         </div>
@@ -338,9 +338,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Shaping Smarter, Safer Communities"
-        desc="At Al Yusr, our Geo-Intelligence & Analysis services are more than just maps; they are powerful decision-making tools that help our clients create sustainable, secure, and future-ready environments."
         btn="Contact Us Today"
+        desc="At Al Yusr, our Geo-Intelligence & Analysis services are more than just maps; they are powerful decision-making tools that help our clients create sustainable, secure, and future-ready environments."
+        title="Shaping Smarter, Safer Communities"
       />
     </main>
   );

@@ -19,6 +19,7 @@ const BlogListPage = () => {
   }
 
   const [blogs, setBlogs] = useState<Blog[]>([]);
+
   type BlogsResponse = {
     blogs: Blog[];
   };
@@ -26,8 +27,10 @@ const BlogListPage = () => {
     const fetchBlogs = async () => {
       try {
         const res = await fetch("/api/blogs");
+
         if (!res.ok) throw new Error("Failed to fetch blogs");
         const data: BlogsResponse = await res.json();
+
         setBlogs(data.blogs);
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -39,8 +42,9 @@ const BlogListPage = () => {
 
   const handleDeleteBlog = async (id: string) => {
     const confirmDelete = window.confirm(
-      "Are you sure you want to delete this blog?"
+      "Are you sure you want to delete this blog?",
     );
+
     if (!confirmDelete) return;
 
     try {
@@ -62,22 +66,22 @@ const BlogListPage = () => {
     <div>
       <div className="fixed bottom-5 right-5">
         <motion.button
+          animate={{ width: isHovered ? "7.8rem" : "3rem" }}
+          className="h-12 group bg-lime-500 hover:bg-lime-600 rounded-full flex justify-center items-center gap-2"
           onClick={() => router.push("/dashboard/Blogs/add")}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          animate={{ width: isHovered ? "7.8rem" : "3rem" }}
-          className="h-12 group bg-lime-500 hover:bg-lime-600 rounded-full flex justify-center items-center gap-2"
         >
           <Plus />
           {isHovered && (
             <motion.span
-              initial={{ opacity: 0, x: 10 }}
               animate={{
                 opacity: 1,
                 x: 0,
                 transition: { delay: 0.2, duration: 0.2 },
               }}
               exit={{ opacity: 0, x: 10 }}
+              initial={{ opacity: 0, x: 10 }}
             >
               Add blog
             </motion.span>
@@ -105,9 +109,9 @@ const BlogListPage = () => {
                 <tr key={blog.id} className="border-t hover:bg-gray-50">
                   <td className="px-6 py-4">
                     <img
-                      src={`/api/uploads/${blog.image}`}
                       alt={blog.title}
                       className="w-16 h-16 object-cover rounded"
+                      src={`/api/uploads/${blog.image}`}
                     />
                   </td>
                   <td className="px-6 py-4 font-medium">{blog.title}</td>
@@ -123,16 +127,16 @@ const BlogListPage = () => {
                   <td className="px-6 py-4">
                     <div className="flex flex-wrap gap-2">
                       <button
+                        className="px-3 py-1 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 rounded"
                         onClick={() =>
                           router.push(`/dashboard/Blogs/edit/${blog.id}`)
                         }
-                        className="px-3 py-1 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 rounded"
                       >
                         Edit
                       </button>
                       <button
-                        onClick={() => handleDeleteBlog(blog.id)}
                         className="px-3 py-1 text-xs font-medium text-white bg-red-600 hover:bg-red-700 rounded"
+                        onClick={() => handleDeleteBlog(blog.id)}
                       >
                         Delete
                       </button>
@@ -142,7 +146,10 @@ const BlogListPage = () => {
               ))
             ) : (
               <tr>
-                <td colSpan={6} className="text-center text-lg p-6 text-slate-500">
+                <td
+                  className="text-center text-lg p-6 text-slate-500"
+                  colSpan={6}
+                >
                   No Blogs found
                 </td>
               </tr>

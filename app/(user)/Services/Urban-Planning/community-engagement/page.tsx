@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { motion } from "framer-motion";
 import {
   Users2,
@@ -15,6 +14,8 @@ import {
   Handshake,
   BadgeCheck,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const capabilities = [
     {
@@ -85,11 +86,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] overflow-hidden">
         <Image
-          src={"/urban-planning/community-engagement/hero.webp"}
-          className="w-full h-full object-cover object-top "
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-top "
           height={800}
+          src={"/urban-planning/community-engagement/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -135,13 +136,13 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 ">
             <Image
+              alt={""}
+              className="w-full h-full object-cover"
+              height={500}
               src={
                 "/urban-planning/community-engagement/Empowering Places.webp"
               }
-              alt={""}
               width={500}
-              height={500}
-              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -150,22 +151,22 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-4">
           {/* Heading */}
           <motion.h2
+            className="text-3xl md:text-4xl font-bold text-center mb-4"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center mb-4"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Our Capabilities at a Glance
           </motion.h2>
 
           {/* Intro Paragraph */}
           <motion.p
+            className="text-center text-gray-600 max-w-3xl mx-auto mb-12"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-center text-gray-600 max-w-3xl mx-auto mb-12"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Our team blends creativity with strategy to engage diverse
             communities effectively. We collaborate with public agencies,
@@ -177,14 +178,15 @@ export default function Page() {
           <div className="grid gap-8 grid-cols-1 lg:grid-cols-4">
             {capabilities.map((cap, index) => {
               const Icon = cap.icon;
+
               return (
                 <motion.div
                   key={index}
+                  className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col items-center text-center"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col items-center text-center"
+                  whileInView={{ opacity: 1, y: 0 }}
                 >
                   <div className="bg-blue-100 text-blue-600 p-4 rounded-full mb-4">
                     <Icon size={32} />
@@ -201,12 +203,12 @@ export default function Page() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
           <div className="relative bg-green-400 w-full h-[400px] rounded-2xl overflow-hidden shadow-lg">
             <Image
+              fill
+              alt="Innovating Engagement"
+              className="w-full h-full object-cover"
               src={
                 "/urban-planning/community-engagement/innovative-engagement.webp"
               }
-              alt="Innovating Engagement"
-              className="w-full h-full object-cover"
-              fill
             />
           </div>
           <div className="space-y-6">
@@ -276,9 +278,9 @@ export default function Page() {
       </section>
 
       <EngineeringCTA
-        title="Let’s Build with the Community, Not Around It"
-        desc="If you’re planning a project that touches people’s lives, make sure their voices are part of the process from the start. At Al Yusr, we turn engagement into impact, helping clients gain insight, build consensus, and deliver with purpose."
         btn="Contact Us Today"
+        desc="If you’re planning a project that touches people’s lives, make sure their voices are part of the process from the start. At Al Yusr, we turn engagement into impact, helping clients gain insight, build consensus, and deliver with purpose."
+        title="Let’s Build with the Community, Not Around It"
       />
     </main>
   );

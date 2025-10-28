@@ -1,9 +1,8 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { useState } from "react";
 import { Building2, Network, Award, Lightbulb, Layers } from "lucide-react";
 
-import { motion } from "motion/react";
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const sections = [
@@ -48,6 +47,7 @@ export default function Page() {
       ],
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -74,9 +74,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/public-private/hero.webp"}
-              className="object-cover w-full h-full "
               alt={""}
+              className="object-cover w-full h-full "
+              src={"/Transportation-mobility/public-private/hero.webp"}
             />
           </div>
         </div>
@@ -86,9 +86,9 @@ export default function Page() {
           {/* Left Image */}
           <div className="w-full h-[450px] bg-slate-100">
             <img
-              src="/Transportation-mobility/public-private/exp.webp" // replace with your image path
               alt="Our Experience"
               className="w-full h-full object-cover"
+              src="/Transportation-mobility/public-private/exp.webp" // replace with your image path
             />
           </div>
 
@@ -292,9 +292,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Delivering Value Through Collaboration"
-        desc="A successful P3 is more than a contract; it’s a long-term relationship built on trust, shared goals, and clear accountability. At Al Yusr, we act as a bridge between public vision and private capability, ensuring every partnership results in infrastructure that is financially viable, socially impactful, and built to last."
         btn="Contact Us Today"
+        desc="A successful P3 is more than a contract; it’s a long-term relationship built on trust, shared goals, and clear accountability. At Al Yusr, we act as a bridge between public vision and private capability, ensuring every partnership results in infrastructure that is financially viable, socially impactful, and built to last."
+        title="Delivering Value Through Collaboration"
       />
     </main>
   );

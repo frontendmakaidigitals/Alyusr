@@ -1,15 +1,16 @@
 "use client";
 import { ArrowLeft, ArrowRight, MoveUpRight } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { motion } from "motion/react";
-import Image from "next/image";
-import Link from "next/link";
 import { Editor } from "@/components/blocks/editor-00/editor";
 
 const Blogs = () => {
@@ -47,14 +48,17 @@ const Blogs = () => {
     const fetchBlogs = async () => {
       try {
         const res = await fetch("/api/blogs");
+
         if (!res.ok) throw new Error("Failed to fetch blogs");
 
         const data = await res.json();
+
         setBlogs(data.blogs || []);
       } catch (error) {
         console.error("Error fetching blogs:", error);
       }
     };
+
     fetchBlogs();
   }, []);
 
@@ -67,9 +71,9 @@ const Blogs = () => {
           </motion.h1>
 
           <Carousel
+            className="w-full mt-12"
             opts={{ align: "start" }}
             setApi={setApi}
-            className="w-full mt-12"
           >
             <CarouselContent className="-ml-4">
               {blogs.map((blog, index) => (
@@ -82,11 +86,11 @@ const Blogs = () => {
                       <div className="absolute inset-0 bg-black/20 z-10" />
                       {blog.image && (
                         <Image
-                          src={`/api/uploads/${blog.image}`}
                           alt={blog.title}
-                          width={600}
-                          height={400}
                           className="w-full h-full object-cover"
+                          height={400}
+                          src={`/api/uploads/${blog.image}`}
+                          width={600}
                         />
                       )}
                     </div>
@@ -100,14 +104,14 @@ const Blogs = () => {
                       <div className="mt-1 text-sm text-gray-600">
                         {blog.content ? (
                           <Editor
+                            readOnly
+                            blogPage={false}
+                            clampLines={2}
                             editorSerializedState={
                               typeof blog.content === "string"
                                 ? JSON.parse(blog.content)
                                 : blog.content
                             }
-                            readOnly
-                            clampLines={2}
-                            blogPage={false}
                           />
                         ) : null}
                       </div>
@@ -124,7 +128,7 @@ const Blogs = () => {
                   </div>
                   <Link
                     href={`/blogs/${encodeURIComponent(
-                      blog.title.toLowerCase().replace(/\s+/g, "-")
+                      blog.title.toLowerCase().replace(/\s+/g, "-"),
                     )}`}
                   >
                     <button className="absolute right-4 bottom-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg p-2">
@@ -137,16 +141,16 @@ const Blogs = () => {
           </Carousel>
           <div className="mt-7 lg:mt-0 flex justify-end gap-2">
             <button
+              className="bg-blue-500 disabled:bg-slate-400 text-white p-2 rounded-full"
               disabled={!canScrollPrev}
               onClick={() => api?.scrollPrev()}
-              className="bg-blue-500 disabled:bg-slate-400 text-white p-2 rounded-full"
             >
               <ArrowLeft />
             </button>
             <button
+              className="bg-blue-500 disabled:bg-slate-400 text-white p-2 rounded-full"
               disabled={!canScrollNext}
               onClick={() => api?.scrollNext()}
-              className="bg-blue-500 disabled:bg-slate-400 text-white p-2 rounded-full"
             >
               <ArrowRight />
             </button>

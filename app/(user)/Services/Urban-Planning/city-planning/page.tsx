@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   Building2,
   Star,
@@ -10,8 +9,9 @@ import {
   Handshake,
   BadgeCheck,
 } from "lucide-react";
-
 import { Map, Leaf, Network, TreePine } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function ConstructionManagementPage() {
   const planningData = [
     {
@@ -120,12 +120,12 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/city-planning/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={"City planning Hero"}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={400}
           loading="lazy"
+          src={"/urban-planning/city-planning/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -161,15 +161,16 @@ export default function ConstructionManagementPage() {
         <div className="grid container grid-cols-1 lg:grid-cols-3 gap-10">
           {planningData.map((item, index) => {
             const Icon = item.icon;
+
             return (
               <div key={index} className="bg-white rounded-lg  overflow-hidden">
                 {/* Top image */}
                 <div className="relative h-[300px] bg-slate-100 w-full">
                   <Image
-                    src={item.image}
-                    alt={item.title}
                     fill
+                    alt={item.title}
                     className="object-cover"
+                    src={item.image}
                   />
                   <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full absolute bottom-0 translate-y-1/2 left-6">
                     <Icon className="text-blue-600 w-6 h-6" />
@@ -214,11 +215,11 @@ export default function ConstructionManagementPage() {
             >
               <div className="relative bg-slate-100 w-full h-56">
                 <Image
-                  src={item.image}
                   alt={item.title}
                   className=" w-full h-full object-cover"
-                  width={500}
                   height={500}
+                  src={item.image}
+                  width={500}
                 />
               </div>
               <div className="p-5 space-y-3">
@@ -266,9 +267,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Ready to Plan the Cities of the Future?"
-        desc="Contact Al Yusr today to learn how we can help you plan, design, and deliver your next urban development or regeneration project. Together, we can build smarter, more resilient cities for generations to come."
         btn="Contact Us Today"
+        desc="Contact Al Yusr today to learn how we can help you plan, design, and deliver your next urban development or regeneration project. Together, we can build smarter, more resilient cities for generations to come."
+        title="Ready to Plan the Cities of the Future?"
       />
     </main>
   );

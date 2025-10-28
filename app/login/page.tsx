@@ -2,12 +2,15 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+
+import BgLayer from "../(user)/app_chunks/BgLayer";
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import BgLayer from "../(user)/app_chunks/BgLayer";
 const validEmail = "admin";
 const validPassword = "12345678";
+
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -33,14 +36,14 @@ export default function LoginPage() {
       <BgLayer />
       <img
         alt={""}
+        className="opacity-[.7] w-full absolute h-full object-cover inset-0 "
         src={
           "https://images.unsplash.com/photo-1524234599372-a5bd0194758d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
-        className="opacity-[.7] w-full absolute h-full object-cover inset-0 "
       />
       <form
-        onSubmit={handleLogin}
         className="w-full border border-slate-100 max-w-md relative z-20 bg-white backdrop-filter backdrop-blur-lg p-8 rounded-lg "
+        onSubmit={handleLogin}
       >
         <h1 className="text-3xl text-dimondra-black font-semibold mb-10 text-start">
           Admin Login
@@ -53,20 +56,20 @@ export default function LoginPage() {
         <div>
           <Label>Email</Label>
           <Input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
             required
             className="bg-slate-100 mt-2"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="mt-5">
           <Label>Password</Label>
           <Input
-            type="password"
+            required
             className="bg-slate-100 mt-2"
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
         </div>
         <Button

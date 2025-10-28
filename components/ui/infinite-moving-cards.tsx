@@ -1,7 +1,8 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+
+import { cn } from "@/lib/utils";
 
 export const InfiniteMovingCards = ({
   items,
@@ -31,12 +32,14 @@ export const InfiniteMovingCards = ({
     addAnimation();
   }, []);
   const [start, setStart] = useState(false);
+
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
+
         if (scrollerRef.current) {
           scrollerRef.current.appendChild(duplicatedItem);
         }
@@ -52,12 +55,12 @@ export const InfiniteMovingCards = ({
       if (direction === "left") {
         containerRef.current.style.setProperty(
           "--animation-direction",
-          "forwards"
+          "forwards",
         );
       } else {
         containerRef.current.style.setProperty(
           "--animation-direction",
-          "reverse"
+          "reverse",
         );
       }
     }
@@ -73,12 +76,13 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   return (
     <div
       ref={containerRef}
       className={cn(
         "scroller relative z-20 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
-        className
+        className,
       )}
     >
       <ul
@@ -87,22 +91,22 @@ export const InfiniteMovingCards = ({
           "flex w-max min-w-full shrink-0 flex-nowrap gap-20 py-4",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]",
-          gap
+          gap,
         )}
       >
         {items.map((item, idx) => (
           <li
+            key={idx}
             className={cn(
               `relative size-24`,
               iconSize,
-              cards ? "bg-slate-100 p-2 rounded-lg " : ""
+              cards ? "bg-slate-100 p-2 rounded-lg " : "",
             )}
-            key={idx}
           >
             <img
-              src={`/${dir}/${item.img}`}
               alt={item.title}
               className="w-full h-full object-contain"
+              src={`/${dir}/${item.img}`}
             />
           </li>
         ))}

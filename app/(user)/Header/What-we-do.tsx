@@ -11,6 +11,7 @@ interface dataProps {
 }
 const WhatWeDo = ({ data, locationsData, onNavigate }: dataProps) => {
   const [currIndex, setCurrIndex] = useState(0);
+
   return (
     <div className="flex items-start justify-between gap-7 w-full">
       <div>
@@ -27,23 +28,24 @@ const WhatWeDo = ({ data, locationsData, onNavigate }: dataProps) => {
               </h3>
               <div className="space-y-3">
                 {service.items.map((item, id) => (
-                  <li className="text-sm text-white whitespace-nowrap" key={id}>
+                  <li key={id} className="text-sm text-white whitespace-nowrap">
                     <Link
-                      onClick={onNavigate}
                       href={`/Services/${
                         service.label === "Engineering & Infrastructure"
                           ? "Engineering-Infrastructure"
                           : service.label === "Urban Planning"
-                          ? "Urban-Planning"
-                          : service.label === "Transportation & Smart Mobility"
-                          ? "Transportation-and-Smart-Mobility"
-                          : service.label === "Project Advisory"
-                          ? "Project-Advisory"
-                          : service.label ===
-                            "Environment, Sustainability & Resilience"
-                          ? "Environment-Sustainability-and-Resilience"
-                          : null
+                            ? "Urban-Planning"
+                            : service.label ===
+                                "Transportation & Smart Mobility"
+                              ? "Transportation-and-Smart-Mobility"
+                              : service.label === "Project Advisory"
+                                ? "Project-Advisory"
+                                : service.label ===
+                                    "Environment, Sustainability & Resilience"
+                                  ? "Environment-Sustainability-and-Resilience"
+                                  : null
                       }/${item.link}`}
+                      onClick={onNavigate}
                     >
                       {" "}
                       {item.label}

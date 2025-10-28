@@ -1,5 +1,4 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   ShieldCheck,
   HardHat,
@@ -8,6 +7,8 @@ import {
   LineChart,
   BadgeCheck,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function Page() {
   const points = [
@@ -88,6 +89,7 @@ export default function Page() {
       desc: "ISO-certified processes ensuring compliance and care for the environment.",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -114,11 +116,11 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
+              alt={"Env contracting"}
+              className="w-full h-full objext-cover"
               src={
                 "/Environment-Sustainability/Environmental Contracting/hero.webp"
               }
-              className="w-full h-full objext-cover"
-              alt={"Env contracting"}
             />
           </div>
         </div>
@@ -164,9 +166,9 @@ export default function Page() {
               >
                 <div className="h-[200px] bg-slate-100 w-full overflow-hidden">
                   <img
-                    src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
+                    src={service.image}
                   />
                 </div>
                 <div className="p-6">
@@ -195,9 +197,9 @@ export default function Page() {
               >
                 <div className=" text-white mb-4">
                   <BadgeCheck
+                    className="fill-green-500"
                     size={28}
                     strokeWidth={2.2}
-                    className="fill-green-500"
                   />
                 </div>
                 <div>
@@ -212,9 +214,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Building Certainty from the Ground Up"
-        desc="At Al Yusr, we believe that better data leads to better outcomes. By addressing ground and environmental risks at the earliest stages, we help clients deliver infrastructure projects that are safer, more sustainable, and more cost-efficient."
         btn="Contact Us Today"
+        desc="At Al Yusr, we believe that better data leads to better outcomes. By addressing ground and environmental risks at the earliest stages, we help clients deliver infrastructure projects that are safer, more sustainable, and more cost-efficient."
+        title="Building Certainty from the Ground Up"
       />
     </main>
   );

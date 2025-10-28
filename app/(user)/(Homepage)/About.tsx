@@ -1,15 +1,16 @@
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
-import BgLayer from "../app_chunks/BgLayer";
 import Link from "next/link";
+
+import BgLayer from "../app_chunks/BgLayer";
 const About = () => {
   return (
     <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
       {/* Background image */}
       <img
-        src="/aboutBg.webp"
         alt="About Background"
         className="absolute inset-0 w-full h-full object-cover"
+        src="/aboutBg.webp"
       />
       <BgLayer />
 
@@ -43,8 +44,8 @@ const About = () => {
             </p>
 
             <Link
-              href={"/Contact"}
               className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+              href={"/Contact"}
             >
               Discover Our Story <ArrowUpRight />
             </Link>

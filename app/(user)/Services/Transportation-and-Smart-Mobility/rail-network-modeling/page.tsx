@@ -1,8 +1,5 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-import { useState } from "react";
 import {
-  CheckCircle,
   BarChart3,
   AlertTriangle,
   Zap,
@@ -10,7 +7,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-import { motion } from "motion/react";
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const tools = [
     {
@@ -123,9 +120,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/rail-network-modelling/hero.webp"}
-              className="w-full h-full object-cover"
               alt={""}
+              className="w-full h-full object-cover"
+              src={"/Transportation-mobility/rail-network-modelling/hero.webp"}
             />
           </div>
         </div>
@@ -149,9 +146,9 @@ export default function Page() {
               {/* Image */}
               <div className="md:w-1/2 h-[380px]">
                 <img
-                  src={tool.img}
                   alt={tool.title}
                   className="rounded-2xl shadow-lg object-cover w-full h-full"
+                  src={tool.img}
                 />
               </div>
 
@@ -207,11 +204,11 @@ export default function Page() {
                 className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition"
               >
                 <img
-                  src={item.img}
                   alt={item.title}
                   className="h-64 w-full object-cover group-hover:scale-105 transition duration-500"
+                  src={item.img}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-90"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-90" />
                 <div className="absolute bottom-4 left-4 right-4 text-left text-white">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p className="text-sm mt-1">{item.desc}</p>
@@ -245,9 +242,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Plan Smarter and Build Better with Al Yusr"
-        desc="Contact Al Yusr today to discuss how our rail simulation expertise can transform your project from concept to optimized reality."
         btn="Contact Us Today"
+        desc="Contact Al Yusr today to discuss how our rail simulation expertise can transform your project from concept to optimized reality."
+        title="Plan Smarter and Build Better with Al Yusr"
       />
     </main>
   );

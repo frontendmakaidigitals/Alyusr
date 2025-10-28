@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   MonitorPlay,
   Building,
@@ -11,6 +10,8 @@ import {
   Users,
   BadgeCheck,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function Page() {
   const services = [
@@ -116,6 +117,7 @@ export default function Page() {
     "Improved efficiency, cost savings, and risk reduction for clients",
     "Alignment with Vision 2030 for smarter infrastructure planning",
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -125,11 +127,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/process-simulation/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={"hero"}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/project-advisory/process-simulation/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -183,9 +185,9 @@ export default function Page() {
                 className="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition"
               >
                 <img
-                  src={tool.img}
                   alt={tool.name}
                   className="w-full h-48 object-cover"
+                  src={tool.img}
                 />
                 <div className="p-6">
                   <h3 className="text-lg font-semibold mb-3">{tool.name}</h3>
@@ -211,9 +213,9 @@ export default function Page() {
                 className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition"
               >
                 <img
-                  src={sector.img}
                   alt={sector.title}
                   className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                  src={sector.img}
                 />
                 <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition" />
                 <h3 className="absolute bottom-4 left-4 right-4 text-white font-semibold text-lg">
@@ -242,9 +244,9 @@ export default function Page() {
       </section>
       );
       <EngineeringCTA
-        title="Build with Confidence"
-        desc="Whether you're developing a mega project or managing a complex infrastructure upgrade, Al Yusr’s cost management services help you stay on budget, reduce risk, and achieve lasting value."
         btn="Contact Us Today"
+        desc="Whether you're developing a mega project or managing a complex infrastructure upgrade, Al Yusr’s cost management services help you stay on budget, reduce risk, and achieve lasting value."
+        title="Build with Confidence"
       />
     </main>
   );

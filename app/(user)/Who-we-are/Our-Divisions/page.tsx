@@ -1,11 +1,13 @@
 "use client";
 import { ArrowUpRight, BadgeCheck } from "lucide-react";
 import Image from "next/image";
-import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import Link from "next/link";
+
+import BgLayer from "../../app_chunks/BgLayer";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 const divisions = [
   {
     title: "Engineering & Design Division",
@@ -95,21 +97,23 @@ export default function Page() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
+
   return (
     <div className="">
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "60vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-2xl  text-slate-50">
@@ -122,10 +126,10 @@ export default function Page() {
         </div>
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
-          style={{ y: yTransform }}
+          alt="ALYUSR Engineering Hero Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
           src="/our division 2/banner.webp"
-          alt="ALYUSR Engineering Hero Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
       <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
@@ -155,17 +159,17 @@ export default function Page() {
               </p>
 
               <Link
-                href={"/Contact"}
                 className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+                href={"/Contact"}
               >
                 Discover Our Story <ArrowUpRight />
               </Link>
             </div>
             <div className="h-[450px] w-full">
               <img
-                src="/our division 2/heading.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
+                src="/our division 2/heading.webp"
               />
             </div>
           </div>
@@ -179,19 +183,19 @@ export default function Page() {
           {divisions.map((division, index) => (
             <motion.div
               key={division.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-blue-50 border border-gray-200 rounded-xl overflow-hidden shadow hover:shadow-md transition"
+              initial={{ opacity: 0, y: 40 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               <div className="relative h-[300px] w-full">
                 <Image
-                  src={division.image}
                   alt={division.title}
+                  className="rounded-t-xl"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-t-xl"
+                  src={division.image}
                 />
               </div>
               <div className="p-6">
@@ -218,8 +222,8 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Working Together to Build the Future"
         desc="Each division operates with full autonomy and cross-functional coordination. This structure allows ALYUSR to stay agile, reduce delays, and deliver high-quality, end-to-end solutions for complex, multidisciplinary projects."
+        title="Working Together to Build the Future"
       />
     </div>
   );

@@ -1,5 +1,4 @@
 "use client";
-import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import {
@@ -17,16 +16,17 @@ import {
   ArrowRight,
   ArrowLeft,
 } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+
+import BgLayer from "../../app_chunks/BgLayer";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import Link from "next/link";
-import Image from "next/image";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -34,7 +34,7 @@ export default function Page() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
   const [api, setApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -58,10 +58,12 @@ export default function Page() {
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
 
   const icons = { Building, PenTool, ClipboardList, Leaf, Cpu, BarChart3 };
+
   type Department = {
     title: string;
     desc: string;
@@ -105,10 +107,10 @@ export default function Page() {
     <div className="bg-white text-gray-800">
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "60vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-slate-50">
@@ -121,10 +123,10 @@ export default function Page() {
         </div>
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
-          style={{ y: yTransform }}
+          alt="ALYUSR Engineering Hero Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
           src="/why-in-hero-house.jpeg"
-          alt="ALYUSR Engineering Hero Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
       <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
@@ -152,17 +154,17 @@ export default function Page() {
               </p>
 
               <Link
-                href={"/Contact"}
                 className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+                href={"/Contact"}
               >
                 Discover Our Story <ArrowUpRight />
               </Link>
             </div>
             <div className="h-[450px]">
               <img
-                src="/why-about.jpeg"
                 alt="About Background"
                 className=" w-full h-full object-cover"
+                src="/why-about.jpeg"
               />
             </div>
           </div>
@@ -195,6 +197,7 @@ export default function Page() {
                 "We cover every phase of the project: design, documentation, permitting, supervision, and post-construction support, within our firm.",
                 "Clients benefit from a single point of contact and clear accountability throughout the project lifecycle.",
               ];
+
               return (
                 <div
                   key={idx}
@@ -311,11 +314,11 @@ export default function Page() {
             Why It Matters to <span className="text-blue-500">Our Clients</span>
           </h3>
           <Carousel
+            className="!w-full" // Add horizontal padding to avoid edge cuts
             opts={{
               align: "start",
             }}
             setApi={setApi}
-            className="!w-full" // Add horizontal padding to avoid edge cuts
           >
             <CarouselContent className="gap-4 px-4">
               {[
@@ -343,10 +346,10 @@ export default function Page() {
                   <div className="group border bg-blue-500 border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <div className="relative h-[300px] w-full bg-sky-100">
                       <Image
-                        src={point.img}
-                        alt={point.title}
                         fill
+                        alt={point.title}
                         className="object-cover  group-hover:scale-105 transition-transform duration-300"
+                        src={point.img}
                       />
                     </div>
                     <div className="p-5">
@@ -362,16 +365,16 @@ export default function Page() {
 
           <div className="my-6 flex justify-end gap-2">
             <button
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
               disabled={!canScrollPrev}
               onClick={() => api?.scrollPrev()}
-              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
             >
               <ArrowLeft />
             </button>
             <button
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
               disabled={!canScrollNext}
               onClick={() => api?.scrollNext()}
-              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
             >
               <ArrowRight />
             </button>

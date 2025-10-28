@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { Lightbulb, BarChart3, Wrench } from "lucide-react";
-
 import { Building2, Bus, Hotel, Landmark, Zap, Scale } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function Page() {
   const services = [
@@ -124,6 +124,7 @@ export default function Page() {
       img: "/project-advisory/enigneering-economics/focus.webp",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -133,11 +134,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/enigneering-economics/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/project-advisory/enigneering-economics/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="py-20 bg-gray-50">
@@ -159,9 +160,9 @@ export default function Page() {
               >
                 <div className="h-48 w-full overflow-hidden">
                   <img
-                    src={item.img}
                     alt={item.title}
                     className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
+                    src={item.img}
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
@@ -252,9 +253,9 @@ export default function Page() {
                 className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
               >
                 <img
-                  src={point.img}
                   alt={point.title}
                   className="w-full h-[230px] object-cover"
+                  src={point.img}
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-blue-900 mb-2">
@@ -268,9 +269,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Smart Economics for Smarter Cities"
-        desc="At Al Yusr, we believe engineering economics is not just a technical exercise; it’s a strategic enabler. It connects vision to feasibility, ambition to accountability, and cost to real value. When your project needs clarity, credibility, and economic direction, we’re here to guide you through."
         btn="Contact Us Today"
+        desc="At Al Yusr, we believe engineering economics is not just a technical exercise; it’s a strategic enabler. It connects vision to feasibility, ambition to accountability, and cost to real value. When your project needs clarity, credibility, and economic direction, we’re here to guide you through."
+        title="Smart Economics for Smarter Cities"
       />
     </main>
   );

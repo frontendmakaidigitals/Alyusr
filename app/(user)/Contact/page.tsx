@@ -3,7 +3,10 @@ import React, { useRef, useState, useEffect } from "react";
 import { Mail, Phone, MapPin, MapPinned, Earth } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { toast } from "sonner";
+import Image from "next/image";
+
 import BgLayer from "../app_chunks/BgLayer";
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -17,7 +20,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Image from "next/image";
 
 const Contact = () => {
   const internationalOffices = [
@@ -53,11 +55,12 @@ const Contact = () => {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
 
@@ -90,9 +93,10 @@ const Contact = () => {
     location: "",
   });
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
+
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -135,25 +139,25 @@ const Contact = () => {
       {/* Hero Section */}
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "55vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-10 container mx-auto py-16 flex flex-col justify-center items-center h-full max-w-4xl">
           <motion.h1
-            initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
             className="text-5xl lg:text-6xl font-extrabold text-white text-center drop-shadow-md "
+            initial={{ y: 40, opacity: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
           >
             Contact Us
           </motion.h1>
           <motion.p
-            initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
             className="mt-5 text-lg text-slate-100/90 text-center leading-relaxed"
+            initial={{ y: 40, opacity: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
           >
             We&apos;re here to answer your questions, explore opportunities, and
             support your projects every step of the way. Whether you&apos;re
@@ -165,10 +169,10 @@ const Contact = () => {
 
         {/* Parallax Background */}
         <motion.img
-          style={{ y: yTransform }}
+          alt="Contact Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-top"
           src="https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg"
-          alt="Contact Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
 
@@ -177,12 +181,12 @@ const Contact = () => {
         {/* Enquiry Form */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          whileInView={{ opacity: 1, y: 0 }}
         >
           <form
-            onSubmit={handleSubmit}
             className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-xl p-10 rounded-2xl space-y-6"
+            onSubmit={handleSubmit}
           >
             <h2 className="text-3xl font-bold text-slate-800 mb-4 border-l-4 border-blue-500 pl-3">
               Enquiry Form
@@ -191,22 +195,22 @@ const Contact = () => {
               <div>
                 <Label>First Name</Label>
                 <Input
-                  type="text"
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                   name="firstName"
+                  placeholder="First Name"
+                  type="text"
                   value={form.firstName}
                   onChange={handleChange}
-                  placeholder="First Name"
-                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
                 <Label>Last Name</Label>
                 <Input
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                   name="lastName"
+                  placeholder="Last Name"
                   value={form.lastName}
                   onChange={handleChange}
-                  placeholder="Last Name"
-                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
@@ -214,23 +218,23 @@ const Contact = () => {
               <div>
                 <Label>Email</Label>
                 <Input
-                  type="email"
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                   name="email"
+                  placeholder="Email"
+                  type="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="Email"
-                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
                 <Label>Contact</Label>
                 <Input
-                  type={"number"}
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                   name="phone"
+                  placeholder="phone"
+                  type={"number"}
                   value={form.phone}
                   onChange={handleChange}
-                  placeholder="phone"
-                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
@@ -238,12 +242,12 @@ const Contact = () => {
               <div>
                 <Label>Company</Label>
                 <Input
-                  type={"text"}
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                   name="company"
+                  placeholder="Company"
+                  type={"text"}
                   value={form.company}
                   onChange={handleChange}
-                  placeholder="Company"
-                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
@@ -261,7 +265,7 @@ const Contact = () => {
                     <SelectGroup>
                       <SelectLabel>Your Interest</SelectLabel>
                       {Interests.map((interest, idx) => (
-                        <SelectItem value={interest} key={idx}>
+                        <SelectItem key={idx} value={interest}>
                           {interest}
                         </SelectItem>
                       ))}
@@ -284,7 +288,7 @@ const Contact = () => {
                 <SelectContent>
                   <SelectGroup>
                     {locations.map((location, idx) => (
-                      <SelectItem value={location} key={idx}>
+                      <SelectItem key={idx} value={location}>
                         {location}
                       </SelectItem>
                     ))}
@@ -295,26 +299,26 @@ const Contact = () => {
             <div>
               <Label>Message</Label>
               <Textarea
-                rows={6}
                 className="resize-none mt-2 bg-slate-50 h-32 focus:ring-2 focus:ring-blue-500"
+                rows={6}
               />
             </div>
             <Button
-              type="submit"
-              variant="default"
-              size="lg"
-              disabled={loading}
               className={`w-full bg-gradient-to-br from-blue-500 to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:scale-[1.02] transition ${
                 loading ? "opacity-70 cursor-not-allowed" : ""
               }`}
+              disabled={loading}
+              size="lg"
+              type="submit"
+              variant="default"
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">
                   <svg
                     className="animate-spin h-4 w-4 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <circle
                       className="opacity-25"
@@ -323,12 +327,12 @@ const Contact = () => {
                       r="10"
                       stroke="currentColor"
                       strokeWidth="4"
-                    ></circle>
+                    />
                     <path
                       className="opacity-75"
-                      fill="currentColor"
                       d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                    ></path>
+                      fill="currentColor"
+                    />
                   </svg>
                   Sending...
                 </span>
@@ -341,10 +345,10 @@ const Contact = () => {
 
         {/* Contact Info */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
           className="space-y-14 text-slate-900"
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          whileInView={{ opacity: 1, y: 0 }}
         >
           <div>
             <h3 className="text-2xl flex items-center gap-2 font-semibold mb-3 text-sky-800">
@@ -381,17 +385,17 @@ const Contact = () => {
               {internationalOffices.map((office, index) => (
                 <li
                   key={index}
-                  style={{ backgroundColor: office.bg }}
                   className="flex items-center gap-5 border border-transparent rounded-2xl shadow-md p-3 hover:shadow-lg transition-transform transform hover:-translate-y-1"
+                  style={{ backgroundColor: office.bg }}
                 >
                   {/* Flag image */}
                   <div className="h-[85px] flex items-stretch">
                     <Image
-                      src={office.flag}
                       alt={`${office.country} Flag`}
-                      width={300}
-                      height={300}
                       className="rounded-lg h-full w-32 object-cover shadow-sm"
+                      height={300}
+                      src={office.flag}
+                      width={300}
                     />
                   </div>
 

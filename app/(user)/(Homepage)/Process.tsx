@@ -1,15 +1,17 @@
 "use client";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import Image from "next/image";
+
+import BgLayer from "../app_chunks/BgLayer";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { motion } from "motion/react";
-import Image from "next/image";
-import BgLayer from "../app_chunks/BgLayer";
 const Process = () => {
   const processes = [
     {
@@ -79,9 +81,9 @@ const Process = () => {
 
           <motion.p
             className="text-start "
+            custom={0}
             initial="hidden"
             whileInView="visible"
-            custom={0}
           >
             Our project managers are equipped to handle every stage of the
             construction life cycle. From concept to commissioning, we apply a
@@ -93,26 +95,26 @@ const Process = () => {
         <div>
           <div className="my-6 flex justify-end gap-2">
             <button
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
               disabled={!canScrollPrev}
               onClick={() => api?.scrollPrev()}
-              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
             >
               <ArrowLeft />
             </button>
             <button
+              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
               disabled={!canScrollNext}
               onClick={() => api?.scrollNext()}
-              className="bg-blue-500 disabled:bg-slate-400 cursor-pointer text-white p-2 rounded-full"
             >
               <ArrowRight />
             </button>
           </div>
           <Carousel
+            className="!w-full"
             opts={{
               align: "start",
             }}
             setApi={setApi}
-            className="!w-full"
           >
             <CarouselContent className="-ml-4 ">
               {processes.map((phase, i) => (
@@ -128,11 +130,11 @@ const Process = () => {
                     <div className="h-[360px] lg:h-[450px] w-full overflow-hidden rounded-lg relative">
                       <div className="absolute inset-0 w-full h-full bg-black/10" />
                       <Image
-                        src={phase.image}
-                        className="w-full h-full object-cover"
-                        width={400}
-                        height={400}
                         alt={""}
+                        className="w-full h-full object-cover"
+                        height={400}
+                        src={phase.image}
+                        width={400}
                       />
                       <BgLayer color="bg-black/40" />
                     </div>

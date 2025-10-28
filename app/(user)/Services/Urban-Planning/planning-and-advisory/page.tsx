@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { motion } from "framer-motion";
-
 import {
   BadgeCheck,
   Map,
@@ -16,6 +14,8 @@ import {
   FileCheck2,
   ClipboardList,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function ConstructionManagementPage() {
   const services = [
     {
@@ -116,11 +116,11 @@ Our approach ensures that strategies are not just designed from the top down, bu
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/planning-and-advisory/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1100}
+          className="w-full h-full object-cover object-bottom"
           height={700}
+          src={"/urban-planning/planning-and-advisory/hero.webp"}
+          width={1100}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -144,11 +144,11 @@ Our approach ensures that strategies are not just designed from the top down, bu
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <motion.h2
+            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-12 text-center"
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold text-gray-800 mb-12 text-center"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             What <span className="text-blue-500">We Offer</span>
           </motion.h2>
@@ -158,19 +158,19 @@ Our approach ensures that strategies are not just designed from the top down, bu
             {services.map((service, index) => (
               <motion.div
                 key={index}
+                className="rounded-xl border border-gray-200 bg-sky-50 p-1 shadow-sm hover:shadow-md transition-shadow duration-200 max-w-sm mx-auto"
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="rounded-xl border border-gray-200 bg-sky-50 p-1 shadow-sm hover:shadow-md transition-shadow duration-200 max-w-sm mx-auto"
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {service.img && (
                   <div className="relative bg-red-300 w-full h-60 rounded-lg overflow-hidden">
                     <Image
-                      src={service.img}
-                      alt={service.title}
                       fill
+                      alt={service.title}
                       className="object-cover"
+                      src={service.img}
                     />
                   </div>
                 )}
@@ -190,21 +190,21 @@ Our approach ensures that strategies are not just designed from the top down, bu
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2
+            className="text-3xl md:text-4xl font-bold text-center mb-4"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center mb-4"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Advanced Analytics & Technology
           </motion.h2>
 
           <motion.p
+            className="text-center text-gray-600 max-w-3xl mx-auto mb-12"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-center text-gray-600 max-w-3xl mx-auto mb-12"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             We use cutting-edge tools to support evidence-based planning. These
             digital capabilities allow us to provide smarter, faster, and more
@@ -214,14 +214,15 @@ Our approach ensures that strategies are not just designed from the top down, bu
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((cap, index) => {
               const Icon = cap.icon;
+
               return (
                 <motion.div
                   key={index}
+                  className="bg-white gap-3 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow p-6 flex items-start"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white gap-3 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow p-6 flex items-start"
+                  whileInView={{ opacity: 1, y: 0 }}
                 >
                   <div className="bg-blue-100 text-blue-600 p-2 rounded-full">
                     <Icon size={32} />
@@ -243,29 +244,29 @@ Our approach ensures that strategies are not just designed from the top down, bu
             >
               {/* Image */}
               <motion.div
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
                 className={`relative bg-slate-100 h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg order-1 ${
                   index % 2 !== 0 ? "md:order-2" : ""
                 }`}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 0 }}
               >
                 <Image
-                  src={section.img}
-                  alt={section.title}
                   fill
+                  alt={section.title}
                   className="object-cover"
+                  src={section.img}
                 />
               </motion.div>
 
               {/* Text */}
               <motion.div
+                className={`order-2 ${index % 2 !== 0 ? "md:order-1" : ""}`}
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className={`order-2 ${index % 2 !== 0 ? "md:order-1" : ""}`}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 <h2 className="text-2xl lg:text-4xl font-bold mb-4">
                   {section.title}
@@ -282,11 +283,11 @@ Our approach ensures that strategies are not just designed from the top down, bu
       <section className="pt-12 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2
+            className="text-3xl md:text-4xl font-bold text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center mb-12"
+            whileInView={{ opacity: 1, y: 0 }}
           >
             Why Choose Al Yusr Planning Solutions?
           </motion.h2>
@@ -296,16 +297,16 @@ Our approach ensures that strategies are not just designed from the top down, bu
               return (
                 <motion.div
                   key={index}
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-start flex gap-3"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-start flex gap-3"
+                  whileInView={{ opacity: 1, y: 0 }}
                 >
                   <div className=" rounded-full">
                     <BadgeCheck
-                      size={36}
                       className="fill-green-500 text-white"
+                      size={36}
                     />
                   </div>
                   <p className="text-gray-700 font-medium">{item.title}</p>
@@ -316,9 +317,9 @@ Our approach ensures that strategies are not just designed from the top down, bu
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Plan the Future Together"
-        desc="Whether it’s a new master plan or a detailed development study, Al Yusr is your trusted planning and advisory partner."
         btn="Contact Us Today"
+        desc="Whether it’s a new master plan or a detailed development study, Al Yusr is your trusted planning and advisory partner."
+        title="Let’s Plan the Future Together"
       />
     </main>
   );

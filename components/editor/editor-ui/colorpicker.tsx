@@ -1,23 +1,23 @@
-import * as React from "react"
-import { HexColorPicker } from "react-colorful"
+import * as React from "react";
+import { HexColorPicker } from "react-colorful";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/components/ui/popover";
 
 type Props = {
-  disabled?: boolean
-  icon?: React.ReactNode
-  label?: string
-  title?: string
-  stopCloseOnClickSelf?: boolean
-  color: string
-  onChange?: (color: string, skipHistoryStack: boolean) => void
-}
+  disabled?: boolean;
+  icon?: React.ReactNode;
+  label?: string;
+  title?: string;
+  stopCloseOnClickSelf?: boolean;
+  color: string;
+  onChange?: (color: string, skipHistoryStack: boolean) => void;
+};
 
 export default function ColorPicker({
   disabled = false,
@@ -32,8 +32,8 @@ export default function ColorPicker({
     <Popover modal={true}>
       <PopoverTrigger asChild disabled={disabled}>
         <Button
-          size={"icon"}
           className="!h-8 !w-8"
+          size={"icon"}
           variant={"outline"}
           {...rest}
         >
@@ -48,13 +48,13 @@ export default function ColorPicker({
         />
         <Input
           maxLength={7}
-          onChange={(e) => {
-            e.stopPropagation()
-            onChange?.(e?.currentTarget?.value, false)
-          }}
           value={color}
+          onChange={(e) => {
+            e.stopPropagation();
+            onChange?.(e?.currentTarget?.value, false);
+          }}
         />
       </PopoverContent>
     </Popover>
-  )
+  );
 }

@@ -1,8 +1,7 @@
 "use client";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { Lightbulb, Layers, Globe2, CheckCircle2 } from "lucide-react";
 
-import Image from "next/image";
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const items = [
     {
@@ -90,6 +89,7 @@ export default function Page() {
       icon: <CheckCircle2 className="w-10 h-10 text-emerald-600" />,
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -116,9 +116,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[450px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/urban-mobility/hero.webp"}
-              className="w-full h-full object-cover"
               alt={""}
+              className="w-full h-full object-cover"
+              src={"/Transportation-mobility/urban-mobility/hero.webp"}
             />
           </div>
         </div>
@@ -149,9 +149,9 @@ export default function Page() {
               {/* Image */}
               <div className="lg:w-1/2">
                 <img
-                  src={item.image}
                   alt={item.title}
                   className="rounded-2xl shadow-lg w-full h-80 object-cover"
+                  src={item.image}
                 />
               </div>
             </div>
@@ -180,9 +180,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Build Smarter Cities Together"
-        desc="Whether your goal is to reduce congestion, prepare for autonomous vehicles, or create more walkable, livable spaces, our team can deliver strategies that balance innovation with practicality."
         btn="Get in Touch Today"
+        desc="Whether your goal is to reduce congestion, prepare for autonomous vehicles, or create more walkable, livable spaces, our team can deliver strategies that balance innovation with practicality."
+        title="Let’s Build Smarter Cities Together"
       />
     </main>
   );

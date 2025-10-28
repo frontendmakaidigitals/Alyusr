@@ -38,6 +38,7 @@ const initialValue = {
 export default function EditorPage() {
   const [editorState, setEditorState] =
     useState<SerializedEditorState>(initialValue);
+
   return (
     <Editor
       editorSerializedState={editorState}

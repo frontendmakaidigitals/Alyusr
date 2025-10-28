@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import {
   Users,
   Workflow,
@@ -9,6 +8,8 @@ import {
   Landmark,
   CheckCircle,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const capabilities = [
     "Pre-Project Planning & Feasibility Studies",
@@ -56,6 +57,7 @@ export default function Page() {
       text: "Deep understanding of Saudi Arabia’s regulatory environment and Vision 2030 goals",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <div className="container  my-10">
@@ -65,11 +67,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/project-planning/hero.webp"}
-          className="w-full h-full object-cover "
           alt={"Project Planning"}
-          width={1200}
+          className="w-full h-full object-cover "
           height={800}
+          src={"/project-advisory/project-planning/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -113,11 +115,11 @@ export default function Page() {
           </div>
           <div className="h-[450px] w-full bg-slate-100">
             <Image
-              src={"/project-advisory/project-planning/project-planning.webp"}
               alt={"smart planning"}
               className="w-full h-full object-cover"
-              width={500}
               height={500}
+              src={"/project-advisory/project-planning/project-planning.webp"}
+              width={500}
             />
           </div>
         </div>
@@ -220,9 +222,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Your Vision, Our Strategy"
-        desc="From unlocking site potential to steering large-scale programs, Al Yusr delivers planning services that turn complex ideas into executable, high-impact solutions. If you're seeking a reliable partner to guide your next project with clarity, insight, and strategic excellence—we're ready to help."
         btn="Contact Us Today"
+        desc="From unlocking site potential to steering large-scale programs, Al Yusr delivers planning services that turn complex ideas into executable, high-impact solutions. If you're seeking a reliable partner to guide your next project with clarity, insight, and strategic excellence—we're ready to help."
+        title="Your Vision, Our Strategy"
       />
     </main>
   );

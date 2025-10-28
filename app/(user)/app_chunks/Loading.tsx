@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Loading = () => {
   return (
-    <Suspense fallback={<div></div>}>
+    <Suspense fallback={<div />}>
       <Loader />
     </Suspense>
   );
@@ -34,28 +34,33 @@ const Loader = () => {
     <AnimatePresence mode="wait">
       {isLoading && (
         <motion.div
+          className="top-0 left-0 flex items-center justify-center h-screen w-screen fixed shadow-lg bg-indigo-50 z-[9999]"
           exit={{ y: "-100%" }}
           transition={{ duration: 0.5 }}
-          className="top-0 left-0 flex items-center justify-center h-screen w-screen fixed shadow-lg bg-indigo-50 z-[9999]"
         >
-          <svg className="container2" viewBox="0 0 40 40" height="100" width="100">
+          <svg
+            className="container2"
+            height="100"
+            viewBox="0 0 40 40"
+            width="100"
+          >
             <circle
               className="track"
               cx="20"
               cy="20"
-              r="17.5"
-              pathLength="100"
-              strokeWidth="1.8px"
               fill="none"
+              pathLength="100"
+              r="17.5"
+              strokeWidth="1.8px"
             />
             <circle
               className="car"
               cx="20"
               cy="20"
-              r="17.5"
-              pathLength="100"
-              strokeWidth="1.8px"
               fill="none"
+              pathLength="100"
+              r="17.5"
+              strokeWidth="1.8px"
             />
           </svg>
 

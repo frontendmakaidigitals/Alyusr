@@ -1,7 +1,10 @@
 "use client";
 import { Home, Book, MessageSquareQuote } from "lucide-react";
-import { SidebarTrigger } from "@/components/ui/sidebar";
 import Link from "next/link";
+
+import Logo from "./Logo";
+
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import {
   Sidebar,
   SidebarContent,
@@ -13,7 +16,6 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import Logo from "./Logo";
 
 const items = [
   {

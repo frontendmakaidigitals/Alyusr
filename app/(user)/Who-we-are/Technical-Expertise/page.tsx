@@ -1,11 +1,13 @@
 "use client";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import Link from "next/link";
+
+import BgLayer from "../../app_chunks/BgLayer";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function TechnicalExpertisePage() {
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -13,7 +15,7 @@ export default function TechnicalExpertisePage() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
   const capabilities = [
     {
@@ -56,16 +58,18 @@ export default function TechnicalExpertisePage() {
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
+
   return (
     <main className=" text-gray-800">
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "60vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-2xl  text-slate-50">
@@ -78,10 +82,10 @@ export default function TechnicalExpertisePage() {
         </div>
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
-          style={{ y: yTransform }}
+          alt="ALYUSR Engineering Hero Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
           src="/technical expertise 2/banner.webp"
-          alt="ALYUSR Engineering Hero Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
       <section className=" bg-gradient-to-r from-sky-100/30 via-sky-200/40 to-transparent overflow-hidden relative">
@@ -106,17 +110,17 @@ export default function TechnicalExpertisePage() {
               </p>
 
               <Link
-                href={"/Contact"}
                 className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+                href={"/Contact"}
               >
                 Discover Our Story <ArrowUpRight />
               </Link>
             </div>
             <div className="h-[450px]">
               <img
-                src="/technical expertise 2/heading.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
+                src="/technical expertise 2/heading.webp"
               />
               <BgLayer />
             </div>
@@ -146,10 +150,10 @@ export default function TechnicalExpertisePage() {
                 {/* Image */}
                 <div className="relative h-56 w-full">
                   <Image
-                    src={item.img}
-                    alt={item.title}
                     fill
+                    alt={item.title}
                     className="object-cover"
+                    src={item.img}
                   />
                 </div>
 
@@ -194,9 +198,9 @@ export default function TechnicalExpertisePage() {
               >
                 <div className="w-full h-[100px] ">
                   <img
-                    src={tool.icon}
                     alt={tool.tool}
                     className="w-full h-full object-contain"
+                    src={tool.icon}
                   />
                 </div>
                 <p className="mt-3">{tool.tool}</p>
@@ -206,8 +210,8 @@ export default function TechnicalExpertisePage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Trusted by Public & Private Sectors"
         desc="Our technical expertise has earned the trust of government agencies, real estate developers, infrastructure contractors, and industrial clients. From large-scale urban master plans to specialized facility designs, we provide tailored solutions that meet both regulatory and operational goals."
+        title="Trusted by Public & Private Sectors"
       />
     </main>
   );

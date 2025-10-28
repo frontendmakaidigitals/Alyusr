@@ -1,4 +1,5 @@
 import React from "react";
+
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 const Marquee = () => {
   const Icons = [
@@ -28,8 +29,8 @@ const Marquee = () => {
         {" "}
         <InfiniteMovingCards
           dir={"Icon"}
-          items={Icons}
           direction="right"
+          items={Icons}
           speed="slow"
         />
       </div>

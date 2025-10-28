@@ -1,15 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { motion } from "motion/react";
+
+import BgLayer from "../app_chunks/BgLayer";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import BgLayer from "../app_chunks/BgLayer";
-import { motion } from "motion/react";
 
 const Herosection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,6 +22,7 @@ const Herosection = () => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % 5);
     }, 8000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -76,13 +79,14 @@ const Herosection = () => {
       img: "/mega.webp",
     },
   ];
+
   return (
     <section className="relative min-h-[500px] h-[50vh] lg:h-[58vh]">
       <Carousel
+        className="w-full"
         opts={{
           watchDrag: false, // Disable drag functionality
         }}
-        className="w-full"
         setApi={setApi}
       >
         <CarouselContent>
@@ -93,41 +97,41 @@ const Herosection = () => {
                   <div className="w-full mx-auto container">
                     <motion.h1
                       key={slides[activeIndex].title}
-                      initial={{ x: 200, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
+                      className="text-4xl lg:text-5xl !text-slate-50 font-[600] max-w-2xl"
+                      initial={{ x: 200, opacity: 0 }}
                       transition={{
                         delay: 0.2,
                         duration: 1.4,
                         ease: [0.19, 1, 0.22, 1],
                       }}
-                      className="text-4xl lg:text-5xl !text-slate-50 font-[600] max-w-2xl"
                     >
                       {slides[activeIndex].title}
                     </motion.h1>
                     <motion.p
                       key={slides[activeIndex].desc}
-                      initial={{ x: 200, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
+                      className="text-slate-50 mt-3 max-w-2xl"
+                      initial={{ x: 200, opacity: 0 }}
                       transition={{
                         delay: 0.3,
                         duration: 1.4,
                         ease: [0.19, 1, 0.22, 1],
                       }}
-                      className="text-slate-50 mt-3 max-w-2xl"
                     >
                       {slides[activeIndex].desc}
                     </motion.p>
                     <Link href={"/Services"}>
                       <motion.button
                         key={slides[activeIndex].img}
-                        initial={{ x: 200, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
+                        className="bg-gradient-to-br mt-4 px-4 py-[.45rem] text-sm rounded-lg text-slate-50 flex items-center gap-2 from-[#387EF0] to-[#2651C2]"
+                        initial={{ x: 200, opacity: 0 }}
                         transition={{
                           delay: 0.4,
                           duration: 1.4,
                           ease: [0.19, 1, 0.22, 1],
                         }}
-                        className="bg-gradient-to-br mt-4 px-4 py-[.45rem] text-sm rounded-lg text-slate-50 flex items-center gap-2 from-[#387EF0] to-[#2651C2]"
                       >
                         Explore Our Services <ArrowUpRight />
                       </motion.button>
@@ -136,9 +140,9 @@ const Herosection = () => {
                 </div>
                 <BgLayer />
                 <img
-                  src={`/home-hero${slides[activeIndex].img}`}
                   alt=""
                   className="w-full h-full object-cover object-bottom"
+                  src={`/home-hero${slides[activeIndex].img}`}
                 />
               </div>
             </CarouselItem>
@@ -163,13 +167,13 @@ const Herosection = () => {
                 {idx === activeIndex % 4 && (
                   <>
                     <span
+                      key={activeIndex}
                       className="absolute bottom-0  left-0 h-1 z-0 w-full"
                       style={{
                         animation:
                           "fillBar 8s cubic-bezier(0.19, 1, 0.22, 1) forwards",
                         height: "100%",
                       }}
-                      key={activeIndex}
                     >
                       <span className="absolute inset-0 w-full h-full  bg-gradient-to-r from-[#1A2980] via-[#2464da] to-[#1A2980]" />
                     </span>

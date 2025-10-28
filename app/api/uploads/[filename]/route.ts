@@ -1,10 +1,11 @@
-import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
+import { NextResponse } from "next/server";
+
 export async function GET(
   req: Request,
-  { params }: { params: Promise<{ filename: string }> }
+  { params }: { params: Promise<{ filename: string }> },
 ) {
   const { filename } = await params;
   const filePath = path.join(process.cwd(), "data", "uploads", filename);

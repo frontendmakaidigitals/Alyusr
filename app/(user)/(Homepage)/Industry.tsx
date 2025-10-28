@@ -1,16 +1,18 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import Link from "next/link";
+
 import BgLayer from "../app_chunks/BgLayer";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import Image from "next/image";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import Link from "next/link";
 import { Editor } from "@/components/blocks/editor-00/editor";
 
 const Industry = () => {
@@ -48,14 +50,17 @@ const Industry = () => {
     const fetchBlogs = async () => {
       try {
         const res = await fetch("/api/blogs");
+
         if (!res.ok) throw new Error("Failed to fetch blogs");
 
         const data = await res.json();
+
         setBlogs(data.blogs || []);
       } catch (error) {
         console.error("Error fetching blogs:", error);
       }
     };
+
     fetchBlogs();
   }, []);
 
@@ -72,7 +77,11 @@ const Industry = () => {
         </h2>
 
         {/* Carousel Section */}
-        <Carousel opts={{ align: "start" }} setApi={setApi} className="w-full mt-12">
+        <Carousel
+          className="w-full mt-12"
+          opts={{ align: "start" }}
+          setApi={setApi}
+        >
           <CarouselContent className="-ml-4">
             {blogs.map((item, idx) => (
               <CarouselItem
@@ -82,10 +91,10 @@ const Industry = () => {
                 <div className="relative h-[420px] rounded-xl overflow-hidden group">
                   <div className="absolute inset-0">
                     <Image
-                      src={`/api/uploads/${item.image}`}
-                      alt={item.title}
                       fill
+                      alt={item.title}
                       className="object-cover"
+                      src={`/api/uploads/${item.image}`}
                     />
                     <BgLayer />
                   </div>
@@ -99,23 +108,23 @@ const Industry = () => {
                     <div className="text-sm text-gray-600 line-clamp-2">
                       {item.content && (
                         <Editor
+                          readOnly
+                          clampLines={2}
                           editorSerializedState={
                             typeof item.content === "string"
                               ? JSON.parse(item.content)
                               : item.content
                           }
-                          readOnly
-                          clampLines={2}
                         />
                       )}
                     </div>
 
                     <div className="w-full flex justify-center mt-3">
                       <Link
-                        href={`/blogs/${encodeURIComponent(
-                          item.title.toLowerCase().replace(/\s+/g, "-")
-                        )}`}
                         className="text-blue-600 font-semibold hover:underline text-sm"
+                        href={`/blogs/${encodeURIComponent(
+                          item.title.toLowerCase().replace(/\s+/g, "-"),
+                        )}`}
                       >
                         Read more →
                       </Link>
@@ -130,16 +139,16 @@ const Industry = () => {
         {/* Navigation Buttons */}
         <div className="mt-7 flex justify-end gap-2">
           <button
+            className="bg-blue-500 disabled:bg-slate-400 text-white p-2 rounded-full"
             disabled={!canScrollPrev}
             onClick={() => api?.scrollPrev()}
-            className="bg-blue-500 disabled:bg-slate-400 text-white p-2 rounded-full"
           >
             <ArrowLeft />
           </button>
           <button
+            className="bg-blue-500 disabled:bg-slate-400 text-white p-2 rounded-full"
             disabled={!canScrollNext}
             onClick={() => api?.scrollNext()}
-            className="bg-blue-500 disabled:bg-slate-400 text-white p-2 rounded-full"
           >
             <ArrowRight />
           </button>

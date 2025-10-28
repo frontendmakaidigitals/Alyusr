@@ -1,6 +1,5 @@
 "use client";
 
-
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -34,6 +33,7 @@ export const AnimatedTestimonials = ({
   useEffect(() => {
     if (autoplay) {
       const interval = setInterval(handleNext, 5000);
+
       return () => clearInterval(interval);
     }
   }, [autoplay]);
@@ -41,6 +41,7 @@ export const AnimatedTestimonials = ({
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
+
   return (
     <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
@@ -50,12 +51,6 @@ export const AnimatedTestimonials = ({
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.title}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.9,
-                    z: -100,
-                    rotate: randomRotateY(),
-                  }}
                   animate={{
                     opacity: isActive(index) ? 1 : 0.7,
                     scale: isActive(index) ? 1 : 0.95,
@@ -66,25 +61,31 @@ export const AnimatedTestimonials = ({
                       : testimonials.length + 2 - index,
                     y: isActive(index) ? [0, -80, 0] : 0,
                   }}
+                  className="absolute inset-0 origin-bottom"
                   exit={{
                     opacity: 0,
                     scale: 0.9,
                     z: 100,
                     rotate: randomRotateY(),
                   }}
+                  initial={{
+                    opacity: 0,
+                    scale: 0.9,
+                    z: -100,
+                    rotate: randomRotateY(),
+                  }}
                   transition={{
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 origin-bottom"
                 >
                   <img
-                    src={testimonial.image}
                     alt={testimonial.title}
-                    width={800}
-                    height={800}
-                    draggable={false}
                     className="h-full w-full rounded-3xl object-cover object-center"
+                    draggable={false}
+                    height={800}
+                    src={testimonial.image}
+                    width={800}
                   />
                 </motion.div>
               ))}
@@ -94,16 +95,16 @@ export const AnimatedTestimonials = ({
         <div className="flex flex-col justify-center items-start gap-10 py-4">
           <motion.div
             key={active}
-            initial={{
-              y: 20,
-              opacity: 0,
-            }}
             animate={{
               y: 0,
               opacity: 1,
             }}
             exit={{
               y: -20,
+              opacity: 0,
+            }}
+            initial={{
+              y: 20,
               opacity: 0,
             }}
             transition={{
@@ -120,14 +121,14 @@ export const AnimatedTestimonials = ({
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
-              onClick={handlePrev}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              onClick={handlePrev}
             >
               <ArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
             </button>
             <button
-              onClick={handleNext}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              onClick={handleNext}
             >
               <ArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
             </button>

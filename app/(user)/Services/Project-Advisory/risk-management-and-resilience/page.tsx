@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { BadgeCheck } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const points = [
     "Protect critical assets and infrastructure",
@@ -84,11 +85,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/project-advisory/risk-management/hero.webp"}
-          className="w-full h-full object-cover"
           alt={"hero"}
-          width={1200}
+          className="w-full h-full object-cover"
           height={800}
+          src={"/project-advisory/risk-management/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -148,10 +149,10 @@ export default function Page() {
               >
                 <div className="relative w-full h-40">
                   <Image
-                    src={item.img}
-                    alt={item.title}
                     fill
+                    alt={item.title}
                     className="object-cover"
+                    src={item.img}
                   />
                 </div>
                 <div className="p-5">
@@ -181,10 +182,10 @@ export default function Page() {
               >
                 <div className="relative w-full h-40">
                   <Image
-                    src={service.img}
-                    alt={service.title}
                     fill
+                    alt={service.title}
                     className="object-cover"
+                    src={service.img}
                   />
                 </div>
                 <div className="p-5">
@@ -249,18 +250,18 @@ export default function Page() {
           {/* Image */}
           <div className="relative bg-orange-100 w-full h-[430px] rounded-2xl overflow-hidden shadow-md">
             <Image
-              src="/project-advisory/risk-management/Disaster Risk.webp"
-              alt="Post-Disaster Response"
               fill
+              alt="Post-Disaster Response"
               className="object-cover"
+              src="/project-advisory/risk-management/Disaster Risk.webp"
             />
           </div>
         </div>
       </section>
       <EngineeringCTA
-        title="Build Resilience with Al Yusr"
-        desc="Let us help you protect what matters most. Contact Al Yusr today to learn how our risk management and resilience services can support your strategic goals, safeguard your assets, and ensure you're ready for tomorrow."
         btn="Contact Us Today"
+        desc="Let us help you protect what matters most. Contact Al Yusr today to learn how our risk management and resilience services can support your strategic goals, safeguard your assets, and ensure you're ready for tomorrow."
+        title="Build Resilience with Al Yusr"
       />
     </main>
   );

@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
+
 import {
   Map,
   Leaf,
@@ -11,6 +10,8 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import { motion } from "motion/react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const tools = [
     {
@@ -103,9 +104,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/city-analytics/hero.webp"}
-              className="w-full h-full object-cover"
               alt={""}
+              className="w-full h-full object-cover"
+              src={"/Transportation-mobility/city-analytics/hero.webp"}
             />
           </div>
         </div>
@@ -115,9 +116,9 @@ export default function Page() {
           {/* Image Left */}
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Transportation-mobility/city-analytics/visualizing.webp"}
-              className="w-full h-full object-cover"
               alt={""}
+              className="w-full h-full object-cover"
+              src={"/Transportation-mobility/city-analytics/visualizing.webp"}
             />
           </div>
 
@@ -163,9 +164,9 @@ export default function Page() {
               >
                 <div className="bg-slate-100 w-full h-[250px]">
                   <img
-                    src={area.img}
                     alt={area.title}
                     className="w-full h-full object-cover"
+                    src={area.img}
                   />
                 </div>
                 <div className="px-4 py-3">
@@ -195,11 +196,12 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {tools.map((tool, index) => {
               const Icon = tool.icon;
+
               return (
                 <motion.div
                   key={index}
-                  whileHover={{ y: -5 }}
                   className="bg-card rounded-2xl shadow-md p-8 border border-border flex flex-col items-center text-center space-y-4"
+                  whileHover={{ y: -5 }}
                 >
                   <div className="w-14 h-14 bg-blue-100  rounded-full flex items-center justify-center">
                     <Icon className="w-7 h-7 text-blue-500" />
@@ -228,11 +230,11 @@ export default function Page() {
             {points.map((point, index) => (
               <motion.div
                 key={index}
+                className="flex items-start gap-4 bg-card p-6 rounded-2xl shadow-md border border-border"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-4 bg-card p-6 rounded-2xl shadow-md border border-border"
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 <div className="flex-shrink-0">
                   <BadgeCheck className="w-6 h-6 text-primary" />
@@ -244,9 +246,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Turning Urban Data into Action"
-        desc="In a rapidly urbanizing world, the cities that succeed are the ones that plan with intelligence and act with insight. Al Yusr’s City Analytics services enable governments, developers, and planners to create better outcomes, economically, environmentally, and socially."
         btn="Contact Us Today"
+        desc="In a rapidly urbanizing world, the cities that succeed are the ones that plan with intelligence and act with insight. Al Yusr’s City Analytics services enable governments, developers, and planners to create better outcomes, economically, environmentally, and socially."
+        title="Turning Urban Data into Action"
       />
     </main>
   );

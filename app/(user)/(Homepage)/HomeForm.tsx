@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { toast } from "sonner";
+
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -42,9 +43,10 @@ const HomeForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
+
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -90,14 +92,14 @@ const HomeForm = () => {
         <div className="grid grid-cols-1 place-items-center lg:grid-cols-[.8fr_1.2fr]  mt-12">
           <div className="w-full h-[350px] lg:rounded-l-xl overflow-hidden lg:h-[630px]">
             <img
+              alt={""}
               className="w-full h-full object-cover"
               src={"/contactImage.webp"}
-              alt={""}
             />
           </div>
           <form
-            onSubmit={handleSubmit}
             className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-xl p-10 lg:rounded-r-xl space-y-6 w-full"
+            onSubmit={handleSubmit}
           >
             <h2 className="text-3xl font-bold text-slate-800 mb-4 border-l-4 border-blue-500 pl-3">
               Enquiry Form
@@ -107,24 +109,24 @@ const HomeForm = () => {
               <div>
                 <Label>Full Name</Label>
                 <Input
+                  required
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                   name="name"
+                  placeholder="John Andrews"
                   value={form.name}
                   onChange={handleChange}
-                  placeholder="John Andrews"
-                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
-                  required
                 />
               </div>
               <div>
                 <Label>Contact</Label>
                 <Input
+                  required
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                   name="phone"
+                  placeholder="+971 234 5678"
                   type="number"
                   value={form.phone}
                   onChange={handleChange}
-                  placeholder="+971 234 5678"
-                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
-                  required
                 />
               </div>
             </div>
@@ -133,24 +135,24 @@ const HomeForm = () => {
               <div>
                 <Label>Email</Label>
                 <Input
-                  type="email"
+                  required
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                   name="email"
+                  placeholder="example@email.com"
+                  type="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="example@email.com"
-                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
-                  required
                 />
               </div>
               <div>
                 <Label>Company</Label>
                 <Input
-                  type="text"
-                  placeholder="Your Company"
+                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                   name="company"
+                  placeholder="Your Company"
+                  type="text"
                   value={form.company}
                   onChange={handleChange}
-                  className="mt-2 h-12 bg-slate-50 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
@@ -170,7 +172,7 @@ const HomeForm = () => {
                     <SelectGroup>
                       <SelectLabel>Your Interest</SelectLabel>
                       {Interests.map((interest, idx) => (
-                        <SelectItem value={interest} key={idx}>
+                        <SelectItem key={idx} value={interest}>
                           {interest}
                         </SelectItem>
                       ))}
@@ -193,7 +195,7 @@ const HomeForm = () => {
                   <SelectContent>
                     <SelectGroup>
                       {locations.map((location, idx) => (
-                        <SelectItem value={location} key={idx}>
+                        <SelectItem key={idx} value={location}>
                           {location}
                         </SelectItem>
                       ))}
@@ -205,31 +207,31 @@ const HomeForm = () => {
             <div>
               <Label>Message</Label>
               <Textarea
-                rows={6}
+                className="resize-none mt-2 bg-slate-50 h-32 focus:ring-2 focus:ring-blue-500"
                 name="message"
+                placeholder="Enter your message"
+                rows={6}
                 value={form.message}
                 onChange={handleChange}
-                placeholder="Enter your message"
-                className="resize-none mt-2 bg-slate-50 h-32 focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <Button
-              type="submit"
-              variant="default"
-              size="lg"
-              disabled={loading}
               className={`w-full bg-gradient-to-br from-blue-500 to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:scale-[1.02] transition ${
                 loading ? "opacity-70 cursor-not-allowed" : ""
               }`}
+              disabled={loading}
+              size="lg"
+              type="submit"
+              variant="default"
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">
                   <svg
                     className="animate-spin h-4 w-4 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <circle
                       className="opacity-25"
@@ -238,12 +240,12 @@ const HomeForm = () => {
                       r="10"
                       stroke="currentColor"
                       strokeWidth="4"
-                    ></circle>
+                    />
                     <path
                       className="opacity-75"
-                      fill="currentColor"
                       d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                    ></path>
+                      fill="currentColor"
+                    />
                   </svg>
                   Sending...
                 </span>

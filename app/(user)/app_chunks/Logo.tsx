@@ -11,7 +11,7 @@ type LogoProps = {
 const Logo = ({ img = "/Logo2.webp", width = 160, height = 20 }: LogoProps) => {
   return (
     <Link href={"/"}>
-      <Image src={img} width={width} height={height} alt="Logo" />
+      <Image alt="Logo" height={height} src={img} width={width} />
     </Link>
   );
 };

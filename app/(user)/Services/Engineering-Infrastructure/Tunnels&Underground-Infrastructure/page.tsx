@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { motion } from "framer-motion";
 import {
   Layers,
@@ -11,6 +10,8 @@ import {
   MountainSnow,
   BadgeCheck,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function ConstructionManagementPage() {
   const reasons = [
     {
@@ -126,11 +127,11 @@ export default function ConstructionManagementPage() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/Engineering-Infrastructure/underground/hero.webp"}
-          className="w-full h-full object-cover object-bottom"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover object-bottom"
           height={800}
+          src={"/Engineering-Infrastructure/underground/hero.webp"}
+          width={1200}
         />
       </section>
       <section className="px-4 max-w-5xl mt-10 mx-auto">
@@ -165,13 +166,14 @@ export default function ConstructionManagementPage() {
 
         {services.map((item, index) => {
           const isEven = index % 2 === 0;
+
           return (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+              initial={{ opacity: 0, y: 30 }}
+              transition={{ duration: 0.6 }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               {/* Image */}
               <div
@@ -180,9 +182,9 @@ export default function ConstructionManagementPage() {
                 } w-full h-[300px] bg-green-500 md:h-[380px] overflow-hidden rounded-2xl`}
               >
                 <img
-                  src={item.img}
                   alt={item.title}
                   className="w-full h-full object-cover rounded-2xl"
+                  src={item.img}
                 />
               </div>
 
@@ -216,12 +218,13 @@ export default function ConstructionManagementPage() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {reasons.map((item, index) => {
               const Icon = item.icon;
+
               return (
                 <motion.div
                   key={index}
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 100 }}
                   className="bg-white rounded-2xl p-6 shadow-md border border-blue-100"
+                  transition={{ type: "spring", stiffness: 100 }}
+                  whileHover={{ y: -6 }}
                 >
                   <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-800 rounded-full mb-4">
                     <Icon className="w-6 h-6" />
@@ -237,9 +240,9 @@ export default function ConstructionManagementPage() {
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Build What’s Below the Surface"
-        desc="From mega infrastructure to local utility tunnels, Al Yusr Engineering Consulting is your trusted partner in delivering efficient, resilient, and safe underground infrastructure."
         btn="Contact Us Today"
+        desc="From mega infrastructure to local utility tunnels, Al Yusr Engineering Consulting is your trusted partner in delivering efficient, resilient, and safe underground infrastructure."
+        title="Let’s Build What’s Below the Surface"
       />
     </main>
   );

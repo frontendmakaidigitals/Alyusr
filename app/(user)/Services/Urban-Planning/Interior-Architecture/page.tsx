@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 import { BadgeCheck } from "lucide-react";
-import { LayoutGrid } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 
 export default function Page() {
   const services = [
@@ -105,11 +105,11 @@ export default function Page() {
       </div>
       <section className=" w-full h-[500px] text-center ">
         <Image
-          src={"/urban-planning/interior/interior.webp"}
-          className="w-full h-full object-cover"
           alt={""}
-          width={1200}
+          className="w-full h-full object-cover"
           height={700}
+          src={"/urban-planning/interior/interior.webp"}
+          width={1200}
         />
       </section>
 
@@ -134,9 +134,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-00">
             <img
-              src={"/urban-planning/interior/creative.webp"}
               alt={"team"}
               className="w-full h-full object-cover"
+              src={"/urban-planning/interior/creative.webp"}
             />
           </div>
         </div>
@@ -155,10 +155,10 @@ export default function Page() {
               >
                 <div className="relative w-full h-48">
                   <Image
-                    src={item.img}
-                    alt={item.title}
                     fill
+                    alt={item.title}
                     className="object-cover"
+                    src={item.img}
                   />
                 </div>
                 <div className="p-4">
@@ -187,21 +187,21 @@ export default function Page() {
           {expertise.map((item, index) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
               className={`flex flex-col md:flex-row ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } items-center gap-8`}
+              initial={{ opacity: 0, y: 60 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               <div className="w-full md:w-1/2">
                 <Image
-                  src={item.img}
                   alt={item.title}
-                  width={600}
-                  height={400}
                   className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                  height={400}
+                  src={item.img}
+                  width={600}
                 />
               </div>
               <div className="w-full md:w-1/2">
@@ -236,9 +236,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[450px] bg-red-100">
             <img
-              src={"/urban-planning/interior/team.webp"}
               alt={""}
               className="w-full h-full object-cover"
+              src={"/urban-planning/interior/team.webp"}
             />
           </div>
         </div>
@@ -260,11 +260,11 @@ export default function Page() {
           {points.map((point, index) => (
             <motion.div
               key={index}
+              className="flex items-start gap-4 bg-slate-100 p-3 rounded-xl"
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex items-start gap-4 bg-slate-100 p-3 rounded-xl"
+              whileInView={{ opacity: 1, y: 0 }}
             >
               <span>
                 <BadgeCheck className="text-white fill-green-500 w-6 h-6 mt-1 shrink-0" />
@@ -275,9 +275,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Design the Future, Together"
-        desc="If you’re looking for architecture that performs as beautifully as it looks, Al Yusr Engineering Consulting is your partner in delivering spaces that are visionary, responsible, and truly transformative."
         btn="Contact Us Today"
+        desc="If you’re looking for architecture that performs as beautifully as it looks, Al Yusr Engineering Consulting is your partner in delivering spaces that are visionary, responsible, and truly transformative."
+        title="Let’s Design the Future, Together"
       />
     </main>
   );

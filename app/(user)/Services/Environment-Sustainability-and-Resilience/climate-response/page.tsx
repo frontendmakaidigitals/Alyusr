@@ -1,8 +1,4 @@
 "use client";
-import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-
-import { motion } from "motion/react";
 import {
   BadgeCheck,
   Globe2,
@@ -11,6 +7,9 @@ import {
   Lightbulb,
   Landmark,
 } from "lucide-react";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
+
 export default function Page() {
   const services = [
     {
@@ -82,6 +81,7 @@ export default function Page() {
       desc: "Helping projects secure climate finance and align with global standards.",
     },
   ];
+
   return (
     <main className="bg-white text-gray-900">
       <section className="py-10">
@@ -108,9 +108,9 @@ export default function Page() {
           </div>
           <div className="w-full h-[400px] bg-slate-100 rounded-lg">
             <img
-              src={"/Environment-Sustainability/climate-response/climate.webp"}
-              className="w-full h-full object-cover"
               alt={""}
+              className="w-full h-full object-cover"
+              src={"/Environment-Sustainability/climate-response/climate.webp"}
             />
           </div>
         </div>
@@ -143,9 +143,9 @@ export default function Page() {
                 <div className={`${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
                   <div className="aspect-[4/3] w-full overflow-hidden rounded-xl shadow-md">
                     <img
-                      src={service.image}
                       alt={service.title}
                       className="h-full w-full object-cover"
+                      src={service.image}
                     />
                   </div>
                 </div>
@@ -200,9 +200,9 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Let’s Build Climate Resilience Together"
-        desc="Climate change demands immediate action and long-term vision. Partner with Al Yusr to develop practical, science-based, and sustainable solutions that protect your assets, your community, and the generations to come."
         btn="Contact Us Today"
+        desc="Climate change demands immediate action and long-term vision. Partner with Al Yusr to develop practical, science-based, and sustainable solutions that protect your assets, your community, and the generations to come."
+        title="Let’s Build Climate Resilience Together"
       />
     </main>
   );

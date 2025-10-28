@@ -7,11 +7,13 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import Image from "next/image";
-import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
-import BgLayer from "../../app_chunks/BgLayer";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import Link from "next/link";
+
+import BgLayer from "../../app_chunks/BgLayer";
+
+import EngineeringCTA from "@/app/(user)/app_chunks/CTA";
 export default function Page() {
   const [sectionTop, setSectionTop] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -19,11 +21,12 @@ export default function Page() {
   const yTransform = useTransform(
     scrollY,
     [sectionTop, sectionTop + 400],
-    [0, 100]
+    [0, 100],
   );
 
   useEffect(() => {
     const top = sectionRef.current?.offsetTop || 0;
+
     setSectionTop(top);
   }, []);
 
@@ -31,10 +34,10 @@ export default function Page() {
     <div className=" text-gray-800">
       <motion.div
         ref={sectionRef}
-        initial={{ height: "120vh" }}
         animate={{ height: "60vh" }}
-        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
         className="w-full relative overflow-hidden"
+        initial={{ height: "120vh" }}
+        transition={{ delay: 0.4, duration: 1, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="relative z-30 container py-10 flex flex-col justify-center items-center h-full max-w-4xl text-center">
           <h1 className="text-2xl  text-slate-50">
@@ -47,10 +50,10 @@ export default function Page() {
         </div>
         <BgLayer color="bg-black/60 z-20" />
         <motion.img
-          style={{ y: yTransform }}
+          alt="ALYUSR Engineering Hero Background"
           className="absolute scale-[1.3] inset-0 w-full h-full object-cover object-center"
           src="https://images.pexels.com/photos/7942430/pexels-photo-7942430.jpeg"
-          alt="ALYUSR Engineering Hero Background"
+          style={{ y: yTransform }}
         />
       </motion.div>
       <section className="min-h-[85vh] py-20 lg:py-0 overflow-hidden relative">
@@ -77,17 +80,17 @@ export default function Page() {
               </p>
 
               <Link
-                href={"/Contact"}
                 className="mt-6 w-fit bg-gradient-to-br flex justify-center items-center gap-3 from-[#387EF0] to-[#2651C2] px-5 py-2.5 text-sm rounded-lg text-white hover:opacity-90 transition"
+                href={"/Contact"}
               >
                 Discover Our Story <ArrowUpRight />
               </Link>
             </div>
             <div className="h-[450px]">
               <img
-                src="/certificate page/certification.webp"
                 alt="About Background"
                 className=" w-full h-full object-cover"
+                src="/certificate page/certification.webp"
               />
               <BgLayer />
             </div>
@@ -127,10 +130,10 @@ export default function Page() {
           </div>
           <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/certificate page/Class A certificate.webp"
-              alt="Class A Certification"
               fill
+              alt="Class A Certification"
               className="object-cover w-full h-full object-center"
+              src="/certificate page/Class A certificate.webp"
             />
           </div>
         </div>
@@ -176,9 +179,9 @@ export default function Page() {
               >
                 <div className="h-[250px] w-full bg-gray-100">
                   <img
-                    src={iso.img}
                     alt={iso.label}
                     className="w-full h-full object-cover"
+                    src={iso.img}
                   />
                 </div>
                 <div className="p-5">
@@ -239,11 +242,11 @@ export default function Page() {
         </div>
       </section>
       <EngineeringCTA
-        title="Certified to Deliver with Excellence"
+        btn="Explore Our Certifications"
         desc={
           "Our Class A license and international ISO certifications are more than just symbols—they’re proof of our commitment to quality, safety, and innovation in every project we undertake."
         }
-        btn="Explore Our Certifications"
+        title="Certified to Deliver with Excellence"
       />
     </div>
   );
