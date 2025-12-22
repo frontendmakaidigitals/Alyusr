@@ -11,7 +11,7 @@ const FloatingWhatsappIcon = () => {
       href={`https://wa.me/${number.replace(/\D/g, "")}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 left-8 z-50 group"
+      className="fixed bottom-8 right-8 z-50 group"
     >
       <motion.div
         animate={{ x: [0, -4, 4, -2, 2, 0] }}
@@ -38,7 +38,7 @@ const FloatingWhatsappIcon = () => {
             ease: "easeInOut",
             repeatDelay: 0.2,
           }}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-green-500 rounded-full"
+          className="absolute left-1/2 top-1/2  w-6 h-6 bg-green-500 rounded-full"
         />
 
         {/* WhatsApp icon with hover scaling */}
