@@ -43,7 +43,7 @@ const FloatingWhatsappIcon = () => {
 
         {/* WhatsApp icon with hover scaling */}
         <div className="relative z-10 flex items-center justify-center w-full h-full bg-green-500 rounded-full shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
-          <img src="/icon/whatsapp-white-icon.png" alt="WhatsApp" className="w-7 h-7" />
+          <img src="/icons/whatsapp-white-icon.png" alt="WhatsApp" className="w-7 h-7" />
         </div>
       </motion.div>
     </Link>
