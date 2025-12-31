@@ -364,11 +364,7 @@ const Contact = () => {
             </p>
             <div className="mt-4 space-y-2 text-slate-800">
               <p className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-blue-500" /> +966 11 494 4444
-              </p>
-              <p className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-blue-500" /> Fax: +966 11 494
-                4440
+                <Phone className="w-4 h-4 text-blue-500" /> +966 54 154 0090
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-blue-500" /> info@alyusr.com.sa
