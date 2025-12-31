@@ -358,9 +358,9 @@ const Contact = () => {
               <span className="font-semibold block">
                 ALYUSR Engineering Consulting
               </span>
-              Al Rawdah District, King Abdullah Road
+              Al-Aqeeq District, Prince Mohammad bin Sa’ad bin Abdulaziz Road
               <br />
-              Riyadh 13313 – 8119, Saudi Arabia
+               Riyadh 13511, Saudi Arabia
             </p>
             <div className="mt-4 space-y-2 text-slate-800">
               <p className="flex items-center gap-2">
